@@ -38,8 +38,8 @@ html, body, #wrap{height: 100%;}
 #wrap .slider{position: relative;}
 #wrap .slider .btn_prev,
 #wrap .slider .btn_next{width: 50px; height: 80px; position: absolute; top: 50%; transform: translateY(-50%); z-index: 2; font-size: 0; color: transparent; cursor: pointer;}
-#wrap .slider .btn_prev{background: url('//chae90.dothome.co.kr/cacadew_img/cake_arrow_off.png') no-repeat center 0; left: 0; background-position: 0 0;}
-#wrap .slider .btn_next{background: url('//chae90.dothome.co.kr/cacadew_img/cake_arrow_off.png') no-repeat center 0; right: 0; background-position: right 0;}
+#wrap .slider .btn_prev{background: url('../images/cake_arrow_off.png') no-repeat center 0; left: 0; background-position: 0 0;}
+#wrap .slider .btn_next{background: url('../images/cake_arrow_off.png') no-repeat center 0; right: 0; background-position: right 0;}
 #wrap .collabo_txt{text-align: center;}
 #wrap .collabo_txt1{font-size: 60px; color: var(--main-color); margin-bottom: 10px;}
 #wrap .collabo_txt2{font-size: 32px; color: var(--white-color); letter-spacing: 7px; margin-bottom: 10px;}
@@ -67,7 +67,7 @@ header .hamburger_btn.active span:nth-of-type(3){transform: rotate(-45deg); left
 #wrap header nav .depth2 li{padding: 10px 25px;}
 #wrap header nav .depth2 li a{color: var(--white-color);}
 #wrap header nav .depth2 li a:hover{color: var(--sub-color);}
-#wrap .top{height: 100%; text-align: center; background: url('//chae90.dothome.co.kr/cacadew_img//home1.jpg') no-repeat center 0 / cover;}
+#wrap .top{height: 100%; text-align: center; background: url('../images//home1.jpg') no-repeat center 0 / cover;}
 #wrap .top .ttl_area{width: 100%; overflow: hidden; padding: 40% 0; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%);}
 #wrap .top .ttl_area p{-webkit-animation-name: fadeIn; animation-name: fadeIn; -webkit-animation-duration: 2s; animation-duration: 2s; -webkit-animation-fill-mode: both; animation-fill-mode: both;}
 #wrap .top .ttl_area .ttl{font-family: 'Herr Von Muellerhoff'; font-size: 280px; color: var(--main-color); line-height: 0.7; -webkit-animation-name: scale; animation-name: scale;}
@@ -79,7 +79,7 @@ header .hamburger_btn.active span:nth-of-type(3){transform: rotate(-45deg); left
 #wrap .top .ttl_area .explore:hover::before{width: 100%;}
 #wrap .top .ttl_area .explore:hover span{color: var(--white-color); position: relative; z-index: 1;}
 
-#wrap .cont1 .inner{background: url('//chae90.dothome.co.kr/cacadew_img/home_brand.png') no-repeat right center;}
+#wrap .cont1 .inner{background: url('../images/home_brand.png') no-repeat right center;}
 
 #wrap .cont2 .collabor_list{display: flex; justify-content: space-between; gap: 0 40px; margin-top: 50px;}
 #wrap .cont2 .collabor_list li{display: flex; justify-content: center; width: 33.33%; aspect-ratio: 13/21; overflow: hidden; position: relative;}
@@ -104,7 +104,7 @@ header .hamburger_btn.active span:nth-of-type(3){transform: rotate(-45deg); left
 
 #wrap .cont4{background: url('..//images/home2.jpg') no-repeat center / cover; background-attachment: fixed; height: 500px;}
 
-#wrap .cont5 .inner{background: url('//chae90.dothome.co.kr/cacadew_img/home_brand2.jpg') no-repeat left center;}
+#wrap .cont5 .inner{background: url('../images/home_brand2.jpg') no-repeat left center;}
 #wrap .cont5 .inner article{margin: 0 0 0 auto;}
 
 #wrap .cont6{background: url('..//images/home_interior.jpg') no-repeat center / cover; background-attachment: fixed; height: 500px;}
@@ -134,38 +134,38 @@ header .hamburger_btn.active span:nth-of-type(3){transform: rotate(-45deg); left
 #wrap .sub_slider .slider .slide_item{position: absolute; top: 0; left: 0; width: 100%; height: 100%; display: none;  background-attachment: fixed; background-position: center 20%; background-repeat: no-repeat; background-size: cover;}
 #wrap .sub_slider .slider .slide_item.active{z-index: 1; display: block;} 
 
-#wrap.about_cacadew .sub_top{background-image: url('//chae90.dothome.co.kr/cacadew_img/about_img.jpg');}
+#wrap.about_cacadew .sub_top{background-image: url('../images/about_img.jpg');}
 
-#wrap.culture .sub_top{background-image: url('//chae90.dothome.co.kr/cacadew_img/culture_img.jpg');}
+#wrap.culture .sub_top{background-image: url('../images/culture_img.jpg');}
 
 #wrap.history_coffee .sub_contents .half_box{padding: 70px 0;}
-#wrap.history_coffee .sub_top{background-image: url('//chae90.dothome.co.kr/cacadew_img/history_img.jpg');}
-#wrap.history_coffee .sub_txt2::before{content: ''; display: inline-block; background: url('//chae90.dothome.co.kr/cacadew_img/ico_coffee.png') center 0 / 100%; width: 24px; height: 24px; margin-right: 10px;}
+#wrap.history_coffee .sub_top{background-image: url('../images/history_img.jpg');}
+#wrap.history_coffee .sub_txt2::before{content: ''; display: inline-block; background: url('../images/ico_coffee.png') center 0 / 100%; width: 24px; height: 24px; margin-right: 10px;}
 
-#wrap.deram_pactory .sub_top{background-image: url('//chae90.dothome.co.kr/cacadew_img/c_cheesecake_img.jpg');}
-#wrap.deram_pactory .sub_slider .slider .slide1{background-image: url('//chae90.dothome.co.kr/cacadew_img/c_cheesecake_slider1.jpg');}
-#wrap.deram_pactory .sub_slider .slider .slide2{background-image: url('//chae90.dothome.co.kr/cacadew_img/c_cheesecake_slider2.jpg');}
-#wrap.deram_pactory .sub_slider .slider .slide3{background-image: url('//chae90.dothome.co.kr/cacadew_img/c_cheesecake_slider3.jpg');}
-#wrap.deram_pactory .sub_slider .slider .slide4{background-image: url('//chae90.dothome.co.kr/cacadew_img/c_cheesecake_slider4.jpg');}
-#wrap.deram_pactory .sub_slider .slider .slide5{background-image: url('//chae90.dothome.co.kr/cacadew_img/c_cheesecake_slider5.jpg');}
-#wrap.deram_pactory .sub_slider .slider .slide6{background-image: url('//chae90.dothome.co.kr/cacadew_img/c_cheesecake_slider6.jpg');}
-#wrap.deram_pactory .sub_slider .slider .slide7{background-image: url('//chae90.dothome.co.kr/cacadew_img/c_cheesecake_slider7.jpg');}
-#wrap.deram_pactory .sub_slider .slider .slide8{background-image: url('//chae90.dothome.co.kr/cacadew_img/c_cheesecake_slider8.jpg');}
-#wrap.deram_pactory .sub_slider .slider .slide8{background-image: url('//chae90.dothome.co.kr/cacadew_img/c_cheesecake_slider8.jpg');}
+#wrap.deram_pactory .sub_top{background-image: url('../images/c_cheesecake_img.jpg');}
+#wrap.deram_pactory .sub_slider .slider .slide1{background-image: url('../images/c_cheesecake_slider1.jpg');}
+#wrap.deram_pactory .sub_slider .slider .slide2{background-image: url('../images/c_cheesecake_slider2.jpg');}
+#wrap.deram_pactory .sub_slider .slider .slide3{background-image: url('../images/c_cheesecake_slider3.jpg');}
+#wrap.deram_pactory .sub_slider .slider .slide4{background-image: url('../images/c_cheesecake_slider4.jpg');}
+#wrap.deram_pactory .sub_slider .slider .slide5{background-image: url('../images/c_cheesecake_slider5.jpg');}
+#wrap.deram_pactory .sub_slider .slider .slide6{background-image: url('../images/c_cheesecake_slider6.jpg');}
+#wrap.deram_pactory .sub_slider .slider .slide7{background-image: url('../images/c_cheesecake_slider7.jpg');}
+#wrap.deram_pactory .sub_slider .slider .slide8{background-image: url('../images/c_cheesecake_slider8.jpg');}
+#wrap.deram_pactory .sub_slider .slider .slide8{background-image: url('../images/c_cheesecake_slider8.jpg');}
 
-#wrap.bardot .sub_top{background-image: url('//chae90.dothome.co.kr/cacadew_img/c_bardot_img.jpg');}
-#wrap.bardot .sub_slider .slider .slide1{background-image: url('//chae90.dothome.co.kr/cacadew_img/c_bardot_slider1.jpg');}
-#wrap.bardot .sub_slider .slider .slide2{background-image: url('//chae90.dothome.co.kr/cacadew_img/c_bardot_slider2.jpg');}
-#wrap.bardot .sub_slider .slider .slide3{background-image: url('//chae90.dothome.co.kr/cacadew_img/c_bardot_slider3.jpg');}
-#wrap.bardot .sub_slider .slider .slide4{background-image: url('//chae90.dothome.co.kr/cacadew_img/c_bardot_slider4.jpg');}
-#wrap.bardot .sub_slider .slider .slide5{background-image: url('//chae90.dothome.co.kr/cacadew_img/c_bardot_slider5.jpg');}
+#wrap.bardot .sub_top{background-image: url('../images/c_bardot_img.jpg');}
+#wrap.bardot .sub_slider .slider .slide1{background-image: url('../images/c_bardot_slider1.jpg');}
+#wrap.bardot .sub_slider .slider .slide2{background-image: url('../images/c_bardot_slider2.jpg');}
+#wrap.bardot .sub_slider .slider .slide3{background-image: url('../images/c_bardot_slider3.jpg');}
+#wrap.bardot .sub_slider .slider .slide4{background-image: url('../images/c_bardot_slider4.jpg');}
+#wrap.bardot .sub_slider .slider .slide5{background-image: url('../images/c_bardot_slider5.jpg');}
 
-#wrap.tavalon .sub_top{background-image: url('//chae90.dothome.co.kr/cacadew_img/c_tavalon_img.jpg');}
-#wrap.tavalon .sub_slider .slider .slide1{background-image: url('//chae90.dothome.co.kr/cacadew_img/c_tavalon_slider1.jpg');}
-#wrap.tavalon .sub_slider .slider .slide2{background-image: url('//chae90.dothome.co.kr/cacadew_img/c_tavalon_slider2.jpg');}
-#wrap.tavalon .sub_slider .slider .slide3{background-image: url('//chae90.dothome.co.kr/cacadew_img/c_tavalon_slider3.jpg');}
-#wrap.tavalon .sub_slider .slider .slide4{background-image: url('//chae90.dothome.co.kr/cacadew_img/c_tavalon_slider4.jpg');}
-#wrap.tavalon .sub_slider .slider .slide5{background-image: url('//chae90.dothome.co.kr/cacadew_img/c_tavalon_slider5.jpg');}
+#wrap.tavalon .sub_top{background-image: url('../images/c_tavalon_img.jpg');}
+#wrap.tavalon .sub_slider .slider .slide1{background-image: url('../images/c_tavalon_slider1.jpg');}
+#wrap.tavalon .sub_slider .slider .slide2{background-image: url('../images/c_tavalon_slider2.jpg');}
+#wrap.tavalon .sub_slider .slider .slide3{background-image: url('../images/c_tavalon_slider3.jpg');}
+#wrap.tavalon .sub_slider .slider .slide4{background-image: url('../images/c_tavalon_slider4.jpg');}
+#wrap.tavalon .sub_slider .slider .slide5{background-image: url('../images/c_tavalon_slider5.jpg');}
 
 #wrap .sub_contents .menu_item{display: flex; flex-wrap: wrap; justify-content: start;}
 #wrap .sub_contents .menu_item li{width: 25%; border-radius: 20px; padding: 0 15px 30px; cursor: pointer;}
@@ -182,15 +182,15 @@ header .hamburger_btn.active span:nth-of-type(3){transform: rotate(-45deg); left
 #wrap .sub_contents .menu .popup .menu_ttl small{font-size: 20px;}
 #wrap .sub_contents .menu .popup .menu_txt{display: block;}
 
-#wrap.best_and_new .sub_top{background-image: url('//chae90.dothome.co.kr/cacadew_img/menu_img.jpg');}
-#wrap.espresso .sub_top{background-image: url('//chae90.dothome.co.kr/cacadew_img/menu_espresso_img.jpg');}
-#wrap.tea_and_latte .sub_top{background-image: url('//chae90.dothome.co.kr/cacadew_img/menu_tea_img.jpg');}
-#wrap.cacadew .sub_top{background-image: url('//chae90.dothome.co.kr/cacadew_img/menu_cacadew_img.jpg');}
-#wrap.detox .sub_top{background-image: url('//chae90.dothome.co.kr/cacadew_img/menu_detox_img.jpg');}
-#wrap.ade .sub_top{background-image: url('//chae90.dothome.co.kr/cacadew_img/menu_ade_img.jpg');}
-#wrap.the_dream_factory_menu .sub_top{background-image: url('//chae90.dothome.co.kr/cacadew_img/c_cheesecake_img.jpg');}
-#wrap.bardot_menu .sub_top{background-image: url('//chae90.dothome.co.kr/cacadew_img/c_bardot_img.jpg');}
-#wrap.tavalon_menu .sub_top{background-image: url('//chae90.dothome.co.kr/cacadew_img/menu_tea_img.jpg');}
+#wrap.best_and_new .sub_top{background-image: url('../images/menu_img.jpg');}
+#wrap.espresso .sub_top{background-image: url('../images/menu_espresso_img.jpg');}
+#wrap.tea_and_latte .sub_top{background-image: url('../images/menu_tea_img.jpg');}
+#wrap.cacadew .sub_top{background-image: url('../images/menu_cacadew_img.jpg');}
+#wrap.detox .sub_top{background-image: url('../images/menu_detox_img.jpg');}
+#wrap.ade .sub_top{background-image: url('../images/menu_ade_img.jpg');}
+#wrap.the_dream_factory_menu .sub_top{background-image: url('../images/c_cheesecake_img.jpg');}
+#wrap.bardot_menu .sub_top{background-image: url('../images/c_bardot_img.jpg');}
+#wrap.tavalon_menu .sub_top{background-image: url('../images/menu_tea_img.jpg');}
 
 @keyframes fadeIn {from {opacity: 0;}to {opacity: 1;}}
 @keyframes scale {from {transform: scale(2.5); opacity: 0;}to {transform: scale(1); opacity: 1;}}
