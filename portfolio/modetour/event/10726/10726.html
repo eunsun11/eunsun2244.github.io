@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>9511</title>
+	<script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
+	<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
+	<script src="https://unpkg.com/gsap@3/dist/ScrollToPlugin.min.js"></script>
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<link href="https://cdn.jsdelivr.net/npm/reset-css@5.0.2/reset.min.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
+	<style>
+		@font-face {
+			font-family: 'SCoreDream';
+			font-weight: 100; 
+			font-style: normal; 
+			src: url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream1.woff2) format('woff2'),
+				url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream1.woff) format('woff');
+			font-display: swap;
+		}
+		@font-face {
+			font-family: 'SCoreDream';
+			font-weight: 200; 
+			font-style: normal; 
+			src: url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream2.woff2) format('woff2'),
+				url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream2.woff) format('woff');
+			font-display: swap;
+		}
+		@font-face {
+			font-family: 'SCoreDream';
+			font-weight: 300; 
+			font-style: normal; 
+			src: url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream3.woff2) format('woff2'),
+				url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream3.woff) format('woff');
+			font-display: swap;
+		}
+		@font-face {
+			font-family: 'SCoreDream';
+			font-weight: 400; 
+			font-style: normal; 
+			src: url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream4.woff2) format('woff2'),
+				url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream4.woff) format('woff');
+			font-display: swap;
+		}
+		@font-face {
+			font-family: 'SCoreDream';
+			font-weight: 500; 
+			font-style: normal; 
+			src: url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream5.woff2) format('woff2'),
+				url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream5.woff) format('woff');
+			font-display: swap;
+		}
+		@font-face {
+			font-family: 'SCoreDream';
+			font-weight: 600; 
+			font-style: normal; 
+			src: url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream6.woff2) format('woff2'),
+				url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream6.woff) format('woff');
+			font-display: swap;
+		}
+		@font-face {
+			font-family: 'SCoreDream';
+			font-weight: 700; 
+			font-style: normal; 
+			src: url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream7.woff2) format('woff2'),
+				url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream7.woff) format('woff');
+			font-display: swap;
+		}
+		@font-face {
+			font-family: 'SCoreDream';
+			font-weight: 800; 
+			font-style: normal; 
+			src: url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream8.woff2) format('woff2'),
+				url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream8.woff) format('woff');
+			font-display: swap;
+		}
+		@font-face {
+			font-family: 'SCoreDream';
+			font-weight: 900; 
+			font-style: normal; 
+			src: url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream9.woff2) format('woff2'),
+				url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream9.woff) format('woff');
+			font-display: swap;
+		}		
+		.event_wrap {min-width: 1100px; text-align: center; overflow: hidden;}
+		.event_wrap img{vertical-align: middle;}
+		.event_wrap div, span, p, i, button, strong, small, a{font-family: 'SCoreDream'; text-decoration: none;}
+		.event_wrap .e_ttl{background: url('images/ttl_bg.jpg') no-repeat center 0;}
+		.event_wrap .nav_group{width: 100%; position: absolute; top: 500px; z-index: 999; background: rgba(0, 0, 0, 0.4);}
+		.event_wrap .nav_group ul{display: flex; width: 1100px; margin: 0 auto; padding: 0 50px; box-sizing: border-box;}
+		.event_wrap .nav_group ul li{height: 160px; flex: 1; text-align: center; display: table; position: relative;}
+		.event_wrap .nav_group ul li > a{display: table-cell; vertical-align: middle; position: relative; z-index: 1;}
+		.event_wrap .nav_group ul li span{display: block; color: #FFF; font-size: 20px; line-height: 24px; opacity: 0.8;}
+		.event_wrap .nav_group ul li span.num{font-size: 24px; margin-bottom: 10px; font-weight: bold;}
+		.event_wrap .nav_group ul li::before{content: ''; width: 1px; height: 24px; background: rgba(255,255,255,0.8); position: absolute; left: 0; top: 50%; margin-top: -12px;}
+		.event_wrap .nav_group ul li.on::before,
+		.event_wrap .nav_group ul li:first-child::before,
+		.event_wrap .nav_group ul li.on + li::before{display: none;}
+		.event_wrap .nav_group ul li.on::after{content: ''; position: absolute; left: -10px; top: -10px; right: -10px; bottom: -10px; background: linear-gradient(0deg, rgba(0,172,209,1) 8%, rgba(0,220,148,1) 100%); border-radius: 10px; box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.4);}
+		.event_wrap .nav_group ul li.on span{opacity: 1;}
+		.event_wrap [id^="cont0"]{height: 3000px;}
+		.event_wrap .cont_ttl{margin-top: 45px;}
+		.event_wrap .cont_ttl .txt_st01{font-size: 18px; color: #00b979;}
+		.event_wrap .cont_ttl .txt_st02{font-size: 32px; color: #000000; font-weight: 500;}
+		.event_wrap .cont_ttl .txt_st03{font-size: 50px; color: #000000; font-weight: 600;}
+    </style>
+</head>
+<body>
+	<!-- [s] :: event_wrap -->
+	<div class="event_wrap">
+		<div class="e_ttl">
+			<img src="images/ttl.jpg" alt="세상의 모든 여행 2019 모두투어 여행박람회 MODETOUR TRAVEL MART. 온라인 예약기간 : 2019년 8월 12일 월요일 부터 2019년 9월 8일 일요일 까지. 박람회 기간 : 2019년 9월 6일 금요일 부터 2019년 9월 8일 일요일 까지. 코엑스 A&B1홀">
+		</div>
+		<div class="nav_group">
+            <ul>
+                <li class="on">
+					<a href="#cont01">
+						<span class="num">01</span>
+						<span>타임세일<br>짠내vs부(富)내</span>
+					</a>
+				</li>
+                <li>
+					<a href="#cont02">
+						<span class="num">02</span>
+						<span>여행 트렌드<br>R. E. S. T</span>
+					</a>
+				</li>
+                <li>
+					<a href="#cont03">
+						<span class="num">03</span>
+						<span>인기지역<br>TOP 10</span>
+					</a>
+				</li>
+                <li>
+					<a href="#cont04">
+						<span class="num">04</span>
+						<span>지역별<br>대표상품</span>
+					</a>
+				</li>
+                <li>
+					<a href="#cont05">
+						<span class="num">05</span>
+						<span>이벤트 및<br>혜택</span>
+					</a>
+				</li>
+                <li>
+					<a href="#cont06">
+						<span class="num">06</span>
+						<span>자유여행<br>항공/호텔</span>
+					</a>
+				</li>
+            </ul>
+        </div>
+        <div class="e_contents">
+            <div id="cont01" class="e_cont">
+				<div class="cont_ttl">
+					<img src="images/ico_cont01.png" alt="">
+					<p class="txt_st01">같은 여행지를 색다르게 떠나는 방법</p>
+					<p class="txt_st02">짠내 VS 부(富)내</p>
+					<p class="txt_st03 ">나트랑</p>
+				</div>
+				<div class="d_day">
+					<p>남은시간</p>
+					<div class="time"></div>
+				</div>
+				<div class="items">
+					<div class="item01">
+						<p class="item_ttl">
+							<span>짠내</span>
+							<span>나트랑 리버티 호텔</span>
+						</p>
+						<a href="#" class="more">상품보기</a>
+					</div>
+					<div class="item02">
+						<p class="item_ttl">
+							<span>부(富)내</span>
+							<span>나트랑 스완도르 리조트</span>
+						</p>
+						<a href="#" class="more">상품보기</a>
+					</div>
+				</div>
+			</div>
+            <div id="cont02" class="e_cont">
+				2
+			</div>
+            <div id="cont03" class="e_cont">
+				<div class="slider">
+					<div class="swiper-wrapper">
+					    <div class="swiper-slide">slide1</div>					  
+					    <div class="swiper-slide">slide2</div>					  
+					    <div class="swiper-slide">slide4</div>					  
+					    <div class="swiper-slide">slide3</div>					  
+					</div>
+					<div class="pagination1"></div>
+				  </div>
+			</div>
+            <div id="cont04" class="e_cont">4</div>
+            <div id="cont05" class="e_cont">5</div>
+            <div id="cont06" class="e_cont">6</div>
+        </div>
+	</div>
+	<!-- [e] :: event_wrap -->
+	<script>
+		$(function(){
+			var ttlH = $('.e_ttl').height(),
+			    navH = $('.nav_group').height();
+			$('.nav_group').css({top: ttlH-navH})
+		 //nav click
+		 var $menu     = $('.nav_group li'),
+				$contents = $('[id^="cont0"]'),
+				$doc      = $('html, body');
+			$(function () {
+				$menu.find('a').click(function(e){
+					var $target = $(this).parent(),
+						idx     = $target.index(),
+						section = $contents.eq(idx),
+						navH = $('.nav_group li').height(),
+						offsetTop = section.offset().top-navH;
+					$doc.stop()
+							.animate({
+								scrollTop :offsetTop
+							}, 800);
+					return false;
+				});
+			});
+			//nav fixed, addClass
+			$(window).scroll(function(){                                            
+				var scltop = $(window).scrollTop(),
+					header = $('.nav_group').first(),
+					navH = $('.nav_group li').height(),
+					gnbTop = $('.e_contents').offset().top-navH;
+                header.css({
+                    'position': (scltop > gnbTop) ? 'fixed' : 'absolute',
+                    'top': (scltop > gnbTop) ? '0' : ttlH-navH});
+                    
+				$.each($contents, function(idx, item){
+					var $target   = $contents.eq(idx),
+						i         = $target.index(),
+						targetTop = $target.offset().top-navH;
+					if (targetTop <= scltop) {
+						$menu.removeClass('on');
+						$menu.eq(idx).addClass('on');
+					}
+					if (!(200 <= scltop)) {
+						$menu.removeClass('on');
+					}
+				});   
+			});
+
+			var swiper = new Swiper('.slider', {
+				spaceBetween: 30,
+				freeMode: true,
+				loop: true,
+				direction : 'horizontal',      
+				mousewheel: {
+					invert: false,
+				},
+				// autoHeight: true,
+				pagination: {
+					el: '.pagination1',
+					clickable: true,
+				}
+			});
+		});
+
+	</script>
+</body>
+
+</html>
