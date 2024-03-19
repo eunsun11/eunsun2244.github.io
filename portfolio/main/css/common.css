@@ -90,7 +90,7 @@ h1,h2,h3,h4,h5,h6{font-family: 'SEBANG_Gothic_Bold';}
 #wrap{overflow: hidden;}
 section{background: #fff8e5;}
 .main_cont{width: 100%; height: 100vh; overflow: hidden; position: relative; transition: 0.3s;}
-.main_cont h1{position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 99;}
+.main_cont h1{position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); z-index: 99; font-size: 35px;}
 .main_cont > div{position: absolute;}
 .main_cont > div img{width: 100%;}
 .main_cont .top_right1{right: -10vw; top: -8.5000vw; width: 57.0500vw;}
@@ -173,6 +173,7 @@ footer .footer{max-width: 1100px; margin: 0 auto; text-align: center; line-heigh
    .main_cont{height: 100vw;}
  }
 @media (max-width:767px) {
+   .main_cont h1{font-size: 20px;}
    section .inner{padding: 50px 30px;}
    section h2{font-size: 35px; margin-bottom: 50px;}
    section .about > div{width: 100%;}
