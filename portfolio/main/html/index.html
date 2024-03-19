@@ -9,14 +9,12 @@
 </head>
 <body>
     <div id="wrap">
-        <header>
-            <h1 class="container"><a href="#">EunSun</a></h1>
-        </header>
         <main>
             <section class="main_cont">
-                <div class="top_right1"><img src="../images/top_right1.png" alt=""></div>
+                <h1><a href="#">WELCOME TO MY PORTFOLIO.</a></h1>
+                <div class="top_right1"><img src="../images/top_right1_1.png" alt=""></div>
                 <div class="top_right2"><img src="../images/top_right2.png" alt=""></div>
-                <div class="bottom_left1"><img src="../images/bottom_left1.png" alt=""></div>
+                <div class="bottom_left1"><img src="../images/bottom_left1_1.png" alt=""></div>
                 <div class="bottom_left2"><img src="../images/bottom_left2.png" alt=""></div>
                 <div class="sky_circle1"><img src="../images/sky_circle1.png" alt=""></div>
                 <div class="sky_circle2"><img src="../images/sky_circle2.png" alt=""></div>
@@ -273,7 +271,6 @@
     <script>
         window.addEventListener('DOMContentLoaded', function () {
             let tl = gsap.timeline({defaults:{opacity:0, ease:'back'}});
-
             tl.from('.top_right1',{x:100,y:-100})
             tl.from('.bottom_left1',{x:-100,y:100},'<')
             tl.from('.top_right2',{x:100,y:-100})
@@ -307,7 +304,8 @@
             tl.from('.x1',{x:100,y:100},'<')
             tl.from('.x2',{x:100,y:-100},'<')
             tl.to('.x1',{duration:1,opacity:1,transformOrigin:"center",rotation:180,repeat:-1,ease:"linear"})
-            tl.to('.x2',{duration:1,opacity:1,transformOrigin:"center",rotation:180,repeat:-1,ease:"linear"},'<')                    
+            tl.to('.x2',{duration:1,opacity:1,transformOrigin:"center",rotation:180,repeat:-1,ease:"linear"},'<')       
+            tl.from('h1',{x:0,y:100},'<')             
         });
 
         
@@ -323,6 +321,12 @@
                 draggable: true,
                 dragSize: 28,
             },
+            breakpoints: {                
+                1024: {
+                    slidesPerView: 1.5,
+                    spaceBetween: 20
+                }
+            }
         });
     </script>
 </body>

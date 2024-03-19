@@ -1,0 +1,575 @@
+<%@ Page Language="C#" MasterPageFile="~/App_Master/Master_TF.master" AutoEventWireup="true" CodeFile="mode.aspx.cs" Inherits="Event_18_1105" %>
+<asp:Content ID="ContentHead" ContentPlaceHolderID="ContentPlaceHead" runat="server">
+    <link rel="stylesheet" type="text/css" href="https://cdn.rawgit.com/singihae/Webfonts/master/style.css?ver=1.0.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.min.css?ver=1.0.0">
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js?ver=1.0.0"></script>
+    <style type="text/css">
+        /*full 공통*/
+        .blind {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 0;
+            height: 0;
+            font-size: 0;
+            line-height: 0;
+            visibility: hidden;
+            overflow: hidden;
+        }
+
+        .follow_section.aside,
+        #divQuickTop {
+            display: none !important;
+        }
+
+        #Containerwrap,
+        #EventwarpBody {
+            margin: 0 !important;
+            width: 100% !important;
+        }
+
+        #EventwarpBody {
+            position: relative;
+            min-width: 1150px;
+            margin: 0 auto;
+        }
+
+        #footer {
+            padding-top: 0;
+        }
+        /*//full 공통*/
+    </style>
+</asp:Content>
+<asp:Content ID="ContentBody" ContentPlaceHolderID="ContentPlaceHolder" runat="server">
+    <div id="EventwarpBody">
+        <!-- [S]:  기획전 시작 -->
+        <link rel="stylesheet" type="text/css" href="http://www.modetour.com/event/event_19/0304_family/font.css" />
+        <style>
+            .event_wrap{min-width: 1357px; text-align: center;}
+            .event_wrap button{border: none; background: none;}
+            .event_wrap button:focus{outline:0 none;}
+            .event_wrap area:focus{outline:0 none;}
+            .event_wrap .con_group {position: relative;}
+            .event_wrap .con_group .e_con{display: none;}
+            .event_wrap .con_group .e_con.on{display: block;}
+            .event_wrap .e_container{position: relative; overflow: hidden;}
+
+            .event_wrap .e_top {background: url('//img.modetour.com/promotion/190812_ex/title_bg.jpg') no-repeat center 0;}
+            .event_wrap .e_top .e_nav {font-size: 0; background: url('//img.modetour.com/promotion/190812_ex/nav_bg.png')}
+            .event_wrap .e_top .e_nav ul{height: 158px;}
+            .event_wrap .e_top .e_nav li {display: inline-block; *zoom: 1; *display: inline; position: relative; vertical-align: top; font-size: 0;}
+            .event_wrap .e_top .e_nav a {display: inline-block; *zoom: 1; *display: inline; background: url('//img.modetour.com/promotion/190812_ex/nav_txt.png') no-repeat; width: 150px; height: 158px; font-size: 0; position: relative; z-index: 3;}
+            .event_wrap .e_top .e_nav li:before{content: ""; position: absolute; left: 0; top: 0; background: url('//img.modetour.com/promotion/190812_ex/bar.png') no-repeat; width: 1px; height: 158px;}
+            .event_wrap .e_top .e_nav li:first-child:before{display: none;}
+            .event_wrap .e_top .e_nav li:after{content: ""; opacity: 0; position: absolute; left: -16px; top: -12px; background: url('//img.modetour.com/promotion/190812_ex/nav_btn_bg.png') no-repeat; width: 184px; height: 184px; z-index: 1; box-shadow: 12px 20px 30px rgba(70,70,70, 0.5); border-radius: 10px;}
+            .event_wrap .e_top .e_nav a:hover{background: url('//img.modetour.com/promotion/190812_ex/nav_txt_on.png') no-repeat;}
+            .event_wrap .e_top .e_nav li:hover:after{opacity: 1;}
+            .event_wrap .e_top .e_nav .e_nav1 a{background-position: -85px 0; width: 165px;}
+            .event_wrap .e_top .e_nav li.e_nav1:after{left: -12px;}
+            .event_wrap .e_top .e_nav .e_nav2 a{background-position: -257px 0;}
+            .event_wrap .e_top .e_nav .e_nav3 a{background-position: -416px 0;}
+            .event_wrap .e_top .e_nav .e_nav4 a{background-position: -570px 0;}
+            .event_wrap .e_top .e_nav .e_nav5 a{background-position: -729px 0;}
+            .event_wrap .e_top .e_nav .e_nav6 a{background-position: -890px 0;}
+                
+            .event_wrap #con1 {background: #FFF; height: 960px;}
+            .event_wrap #con1 .tit2{padding: 35px 0 6px;}
+            .event_wrap #con1 .timeRmnn{background: url('//img.modetour.com/promotion/190812_ex/time_bg.png') no-repeat; width: 242px; height: 78px; margin: 20px auto 0; position: relative; z-index: 3;}
+            .event_wrap #con1 .e_time{font-family: 'Noto Sans KR','apple sd gothic neo', dotum, '돋움', verdana, Sans-serif; display: block; color: #FFF; font-size: 32px; padding-top: 39px; font-weight: 500;}
+            .event_wrap #con1 .prdc_area{position: relative; top: -115px; z-index: 1;}
+            .event_wrap #con1 .prdc1, .prdc2{font-family: 'Noto Sans KR','apple sd gothic neo', dotum, '돋움', verdana, Sans-serif; position: relative; display: inline-block; *zoom: 1; *display: inline;}
+            .event_wrap #con1 .prdc1 {margin-right: 240px;}
+            .event_wrap #con1 .prdc .opacity{opacity: 0; transition: 0.3s; position: absolute; left: 0; top: 0;}
+            .event_wrap #con1 .prdc.on .opacity{opacity: 1;}
+            .event_wrap #con1 .prdc .prdc_txt_area{position: absolute; top: 180px; left: 0; width: 100%; transition: 0.3s;}
+            .event_wrap #con1 .prdc.on .prdc_txt_area{top: 90px;}
+            .event_wrap #con1 .prdc .dbn{opacity: 0; transition: 0.3s;}
+            .event_wrap #con1 .prdc .dbn:before{content: ""; display: inline-block; text-align: center; width: 27px; height: 4px; background: #3cdbb8; margin-top: 20px;}
+            .event_wrap #con1 .prdc.on .dbn{opacity: 1;}
+            .event_wrap #con1 .prdc_txt_area p{font-family: 'Noto Sans KR','apple sd gothic neo', dotum, '돋움', verdana, Sans-serif; color: #FFF; text-align: center; line-height: 130%;}
+            .event_wrap #con1 .prdc_txt1{font-size: 39px; font-weight: 400;}
+            .event_wrap #con1 .prdc_txt2{font-size: 22px; font-weight: 300;}
+            .event_wrap #con1 .prdc_txt3{font-size: 18px; font-weight: 300; letter-spacing: -1px; padding: 10px 0 25px;}
+            .event_wrap #con1 .prdc_price{font-size: 30px; font-weight: 400;}
+            .event_wrap #con1 .prdc .prdc_btn{display: block; width: 133px; height: 133px; background: url('//img.modetour.com/promotion/190812_ex/prdc_btn.png') no-repeat; font-size: 0; position: absolute; bottom: 80px; left: 50%; margin-left: -66.5px; transition: 0.3s;}
+            .event_wrap #con1 .prdc.on .prdc_btn{bottom: 30px;}
+            .con1_bg2{display: block; width: 625px; height: 577px; position: absolute; bottom: 0; left: 50%; margin-left: -290px; background: url('//img.modetour.com/promotion/190812_ex/con1_bg2.png') no-repeat; z-index: 2;}
+
+            .event_wrap #con2 iframe{width:100%; height:829px; vertical-align: top; position: relative; z-index: 3;}
+
+
+            .event_wrap #con3 {background: #FFF; height: 853px;}
+            .event_wrap #con3 .tit2{padding-top: 44px;}
+            .event_wrap #con3 .popular_areas {position: relative; width: 1100px; margin: 0 auto; padding-top: 45px;}
+            .event_wrap #con3 .popular_areas .btn_group {padding: 47px 30px 20px 8px; background: url('//img.modetour.com/promotion/190812_ex/top10.jpg') no-repeat 5px 0; width: 215px; float: left; overflow: hidden;}
+            .event_wrap #con3 .popular_areas .btn_group button {font-size: 0; position: relative; display: block; overflow: visible;}
+            .event_wrap #con3 .popular_areas .btn_group button span{display: block; width: 160px; height: 44px; background: url('//img.modetour.com/promotion/190812_ex/popular_areas_btn.png') no-repeat; font-size: 0; position: relative; z-index: 2; -ms-background-position-x: -12px; background-position-x: -12px;}
+            .event_wrap #con3 .popular_areas .btn_group button.e_btn1 span{-ms-background-position-y: -44px; background-position-y: -44px;}
+            .event_wrap #con3 .popular_areas .btn_group button.e_btn2 span{-ms-background-position-y: -88px; background-position-y: -88px;}
+            .event_wrap #con3 .popular_areas .btn_group button.e_btn3 span{-ms-background-position-y: -132px; background-position-y: -132px;}
+            .event_wrap #con3 .popular_areas .btn_group button.e_btn4 span{-ms-background-position-y: -176px; background-position-y: -176px;}
+            .event_wrap #con3 .popular_areas .btn_group button.e_btn5 span{-ms-background-position-y: -220px; background-position-y: -220px;}
+            .event_wrap #con3 .popular_areas .btn_group button.e_btn6 span{-ms-background-position-y: -264px; background-position-y: -264px;}
+            .event_wrap #con3 .popular_areas .btn_group button.e_btn7 span{-ms-background-position-y: -308px; background-position-y: -308px;}
+            .event_wrap #con3 .popular_areas .btn_group button.e_btn8 span{-ms-background-position-y: -352px; background-position-y: -352px;}
+            .event_wrap #con3 .popular_areas .btn_group button.e_btn9 span{-ms-background-position-y: -396px; background-position-y: -396px;}
+            .event_wrap #con3 .popular_areas .btn_group button.e_btn10 span{-ms-background-position-y: -440px; background-position-y: -440px;}
+            .event_wrap #con3 .popular_areas .btn_group button.on span{background-image: url('//img.modetour.com/promotion/190812_ex/popular_areas_btn_on.png');}
+            .event_wrap #con3 .popular_areas .btn_group button:hover span{background-image: url('//img.modetour.com/promotion/190812_ex/popular_areas_btn_on.png');}
+            .event_wrap #con3 .popular_areas .btn_group button:after{content: ""; position: absolute; top: 0; left: -10px; width: 224px; height: 68px; background: url('//img.modetour.com/promotion/190812_ex/p_a_hover.png'); z-index: 1; opacity: 0;}
+            .event_wrap #con3 .popular_areas .btn_group button.on:after{opacity: 1;}
+            .event_wrap #con3 .popular_areas .btn_group button:hover:after{opacity: 1;}
+            .event_wrap #con3 .popular_areas .con_group {position: relative; left: 220px; top: 30px; z-index: 3;}
+            .event_wrap #con3 .popular_areas .con_group .e_con{position: absolute; left: 0; top: 0;}
+
+            .event_wrap #con4 {background: #e9f5fb;}
+            .event_wrap #con4 .tit2{padding-top: 51px;}
+            .event_wrap #con4 .tit3{width: 970px; text-align: right; margin: 0 auto; padding: 62px 0;}
+            .event_wrap #con4 .map_img{margin-left: 50px;}
+            .event_wrap #con4 .country1{background: url('//img.modetour.com/promotion/190812_ex/country1_bg.jpg') no-repeat center 0;}
+            .event_wrap #con4 .country2{background: url('//img.modetour.com/promotion/190812_ex/country2_bg.jpg') no-repeat center 0;}
+            .event_wrap #con4 .country3{background: url('//img.modetour.com/promotion/190812_ex/country3_bg.jpg') no-repeat center 0;}
+            .event_wrap #con4 .country4{background: url('//img.modetour.com/promotion/190812_ex/country4_bg.jpg') no-repeat center 0;}
+            .event_wrap #con4 .country5{background: url('//img.modetour.com/promotion/190812_ex/country5_bg.jpg') no-repeat center 0;}
+            .event_wrap #con4 .country6{background: url('//img.modetour.com/promotion/190812_ex/country6_bg.jpg') no-repeat center 0;}
+            .event_wrap #con4 .country7{background: url('//img.modetour.com/promotion/190812_ex/country7_bg.jpg') no-repeat center 0;}
+            .event_wrap #con4 .country8{background: url('//img.modetour.com/promotion/190812_ex/country8_bg.jpg') no-repeat center 0;}
+            .event_wrap #con4 .country9{background: url('//img.modetour.com/promotion/190812_ex/country9_bg.jpg') no-repeat center 0;}
+            .event_wrap #con4 .e_con{width: 100%; position: static; height: 995px;}
+            .event_wrap #con4 .country_more{padding-top: 120px;}
+            .event_wrap #con4 .bg_img{display: block; position: absolute; left: 50%;}
+            .event_wrap #con4 .btn_group{position: absolute; z-index: 3; left: 50%; font-size: 0; top: 670px; width: 1100px; margin-left: -550px;}
+            .event_wrap #con4 .btn_group a{display: inline-block; *zoom:1; *display: inline; position: relative; width: 37px;height: 50px; background: url('//img.modetour.com/promotion/190812_ex/tab_btn_off.png'); transition: 0.3s;}
+            .event_wrap #con4 .btn_group a:hover{background-image: url('//img.modetour.com/promotion/190812_ex/tab_btn_on.jpg');}
+            .event_wrap #con4 .btn_group a img{position: relative; top: 18px; transition: 0.4s;}
+            .event_wrap #con4 .btn_group a:hover img{left: 0; right: 0;}
+            .event_wrap #con4 .btn_group .e_prev {float: left;}
+            .event_wrap #con4 .btn_group .e_prev img{left: 3px;}
+            .event_wrap #con4 .btn_group .e_next {float: right;}
+            .event_wrap #con4 .btn_group .e_next img{left: -3px;}
+            .event_wrap #con4 .country1 .bg_img{width: 75px; height: 57px; background: url('//img.modetour.com/promotion/190812_ex/country1_img.png') no-repeat; top: -57px; margin-left: -334px;}
+            .event_wrap #con4 .country2 .bg_img{width: 84px; height: 12px; background: url('//img.modetour.com/promotion/190812_ex/country2_img.png') no-repeat; top: -12px; margin-left: -434px;}
+            .event_wrap #con4 .country3 .bg_img{width: 96px; height: 48px; background: url('//img.modetour.com/promotion/190812_ex/country3_img.png') no-repeat; top: -46px; margin-left: -308px;}
+            .event_wrap #con4 .country4 .bg_img{width: 112px; height: 15px; background: url('//img.modetour.com/promotion/190812_ex/country4_img.png') no-repeat; top: -15px; margin-left: -387px;}
+            .event_wrap #con4 .country5 .bg_img{width: 151px; height: 46px; background: url('//img.modetour.com/promotion/190812_ex/country5_img.png') no-repeat; top: -46px; margin-left: -432px;}
+            .event_wrap #con4 .country6 .bg_img{width: 32px; height: 41px; background: url('//img.modetour.com/promotion/190812_ex/country6_img.png') no-repeat; top: -41px; margin-left: -255px;}
+            .event_wrap #con4 .country7 .bg_img{width: 37px; height: 18px; background: url('//img.modetour.com/promotion/190812_ex/country7_img.png') no-repeat; top: -18px; margin-left: -383px;}
+            .event_wrap #con4 .country8 .bg_img{width: 51px; height: 44px; background: url('//img.modetour.com/promotion/190812_ex/country8_img.png') no-repeat; top: -44px; margin-left: -349px;}
+            .event_wrap #con4 .country9 .bg_img{width: 126px; height: 19px; background: url('//img.modetour.com/promotion/190812_ex/country9_img.png') no-repeat; top: -19px; margin-left: -365px;}
+
+            .product_list {text-align: center;}
+            .product_list li{display: inline-block; *zoom: 1; *display: inline; width: 259px; height: 389px; position: relative; margin-left: 20px; box-shadow: 10px 10px 60px rgba(70,70,70, 0.5);border-radius: 10px; overflow: hidden;}
+            .product_list li:first-child{margin-left: 0;}
+            .product_list li span{display: block; text-align: left; padding: 0 30px; font-size: 20px; font-weight: 300; line-height: 25px; position: absolute; left: 0; top: 265px; letter-spacing: -1px; color: #000; font-family: 'Noto Sans KR','apple sd gothic neo', dotum, '돋움', verdana, Sans-serif;}
+            .product_list li span.price{font-weight: 400; font-size: 21px; top: 334px; letter-spacing: -0.5px;}
+
+            .event_wrap #con5 {background: url('//img.modetour.com/promotion/190812_ex/con5_bg.jpg') no-repeat center 0; height: 2360px; background-color: #ccf8eb;}
+            .event_wrap #con5 .tit2{padding-top: 57px;}
+            .event_wrap #con5 a{position: absolute; left: 50%; top: 0;}
+            .event_wrap #con5 a img{border-radius: 10px; box-shadow: 10px 10px 60px rgba(70,70,70, 0.2)}
+            .event_wrap #con5 a.benefit1{top: 109px; margin-left: 195px;}
+            .event_wrap #con5 a.benefit2{top: 542px; margin-left: -125px;}
+            .event_wrap #con5 a.benefit3{top: 542px; margin-left: 195px;}
+            .event_wrap #con5 a.benefit4{top: 976px; margin-left: -443px;}
+            .event_wrap #con5 a.benefit5{top: 976px; margin-left: -125px;}
+            .event_wrap #con5 a.benefit6{top: 976px; margin-left: 195px;}
+            .event_wrap #con5 .discount_ex{position: absolute; left: 50%; bottom: 377px; margin-left: -443px;}
+            .event_wrap #con5 .discount_notice{position: absolute; left: 50%; bottom: 25px; margin-left: -550px;}
+            .event_wrap #con5 .notice_btn{position: absolute; left: 50%; bottom: 250px; margin-left: 320px; top: auto;}
+
+            .event_wrap #con6 {background: #FFF;}
+            .event_wrap #con6 .tit2{padding-top: 80px;}
+            .event_wrap #con6 img{position: relative; z-index: 3;}
+
+
+            .move_item{display: block; animation: move_item 4s ease-in-out infinite; position: absolute; left: 50%;}
+            .move_item1{width: 358px; height: 356px; top: 150px; margin-left: 380px; background: url('//img.modetour.com/promotion/190812_ex/move_item1.png') no-repeat; animation: move_item 6s ease-in-out infinite;}
+            .move_item2{width: 382px; height: 383px; top: 430px; margin-left: -870px; background: url('//img.modetour.com/promotion/190812_ex/move_item2.png') no-repeat;}
+            .move_item3{width: 313px; height: 313px; top: -100px; margin-left: -660px; background: url('//img.modetour.com/promotion/190812_ex/move_item3.png') no-repeat;}
+            .move_item4{width: 372px; height: 287px; top: 170px; margin-left: 405px; background: url('//img.modetour.com/promotion/190812_ex/move_item4.png') no-repeat; animation: move_item 6s ease-in-out infinite;}
+            .move_item5{width: 397px; height: 216px; bottom: -27px; margin-left: 510px; background: url('//img.modetour.com/promotion/190812_ex/move_item5.png') no-repeat;}
+            .move_item6{width: 416px; height: 416px; top: 90px; margin-left: -840px; background: url('//img.modetour.com/promotion/190812_ex/move_item6.png') no-repeat;}
+            .move_item7{width: 332px; height: 399px; top: 660px; left: auto; right: 0; background: url('//img.modetour.com/promotion/190812_ex/move_item7.png') no-repeat;}
+            .move_item8{width: 200px; height: 245px; bottom: 270px; margin-left: -900px; background: url('//img.modetour.com/promotion/190812_ex/move_item8.png') no-repeat; animation: move_item 6s ease-in-out infinite;}
+            @keyframes move_item {
+                0%, 100% {transform: translateY(0);}
+                50% {transform: translateY(-25px);}
+            }
+            @-webkit-keyframes move_item {
+                0%, 100% {transform: translateY(0);}
+                50% {transform: translateY(-25px);}
+            }
+        </style>
+            <script>
+                //기기 설정
+                var userAgent = window.navigator.userAgent.toLowerCase(),
+                    ios = /ip(hone|od)/.test(userAgent), //ios
+                    android = userAgent.indexOf("mz_modetour") > -1 || /MobileApp/i.test(userAgent), //android app
+                    ismobile = false, //mobile browser
+                    isapp = false; //ios or android app
+
+                if (ios) {
+                    var safari = /safari/.test(userAgent),
+                    standalone = window.navigator.standalone;
+                    var search_engine_list = ["daum", "naver", "google", "nate", " kakao"];  //kakao 추가 modify by 2018.05.11(신지영)
+                    var is_engine = false;
+
+
+                    jQuery.each(search_engine_list, function (i, engine) {
+                        if (userAgent.indexOf(engine) > -1 || window.navigator.vendor.toLowerCase().indexOf(engine) > -1) {
+                            // || window.navigator.vendor.toLowerCase().indexOf(engine) > -1
+                            is_engine = true;
+                            return false;
+                        }
+                    });
+
+                    if (!standalone && safari) { //browser
+                        ismobile = true;
+                    } else if (standalone && !safari) { //standalone
+                        ismobile = true;
+                    } else if (!standalone && !safari) { //uiwebview
+                        ismobile = true;
+                        if (!is_engine) isapp = true;
+                    };
+                } else {
+                    //not iOS
+                    if (android) { //webview
+                        ismobile = true;
+                        isapp = true;
+                    } else { //browser
+                        ismobile = userAgent.match('android') != null;
+                    }
+                };
+
+                if (ismobile) {
+                    var nextPath = location.search;
+                    var pathName = location.pathname.toLowerCase();
+                    var weburl = "//m.modetour.com";
+
+                    location.replace(weburl + "/event/event_19/190812_ex/mode1.aspx" + nextPath);
+                }
+    </script>
+        
+    
+    <div class="event_wrap">
+        <!-- [s] title -->
+        <div class="e_top">
+            <div class="e_tit"><img src="//img.modetour.com/promotion/190812_ex/main_title.jpg" alt=""></div>
+            <div class="e_nav">
+                <ul>
+                    <li class="e_nav1"><a href="#con1" onclick="ga('send', 'event', '2019여행박람회', 'click', '2019여행박람회_Tab_1');">01. 타임세일 짠내vs부(富)내</a></li>
+                    <li class="e_nav2"><a href="#con2" onclick="ga('send', 'event', '2019여행박람회', 'click', '2019여행박람회_Tab_2');">02. 여행 트렌트 R. E. S. T</a></li>
+                    <li class="e_nav3"><a href="#con3" onclick="ga('send', 'event', '2019여행박람회', 'click', '2019여행박람회_Tab_3');">03. 인기지역 TOP 10</a></li>
+                    <li class="e_nav4"><a href="#con4" onclick="ga('send', 'event', '2019여행박람회', 'click', '2019여행박람회_Tab_4');">04. 지역별 대표상품</a></li>
+                    <li class="e_nav5"><a href="#con5" onclick="ga('send', 'event', '2019여행박람회', 'click', '2019여행박람회_Tab_4');">05. 이벤트 및 혜택</a></li>
+                    <li class="e_nav6"><a href="#con6" onclick="ga('send', 'event', '2019여행박람회', 'click', '2019여행박람회_Tab_5');">06. 자유 개별여행</a></li>
+                </ul>
+            </div><!-- //e_nav -->
+        </div>
+        <!-- [e] title -->
+
+        <!-- [s] 타임세일 -->
+        <div id="con1" class="e_container">
+            <p class="tit2"><img src="//img.modetour.com/promotion/190812_ex/con1_tit.png" alt=""></p>
+            <p><img src="//img.modetour.com/promotion/190812_ex/con1_tit_none.png" alt="" class="timedeal_title"></p>
+            <div class="timeRmnn">
+                <span class="e_time">0일 00 : 00 : 00</span>
+            </div>
+            <div class="prdc_area">
+                <div class="prdc1 prdc">
+                    <img src="//img.modetour.com/promotion/190812_ex/time_sale_opacity.png" alt="" class="opacity">
+                    <img src="//img.modetour.com/promotion/190812_ex/time_sale_none.png" alt="" class="timedeal_img1">
+                    <div class="prdc_txt_area">
+                        <p class="prdc_txt1">짠내</p>
+                        <p class="prdc_txt2"></p>
+                        <div class="dbn">
+                            <p class="prdc_txt3"></p>
+                            <p class="prdc_price"></p>
+                        </div>
+                    </div>
+                    <a href="//www.modetour.com/campaign.aspx" class="prdc_btn" onclick="ga('send', 'event', '2019여행박람회', 'click', '2019여행박람회_타임세일_1');">상품바로가기</a>
+                </div><!-- prdc1 -->
+                <div class="prdc2 prdc">
+                    <img src="//img.modetour.com/promotion/190812_ex/time_sale_opacity.png" alt="" class="opacity">
+                    <img src="//img.modetour.com/promotion/190812_ex/time_sale_none.png" alt="" class="timedeal_img2">
+                    <div class="prdc_txt_area">
+                        <p class="prdc_txt1">부(富)내</p>
+                        <p class="prdc_txt2"></p>
+                        <div class="dbn">
+                            <p class="prdc_txt3"></p>
+                            <p class="prdc_price"></p>
+                        </div>
+                    </div>
+                    <a href="//www.modetour.com/campaign2.aspx" class="prdc_btn" onclick="ga('send', 'event', '2019여행박람회', 'click', '2019여행박람회_타임세일_2');">상품바로가기</a>
+                </div><!-- prdc2 -->
+            </div>
+            <i class="con1_bg2"></i>
+            <i class="move_item move_item1"></i>
+            <i class="move_item move_item2"></i>
+        </div>
+        <!-- [e] 타임세일 -->
+        
+        <!-- [s] 여행트렌드 -->
+        <div id="con2" class="e_container">
+            <div>
+                <iframe id="frameObj" src="jinvertScroll.htm" frameborder="0"></iframe>
+            </div>
+        </div>
+        <!-- [e] 여행트렌드 -->
+        
+        <!-- [s] 인기지역 top10 -->
+        <div id="con3" class="e_container">                     
+            <p class="tit2"><img src="//img.modetour.com/promotion/190812_ex/con3_tit.png" alt=""></p>
+            <div class="popular_areas">
+                <div class="btn_group">
+                    <button class="e_btn1 on"><span>1. 다낭</span></button>
+                    <button class="e_btn2"><span>2. 괌</span></button>
+                    <button class="e_btn3"><span>3. 세부</span></button>
+                    <button class="e_btn4"><span>4. 스페인</span></button>
+                    <button class="e_btn5"><span>5. 장가계</span></button>
+                    <button class="e_btn6"><span>6. 보라카이</span></button>
+                    <button class="e_btn7"><span>7. 하와이</span></button>
+                    <button class="e_btn8"><span>8. 코타키나발루</span></button>
+                    <button class="e_btn9"><span>9. 블라디보스톡</span></button>
+                    <button class="e_btn10"><span>10. 방콕</span></button>
+                </div>
+                <div class="con_group">
+                    <div class="p_a1 e_con on">
+                        <a href="//www.modetour.com/package/Item.aspx?PCode=&Idx=514305" target="_blank" onclick="ga('send', 'event', '2019여행박람회', 'click', '2019여행박람회_인기지역_1');"><img src="//img.modetour.com/promotion/190812_ex/top10_con1.png" alt="인기 많은 곳은 다 이유가 있다. [다낭]"></a>
+                    </div>
+                    <div class="p_a2 e_con">
+                        <a href="//www.modetour.com/package/Item.aspx?PCode=&Idx=515374" target="_blank" onclick="ga('send', 'event', '2019여행박람회', 'click', '2019여행박람회_인기지역_2');"><img src="//img.modetour.com/promotion/190812_ex/top10_con2.png" alt="가족여행하면 가장 먼저 떠오르는 [괌]"></a>
+                    </div>
+                    <div class="p_a3 e_con">
+                        <a href="//www.modetour.com/package/Item.aspx?PCode=&Idx=514207" target="_blank" onclick="ga('send', 'event', '2019여행박람회', 'click', '2019여행박람회_인기지역_3');"><img src="//img.modetour.com/promotion/190812_ex/top10_con3.png" alt="완벽한 휴양으로 이보다 좋을 수 없는 [세부]"></a>
+                    </div>
+                    <div class="p_a4 e_con">
+                        <a href="//www.modetour.com/package/Item.aspx?PCode=&Idx=514427" target="_blank" onclick="ga('send', 'event', '2019여행박람회', 'click', '2019여행박람회_인기지역_4');"><img src="//img.modetour.com/promotion/190812_ex/top10_con4.png" alt="Hola! 어딜가도 즐거움 가득 [스페인]"></a>
+                    </div>
+                    <div class="p_a5 e_con">
+                        <a href="//www.modetour.com/package/Item.aspx?PCode=&Idx=514644" target="_blank" onclick="ga('send', 'event', '2019여행박람회', 'click', '2019여행박람회_인기지역_5');"><img src="//img.modetour.com/promotion/190812_ex/top10_con5.png" alt="부모님 모시고가기 딱 좋다 [장가계]"></a>
+                    </div>
+                    <div class="p_a6 e_con">
+                        <a href="//www.modetour.com/package/Item.aspx?PCode=&Idx=516117" target="_blank" onclick="ga('send', 'event', '2019여행박람회', 'click', '2019여행박람회_인기지역_6');"><img src="//img.modetour.com/promotion/190812_ex/top10_con6.png" alt="화이트비치에서 만나는 아름다운 선셋 [보라카이]"></a>
+                    </div>
+                    <div class="p_a7 e_con">
+                        <a href="//www.modetour.com/package/Item.aspx?PCode=&Idx=513948" target="_blank" onclick="ga('send', 'event', '2019여행박람회', 'click', '2019여행박람회_인기지역_7');"><img src="//img.modetour.com/promotion/190812_ex/top10_con7.png" alt="휴양,관광, 쇼핑까지 무엇하나 빠지지 않는 [하와이]"></a>
+                    </div>
+                    <div class="p_a8 e_con">
+                        <a href="//www.modetour.com/package/Item.aspx?PCode=&Idx=514589" target="_blank" onclick="ga('send', 'event', '2019여행박람회', 'click', '2019여행박람회_인기지역_8');"><img src="//img.modetour.com/promotion/190812_ex/top10_con8.png" alt="아직 안가보셨다구요? 세계 3대 선셋 [코타키나발루]"></a>
+                    </div>
+                    <div class="p_a9 e_con">
+                        <a href="//www.modetour.com/package/Item.aspx?PCode=&Idx=514436" target="_blank" onclick="ga('send', 'event', '2019여행박람회', 'click', '2019여행박람회_인기지역_9');"><img src="//img.modetour.com/promotion/190812_ex/top10_con9.png" alt="가장 가까운 유럽을 찾으시다면 [블라디보스톡]"></a>
+                    </div>      
+                    <div class="p_a10 e_con">
+                        <a href="//www.modetour.com/package/Item.aspx?PCode=&Idx=514771" target="_blank" onclick="ga('send', 'event', '2019여행박람회', 'click', '2019여행박람회_인기지역_10');"><img src="//img.modetour.com/promotion/190812_ex/top10_con10.png" alt="제대로된 호캉스와 맛집탐방 최적지 [방콕]"></a>
+                    </div>                                  
+                </div>
+            </div>
+            <i class="move_item move_item3"></i>
+            <i class="move_item move_item4"></i>
+            <i class="move_item move_item5"></i>
+        </div>
+        <!-- [e] 인기지역 top10 -->
+        
+        <!-- [s] 지역별 대표상품 -->
+        <div id="con4" class="e_container">      
+        </div>
+        <!-- [e] 지역별 대표상품 -->
+        
+        <!-- [s] 혜택 및 이벤트 -->
+        <div id="con5" class="e_container">                     
+            <p class="tit2"><img src="//img.modetour.com/promotion/190812_ex/con5_tit.png" alt=""></p>
+            <a href="//www.modetour.com/event/plan/detail.aspx?mloc=07&eidx=10820#con1" class="benefit1" target="_blank" onclick="ga('send', 'event', '2019여행박람회', 'click', '2019여행박람회_혜택이벤트 _1');"><img src="//img.modetour.com/promotion/190812_ex/benefit1_off.jpg" alt="모두멤버스 회원전용. 더블 마일리지 즉시할인 2% 자세히보기"></a>
+            <a href="//www.modetour.com/event/plan/detail.aspx?mloc=07&eidx=10820#con2" class="benefit2" target="_blank" onclick="ga('send', 'event', '2019여행박람회', 'click', '2019여행박람회_혜택이벤트 _2');"><img src="//img.modetour.com/promotion/190812_ex/benefit2_off.jpg" alt="모두멤버스 회원전용. 모두페이 즉시할인 1.5% 모두투어 여행박람회 모두페이 결제 혜택 자세히보기"></a>
+            <a href="//www.modetour.com/event/plan/detail.aspx?mloc=07&eidx=10820#con5" class="benefit3" target="_blank" onclick="ga('send', 'event', '2019여행박람회', 'click', '2019여행박람회_혜택이벤트 _3');"><img src="//img.modetour.com/promotion/190812_ex/benefit3_off.jpg" alt="카드사 청구할인, 모두투어 마일리지 자세히보기"></a>
+            <a href="//www.modetour.com/event/plan/detail.aspx?mloc=07&eidx=10820#con3" class="benefit4" target="_blank" onclick="ga('send', 'event', '2019여행박람회', 'click', '2019여행박람회_혜택이벤트 _4');"><img src="//img.modetour.com/promotion/190812_ex/benefit4_off.jpg" alt="투어 마일리지 카드 캐시백 신규 발급자 대상 최대 10만원 캐시백 자세히보기"></a>
+            <a href="//www.modetour.com/event/plan/detail.aspx?mloc=07&eidx=10820#con4" class="benefit5" target="_blank" onclick="ga('send', 'event', '2019여행박람회', 'click', '2019여행박람회_혜택이벤트 _5');"><img src="//img.modetour.com/promotion/190812_ex/benefit5_off.jpg" alt="KB국민카드, 신한카드, 삼성카드 대상 고객 무이자 할부 행사 자세히보기"></a>
+            <a href="//www.modetour.com/event/plan/detail.aspx?mloc=07&eidx=10804" class="benefit6" target="_blank" onclick="ga('send', 'event', '2019여행박람회', 'click', '2019여행박람회_혜택이벤트 _6');"><img src="//img.modetour.com/promotion/190812_ex/benefit6_off.jpg" alt="면세점 특별혜택 최대 116만원 혜택 자세히보기"></a>
+            <img src="//img.modetour.com/promotion/190812_ex/discount_ex.png" alt="" class="discount_ex">
+            <p><img src="//img.modetour.com/promotion/190812_ex/notice.jpg" alt="" class="discount_notice"></p>
+            <a href="/event/plan/detail.aspx?mloc=07&eidx=10820" class="notice_btn" target="_blank"><img src="//img.modetour.com/promotion/190812_ex/notice_btn.jpg" alt="결제혜택 자세히보기"></a>
+        </div>
+        <!-- [e] 혜택 및 이벤트 -->
+        
+        <!-- [s] 개별여행 이벤트 -->
+        <div id="con6" class="e_container">                     
+            <p class="tit2"><img src="//img.modetour.com/promotion/190812_ex/con6_tit.png" alt=""></p>
+            <img src="//img.modetour.com/promotion/190812_ex/event.png" alt="" usemap="#e_event">
+            <map name="e_event">
+                <area shape="rect" alt="해외 항공권 카드사 최대 21% 할인 바로가기" coords="40,365,189,401" href="/event/event_19/10811/mode.aspx?mloc=07#con1" target="_blank" onclick="ga('send', 'event', '2019여행박람회', 'click', '2019여행박람회_개별여행 _1');"/>
+                <area shape="rect" alt="해외항공 예약 시 해외호텔 7% 할인이벤트 바로가기" coords="667,676,811,717" href="/event/event_19/10811/mode.aspx?mloc=07#con2" target="_blank" onclick="ga('send', 'event', '2019여행박람회', 'click', '2019여행박람회_개별여행 _2');" />
+                <area shape="rect" alt="해외 철도/교통 패스, 입장권 특별 할인전 바로가기" coords="57,1065,208,1100" href="/event/event_19/10811/mode.aspx?mloc=07#con3" target="_blank" onclick="ga('send', 'event', '2019여행박람회', 'click', '2019여행박람회_개별여행 _3');" />
+                <area shape="rect" alt="개별여행앱 다운로드 및 여행박람회 SNS 소문내기" coords="646,1464,793,1503" href="/event/event_19/10811/mode.aspx?mloc=07#con4" target="_blank" onclick="ga('send', 'event', '2019여행박람회', 'click', '2019여행박람회_개별여행 _4');" />
+            </map>
+            <i class="move_item move_item6"></i>
+            <i class="move_item move_item7"></i>
+            <i class="move_item move_item8"></i>
+        </div>
+        <!-- [e] 개별여행 이벤트 -->
+    </div><!-- //event_wrap -->
+        <!-- [끝]: 여기까지 -->
+<script type="text/javascript" src="//js.modetour.com/Promotion/countdown.plugin.js"></script>
+<script type="text/javascript" src="//js.modetour.com/Common/Date.js?var=10.0.1"></script>
+<script type="text/javascript" src="//js.modetour.com/Common/String.js?var=10.0.1"></script>
+
+     <script type="text/javascript">
+        (function($){                           
+            $(document).ready(function(){
+
+                function d2(n) {
+                    if (n <= 9) return "0" + n;
+                    return n;
+                }
+
+                var today = new Date();
+                var thisdatechk = 0;
+                if (getParameter("date") != "") {
+                    today = new Date(getParameter("date"));
+                }
+
+                thisdatechk = today.getFullYear() + d2(parseInt(today.getMonth() + 1)) + d2(today.getDate()) + d2(today.getHours()) + d2(today.getMinutes()) + d2(today.getSeconds());
+
+                jQuery.ajax({
+                    type: "GET",
+                    url: "/event/event_19/190812_ex/ajax/data.aspx",
+                    dataType: "JSON", 
+                    success: function (data) {
+                        var list = data.list;
+                        var newdata = list.filter(function (row) {
+                            var start = row.startdate, end = row.enddate, cki = thisdatechk;
+                            return (cki >= start && cki <= end);
+                        });
+                        
+                        if (newdata.length == 1) {
+                            var closedate = newdata[0].enddate;
+                            var mainareaImg = newdata[0].mainArea;
+                            
+                            var p1_title = newdata[0].item1.title;
+                            var p1_subtitle = newdata[0].item1.subtitle;
+                            var p1_imgurl = newdata[0].item1.imgurl;
+                            var p1_price = newdata[0].item1.price;
+
+                            var p2_title = newdata[0].item2.title;
+                            var p2_subtitle = newdata[0].item2.subtitle;
+                            var p2_imgurl = newdata[0].item2.imgurl;
+                            var p2_price = newdata[0].item2.price;
+
+                            jQuery(".timedeal_title").attr('src', mainareaImg);
+                            jQuery(".timedeal_img1").attr('src', p1_imgurl);
+                            jQuery(".timedeal_img2").attr('src', p2_imgurl);
+
+                            jQuery(".prdc1").find(".prdc_txt2").html(p1_title);
+                            jQuery(".prdc1").find(".prdc_txt3").html(p1_subtitle);
+                            jQuery(".prdc1").find(".prdc_price").text(p1_price+"원~");
+
+                            jQuery(".prdc2").find(".prdc_txt2").html(p2_title);
+                            jQuery(".prdc2").find(".prdc_txt3").html(p2_subtitle);
+                            jQuery(".prdc2").find(".prdc_price").text(p2_price + "원~");
+
+                            var sDate = closedate.toString().substr(0, 4) + "/" + closedate.toString().substr(4, 2) + "/" + closedate.toString().substr(6, 2) + " " + closedate.toString().substr(8, 2) + ":" + closedate.toString().substr(10, 2) + ":" + closedate.toString().substr(12, 2);
+
+                            jQuery(".e_time").countdown(sDate, function (event) {
+                                var dDay = parseInt(event.strftime('%D'));
+                                if (dDay > 0) {
+                                    jQuery(this).text(event.strftime('%D일 %H:%M:%S'));;
+                                }
+                                else {
+                                    jQuery(this).text(event.strftime('%H:%M:%S'));;
+                                }
+                            });
+                        }
+                    },
+
+                    complete: function (data) {
+                    },
+
+                    error: function (xhr, status, error) {
+                    }
+                });
+
+
+                //nav
+                $('.e_nav a').click(function(){
+                    $('html,body').animate({
+                        scrollTop: $(this.hash).offset().top
+                    }); 
+                    return false;
+                });
+                    //타임세일
+                $('.prdc').hover(function () {
+                    $(this).addClass('on');
+                }, function () {
+                    $(this).removeClass('on');
+                });;
+
+                $('.popular_areas button').mouseenter(function(){
+                    $(this).addClass('on').siblings('button').removeClass('on');
+                    var a_index = $(this).index();
+                    $(this).parent('div').siblings('div').children('.e_con').eq(a_index).addClass('on').siblings('div').removeClass('on');
+                    return false;
+                });
+
+                jQuery("#con4").load('/event/event_19/190812_ex/ajax/con4.aspx', function () {                
+                    //지역별대표상품 탭
+                    $('.btn_box area').click(function(){
+                        $(this).addClass('on').siblings('area').removeClass('on');
+                        var a_index = $(this).index();
+                        var idx = $(this).index()+1;
+                        $(this).parents('.btn_group').siblings('div').children('.e_con').eq(a_index).addClass('on').siblings('div').removeClass('on');
+                        $('.map_img').attr('src', '//img.modetour.com/promotion/190812_ex/map' + idx + '.jpg');
+                        return false;
+                    });
+
+                    //지역별대표상품 prev,next
+                    $('.e_prev, .e_next').on('click', function(){
+                        var objParent = $(this).parent().parent();
+                        var tabIndex = $(objParent).find('.btn_box .on').index();
+                        var tabLength = $(objParent).find('.btn_box > area').length-1;
+
+                        if($(this).hasClass('e_prev')){
+                            if(tabIndex == 0){
+                                $(objParent).find('.btn_box area').eq(tabLength).trigger('click');
+                            }else{
+                                $(objParent).find('.btn_box area').eq(tabIndex-1).trigger('click');
+                            }
+                            }else{
+                                if(tabIndex == tabLength){
+                            $(objParent).find('.btn_box area').eq(0).trigger('click');
+                                }else{
+                            $(objParent).find('.btn_box area').eq(tabIndex+1).trigger('click');
+                            }
+                        }
+                        return false;
+                    });
+
+                    //지역별대표상품 자동
+                    window.setInterval(function(){
+                        $('.e_next').trigger('click');
+                    }, 25000);
+
+                });
+
+                //혜택 및 이벤트
+                $('#con5 a').hover(function() {
+                    $(this).find("img").attr("src" , $(this).find("img").attr("src").replace("_off.jpg" , "_on.jpg"));      
+                }, function(){
+                    $(this).find("img").attr("src" , $(this).find("img").attr("src").replace("_on.jpg" , "_off.jpg"));      
+                });
+
+                 var fun = function() {
+                    $('#con3 button').eq(no).addClass('on').siblings().removeClass('on');
+                    $('#con3 .con_group .e_con').eq(no).addClass('on').siblings().removeClass('on');
+                    no=no+1;
+                    if(no>11)no=0;                  
+                }
+                var no=1;
+                    tid0 = setInterval(fun,6000);
+                    
+            });
+        })(jQuery);
+    </script>
+    <!-- [E]:  기획전 끝 -->
+    </div>
+
+</asp:Content>

@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>9511</title>
+	<title>10726</title>
 	<script src="https://unpkg.co/gsap@3/dist/gsap.min.js"></script>
 	<script src="https://unpkg.com/gsap@3/dist/ScrollTrigger.min.js"></script>
 	<script src="https://unpkg.com/gsap@3/dist/ScrollToPlugin.min.js"></script>
@@ -14,6 +14,12 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
 	<style>
+		@font-face {
+			font-family: 'GeekbleMalang2WOFF2';
+			src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/GeekbleMalang2WOFF2.woff2') format('woff2');
+			font-weight: normal;
+			font-style: normal;
+		}
 		@font-face {
 			font-family: 'SCoreDream';
 			font-weight: 100; 
@@ -86,27 +92,78 @@
 				url(https://cdn.jsdelivr.net/gh/webfontworld/SCoreDream/SCoreDream9.woff) format('woff');
 			font-display: swap;
 		}		
-		.event_wrap {min-width: 1100px; text-align: center; overflow: hidden;}
+		.event_wrap {min-width: 1300px; text-align: center; overflow: hidden;}
 		.event_wrap img{vertical-align: middle;}
 		.event_wrap div, span, p, i, button, strong, small, a{font-family: 'SCoreDream'; text-decoration: none;}
 		.event_wrap .e_ttl{background: url('images/ttl_bg.jpg') no-repeat center 0;}
 		.event_wrap .nav_group{width: 100%; position: absolute; top: 500px; z-index: 999; background: rgba(0, 0, 0, 0.4);}
-		.event_wrap .nav_group ul{display: flex; width: 1100px; margin: 0 auto; padding: 0 50px; box-sizing: border-box;}
+		.event_wrap .nav_group ul{display: flex; width: 1300px; margin: 0 auto; padding: 0 50px; box-sizing: border-box;}
 		.event_wrap .nav_group ul li{height: 160px; flex: 1; text-align: center; display: table; position: relative;}
 		.event_wrap .nav_group ul li > a{display: table-cell; vertical-align: middle; position: relative; z-index: 1;}
 		.event_wrap .nav_group ul li span{display: block; color: #FFF; font-size: 20px; line-height: 24px; opacity: 0.8;}
-		.event_wrap .nav_group ul li span.num{font-size: 24px; margin-bottom: 10px; font-weight: bold;}
+		.event_wrap .nav_group ul li span.num{font-size: 24px; margin-bottom: 10px; font-weight: bold; font-family: 'GeekbleMalang2WOFF2'; letter-spacing: 2px;}
 		.event_wrap .nav_group ul li::before{content: ''; width: 1px; height: 24px; background: rgba(255,255,255,0.8); position: absolute; left: 0; top: 50%; margin-top: -12px;}
 		.event_wrap .nav_group ul li.on::before,
 		.event_wrap .nav_group ul li:first-child::before,
 		.event_wrap .nav_group ul li.on + li::before{display: none;}
 		.event_wrap .nav_group ul li.on::after{content: ''; position: absolute; left: -10px; top: -10px; right: -10px; bottom: -10px; background: linear-gradient(0deg, rgba(0,172,209,1) 8%, rgba(0,220,148,1) 100%); border-radius: 10px; box-shadow: 5px 10px 30px rgba(0, 0, 0, 0.4);}
 		.event_wrap .nav_group ul li.on span{opacity: 1;}
-		.event_wrap [id^="cont0"]{height: 3000px;}
-		.event_wrap .cont_ttl{margin-top: 45px;}
-		.event_wrap .cont_ttl .txt_st01{font-size: 18px; color: #00b979;}
-		.event_wrap .cont_ttl .txt_st02{font-size: 32px; color: #000000; font-weight: 500;}
+		.event_wrap #cont01{padding-bottom: 185px; position: relative;}
+		.event_wrap #cont01::after{content: ''; width: 1100px; height: 576px; background: url('images/cont01_img_bg.png'); position: absolute; bottom: 0; left: 50%; transform: translateX(-50%);}
+		.event_wrap .cont_ttl{padding-top: 45px;}
+		.event_wrap .cont_ttl .txt_st01{font-size: 18px; color: #00b979; margin: 20px 0 5px;}
+		.event_wrap .cont_ttl .txt_st02{font-size: 32px; color: #000000; font-weight: 500; margin: 10px 0 15px;}
 		.event_wrap .cont_ttl .txt_st03{font-size: 50px; color: #000000; font-weight: 600;}
+		.event_wrap .d_day{margin-top: 20px;}
+		.event_wrap .d_day p{color: #00b979;}
+		.event_wrap .d_day div{color: #fff;}
+		.event_wrap .d_day .time{display: inline-block; font-family: 'GeekbleMalang2WOFF2'; min-width: 200px; min-height: 35px; font-size: 35px; letter-spacing: 5px; background: linear-gradient(0deg, rgba(0,172,209,1) 0%, rgba(0,220,148,1) 60%); border-radius: 5px; margin-top: 10px; padding: 10px 15px;}
+		.event_wrap .items{font-size: 0; margin-top: -107px;}
+		.event_wrap .items > div{display: inline-block; position: relative;}
+		.event_wrap .items .item01{margin-right: 240px;}
+		.event_wrap .items .item_img{width: 526px; height: 526px; border-radius: 50%;}
+		.event_wrap .items .item_txt{position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 2; font-size: 24px; color: #FFF;}
+		.event_wrap .items .item_txt span{display: block;}
+		.event_wrap .items .item_txt span:first-child{font-size: 40px; margin-bottom: 17px;}
+		.event_wrap .items .more{display: inline-block; background: #ffc13c; width: 97px; height: 97px; margin-top: 110px; line-height: 90px; border-radius: 50%; box-shadow: 0 10px 30px rgba(255, 193, 60, 0.5);}
+		.event_wrap .items .more > img{transition: 0.3s;}
+		.event_wrap .items .more:hover > img{margin-left: 20px;}
+		.event_wrap #cont02{padding-bottom: 130px;}
+		.event_wrap #cont02 .slider{height: 711px; min-width: 2000px;}
+		.event_wrap #cont02 .slider .swiper-slide{font-size: 0;}
+		.event_wrap #cont02 .slider .pagination{background: #1cbbb0; position: relative; min-width: 800px; height: 110px; padding: 10px 0;}
+		.event_wrap #cont02 .slider .pagination1{position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
+		.event_wrap #cont02 .slider .pagination1 span{background: url('images/cont02_page1_off.png') no-repeat center 0; width: 106px; height: 108px; opacity: 1;}
+		.event_wrap #cont02 .slider .pagination1 span:nth-child(2){background: url('images/cont02_page2_off.png') no-repeat center 0;}
+		.event_wrap #cont02 .slider .pagination1 span:nth-child(3){background: url('images/cont02_page3_off.png') no-repeat center 0;}
+		.event_wrap #cont02 .slider .pagination1 span:nth-child(4){background: url('images/cont02_page4_off.png') no-repeat center 0;}
+		.event_wrap #cont02 .slider .pagination1 span.swiper-pagination-bullet-active:nth-child(1){background: url('images/cont02_page1_on.png') no-repeat center 0;}
+		.event_wrap #cont02 .slider .pagination1 span.swiper-pagination-bullet-active:nth-child(2){background: url('images/cont02_page2_on.png') no-repeat center 0;}
+		.event_wrap #cont02 .slider .pagination1 span.swiper-pagination-bullet-active:nth-child(3){background: url('images/cont02_page3_on.png') no-repeat center 0;}
+		.event_wrap #cont02 .slider .pagination1 span.swiper-pagination-bullet-active:nth-child(4){background: url('images/cont02_page4_on.png') no-repeat center 0;}
+		.event_wrap #cont02 .rest_item{width: 303px; height: 333px; display: inline-block; border-radius: 10px; overflow: hidden; position: relative; left: 480px; top: 330px; background: #FFF;}
+		.event_wrap #cont02 .rest_item + .rest_item{margin-left: 50px;}
+		.event_wrap #cont02 .rest_item:nth-of-type(2){top: 155px}
+		.event_wrap #cont02 .rest_item .item_img{width: 100%; height: 195px;}
+		.event_wrap #cont02 .rest_item .item_img img{width: 100%; height: 100%;}
+		.event_wrap #cont02 .rest_item .item_txt{text-align: left; padding: 20px 30px;}
+		.event_wrap #cont02 .rest_item .item_txt span{font-size: 16px; color: #313131; display: block; line-height: 18px;}
+		.event_wrap #cont02 .rest_item .item_txt span:first-child{font-size: 19px; font-weight: 500; margin-bottom: 15px; line-height: 22px;}
+		.event_wrap #cont02 .slider .swiper-slide{width: 2000px; min-width: 2000px;}
+		.event_wrap #cont02 .slide1{background: url('images/rest_cont01_bg.jpg') no-repeat center 0;}
+		.event_wrap #cont02 .slide1 .big_ttl{position: absolute; left: 396px; top: 140px;}
+		.event_wrap #cont02 .slide2{background: url('images/rest_cont02_bg.jpg') no-repeat center 0;}
+		.event_wrap #cont02 .slide2 .rest_item{left: 310px;}
+		.event_wrap #cont02 .slide3{background: url('images/rest_cont03_bg.jpg') no-repeat center 0;}
+		.event_wrap #cont02 .slide3 .rest_item{left: 200px; top: 155px;}
+		.event_wrap #cont02 .slide3 .rest_item:nth-of-type(2){top: 330px;}
+		.event_wrap #cont02 .slide4{background: url('images/rest_cont04_bg.jpg') no-repeat center 0;}
+		.event_wrap #cont02 .slide4 .rest_item{left: 180px;}
+		.event_wrap .tab_group{width: 1100px; margin: 0 auto;}
+		.event_wrap .tab_group .btn_group{width: 175px; border-right: 2px solid #ebebeb;}
+		.event_wrap .tab_group .btn_group button{display: block; background: none; border: none;}
+		.event_wrap .tab_group .cont_group{display: none;}
+		.event_wrap .tab_group .cont_group.on{display: block;}
     </style>
 </head>
 <body>
@@ -169,34 +226,181 @@
 				</div>
 				<div class="items">
 					<div class="item01">
-						<p class="item_ttl">
+						<div class="item_img"><img src="images/cont01_item01.png" alt=""></div>
+						<p class="item_txt">
 							<span>짠내</span>
 							<span>나트랑 리버티 호텔</span>
+							<a href="#" class="more"><img src="images/cont01_arrow.png" alt="상품보기"></a>
 						</p>
-						<a href="#" class="more">상품보기</a>
 					</div>
 					<div class="item02">
-						<p class="item_ttl">
+						<div class="item_img"><img src="images/cont01_item02.png" alt=""></div>
+						<p class="item_txt">
 							<span>부(富)내</span>
 							<span>나트랑 스완도르 리조트</span>
+							<a href="#" class="more"><img src="images/cont01_arrow.png" alt="상품보기"></a>
 						</p>
-						<a href="#" class="more">상품보기</a>
 					</div>
 				</div>
 			</div>
             <div id="cont02" class="e_cont">
-				2
-			</div>
-            <div id="cont03" class="e_cont">
 				<div class="slider">
 					<div class="swiper-wrapper">
-					    <div class="swiper-slide">slide1</div>					  
-					    <div class="swiper-slide">slide2</div>					  
-					    <div class="swiper-slide">slide4</div>					  
-					    <div class="swiper-slide">slide3</div>					  
+					    <div class="swiper-slide slide1">
+							<p class="big_ttl"><img src="images/cont02_ttl.png" alt=""></p>
+							<div class="rest_item">
+								<div class="item_img">
+									<img src="images/rest_r1.jpg" alt="">
+								</div>
+								<div class="item_txt">
+									<span>세부<br>샹그릴라 리조트 4/5일</span>
+									<span>초특급 호텔에서 즐기는 완벽한 #휴식</span>
+								</div>
+							</div>
+							<div class="rest_item">
+								<div class="item_img">
+									<img src="images/rest_r2.jpg" alt="">
+								</div>
+								<div class="item_txt">
+									<span>세부<br>샹그릴라 리조트 4/5일</span>
+									<span>초특급 호텔에서 즐기는 완벽한 #휴식</span>
+								</div>
+							</div>
+							<div class="rest_item">
+								<div class="item_img">
+									<img src="images/rest_r3.jpg" alt="">
+								</div>
+								<div class="item_txt">
+									<span>세부<br>샹그릴라 리조트 4/5일</span>
+									<span>초특급 호텔에서 즐기는 완벽한 #휴식</span>
+								</div>
+							</div>
+						</div>	
+					    <div class="swiper-slide slide2">
+							<div class="rest_item">
+								<div class="item_img">
+									<img src="images/rest_e1.jpg" alt="">
+								</div>
+								<div class="item_txt">
+									<span>세부<br>샹그릴라 리조트 4/5일</span>
+									<span>초특급 호텔에서 즐기는 완벽한 #휴식</span>
+								</div>
+							</div>
+							<div class="rest_item">
+								<div class="item_img">
+									<img src="images/rest_e2.jpg" alt="">
+								</div>
+								<div class="item_txt">
+									<span>세부<br>샹그릴라 리조트 4/5일</span>
+									<span>초특급 호텔에서 즐기는 완벽한 #휴식</span>
+								</div>
+							</div>
+							<div class="rest_item">
+								<div class="item_img">
+									<img src="images/rest_e3.jpg" alt="">
+								</div>
+								<div class="item_txt">
+									<span>세부<br>샹그릴라 리조트 4/5일</span>
+									<span>초특급 호텔에서 즐기는 완벽한 #휴식</span>
+								</div>
+							</div>
+						</div>	  
+					    <div class="swiper-slide slide3">
+							<div class="rest_item">
+								<div class="item_img">
+									<img src="images/rest_s1.jpg" alt="">
+								</div>
+								<div class="item_txt">
+									<span>세부<br>샹그릴라 리조트 4/5일</span>
+									<span>초특급 호텔에서 즐기는 완벽한 #휴식</span>
+								</div>
+							</div>
+							<div class="rest_item">
+								<div class="item_img">
+									<img src="images/rest_s2.jpg" alt="">
+								</div>
+								<div class="item_txt">
+									<span>세부<br>샹그릴라 리조트 4/5일</span>
+									<span>초특급 호텔에서 즐기는 완벽한 #휴식</span>
+								</div>
+							</div>
+							<div class="rest_item">
+								<div class="item_img">
+									<img src="images/rest_s3.jpg" alt="">
+								</div>
+								<div class="item_txt">
+									<span>세부<br>샹그릴라 리조트 4/5일</span>
+									<span>초특급 호텔에서 즐기는 완벽한 #휴식</span>
+								</div>
+							</div>
+						</div>
+					    <div class="swiper-slide slide4">
+							<div class="rest_item">
+								<div class="item_img">
+									<img src="images/rest_t1.jpg" alt="">
+								</div>
+								<div class="item_txt">
+									<span>세부<br>샹그릴라 리조트 4/5일</span>
+									<span>초특급 호텔에서 즐기는 완벽한 #휴식</span>
+								</div>
+							</div>
+							<div class="rest_item">
+								<div class="item_img">
+									<img src="images/rest_t2.jpg" alt="">
+								</div>
+								<div class="item_txt">
+									<span>세부<br>샹그릴라 리조트 4/5일</span>
+									<span>초특급 호텔에서 즐기는 완벽한 #휴식</span>
+								</div>
+							</div>
+							<div class="rest_item">
+								<div class="item_img">
+									<img src="images/rest_t3.jpg" alt="">
+								</div>
+								<div class="item_txt">
+									<span>세부<br>샹그릴라 리조트 4/5일</span>
+									<span>초특급 호텔에서 즐기는 완벽한 #휴식</span>
+								</div>
+							</div>
+						</div>
 					</div>
-					<div class="pagination1"></div>
-				  </div>
+					<div class="pagination">
+						<div class="pagination1"></div>
+					</div>
+				</div>
+			</div>
+            <div id="cont03" class="e_cont">
+				<div class="cont_ttl">
+					<img src="images/ico_cont03.png" alt="">
+					<p class="txt_st02">가장 인기 있는 지역만 모았다</p>
+					<p class="txt_st03">여행박람회 인기지역 Top10</p>
+				</div>
+				<div class="tab_group">
+					<div class="btn_group">
+						<button type="button">1. 다낭</button>
+						<button type="button">2. 괌</button>
+						<button type="button">3. 세부</button>
+						<button type="button">4. 스페인</button>
+						<button type="button">5. 장가계</button>
+						<button type="button">6. 보라카이</button>
+						<button type="button">7. 하와이</button>
+						<button type="button">8. 코타키나발루</button>
+						<button type="button">9. 블라디보스톡</button>
+						<button type="button">10. 방콕</button>
+					</div>
+					<div class="cont_group">
+						<div class="tab_cont on"><img src="images/top10_1.png" alt=""></div>
+						<div class="tab_cont"><img src="images/top10_2.png" alt=""></div>
+						<div class="tab_cont"><img src="images/top10_3.png" alt=""></div>
+						<div class="tab_cont"><img src="images/top10_4.png" alt=""></div>
+						<div class="tab_cont"><img src="images/top10_5.png" alt=""></div>
+						<div class="tab_cont"><img src="images/top10_6.png" alt=""></div>
+						<div class="tab_cont"><img src="images/top10_7.png" alt=""></div>
+						<div class="tab_cont"><img src="images/top10_8.png" alt=""></div>
+						<div class="tab_cont"><img src="images/top10_9.png" alt=""></div>
+						<div class="tab_cont"><img src="images/top10_10.png" alt=""></div>
+					</div>
+				</div>
 			</div>
             <div id="cont04" class="e_cont">4</div>
             <div id="cont05" class="e_cont">5</div>
@@ -252,9 +456,9 @@
 			});
 
 			var swiper = new Swiper('.slider', {
-				spaceBetween: 30,
+				slidesPerView: 'auto',
 				freeMode: true,
-				loop: true,
+				// loop: true,
 				direction : 'horizontal',      
 				mousewheel: {
 					invert: false,
@@ -264,8 +468,22 @@
 					el: '.pagination1',
 					clickable: true,
 				}
-			});
-		});
+			});		
+				
+		});			
+
+			var dday = new Date("May 24,2024,00:00:00").getTime();
+			setInterval(function() {
+				var today = new Date().getTime();
+				var gap = dday - today;
+				var day = Math.ceil(gap / (1000 * 60 * 60 * 24));
+				var hour = Math.ceil((gap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+				var min = Math.ceil((gap % (1000 * 60 * 60)) / (1000 * 60));
+				var sec = Math.ceil((gap % (1000 * 60)) / 1000);
+
+				$('.d_day .time').html(day + "일 " + hour + ":" + min + ":" + sec)
+			}, 1000);
+			
 
 	</script>
 </body>
