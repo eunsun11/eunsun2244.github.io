@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>비즈마켓 파트너포털 퍼블리싱 가이드</title>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/vendor/highlight.pack.js"></script>
+<script src="../js/bootstrap.bundle.js"></script>
+<script src="../js/bootstrap-datepicker.js"></script>
+<script src="../js/bootstrap-datepicker.ko.min.js"></script>
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/guide.css">
+<link rel="stylesheet" href="../js/vendor/editor.css">
+<link rel="stylesheet" href="../css/bootstrap.css">
+<link rel="stylesheet" href="../css/bootstrap-datepicker3.css">
+<link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+
+<div class="wrapper guide">
+	<header></header>
+
+	<div class="container">
+		<nav></nav>
+
+		<main id="viewer" class="tui-editor-contents">
+			<h2>Popup</h2>
+
+			<section>
+                <div class="code_wrap">
+					<div class="mobileWrap">
+						<!--화면 입력영역-->
+							<section>
+								<button type="button" class="btn primary lg" data-bs-toggle="modal" data-bs-target="#myModal3">시스템얼럿</button>
+								<!-- Modal -->
+								<div class="modal fade" id="myModal3" data-bs-backdrop="static" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+									<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+										<div class="modal-content">
+											<div class="modal-header r_close">
+												<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+											</div>
+											<div class="modal-body">
+												<p class="tac info">서비스 운영 정책으로 인해 로그인이 제한되었습니다.<br>문의사항은 고객센터(1544-7003)로 문의하시기 바랍니다.</p>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn primary lg fixed2" data-bs-dismiss="modal">확인</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- //Modal -->
+								<button type="button" class="btn primary lg" data-bs-toggle="modal" data-bs-target="#myModal2">모달팝업</button>
+								<!-- Modal -->
+								<div class="modal fade" id="myModal2" data-bs-backdrop="static" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+									<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h4 class="modal-title" id="myModalLabel">로그인 SMS 인증</h4>
+												<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+											</div>
+											<div class="modal-body">
+												<p class="tac mt07">가입하신 휴대폰 번호로 인증 번호를 발송하였습니다.<br>발송된 인증 번호를 입력해 주세요.</p>
+												<p class="tac txt-num">010-****-1234</p>
+												<div class="form-column">
+													<div class="input-txt">
+														<input type="text" title="" value="" placeholder="인증번호를 입력해주세요">
+													</div>
+													<button type="button" class="btn teritary lg blackline ml8">재전송</button>
+													<p class="error-txt">남은시간 03:00</p>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn primary lg w100p" data-bs-dismiss="modal">확인</button>
+											</div>
+										</div>
+									</div>
+								</div>
+
+							</section>
+						<!--화면 입력영역-->
+						</div>
+
+						<!--code 영역-->
+						<div class="code_html">
+							<pre><code class="hljs html">
+								<button type="button" class="btn primary lg" data-bs-toggle="modal" data-bs-target="#myModal3">시스템얼럿</button>
+								<!-- Modal -->
+								<div class="modal fade" id="myModal3" data-bs-backdrop="static" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+									<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+										<div class="modal-content">
+											<div class="modal-header r_close">
+												<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+											</div>
+											<div class="modal-body">
+												<p class="tac info">서비스 운영 정책으로 인해 로그인이 제한되었습니다.<br>문의사항은 고객센터(1544-7003)로 문의하시기 바랍니다.</p>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn primary lg fixed2" data-bs-dismiss="modal" aria-label="Close">확인</button>
+											</div>
+										</div>
+									</div>
+								</div>
+								<!-- //Modal -->
+								<button type="button" class="btn primary lg" data-bs-toggle="modal" data-bs-target="#myModal2">모달팝업</button>
+								<!-- Modal -->
+								<div class="modal fade" id="myModal2" data-bs-backdrop="static" tabindex="-1" aria-labelledby="myModalLabel" aria-hidden="true">
+									<div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+										<div class="modal-content">
+											<div class="modal-header">
+												<h4 class="modal-title" id="myModalLabel">로그인 SMS 인증</h4>
+												<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+											</div>
+											<div class="modal-body">
+												<p class="tac mt07">가입하신 휴대폰 번호로 인증 번호를 발송하였습니다.<br>발송된 인증 번호를 입력해 주세요.</p>
+												<p class="tac txt-num">010-****-1234</p>
+												<div class="form-column">
+													<div class="input-txt">
+														<input type="text" title="" value="" placeholder="인증번호를 입력해주세요">
+													</div>
+													<button type="button" class="btn teritary lg blackline ml8">인증번호 재발송</button>
+													<p class="error-txt">남은시간 03:00</p>
+												</div>
+											</div>
+											<div class="modal-footer">
+												<button type="button" class="btn primary lg w100p" data-bs-dismiss="modal">확인</button>
+											</div>
+										</div>
+									</div>
+								</div>
+							</code></pre>
+						</div>
+						<!--code 영역//-->
+
+					</div>
+			</section>
+
+
+		</main>
+	</div><!--container-->
+</div><!--wrapper-->
+
+
+
+    <script src="../js/vendor/highlight_footer.js"></script>
+	<script src="../js/guide.js"></script>
+</body>
+</html>

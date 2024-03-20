@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+    <title>Document</title>
+    <script src="../js/jquery.min.js"></script>
+    <script src="../js/common.js"></script>
+    <script src="../js/gnb.js"></script>
+    <script src="../js/bootstrap.bundle.js"></script>
+    <script src="../js/bootstrap-datepicker.js"></script>
+    <script src="../js/bootstrap-datepicker.ko.min.js"></script>
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="../css/bootstrap-datepicker3.css">
+    <link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <div id="container">
+            <div class="key-visual v5">
+                <div class="slogan">공지사항</div>
+            </div>
+            <div class="page_list">
+                <ul>
+                    <li><a href="#">홈</a></li>
+                    <li>첫번째 메뉴</li>
+                    <li>두번째 메뉴</li>
+                    <li>세번째 메뉴(or 현재 화면명/개발적용)</li>
+                </ul>
+            </div>
+            <div class="content">
+                <h2 class="tit_h2">공지사항</h2>
+                <div class="bbs-search">
+                    <div class="input-txt sm">
+                        <!-- [START] 220726 수정 -->                        
+                        <input type="text" title="" value="" placeholder="찾는 내용을 검색해 보세요">
+                        <!-- [END] //220726 수정 -->
+                    </div>
+                    <button type="button" class="btn teritary md ml5">검색</button>
+                </div>
+                <!-- 220711 class 변경 -->
+                <div class="tb_stl2 notice">
+                    <table>
+                        <caption>공지사항</caption>
+                        <colgroup>
+                            <col style="width:60px;">
+                            <col>
+                            <col style="width:172px;">
+                        </colgroup>
+                        <thead>
+                            <tr>
+                                <th scope="col">NO</th>
+                                <th scope="col">제목</th>
+                                <th scope="col">게시일</th>
+                            </tr>
+                        </thead>
+                        <tfoot>
+                            <tr class="nodata"><td colspan="3"><span>검색 결과가 없습니다.</span></td></tr>
+                        </tfoot>
+                        <tbody>
+                            <tr>
+                                <td>10</td>
+                                <td class="tal"><a href="">네트워크 개선 작업 안내</a></td>
+                                <td>2020-09-08</td>
+                            </tr>
+                            <tr>
+                                <td>9</td>
+                                <td class="tal"><a href=""><strong class="point-pink">[중요]</strong> 기업 솔루션 서비스 한정 프로모션</a></td>
+                                <td>2020-09-08</td>
+                            </tr>
+                            <tr>
+                                <td>8</td>
+                                <td class="tal"><a href="">네트워크 개선 작업 안내</a></td>
+                                <td>2020-09-08</td>
+                            </tr>
+                            <tr>
+                                <td>7</td>
+                                <td class="tal"><a href="">네트워크 개선 작업 안내</a></td>
+                                <td>2020-09-08</td>
+                            </tr>
+                            <tr>
+                                <td>6</td>
+                                <td class="tal"><a href="">네트워크 개선 작업 안내</a></td>
+                                <td>2020-09-08</td>
+                            </tr>
+                            <tr>
+                                <td>5</td>
+                                <td class="tal"><a href="">네트워크 개선 작업 안내</a></td>
+                                <td>2020-09-08</td>
+                            </tr>
+                            <tr>
+                                <td>4</td>
+                                <td class="tal"><a href="">네트워크 개선 작업 안내</a></td>
+                                <td>2020-09-08</td>
+                            </tr>
+                            <tr>
+                                <td>3</td>
+                                <td class="tal"><a href="">네트워크 개선 작업 안내</a></td>
+                                <td>2020-09-08</td>
+                            </tr>
+                            <tr>
+                                <td>2</td>
+                                <td class="tal"><a href="">네트워크 개선 작업 안내</a></td>
+                                <td>2020-09-08</td>
+                            </tr>
+                            <tr>
+                                <td>1</td>
+                                <td class="tal"><a href="">네트워크 개선 작업 안내</a></td>
+                                <td>2020-09-08</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <!--pagination-->
+                <div class="pagination">
+                    <a href="javascript:;" class="ico-first"><span class="hidden">처음</span></a>
+                    <a href="javascript:;" class="ico-prev"><span class="hidden">이전</span></a>
+                    <strong>11</strong>
+                    <a href="javascript:;">12</a>
+                    <a href="javascript:;">13</a>
+                    <a href="javascript:;">14</a>
+                    <a href="javascript:;">15</a>
+                    <a href="javascript:;">16</a>
+                    <a href="javascript:;">17</a>
+                    <a href="javascript:;">18</a>
+                    <a href="javascript:;">19</a>
+                    <a href="javascript:;">20</a>
+                    <a href="javascript:;" class="ico-next"><span class="hidden">다음</span></a>
+                    <a href="javascript:;" class="ico-last"><span class="hidden">마지막</span></a>
+                </div>
+            </div>
+        </div>
+        <footer id="footer"></footer>
+    </div>
+    <script src="../js/include.js"></script>
+</body>
+</html>

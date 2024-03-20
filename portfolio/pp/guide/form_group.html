@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<title>비즈마켓 파트너포털 퍼블리싱 가이드</title>
+<script src="../js/jquery.min.js"></script>
+<script src="../js/common.js"></script>
+<script src="../js/vendor/highlight.pack.js"></script>
+<script src="../js/bootstrap.bundle.js"></script>
+<script src="../js/bootstrap-datepicker.js"></script>
+<script src="../js/bootstrap-datepicker.ko.min.js"></script>
+<link rel="stylesheet" href="../css/reset.css">
+<link rel="stylesheet" href="../css/base.css">
+<link rel="stylesheet" href="../css/guide.css">
+<link rel="stylesheet" href="../js/vendor/editor.css">
+<link rel="stylesheet" href="../css/bootstrap.css">
+<link rel="stylesheet" href="../css/bootstrap-datepicker3.css">
+<link rel="stylesheet" href="../css/common.css">
+</head>
+<body>
+
+<div class="wrapper guide">
+	<header></header>
+
+	<div class="container">
+		<nav></nav>
+
+		<main id="viewer" class="tui-editor-contents">
+			<h2>Form group</h2>
+			<!--기본 스타일-->
+
+			<section>
+				<h3>기본 form</h3>
+				<p class="info_txt" >input의 경우 입력 내용에 맞춰 type 적용함</p>
+				<div class="table" style="margin: 10px 0 20px;">
+					<table>
+						<caption>input</caption>
+						<colgroup>
+							<col style="width: 30%;">
+							<col>
+						</colgroup>
+						<tbody>
+							<tr>
+								<th scope="row">이름, 기업명 등 text입력영역</th>
+								<td>text</td>
+							</tr>
+							<tr>
+								<th scope="row">연락처, 휴대폰번호 등 전화번호 입력영역 </th>
+								<td>tel</td>
+							</tr>
+							<tr>
+								<th scope="row">이메일 입력영역</th>
+								<td>email</td>
+							</tr>
+							<tr>
+								<th scope="row">사업자등록번호, 법인번호, 기업수 등 숫자 입력영역</th>
+								<td>number</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="code_wrap">
+					<div class="mobileWrap">
+						<!--화면 입력영역-->
+						<section style="width:448px">
+							<div class="form-column">
+								<div class="input-txt">
+									<input type="text" title="" value="" placeholder="인증번호를 입력해주세요">
+								</div>
+								<button type="button" class="btn teritary lg blackline ml8">재전송</button>
+								<p class="error-txt">남은시간 03:00</p>
+							</div>
+							<div class="form-column">
+								<div class="input-txt">
+									<input type="text" title="" value="" placeholder="인증번호를 입력해주세요">
+								</div>
+								<button type="button" class="btn teritary lg blackline ml8">인증하기</button>
+								<p class="info-txt">인증되었습니다</p>
+							</div>
+							<div class="form-column">
+								<div class="label">이름</div>
+								<div class="input-txt">
+									<input type="text" title="" value="" placeholder="이름을 입력해주세요">
+								</div>
+								<!-- <p class="error-txt">에러텍스트</p> -->
+							</div>
+							<div class="form-column">
+								<div class="label">휴대폰번호</div>
+								<div class="select-box">
+									<select class="select" tabindex="-1">
+										<option>010</option>
+										<option>02</option>
+										<option>031</option>
+										<option>032</option>
+										<option>041</option>
+									</select>
+									<button type="button" id="sel01" class="select-btn">010</button>
+									<div class="select-layer">
+										<button type="button" class="option on" idx='0'>010</button>
+										<button type="button" class="option" idx='1'>02</button>
+										<button type="button" class="option" idx='2'>031</button>
+										<button type="button" class="option" idx='3'>032</button>
+										<button type="button" class="option" idx='4'>041</button>
+									</div>
+								</div>
+								<div class="input-txt ml8">
+									<input type="tel" title="" value="" placeholder="휴대폰번호를 입력해주세요">
+								</div>
+								<p class="info-txt ico">휴대폰 번호는 숫자로만 입력해 주세요</p>
+							</div>
+							<div class="form-column">
+								<div class="label">새 비밀번호</div>
+								<div class="input-txt">
+									<input type="password" title="" value="" placeholder="새 비밀번호를 입력해주세요">
+								</div>
+								<!-- <p class="error-txt">에러텍스트</p> -->
+							</div>
+						</section>
+					</div>
+					<!--code 영역-->
+					<div class="code_html">
+						<pre><code class="hljs html">
+							<div class="form-column">
+								<div class="input-txt">
+									<input type="text" title="" value="" placeholder="인증번호를 입력해주세요">
+								</div>
+								<button type="button" class="btn teritary lg blackline ml8">인증번호 재발송</button>
+								<p class="error-txt">남은시간 03:00</p>
+							</div>
+							<div class="form-column">
+								<div class="input-txt">
+									<input type="text" title="" value="" placeholder="인증번호를 입력해주세요">
+								</div>
+								<button type="button" class="btn teritary lg blackline ml8">인증하기</button>
+								<p class="info-txt">인증되었습니다</p>
+							</div>
+							<div class="form-column">
+								<div class="label">이름</div>
+								<div class="input-txt">
+									<input type="text" title="" value="" placeholder="이름을 입력해주세요">
+								</div>
+								<!-- <p class="error-txt">에러텍스트</p> -->
+							</div>
+							<div class="form-column">
+								<div class="label">휴대폰번호</div>
+								<div class="select-box">
+									<select class="select" tabindex="-1">
+										<option>010</option>
+										<option>02</option>
+										<option>031</option>
+										<option>032</option>
+										<option>041</option>
+									</select>
+									<button type="button" id="sel01" class="select-btn">010</button>
+									<div class="select-layer">
+										<button type="button" class="option on" idx='0'>010</button>
+										<button type="button" class="option" idx='1'>02</button>
+										<button type="button" class="option" idx='2'>031</button>
+										<button type="button" class="option" idx='3'>032</button>
+										<button type="button" class="option" idx='4'>041</button>
+									</div>
+								</div>
+								<div class="input-txt ml8">
+									<input type="tel" title="" value="" placeholder="휴대폰번호를 입력해주세요">
+								</div>
+								<p class="info-txt ico">휴대폰 번호는 숫자로만 입력해 주세요</p>
+							</div>
+							<div class="form-column">
+								<div class="label">새 비밀번호</div>
+								<div class="input-txt">
+									<input type="password" title="" value="" placeholder="새 비밀번호를 입력해주세요">
+								</div>
+								<!-- <p class="error-txt">에러텍스트</p> -->
+							</div>
+						</code></pre>
+					</div>
+					<!--code 영역//-->
+
+				</div>
+			</section>
+
+			<section>
+				<h3>공통영역</h3>
+				<div class="code_wrap">
+					<div class="mobileWrap">
+						<!--화면 입력영역-->
+						<section>
+							<div class="search-box">
+								<table>
+									<caption>공통영역</caption>
+									<colgroup>
+										<col style="width:110px">
+										<col>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th><span>서비스 명</span></th>
+											<td>
+												<div class="select-box sm w_st1">
+													<select class="select" tabindex="-1">
+														<option>전체</option>
+														<option>02</option>
+														<option>031</option>
+														<option>032</option>
+														<option>041</option>
+													</select>
+													<button type="button" id="sel01" class="select-btn">전체</button>
+													<div class="select-layer">
+														<button type="button" class="option on" idx='0'>전체</button>
+														<button type="button" class="option" idx='1'>02</button>
+														<button type="button" class="option" idx='2'>031</button>
+														<button type="button" class="option" idx='3'>032</button>
+														<button type="button" class="option" idx='4'>041</button>
+													</div>
+												</div>
+												<div class="input-txt sm datepicker ml12">
+													<input type="text">
+												</div>
+												<span class="bar">-</span>
+												<div class="input-txt sm datepicker">
+													<input type="text">
+												</div>
+												<div class="checkbox-group ml30">
+													<span class="radio">
+														<input id="radio02_1" name="radio02" type="radio" checked="">
+														<label for="radio02_1">
+															<i class="ico"></i> <span>1개월</span>
+														</label>
+													</span>
+													<span class="radio">
+														<input id="radio02_2" name="radio02" type="radio">
+														<label for="radio02_2">
+															<i class="ico"></i> <span>1주일</span>
+														</label>
+													</span>
+													<span class="radio">
+														<input id="radio02_3" name="radio02" type="radio">
+														<label for="radio02_3">
+															<i class="ico"></i> <span>당일</span>
+														</label>
+													</span>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th><span>문의경로</span></th>
+											<td>
+												<div class="select-box sm w_st1">
+													<select class="select" tabindex="-1">
+														<option>전체</option>
+														<option>02</option>
+														<option>031</option>
+														<option>032</option>
+														<option>041</option>
+													</select>
+													<button type="button" id="sel01" class="select-btn">전체</button>
+													<div class="select-layer">
+														<button type="button" class="option on" idx='0'>전체</button>
+														<button type="button" class="option" idx='1'>02</button>
+														<button type="button" class="option" idx='2'>031</button>
+														<button type="button" class="option" idx='3'>032</button>
+														<button type="button" class="option" idx='4'>041</button>
+													</div>
+												</div>
+												<div class="checkbox-group ml12">
+													<span class="checkbox">
+														<input id="check02_1" name="check02" type="checkbox" checked="">
+														<label for="check02_1">
+															<i class="ico"></i> <span>온라인신청</span>
+														</label>
+													</span>
+													<span class="checkbox">
+														<input id="check02_2" name="check02" type="checkbox">
+														<label for="check02_2">
+															<i class="ico"></i> <span>대리점대행</span>
+														</label>
+													</span>
+												</div>
+												<div class="input-txt sm ml12" style="width:137px">
+													<input type="text" title="" value="" placeholder="대리점 이름">
+												</div>
+												<a href="javascript:void(0)" class="btn teritary md blackline ml8">대리점 선택</a>
+											</td>
+										</tr>
+										<tr>
+											<th><span>검색어</span></th>
+											<td>
+												<div class="select-box sm w_st1">
+													<select class="select" tabindex="-1">
+														<option>전체</option>
+														<option>02</option>
+														<option>031</option>
+														<option>032</option>
+														<option>041</option>
+													</select>
+													<button type="button" id="sel01" class="select-btn">전체</button>
+													<div class="select-layer">
+														<button type="button" class="option on" idx='0'>전체</button>
+														<button type="button" class="option" idx='1'>02</button>
+														<button type="button" class="option" idx='2'>031</button>
+														<button type="button" class="option" idx='3'>032</button>
+														<button type="button" class="option" idx='4'>041</button>
+													</div>
+												</div>
+												<div class="input-txt sm ml12" style="width:350px">
+													<input type="text" title="" value="" placeholder="검색어를 입력하세요">
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th><span>접수일</span></th>
+											<td>
+												<div class="select-box sm w_st1">
+													<select class="select" tabindex="-1">
+														<option>전체</option>
+														<option>02</option>
+														<option>031</option>
+														<option>032</option>
+														<option>041</option>
+													</select>
+													<button type="button" id="sel01" class="select-btn">전체</button>
+													<div class="select-layer">
+														<button type="button" class="option on" idx='0'>전체</button>
+														<button type="button" class="option" idx='1'>02</button>
+														<button type="button" class="option" idx='2'>031</button>
+														<button type="button" class="option" idx='3'>032</button>
+														<button type="button" class="option" idx='4'>041</button>
+													</div>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<button type="button" class="btn teritary lg aside">검색</button>
+							</div>
+						</section>
+					</div>
+					<!--code 영역-->
+					<div class="code_html">
+						<pre><code class="hljs html">
+							<div class="search-box">
+								<table>
+									<caption>공통영역</caption>
+									<colgroup>
+										<col style="width:110px">
+										<col>
+									</colgroup>
+									<tbody>
+										<tr>
+											<th><span>서비스 명</span></th>
+											<td>
+												<div class="select-box sm w_st1">
+													<select class="select" tabindex="-1">
+														<option>전체</option>
+														<option>02</option>
+														<option>031</option>
+														<option>032</option>
+														<option>041</option>
+													</select>
+													<button type="button" id="sel01" class="select-btn">전체</button>
+													<div class="select-layer">
+														<button type="button" class="option on" idx='0'>전체</button>
+														<button type="button" class="option" idx='1'>02</button>
+														<button type="button" class="option" idx='2'>031</button>
+														<button type="button" class="option" idx='3'>032</button>
+														<button type="button" class="option" idx='4'>041</button>
+													</div>
+												</div>
+												<div class="input-txt sm datepicker ml12">
+													<input type="text">
+												</div>
+												<span class="bar">-</span>
+												<div class="input-txt sm datepicker">
+													<input type="text">
+												</div>
+												<div class="checkbox-group ml30">
+													<span class="checkbox">
+														<input id="check01_1" name="check01" type="checkbox" checked="">
+														<label for="check01_1">
+															<i class="ico"></i> <span>전체</span>
+														</label>
+													</span>
+													<span class="checkbox">
+														<input id="check01_2" name="check01" type="checkbox">
+														<label for="check01_2">
+															<i class="ico"></i> <span>당일</span>
+														</label>
+													</span>
+													<span class="checkbox">
+														<input id="check01_3" name="check01" type="checkbox">
+														<label for="check01_3">
+															<i class="ico"></i> <span>1주일</span>
+														</label>
+													</span>
+													<span class="checkbox">
+														<input id="check01_4" name="check01" type="checkbox">
+														<label for="check01_4">
+															<i class="ico"></i> <span>1개월</span>
+														</label>
+													</span>
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th><span>문의경로</span></th>
+											<td>
+												<div class="select-box sm w_st1">
+													<select class="select" tabindex="-1">
+														<option>전체</option>
+														<option>02</option>
+														<option>031</option>
+														<option>032</option>
+														<option>041</option>
+													</select>
+													<button type="button" id="sel01" class="select-btn">전체</button>
+													<div class="select-layer">
+														<button type="button" class="option on" idx='0'>전체</button>
+														<button type="button" class="option" idx='1'>02</button>
+														<button type="button" class="option" idx='2'>031</button>
+														<button type="button" class="option" idx='3'>032</button>
+														<button type="button" class="option" idx='4'>041</button>
+													</div>
+												</div>
+												<div class="checkbox-group ml12">
+													<span class="checkbox">
+														<input id="check02_1" name="check02" type="checkbox" checked="">
+														<label for="check02_1">
+															<i class="ico"></i> <span>>온라인신청</span
+														</label>
+													</span>
+													<span class="checkbox">
+														<input id="check02_2" name="check02" type="checkbox">
+														<label for="check02_2">
+															<i class="ico"></i> <span>대리점대행</span>
+														</label>
+													</span>
+												</div>
+												<div class="input-txt sm ml12" style="width:137px">
+													<input type="text" title="" value="" placeholder="대리점 이름">
+												</div>
+												<a href="javascript:void(0)" class="btn teritary md blackline ml8">대리점 선택</a>
+											</td>
+										</tr>
+										<tr>
+											<th><span>검색어</span></th>
+											<td>
+												<div class="select-box s w_st1">
+													<select class="select" tabindex="-1">
+														<option>전체</option>
+														<option>02</option>
+														<option>031</option>
+														<option>032</option>
+														<option>041</option>
+													</select>
+													<button type="button" id="sel01" class="select-btn">전체</button>
+													<div class="select-layer">
+														<button type="button" class="option on" idx='0'>전체</button>
+														<button type="button" class="option" idx='1'>02</button>
+														<button type="button" class="option" idx='2'>031</button>
+														<button type="button" class="option" idx='3'>032</button>
+														<button type="button" class="option" idx='4'>041</button>
+													</div>
+												</div>
+												<div class="input-txt sm ml12" style="width:350px">
+													<input type="text" title="" value="" placeholder="검색어를 입력하세요">
+												</div>
+											</td>
+										</tr>
+										<tr>
+											<th><span>접수일</span></th>
+											<td>
+												<div class="select-box sm w_st1">
+													<select class="select" tabindex="-1">
+														<option>전체</option>
+														<option>02</option>
+														<option>031</option>
+														<option>032</option>
+														<option>041</option>
+													</select>
+													<button type="button" id="sel01" class="select-btn">전체</button>
+													<div class="select-layer">
+														<button type="button" class="option on" idx='0'>전체</button>
+														<button type="button" class="option" idx='1'>02</button>
+														<button type="button" class="option" idx='2'>031</button>
+														<button type="button" class="option" idx='3'>032</button>
+														<button type="button" class="option" idx='4'>041</button>
+													</div>
+												</div>
+											</td>
+										</tr>
+									</tbody>
+								</table>
+								<button type="button" class="btn teritary lg aside">검색</button>
+							</div>
+						</code></pre>
+					</div>
+					<!--code 영역//-->
+				</div>
+			</section>
+			
+			<!--로그인만 사용-->
+			<section>
+				<h3>Login form</h3>
+				<p class="info_txt">로그인만 사용</p>
+				<div class="code_wrap">
+					<div class="mobileWrap">
+						<!--화면 입력영역-->
+						<section>
+							<div class="loginWrap">
+								<div class="formFieldset">
+									<div class="formRow">
+										<label for="bizID" class="formLabel">아이디</label>
+										<div class="fieldTxt">
+											<input type="text" id="bizID" placeholder="아이디를 입력하세요" title="아이디를 입력하세요">
+										</div>
+									</div>
+									<div class="formRow">
+										<label for="bizComp" class="formLabel name">회사명</label>
+										<div class="fieldTxt">
+											<input type="text" id="bizComp" placeholder="회사명을 입력하세요" title="회사명을 입력하세요">
+										</div>
+									</div>
+									<div class="formRow">
+										<label for="bizmail" class="formLabel">이메일</label>
+										<div class="fieldTxt error"><!--error class추가-->
+											<input type="email" id="bizmail" placeholder="이메일을 입력하세요" title="이메일을 입력하세요">
+											<!--error 메시지 추가-->
+											<div class="errorTxt">가입하지 않은 아이디이거나, 잘못된 비밀번호 입니다.</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</section>
+					</div>
+					<!--code 영역-->
+					<div class="code_html">
+						<pre><code class="hljs html">
+							<div class="loginWrap">
+								<div class="formFieldset">
+									<div class="formRow">
+										<label for="bizID" class="formLabel">아이디</label>
+										<div class="fieldTxt">
+											<input type="text" id="bizID" placeholder="아이디를 입력하세요" title="아이디를 입력하세요">
+										</div>
+									</div>
+									<div class="formRow">
+										<label for="bizComp" class="formLabel name">회사명</label>
+										<div class="fieldTxt">
+											<input type="text" id="bizComp" placeholder="회사명을 입력하세요" title="회사명을 입력하세요">
+										</div>
+									</div>
+									<div class="formRow">
+										<label for="bizmail" class="formLabel">이메일</label>
+										<div class="fieldTxt error"><!--error class추가-->
+											<input type="email" id="bizmail" placeholder="이메일을 입력하세요" title="이메일을 입력하세요">
+											<!--error 메시지 추가-->
+											<div class="errorTxt">가입하지 않은 아이디이거나, 잘못된 비밀번호 입니다.</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</code></pre>
+					</div>
+					<!--code 영역//-->
+
+				</div>
+
+			</section>
+
+
+		</main>
+	</div><!--container-->
+</div><!--wrapper-->
+
+    <script src="../js/vendor/highlight_footer.js"></script>
+	<script src="../js/guide.js"></script>
+</body>
+</html>
