@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<!--[if IE 8 ]><html class="ie8 ie no-js" lang="ko"> <![endif]-->
+<!--[if IE 9 ]><html class="ie9 ie no-js" lang="ko"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html class="no-js" lang="ko"> <!--<![endif]-->
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+	<meta name="keywords" content="모두투어, 여행사, 해외여행, 해외항공, 동남아여행, 중국여행, 일본여행, 미주여행, 남태평양여행, 유럽여행, 인도여행, 아프리카 여행, 골프여행, 패키지, 에어텔, 허니문, 자유여행, 골프여행, 크루즈, 국내여행, 제주여행, 호텔, 숙박, 해외호텔, 국내숙박, 항공권 ,해외항공권 ,국내항공권, 철도 ,패스, 여행정보, 추천여행사, 최저가항공권" />
+	<meta name="description" content="대한민국 여행의 기준이 되다! 모두투어는 해외여행, 국내여행, 패키지여행, 에어텔, 항공권, 호텔 등 각종 여행정보를 제공하는 국내 최대 여행포탈사이트 입니다." />
+	<title>홈플러스 임직원 여행몰</title>
+	<link rel="stylesheet" type="text/css" href="../../css/common.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/main.min.css" />
+	<link rel="stylesheet" type="text/css" href="css/homeplus.min.css" /><!-- 2022-10-24 -->
+	<!--[if lt IE 9]>
+		<script src="//js.modetour.com/jquery/plugin/html5shiv.min.js"></script>
+		<script src="//js.modetour.com/jquery/plugin/IE9.js"></script>
+		<script src="../js/polyfills/PIE.min.js"></script>
+	<![endif]-->
+	<!--[if IE]>
+		<link rel="stylesheet" type="text/css" href="../css/ie.min.css" />
+	<![endif]-->
+</head>
+<body>	
+	<div id="wrap">		
+		<div class="container-wrap" id="container" role="main">			
+			<div class="contents_wrap homeplus_main">
+				<h1><img src="//img.modetour.com/modewebagent/2022/partners/homeplus/h1.png" alt="homeplus 모두투어"></h1>
+				<div class="main_content">
+					<div class="banner_img">
+						<img src="//img.modetour.com/modewebagent/2022/partners/homeplus/banner_img.jpg" alt="">
+					</div>
+					<div class="right_area">
+						<h2><img src="//img.modetour.com/modewebagent/2022/partners/homeplus/h2.png" alt="홈플러스 임직원 여행몰"></h2>
+						<p class="caption01">본 사이트는 홈플러스 임직원을 위한 사이트입니다.</p>
+						<div class="caption02 box_style">아래 빈칸에 임직원 사번입력하시고<br>임직원 담당 점포 선택 후<br>들어가기 버튼을 클릭해주세요!</div>
+						<input type="text" placeholder="사번 10자리를 입력해주세요." class="box_style" maxlength="10">
+						<article class="select">
+							<button class="select_btn box_style">임직원 여행몰 담당점포 선택</button>
+							<div class="select_list box_style">
+								<ul>
+									<li><button type="button">홈플러스 가양점1</button></li>
+									<li><button type="button">홈플러스 가양점2</button></li>
+									<li><button type="button">홈플러스 가양점3</button></li>
+									<li><button type="button">홈플러스 가양점4</button></li>
+									<li><button type="button">홈플러스 가양점5</button></li>
+									<li><button type="button">홈플러스 가양점6</button></li>
+									<li><button type="button">홈플러스 가양점7</button></li>
+									<li><button type="button">홈플러스 가양점8</button></li>
+									<li><button type="button">홈플러스 가양점9</button></li>
+									<li><button type="button">홈플러스 가양점10</button></li>
+									<li><button type="button">홈플러스 가양점11</button></li>
+								</ul>
+							</div>
+						</article>
+						<button type="submit" class="box_style">들어가기</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	
+	<!--[if !IE | gte IE 9]><!-->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<!--<![endif]-->
+	<!--[if lt IE 9]>
+		<script src="http://js.modetour.com/jquery/ver/1.11.3.min.js"></script>
+		<script src="//js.modetour.com/Jquery/plugin/bxslider.js"></script>
+		<script src="../js/libs/placeholders.min.js"></script>
+	<![endif]-->
+	<script src="//js.modetour.com/jquery/ui/1.12.1.js"></script>
+	<script src="//js.modetour.com/jquery/easing/1.4.1.min.js"></script> 
+	<script>
+        jQuery(document).ready(function($){
+
+            // 홈플러스 임직원 여행몰 메인
+            $('.select_btn').click(function(){
+                $(this).toggleClass('on')		
+                $(this).next('.select_list').fadeToggle();
+            });
+            $('.select_list button').click(function(){
+                $('.select_btn').html($(this).html());
+                $('.select_list').fadeToggle();
+            });
+
+            // 홈플러스 예약상담 문의		
+            $('.list_num ul li:first-child').click(function(){
+                $(this).toggleClass('on').siblings('li').slideToggle();
+            });
+
+        });
+    </script>
+</body>
+</html>

@@ -148,8 +148,8 @@ section .swiper{position: relative;}
 section .swiper .swiper-slide{position: relative;}
 section .swiper-scrollbar{width: 305px; height: 8px; margin-top: 50px; background: rgba(0, 0, 0, 0.5); left: 50%; transform: translateX(-50%); position: relative; z-index: 1;}
 section .swiper-scrollbar-drag{height: 28px; background: #333; border-radius: 50%; top: -10px; box-shadow: 5px 5px 10px rgba(0,0,0,0.2); cursor: grab;}
-section .slide_img{background: #333; border-radius: 15px; overflow: hidden;}
-section .slide_img img{width: 100%; padding: 10px; border-radius: 15px;}
+section .slide_img{border-radius: 15px; overflow: hidden; border: 3px solid #000; aspect-ratio: 7/4;}
+section .slide_img img{width: 100%; min-height: 100%;}
 section .slide_txt{text-align: center; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2; display: table; border-radius: 15px; background: rgba(0, 0, 0, 0.7); opacity: 0; transition: 0.3s;}
 section .slide_txt:hover{opacity: 1;}
 section .slide_txt ul{display: table-cell; margin: 30px 0;}
@@ -177,12 +177,12 @@ footer .footer{max-width: 1100px; margin: 0 auto; text-align: center; line-heigh
    section .inner{padding: 50px 30px;}
    section h2{font-size: 35px; margin-bottom: 50px;}
    section .about > div{width: 100%;}
-   section .slide_txt:hover{display: none;}
+   section .slide_txt{opacity: 1; position: static; background: none; margin-top: 10px;}
+   section .slide_txt li{color: #555; margin: 5px 0; font-size: 14px;}
    section .about .certificate ul li span:nth-child(1){width: 70px;}
    section .about ul li span{font-size: 13px;}
    section .about .skills ul li{border-radius: 10px; margin-bottom: 10px;}
    section .timeline .card .company_name{font-size: 15px;}
    section .timeline .card .date, section .timeline .card .details{font-size: 12px; line-height: 13px;}
-   section .slide_img{border-radius: 10px;}
-   section .slide_img img{padding: 5px; border-radius: 10px;}
+   section .slide_img{border-radius: 15px;}
  }
