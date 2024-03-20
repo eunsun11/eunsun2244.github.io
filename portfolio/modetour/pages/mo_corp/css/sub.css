@@ -1,0 +1,459 @@
+@charset 'utf-8';
+
+/* body{background-color: #03042c;} */
+.wrap .sub_wrap{padding-top: 45px; padding-bottom: 100px; text-align: left; background: #fff;}
+.wrap strong{display: block; font-weight: bold; font-size: 22px;}
+.wrap .green{color: #30b393;}
+.wrap .navy{color: #3866b0;}
+.wrap .gray{color: #a0a0a0;}
+.wrap .bold{font-weight: bold;}
+.wrap .cont_wrap{padding-left: 25px; padding-right: 25px;}
+.wrap .dim{position: fixed; width: 100%; height: 100%; top:0; left:0; background-color: #000; display: none; z-index: 1000;}
+.wrap .mt30{margin-top: 30px !important;}
+.wrap .mt50{margin-top: 50px !important;}
+.wrap .mt65{margin-top: 65px !important;}
+.wrap table td{font-family: 'Open Sans', sans-serif;}
+.wrap .ovh{overflow: hidden;}
+.wrap .ovh img{margin-top: -1px;}
+.wrap .section.sub_bg{height: 311px; margin-top: 0; background-color: #03042c;}
+.wrap .sub_bg{height: 225px; margin-top: 86px;}
+.wrap .sub_cont_bg{margin-top: 50px;}
+.wrap .sub_top.sub_bg{margin-top: 0;}
+.wrap .sub_top.info{background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/info_bg.jpg');}
+.wrap .sub_top.business_status{background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/business_status_bg.jpg');}
+.wrap .sub_top.pr_center{background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/pr_center_bg.jpg');}
+.wrap .sub_top.ad{background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/ad_bg.jpg');}
+.wrap .sub_top.investment{background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/investment_information_bg.jpg');}
+.wrap .sub_top.employment{background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/employment_bg.jpg');}
+
+.wrap h2{font-size: 26px; color: #FFF; position: absolute; left: 7%; bottom: 11%; font-weight: 600;}
+@-webkit-keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+  -webkit-animation-duration: 1.5s;
+  animation-duration: 1.5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+
+.wrap .sub_wrap h3{position: relative; text-align: left; padding: 15px 0 35px 40px; margin-left: 25px;}
+.wrap .sub_wrap h3.h3_style01{padding: 15px 0 0 40px;}
+.wrap .sub_wrap h3.h3_style02{padding: 15px 0 60px 40px;}
+.wrap .sub_wrap h3 span{position: relative; z-index: 2; font-size: 22px; font-weight: bold;}
+.wrap .sub_wrap h3:after{content: ""; width: 60px; height: 60px; position: absolute; left: 0; top: 0; background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/sub_h3_icon.png'); -webkit-background-size: 100%; background-repeat: no-repeat;
+background-size: 100%; background-repeat: no-repeat; z-index: 1;}
+
+.wrap .sub_tit{font-size: 22px; font-weight: bold; margin: 50px 0 25px; position: relative;}
+.wrap .sub_tit span{font-size: 22px; z-index: 2; position: relative;}
+.wrap .sub_tit2{margin-top: 30px;}
+.wrap .sub_tit2:after{position: absolute; font-size: 47px; color: #e4e4e4; top: -25px; left: 0; font-family: 'Spoqa Han Sans', 'Sans-serif'; font-weight: 100; z-index: 1;}
+
+.wrap .shadow_box li{margin: 25px 20px; padding: 28px 40px; box-shadow: 0px 1px 9px rgba(100,100,100,0.1); border-radius: 10px; text-align: left;}
+
+.wrap .sub_wrap .table01{border-top: 2px #000 solid; text-align: left; width: 100%; letter-spacing: -0.2px;}
+.wrap .sub_wrap .table01 tr{border-bottom: 1px #ebebeb solid;}
+.wrap .sub_wrap .table01 th, td{padding: 16px 15px;}
+.wrap .sub_wrap .table01 th{background: #fafafa; vertical-align: top; font-weight: bold;}
+.wrap .sub_wrap .table01 td{padding: 16px 15px; font-weight: 500;}
+
+.wrap .sub_wrap .table02{border-top: 2px #000 solid; text-align: left; width: 100%; letter-spacing: -0.2px;}
+.wrap .sub_wrap .table02 tr{border-bottom: 1px #ebebeb solid;}
+.wrap .sub_wrap .table02 th{background: #fafafa; padding: 15px; font-weight: bold; font-size: 14px;}
+.wrap .sub_wrap .table02 .bg_none{background: none; text-align: center; border-left: 1px #ebebeb solid;}
+.wrap .sub_wrap .table02 td{text-align: right; padding: 15px 10px 15px 0; font-weight: bold; border-left: 1px #ebebeb solid; font-size: 12px;}
+
+.wrap .filter{display: block; height: 75px; line-height: 75px; border-bottom: 10px #f3f3f3 solid; text-align: left; padding-left: 25px;}
+.wrap .filter.h3{border-bottom: none; margin-top: 50px; padding-left: 62px; line-height: 60px; height: 60px;}
+.wrap .filter.h3:after{content: ""; width: 60px; height: 60px; position: absolute; left: 25px; top: 0; background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/sub_h3_icon.png'); -webkit-background-size: 100%; background-repeat: no-repeat;}
+.wrap .filter span{font-size: 22px; font-weight: bold; position: relative; z-index: 2;}
+.wrap .filter i{display: inline-block; background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/filter_arrow.png'); width: 12px; height: 7.5px; position: relative; left: 12px; top: -3px;}
+.wrap .filter_popup{background: #FFF; position: fixed; left: 0; width: 100%; bottom: 0; z-index: 1001; display: none;}
+.wrap .filter_popup .filter_wrap{width: 90%; margin: 0 auto; font-weight: bold;}
+.wrap .filter_popup .filter_wrap div{margin: 13px 0; padding: 12px 0;}
+.wrap .filter_popup a{display: block; text-align: left; height: 50px; line-height: 50px; font-size: 18px;}
+
+.wrap .sub_wrap .history_list {text-align: left;}
+.wrap .sub_wrap .history_list .year_box{padding: 50px 0;}
+.wrap .sub_wrap .history_list .year_box.gray_bg{background-color: #fafafa;}
+.wrap .sub_wrap .history_list strong{font-size: 30px; font-weight: bold; font-family: 'Open Sans', sans-serif; margin-left: 30px;}
+.wrap .sub_wrap .history_list ul.timeline{padding: 15px 0; margin: 12px 0 0 60px; border-left: 1px #e6e6e6 solid; letter-spacing: -0.8px;}
+.wrap .sub_wrap .history_list .year_box ul.timeline li{padding: 10px 30px 10px 55px; position: relative; font-size: 14px; text-indent: -54px;}
+.wrap .sub_wrap .history_list .year_box ul.timeline li:after{display: block; content: ""; width: 5px; height: 5px; position: absolute; left: -3px; top: 18px; background-color: #c30013; border-radius: 50%;}
+.wrap .sub_wrap .history_list .year_box ul.timeline li span{font-size: 14px; padding: 0 10px; font-weight: bold; font-family: 'Open Sans', sans-serif;}
+.wrap .sub_wrap .slide_tab{margin-bottom: 50px;}
+.wrap .sub_wrap .slide_tab li{padding: 0; margin: 0; position: relative;}
+.wrap .sub_wrap .slide_tab li:after{content: ""; position: absolute; left: 5%; bottom: 0; width: 90%; height: 2px; background-color: #e6e6e6;}
+.wrap .sub_wrap .slide_tab li.on:after{display: none;}
+.wrap .sub_wrap .slide_tab li li:after{display: none;}
+.wrap .sub_wrap .slide_tab .tab_con{display: none;}
+.wrap .sub_wrap .slide_tab .tab_tit{margin: 0 25px; display: block; text-align: center; height: 50px; line-height: 50px; position: relative; font-weight: bold; font-family: 'Open Sans', sans-serif; font-size: 16px;}
+.wrap .sub_wrap .slide_tab .tab_tit:after{content: ""; width: 11px; height: 7px; position: absolute; right: 0; top: 50%; margin-top: -5.5px; background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/tab_arrow.png'); background-repeat: no-repeat; -webkit-background-size: 100%; background-size: 100%; transition: 0.3s;}
+.wrap .sub_wrap .slide_tab .on .tab_tit:after{transform: rotate(180deg);}
+.wrap .sub_wrap .history_list.history_list02 .slide_tab{padding-bottom: 0;}
+
+.wrap .ceo_wrap{padding-bottom: 100px;}
+.wrap .ceo_wrap p{margin-bottom: 36px; letter-spacing: -0.6px; font-size: 14px;}
+.wrap .ceo_wrap p strong{margin-top: 22px; font-size: 19px;}
+.wrap .ceo_wrap .con_style{margin-bottom: 60px;}
+.wrap .sign{width: 81px; margin-left: 15px;}
+
+.wrap .vision_wrap .con{margin-bottom: 50px; text-align: center;}
+.wrap .vision_wrap .con p{margin-bottom: 12.5px;}
+.wrap .vision_wrap .tit1 img{width: 100px;}
+.wrap .vision_wrap .tit2 img{width: 143.5px;}
+.wrap .vision_wrap .tit3 img{width: 145px;}
+.wrap .cycle_list li{text-align: center; margin-top: 27px;}
+.wrap .cycle_list li i{display: block; margin: 0 auto 20px;}
+.wrap .vision_wrap .cycle_list li i{background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/vision_icon1.png'); width: 98px; height: 98px;}
+.wrap .vision_wrap .cycle_list li+li i{background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/vision_icon2.png');}
+.wrap .vision_wrap .cycle_list li+li+li i{background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/vision_icon3.png');}
+.wrap .vision_wrap .vision_goal{text-align: center;}
+.wrap .vision_wrap .vision_goal img{width: 320px; margin-bottom: 60px;}
+.wrap .vision_wrap .vision_goal_details li:last-child{margin: 25px 20px 0;}
+.wrap .vision_wrap .vision_goal_details li i{display: block; width: 38.5px;}
+.wrap .vision_wrap .vision_goal_details li strong{margin: 15px 0 17px;}
+.wrap .vision_wrap .vision_goal_details li.vision_goal_details1 i{height: 42px; background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/vision_icon4.png');}
+.wrap .vision_wrap .vision_goal_details li.vision_goal_details2 i{height: 43px; background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/vision_icon5.png');}
+.wrap .vision_wrap .vision_goal_details li.vision_goal_details3 i{height: 47px; background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/vision_icon6.png');}
+.wrap .vision_wrap .vision_goal_details li.vision_goal_details4 i{height: 45px; background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/vision_icon7.png');}
+
+.wrap .bi_wrap{text-align: left; letter-spacing: -0.5px;}
+.wrap .bi_wrap .sub_tit2.color_system_tit:after{content: "Color";}
+.wrap .bi_wrap .sub_tit2.mode_signature_tit:after{content: "Signature";}
+.wrap .bi_wrap i{display: block; width: 41px; height: 42px; float: left;}
+.wrap .bi_wrap .conlor_con{overflow: hidden; margin-bottom: 55px;}
+.wrap .bi_wrap .main_color.color_style1 i{background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/bi_color1.jpg');}
+.wrap .bi_wrap .main_color.color_style2 i{background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/bi_color2.jpg');}
+.wrap .bi_wrap .main_color.color_style3 i{background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/bi_color3.jpg');}
+.wrap .bi_wrap dl{float: left; margin-left: 20px;}
+.wrap .bi_wrap dl+dl{float: right;}
+.wrap .bi_wrap dl dt{font-weight: bold;}
+.wrap .bi_wrap dl dd{font-size: 13px; word-spacing: 7px;}
+.wrap .bi_wrap dl dd+dd{word-spacing: 12px;}
+.wrap .bi_wrap .main_color .main_color01 dt{color: #6ec1a2;}
+.wrap .bi_wrap .main_color .main_color01 dd+dd{word-spacing: 4px;}
+.wrap .bi_wrap .main_color .main_color02 dt{color: #009c75;}
+.wrap .bi_wrap .main_color .main_color02 dd+dd{word-spacing: 12px;}
+.wrap .bi_wrap .main_color .main_color03 dt{color: #cfdc00;}
+.wrap .bi_wrap .main_color .main_color04 dt{color: #27741f;}
+.wrap .bi_wrap .main_color .main_color04 dd{word-spacing: 2px;}
+.wrap .bi_wrap .main_color .main_color04 dd+dd{word-spacing: 12px;}
+.wrap .bi_wrap .main_color .main_color05 dt{color: #009c75;}
+.wrap .bi_wrap .sub_color.color_style1 i{background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/bi_color4.jpg');}
+.wrap .bi_wrap .sub_color.color_style2 i{background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/bi_color5.jpg');}
+.wrap .bi_wrap .sub_color.color_style3 i{background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/bi_color6.jpg');}
+.wrap .bi_wrap .sub_color.color_style4 i{background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/bi_color7.jpg');}
+.wrap .bi_wrap .sub_color .sub_color01 dt{color: #009c75;}
+.wrap .bi_wrap .sub_color .sub_color02 dt{color: #9f882a;}
+.wrap .bi_wrap .sub_color .sub_color02 dd{word-spacing: 4px;}
+.wrap .bi_wrap .sub_color .sub_color02 dd+dd{word-spacing: 8px;}
+.wrap .bi_wrap .sub_color .sub_color03 dt{color: #a0a9ab;}
+.wrap .bi_wrap .sub_color .sub_color03 dd{word-spacing: 9px;}
+.wrap .bi_wrap .sub_color .sub_color03 dd+dd{word-spacing: 4px;}
+.wrap .bi_wrap .sub_color .sub_color04 dt{color: #221816;}
+.wrap .bi_wrap .sub_color .sub_color04 dd{word-spacing: 0;}
+
+.wrap .font_wrap {text-align: left;}
+.wrap .font_wrap p{margin: 20px 0 60px;}
+.wrap .font_wrap .tit{margin-bottom: 25px;}
+.wrap .font_wrap .font_img{margin-bottom: 30px;}
+.wrap .font_wrap .tit1{width: 123px;}
+.wrap .font_wrap .tit2{width: 131px;}
+.wrap .font_wrap .tit3{width: 101px;}
+.wrap .font_wrap .tit4{width: 100px;}
+.wrap .font_wrap .font_notice{list-style-image: url("http://img.modetour.com/modeother/mobile/2020/corp/list_style01.jpg"); padding-left: 13px;}
+.wrap .font_wrap .font_notice li{margin-bottom: 25px;}
+
+.wrap .customer_wrap .guest_tit:after{content: "Guest";}
+.wrap .customer_wrap .cycle_list {margin-bottom: 100px;}
+.wrap .customer_wrap .cycle_list li i{background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/customer_icon1.jpg'); width: 99px; height: 99px;}
+.wrap .customer_wrap .cycle_list li+li i{background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/customer_icon2.jpg');}
+.wrap .customer_wrap .cycle_list li+li+li i{background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/customer_icon3.jpg');}
+.wrap .customer_wrap .customer_satisfaction ul{overflow: hidden; margin: 40px 0 55px;}
+.wrap .customer_wrap .customer_satisfaction ul li{float: left; width: 48%; height: 279px; margin-bottom: 10px;}
+.wrap .customer_wrap .customer_satisfaction ul li:nth-child(2n){float: right;}
+.wrap .customer_wrap .customer_satisfaction ul li div{padding: 20px 5px 30px 10px;}
+.wrap .customer_wrap .customer_satisfaction ul li strong{font-size: 14px; color: #3649ba; margin-bottom: 15px;}
+.wrap .customer_wrap .customer_satisfaction ul li p {font-size: 12px; line-height: 19px;}
+.wrap .customer_wrap .customer_satisfaction ul li.customer_satisfaction01{background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/customer_satisfaction01.jpg');}
+.wrap .customer_wrap .customer_satisfaction ul li.customer_satisfaction02{background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/customer_satisfaction02.jpg');}
+.wrap .customer_wrap .customer_satisfaction ul li.customer_satisfaction03{background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/customer_satisfaction03.jpg');}
+.wrap .customer_wrap .customer_satisfaction ul li.customer_satisfaction04{background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/customer_satisfaction04.jpg');}
+.wrap .customer_wrap .foundation_tit:after{content: "Foundation"; letter-spacing: -1px;}
+.wrap .customer_wrap .tour_tit:after{content: "Tour"; letter-spacing: -1px;}
+
+.wrap .harmony_tit:after{content: "Harmony"; letter-spacing: -1px;}
+.wrap .foundation_tit:after{content: "Foundation"; letter-spacing: -2px;}
+.wrap .mngphl_wrap li:first-child{margin-top: 0;}
+.wrap .list_style01 span{color: #8a75e0; font-weight: bold; padding-right: 10px; font-family: 'Open Sans', sans-serif;}
+.wrap .list_style01 li{margin-top: 30px; padding-left: 27px; text-indent: -27px; line-height: 22px;}
+.wrap .mngphl_wrap .txt{margin-top: 40px; padding: 0 10px;}
+.wrap .mngphl_wrap .sub_cont_bg{position: relative; z-index: 1;}
+.wrap .mngphl_wrap .shadow_box{position: relative; top: -67px; z-index: 2;}
+.wrap .mngphl_wrap .shadow_box li{padding: 35px 25px; margin: 20px 25px; background: #FFF;}
+.wrap .mngphl_wrap .shadow_box li strong{overflow: hidden; font-size: 19px; line-height: 25px;}
+.wrap .mngphl_wrap .shadow_box li p{letter-spacing: -0.7px;}
+.wrap .mngphl_wrap .shadow_box li i{display: block; float: left; margin: 4px 20px 30px 0; background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/mngphl_icon1.png'); width: 50px; height: 50px;}
+.wrap .mngphl_wrap .shadow_box li+li i{background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/mngphl_icon2.png'); width: 45px; height: 45px;}
+.wrap .mngphl_wrap .shadow_box li+li+li i{background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/mngphl_icon3.png'); width: 40px; height: 40px;}
+.wrap .mngphl_wrap .shadow_box li+li+li+li i{background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/mngphl_icon4.png'); width: 42px; height: 42px;}
+.wrap .mngphl_wrap .shadow_box li+li+li+li+li i{background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/mngphl_icon5.png'); width: 51px; height: 50px;}
+.wrap .list_style02{margin: 50px 0 80px;}
+.wrap .list_style02 li{overflow: hidden; display: table; letter-spacing: -0.5px; margin-top: 28px;}
+.wrap .list_style02 li div{display: table-cell; vertical-align: middle; line-height: 22px;}
+.wrap .list_style02 li div img{width: 127px; margin-right: 25px;}
+.wrap .list_style02 li div span{font-weight: bold;}
+
+.wrap .list_style03 {padding: 0 5px;}
+.wrap .list_style03 li{margin-top: 45px;}
+.wrap .list_style03 span{color: #8a75e0; font-weight: bold;}
+.wrap .list_style03 strong{font-size: 14px; margin-top: 10px;}
+
+.wrap .domestic_network_wrap{text-align: left;}
+.wrap .domestic_network_wrap .office_tit:after{content: "office";}
+.wrap .domestic_network_wrap .tab_area{margin-top: 40px;}
+.wrap .sub_wrap.domestic_network_wrap .slide_tab .tab_tit{text-align: left; margin: 0;}
+.wrap .sub_wrap.domestic_network_wrap .slide_tab .tab_tit:after{background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/filter_arrow.png');}
+.wrap .sub_wrap.domestic_network_wrap .slide_tab .on .tab_tit:after{transform: rotate(180deg);}
+.wrap .sub_wrap.domestic_network_wrap .slide_tab li:after{width: 100%; left: 0;}
+.wrap .domestic_network_wrap .shadow_box li{padding: 20px 25px; margin-bottom: 22px;}
+.wrap .domestic_network_wrap .shadow_box li:after{display: none;}
+.wrap .domestic_network_wrap .shadow_box .on+next:after{display: none;}
+.wrap .domestic_network_wrap .shadow_box li strong{font-size: 15px; background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/list_style02.jpg'); padding-left: 20px; -webkit-background-size: 15px;
+background-size: 15px; background-position: 0 center; margin-bottom: 10px;}
+.wrap .domestic_network_wrap .shadow_box li p{letter-spacing: -0.8px; font-size: 14px;}
+.wrap .domestic_network_wrap .bestbp_tit:after{content: "best BP"; letter-spacing: -1px;}
+.wrap .sub_tit3{position: relative; margin-top: 50px; margin-bottom: 10px;}
+.wrap .sub_tit3 span{position: relative; z-index: 2; font-size: 18px; padding-left: 25px; letter-spacing: -1px;}
+.wrap .sub_tit3:after{content: ""; position: absolute; left: -1px; top: -9px; width: 45px; height: 45px; background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/tit_icon01.png'); -webkit-background-size: 100%;
+background-size: 100%; z-index: 1;}
+.wrap .sub_tit3+p{padding-left: 25px;}
+.wrap .domestic_network_wrap .cycle_list li{margin-top: 55px;}
+.wrap .domestic_network_wrap .cycle_list li i{background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/domestic_network_icon1.jpg'); width: 60.5px; height: 51px;}
+.wrap .domestic_network_wrap .cycle_list li+li i{background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/domestic_network_icon2.jpg'); height: 33.5px;}
+.wrap .domestic_network_wrap .cycle_list li+li+li i{background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/domestic_network_icon3.jpg'); height: 54px;}
+.wrap .domestic_network_wrap .cycle_list li+li+li+li i{background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/domestic_network_icon4.jpg'); height: 61.5px;}
+.wrap div.ask{position: relative;}
+.wrap a.ask{display: block; font-size: 0; width: 25px; height: 11.5px; background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/ask_arrow.png'); position: absolute; right: 25px; top: 50%; margin-top: -5.5px;}
+
+.wrap .overseas_network_wrap{text-align: left;}
+.wrap .overseas_network_wrap .overseas_network_tit:after{content: "network"; letter-spacing: -2px;}
+.wrap .overseas_network_wrap .service_tit:after{content: "service"; letter-spacing: -2px;}
+
+.wrap .business_item_list{margin-top: 40px;}
+.wrap .business_item_list li{margin-top: 110px;}
+.wrap .business_item_list li strong{font-size: 15px; margin: 25px 0 22px; letter-spacing: -1px;}
+.wrap .business_item_list li p{font-size: 14px; margin-bottom: 25px;}
+.wrap .business_item_list li span{font-size: 13px; font-weight: bold;}
+
+.wrap .business_item_list.travel_item li .travel_item_logo{width: 158px;}
+.wrap .business_item_list.travel_item li+li .travel_item_logo{width: 130px;}
+.wrap .business_item_list.travel_item li+li+li .travel_item_logo{width: 190px;}
+.wrap .business_item_list.travel_item li+li+li+li .travel_item_logo{width: 124px;}
+.wrap .business_item_list.hotel_item li{margin-top: 42px;}
+
+
+.wrap .half_wrap{overflow: hidden;}
+.wrap .half_wrap li{float: left; width: 50%; min-height: 130px; text-align: center; margin-top: 40px; font-size: 14px; font-weight: bold;}
+.wrap .half_wrap li img{width: 62.5px;}
+.wrap .half_wrap li p{margin-top: 10px; line-height: 24px;}
+
+.wrap .travel_tit:after{content: "travel";}
+.wrap .hotel_tit:after{content: "Hotel";}
+.wrap .half_wrap.hotel_half_wrap li img{width: 111px;}
+.wrap .hotel_item1 .hotel_item_logo{width: 160px;}
+.wrap .hotel_item2 .hotel_item_logo{width: 240px;}
+
+.wrap .entertainer_tit:after{content: "entertainer";}
+.wrap .entertainment_item li{margin-top: 40px;}
+.wrap .entertainment_item .entertainment_item_logo{width: 133.5px;}
+
+.wrap .property_tit:after{content: "property";}
+.wrap .property_item li{margin-top: 40px;}
+.wrap .property_item {text-align: center;}
+.wrap .property_item .property_item_logo{width: 151px;}
+
+.wrap .financial_services_tit:after{content: "financial services"; letter-spacing: -3px; font-size: 45px;}
+.wrap .business_tit:after{content: "business";}
+.wrap .sub_wrap .partner_tab {margin-top: 60px;}
+.wrap .sub_wrap .partner_tab .tab_tit{text-align: left;}
+
+.wrap .sub_wrap.report_wrap{padding-bottom: 0;}
+.wrap .sub_wrap .report_tit:after{content: "report";}
+
+.wrap .sub_wrap .notice_tit:after{content: "notice";}
+.wrap .sub_wrap .notice_list{background: #FFF;}
+.wrap .sub_wrap .notice_list li{padding: 30px 25px; border-top: 10px #f3f3f3 solid;}
+.wrap .sub_wrap .notice_list strong{font-size: 18px;}
+.wrap .sub_wrap .notice_list a{display: block; text-align: left;}
+.wrap .sub_wrap .notice_list p{line-height: 23px;}
+.wrap .sub_wrap .notice_list .file{background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/file_icon.png'); -webkit-background-size: 26px; background-size: 26px; background-position: 0 0; font-size: 13px; font-weight: bold; color: #212121; padding: 2px 0 3px 35px;}
+.wrap .sub_wrap .notice_list .line_clamp2{white-space: normal; height: 50px; word-wrap: break-word; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical;overflow: hidden; margin: 20px 0;}
+.wrap .sub_wrap .notice_list .line_clamp3{white-space: normal; height: 70px; word-wrap: break-word; display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical;overflow: hidden; margin: 20px 0;}
+.wrap .sub_wrap .notice_list_tit{margin-bottom: 25px; letter-spacing: -0.5px;}
+
+
+.wrap .sub_wrap.ad_wrap .tab_area .tab_tit{text-align: left;}
+.wrap .sub_wrap.ad_wrap .tit1{font-size: 30px; margin: 50px 0 30px;}
+.wrap .sub_wrap.ad_wrap .tit2{font-size: 30px; margin: 60px 0 30px;}
+.wrap .sub_wrap .advertisement_tit:after{content: "advertisement";}
+.wrap .sub_wrap .ad_list li{text-align: left; width: 46.824%; margin: 0 0 50px 0;}
+.wrap .sub_wrap .ad_list li:nth-child(2n-1){margin-right: 6%;}
+.wrap .sub_wrap .ad_list li a{display: block;}
+.wrap .sub_wrap .ad_list li a img{width: 100%;}
+.wrap .sub_wrap .ad_list li strong{font-size: 14px; padding: 20px 0 0 0;}
+.wrap .sub_wrap .ad_list li p{font-size: 14px; font-weight: normal; margin: 0;}
+.wrap .sub_wrap.ad_wrap .history_list .year_box ul.timeline li{padding: 10px 30px 10px 38px; text-indent: -37px;}
+
+.wrap .modetour_tit:after{content: "Modetour"; letter-spacing: -2px; font-size: 40px;}
+.wrap .address_tit:after{content: "address"; letter-spacing: -2px;}
+
+.wrap .direction_wrap .cycle_list li{margin: 50px 0;}
+.wrap .direction_wrap .cycle_list dt{margin: 23px 0 10px;}
+.wrap .direction_wrap .cycle_list dt span{color: #FFF; padding: 2px 15px; border-radius: 15px;}
+.wrap .direction_wrap .cycle_list .navy span{background-color: #253b95;}
+.wrap .direction_wrap .cycle_list .green span{background-color: #82d07b;}
+.wrap .direction_wrap .cycle_list li i{background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/direction_icon1.png'); width: 47px; height: 47px;}
+.wrap .direction_wrap .cycle_list li+li i {background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/direction_icon2.png'); width: 47px; height: 47px;}
+.wrap .direction_wrap .cycle_list li+li+li{width: 230px; margin: 50px auto; text-align: left;}
+.wrap .direction_wrap .cycle_list li+li+li i {background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/direction_icon3.png'); width: 47px; height: 47px;}
+.wrap .direction_wrap .cycle_list li+li+li span{font-weight: bold;}
+
+.wrap .sub_wrap.investment_wrap .cont_wrap{margin-top: 40px;}
+.wrap .sub_wrap.investment_wrap .cont_wrap table{margin: 30px 0 60px;}
+.wrap .sub_wrap.investment_wrap .cont_wrap table+table{margin: 0 0 25px;}
+.wrap .sub_wrap.investment_wrap .tab_area{margin-top: 60px;}
+.wrap .sub_wrap.investment_wrap .tab_area span{text-align: left;}
+
+.wrap .sub_wrap .crrent span{font-size: 35px;}
+.wrap .sub_wrap .crrent i{width: 13px; height: 10px;}
+
+.wrap .sub_wrap.stock_wrap .gray{margin-top: 8px;}
+.wrap .sub_wrap.stock_wrap td{font-weight: bold;} 
+
+.wrap .sub_wrap.ir_wrap .filter{border-bottom: none;}
+.wrap .sub_wrap.ir_wrap{padding-bottom: 0;}
+.wrap .sub_wrap.ir_wrap .filter_list{display: none; padding-bottom: 25px;}
+.wrap .rule {padding: 25px; border: 1px #DDD solid;}
+.wrap .rule h4{font-size: 18px; font-weight: bold; color: #555; margin-bottom: 30px;}
+.wrap .rule h5{font-size: 15px; margin-bottom: 6px;}
+.wrap .rule ol{list-style-type: decimal; margin-left: 15px;}
+.wrap .rule li{color: #898989; line-height: 22px;}
+.wrap .rule p{color: #898989; line-height: 22px;}
+.wrap .mgb_15{margin-bottom: 15px;}
+.wrap .mgb_50{margin-bottom: 50px;}
+
+.wrap .employment_wrap .cycle_list li {margin-top: 80px; letter-spacing: -0.8px;}
+.wrap .employment_wrap .cycle_list li i{background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/type_talent_icon1.png'); width: 71px; height: 71px;}
+.wrap .employment_wrap .cycle_list li+li i{background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/type_talent_icon2.png');}
+.wrap .employment_wrap .cycle_list li+li+li i{background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/type_talent_icon3.png');}
+.wrap .employment_wrap .cycle_list li+li+li+li i{background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/type_talent_icon4.png');}
+.wrap .employment_wrap .cycle_list li strong{font-size: 19px; margin-bottom: 9px;}
+.wrap .employment_wrap .cycle_list li strong>span{font-weight: normal; font-size: 19px;}
+.wrap .employment_wrap .cycle_list li p{line-height: 22px;}
+
+dl.list dt{line-height: 62px; -webkit-background-size: 62px; background-size: 62px; background-position: 0 0; padding-left: 77px; font-weight: bold; margin: 50px 0 15px; font-size: 19px;}
+dl.list .hr_system01{background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/hr_system_icon01.png');}
+dl.list .hr_system02{background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/hr_system_icon02.png');}
+dl.list .hr_system03{background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/hr_system_icon03.png');}
+dl.list .hr_system04{background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/hr_system_icon04.png');}
+dl.list .hr_system05{background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/hr_system_icon05.png');}
+dl.list .hr_system06{background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/hr_system_icon06.png');}
+dl.list .hr_system07{background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/hr_system_icon07.png');}
+dl.list .hr_system08{background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/hr_system_icon08.png');}
+dl.list dd{line-height: 22px;}
+
+.wrap .sub_tit2.advertisement_tit{margin-top: 42px;}
+.wrap .sub_tit2.advertisement_tit:after{content: "advertisement"; letter-spacing: -1px; font-size: 40px;}
+
+.wrap  .welfare_system_list li{margin-top: 55px;}
+.wrap  .welfare_system_list li:nth-child(1) img{width: 151px;}
+.wrap  .welfare_system_list li:nth-child(2) img{width: 150px;}
+.wrap  .welfare_system_list li:nth-child(3) img{width: 255px;}
+.wrap  .welfare_system_list li:nth-child(4) img{width: 185px;}
+.wrap  .welfare_system_list li:nth-child(5) img{width: 233px;}
+.wrap  .welfare_system_list li:nth-child(6) img{width: 193px;}
+.wrap  .welfare_system_list li:nth-child(7) img{width: 209px;}
+.wrap  .welfare_system_list li:nth-child(8) img{width: 200px;}
+.wrap  .welfare_system_list li strong{font-size: 19px; margin: 25px 0 15px;}
+.wrap  .welfare_system_list li span{font-size: 19px; font-weight: normal;}
+
+.wrap .jab_list li{overflow: hidden; -webkit-background-size: 188px; background-size: 188px; height: 190px; background-position: right 0; display: table;}
+.wrap .jab_list li div{width: 100%; display: table-cell; vertical-align: middle; position: relative; left: 50%; padding-right: 60%;}
+.wrap .jab_list li:nth-child(2n-1){background-position: 0 0;}
+.wrap .jab_list li:nth-child(2n){background-color: #fafafa;}
+.wrap .jab_list li:nth-child(2n) div{text-align: right; position: relative; left: 25px;} 
+.wrap .jab_list li:nth-child(1){background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/job_bg01.png');}
+.wrap .jab_list li:nth-child(2){background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/job_bg02.png');}
+.wrap .jab_list li:nth-child(3){background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/job_bg03.png');}
+.wrap .jab_list li:nth-child(4){background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/job_bg04.png');}
+.wrap .jab_list li:nth-child(5){background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/job_bg05.png');}
+.wrap .jab_list li:nth-child(6){background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/job_bg06.png');}
+.wrap .jab_list li:nth-child(7){background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/job_bg07.png');}
+.wrap .jab_list li strong{font-size: 19px; margin-bottom: 10px;}
+
+.wrap .recruit_wrap {padding-bottom: 0;}
+.wrap .recruit_wrap .modetour_tit{line-height: 30px; letter-spacing: -1px;}
+.wrap .recruit_wrap .shadow_box {overflow: hidden; text-align: center; margin-top: -35px; padding: 13px 0;}
+.wrap .recruit_wrap .shadow_box li{text-align: center; display: inline-block; width: 42.66666666666667%; height: 270px; padding: 0; margin: 0 8px; vertical-align: top; background-color: #FFF;}
+.wrap .recruit_wrap .shadow_box+.shadow_box{margin-top: 0;}
+.wrap .recruit_wrap .shadow_box+.shadow_box li{height: auto;}
+.wrap .recruit_wrap .shadow_box li strong{font-size: 19px; line-height: 23px;}
+.wrap .recruit_wrap .shadow_box li i{display: block; margin: 30px auto 20px;}
+.wrap .recruit_wrap .shadow_box li p{padding: 15px 0 35px; letter-spacing: -0.8px;}
+.wrap .recruit_wrap .shadow_box .recruit_list01 i{background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/recruit_icon01.png'); width: 42px; height: 39px;}
+.wrap .recruit_wrap .shadow_box .recruit_list02 i{background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/recruit_icon02.png'); width: 39px; height: 39px;}
+.wrap .recruit_wrap .shadow_box .recruit_list03 i{background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/recruit_icon03.png'); width: 41px; height: 41px;}
+.wrap .recruit_wrap .shadow_box .recruit_list04 i{background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/recruit_icon04.png'); width: 40px; height: 40px;}
+.wrap .recruit_btn{padding: 30px 0 50px; text-align: center;}
+.wrap .recruit_btn a{background-color: #3f3f3f;  color: #FFF; border-radius: 20px; padding: 9px 44px 11px;}
+.wrap .recruit_btn i{display: inline-block; background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/recruit_arrow.png'); width: 6px; height: 10px; margin-left: 10px;}
+.wrap .recruit_wrap .notice_list li{position: relative;}
+.wrap .recruit_wrap .notice_list strong{line-height: 25px; margin: 10px 0 15px;}
+.wrap .notice_icon{display: block; width: 70px; height: 25px; line-height: 25px; border: 2px #2fc7b5 solid; text-align: center; border-radius: 20px; position: absolute; right: 25px; bottom: 25px;}
+.wrap .notice_icon1{color: #2fc7b5;}
+.wrap .notice_icon2{border-color: #6942db; color: #6942db;}
+.wrap .no_data{text-align: center; background-color: #f3f3f3;}
+.wrap .no_data img{width: 162px; margin: 0 auto; padding: 50px 0;}
+
+.wrap .sub_wrap.note_wrap{padding: 0; margin: 0;}
+.wrap .note_wrap{padding: 40px 25px;}
+.wrap .note_top{padding: 40px 25px 30px; background: #f8f8f8;}
+.wrap .note_top p{font-size: 19px; font-weight: bold; letter-spacing: -1px;}
+.wrap .note_arrow{display: block; font-size: 0; width: 21px; height: 16px; background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/note_arrow.png'); margin-bottom: 25px;}
+.wrap .note_wrap dl{padding-bottom: 70px;}
+.wrap .note_wrap dl dt{font-weight: bold; margin: 50px 0 20px; font-size: 15px;}
+.wrap .note_wrap dl dd{color: #676767; line-height: 25px;}
+.wrap .note_wrap .recruit_btn a{background-color: #3182f7;}
+
+.wrap .sub_map {background-color: #f3f3f3; padding: 30px 0 90px;}
+.wrap .sub_map .page_up{display:block; width: 50px; margin: 0 auto 50px;}
+.wrap .sub_map ul{padding: 0 25px;}
+.wrap .sub_map ul li{font-size: 15px; border-bottom: 2px #e6e6e6 solid; text-align: left; font-weight: bold; position: relative; padding: 13px 0;}
+.wrap .sub_map ul li a{display: block;}
+.wrap .sub_map ul li:after{content: ""; width: 6px; height: 11px; position: absolute; right: 0; top: 50%; margin-top: -5.5px; background-image: url('http://img.modetour.com/modeother/mobile/2020/corp/map_arrow.png'); -webkit-background-size: 100%; background-size: 100%;}
