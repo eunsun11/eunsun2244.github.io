@@ -61,12 +61,16 @@ $(function(){
     $(window).scroll(function(){   
         var sct = $(window).scrollTop();
         $('.fade').each(function(i){
-            if($('.fade').eq(i).offset().top - 500 < sct){
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();            
+            if( bottom_of_window > bottom_of_object ){
                 $(this).addClass('ani');
             }                
         });
         $('.fade2').each(function(i){
-            if($('.fade2').eq(i).offset().top - 800 < sct){
+            var bottom_of_object = $(this).offset().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            if( bottom_of_window > bottom_of_object ){
                 $(this).addClass('ani');
             }                
         });
