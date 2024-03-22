@@ -62,12 +62,12 @@ $(function(){
         var sct = $(window).scrollTop();
         $('.fade').each(function(i){
             if($('.fade').eq(i).offset().top - 500 < sct){
-                $(this).addClass('animate__fadeInUp animate__animated');
+                $(this).addClass('ani');
             }                
         });
         $('.fade2').each(function(i){
             if($('.fade2').eq(i).offset().top - 800 < sct){
-                $(this).addClass('animate__fadeInUp animate__animated');
+                $(this).addClass('ani');
             }                
         });
     });
