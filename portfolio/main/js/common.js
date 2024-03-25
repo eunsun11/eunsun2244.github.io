@@ -59,7 +59,7 @@ var swiper6 = new Swiper(".e_slide1 .swiper", {
 });
 
 var swiper6 = new Swiper(".e_slide2 .swiper", {
-    slidesPerView: 'auto',
+    slidesPerView: 3,
     spaceBetween: 40,
     centeredSlides: true,
     observer: true,
