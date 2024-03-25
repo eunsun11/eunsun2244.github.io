@@ -38,7 +38,7 @@ window.addEventListener('DOMContentLoaded', function () {
 });
 
 
-var swiper6 = new Swiper(".e_slide6 .swiper", {
+var swiper6 = new Swiper(".e_slide1 .swiper", {
     slidesPerView: 2,
     spaceBetween: 80,
     centeredSlides: true,
@@ -46,7 +46,27 @@ var swiper6 = new Swiper(".e_slide6 .swiper", {
     observeParents: true,
     speed: 800,								
     scrollbar : {
-        el : '.e_slide6 .swiper-scrollbar',
+        el : '.e_slide1 .swiper-scrollbar',
+        draggable: true,
+        dragSize: 28,
+    },
+    breakpoints: {                
+        1024: {
+            slidesPerView: 1.5,
+            spaceBetween: 20
+        }
+    }
+});
+
+var swiper6 = new Swiper(".e_slide2 .swiper", {
+    slidesPerView: 'auto',
+    spaceBetween: 40,
+    centeredSlides: true,
+    observer: true,
+    observeParents: true,
+    speed: 800,								
+    scrollbar : {
+        el : '.e_slide2 .swiper-scrollbar',
         draggable: true,
         dragSize: 28,
     },

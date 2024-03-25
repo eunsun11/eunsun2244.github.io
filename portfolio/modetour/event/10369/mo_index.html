@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>10369</title>
+</head>
+<body>
+    <!-- [시작]: 여기서부터시작 -->
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script type="text/javascript" src="http://mtour.interpark.com/js/swiper-3.4.1.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.min.css">
+    <link rel="stylesheet" href="../../css/common.min.css">
+    <style type="text/css">
+        .eventContentWrapper{text-align: center;position: relative;font-family: 'Noto Sans KR','apple sd gothic neo', dotum, '돋움', verdana; }
+        .eventContentWrapper img{width: 100%; vertical-align: middle;}
+        .eventContentWrapper button{background: none; border: none;}
+        .eventContentWrapper button:focus{outline:0 none;}
+        .eventContentWrapper .e_navi{position: absolute;top:63vw;width: 100%;height: 12%;left:0;z-index: 2;}
+        .eventContentWrapper .e_navi>a{display:inline-block;width: 34.356%;height: 100%;font-size: 0;-webkit-background-size: 100%;
+        background-size: 100%;background-repeat: no-repeat;}
+        .eventContentWrapper .e_navi a.navi1{background-image: url('http://img.modetour.com/mode2010/event_19/0304_family/190326/navi1_off.png');margin-left: 6%;}
+        .eventContentWrapper .e_navi a.navi2{background-image: url('http://img.modetour.com/mode2010/event_19/0304_family/190326/navi2_off.png');margin-left: -8%;}
+        .eventContentWrapper .con1_tit{position: absolute;left:50%;margin-left: -50%;top:21%;}
+        .eventContentWrapper #con1{position: relative;}
+        .eventContentWrapper .btn_group{position: absolute;z-index: 3;width: 100%;top:34%;}
+        .eventContentWrapper .btn_group button{width: 18%;}
+        .eventContentWrapper .btn_group button:first-child{margin-left: 6%;}
+        .eventContentWrapper .con_group .con{display: none;padding-top: 100%;-webkit-background-size: 105%;
+        background-size: 105%;background-position: center 0;}
+        .eventContentWrapper .con_group .con.on{display: block;}
+        .eventContentWrapper .con_group .con.con01{background-image: url('http://img.modetour.com/mode2010/event_19/0304_family/190326/con1_1_bg.jpg');}
+        .eventContentWrapper .con_group .con.con02{background-image: url('http://img.modetour.com/mode2010/event_19/0304_family/190326/con1_2_bg.jpg');}
+        .eventContentWrapper .con_group .con.con03{background-image: url('http://img.modetour.com/mode2010/event_19/0304_family/190326/con1_3_bg.jpg');}
+        .eventContentWrapper .con_group .con.con04{background-image: url('http://img.modetour.com/mode2010/event_19/0304_family/190326/con1_4_bg.jpg');}
+        .eventContentWrapper .con .list{position: relative;top:-15vw;font-size: 0;}
+        .eventContentWrapper .con .list li{position: relative;display: inline-block;width: 27.4%;margin: 0.3%;}
+        .eventContentWrapper #con2 {background: url('http://img.modetour.com/mode2010/event_19/0304_family/190326/m_con2_bg.jpg');-webkit-background-size: 100%;
+        background-size: 100%;padding-bottom: 20%;position: relative;top:-1vw;}
+        .eventContentWrapper #con2 .swiper-wrapper{padding-bottom: 70px; padding-top: 50px;height: 45%;}
+        .eventContentWrapper #con2 .swiper-slide img{transform: scale(0.8); transition: all ease 0.5s; border-radius: 50%;}
+        .eventContentWrapper #con2 .swiper-slide-active img{transform: scale(1.0); box-shadow: 10px 10px 30px rgba(0,0,0,0.3);}
+        .eventContentWrapper #con2 .swiper-slide-active span.txt01{margin-bottom: 10px;}
+        .eventContentWrapper #con2 .swiper-slide .txt_wrap{position: absolute; top: 8%; left: 8%;}
+        .eventContentWrapper #con2 .swiper-slide .txt_wrap span{color: #FFF; font-family: 'Noto Sans KR','apple sd gothic neo', dotum, '돋움', verdana; display: block; text-align: left; transform: scale(0.8);}
+        .eventContentWrapper #con2 .swiper-slide span.txt01{font-size: 4.5vw; font-weight: bold; transition: all ease 0.5s; }
+        .eventContentWrapper #con2 .swiper-slide span.txt02{font-size: 2.5vw; line-height: 3vw; transition: all ease 0.5s; }
+        .eventContentWrapper #con2 .swiper-slide-active .txt_wrap span{transform: scale(1.0);}
+        .eventContentWrapper #con2 .obj01{display: block; position: absolute; width: 62%; height: 32%; background: url('http://img.modetour.com/mode2010/event_19/0304_family/con3_in1_hover1.png') no-repeat; left: 2%; top: 2%; transform: scale(0.0); transition: all ease 0.5s;-webkit-background-size: 100%;
+        background-size: 100%;}
+        .eventContentWrapper #con2 .obj02{display: block; position: absolute; width: 17%; height: 15%; background: url('http://img.modetour.com/mode2010/event_19/0304_family/con3_in1_hover2.png') no-repeat; right: 0; bottom: 3%; transform: scale(0.0); transition: all ease 0.5s;-webkit-background-size: 100%;
+        background-size: 100%;}
+        .eventContentWrapper #con2 .swiper-slide-active .obj01{transform: scale(1.0);}
+        .eventContentWrapper #con2 .swiper-slide-active .obj02{transform: scale(1.0);}
+        .eventContentWrapper #con2 .swiper-pagination{top: 84%;}
+        .eventContentWrapper #con2 .swiper-pagination span{width: 17px; height: 17px; background: url('http://img.modetour.com/mode2010/event_19/0304_family/con3_navi.png') -43px 0 no-repeat; opacity: 1; border-radius: 0;}
+        .eventContentWrapper #con2 .swiper-pagination span.swiper-pagination-bullet-active{width: 43px; height: 17px; background-position: 0 0;}
+    </style>
+    <!-- 컨텐츠 -->
+    <div class="eventContentWrapper">
+        <div class="top">
+            <img src="http://img.modetour.com/mode2010/event_19/0304_family/190326/top.jpg" alt="">
+        </div>
+        <div class="e_navi">
+            <a href="#con1" class="navi1">가족의 테마</a>
+            <a href="#con2" class="navi2">지역별 대표상품</a>
+        </div>
+        <!-- [s]: con1 가족의 테마 -->
+        <div id="con1">
+            <img src="http://img.modetour.com/mode2010/event_19/0304_family/190326/con1_tit.png" alt="" class="con1_tit">
+            <div class="btn_group">
+                <button class="btn01 on"><img src="http://img.modetour.com/mode2010/event_19/0304_family/190326/tab1_on.png" alt=""></button>
+                <button class="btn02"><img src="http://img.modetour.com/mode2010/event_19/0304_family/190326/tab2_off.png" alt=""></button>
+                <button class="btn03"><img src="http://img.modetour.com/mode2010/event_19/0304_family/190326/tab3_off.png" alt=""></button>
+                <button class="btn04"><img src="http://img.modetour.com/mode2010/event_19/0304_family/190326/tab4_off.png" alt=""></button>
+            </div>
+            <div class="con_group">
+                <div class="con con01 on">
+                    <ul class="list">
+                        <li><a href="http://mtour.interpark.com/tour/Goods.aspx?baseGoodsCD=A1024304"><img src="http://img.modetour.com/mode2010/event_19/0304_family/190326/con01_1.png" alt="세부"></a></li>
+                        <li><a href="http://tour.interpark.com/goods/detail/?BaseGoodsCd=A6015219"><img src="http://img.modetour.com/mode2010/event_19/0304_family/190326/con01_2.png" alt="오사카"></a></li>
+                        <li><a href="http://tour.interpark.com/goods/detail/?BaseGoodsCd=A4014697"><img src="http://img.modetour.com/mode2010/event_19/0304_family/190326/con01_3.png" alt="괌"></a></li>
+                        <li><a href="http://tour.interpark.com/goods/detail/?BaseGoodsCd=A1024478"><img src="http://img.modetour.com/mode2010/event_19/0304_family/190326/con01_4.png" alt="코타키나발루"></a></li>
+                        <li><a href="http://tour.interpark.com/goods/detail/?BaseGoodsCd=A4014732"><img src="http://img.modetour.com/mode2010/event_19/0304_family/190326/con01_5.png" alt="사이판"></a></li>					
+                    </ul>
+                </div>
+                <div class="con con02">
+                    <ul class="list">
+                        <li><a href="http://tour.interpark.com/goods/detail/?BaseGoodsCd=A5015325"><img src="http://img.modetour.com/mode2010/event_19/0304_family/190326/con02_1.png" alt="장가계"></a></li>
+                        <li><a href="http://tour.interpark.com/goods/detail/?BaseGoodsCd=A6014520"><img src="http://img.modetour.com/mode2010/event_19/0304_family/190326/con02_2.png" alt="규슈"></a></li>
+                        <li><a href="http://tour.interpark.com/goods/detail/?BaseGoodsCd=A2013064"><img src="http://img.modetour.com/mode2010/event_19/0304_family/190326/con02_3.png" alt="하와이"></a></li>
+                        <li><a href="http://tour.interpark.com/goods/detail/?BaseGoodsCd=A3015874"><img src="http://img.modetour.com/mode2010/event_19/0304_family/190326/con02_4.png" alt="서유럽"></a></li>
+                        <li><a href="http://tour.interpark.com/goods/detail/?BaseGoodsCd=A1024549"><img src="http://img.modetour.com/mode2010/event_19/0304_family/190326/con02_5.png" alt="다낭"></a></li>	
+                    </ul>
+                </div>
+                <div class="con con03">
+                    <ul class="list">
+                        <li><a href="http://tour.interpark.com/goods/detail/?BaseGoodsCd=A1024448"><img src="http://img.modetour.com/mode2010/event_19/0304_family/190326/con03_1.png" alt="대만"></a></li>
+                        <li><a href="http://tour.interpark.com/goods/detail/?BaseGoodsCd=A6014350"><img src="http://img.modetour.com/mode2010/event_19/0304_family/190326/con03_2.png" alt="북해도"></a></li>
+                        <li><a href="http://tour.interpark.com/goods/detail/?BaseGoodsCd=A1024529"><img src="http://img.modetour.com/mode2010/event_19/0304_family/190326/con03_3.png" alt="방콕"></a></li>
+                        <li><a href="http://tour.interpark.com/goods/detail/?BaseGoodsCd=A1019791"><img src="http://img.modetour.com/mode2010/event_19/0304_family/190326/con03_4.png" alt="홍콩"></a></li>
+                        <li><a href="http://tour.interpark.com/goods/detail/?BaseGoodsCd=A6014585"><img src="http://img.modetour.com/mode2010/event_19/0304_family/190326/con03_5.png" alt="오키나와"></a></li>	
+                    </ul>
+                </div>
+                <div class="con con04">
+                    <ul class="list">
+                        <li><a href="http://tour.interpark.com/goods/detail/?BaseGoodsCd=A1024486"><img src="http://img.modetour.com/mode2010/event_19/0304_family/190326/con04_1.png" alt="보라카이"></a></li>
+                        <li><a href="http://tour.interpark.com/goods/detail/?BaseGoodsCd=A3015265"><img src="http://img.modetour.com/mode2010/event_19/0304_family/190326/con04_2.png" alt="스페인"></a></li>
+                        <li><a href="http://tour.interpark.com/goods/detail/?BaseGoodsCd=A2013435"><img src="http://img.modetour.com/mode2010/event_19/0304_family/190326/con04_3.png" alt="미서부"></a></li>
+                        <li><a href="http://tour.interpark.com/goods/detail/?BaseGoodsCd=A1024461"><img src="http://img.modetour.com/mode2010/event_19/0304_family/190326/con04_4.png" alt="발리"></a></li>
+                        <li><a href="http://tour.interpark.com/goods/detail/?BaseGoodsCd=A4013762"><img src="http://img.modetour.com/mode2010/event_19/0304_family/190326/con04_5.png" alt="호주"></a></li>	
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <!-- [e]: con1 가족의 테마 -->
+        <!-- [s]: con2 지녁별 대표상품 -->
+        <div id="con2">
+            <img src="http://img.modetour.com/mode2010/event_19/0304_family/190326/con2_tit.png" alt="지역별 대표상품 지역별 상품을 한눈에!">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <a href="http://mtour.interpark.com/event.aspx?seq=12698">
+                            <i class="obj01"></i>
+                            <i class="obj02"></i>
+                            <img src="http://img.modetour.com/mode2010/event_19/0304_family/con3_in2_img.png" alt="">
+                            <div class="txt_wrap">
+                                <span class="txt01">남태평양</span>
+                                <span class="txt02">끝없는 바다<br />우리가족 여행의<br />첫 선택지</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="http://mtour.interpark.com/event.aspx?seq=12703">
+                            <i class="obj01"></i>
+                            <i class="obj02"></i>
+                            <img src="http://img.modetour.com/mode2010/event_19/0304_family/con3_in3_img.png" alt="">
+                            <div class="txt_wrap">
+                                <span class="txt01">일본</span>
+                                <span class="txt02">가깝지만 다른<br />도시마다 매력이 넘치는</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="http://mtour.interpark.com/event.aspx?seq=12702">
+                            <i class="obj01"></i>
+                            <i class="obj02"></i>
+                            <img src="http://img.modetour.com/mode2010/event_19/0304_family/con3_in4_img.png" alt="">
+                            <div class="txt_wrap">
+                                <span class="txt01">유럽</span>
+                                <span class="txt02">역사와 현대가<br />공존하는 곳</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="http://mtour.interpark.com/event.aspx?seq=12704">
+                            <i class="obj01"></i>
+                            <i class="obj02"></i>
+                            <img src="http://img.modetour.com/mode2010/event_19/0304_family/con3_in5_img.png" alt="">
+                            <div class="txt_wrap">
+                                <span class="txt01">중국·홍콩<br />마카오</span>
+                                <span class="txt02">역사와 문화,<br />도시의 화려함을 동시에</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="http://mtour.interpark.com/event.aspx?seq=12699">
+                            <i class="obj01"></i>
+                            <i class="obj02"></i>
+                            <img src="http://img.modetour.com/mode2010/event_19/0304_family/con3_in6_img.png" alt="">
+                            <div class="txt_wrap">
+                                <span class="txt01">동남아<br />대만</span>
+                                <span class="txt02">가까운 곳 휴양,관광<br />모두 다 만족할 수 있는</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="http://mtour.interpark.com/event.aspx?seq=12700">
+                            <i class="obj01"></i>
+                            <i class="obj02"></i>
+                            <img src="http://img.modetour.com/mode2010/event_19/0304_family/con3_in7_img.png" alt="">
+                            <div class="txt_wrap">
+                                <span class="txt01">미주·하와이<br />중남미</span>
+                                <span class="txt02">화려한 도시부터<br />끝 없는 대자연까지</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="http://mtour.interpark.com/event.aspx?seq=12701">
+                            <i class="obj01"></i>
+                            <i class="obj02"></i>
+                            <img src="http://img.modetour.com/mode2010/event_19/0304_family/con3_in8_img.png" alt="">
+                            <div class="txt_wrap">
+                                <span class="txt01">부산출발</span>
+                                <span class="txt02">가깝고 편하게<br />떠날 수 있는</span>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="swiper-slide">
+                        <a href="http://mtour.interpark.com/event.aspx?seq=12705">
+                            <i class="obj01"></i>
+                            <i class="obj02"></i>
+                            <img src="http://img.modetour.com/mode2010/event_19/0304_family/con3_in9_img.png" alt="">
+                            <div class="txt_wrap">
+                                <span class="txt01">지방출발</span>
+                                <span class="txt02">내 집 앞에서<br />편안하게</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination"></div>
+            </div>
+        </div>
+        <!-- [e]: con3 지녁별 대표상품 -->
+    </div>
+    <script type="text/javascript">
+        (function ($) {
+            $(document).ready(function () {
+                $('.e_navi a').click(function () {
+                    $('html,body').animate({
+                        scrollTop: $(this.hash).offset().top
+                    }, 500);
+                    return false;
+                });
+                $('.btn_group > button').on('click', function () {
+                    $('.btn_group > button').each(function () {
+                        $(this).find("img").attr("src", $(this).find("img").attr("src").replace("_on.png", "_off.png"));
+                    });
+                    $(this).find("img").attr("src", $(this).find("img").attr("src").replace("_off.png", "_on.png"));
+                    $(this).addClass('on').siblings('li').removeClass('on');
+                    var a_index = $(this).index();
+                    $('.con').eq(a_index).addClass('on').siblings('div').removeClass('on');
+                });
+                var swiper = new Swiper('.swiper-container', {
+                    slidesPerView: 2.5,
+                    spaceBetween: 20,
+                    centeredSlides: true,
+                    loop: true,
+                    pagination: {
+                        el: '.swiper-pagination',
+                        clickable: true,
+                    },
+                    pagination: '.swiper-pagination',
+                    paginationClickable: true,
+                });
+            });
+    })(jQuery);
+    </script>
+    <!-- [끝]: 여기까지 -->
+</body>
+</html>

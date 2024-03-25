@@ -1,0 +1,1047 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>11031</title>
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://js.modetour.com/jquery/plugin/cycle2.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../css/common.min.css" />
+</head>
+<body>
+    <!-- [시작: Promotion Container] -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.min.css">
+    <style type="text/css">
+        @import url('http://fonts.googleapis.com/earlyaccess/notosanskr.css');
+          body {font-family: 'Noto Sans KR', sans-serif;}
+        .event_wrap{min-width: 1101px; overflow-x: hidden; text-align: center;}
+        .event_wrap .wrap{width: 1101px; margin: 0 auto; position: relative;}
+        .event_wrap .text_blind{position: absolute; left: -9999px; font-size: 0;}
+        .event_wrap .content{display: none;}
+        
+        .event_wrap .fix{position: relative; z-index: 1000;}
+        .event_wrap .fix>img{position: relative; z-index: 2;}
+        .event_wrap .fix:before{content: ""; position: absolute; left: 0; right: 50%; top: 0; height: 100%; background: #f9e000; z-index: 1;}
+        .event_wrap .fix:after{content: ""; position: absolute; left: 50%; right: 0; top: 0; height: 100%; background: #381506; z-index: 1;}
+        .event_wrap .fix2{display: none; position: fixed; top: 0; width: 100%; z-index: 999;}
+        .event_wrap .main{width: 100%; height: 997px;}
+        .event_wrap .main h1{position: absolute; z-index: 150; left: 80px; top: 380px;}
+        .event_wrap .main ul,.event_wrap .main ul li{width: 100%; height: 100%;}
+        .event_wrap .main ul li.bg01{background: url('http://img.modetour.com/promotion/11031/main_bg1.jpg') center 0 no-repeat; }
+        .event_wrap .main ul li.bg02{background: url('http://img.modetour.com/promotion/11031/main_bg2.jpg') center 0 no-repeat; }
+        .event_wrap .main ul li.bg03{background: url('http://img.modetour.com/promotion/11031/main_bg3.jpg') center 0 no-repeat;}
+        .event_wrap .main ul li.bg04{background: url('http://img.modetour.com/promotion/11031/main_bg4.jpg') center 0 no-repeat;}
+
+        .event_wrap #con1{height: 1292px; width: 100%; position: relative;}
+        .event_wrap #con1 h2{position: absolute; top: 197px; left: 50%; margin-left: -530px; z-index: 9;}
+        .event_wrap #con1 .gallery-top{height: 100%;}
+        .event_wrap #con1 .video_img{width: 606px; height: 352px; background: #000; position: absolute; right: 0px; top: 208px; cursor: pointer;}
+        .event_wrap #con1 .gallery-top .bg01{background: url('http://img.modetour.com/promotion/11031/191126/con1_in9_bg.jpg') no-repeat center 0;}
+        .event_wrap #con1 .gallery-top .bg02{background: url('http://img.modetour.com/promotion/11031/191126/con1_in8_bg.jpg') no-repeat center 0;}
+        .event_wrap #con1 .gallery-top .bg03{background: url('http://img.modetour.com/promotion/11031/191126/con1_in6_bg.jpg') no-repeat center 0;}
+        .event_wrap #con1 .gallery-top .bg04{background: url('http://img.modetour.com/promotion/11031/191126/con1_in7_bg.jpg') no-repeat center 0;}
+        .event_wrap #con1 .gallery-top .bg05{background: url('http://img.modetour.com/promotion/11031/191126/con1_in1_bg.jpg') no-repeat center 0;}
+        .event_wrap #con1 .gallery-top .bg06{background: url('http://img.modetour.com/promotion/11031/191126/con1_in2_bg.jpg') no-repeat center 0;}
+        .event_wrap #con1 .gallery-top .bg07{background: url('http://img.modetour.com/promotion/11031/191126/con1_in3_bg.jpg') no-repeat center 0;}
+        .event_wrap #con1 .gallery-top .bg08{background: url('http://img.modetour.com/promotion/11031/191126/con1_in4_bg.jpg') no-repeat center 0;}
+        .event_wrap #con1 .gallery-top .bg09{background: url('http://img.modetour.com/promotion/11031/191126/con1_in5_bg.jpg') no-repeat center 0;}
+        .event_wrap #con1 h3{position: absolute; top: 360px; left: 40px;}
+        .event_wrap #con1 .swiper-button-prev{background: url('http://img.modetour.com/promotion/11031/con1_control.png') no-repeat; width: 69px; height: 69px; transition: all 0.1s; top: auto; bottom: 145px; left: 50%; margin-left: 399px;}
+        .event_wrap #con1 .swiper-button-next{background: url('http://img.modetour.com/promotion/11031/con1_control.png') no-repeat -79px 0; width: 69px; height: 69px; transition: all 0.1s; top: auto; bottom: 145px; left: 50%; margin-left: 478px;}
+        .event_wrap #con1 .swiper-button-prev:hover{background: url('http://img.modetour.com/promotion/11031/con1_control_on.png') no-repeat;}
+        .event_wrap #con1 .swiper-button-next:hover{background: url('http://img.modetour.com/promotion/11031/con1_control_on.png') no-repeat -79px 0;}
+
+        .gallery-top .swiper-slide{visibility: hidden;}
+        .gallery-top .swiper-slide.swiper-slide-active{visibility: visible;}
+        .gallery-top .swiper-slide.swiper-slide-prev{visibility: visible;}
+        
+        .animated {
+        -webkit-animation-duration: 1s;
+        animation-duration: 1s;
+        -webkit-animation-fill-mode: both;
+        animation-fill-mode: both;
+        }
+
+        .fadeInUp01{animation-name: fadeInUp01; -webkit-animation-name: fadeInUp01;}
+        .fadeInUp02{animation-name: fadeInUp02; -webkit-animation-name: fadeInUp02;}
+
+        @keyframes fadeInUp01 {
+            from {
+                opacity: 0;
+                transform: translate3d(0, -30px, 0);
+            }
+
+            to {
+                opacity: 1;
+                -webkit-transform: translate3d(0, 0px, 0);
+            }
+        }
+        @keyframes fadeInUp02 {
+            from {
+                opacity: 1;
+                -webkit-transform: translate3d(0, 0px, 0);
+            }
+
+            to {
+                opacity: 0;
+                transform: translate3d(0, -30px, 0);
+            }
+        }
+
+        .event_wrap #con1 .gallery-thumbs{width: 1125px; margin: 0 auto; top: -523px; z-index: 9;}
+        .event_wrap #con1 .gallery-thumbs .swiper-wrapper div{width: 365px; height: 261px; margin-left: 10px; cursor: pointer; font-size: 0;}
+        .event_wrap #con1 .gallery-thumbs .swiper-slide{background-repeat: no-repeat; background-position: center; transition: 0.1s;}
+        .event_wrap #con1 .gallery-thumbs .bg01{background-image: url('http://img.modetour.com/promotion/11031/con1_tab1_off.jpg');}
+        .event_wrap #con1 .gallery-thumbs .bg02{background-image: url('http://img.modetour.com/promotion/11031/con1_tab2_off.jpg');}
+        .event_wrap #con1 .gallery-thumbs .bg03{background-image: url('http://img.modetour.com/promotion/11031/con1_tab3_off.jpg');}
+        .event_wrap #con1 .gallery-thumbs .bg04{background-image: url('http://img.modetour.com/promotion/11031/con1_tab4_off.jpg');}
+        .event_wrap #con1 .gallery-thumbs .bg05{background-image: url('http://img.modetour.com/promotion/11031/con1_tab5_off.jpg');}
+        .event_wrap #con1 .gallery-thumbs .bg06{background-image: url('http://img.modetour.com/promotion/11031/con1_tab6_off.jpg');}
+        .event_wrap #con1 .gallery-thumbs .bg07{background-image: url('http://img.modetour.com/promotion/11031/con1_tab7_off.jpg');}
+        .event_wrap #con1 .gallery-thumbs .bg08{background-image: url('http://img.modetour.com/promotion/11031/con1_tab8_off.jpg');}
+        .event_wrap #con1 .gallery-thumbs .bg09{background-image: url('http://img.modetour.com/promotion/11031/con1_tab9_off.jpg');}
+        .event_wrap #con1 .gallery-thumbs .swiper-slide-active.bg01{background-image: url('http://img.modetour.com/promotion/11031/con1_tab1_on.jpg');}
+        .event_wrap #con1 .gallery-thumbs .swiper-slide-active.bg02{background-image: url('http://img.modetour.com/promotion/11031/con1_tab2_on.jpg');}
+        .event_wrap #con1 .gallery-thumbs .swiper-slide-active.bg03{background-image: url('http://img.modetour.com/promotion/11031/con1_tab3_on.jpg');}
+        .event_wrap #con1 .gallery-thumbs .swiper-slide-active.bg04{background-image: url('http://img.modetour.com/promotion/11031/con1_tab4_on.jpg');}
+        .event_wrap #con1 .gallery-thumbs .swiper-slide-active.bg05{background-image: url('http://img.modetour.com/promotion/11031/con1_tab5_on.jpg');}
+        .event_wrap #con1 .gallery-thumbs .swiper-slide-active.bg06{background-image: url('http://img.modetour.com/promotion/11031/con1_tab6_on.jpg');}
+        .event_wrap #con1 .gallery-thumbs .swiper-slide-active.bg07{background-image: url('http://img.modetour.com/promotion/11031/con1_tab7_on.jpg');}
+        .event_wrap #con1 .gallery-thumbs .swiper-slide-active.bg08{background-image: url('http://img.modetour.com/promotion/11031/con1_tab8_on.jpg');}
+        .event_wrap #con1 .gallery-thumbs .swiper-slide-active.bg09{background-image: url('http://img.modetour.com/promotion/11031/con1_tab9_on.jpg');}
+        .event_wrap #con1 .gallery-thumbs .bg01:hover{background-image: url('http://img.modetour.com/promotion/11031/con1_tab1_on.jpg');}
+        .event_wrap #con1 .gallery-thumbs .bg02:hover{background-image: url('http://img.modetour.com/promotion/11031/con1_tab2_on.jpg');}
+        .event_wrap #con1 .gallery-thumbs .bg03:hover{background-image: url('http://img.modetour.com/promotion/11031/con1_tab3_on.jpg');}
+        .event_wrap #con1 .gallery-thumbs .bg04:hover{background-image: url('http://img.modetour.com/promotion/11031/con1_tab4_on.jpg');}
+        .event_wrap #con1 .gallery-thumbs .bg05:hover{background-image: url('http://img.modetour.com/promotion/11031/con1_tab5_on.jpg');}
+        .event_wrap #con1 .gallery-thumbs .bg06:hover{background-image: url('http://img.modetour.com/promotion/11031/con1_tab6_on.jpg');}
+        .event_wrap #con1 .gallery-thumbs .bg07:hover{background-image: url('http://img.modetour.com/promotion/11031/con1_tab7_on.jpg');}
+        .event_wrap #con1 .gallery-thumbs .bg08:hover{background-image: url('http://img.modetour.com/promotion/11031/con1_tab8_on.jpg');}
+        .event_wrap #con1 .gallery-thumbs .bg09:hover{background-image: url('http://img.modetour.com/promotion/11031/con1_tab9_on.jpg');}
+
+
+        .event_wrap #con2{padding-top: 25px; position: relative; background: url('http://img.modetour.com/promotion/11031/con2_bg.jpg') center 0 no-repeat;}
+        .event_wrap #con2 .wrap{background: url('http://img.modetour.com/promotion/11031/191126/con2_wrap.jpg');background-repeat: repeat-x; padding-top: 90px; background-position: 0 50px;}
+        .event_wrap #con2 h2{width: 1100px; text-align: center; margin: 0 auto; border-bottom: 1px #9b9b9b solid; padding-bottom: 65px; padding-top: 150px;}
+        .event_wrap #con2 h3{text-align: left; padding: 2px 0; background: #FFF;}					
+        .event_wrap #con2 .coming_soon{display: none; position: absolute; top: 60px; right: 0;}
+        .event_wrap #con2 .swiper-slide-active .coming_soon{display: block;}
+        .event_wrap #con2 .tab-top{padding-top: 25px;}
+        .event_wrap #con2 .tab-top .swiper-slide{visibility: hidden;}
+        .event_wrap #con2 .tab-top .swiper-slide.swiper-slide-active{visibility: visible;}
+        .event_wrap #con2 .tab-top .swiper-slide.swiper-slide-prev{visibility: visible;}
+        .event_wrap #con2 .tab-thumbs{width: 1160px; position: absolute; top: 593px; left: 50%; margin-left: -190px;}
+        .event_wrap #con2 .tab-thumbs .swiper-slide{width: 535px;}
+        .event_wrap #con2 .control div{opacity: 1; background: url('http://img.modetour.com/promotion/11031/con2_control.png') no-repeat; width: 26px; height: 40px; cursor: pointer; float: left; position: absolute; top: 780px; left: 50%;}
+        .event_wrap #con2 .control div:hover{background: url('http://img.modetour.com/promotion/11031/con2_control_on.png') no-repeat;}
+        .event_wrap #con2 .control div.swiper-button-prev{background-position: 0 0; margin-left: 395px;}
+        .event_wrap #con2 .control div.swiper-button-next{background-position: -77px 0; margin-left: 471px;}
+        .event_wrap #con2 .date{padding-top: 78px; width: 255px; position: relative;}
+        .event_wrap #con2 .date a{display: block; position: absolute; left: -10px; top: 400px; width: 270px; height: 100px; font-size: 0; background: url('http://img.modetour.com/promotion/11024/empty.png');}
+        .event_wrap #con2 .infor{margin-top: 150px; padding-bottom: 20px; background: #fff;}
+        .event_wrap #con2 .tit{position: absolute; top: 700px; left: 355px; background: #FFF; width: 600px; padding: 10px 0; text-align: left;}
+        .event_wrap #con2 .tit h4{font-family: 'Noto Sans KR', sans-serif; font-size: 28px; color: #3e3e3e; letter-spacing: -2px; margin-bottom: 20px;}
+        .event_wrap #con2 .tit dl{background: #FFF;}
+        .event_wrap #con2 .tit dl dt:after{content:''; position: absolute; display: block; width: 1px; height: 14px; background: #8f8f8f; top: 50%; margin-top: -7px; right: 0;}
+        .event_wrap #con2 .tit dl dt{padding-right: 10px;}
+        .event_wrap #con2 .tit dl dt,.event_wrap #con2 .tit dl dd{font-family: 'Noto Sans KR', sans-serif; display: inline-block; position: relative; color: #8f8f8f; font-size: 15px; letter-spacing: -1px;}
+        .event_wrap #con2 .tit dl dd{padding-left: 5px;}
+        .event_wrap #con2 .page{position: absolute; left: 0; top: 685px;}
+
+        .event_wrap #con3{position: relative;}
+        .event_wrap #con3 h2{position: absolute; left: 0; right: 0; text-align: center; z-index: 1; top: 150px;}
+        .event_wrap #con3 .wrap{min-height: 780px;}
+        .event_wrap #con3 .tab{overflow: hidden; width: 1100px; position: absolute; top: 100px; left: 50%; margin-left: -548px; z-index: 1; top: 260px;}
+        .event_wrap #con3 .tab li{float: left; width: 101px; height: 138px; background: url('http://img.modetour.com/promotion/11031/con3_tab_191206.png') no-repeat; margin-left: 65px;}
+        .event_wrap #con3 .tab li:hover,.event_wrap #con3 .tab li.on{background: url('http://img.modetour.com/promotion/11031/con3_tab_on_191206.png') no-repeat;}
+        .event_wrap #con3 .tab li:first-child{margin-left: 0;}
+        .event_wrap #con3 .tab li.tab02{background-position-x: -166px;}
+        .event_wrap #con3 .tab li.tab03{background-position-x: -332px;}
+        .event_wrap #con3 .tab li.tab04{background-position-x: -499px;}
+        .event_wrap #con3 .tab li.tab05{background-position-x: -665px;}
+        .event_wrap #con3 .tab li.tab06{background-position-x: -832px;}
+        .event_wrap #con3 .tab li.tab07{background-position-x: -998px;}
+        .event_wrap #con3 .tab li a{display: block; width: 100%; height: 100%;}
+        .event_wrap #con3 .content{padding-top: 485px;}
+        .event_wrap #con3 h3{width: 1100px; margin: 0 auto; font-family: 'Noto Sans KR', sans-serif; font-size: 26px; letter-spacing: -2px; color: #2b2b2b; border-bottom: 1px #d7d7d7 solid; padding-bottom: 30px; margin-bottom: 60px; text-align: left;}
+        .event_wrap #con3 #con3_in1{position: relative; background: url('http://img.modetour.com/promotion/11031/con3_in1_bg.jpg') center 0 no-repeat;}
+        .event_wrap #con3 #con3_in2{position: relative; background: url('http://img.modetour.com/promotion/11031/con3_in2_bg.jpg') center 0 no-repeat;}
+        .event_wrap #con3 #con3_in3{position: relative; background: url('http://img.modetour.com/promotion/11031/con3_in3_bg.jpg') center 0 no-repeat;}
+        .event_wrap #con3 #con3_in4{position: relative; background: url('http://img.modetour.com/promotion/11031/con3_in4_bg.jpg') center 0 no-repeat;}
+        .event_wrap #con3 #con3_in5{position: relative; background: url('http://img.modetour.com/promotion/11031/con3_in5_bg.jpg') center 0 no-repeat;}
+        .event_wrap #con3 #con3_in6{position: relative; background: url('http://img.modetour.com/promotion/11031/con3_in7_bg.jpg') center 0 no-repeat;}
+        .event_wrap #con3 #con3_in7{position: relative; background: url('http://img.modetour.com/promotion/11031/con3_in6_bg.jpg') center 0 no-repeat;}
+        .event_wrap #con3 .con3_slide .slide_list{overflow: hidden;}
+        .event_wrap #con3 .con3_slide .slide_list li{float: left; margin: 0 0 88px 34px;}
+        .event_wrap #con3 .con3_slide .slide_list li:first-child{margin-left: 0;}
+        .event_wrap #con3 .con3_slide .slide_list li:nth-child(4){margin-left: 0;}
+        .cycle-slide{width: 1100px;}
+        .event_wrap #con3 .control{position: absolute; top: -140px; right: 0;}
+        .event_wrap #con3 .control span{display: block; background-image: url('http://img.modetour.com/promotion/11031/con2_big_control.png');background-repeat: no-repeat; width: 69px; height: 69px; float: left; cursor: pointer; margin-left: 10px; position: static; margin-top: 0; transition: all 0.1s; font-size: 0;}
+        .event_wrap #con3 .control span:hover{background-image: url('http://img.modetour.com/promotion/11031/con1_control_on.png');}
+        .event_wrap #con3 .control .con3_prev{background-position: 0 0;}
+        .event_wrap #con3 .control .con3_next{background-position-x: -79px;}
+
+        .event_wrap #con4 {background: #0be198 url('http://img.modetour.com/promotion/11031/con4_bg.jpg') center 0 no-repeat; padding-top: 20px;}
+        .event_wrap #con4 h2{width: 1100px; border-bottom: 1px #298d68 solid; padding-bottom: 65px; margin: 0 auto 75px;}
+        .event_wrap #con4 .control{margin-top: 50px;}
+        .event_wrap #con4 .control div{opacity: 1; background: url('http://img.modetour.com/promotion/11031/con4_control.png') no-repeat; width: 69px; height: 69px; float: right; cursor: pointer; margin-left: 10px; position: static; margin-top: 0; transition: all 0.1s;}
+        .event_wrap #con4 .control div:hover{background: url('http://img.modetour.com/promotion/11031/con4_control_on.png') no-repeat;}
+        .event_wrap #con4 .control div.swiper-button-next{background-position-x: -79px;}
+        .event_wrap #con4 .control div.swiper-button-prev{background-position: 0 0;}
+
+        .event_wrap .main_tab{position: absolute; top: 103px; left: 0; right: 0; z-index: 999;}
+        .event_wrap .main_tab:after{content:''; display: block; width: 100%; height: 1px; background: #FFF; opacity: 0.2; position: absolute; top: 50%; left: 0; right: 0; margin-top: 2px;}
+        .event_wrap .main_tab ul{overflow: hidden; width: 616px; float: right;}
+        .event_wrap .main_tab ul li{float: left; width: 114px; height: 64px; background: url('http://img.modetour.com/promotion/11031/main_tab.png') no-repeat; margin-right: 40px;}
+        .event_wrap .main_tab ul li:hover{background: url('http://img.modetour.com/promotion/11031/main_tab_on.png') no-repeat;}
+        .event_wrap .main_tab ul li.tab02{background-position-x: -155px;}
+        .event_wrap .main_tab ul li.tab03{background-position-x: -309px;}
+        .event_wrap .main_tab ul li.tab04{background-position-x: -463px;}
+        .event_wrap .main_tab ul li a{display: block; width: 100%; height: 100%;}
+
+        .event_wrap .cont_group div.cont{display: none;}
+        .event_wrap .cont_group div.swiper-slide-active{display: block;}
+
+        .event_wrap #con5{background: url('http://img.modetour.com/promotion/11031/191126/reviews_bg.jpg') center 0;}
+
+
+
+        .event_wrap #con6{position: relative; padding-top: 50px;}
+        .event_wrap #con6 h2{padding-bottom: 50px; border-bottom: 2px #9b9b9b solid;}
+        .event_wrap #con6 .con6_slide{margin-top: 60px;}
+        .event_wrap #con6 .con6_slide .slide_list{overflow: hidden;}
+        .event_wrap #con6 .con6_slide .slide_list li{float: left; margin: 0 0 88px 34px;}
+        .event_wrap #con6 .con6_slide .slide_list li:first-child{margin-left: 0;}
+        .event_wrap #con6 .control{position: absolute; top: 47px; right: 0;}
+        .event_wrap #con6 .control span{display: block; background-image: url('http://img.modetour.com/promotion/11031/con2_big_control.png');background-repeat: no-repeat; width: 69px; height: 69px; float: left; cursor: pointer; margin-left: 10px; position: static; margin-top: 0; transition: all 0.1s; font-size: 0;}
+        .event_wrap #con6 .control span:hover{background-image: url('http://img.modetour.com/promotion/11031/con1_control_on.png');}
+        .event_wrap #con6 .control .con6_prev{background-position: 0 0;}
+        .event_wrap #con6 .control .con6_next{background-position-x: -79px;}
+        .event_wrap #con6 .bottom{width: 100%; background: url('http://img.modetour.com/promotion/11031/con3_bottom.jpg') center bottom no-repeat; height: 580px;}
+
+
+        .event_wrap .layer_pop {display: none; position: fixed; left: 0; top: 0; width: 100%; height: 100%; background-color: rgba(0, 0, 0, 0.7); z-index: 1001; overflow-x: hidden; overflow-y: auto;}
+        .event_wrap .layer_pop > .inner {position: absolute; left: 50%; top: 50%; z-index: 100; -webkit-transform:translate(-50%, -50%); -moz-transform:translate(-50%, -50%); -ms-transform: translate(-50%, -50%); -o-transform:translate(-50%, -50%); transform:translate(-50%, -50%);}
+        .event_wrap .layer_pop > .inner .close {position: absolute; right: -70px; top: 0;}
+
+
+    </style>
+    <!-- [S]: HTML -->
+    <div class="event_wrap">
+        <div class="fix fix1">
+            <img src="http://img.modetour.com/promotion/11031/191126/banner_in.jpg" alt="" usemap="#fix_link">
+            <map id="fix_link" name="fix_link">
+                <area shape="rect" alt="방법자세히보기" coords="986,13,1084,61" href="http://pf.kakao.com/_VxeKxhxl" target="_blank" />
+            </map>
+        </div>
+        <div class="fix2 fix">
+            <img src="http://img.modetour.com/promotion/11031/191126/banner_in2.jpg" alt="" usemap="#fix_link2">
+            <map id="fix_link2" name="fix_link2">
+                <area shape="rect" alt="카카오톡 상담" coords="5,6,508,99" href="http://pf.kakao.com/_VxeKxhxl" target="_blank" />
+                <area shape="rect" alt="영상보기" coords="621,38,699,69" href="#con1" />
+                <area shape="rect" alt="추천상품" coords="734,36,815,70" href="#con2" />
+                <area shape="rect" alt="상품보기" coords="848,38,932,72" href="#con3" />
+                <area shape="rect" alt="고객후기" coords="963,38,1044,72" href="#con4" />
+            </map>
+        </div>
+        <div class="main">
+            <div class="main_tab">
+                <div class="wrap">
+                    <ul>
+                        <li class="tab01"><a href="#con1"><span class="text_blind">영상보기</span></a></li>
+                        <li class="tab02"><a href="#con2"><span class="text_blind">추천상품</span></a></li>
+                        <li class="tab03"><a href="#con3"><span class="text_blind">상품보기</span></a></li>
+                        <li class="tab04"><a href="#con4"><span class="text_blind">고객후기</span></a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="wrap">
+                <h1><img src="http://img.modetour.com/promotion/11031/main_tit.png" alt=""></h1>
+            </div>
+            <ul class="slide cycle-slideshow" data-cycle-fx="fadeout" data-cycle-slides=">li" data-cycle-timeout="4000">
+                <li class="bg01"></li>
+                <li class="bg02"></li>
+                <li class="bg03"></li>
+                <li class="bg04"></li>
+            </ul>
+        </div>
+        <div id="con1">	
+            <div class="swiper-container gallery-top">
+                <div class="swiper-wrapper">								
+                    <div class="swiper-slide bg01">
+                        <div class="wrap">
+                            <h3><img src="http://img.modetour.com/promotion/11031/191126/con1_in9_tit.png" alt="에바(EVA) 엘니도편"></h3>		
+                            <img src="http://img.modetour.com/promotion/11031/con1_tab1_video.jpg" alt="" class="btn_pop video_img" data-target="pop1">
+                        </div>
+                    </div>
+                    <div class="swiper-slide bg02">
+                        <div class="wrap">
+                            <h3><img src="http://img.modetour.com/promotion/11031/191126/con1_in8_tit.png" alt="런소영 마라톤편"></h3>
+                            <img src="http://img.modetour.com/promotion/11031/con1_tab2_video.jpg" alt="" class="btn_pop video_img" data-target="pop2">
+                        </div>
+                    </div>
+                    <div class="swiper-slide bg03">
+                        <div class="wrap">
+                            <h3><img src="http://img.modetour.com/promotion/11031/191126/con1_in6_tit.png" alt="여행자 메이"></h3>
+                            <img src="http://img.modetour.com/promotion/11031/con1_tab3_video.jpg" alt="" class="btn_pop video_img" data-target="pop3">
+                        </div>
+                    </div>
+                    <div class="swiper-slide bg04">
+                        <div class="wrap">
+                            <h3><img src="http://img.modetour.com/promotion/11031/191126/con1_in7_tit.png" alt="드로잉 제주도"></h3>
+                            <img src="http://img.modetour.com/promotion/11031/con1_tab4_video.jpg" alt="" class="btn_pop video_img" data-target="pop4">
+                        </div>
+                    </div>
+                    <div class="swiper-slide bg05">
+                        <div class="wrap">
+                            <h3><img src="http://img.modetour.com/promotion/11031/191126/con1_in1_tit.png" alt="청춘여락 지구상에서 힙한 치앙마이"></h3>
+                            <img src="http://img.modetour.com/promotion/11031/con1_tab5_video.jpg" alt="" class="btn_pop video_img" data-target="pop5">
+                        </div>
+                    </div>
+                    <div class="swiper-slide bg06">
+                        <div class="wrap">
+                            <h3><img src="http://img.modetour.com/promotion/11031/191126/con1_in2_tit.png" alt="유튜버 허니블링 블링블링한 팔라완 여행"></h3>
+                            <img src="http://img.modetour.com/promotion/11031/con1_tab6_video.jpg" alt="" class="btn_pop video_img" data-target="pop6">
+                        </div>
+                    </div>
+                    <div class="swiper-slide bg07">
+                        <div class="wrap">
+                            <h3><img src="http://img.modetour.com/promotion/11031/191126/con1_in3_tit.png" alt="크리에이터 황창순 라오스 봉사&amp;액티비티"></h3>
+                            <img src="http://img.modetour.com/promotion/11031/con1_tab7_video.jpg" alt="" class="btn_pop video_img" data-target="pop7">
+                        </div>
+                    </div>
+                    <div class="swiper-slide bg08">
+                        <div class="wrap">
+                            <h3><img src="http://img.modetour.com/promotion/11031/191126/con1_in4_tit.png" alt="해외볼런투어 몽골 with BJ박현서"></h3>
+                            <img src="http://img.modetour.com/promotion/11031/con1_tab8_video.jpg" alt="" class="btn_pop video_img" data-target="pop8">
+                        </div>
+                    </div>
+                    <div class="swiper-slide bg09">
+                        <div class="wrap">
+                            <h3><img src="http://img.modetour.com/promotion/11031/191126/con1_in5_tit.png" alt="청춘유리X서이룬의 뉴질랜드 9일"></h3>
+                            <img src="http://img.modetour.com/promotion/11031/con1_tab9_video.jpg" alt="" class="btn_pop video_img" data-target="pop9">
+                        </div>
+                    </div>
+                </div>
+                <!-- Add Arrows -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div>			
+            <!-- 레이어 팝업 -->
+            <div class="popup_area">	
+            <div id="pop1" class="layer_pop">
+                <div class="inner">
+                    <div class="video_thumbnail"></div>
+                    <button type="button" class="close"><img src="http://img.modetour.com/promotion/10013/mobile/ico_close.png" alt="닫기"></button>
+                </div>
+            </div><!-- //pop1 -->
+            <div id="pop2" class="layer_pop">
+                <div class="inner">
+                    <div class="video_thumbnail"></div>
+                    <button type="button" class="close"><img src="http://img.modetour.com/promotion/10013/mobile/ico_close.png" alt="닫기"></button>
+                </div>
+            </div><!-- // pop2 -->
+            <div id="pop3" class="layer_pop">
+                <div class="inner">
+                    <div class="video_thumbnail"></div>
+                    <button type="button" class="close"><img src="http://img.modetour.com/promotion/10013/mobile/ico_close.png" alt="닫기"></button>
+                </div>
+            </div><!-- // pop3 -->
+            <div id="pop4" class="layer_pop">
+                <div class="inner">
+                    <div class="video_thumbnail"></div>
+                    <button type="button" class="close"><img src="http://img.modetour.com/promotion/10013/mobile/ico_close.png" alt="닫기"></button>
+                </div>
+            </div><!-- // pop4 -->
+            <div id="pop5" class="layer_pop">
+                <div class="inner">
+                    <div class="video_thumbnail"></div>
+                    <button type="button" class="close"><img src="http://img.modetour.com/promotion/10013/mobile/ico_close.png" alt="닫기"></button>
+                </div>
+            </div><!-- // pop5 -->
+            <div id="pop6" class="layer_pop">
+                <div class="inner">
+                    <div class="video_thumbnail"></div>
+                    <button type="button" class="close"><img src="http://img.modetour.com/promotion/10013/mobile/ico_close.png" alt="닫기"></button>
+                </div>
+            </div><!-- // pop6 -->
+            <div id="pop7" class="layer_pop">
+                <div class="inner">
+                    <div class="video_thumbnail"></div>
+                    <button type="button" class="close"><img src="http://img.modetour.com/promotion/10013/mobile/ico_close.png" alt="닫기"></button>
+                </div>
+            </div><!-- // pop7 -->
+            <div id="pop8" class="layer_pop">
+                <div class="inner">
+                    <div class="video_thumbnail"></div>
+                    <button type="button" class="close"><img src="http://img.modetour.com/promotion/10013/mobile/ico_close.png" alt="닫기"></button>
+                </div>
+            </div><!-- // pop8 -->
+            <div id="pop9" class="layer_pop">
+                <div class="inner">
+                    <div class="video_thumbnail"></div>
+                    <button type="button" class="close"><img src="http://img.modetour.com/promotion/10013/mobile/ico_close.png" alt="닫기"></button>
+                </div>
+            </div><!-- // pop9 -->
+            <!-- // 레이어 팝업 -->
+            </div>	
+            <h2><img src="http://img.modetour.com/promotion/11031/con1_tit.png" alt=""></h2>
+            <div class="swiper-container gallery-thumbs">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide bg01">에바(EVA) 엘니도편</div>
+                    <div class="swiper-slide bg02">런소영 마라톤편</div>
+                    <div class="swiper-slide bg03">여행자 메이</div>
+                    <div class="swiper-slide bg04">드로잉 제주도</div>
+                    <div class="swiper-slide bg05">청춘여락 지구상에서 힙한 치앙마이</div>
+                    <div class="swiper-slide bg06">유튜버 허니블링 블링블링한 팔라완 여행</div>
+                    <div class="swiper-slide bg07">크리에이터 황창순 라오스 봉사&amp;액티비티</div>
+                    <div class="swiper-slide bg08">해외볼런투어 몽골 with BJ박현서</div>
+                    <div class="swiper-slide bg09">청춘유리 뉴질랜드</div>
+                </div>
+            </div>
+        </div><!-- con1 -->
+        <div id="con2">
+            <h2><img src="http://img.modetour.com/promotion/11031/con2_tit.png" alt="이달의 핫한 컨셉투어"></h2>
+            <div class="swiper-container tab-top">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <div class="wrap">
+                            <h3><img src="http://img.modetour.com/promotion/11031/191126/con2_in14_tit.jpg" alt="리모작가"></h3>
+                            <!--<div class="coming_soon" style="margin-top:15px; margin-right:-55px;"><img src="http://img.modetour.com/promotion/11031/191126/logo_200117.jpg" alt="로고"></div>-->
+                            <div class="cont">
+                                <div class="date">
+                                    <img src="http://img.modetour.com/promotion/11031/191126/con2_in14_day.jpg" alt="">
+                                    <a href="/pkg/itinerary.aspx?MLoc=99&Pnum=63538004" target="_blank">당장 구매하기</a>
+                                </div>
+                                <div class="infor">
+                                    <img src="http://img.modetour.com/promotion/11031/191126/con2_in14_infor.jpg" alt="">
+                                </div>
+                                <div class="tit">
+                                    <h4>리모작가 제주 드로잉여행</h4>
+                                    <dl>
+                                        <dt>샐럽동반</dt>
+                                        <dd>드로잉 리모작가 동행</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="wrap">
+                            <h3><img src="http://img.modetour.com/promotion/11031/191126/con2_in9_tit.jpg" alt="유튜버 허니블링의 사이판 마라톤"></h3>
+                            <div class="coming_soon" style="margin-top:15px; margin-right:-55px;"><img src="http://img.modetour.com/promotion/11031/191126/logo_200117.jpg" alt="로고"></div>
+                            <div class="cont">
+                                <div class="date">
+                                    <img src="http://img.modetour.com/promotion/11031/191126/con2_in9_day.jpg" alt="">
+                                    <a href="/pkg/itinerary.aspx?MLoc=99&Pnum=62721688" target="_blank">당장 구매하기</a>
+                                </div>
+                                <div class="infor">
+                                    <img src="http://img.modetour.com/promotion/11031/191126/con2_in9_infor.jpg" alt="">
+                                </div>
+                                <div class="tit">
+                                    <h4>허니블링x하서빈 사이판 마라톤</h4>
+                                    <dl>
+                                        <dt>샐럽동반</dt>
+                                        <dd>유튜버 허니블링&amp;인플루언서 하서빈</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="wrap">
+                            <h3><img src="http://img.modetour.com/promotion/11031/191126/con2_in13_tit.jpg" alt="런소영과 떠나는 몽골"></h3>
+                            <!--<div class="coming_soon" style="margin-top:15px; margin-right:10px;"><img src="http://img.modetour.com/promotion/11031/191126/logo_200117.jpg" alt="로고"></div>-->
+                            <div class="cont">
+                                <div class="date">
+                                    <img src="http://img.modetour.com/promotion/11031/191126/con2_in13_day.jpg" alt="">
+                                    <a href="https://form.office.naver.com/form/responseView.cmd?formkey=MTVkZmE0M2ItMTM5MC00MGExLThjYTAtMDBlODAzOGJjMDFm" target="_blank">당장 구매하기</a>
+                                </div>
+                                <div class="infor">
+                                    <img src="http://img.modetour.com/promotion/11031/191126/con2_in13_infor.jpg" alt="">
+                                </div>
+                                <div class="tit">
+                                    <h4>런소영 떠나는 몽골 울란바타르 마라톤 여행</h4>
+                                    <dl>
+                                        <dt>샐럽동반</dt>
+                                        <dd>마라톤참가, 몽골게르체험, 런소영동행</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-slide">
+                        <div class="wrap">
+                            <h3><img src="http://img.modetour.com/promotion/11031/191126/con2_in5_tit.jpg" alt="여행작가 청춘유리,모델 김보라"></h3>
+                            <div class="coming_soon"><img src="http://img.modetour.com/promotion/11031/191126/logo.jpg" alt="로고"></div>
+                            <div class="cont">
+                                <div class="date">
+                                    <img src="http://img.modetour.com/promotion/11031/191126/con2_in5_day_191212.jpg" alt="">
+                                    <a href="/pkg/itinerary.aspx?MLoc=99&Pnum=61060486" target="_blank">당장 구매하기</a>
+                                </div>
+                                <div class="infor">
+                                    <img src="http://img.modetour.com/promotion/11031/191126/con2_in5_infor.jpg" alt="">
+                                </div>
+                                <div class="tit">
+                                    <h4>여행작가 청춘유리,모델 김보라</h4>
+                                    <dl>
+                                        <dt>샐럽동반</dt>
+                                        <dd>클럽투어+클럽메드</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="swiper-slide">
+                        <div class="wrap">
+                            <h3><img src="http://img.modetour.com/promotion/11031/191126/con2_in15_tit.jpg" alt="아르헨티나"></h3>
+                            <!--<div class="coming_soon"><img src="http://img.modetour.com/promotion/11031/191126/logo_191218.jpg" alt="로고"></div>-->
+                            <div class="cont">
+                                <div class="date">
+                                    <img src="http://img.modetour.com/promotion/11031/191126/con2_in15_day.jpg" alt="">
+                                    <a href="/pkg/item.aspx?Idx=531834&PCode=" target="_blank">당장 구매하기</a>
+                                </div>
+                                <div class="infor">
+                                    <img src="http://img.modetour.com/promotion/11031/191126/con2_in15_infor.jpg" alt="">
+                                </div>
+                                <div class="tit">
+                                    <h4>아르헨티나 여행</h4>
+                                    <dl>
+                                        <dt>새로운여행지</dt>
+                                        <dd>여행프로소개</dd>
+                                    </dl>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Add Arrows -->
+                <div class="control">
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
+                </div>
+            </div>
+            <div class="swiper-container tab-thumbs">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide bg01"><img src="http://img.modetour.com/promotion/11031/191126/con2_in1_img14.jpg" alt="리모작가 드로잉"></div>
+                    <div class="swiper-slide bg02"><img src="http://img.modetour.com/promotion/11031/191126/con2_in1_img9.jpg" alt="유튜버 허니블링의 사이판 마라톤"></div>
+                    <div class="swiper-slide bg03"><img src="http://img.modetour.com/promotion/11031/191126/con2_in1_img13.jpg" alt="런소영과 떠나는 몽골"></div>
+                    <div class="swiper-slide bg04"><img src="http://img.modetour.com/promotion/11031/191126/con2_in1_img5.jpg" alt="여행작가 청춘유리, 모델 김보라"></div>
+                    <div class="swiper-slide bg05"><img src="http://img.modetour.com/promotion/11031/191126/con2_in1_img15.jpg" alt="아르헨티나"></div>
+                </div>
+            </div>
+        </div><!-- con2 -->
+        <div id="con3">
+            <h2><img src="http://img.modetour.com/promotion/11031/con3_tit.png" alt=""></h2>
+            <ul class="tab">
+                <div class="tab_btn">
+                    <li class="tab01"><a href="#con3_in1"><span class="text_blind">미식</span></a></li>
+                    <li class="tab02"><a href="#con3_in2"><span class="text_blind">레저,취미</span></a></li>
+                    <li class="tab03"><a href="#con3_in3"><span class="text_blind">인문,교양</span></a></li>
+                    <li class="tab04 on"><a href="#con3_in4"><span class="text_blind">셀럽동반</span></a></li>
+                    <li class="tab05"><a href="#con3_in5"><span class="text_blind">반려견</span></a></li>
+                    <li class="tab06"><a href="#con3_in6"><span class="text_blind">전세계 축제여행</span></a></li>
+                    <li class="tab07"><a href="#con3_in7"><span class="text_blind">장기투숙</span></a></li>
+                </div>
+                <!-- 탭_기획전 링크 
+                <li class="tab05"><a href="/event/plan/detail.aspx?mloc=07&eidx=10550" target="_blank"><span class="text_blind">반려견</span></a></li>
+                <li class="tab06"><a href="/event/plan/detail.aspx?mloc=07&eidx=11155" target="_blank"><span class="text_blind">장기투숙</span></a></li>
+                -->
+            </ul>
+            <div class="con_wrap">
+                <div class="content" id="con3_in1">
+                    <h3>미식</h3>
+                    <div class="wrap">
+                        <div class="control">
+                            <span id="con3_prev1" class="con3_prev">이전</span>
+                            <span id="con3_next1" class="con3_next">다음</span>
+                        </div>
+                        <div class="con3_slide cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-slides=">.slide_list" data-cycle-timeout="0" data-cycle-prev="#con3_prev1" data-cycle-next="#con3_next1">
+                            <div class="slide_list">
+                                <ul>
+                                    <li><a href="/pkg/item.aspx?Idx=531463&PCode=" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con3_in1_item9.png" alt=""></a></li>
+                                    <li><a href="/pkg/item.aspx?Idx=520400&PCode=" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con3_in1_item1.png" alt=""></a></li>
+                                    <li><a href="/pkg/item.aspx?Idx=531468&PCode=" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con3_in1_item10.png" alt=""></a></li>
+                                    <li><a href="/pkg/item.aspx?Idx=523725&PCode=" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con3_in1_item7.png" alt=""></a></li>
+                                    <li><a href="/pkg/item.aspx?Idx=505105&PCode=" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con3_in1_item4.png" alt=""></a></li>
+                                    <li><a href="/pkg/item.aspx?Idx=531473&PCode=" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con3_in1_item11.png" alt=""></a></li>
+                                </ul>
+                            </div>
+                            <!-- 슬라이드 추가할때 -->
+                            
+                            <div class="slide_list">
+                                <ul>
+                                    <li><a href="/pkg/item.aspx?Idx=522535&PCode=" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con3_in1_item6.png" alt=""></a></li>
+                                    <li><img src="http://img.modetour.com/promotion/11031/191126/con3_pro.png" alt=""></li>
+                                    <li><img src="http://img.modetour.com/promotion/11031/191126/con3_pro.png" alt=""></li>
+                                    <li><img src="http://img.modetour.com/promotion/11031/191126/con3_pro.png" alt=""></li>
+                                    <li><img src="http://img.modetour.com/promotion/11031/191126/con3_pro.png" alt=""></li>
+                                    <li><img src="http://img.modetour.com/promotion/11031/191126/con3_pro.png" alt=""></li>	
+                                </ul>
+                            </div>								
+                        </div>
+                    </div>
+                </div>
+                <div class="content" id="con3_in2">
+                    <h3>레저·취미</h3>
+                    <div class="wrap">
+                        <div class="control">
+                            <span id="con3_prev2" class="con3_prev">이전</span>
+                            <span id="con3_next2" class="con3_next">다음</span>
+                        </div>
+                        <div class="con3_slide cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-slides=">.slide_list" data-cycle-timeout="0" data-cycle-prev="#con3_prev2" data-cycle-next="#con3_next2">
+                            <div class="slide_list">
+                                <ul>
+                                    <li><a href="/pkg/item.aspx?Idx=527456&PCode=" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con3_in2_item12.png" alt=""></a></li>
+                                    <li><a href="/pkg/item.aspx?Idx=524166&PCode=" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con3_in2_item8.png" alt=""></a></li>
+                                    <li><a href="/pkg/item.aspx?Idx=520077&PCode=" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con3_in2_item5.png" alt=""></a></li>											
+                                    <li><a href="/pkg/item.aspx?Idx=523793&PCode=" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con3_in2_item7.png" alt=""></a></li>
+                                    <li><a href="/pkg/item.aspx?Idx=520401&PCode=" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con3_in2_item2.png" alt=""></a></li>	
+                                    <li><a href="/pkg/item.aspx?Idx=524168&PCode=" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con3_in2_item9.png" alt=""></a></li>
+                                </ul>
+                            </div>
+                            <div class="slide_list">
+                                <ul>
+                                    <li><a href="/pkg/item.aspx?Idx=520408&PCode=" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con3_in2_item6.png" alt=""></a></li>
+                                    <li><img src="http://img.modetour.com/promotion/11031/191126/con3_pro.png" alt=""></li>
+                                    <li><img src="http://img.modetour.com/promotion/11031/191126/con3_pro.png" alt=""></li>
+                                    <li><img src="http://img.modetour.com/promotion/11031/191126/con3_pro.png" alt=""></li>
+                                    <li><img src="http://img.modetour.com/promotion/11031/191126/con3_pro.png" alt=""></li>
+                                    <li><img src="http://img.modetour.com/promotion/11031/191126/con3_pro.png" alt=""></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content" id="con3_in3">
+                    <h3>인문·교양</h3>
+                    <div class="wrap">
+                        <div class="control">
+                            <span id="con3_prev3" class="con3_prev">이전</span>
+                            <span id="con3_next3" class="con3_next">다음</span>
+                        </div>
+                        <div class="con3_slide cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-slides=">.slide_list" data-cycle-timeout="0" data-cycle-prev="#con3_prev3" data-cycle-next="#con3_next3">
+                            <div class="slide_list">
+                                <ul>
+                                    <li><a href="/pkg/item.aspx?Idx=523958&PCode=" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con3_in3_item8.png" alt=""></a></li>
+                                    <li><a href="/pkg/item.aspx?Idx=523970&PCode=" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con3_in3_item9.png" alt=""></a></li>
+                                    <li><a href="/pkg/item.aspx?Idx=524008&PCode=" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con3_in3_item10.png" alt=""></a></li>
+                                    <li><a href="/pkg/item.aspx?Idx=524028&PCode=" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con3_in3_item11.png" alt=""></a></li>
+                                    <li><a href="/pkg/item.aspx?Idx=524070&PCode=" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con3_in3_item13.png" alt=""></a></li>		
+                                    <li><a href="/pkg/item.aspx?Idx=521216&PCode=" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con3_in3_item7.png" alt=""></a></li>
+                                </ul>
+                            </div>
+                            <div class="slide_list">
+                                <ul>
+                                    <li><a href="/pkg/item.aspx?Idx=503300&PCode=" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con3_in3_item5.png" alt=""></a></li>
+                                    <li><img src="http://img.modetour.com/promotion/11031/191126/con3_pro.png" alt=""></li>
+                                    <li><img src="http://img.modetour.com/promotion/11031/191126/con3_pro.png" alt=""></li>
+                                    <li><img src="http://img.modetour.com/promotion/11031/191126/con3_pro.png" alt=""></li>
+                                    <li><img src="http://img.modetour.com/promotion/11031/191126/con3_pro.png" alt=""></li>
+                                    <li><img src="http://img.modetour.com/promotion/11031/191126/con3_pro.png" alt=""></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>								
+                </div>
+                <div class="content" id="con3_in4" style="display: block;">
+                    <h3>샐럽동반</h3>
+                    <div class="wrap">
+                        <div class="control">
+                            <span id="con3_prev4" class="con3_prev">이전</span>
+                            <span id="con3_next4" class="con3_next">다음</span>
+                        </div>
+                        <div class="con3_slide cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-slides=">.slide_list" data-cycle-timeout="0" data-cycle-prev="#con3_prev4" data-cycle-next="#con3_next4">
+                            <div class="slide_list">
+                                <ul>
+                                    <li><a href="/pkg/itinerary.aspx?MLoc=99&Pnum=63538004" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con3_in4_item17.png" alt=""></a></li>
+                                    <li><a href="/pkg/itinerary.aspx?MLoc=99&Pnum=63233686" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con3_in4_item15.png" alt=""></a></li>
+                                    <li><img src="http://img.modetour.com/promotion/11031/191126/con3_in4_item16.png" alt=""></li>
+                                    <li><a href="/pkg/itinerary.aspx?MLoc=99&Pnum=62625360" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con3_in4_item14.png" alt=""></a></li>
+                                    <li><img src="http://img.modetour.com/promotion/11031/191126/con3_in4_item7.png" alt=""></li>
+                                    <li><a href="/pkg/itinerary.aspx?MLOC=99&PNUM=61269164" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con3_in4_item12.png" alt=""></a></li>
+                                    
+                                </ul>
+                            </div>
+                            <div class="slide_list">
+                                <ul>
+                                    <li><img src="http://img.modetour.com/promotion/11031/191126/con3_in4_item11.png" alt=""></li>
+                                    <li><img src="http://img.modetour.com/promotion/11031/191126/con3_in4_item10.png" alt=""></li>
+                                    <li><a href="/pkg/itinerary.aspx?MLOC=99&PNUM=60802372" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con3_in4_item8.png" alt=""></a></li>
+                                    <li><img src="http://img.modetour.com/promotion/11031/191126/con3_in4_item9.png" alt=""></li>
+                                    <li><img src="http://img.modetour.com/promotion/11031/191126/con3_in4_item2.png" alt=""></li>
+                                    <li><img src="http://img.modetour.com/promotion/11031/191126/con3_in4_item1.png" alt=""></li>
+                                    
+                                    
+                                </ul>
+                            </div>
+                            <div class="slide_list">
+                                <ul>
+                                    <li><img src="http://img.modetour.com/promotion/11031/191126/con3_in4_item5.png" alt=""></li>
+                                    <li><img src="http://img.modetour.com/promotion/11031/191126/con3_in4_item4.png" alt=""></li>
+                                    <li><img src="http://img.modetour.com/promotion/11031/191126/con3_in4_item6.png" alt=""></li>	
+                                    <li><img src="http://img.modetour.com/promotion/11031/191126/con3_pro.png" alt="상품준비중"></li>
+                                    <li><img src="http://img.modetour.com/promotion/11031/191126/con3_pro.png" alt="상품준비중"></li>
+                                    <li><img src="http://img.modetour.com/promotion/11031/191126/con3_pro.png" alt="상품준비중"></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>							
+                 <!-- 링크로 수정함 -->
+                 <div class="content" id="con3_in5">
+                    <h3>반려견 동반</h3>
+                    <div class="wrap">
+                        <div class="control">
+                            <span id="con3_prev5" class="con3_prev">이전</span>
+                            <span id="con3_next5" class="con3_next">다음</span>
+                        </div>
+                        <div class="con3_slide cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-slides=">.slide_list" data-cycle-timeout="0" data-cycle-prev="#con3_prev5" data-cycle-next="#con3_next5">
+                            <div class="slide_list">
+                                <ul>
+                                    <li><a href="/pkg/item.aspx?Idx=511196&PCode=" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con3_in5_item1.png" alt=""></a></li>
+                                    <li><a href="/pkg/item.aspx?Idx=511199&PCode=" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con3_in5_item2.png" alt=""></a></li>
+                                    <li><a href="/pkg/item.aspx?Idx=511192&PCode=" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con3_in5_item3.png" alt=""></a></li>
+                                    <li><a href="/pkg/item.aspx?Idx=511380&PCode=" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con3_in5_item4.png" alt=""></a></li>
+                                    <li><a href="/pkg/item.aspx?Idx=511402&PCode=" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con3_in5_item5.png" alt=""></a></li>
+                                    <li><a href="/pkg/item.aspx?Idx=511403&PCode=" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con3_in5_item6.png" alt=""></a></li>	
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content" id="con3_in6">
+                    <h3>전세계 축제여행</h3>
+                    <div class="wrap">
+                        <div class="control">
+                            <span id="con3_prev6" class="con3_prev">이전</span>
+                            <span id="con3_next6" class="con3_next">다음</span>
+                        </div>
+                        <div class="con3_slide cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-slides=">.slide_list" data-cycle-timeout="0" data-cycle-prev="#con3_prev6" data-cycle-next="#con3_next6">
+                            <div class="slide_list">
+                                <ul>
+                                    <li><a href="/pkg/item.aspx?Idx=523876&PCode=" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con3_in6_item3.png" alt=""></a></li>
+                                    <li><a href="/pkg/item.aspx?Idx=524167&PCode=" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con3_in6_item5.png" alt=""></a></li>
+                                    <li><a href="/pkg/item.aspx?Idx=523401&PCode=" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con3_in6_item6.png" alt=""></a></li>	
+                                    <li><a href="/pkg/itinerary.aspx?MLoc=99&Pnum=60512513" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con3_in6_item1.png" alt=""></a></li>
+                                    <li><a href="/pkg/itinerary.aspx?MLoc=99&Pnum=59591927" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con3_in6_item2.png" alt=""></a></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div> 
+                <div class="content" id="con3_in7">
+                    <h3>반달살기</h3>
+                    <div class="wrap">
+                        <div class="control">
+                            <span id="con3_prev7" class="con3_prev">이전</span>
+                            <span id="con3_next7" class="con3_next">다음</span>
+                        </div>
+                        <div class="con3_slide cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-slides=">.slide_list" data-cycle-timeout="0" data-cycle-prev="#con3_prev7" data-cycle-next="#con3_next7">
+                            <div class="slide_list">
+                                <ul>
+                                    <li><a href="/pkg/item.aspx?Idx=523483&PCode=" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con3_in7_item1.png" alt=""></a></li>
+                                    <li><a href="/pkg/item.aspx?Idx=523491&PCode=" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con3_in7_item2.png" alt=""></a></li>
+                                    <li><a href="/pkg/item.aspx?Idx=524867&PCode=" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con3_in7_item3.png" alt=""></a></li>
+                                    <li><a href="/pkg/item.aspx?Idx=524868&PCode=" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con3_in7_item4.png" alt=""></a></li>
+                                    <li><a href="/pkg/item.aspx?Idx=525637&PCode=" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con3_in7_item5.png" alt=""></a></li>
+                                    <li><img src="http://img.modetour.com/promotion/11031/191126/con3_pro.png" alt="상품준비중"></li>	
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div><!-- con3 -->
+        <!-- 20191202 추가 : 기획전 베스트-->
+        <div id="con6">
+            <div class="wrap">
+                <h2><img src="http://img.modetour.com/promotion/11031/191126/con6_tit.png" alt=""></h2>
+                <div class="control">
+                    <span id="con6_prev" class="con6_prev">이전</span>
+                    <span id="con6_next" class="con6_next">다음</span>
+                </div>
+                <div class="con6_slide cycle-slideshow" data-cycle-fx="scrollHorz" data-cycle-slides=">.slide_list" data-cycle-timeout="0" data-cycle-prev="#con6_prev" data-cycle-next="#con6_next">
+                    <div class="slide_list">
+                        <ul>
+                            <li><a href="/event/plan/detail.aspx?mloc=07&eidx=11341" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con6_item10.png" alt=""></a></li>
+                            <li><a href="/event/plan/detail.aspx?mloc=07&eidx=11060" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con6_item8.png" alt=""></a></li>	
+                            <li><a href="/event/plan/detail.aspx?mloc=07&eidx=11135" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con6_item4.png" alt=""></a></li>	
+                        </ul>
+                    </div>
+                    <div class="slide_list">
+                        <ul>	
+                            <li><a href="/event/plan/detail.aspx?mloc=07&eidx=10550" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con6_item7.png" alt=""></a></li>
+                            <li><a href="/event/plan/detail.aspx?mloc=07&eidx=11058" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con6_item1.png" alt=""></a></li>	
+                            <li><a href="/event/plan/detail.aspx?mloc=07&eidx=11116" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con6_item2.png" alt=""></a></li>
+                        </ul>
+                    </div>
+                    <div class="slide_list">
+                        <ul>
+                            <li><a href="/event/plan/detail.aspx?mloc=07&eidx=6775" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con6_item3.png" alt=""></a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="bottom"></div>
+        </div><!--// con6 -->
+        <!-- //20191202 추가 -->
+        <div id="con4">
+            <h2><img src="http://img.modetour.com/promotion/11031/con4_tit.png" alt=""></h2>
+            <div class="wrap">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><a href="http://blog.modetour.com/221813864988" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con4_slide9.png" alt="에바 엘니도"></a></div>
+                        <div class="swiper-slide"><a href="http://blog.modetour.com/221727772716" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con4_slide8.png" alt="청춘여락 사이판"></a></div>
+                        <div class="swiper-slide"><a href="http://blog.modetour.com/221718702256" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con4_slide1.png" alt="런소영"></a></div>
+                        <div class="swiper-slide"><a href="http://blog.modetour.com/221684952818" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con4_slide2.png" alt="허니블링"></a></div>
+                        <div class="swiper-slide"><a href="http://blog.modetour.com/221678128051" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con4_slide3.png" alt="민준기"></a></div>
+                        <div class="swiper-slide"><a href="http://blog.modetour.com/221636327261" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con4_slide4.png" alt="청춘여락"></a></div>
+                        <div class="swiper-slide"><a href="http://blog.modetour.com/221621318215" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con4_slide5.png" alt="황창순"></a></div>
+                        <div class="swiper-slide"><a href="http://blog.modetour.com/221593047839" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con4_slide6.png" alt="어웨이위고"></a></div>
+                        <div class="swiper-slide"><a href="http://blog.modetour.com/221533364079" target="_blank"><img src="http://img.modetour.com/promotion/11031/191126/con4_slide7.png" alt="청춘유리"></a></div>
+                    </div>
+                    <!-- Add Arrows -->
+                    <div class="control">
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- con4 -->
+        <div id="con5">
+            <h2 class="text_blind">컨셉투어 후기</h2>
+            <img src="http://img.modetour.com/promotion/11031/191126/reviews_btn.jpg" alt="" usemap="#reviews_btn">
+            <map name="reviews_btn">
+                <area shape="rect" alt="후기 보러가기" coords="363,380,736,490" href="/TravelInfo/Tnote/TnoteList.aspx?mloc=090901&areaPcode=5678&searchSelect=제목&searchKeyword=" target="_blank" />
+            </map>
+        </div>
+    </div>
+    <!-- [E]: HTML -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
+    <script type="text/javascript">
+        (function($){
+            $(document).ready(function(){
+
+                var main_h = $('.main').offset().top+150;
+                function Navi(){
+                    var scTop = $(window).scrollTop();
+                    if(scTop>main_h){
+                        $('.fix2').slideDown(100);
+                    }else{
+                        $('.fix2').slideUp(100);
+                    }
+                }
+                
+                $(window).scroll(function(){	
+                    fadeAni();
+                    fadeAni2();
+                    Navi();
+                });
+
+                function Tabs(){
+                    var t = $(this);
+                    if(!t.parent().hasClass('on')){
+                        t.parent().addClass('on').siblings().removeClass('on');
+                        $(t.attr('href')).css('display','block').siblings().css('display','none');
+                    }
+                    return false;
+                }
+                $('#con3 .tab_btn li a').click(Tabs);
+
+                var $cont1=$('#con1');
+                $cont1.find('h3').css('opacity',0);
+                function fadeAni(){
+                        scT = $(window).scrollTop();
+                            var contOff=$cont1.offset().top-100;
+                            if(scT>contOff){
+                                $cont1.find('h3').removeClass('fadeInUp02').addClass('fadeInUp01 animated')
+                            }else{
+                                $cont1.find('h3').removeClass('fadeInUp01').addClass('fadeInUp02')									
+                            }
+                }
+
+                var $con2_in1_tit=$('#con2');
+                $con2_in1_tit.find('h3').css('opacity',0);
+                function fadeAni2(){
+                        scT = $(window).scrollTop();
+                            var contOff=$con2_in1_tit.offset().top-100;
+                            if(scT>contOff){
+                                $con2_in1_tit.find('h3').removeClass('fadeInUp02').addClass('fadeInUp01 animated')
+                            }else{
+                                $con2_in1_tit.find('h3').removeClass('fadeInUp01').addClass('fadeInUp02')								
+                            }
+                }
+                
+                $(window).scroll(function(){	
+                    fadeAni();
+                    fadeAni2();
+                });
+                 var galleryTop = new Swiper('.gallery-top', {
+                      spaceBetween: 10,
+                      navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                      },
+                      effect: 'fade',
+                      loop:true,
+                      loopedSlides: 9, // **수정 : 영상보기 looped slides should be the same
+                      simulateTouch:false,
+                    });
+                    var galleryThumbs = new Swiper('.gallery-thumbs', {
+                          loop: true,
+                        slidesPerView: 'auto',
+                        touchRatio: 0.2,
+                        slideToClickedSlide: true,									
+                    });
+                    galleryTop.controller.control = galleryThumbs;
+                    galleryThumbs.controller.control = galleryTop;
+    
+
+                 var tabTop = new Swiper('.tab-top', {
+                      spaceBetween: 10,
+                      navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                      },
+                      effect: 'fade',
+                        autoHeight : true,	
+                      loop: true,
+                      loopedSlides: 5, // **수정 : 추천상품 looped slides should be the same
+                      simulateTouch:false,
+                    });
+                    var tabThumbs = new Swiper('.tab-thumbs', {
+                          loop: true,
+                        slidesPerView: 'auto',
+                        touchRatio: 0.3,
+                        slideToClickedSlide: true,	
+                        spaceBetween: 20,	
+                        simulateTouch:false,	
+                        autoHeight : true,			
+                    });
+                    tabTop.controller.control = tabThumbs;
+                    tabThumbs.controller.control = tabTop;
+    
+
+
+                var swiper = new Swiper('#con2 .img_slide .swiper-container', {
+                    observer: true,
+                    observeParents: true,
+                    spaceBetween: 20,
+                    slidesPerView: '1',
+                    loop: true,
+                    loopedSlides: 3,
+                    simulateTouch:false,
+                    navigation: {
+                        nextEl: '.img_next',
+                        prevEl: '.img_prev',
+                    },
+                });
+
+                var swiper = new Swiper('#con3 .swiper-container', {
+                    observer: true,
+                    observeParents: true,
+                    spaceBetween: 30,
+                    simulateTouch:false,
+                    autoHeight : true,
+                    loop: true,
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                });
+
+                var swiper = new Swiper('#con4 .swiper-container', {
+                    observer: true,
+                    observeParents: true,
+                    slidesPerView: '3',
+                    spaceBetween: 30,
+                    simulateTouch:false,
+                    autoHeight : true,
+                    loop: true,
+                    navigation: {
+                        nextEl: '.swiper-button-next',
+                        prevEl: '.swiper-button-prev',
+                    },
+                });
+
+                function Move(){
+                    var target = this.hash;
+                    var $target = $(target);
+
+                    $('html, body').stop().animate({
+                        'scrollTop': $target.offset().top-53
+                    }, 500);
+                    return false;
+                }
+                $('.event_wrap .main_tab li a').click(Move);
+                $('#fix_link2 area').click(Move);
+
+                //레이어 팝업 닫기
+                $(document).on('click', '.layer_pop .close', function(){
+                    
+                    //영상 삭제
+                    $(this).parents('.layer_pop').find('.video_thumbnail').empty();
+
+                    $(this).parents('.layer_pop').hide();
+                    $('body, html').css('overflow', 'visible');
+                });
+
+                //레이어 팝업 열기
+                $(document).on('click', '.btn_pop', function(){
+                    var popId = $(this).data('target');
+                    
+                    //영상 추가
+                    var iframeHtml = '';
+                    if(popId == 'pop1'){
+
+                        iframeHtml = '<iframe width="606" height="470" src="https://www.youtube.com/embed/WBsZ4GDE6wo?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+
+                    }else if(popId == 'pop2'){
+
+                        iframeHtml = '<iframe width="606" height="470" src="https://www.youtube.com/embed/qDQmhCc-YuU?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+
+                    }else if(popId == 'pop3'){
+
+                        iframeHtml = '<iframe width="606" height="470" src="https://www.youtube.com/embed/7-pg3G0F-S4?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+
+                    }else if(popId == 'pop4'){
+
+                        iframeHtml = '<iframe width="606" height="470" src="https://www.youtube.com/embed/jBrzslRS1Pw?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+
+                    }else if(popId == 'pop5'){
+
+                        iframeHtml = '<iframe width="606" height="470" src="https://www.youtube.com/embed/nje50znu6SI?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+
+                    }else if(popId == 'pop6'){
+
+                        iframeHtml = '<iframe width="606" height="470" src="https://www.youtube.com/embed/t561fQ73m44?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+
+                    }else if(popId == 'pop7'){
+
+                        iframeHtml = '<iframe width="606" height="470" src="https://www.youtube.com/embed/BSWBWWvCOdw?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+
+                    }else if(popId == 'pop8'){
+
+                        iframeHtml = '<iframe width="606" height="470" src="https://www.youtube.com/embed/ng0z2wKFIl0?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+
+                    }else if(popId == 'pop9'){
+
+                        iframeHtml = '<iframe width="606" height="470" src="https://www.youtube.com/embed/UIlGRaujo3E?rel=0" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>';
+
+                    }
+                    $('#' + popId).find('.video_thumbnail').append(iframeHtml);
+
+                    $('#' + popId).show();
+                    $('body, html').css('overflow', 'hidden');
+                });
+
+            });
+        })(jQuery);
+    </script>
+    <!-- [끝]: Promotion Container -->
+</body>
+</html>

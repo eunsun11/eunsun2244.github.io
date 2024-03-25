@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="https://img.modetour.com/promotion/11220/S-CoreDream.css" />
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../css/common.min.css" />
+    <title>11482</title>
+</head>
+<body>
+    <style>
+        html,body{margin: 0; padding: 0;}
+        .container img{width: 100%;}
+            section .container { margin:0 auto; background-color:#fff; max-width:680px; }
+            section img { vertical-align:top; max-width:100%; }
+        
+        html{font-size: 16px;}  
+        .event_wrap{padding-bottom: 150px; background-color: #ffff80;}
+        .event_wrap img{width: 100%;}
+        .event_wrap button{border: none; background: none;}
+        .event_wrap button:focus{outline:0 none;}
+        .event_wrap #con1{position: relative;}
+        .event_wrap .coupon{width: 86.75%; position: absolute; bottom: 3%; left: 50%; margin-left: -43.375%;}
+        .event_wrap .radio_box{position: absolute; top: 0; left: 0; width: 100%;}
+        .event_wrap .radio_box p{position: absolute; top: 53vw; left: 50%; width: 60%; transform: translateX(-50%);}
+        .event_wrap .radio_box p.radio2{top: 96.2vw;}
+        .event_wrap input[type="radio"], input[type=checkbox]{display:none;}
+        .event_wrap input[type="text"]{font-size: 12px; font-family: 'S-CoreDream-4Regular'; width: 100%; height: 8vw; background: #eee; border-radius: 5px; border: none; padding: 0 10px; outline: 0; letter-spacing: -1px; box-sizing: border-box;}
+        .event_wrap input::-webkit-input-placeholder {color: #b5b5b5;}
+        .event_wrap input:-moz-placeholder {color: #b5b5b5;}
+        .event_wrap input::-moz-placeholder {color: #b5b5b5;}
+        .event_wrap input:-ms-input-placeholder {color: #b5b5b5;} 
+        .event_wrap .radio_box label{display: inline-block; font-family: 'S-CoreDream-4Regular'; font-size: 13px; height: 17px; line-height: 17px; background:url('//img.modetour.com/promotion20/11478/radio.png') no-repeat 0 0 / 17px; vertical-align:middle; padding-left: 24px;}
+        .event_wrap .radio_box input[type="radio"]:checked + label{background-position: 0 -17px; color: #ff7246;}               
+        .event_wrap .radio_box label:before{content: ""; position: absolute; left: 50%; top: -34vw; width: 100%; transform: translateX(-50%); height: 34vw;}
+        
+        .event_wrap .input_box{position: absolute; top: 62.9%; left: 35%; width: 50%;}
+        .event_wrap .input_box p{margin-bottom: 6%;}
+        .event_wrap .input_box p.gender{display: flex; gap: 0 1.5vw;}
+        .event_wrap .input_box p.gender label{display: inline-block; font-family: 'S-CoreDream-4Regular'; width: 49%; font-size: 14px; height: 8vw; line-height: 8vw; background-color: #eeeeee; border-radius: 5px; cursor: pointer; text-align: center;}
+        .event_wrap .input_box p.gender label.gender2{float: right;}
+        .event_wrap .input_box input[type="radio"]:checked + label{background-color: #ff7246; color: #FFF;} 
+        .event_wrap .input_box2{top: 80%; left: 17%; background-color: #f3f3f3; padding: 10px; width: 63%; text-align: left; border-radius: 5px;}
+        .event_wrap .input_box2 input[type=checkbox] + label {display: inline-block; line-height: 17px; height: 17px; padding-left: 17px; background-image: url('//img.modetour.com/promotion20/11482/check.png'); background-repeat: no-repeat; background-size: 100%; font-size: 12px; letter-spacing: -1px; font-family: 'S-CoreDream-4Regular'; color: #2a2a2a; cursor: pointer; font-size: 0; float: left;}
+        .event_wrap .input_box2 input[type=checkbox]:checked + label {background-position: 0 -17px;}
+        .event_wrap .input_box2 button{float: left; line-height: 15px; font-family: 'S-CoreDream-4Regular'; font-size: 12px; margin-left: 5px; color: #2a2a2a;}
+        
+        
+        .event_wrap .note{position: relative; margin-top: -1px;}
+        .event_wrap .popup{display: none; position: absolute; top: -20px; width: 80%; left: 10%; z-index: 10;}
+        .event_wrap .popup .close{position: absolute; top: -10%; right: 0; width: 28px; height: 28px; background-image: url('//img.modetour.com/promotion20/11478/close.png'); background-repeat: no-repeat; background-size: 100%; font-size: 0; cursor: pointer;}
+        .event_wrap .popup2{width: 117%; left: -10%;}
+        .dim{position: fixed; left: 0; right: 0; top: 0; bottom: 0; background: #000; z-index: 9; opacity: 0.8;}
+        
+        .event_wrap #con2{position: relative;}
+        .event_wrap #con2 .hotel_link{display: block; position: absolute; background-image: url('//img.modetour.com/promotion/11024/empty.png'); width: 100%; height: 15%; left: 0; bottom: 7%; font-size: 0;}
+        .event_wrap #con3 img{display: block; margin: 0 auto;}
+        </style>
+    <!--[S] : 기획전 시작-->
+    <div class="event_wrap">
+        <div class="tit">
+          <img src="//img.modetour.com/promotion20/11482/tit.jpg" alt="모두투어, 문화체육관광부, 한국관광공사, 안전여행과 함께하는 대한민국 숙박대전">
+        </div>
+        <div id="con1">
+            <img src="//img.modetour.com/promotion20/11482/con1.jpg" alt="할인으로 알차게 혜택받자! 대국민 숙박 할인쿠폰 받기. 매일 아래 쿠폰 중 1개의 쿠폰을 받을 수 있으며, 이벤트 기간 내에 1인 1회만 사용 가능합니다. ">
+            <div class="radio_box">
+                <p class="radio1"><input type="radio" name="OCoupon" id="Coupon1" value="30T"><label for="Coupon1">3만원 할인쿠폰 선택</label></p>
+				<p class="radio2"><input type="radio" name="OCoupon" id="Coupon2" value="40T"><label for="Coupon2">4만원 할인쿠폰 선택</label></p>
+            </div>
+            <div class="input_box">
+                <p><label for="" class="blind">출생연도</label><input type="text" class="number_only" id="txtYear" name="txtYear" placeholder="출생연도 4자리(숫자만 입력가능)" maxlength="4" oninput="maxLengthCheck(this)" value=""></p>
+                <p class="gender">
+                    <span class="blind">성별</span>
+                    <input name="OrderGender" id="Gender1" type="radio"  value="M">
+				  <label for="Gender1" class="gender1">남자</label>
+				  <input name="OrderGender" id="Gender2" type="radio" value="F">
+				  <label for="Gender2" class="gender2">여자</label>
+                </p>
+                <p><label for="" class="blind">전화번호</label><input type="text" id="txtTel" name="txtTel" placeholder="추후 MMS발송 번호" maxlength="13" oninput="maxLengthCheck(this)" value="" class=""></p>							
+            </div>
+            <div class="input_box input_box2">
+                <input type="checkbox" id="AccCheck" name="AccCheck"><label for="AccCheck"></label><button class="popup_btn">개인정보 제3자 제공 동의</button>
+                <div class="popup popup2">
+                    <img src="//img.modetour.com/promotion20/11482/popup2.jpg" alt="">
+                     <p class="blind">
+                            모두투어는 [대국민 숙박 할인 쿠폰 사업]을 위해 아래와 같이 개인정보를 제3자 제공하고자 합니다. 아래 내용을 자세히 읽으신 후, 동의 여부를 결정하여 주시길 바랍니다. 고객님께서는 아래 정보제공에 동의하지 않을 수 있으며, 동의하지 않는 경우 쿠폰 발급에 제한될 수 있습니다. 개인정보 제공 받는 자 : 한국관광공사 / 주식회사 인터파크 (본 사업의 통합 관리운영 대행사) 제공목적 : 쿠폰 발급 1인당 1개의 쿠폰만 발급 및 중복 사용 제한 관리 위함 제공정보 : 출생년도, 성별(남/여), 인증정보(CI) 보유 및 이용기간 : 쿠폰 발행일로부터 4개월간 보유, 이후 파기 ※ 위의 개인정보 제공에 대한 동의를 거부할 권리가 있습니다. 그러나 동의를 거부할 경우 [대국민 숙박할인 쿠폰사업] 참여에 제한이 있을 수 있습니다. ※ 개인정보 제공 동의 시 쿠폰 발급이 가능하며, 수집 된 개인 정보는 약관에 명시 된 기간만큼 보관 후 즉시 파기합니다. ※ 해당 쿠폰은 타 사이트에서 한 번이라도 쿠폰 발급 후 사용 하였다면, 티몬에서는 결제 시 쿠폰 적용이 불가할 수 있습니다. 
+                        </p>
+                    <button class="close">닫기</button>
+                </div>
+            </div>
+            <div class="coupon">
+                <a href="javascript:;" onclick="fn_Coupon();"><img src="//img.modetour.com/promotion20/11482/coupon_download.jpg" alt=""></a>
+            </div>
+        </div>      
+        <div id="con2">
+            <img src="//img.modetour.com/promotion20/11482/con2.jpg" alt="">
+            <a href="/event/event_20/11478/mode1.aspx" class="hotel_link" target="_blank">숙박대전 호텔 보러가기</a>
+        </div>      
+        <div class="note">
+            <a href="#" class="popup_btn"><img src="//img.modetour.com/promotion20/11482/note.jpg" alt="쿠폰 유의사항. 대한민국 숙박대전 쿠폰 다운 시, 유의사항 꼭 참고 부탁드립니다."></a>
+            <div class="popup">
+                <img src="//img.modetour.com/promotion20/11478/note_detail.jpg" alt="">
+                <p class="blind">
+                    [대한민국 숙박대전 쿠폰 유의사항] 쿠폰은 매일 오전 10시에 선착순으로 발급 가능합니다. 발급기간 : 매일 당일 오전 10시 ~ 익일 오전 7시까지 발급 가능합니다. (1인당 쿠폰 1회 발급, 타사이트와 중복 발급 불가) 유효기간 : 매일 당일 오전 10시 ~ 익일 오전 8시 30분까지 사용 가능합니다. (프로모션 기간 내, 1인 1회만 쿠폰 사용 가능) 쿠폰 혜택 : 7만원 이하 결제 시 3만원 할인쿠폰 /  7만원 초과 결제시 4만원 할인쿠폰 (2종 중 1종 선택 발급 가능) 쿠폰 발급 후 유효기간 내 미 사용시, 익일 쿠폰 재발급 가능합니다. 쿠폰 발급 시 발급 당일 철회가 불가합니다. 쿠폰 발급 및 사용 후 쿠폰 유효기간 내 주문 취소 시, 당일 쿠폰 재발급 가능합니다. 쿠폰 발급 및 사용 후 쿠폰 유효기간 이후 주문 취소 시, 취소 당일 쿠폰 재발급 불가하며 익일 쿠폰 재발급 가능합니다. 쿠폰 적용 상품 : 대한민국 숙박대전 할인쿠폰 기획전 내 숙박 상품 해당 쿠폰은 단일 상품에 적용 가능한 쿠폰입니다. 구매 상품가 기준으로 쿠폰 할인 적용 가능합니다. 단순 변심 등의 환불 요청 시 할인쿠폰의 적용 조건을 충족하지 않을 경우 환불 불가할 수 있습니다. 환불 / 부분환불 / 취소 시, 할인 금액 회수 후 나머지 금액이 환불됩니다. 해당 쿠폰은 타 쿠폰과 중복 사용이 불가하며, 행사 제외 상품은 할인 적용 불가합니다.사용기간 종료일인 12월 23일 경우 연박 적용이 불가합니다. Ex) 12월 23일~25일까지 예약을 할 경우 12월 23일부터 25일까지 연박으로 예약이 불가하며, 12월 23일(24일 퇴실)만 쿠폰 적용 가능합니다. ※ 해당 기획전은 쿠폰 소진 시 사전 고지 없이 조기 종료될 수 있습니다. ※ 개인정보 제공 동의 시 쿠폰 발급이 가능하며, 수집된 개인정보는 약관에 명시된 기간만큼 보관 후 즉시 파기합니다.  ※ 타 사이트에서 한 번이라도 대한민국 숙박대전 할인쿠폰 발급 후 사용하였다면, 모두투어에서 결제 시 쿠폰 적용이 불가 할 수 있습니다.  ※ 타 사이트 : 인터파크 / 여기어때 / 야놀자 / 데일리 / 위홈 / 메이트아이(호텔엔조이) /오늘밤엔 / G마켓 / 타이드 스퀘어 / 샬레코리아 / 마이리얼트립 / ㈜스퀘어랩 / 제주닷컴 / 호텔패스 / 웹투어 / 넥스투어 / 11번가
+                </p>
+                <button class="close">닫기</button>
+            </div>
+        </div>
+        <div id="con3">
+            <img src="//img.modetour.com/promotion20/11482/con3.jpg" alt="">
+            <a href="https://korean.visitkorea.or.kr/notice/news_detail.do?nwsid=a517d805-779b-418c-a347-26e8c5642c8c" target="_blank"><img src="//img.modetour.com/promotion20/11482/banner.jpg" alt=""></a>
+        </div>  
+    </div><!-- event_wrap -->
+    <script type="text/javascript">
+        (function($){                                           
+          $(document).ready(function(){
+             $('.popup_btn').click(function(){
+                $(this).next('.popup').fadeIn();
+                $(this).parent().append("<div class='dim'></div>");
+    
+                return false;
+            });
+            $('.close').click(function(){
+                $(this).parent('.popup').fadeOut();
+                $('.dim').remove();
+            });
+          });
+        })(jQuery);
+    </script>
+    <!--[e] : 기획전 끝-->
+</body>
+</html>

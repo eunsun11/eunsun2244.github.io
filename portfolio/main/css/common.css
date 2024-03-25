@@ -133,8 +133,8 @@ section h2{font-size: 50px; margin-bottom: 100px;}
 section h3{font-size: 20px; margin-bottom: 20px;} 
 section:nth-child(even){background: #fff0c3;}
 section .inner{max-width: 1100px; margin: 0 auto; padding: 100px 30px;}
-section .about{display: flex; flex-wrap: wrap; justify-content: space-between; gap: 50px 30px;}
-section .about > div{width: calc(50% - 30px);}
+section .about{display: flex; flex-wrap: wrap; justify-content: space-between; gap: 50px 10px;}
+section .about > div{width: calc(50% - 10px);}
 section .about ul li{margin-bottom: 15px; font-size: 0;}
 section .about ul li span{display: inline-block; font-size: 16px; font-family: 'SCoreDream';}
 section .about .profile ul li span:nth-child(1){width: 60px;} 
@@ -142,13 +142,14 @@ section .about .profile ul li span:nth-child(2){width: calc(100% - 60px);}
 section .about .education ul li span{display: block;}
 section .about .education ul li span:nth-child(1){margin-bottom: 5px;}
 section .about .education ul li span:nth-child(2){font-size: 14px; color: #8d8d8d;}
-section .about .certificate ul li span:nth-child(1){width: 90px;}
+section .about .certificate ul li span:nth-child(1){width: 80px;}
 section .about .certificate ul li span:nth-child(2){width: calc(100% - 90px);}
 section .about .skills ul{display: flex; flex-wrap: wrap; gap: 0 8px;}
 section .about .skills ul li{padding: 10px; border: 1px #333 dashed; border-radius: 15px;}
 
 section .swiper{position: relative;}
-section .swiper .swiper-slide{position: relative;}
+section .swiper .swiper-slide{position: relative; transition: 0.3s;}
+section .swiper .swiper-slide:hover{box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2); border-radius: 20px; cursor: pointer;}
 section .swiper-scrollbar{width: 305px; height: 8px; margin-top: 50px; background: rgba(0, 0, 0, 0.5); left: 50%; transform: translateX(-50%); position: relative; z-index: 1;}
 section .swiper-scrollbar-drag{height: 28px; background: #333; border-radius: 50%; top: -10px; box-shadow: 5px 5px 10px rgba(0,0,0,0.2); cursor: grab;}
 section .slide_img{border-radius: 15px; overflow: hidden; border: 3px solid #000; aspect-ratio: 7/4;}
@@ -156,8 +157,8 @@ section .slide_img img{width: 100%; min-height: 100%;}
 section .slide_txt{text-align: center; position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: 2; display: table; border-radius: 15px; background: rgba(0, 0, 0, 0.7); opacity: 0; transition: 0.3s;}
 section .slide_txt:hover{opacity: 1;}
 section .slide_txt ul{display: table-cell; margin: 30px 0;}
-section .slide_txt li{font-size: 18px; color: #FFF; margin: 15px 0;}
-
+section .slide_txt li{font-size: 18px; color: #FFF; margin: 15px 0; word-break: keep-all;} 
+section .e_slide2 .swiper .swiper-slide{width: 300px; height: 100px; border-radius: 20px; display: flex; justify-content: center; align-items: center; padding: 0 30px; word-break: keep-all; text-align: center; background: linear-gradient(90deg, rgba(245, 156, 39,1) 20.07298682646593%,rgba(244, 155, 39,1) 20.07298682646593%,rgba(224, 65, 65,1) 80.07447256339142%);}
 section .timeline{position: relative;}
 section .timeline::before{content: ''; width: 1px; position: absolute; top: 5%; bottom: 5%; left: 50%; background: #000;}
 section .timeline .card{margin: 30px 0; position: relative;}
