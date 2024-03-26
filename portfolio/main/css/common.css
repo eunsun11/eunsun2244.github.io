@@ -148,8 +148,9 @@ section .about .skills ul{display: flex; flex-wrap: wrap; gap: 0 8px;}
 section .about .skills ul li{padding: 10px; border: 1px #333 dashed; border-radius: 15px;}
 
 section .swiper{position: relative;}
-section .swiper .swiper-slide{position: relative; transition: 0.3s;}
-section .swiper .swiper-slide:hover{box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2); border-radius: 20px; cursor: pointer;}
+section .swiper .swiper-slide{position: relative; transition: 0.3s; border-radius: 15px;}
+section .swiper .swiper-slide:hover{border-radius: 20px; cursor: pointer; box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);}
+section .swiper .swiper-slide-active{box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);}
 section .swiper-scrollbar{width: 305px; height: 8px; margin-top: 50px; background: rgba(0, 0, 0, 0.5); left: 50%; transform: translateX(-50%); position: relative; z-index: 1;}
 section .swiper-scrollbar-drag{height: 28px; background: #333; border-radius: 50%; top: -10px; box-shadow: 5px 5px 10px rgba(0,0,0,0.2); cursor: grab;}
 section .slide_img{border-radius: 15px; overflow: hidden; border: 3px solid #000; aspect-ratio: 7/4;}
@@ -159,6 +160,7 @@ section .slide_txt:hover{opacity: 1;}
 section .slide_txt ul{display: table-cell; margin: 30px 0;}
 section .slide_txt li{font-size: 18px; color: #FFF; margin: 15px 0; word-break: keep-all;} 
 section .e_slide2 .swiper .swiper-slide{width: 300px; height: 100px; border-radius: 20px; display: flex; justify-content: center; align-items: center; padding: 0 30px; word-break: keep-all; text-align: center; background: linear-gradient(90deg, rgba(245, 156, 39,1) 20.07298682646593%,rgba(244, 155, 39,1) 20.07298682646593%,rgba(224, 65, 65,1) 80.07447256339142%);}
+section .e_slide2 .swiper .swiper-slide.swiper-slide-active a{font-size: 18px; color: #FFF;}
 section .timeline{position: relative;}
 section .timeline::before{content: ''; width: 1px; position: absolute; top: 5%; bottom: 5%; left: 50%; background: #000;}
 section .timeline .card{margin: 30px 0; position: relative;}
