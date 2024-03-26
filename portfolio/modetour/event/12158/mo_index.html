@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>12158</title>
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../css/common.min.css" />
+    <style type="text/css">
+		.event_wrap{max-width: 800px; text-align: center; margin: 0 auto;}
+		.event_wrap img{vertical-align: middle; width: 100%;}
+		.event_wrap .main{background: url('http://img.modetour.com/promotion20/12158/main-bg.jpg') center 0 no-repeat; overflow: hidden; position: relative; background-size: 410vw;}
+        .event_wrap .main .tit{padding-top: 50px; position: relative; z-index: 1;}
+        .event_wrap .main .light{position: absolute; top: 0; -webkit-animation: bounce-in-top 1.5s both; animation: bounce-in-top 1.5s both;}
+        .event_wrap .main .num{position: absolute; top: 37.8%; left: 5%; right: 5%;}
+        .event_wrap .main .num img{position: relative; z-index: 1;}        
+        .event_wrap .main span.star{position: absolute; opacity: 0;}
+        .event_wrap .main span.star img{max-width: 55%;}
+        .event_wrap .main .star1{top: 21%; right: 15%; -webkit-animation: blink-1 1.8s ease-in infinite both; animation: blink-1 1.8s ease-in infinite both; animation-delay: 1.5s;}
+        .event_wrap .main .star2{top: 28%; right: 10%; -webkit-animation: blink-1 1.3s ease-in infinite both; animation: blink-1 1.3s ease-in infinite both; animation-delay: 1.5s;}
+        .event_wrap .main .star3{top: 33%; right: 19%; -webkit-animation: blink-1 1.2s ease-in infinite both; animation: blink-1 1.2s ease-in infinite both; animation-delay: 1.5s;}
+        .event_wrap .main .star4{top: 25%; left: 14%; -webkit-animation: blink-1 1.8s ease-in infinite both; animation: blink-1 1.8s ease-in infinite both; animation-delay: 1.5s;}
+        .event_wrap .main .star5{top: 32%; left: 9%; -webkit-animation: blink-1 1.5s ease-in infinite both; animation: blink-1 1.5s ease-in infinite both; animation-delay: 1.5s;}
+		.event_wrap{position: relative;}
+		.event_wrap .blind{position: absolute; left: -9999px; font-size: 0;}
+		.event_wrap button{border: none; background: none; margin: 0; padding: 0;}
+		.event_wrap .card_list{position: relative; margin: 5% 0;}
+		.event_wrap .card_list ul{display: flex; gap: 0 3.5vw; justify-content: center; width: 100%; padding: 0 5%; box-sizing: border-box; position: absolute; bottom: 5.1vw;}
+		.event_wrap .card_list ul li{animation: rotateY 5s ease-in-out infinite;}
+		.event_wrap .e_contents{position: relative; background-color: #340074;}
+		.event_wrap .e_contents .nav_group{width: 100%; height: 16vw; position: absolute; top: 0; left: 0; z-index: 99; backface-visibility: hidden; opacity: 0; transition: all 0.3s;}
+		.event_wrap .e_contents .nav_group ul{display: flex; justify-content: center; height: 100%; position: relative; z-index: 2;}
+		.event_wrap .e_contents .nav_group ul li{width: 100%;}
+		.event_wrap .e_contents .nav_group ul li a{display: block; height: 100%; font-size: 0; color: transparent; background-size: 100%;}
+		.event_wrap .e_contents .nav_group ul li:nth-child(1) a{background-image: url('http://img.modetour.co.kr/promotion20/12158/nav01_off.jpg');}
+		.event_wrap .e_contents .nav_group ul li:nth-child(2) a{background-image: url('http://img.modetour.co.kr/promotion20/12158/nav02_off.jpg');}
+		.event_wrap .e_contents .nav_group ul li:nth-child(3) a{background-image: url('http://img.modetour.co.kr/promotion20/12158/nav03_off.jpg');}
+		.event_wrap .e_contents .nav_group ul li:nth-child(4) a{background-image: url('http://img.modetour.co.kr/promotion20/12158/nav04_off.jpg');}
+		.event_wrap .e_contents .nav_group ul li:nth-child(1).on a{background-image: url('http://img.modetour.co.kr/promotion20/12158/nav01_on.jpg');}
+		.event_wrap .e_contents .nav_group ul li:nth-child(2).on a{background-image: url('http://img.modetour.co.kr/promotion20/12158/nav02_on.jpg');}
+		.event_wrap .e_contents .nav_group ul li:nth-child(3).on a{background-image: url('http://img.modetour.co.kr/promotion20/12158/nav03_on.jpg');}
+		.event_wrap .e_contents .nav_group ul li:nth-child(4).on a{background-image: url('http://img.modetour.co.kr/promotion20/12158/nav04_on.jpg');}
+		.event_wrap .e_contents .cont_wrap{padding-top: 10vw;}
+		.event_wrap .e_contents .e_cont{padding-top: 60px; background-repeat: no-repeat; background-position: center 0; position: relative;}
+		.event_wrap .e_contents .e_cont .cont_in{position: relative;}
+		.event_wrap .e_contents .e_cont .e_btn{position: absolute; width: 90%; left: 5%; font-size: 0; color: transparent;}
+		.event_wrap .e_contents .e_cont .e_btn1{height: 20%; top: 66%;}
+		.event_wrap .e_contents .e_cont .e_btn2{height: 10%; top: 65.8%;}
+		.event_wrap .e_contents .e_cont .e_btn5{height: 7%; top: 40.5%;}
+		.event_wrap .e_contents .e_cont .e_btn5_2{height: 7%; bottom: 2.5%;}
+		.event_wrap .e_contents .e_cont .e_btn6{height: 35%; top: 25%;}
+		.event_wrap .e_contents #cont01{background-image: url('http://img.modetour.co.kr/promotion20/12158/cont01_bg.jpg'); background-color: #370463; padding-top: 0;}
+		.event_wrap .e_contents #cont01 .cont_tit{margin-bottom: 44px;}
+		.event_wrap .e_contents #cont01 .firework{position: absolute; top: 0; left: 50%; width: 2.6250vw; height: 2.6250vw; animation: scale 3s ease-in-out infinite; transform: scale(0); background-size: 100%;}
+		.event_wrap .e_contents #cont01 .firework01{top: 16.2500vw; background-image: url('http://img.modetour.co.kr/promotion20/12158/firework01.png'); width: 6.3750vw; height: 6.3750vw; margin-left: 20.6250vw;}
+		.event_wrap .e_contents #cont01 .firework02{top: 25.2500vw; background-image: url('http://img.modetour.co.kr/promotion20/12158/firework02.png'); margin-left: 10.5000vw;} 
+		.event_wrap .e_contents #cont01 .firework03{top: 37.6250vw; background-image: url('http://img.modetour.co.kr/promotion20/12158/firework02.png'); margin-left: 38.5000vw;}
+		.event_wrap .e_contents #cont01 .firework04{top: 42.8750vw; background-image: url('http://img.modetour.co.kr/promotion20/12158/firework03.png'); width: 4.5000vw; height: 4.5000vw; margin-left: 3.1250vw;}
+		.event_wrap .e_contents #cont02{background-image: url('http://img.modetour.co.kr/promotion20/12158/cont02_bg.jpg'); background-color: #51028f; padding-bottom: 60px;}
+		.event_wrap .e_contents #cont02 .tab_btn_group{font-size: 0; margin-bottom: 22.5px; display: flex;}
+		.event_wrap .e_contents #cont02 .tab_area .tab_cont{display: none; position: relative;}						
+		.event_wrap .e_contents #cont02 .tab_area .tab_cont a{position: absolute;}
+		.event_wrap .e_contents #cont02 #e_coupon{width: 83.75%; position: fixed; top: 12%; left: 8.125%; background: #f1f0ee; text-align: left; letter-spacing: -0.5px; z-index: 100; display: none;}
+		.event_wrap .e_contents #cont02 .dim{position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.7); z-index: 99;}
+		.event_wrap .e_contents #cont02 #e_coupon .coupon_list::-webkit-scrollbar {width: 5px;}
+		.event_wrap .e_contents #cont02 #e_coupon .coupon_list::-webkit-scrollbar-thumb {height: 20%; background: #8a8a8a; border-radius: 10px;}
+		.event_wrap .e_contents #cont02 #e_coupon .coupon_list::-webkit-scrollbar-track {background: #f1f0ee;}
+		.event_wrap .e_contents #cont02 #e_coupon .coupon_wrap{padding: 35px 25px; background: #f1f0ee;}
+		.event_wrap .e_contents #cont02 #e_coupon .coupon_list{background: #FFF; font-family: "Noto Sans KR", sans-serif; border-radius: 10px; box-shadow: 0px 0px 10px rgba(0,0,0,0.1); height: 45vw; overflow-y: scroll;}
+		.event_wrap .e_contents #cont02 #e_coupon .coupon_in h3{font-family: "GmarketSansMedium"; font-size: 23px; line-height: 1; color: #3b3b3b; margin-bottom: 5px; letter-spacing: -1px; line-height: 27px;}
+		.event_wrap .e_contents #cont02 #e_coupon .coupon_in h3+p{font-size: 14px; color: #7570fc; letter-spacing: -1px; line-height: 1; margin-bottom: 25px; font-weight: 600;}
+		.event_wrap .e_contents #cont02 #e_coupon .coupon_list > li{overflow: hidden; padding: 10px; position: relative;}
+		.event_wrap .e_contents #cont02 #e_coupon .coupon_list > li::after{content: ""; position: absolute; left: 5%; bottom: 0; width: 90%; height: 1px; background: #f4f4f4;}
+		.event_wrap .e_contents #cont02 #e_coupon .coupon_list .coupon_img{float: left; width: 20%; margin-top: 6px; margin-right: 10px; background: url('http://img.modetour.co.kr/promotion20/12158/coupon_img.png') no-repeat center 0; text-align: center; background-size: contain;}
+		.event_wrap .e_contents #cont02 #e_coupon .coupon_list .coupon_img span{color: #FFF; font-size: 10px; height: 100%; line-height: 25px; display: block;}
+		.event_wrap .e_contents #cont02 #e_coupon .coupon_list .coupon_txt{float: left; width: 55%;}
+		.event_wrap .e_contents #cont02 #e_coupon .coupon_list .coupon_txt span{display: block; font-size: 11px; color: #717171; font-weight: 300; line-height: 1; margin-top: 7px; letter-spacing: -0.8px; word-break: keep-all;}
+		.event_wrap .e_contents #cont02 #e_coupon .coupon_list .coupon_txt span:first-child{font-weight: bold; font-size: 12px; color: #383838; margin-top: 0; word-break: keep-all; line-height: 14px;}
+		.event_wrap .e_contents #cont02 #e_coupon .coupon_list .coupon_btn{float: right; width: 17%; height: 13vw;}							
+		.event_wrap .e_contents #cont02 #e_coupon .coupon_list + div {margin-top: 10px; font-size: 11px; font-family: "Noto Sans KR", sans-serif; line-height: 1.4;}
+		.event_wrap .e_contents #cont02 #e_coupon .coupon_list + div p{margin-bottom: 5px;}
+		.event_wrap .e_contents #cont02 #e_coupon .coupon_list + div li{font-weight: 300;}
+		.event_wrap .e_contents #cont02 #e_coupon .coupon_btn{background-image: url('http://img.modetour.co.kr/promotion20/12158/coupon_btn01.png'); background-repeat: no-repeat; background-position: center 0; width: 83px; height: 102px; background-size: cover;}
+		.event_wrap .e_contents #cont02 #e_coupon .coupon_btn.coupon_complete{background-image: url('http://img.modetour.co.kr/promotion20/12158/coupon_btn02.png');}
+		.event_wrap .e_contents #cont02 #e_coupon .coupon_btn a{display: block; width: 100%; height: 100%;}
+		.event_wrap .e_contents #cont02 #e_coupon .coupon_btn span{font-size: 0; color: transparent;}
+		.event_wrap .e_contents #cont02 #e_coupon .coupon_close{position: absolute; top: 10px; right: 10px; background: url('//img.modetour.co.kr/promotion20/12158/close.png') no-repeat center 0; width: 25px; height: 25px; font-size: 0; color: transparent; background-size: contain;}
+		.event_wrap .e_contents #cont02 .cont02-cont01-link1{top: 28.7%; left: 3%; width: 29%; height: 8%;}
+		.event_wrap .e_contents #cont02 .cont02-cont01-link2{top: 28.7%; left: 35.5%; width: 29%; height: 8%;}
+		.event_wrap .e_contents #cont02 .cont02-cont01-link3{top: 28.7%; right: 3%; width: 29%; height: 8%;}
+		.event_wrap .e_contents #cont02 .cont02-cont03-link1{top: 38.7%; right: 5%; left: 5%; height: 7.5%;}
+		.event_wrap .e_contents #cont02 .cont02-cont03-link2{top: 89.7%; right: 5%; left: 5%; height: 7.5%;}
+		.event_wrap .e_contents #cont02 .cont02-cont04-link1{top: 24.7%; right: 10%; left: 66%; height: 6%;}
+		.event_wrap .e_contents #cont02 .cont02-cont04-link2{top: 47%; right: 10%; left: 66%; height: 6%;}
+		.event_wrap .e_contents #cont02 .cont02-cont04-link3{top: 69%; right: 10%; left: 66%; height: 6%;}
+		.event_wrap .e_contents #cont02 .cont02-cont04-link4{top: 93%; right: 10%; left: 66%; height: 6%;}
+		.event_wrap .e_contents #cont02 .tab_area .tab_cont.on{display: block;}
+		.event_wrap .e_contents #cont03{background-image: url('http://img.modetour.co.kr/promotion20/12158/cont03_bg.jpg'); background-color: #5319ae; padding-bottom: 70px;}
+		.event_wrap .e_contents #cont03 .cont_tit{margin-bottom: 55px;}
+		.event_wrap .e_contents #cont03 .character{position: absolute; width: 38.875%; top: 88px; right: 0; z-index: 3;}
+		.event_wrap .e_contents #cont04{background-image: url('http://img.modetour.co.kr/promotion20/12158/cont04_bg.jpg'); background-color: #370463;}
+		.event_wrap .e_contents #cont04 .cont_tit{margin-bottom: 48px;}
+		.event_wrap .e_contents #cont04 .cont_in .e_txt{width: 627px; height: 98px; margin: 0 auto; background: url('http://img.modetour.co.kr/promotion20/12158/txt_bg.jpg') no-repeat; background-size: 100%; display: flex; align-items: center; justify-content: center;}
+		@keyframes rotateY {0% {transform: rotateY(0);}50% {transform: rotateY(180deg);}100% {transform: rotateY(360deg);}}
+		@keyframes scale {0% {transform: scale(0);}50% {transform: scale(1);}100% {transform: scale(1);}}
+		@keyframes blink-1 {0%{opacity: 0;}50%, 100% {opacity: 1;}25%, 75% {opacity: 0;}}@keyframes bounce-in-top {0% {-webkit-transform: translateY(-500px);transform: translateY(-500px);-webkit-animation-timing-function: ease-in;animation-timing-function: ease-in;opacity: 0;}38% {-webkit-transform: translateY(0);transform: translateY(0);-webkit-animation-timing-function: ease-out;animation-timing-function: ease-out;opacity: 1;}55% {-webkit-transform: translateY(-65px);transform: translateY(-65px);-webkit-animation-timing-function: ease-in;animation-timing-function: ease-in;}72% {-webkit-transform: translateY(0);transform: translateY(0);-webkit-animation-timing-function: ease-out;animation-timing-function: ease-out;}81% {-webkit-transform: translateY(-28px);transform: translateY(-28px);-webkit-animation-timing-function: ease-in;animation-timing-function: ease-in;}90% {-webkit-transform: translateY(0);transform: translateY(0);-webkit-animation-timing-function: ease-out;animation-timing-function: ease-out;}95% {-webkit-transform: translateY(-8px);transform: translateY(-8px);-webkit-animation-timing-function: ease-in;animation-timing-function: ease-in;}100% {-webkit-transform: translateY(0);transform: translateY(0);-webkit-animation-timing-function: ease-out;animation-timing-function: ease-out;}}
+</style>
+</head>
+<body>
+    <!-- [s]: 기획전 시작 -->
+    <div class="event_wrap">
+        <div class="main">
+            <div class="wrap">
+                <div class="tit"><img src="http://img.modetour.com/promotion20/12158/m-main-tit.png" alt=""></div>
+                <div class="num"><img src="http://img.modetour.com/promotion20/12158/m-main-num.png" alt=""></div>
+                <div class="light"><img src="http://img.modetour.com/promotion20/12157/light.png" alt=""></div>
+                <span class="star star1"><img src="http://img.modetour.com/promotion20/12157/star1.png" alt=""></span>
+                <span class="star star2"><img src="http://img.modetour.com/promotion20/12157/star2.png" alt=""></span>
+                <span class="star star3"><img src="http://img.modetour.com/promotion20/12157/star3.png" alt=""></span>
+                <span class="star star4"><img src="http://img.modetour.com/promotion20/12157/star4.png" alt=""></span>
+                <span class="star star5"><img src="http://img.modetour.com/promotion20/12157/star5.png" alt=""></span>
+            </div>
+            <div class="card_list">
+                <img src="http://img.modetour.co.kr/promotion20/12158/card_list.png" alt="">
+                <ul>
+                    <li><img src="http://img.modetour.co.kr/promotion20/12158/card01.png" alt=""></li>
+                    <li><img src="http://img.modetour.co.kr/promotion20/12158/card02.png" alt=""></li>
+                    <li><img src="http://img.modetour.co.kr/promotion20/12158/card03.png" alt=""></li>
+                    <li><img src="http://img.modetour.co.kr/promotion20/12158/card04.png" alt=""></li>
+                </ul>
+            </div>
+        </div>	
+        <div class="e_contents">
+            <div class="nav_group">
+                <ul>
+                    <li><a href="#">숨은 케이크 찾기</a></li>
+                    <li><a href="#">쿠폰 몽땅받기</a></li>
+                    <li><a href="#">응원 댓글 못.친.소</a></li>
+                    <li><a href="#">여행 자선경매</a></li>
+                </ul>
+            </div>
+            <div class="cont_wrap">
+                <div class="e_cont" id="cont01">
+                    <p class="cont_tit"><img src="http://img.modetour.co.kr/promotion20/12158/cont01_tit.png" alt="이벤트 하나, 숨은 케이크 찾기"></p>
+                    <div class="cont_in">
+                        <img src="http://img.modetour.co.kr/promotion20/12158/cont01.jpg" alt="">
+                        <a href="/event/plan/detail.aspx?mloc=07&eidx=12171" class="e_btn e_btn1">숨어있는 촛불을 찾아서 출발 start!</a>                                            
+                        <i class="firework firework01"></i>
+                        <i class="firework firework02"></i>
+                        <i class="firework firework03"></i>
+                        <i class="firework firework04"></i>
+                    </div>
+                </div>
+                <div class="e_cont" id="cont02">
+                    <p class="cont_tit" style="padding-bottom:20px;"><img src="http://img.modetour.co.kr/promotion20/12158/cont02_tit.png" alt="이벤트 두울, 생일 할인쿠폰팩"></p>
+                    <div class="tab_area">
+                        <div class="tab_btn_group">
+                            <button class="on"><img src="http://img.modetour.co.kr/promotion20/12158/cont02_tab_btn01_on.jpg" alt="생일잔치 할인쿠폰팩"></button>
+                            <button><img src="http://img.modetour.co.kr/promotion20/12158/cont02_tab_btn02_off.jpg" alt="청구할인"></button>
+                            <button><img src="http://img.modetour.co.kr/promotion20/12158/cont02_tab_btn04_off.jpg" alt="플러스 혜택"></button>
+                        </div>
+                        <div class="tab_cont_group">
+                            <div class="tab_cont on">
+                                <img src="http://img.modetour.co.kr/promotion20/12158/cont02_tab_cont01.jpg" alt="">
+                                <a href="" class="cont02-cont01-link1"><span class="blind">모친소 전체할인쿠폰 받으러가기</span></a>
+                                <a href="" class="cont02-cont01-link2 e_btn3"><span class="blind">호텔 5%쿠폰 다운로드</span></a>
+                                <a href="https://mmode.movv.co/meta/airport?utm_source=mode&utm_medium=banner&utm_campaign=openpromotion" class="cont02-cont01-link3"><span class="blind">차량이동서비스 10%쿠폰 받으러가기</span></a>
+                            </div>
+                            <div class="tab_cont">
+                                <img src="http://img.modetour.co.kr/promotion20/12158/cont02_tab_cont02.jpg" alt="">
+                            </div>
+                            <div class="tab_cont">
+                                <img src="http://img.modetour.co.kr/promotion20/12158/cont02_tab_cont04.jpg" alt="">
+                                <a href="/event/plan/detail.aspx?mloc=07&eidx=12182" class="cont02-cont04-link1"><span class="blind">신한은행과 함께하는 모두멤버스 환전이벤트 더보기</span></a>
+                                <a href="/event/plan/detail.aspx?mloc=07&eidx=12071" class="cont02-cont04-link2"><span class="blind">허니문 고객님께 드리는 신세계 면세점 이벤트 더보기</span></a>
+                                <a href="/event/plan/detail.aspx?mloc=07&eidx=11945" class="cont02-cont04-link3"><span class="blind">여행갈때 필수 아이템! 와이파이도시락 이벤트 더보기</span></a>
+                                <a href="http://bit.ly/41AKMpd" class="cont02-cont04-link4"><span class="blind">매주 10명씩 링티 1박스 제공! 제품보러가기</span></a>
+                            </div>
+                        </div>
+                    </div>                                    
+                    <div id="e_coupon">
+                        <div class="coupon_wrap">
+                            <div class="coupon_in">
+                                <h3>BEST 인기<br>해외패키지 플러스쿠폰</h3>
+                                <p>[창사34주년] [플러스쿠폰] 대상상품 한정</p>
+                                <ul class="coupon_list">
+                                    <li disCode='100976736'>
+                                        <div class="coupon_img">
+                                            <span>20,000원</span>
+                                        </div>
+                                        <div class="coupon_txt">
+                                            <span>방콕 2만원쿠폰</span>
+                                            <span>일부 대상상품 한정</span>
+                                            <span>유효기간 : 발급일로부터 7일</span>
+                                        </div>
+                                        <div class="coupon_btn">
+                                            <a href="" class="e_btn3" gCode='202302281407281570' eventNo='4040'><span>다운로드</span></a>
+                                        </div>
+                                    </li>
+                                    <li disCode='100976737'>
+                                        <div class="coupon_img">
+                                            <span>30,000원</span>
+                                        </div>
+                                        <div class="coupon_txt">
+                                            <span>푸켓/크라비 3만원쿠폰</span>
+                                            <span>일부 대상상품 한정</span>
+                                            <span>유효기간 : 발급일로부터 7일</span>
+                                        </div>
+                                        <div class="coupon_btn">
+                                            <a href="" class="e_btn3" gCode='202302281412481570' eventNo='4041'><span>다운로드</span></a>
+                                        </div>
+                                    </li>
+                                    <li disCode='100976738'>
+                                        <div class="coupon_img">
+                                            <span>30,000원</span>
+                                        </div>
+                                        <div class="coupon_txt">
+                                            <span>치앙라이/마이 3만원쿠폰</span>
+                                            <span>일부 대상상품 한정</span>
+                                            <span>유효기간 : 발급일로부터 7일</span>
+                                        </div>
+                                        <div class="coupon_btn">
+                                            <a href="" class="e_btn3" gCode='202302281414241570' eventNo='4042'><span>다운로드</span></a>
+                                        </div>
+                                    </li>
+                                    <li disCode='100976741'>
+                                        <div class="coupon_img">
+                                            <span>30,000원</span>
+                                        </div>
+                                        <div class="coupon_txt">
+                                            <span>베트남 빈펄리조트 3만원쿠폰</span>
+                                            <span>베트남 VINPEARL 리조트 숙박상품 한정</span>
+                                            <span>유효기간 : 발급일로부터 7일</span>
+                                        </div>
+                                        <div class="coupon_btn">
+                                            <a href="" class="e_btn3" gCode='202302281440241570' eventNo='4043'><span>다운로드</span></a>
+                                        </div>
+                                    </li>
+                                    <li disCode='100976742'>
+                                        <div class="coupon_img">
+                                            <span>30,000원</span>
+                                        </div>
+                                        <div class="coupon_txt">
+                                            <span>세부/보홀 3만원쿠폰</span>
+                                            <span>세부 BE RESORT,<br>보홀 BE GRAND 숙박상품 한정</span>
+                                            <span>유효기간 : 발급일로부터 7일</span>
+                                        </div>
+                                        <div class="coupon_btn">
+                                            <a href="" class="e_btn3" gCode='202302281442161570' eventNo='4044'><span>다운로드</span></a>
+                                        </div>
+                                    </li>
+                                    <li disCode='100976743'>
+                                        <div class="coupon_img">
+                                            <span>30,000원</span>
+                                        </div>
+                                        <div class="coupon_txt">
+                                            <span>베트남 윈덤호텔 3만원쿠폰</span>
+                                            <span>베트남 윈덤호텔 숙박상품 한정</span>
+                                            <span>유효기간 : 발급일로부터 7일</span>
+                                        </div>
+                                        <div class="coupon_btn">
+                                            <a href="" class="e_btn3" gCode='202302281443591570' eventNo='4045'><span>다운로드</span></a>
+                                        </div>
+                                    </li>
+                                    <li disCode='100976744'>
+                                        <div class="coupon_img">
+                                            <span>30,000원</span>
+                                        </div>
+                                        <div class="coupon_txt">
+                                            <span>베트남 스완도르리조트 3만원쿠폰</span>
+                                            <span>베트남 스완도르리조트 숙박상품 한정</span>
+                                            <span>유효기간 : 발급일로부터 7일</span>
+                                        </div>
+                                        <div class="coupon_btn">
+                                            <a href="" class="e_btn3" gCode='202302281446091570' eventNo='4046'><span>다운로드</span></a>
+                                        </div>
+                                    </li>
+                                    <li disCode='100976745'>
+                                        <div class="coupon_img">
+                                            <span>30,000원</span>
+                                        </div>
+                                        <div class="coupon_txt">
+                                            <span>베트남 3만원쿠폰</span>
+                                            <span>일부 대상상품 한정</span>
+                                            <span>유효기간 : 발급일로부터 7일</span>
+                                        </div>
+                                        <div class="coupon_btn">
+                                            <a href="" class="e_btn3" gCode='202302281452051570' eventNo='4047'><span>다운로드</span></a>
+                                        </div>
+                                    </li>												
+                                    <li disCode='100976746'>
+                                        <div class="coupon_img">
+                                            <span>50,000원</span>
+                                        </div>
+                                        <div class="coupon_txt">
+                                            <span>싱가포르 5만원쿠폰</span>
+                                            <span>일부 대상상품 한정</span>
+                                            <span>유효기간 : 발급일로부터 7일</span>
+                                        </div>
+                                        <div class="coupon_btn">
+                                            <a href="" class="e_btn3" gCode='202302281453591570' eventNo='4048'><span>다운로드</span></a>
+                                        </div>
+                                    </li>
+                                    <li disCode='100976747'>
+                                        <div class="coupon_img">
+                                            <span>30,000원</span>
+                                        </div>
+                                        <div class="coupon_txt">
+                                            <span>필리핀 3만원쿠폰</span>
+                                            <span>일부 대상상품 한정</span>
+                                            <span>유효기간 : 발급일로부터 7일</span>
+                                        </div>
+                                        <div class="coupon_btn">
+                                            <a href="" class="e_btn3" gCode='202302281458101570' eventNo='4049'><span>다운로드</span></a>
+                                        </div>
+                                    </li>
+                                    <li disCode='100976748'>
+                                        <div class="coupon_img">
+                                            <span>30,000원</span>
+                                        </div>
+                                        <div class="coupon_txt">
+                                            <span>코타키나발루 3만원권</span>
+                                            <span>일부 대상상품 한정</span>
+                                            <span>유효기간 : 발급일로부터 7일</span>
+                                        </div>
+                                        <div class="coupon_btn">
+                                            <a href="" class="e_btn3" gCode='202302281502351570' eventNo='4050'><span>다운로드</span></a>
+                                        </div>
+                                    </li>
+                                    <li disCode='100976749'>
+                                        <div class="coupon_img">
+                                            <span>30,000원</span>
+                                        </div>
+                                        <div class="coupon_txt">
+                                            <span>대만 3만원쿠폰</span>
+                                            <span>일부 대상상품 한정</span>
+                                            <span>유효기간 : 발급일로부터 7일</span>
+                                        </div>
+                                        <div class="coupon_btn">
+                                            <a href="" class="e_btn3" gCode='202302281504031570' eventNo='4051'><span>다운로드</span></a>
+                                        </div>
+                                    </li>
+                                    <li disCode='100976750'>
+                                        <div class="coupon_img">
+                                            <span>30,000원</span>
+                                        </div>
+                                        <div class="coupon_txt">
+                                            <span>오사카 3만원쿠폰</span>
+                                            <span>일부 대상상품 한정</span>
+                                            <span>유효기간 : 발급일로부터 7일</span>
+                                        </div>
+                                        <div class="coupon_btn">
+                                            <a href="" class="e_btn3" gCode='202302281505201570' eventNo='4052'><span>다운로드</span></a>
+                                        </div>
+                                    </li>
+                                    <li disCode='100976751'>
+                                        <div class="coupon_img">
+                                            <span>30,000원</span>
+                                        </div>
+                                        <div class="coupon_txt">
+                                            <span>큐슈 3만원쿠폰</span>
+                                            <span>일부 대상상품 한정</span>
+                                            <span>유효기간 : 발급일로부터 7일</span>
+                                        </div>
+                                        <div class="coupon_btn">
+                                            <a href="" class="e_btn3" gCode='202302281506281570' eventNo='4053'><span>다운로드</span></a>
+                                        </div>
+                                    </li>
+                                    <li disCode='100976752'>
+                                        <div class="coupon_img">
+                                            <span>30,000원</span>
+                                        </div>
+                                        <div class="coupon_txt">
+                                            <span>동경 3만원쿠폰</span>
+                                            <span>일부 대상상품 한정</span>
+                                            <span>유효기간 : 발급일로부터 7일</span>
+                                        </div>
+                                        <div class="coupon_btn">
+                                            <a href="" class="e_btn3" gCode='202302281514131570' eventNo='4054'><span>다운로드</span></a>
+                                        </div>
+                                    </li>
+                                    <li disCode='100976753'>
+                                        <div class="coupon_img">
+                                            <span>30,000원</span>
+                                        </div>
+                                        <div class="coupon_txt">
+                                            <span>오키나와 3만원쿠폰</span>
+                                            <span>일부 대상상품 한정</span>
+                                            <span>유효기간 : 발급일로부터 7일</span>
+                                        </div>
+                                        <div class="coupon_btn">
+                                            <a href="" class="e_btn3" gCode='202302281515411570' eventNo='4055'><span>다운로드</span></a>
+                                        </div>
+                                    </li>
+                                    <li disCode='100976754'>
+                                        <div class="coupon_img">
+                                            <span>30,000원</span>
+                                        </div>
+                                        <div class="coupon_txt">
+                                            <span>북해도 3만원쿠폰</span>
+                                            <span>일부 대상상품 한정</span>
+                                            <span>유효기간 : 발급일로부터 7일</span>
+                                        </div>
+                                        <div class="coupon_btn">
+                                            <a href="" class="e_btn3" gCode='202302281517181570' eventNo='4056'><span>다운로드</span></a>
+                                        </div>
+                                    </li>
+                                    <li disCode='100976766'>
+                                        <div class="coupon_img">
+                                            <span>50,000원</span>
+                                        </div>
+                                        <div class="coupon_txt">
+                                            <span>서유럽 5만원쿠폰</span>
+                                            <span>일부 대상상품 한정</span>
+                                            <span>유효기간 : 발급일로부터 7일</span>
+                                        </div>
+                                        <div class="coupon_btn">
+                                            <a href="" class="e_btn3" gCode='202302281543191570' eventNo='4068'><span>다운로드</span></a>
+                                        </div>
+                                    </li>
+                                    <li disCode='100976767'>
+                                        <div class="coupon_img">
+                                            <span>50,000원</span>
+                                        </div>
+                                        <div class="coupon_txt">
+                                            <span>동유럽 5만원쿠폰</span>
+                                            <span>일부 대상상품 한정</span>
+                                            <span>유효기간 : 발급일로부터 7일</span>
+                                        </div>
+                                        <div class="coupon_btn">
+                                            <a href="" class="e_btn3" gCode='202302281544331570' eventNo='4069'><span>다운로드</span></a>
+                                        </div>
+                                    </li>
+                                    <li disCode='100976768'>
+                                        <div class="coupon_img">
+                                            <span>100,000원</span>
+                                        </div>
+                                        <div class="coupon_txt">
+                                            <span>북유럽 10만원쿠폰</span>
+                                            <span>일부 대상상품 한정</span>
+                                            <span>유효기간 : 발급일로부터 7일</span>
+                                        </div>
+                                        <div class="coupon_btn">
+                                            <a href="" class="e_btn3" gCode='202302281609191570' eventNo='4070'><span>다운로드</span></a>
+                                        </div>
+                                    </li>
+                                    <li disCode='100976769'>
+                                        <div class="coupon_img">
+                                            <span>50,000원</span>
+                                        </div>
+                                        <div class="coupon_txt">
+                                            <span>스페인 5만원쿠폰</span>
+                                            <span>일부 대상상품 한정</span>
+                                            <span>유효기간 : 발급일로부터 7일</span>
+                                        </div>
+                                        <div class="coupon_btn">
+                                            <a href="" class="e_btn3" gCode='202302281618471570' eventNo='4071'><span>다운로드</span></a>
+                                        </div>
+                                    </li>
+                                    <li disCode='100976770'>
+                                        <div class="coupon_img">
+                                            <span>50,000원</span>
+                                        </div>
+                                        <div class="coupon_txt">
+                                            <span>튀르키예 5만원쿠폰</span>
+                                            <span>일부 대상상품 한정</span>
+                                            <span>유효기간 : 발급일로부터 7일</span>
+                                        </div>
+                                        <div class="coupon_btn">
+                                            <a href="" class="e_btn3" gCode='202302281620271570' eventNo='4072'><span>다운로드</span></a>
+                                        </div>
+                                    </li>
+                                    <li disCode='100976771'>
+                                        <div class="coupon_img">
+                                            <span>50,000원</span>
+                                        </div>
+                                        <div class="coupon_txt">
+                                            <span>두바이 5만원쿠폰</span>
+                                            <span>일부 대상상품 한정</span>
+                                            <span>유효기간 : 발급일로부터 7일</span>
+                                        </div>
+                                        <div class="coupon_btn">
+                                            <a href="" class="e_btn3" gCode='202302281623261570' eventNo='4073'><span>다운로드</span></a>
+                                        </div>
+                                    </li>
+                                    <li disCode='100976755'>
+                                        <div class="coupon_img">
+                                            <span>30,000원</span>
+                                        </div>
+                                        <div class="coupon_txt">
+                                            <span>괌/사이판 3만원쿠폰</span>
+                                            <span>일부 대상상품 한정</span>
+                                            <span>유효기간 : 발급일로부터 7일</span>
+                                        </div>
+                                        <div class="coupon_btn">
+                                            <a href="" class="e_btn3" gCode='202302281518411570' eventNo='4057'><span>다운로드</span></a>
+                                        </div>
+                                    </li>
+                                    <li disCode='100976756'>
+                                        <div class="coupon_img">
+                                            <span>50,000원</span>
+                                        </div>
+                                        <div class="coupon_txt">
+                                            <span>호주/뉴질랜드 5만원쿠폰</span>
+                                            <span>일부 대상상품 한정</span>
+                                            <span>유효기간 : 발급일로부터 7일</span>
+                                        </div>
+                                        <div class="coupon_btn">
+                                            <a href="" class="e_btn3" gCode='202302281520111570' eventNo='4058'><span>다운로드</span></a>
+                                        </div>
+                                    </li>
+                                    <li disCode='100976757'>
+                                        <div class="coupon_img">
+                                            <span>50,000원</span>
+                                        </div>
+                                        <div class="coupon_txt">
+                                            <span>미주/캐나다 5만원쿠폰</span>
+                                            <span>일부 대상상품 한정</span>
+                                            <span>유효기간 : 발급일로부터 7일</span>
+                                        </div>
+                                        <div class="coupon_btn">
+                                            <a href="" class="e_btn3" gCode='202302281526311570' eventNo='4059'><span>다운로드</span></a>
+                                        </div>
+                                    </li>												
+                                    <li disCode='100976758'>
+                                        <div class="coupon_img">
+                                            <span>100,000원</span>
+                                        </div>
+                                        <div class="coupon_txt">
+                                            <span>하와이허니문 10만원쿠폰</span>
+                                            <span>일부 대상상품 한정</span>
+                                            <span>유효기간 : 발급일로부터 7일</span>
+                                        </div>
+                                        <div class="coupon_btn">
+                                            <a href="" class="e_btn3" gCode='202302281528101570' eventNo='4060'><span>다운로드</span></a>
+                                        </div>
+                                    </li>										
+                                    <li disCode='100976759'>
+                                        <div class="coupon_img">
+                                            <span>100,000원</span>
+                                        </div>
+                                        <div class="coupon_txt">
+                                            <span>발리허니문 10만원쿠폰</span>
+                                            <span>일부 대상상품 한정</span>
+                                            <span>유효기간 : 발급일로부터 7일</span>
+                                        </div>
+                                        <div class="coupon_btn">
+                                            <a href="" class="e_btn3" gCode='202302281529401570' eventNo='4061'><span>다운로드</span></a>
+                                        </div>
+                                    </li>
+                                    <li disCode='100976760'>
+                                        <div class="coupon_img">
+                                            <span>100,000원</span>
+                                        </div>
+                                        <div class="coupon_txt">
+                                            <span>몰디브허니문 10만원쿠폰</span>
+                                            <span>일부 대상상품 한정</span>
+                                            <span>유효기간 : 발급일로부터 7일</span>
+                                        </div>
+                                        <div class="coupon_btn">
+                                            <a href="" class="e_btn3" gCode='202302281530551570' eventNo='4062'><span>다운로드</span></a>
+                                        </div>
+                                    </li>
+                                    <li disCode='100976761'>
+                                        <div class="coupon_img">
+                                            <span>50,000원</span>
+                                        </div>
+                                        <div class="coupon_txt">
+                                            <span>라오스골프 5만원쿠폰</span>
+                                            <span>일부 대상상품 한정</span>
+                                            <span>유효기간 : 발급일로부터 7일</span>
+                                        </div>
+                                        <div class="coupon_btn">
+                                            <a href="" class="e_btn3" gCode='202302281532531570' eventNo='4063'><span>다운로드</span></a>
+                                        </div>
+                                    </li>
+                                    <li disCode='100976762'>
+                                        <div class="coupon_img">
+                                            <span>20,000원</span>
+                                        </div>
+                                        <div class="coupon_txt">
+                                            <span>대한항공연합 제주도패키지 2만원쿠폰</span>
+                                            <span>일부 대상상품 한정</span>
+                                            <span>유효기간 : 발급일로부터 7일</span>
+                                        </div>
+                                        <div class="coupon_btn">
+                                            <a href="" class="e_btn3" gCode='202302281536361570' eventNo='4064'><span>다운로드</span></a>
+                                        </div>
+                                    </li>
+                                    <li disCode='100976763'>
+                                        <div class="coupon_img">
+                                            <span>10,000원</span>
+                                        </div>
+                                        <div class="coupon_txt">
+                                            <span>연합행사NO제주도패키지 1만원쿠폰</span>
+                                            <span>일부 대상상품 한정</span>
+                                            <span>유효기간 : 발급일로부터 7일</span>
+                                        </div>
+                                        <div class="coupon_btn">
+                                            <a href="" class="e_btn3" gCode='202302281537561570' eventNo='4065'><span>다운로드</span></a>
+                                        </div>
+                                    </li>
+                                    <li disCode='100976764'>
+                                        <div class="coupon_img">
+                                            <span>30,000원</span>
+                                        </div>
+                                        <div class="coupon_txt">
+                                            <span>[부산/대구출발] 일본 3만원쿠폰</span>
+                                            <span>일부 대상상품 한정</span>
+                                            <span>유효기간 : 발급일로부터 7일</span>
+                                        </div>
+                                        <div class="coupon_btn">
+                                            <a href="" class="e_btn3" gCode='202302281539491570' eventNo='4066'><span>다운로드</span></a>
+                                        </div>
+                                    </li>
+                                    <li disCode='100976765'>
+                                        <div class="coupon_img">
+                                            <span>30,000원</span>
+                                        </div>
+                                        <div class="coupon_txt">
+                                            <span>[부산/대구출발] 베트남 3만원쿠폰</span>
+                                            <span>일부 대상상품 한정</span>
+                                            <span>유효기간 : 발급일로부터 7일</span>
+                                        </div>
+                                        <div class="coupon_btn">
+                                            <a href="" class="e_btn3" gCode='202302281541551570' eventNo='4067'><span>다운로드</span></a>
+                                        </div>
+                                    </li>												
+                                </ul>	
+                                <div>
+                                    <p><strong>[패키지 플러스 쿠폰] 참여안내 및 유의사항</strong></p>
+                                    <ul>
+                                        <li>* [창사34주년#플러스쿠폰]상품에 한하여 사용 가능합니다</li>
+                                        <li>* 다른 쿠폰과 중복 사용이 불가합니다 </li>
+                                        <li>* 제휴 상품, 호텔, 항공 등의 사용은 제외 될 수 있습니다</li>
+                                        <li>* 적용 상품가는 1인 상품판매가를 기준으로 하며, 추가경비(유류할증료 및 추가금액)는 제외됩니다</li>
+                                        <li>* 예약 상품 결제시에만 사용 가능하며, 쿠폰 소지자 본인 외의 결제 및 취소료, 기타 다른 용도로 사용은 불가합니다.</li>
+                                        <li>* 상품 예약 건당 본인 소유 1개의 쿠폰만 사용 가능합니다.</li>
+                                        <li>* 취소 및 환불 후 재사용이 불가합니다.</li>
+                                        <li>* 발급된 쿠폰은 마이페이지&gt; 쿠폰에서 확인할 수 있습니다</li>
+                                    </ul>
+                                </div>										
+                            </div>
+                        </div>
+                        <button class="coupon_close">닫기</button>	
+                    </div>
+                </div>
+                <div class="e_cont" id="cont03">
+                    <p class="cont_tit"><img src="http://img.modetour.co.kr/promotion20/12158/cont03_tit.png" alt="이벤트 세엣, 응원 댓글 이벤트"></p>
+                    <!--<img src="http://img.modetour.co.kr/promotion20/12158/character.png" alt="" class="character">-->
+                    <div class="cont_in">
+                        <img src="http://img.modetour.co.kr/promotion20/12158/cont03.jpg" alt="">
+                        <a href="/event/plan/detail.aspx?mloc=07&eidx=12183" class="e_btn e_btn5">신한카드 상세 내용 보러가기</a>
+                        <a href="/event/plan/detail.aspx?mloc=07&eidx=12184" class="e_btn e_btn5_2">국민카드 상세 내용 보러가기</a>
+                    </div>
+                </div>
+                <div class="e_cont" id="cont04">
+                    <p class="cont_tit"><img src="http://img.modetour.co.kr/promotion20/12158/cont04_tit.png" alt="이벤트 네엣, 여행자선경매 이벤트"></p>
+                    <div class="cont_in"><img src="http://img.modetour.co.kr/promotion20/12158/cont04.jpg" alt=""></div>
+                    <div class="cont_in"><img src="http://img.modetour.co.kr/promotion20/12158/cont04_action1.jpg" alt=""></div>
+                    <div class="cont_in">
+                        <img src="http://img.modetour.co.kr/promotion20/12158/cont04_btn.jpg" alt="">
+                        <a href="/event/plan/detail.aspx?mloc=07&eidx=12173" class="e_btn e_btn6">경매 참여하기</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div><!-- //event_wrap -->
+    <script type="text/javascript">
+        (function($){						   
+            $(document).ready(function(){							
+                // nav click
+                var $menu     = $('.nav_group li'),
+                    $navH     = $('.nav_group').height(),
+                    $contents = $('[id^="cont0"]'),
+                    $doc      = $('html, body');
+                $(function () {
+                    $menu.find('a').click(function(e){
+                        var $target = $(this).parent(),
+                            idx     = $target.index(),
+                            section = $contents.eq(idx),
+                            navH = $('.nav_group li').height(),
+                            offsetTop = section.offset().top-(navH+52);
+                        $doc.stop()
+                                .animate({
+                                    scrollTop :offsetTop
+                                }, 800);
+                        return false;
+                    });
+                });
+                //nav fixed, addClass
+                $(window).scroll(function(){                                            
+                    var scltop = $(window).scrollTop(),
+                        header = $('.nav_group').first(),
+                        navH = $('.nav_group li').height(),
+                        gnbTop = $('.e_contents').offset().top-52;
+                    header.css({
+                        'position': (scltop > gnbTop) ? 'fixed' : 'absolute',
+                        'top': (scltop > gnbTop) ? '0' : '',
+                        'backface-visibility' : (scltop > gnbTop) ? 'visible' : 'hidden',
+                        'opacity' : (scltop > gnbTop) ? '1' : '0'
+                    });
+                    $.each($contents, function(idx, item){
+                        var $target   = $contents.eq(idx),
+                            i         = $target.index(),
+                            targetTop = $target.offset().top-60;
+                        if (targetTop-navH <= scltop) {
+                            $menu.removeClass('on');
+                            $menu.eq(idx).addClass('on');
+                        }
+                        if (!(200 <= scltop)) {
+                            $menu.removeClass('on');
+                        }
+                    });
+                });
+    
+                //cont02 tab		
+                $('.tab_btn_group button').click(function(){
+                    var e_idx = $(this).index();
+                    $(this).addClass('on').siblings('button').removeClass('on').parent('div.tab_btn_group').siblings('div.tab_cont_group').children('div').eq(e_idx).addClass('on').siblings('div').removeClass('on');
+                    $('.tab_btn_group button').each(function(){
+                        $(this).find("img").attr("src" , $(this).find("img").attr("src").replace("_on.jpg" , "_off.jpg"));          
+                        });
+                        $(this).find("img").attr("src" , $(this).find("img").attr("src").replace("_off.jpg" , "_on.jpg"));
+                });
+               
+    
+                //cont02 coupon_popup
+                $('.cont02-cont01-link1').click(function(){
+                    $('#e_coupon').fadeIn();	
+                    $('#e_coupon').before("<div class='dim'></div>");	
+                    $('body').css('overflow','hidden');					
+                    return false;
+                });
+                $('.coupon_close').click(function(){
+                    $(this).parents('#e_coupon').fadeOut();
+                    $('body').css('overflow','visible');
+                    $('.dim').remove();
+                    return false;
+                });
+            });
+        })(jQuery);
+    </script>
+    <!-- [e]: 기획전 끝 -->
+</body>
+</html>

@@ -192,14 +192,14 @@ footer .footer{max-width: 1100px; margin: 0 auto; text-align: center; line-heigh
    section .inner{padding: 50px 30px;}
    section h2{font-size: 35px; margin-bottom: 50px;}
    section .about > div{width: 100%;}
-   section .slide_txt{opacity: 1; position: static; background: none; margin-top: 10px;}
+   section .slide_img{border: none; border-bottom-left-radius: 0; border-bottom-right-radius: 0; position: relative; z-index: 2;}
+   section .slide_txt{opacity: 1; position: static; background: #fde39c; padding: 10px 0; border-top-left-radius: 0; border-top-right-radius: 0;}
    section .slide_txt li{color: #555; margin: 5px 0; font-size: 14px;}
    section .about .certificate ul li span:nth-child(1){width: 70px;}
    section .about ul li span{font-size: 13px;}
    section .about .skills ul li{border-radius: 10px; margin-bottom: 10px;}
    section .timeline .card .company_name{font-size: 15px;}
    section .timeline .card .date, section .timeline .card .details{font-size: 12px; line-height: 13px;}
-   section .slide_img{border-radius: 15px;}
    .pc{display: none;}
    .mo{display: block;}
  }
