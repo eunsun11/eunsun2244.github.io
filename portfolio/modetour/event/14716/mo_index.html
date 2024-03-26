@@ -1,0 +1,1994 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>14716</title>
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../css/common.min.css" />
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.min.css">
+    <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
+    <style type="text/css">
+        @font-face{font-family:BMJUA;src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_one@1.0/BMJUA.woff') format('woff');font-weight:400;font-style:normal}@font-face{font-family:BMEuljiro;font-weight:400;font-style:normal;src:url('https://cdn.jsdelivr.net/gh/webfontworld/BMEuljiro/BMEuljiro.eot');src:url('https://cdn.jsdelivr.net/gh/webfontworld/BMEuljiro/BMEuljiro.eot?#iefix') format('embedded-opentype'),url('https://cdn.jsdelivr.net/gh/webfontworld/BMEuljiro/BMEuljiro.woff2') format('woff2'),url('https://cdn.jsdelivr.net/gh/webfontworld/BMEuljiro/BMEuljiro.woff') format('woff'),url('https://cdn.jsdelivr.net/gh/webfontworld/BMEuljiro/BMEuljiro.ttf') format("truetype");font-display:swap}@font-face{font-family:GmarketSansLight;font-weight:400;font-style:normal;src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff');font-display:swap}@font-face{font-family:GmarketSansMedium;font-weight:400;font-style:normal;src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff');font-display:swap}@font-face{font-family:GmarketSansBold;font-weight:400;font-style:normal;src:url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff');font-display:swap}
+                            
+        .event_wrap{position: relative; overflow: hidden; text-align: center;}
+        .event_wrap a{color: #242525;}
+        .event_wrap button{border: none; background: none; padding: 0;}
+        .event_wrap img{width: 100%;}
+
+                
+        /* [s] 2023-11-06 수정, 추가 */
+        .event_wrap .img_txt{margin: 20px auto 0; text-align: left; display: flex; justify-content: space-between; align-items: center;}
+        .event_wrap .notice .img_txt{border-bottom: 2.5px solid #292929; padding-bottom: 7px; cursor: pointer; }
+        .event_wrap .notice .img_txt::after{content: ""; width: 20px; height: 20px; background: url('//img.modetour.com/promotion20/14716/ico_arrow.png') no-repeat center 0 / 100%; transition: 0.5s; transform: rotate(0);}
+        .event_wrap .notice .img_txt.on::after{transform: rotate(540deg);}
+        .event_wrap .notice ul{font-family: 'BMEuljiro'; font-size: 13.5px; color: #542209; text-align: left; line-height: 1;}
+        .event_wrap .notice ul li{margin-top: 5px; letter-spacing: -1px; padding-left: 7px; text-indent: -7px; word-break: keep-all; text-align: justify;} 
+        .event_wrap .notice p{font-family: 'BMEuljiro'; font-size: 15px; color: #1f1510; text-align: left; margin-top: 7px;}
+        .event_wrap .notice .n_list{display: none;}
+        /* [e] 2023-11-06 수정, 추가 */
+
+
+        .event_wrap [id^="cont"]{position: relative;}
+        .event_wrap [class^="e_slide"]{position: relative; cursor: grab;}
+        .event_wrap a[class*="cont0"]{display: inline-block; border-radius: 45px; transition: 0.2s; width: 69.375%;}
+        .event_wrap a[class*="cont0"]:hover{box-shadow: 10px 10px 10px rgba(0,0,0,0.3);}
+        .event_wrap .swiper{position: relative; overflow: hidden;}
+        .event_wrap .swiper-wrapper{align-items: center;}
+        .event_wrap .swiper-scrollbar{width: 150px; height: 8px; background: rgba(255,255,255,0.4); left: 50%; transform: translateX(-50%); position: absolute; z-index: 90;}
+        .event_wrap .swiper-scrollbar-drag{height: 14px; background: #FFF; border-radius: 50%; top: -3px; box-shadow: 5px 5px 10px rgba(0,0,0,0.2); cursor: grab;}
+        .event_wrap .e_btn{font-size: 0; color: transparent;}
+        .event_wrap .t_blind{position: absolute; width: 1px; height: 1px; clip: rect(0 0 0 0); overflow: hidden;}
+
+        .event_wrap .nav_group{position: absolute; padding: 10px 0; z-index: 99; overflow: scroll;}
+        .event_wrap .nav_group ul{display: flex; width: 162%;}
+        .event_wrap .nav_group ul li{display: inline-block; position: relative; padding-left: 8px;}
+        .event_wrap .nav_group ul li::before{content: ""; width: 4px; height: 12px; position: absolute; left: 0; top: 50%; transform: translateY(-70%); background: url('//img.modetour.com/promotion20/14716/bar.png') no-repeat center 0 / 100%;}
+        .event_wrap .nav_group ul li:first-child::before{display: none; margin-left: 0;}
+        .event_wrap .nav_group ul li a{display: block; background-image: url('//img.modetour.com/promotion20/14716/nav01_off.png'); background-repeat: no-repeat; background-position: center 0; background-size: 100%; width: 23.125vw; height: 9.5vw; font-size: 0; color: transparent;}
+        .event_wrap .nav_group ul li:nth-child(2) a{background-image: url('//img.modetour.com/promotion20/14716/nav02_off.png'); width: 24.750vw;}
+        .event_wrap .nav_group ul li:nth-child(3) a{background-image: url('//img.modetour.com/promotion20/14716/nav03_off.png'); width: 16.375vw;}
+        .event_wrap .nav_group ul li:nth-child(4) a{background-image: url('//img.modetour.com/promotion20/14716/nav04_off.png'); width: 22.875vw;}
+        .event_wrap .nav_group ul li:nth-child(5) a{background-image: url('//img.modetour.com/promotion20/14716/nav05_off.png'); width: 29.375vw;}
+        .event_wrap .nav_group ul li:nth-child(6) a{background-image: url('//img.modetour.com/promotion20/14716/nav06_off.png'); width: 19.625vw;}
+        .event_wrap .nav_group ul li:nth-child(7) a{background-image: url('//img.modetour.com/promotion20/14716/nav07_off.png'); width: 23.125vw;}
+        .event_wrap .nav_group ul li:nth-child(8) a{background-image: url('//img.modetour.com/promotion20/14716/nav08_off.png'); width: 23.250vw;}
+        .event_wrap .nav_group ul li:nth-child(9) a{background-image: url('//img.modetour.com/promotion20/14716/nav09_off.png'); width: 31.875vw;}
+        .event_wrap .nav_group ul li:nth-child(10) a{background-image: url('//img.modetour.com/promotion20/14716/nav10_off.png'); width: 27.000vw;}
+        .event_wrap .nav_group ul li.on a{background-image: url('//img.modetour.com/promotion20/14716/nav01_on.png');}
+        .event_wrap .nav_group ul li.on:nth-child(2) a{background-image: url('//img.modetour.com/promotion20/14716/nav02_on.png');}
+        .event_wrap .nav_group ul li.on:nth-child(3) a{background-image: url('//img.modetour.com/promotion20/14716/nav03_on.png');}
+        .event_wrap .nav_group ul li.on:nth-child(4) a{background-image: url('//img.modetour.com/promotion20/14716/nav04_on.png');}
+        .event_wrap .nav_group ul li.on:nth-child(5) a{background-image: url('//img.modetour.com/promotion20/14716/nav05_on.png');}
+        .event_wrap .nav_group ul li.on:nth-child(6) a{background-image: url('//img.modetour.com/promotion20/14716/nav06_on.png');}
+        .event_wrap .nav_group ul li.on:nth-child(7) a{background-image: url('//img.modetour.com/promotion20/14716/nav07_on.png');}
+        .event_wrap .nav_group ul li.on:nth-child(8) a{background-image: url('//img.modetour.com/promotion20/14716/nav08_on.png');}
+        .event_wrap .nav_group ul li.on:nth-child(9) a{background-image: url('//img.modetour.com/promotion20/14716/nav09_on.png');}
+        .event_wrap .nav_group ul li.on:nth-child(10) a{background-image: url('//img.modetour.com/promotion20/14716/nav10_on.png');}
+
+        .event_wrap .e_contents{padding-top: 40px; background: url('//img.modetour.com/promotion20/14716/cont_bg.jpg') no-repeat center 0 / 450vw;}
+        .event_wrap .cont_ttl{padding-top: 75px; margin-bottom: 35px;}
+
+        /* [s] 2023-10-30 수정 */
+        .event_wrap #cont01{background: url('//img.modetour.com/promotion20/14716/m_cont01_bg.jpg');}
+        .event_wrap #cont01 .cont_ttl{padding-top: 77px;}
+        .event_wrap #cont01 .badge_wrap{margin-bottom: 40px; font-size: 0; padding: 0 15px;}
+        .event_wrap #cont01 .badge_wrap button{height: 26.7vw; box-shadow: 10px 20px 20px rgba(0,0,0,0.4); font-size: 0; color: transparent;}
+        .event_wrap #cont01 .badge_wrap button:first-child{margin-left: 0;}
+        .event_wrap #cont01 .badge_wrap button.active{transform: rotateY(360deg); transition: transform 0.5s;}
+        .event_wrap #cont01 .badge_wrap .badge1_grp{display: flex; flex-wrap: wrap; justify-content: space-between;}
+        .event_wrap #cont01 .badge_wrap .badge1_grp button{width: 18.8%; position: relative; z-index: 3; background-image: url('//img.modetour.com/promotion20/14716/badge1_off.jpg'); background-repeat: no-repeat; background-position: center 0; background-size: 100%;}
+        .event_wrap #cont01 .badge_wrap .badge1_grp button:nth-child(2){background-image: url('//img.modetour.com/promotion20/14716/badge2_off.jpg');}
+        .event_wrap #cont01 .badge_wrap .badge1_grp button:nth-child(3){background-image: url('//img.modetour.com/promotion20/14716/badge3_off.jpg');}
+        .event_wrap #cont01 .badge_wrap .badge1_grp button:nth-child(4){background-image: url('//img.modetour.com/promotion20/14716/badge4_off.jpg');}
+        .event_wrap #cont01 .badge_wrap .badge1_grp button:nth-child(5){background-image: url('//img.modetour.com/promotion20/14716/badge5_off.jpg');}					
+        .event_wrap #cont01 .badge_wrap .badge1_grp button:nth-child(5)~button{margin-top: -10px; z-index: 2;}
+        .event_wrap #cont01 .badge_wrap .badge1_grp button.on{background-image: url('//img.modetour.com/promotion20/14716/badge1_on.jpg');}
+        .event_wrap #cont01 .badge_wrap .badge1_grp button.on:nth-child(2){background-image: url('//img.modetour.com/promotion20/14716/badge2_on.jpg');}
+        .event_wrap #cont01 .badge_wrap .badge1_grp button.on:nth-child(3){background-image: url('//img.modetour.com/promotion20/14716/badge3_on.jpg');}
+        .event_wrap #cont01 .badge_wrap .badge1_grp button.on:nth-child(4){background-image: url('//img.modetour.com/promotion20/14716/badge4_on.jpg');}
+        .event_wrap #cont01 .badge_wrap .badge1_grp button.on:nth-child(5){background-image: url('//img.modetour.com/promotion20/14716/badge5_on.jpg');}
+        .event_wrap #cont01 .badge_wrap .badge1_grp button:nth-child(6){background-image: url('//img.modetour.com/promotion20/14716/badge6_off.jpg');}
+        .event_wrap #cont01 .badge_wrap .badge1_grp button:nth-child(7){background-image: url('//img.modetour.com/promotion20/14716/badge7_off.jpg');}
+        .event_wrap #cont01 .badge_wrap .badge1_grp button:nth-child(8){background-image: url('//img.modetour.com/promotion20/14716/badge8_off.jpg');}
+        .event_wrap #cont01 .badge_wrap .badge1_grp button:nth-child(9){background-image: url('//img.modetour.com/promotion20/14716/badge9_off.jpg');}
+        .event_wrap #cont01 .badge_wrap .badge1_grp button:nth-child(10){background-image: url('//img.modetour.com/promotion20/14716/badge10_off.jpg');}					
+        .event_wrap #cont01 .badge_wrap .badge1_grp button:nth-child(10)~button{z-index: 1;}
+        .event_wrap #cont01 .badge_wrap .badge1_grp button.on:nth-child(6){background-image: url('//img.modetour.com/promotion20/14716/badge6_on.jpg');}
+        .event_wrap #cont01 .badge_wrap .badge1_grp button.on:nth-child(7){background-image: url('//img.modetour.com/promotion20/14716/badge7_on.jpg');}
+        .event_wrap #cont01 .badge_wrap .badge1_grp button.on:nth-child(8){background-image: url('//img.modetour.com/promotion20/14716/badge8_on.jpg');}
+        .event_wrap #cont01 .badge_wrap .badge1_grp button.on:nth-child(9){background-image: url('//img.modetour.com/promotion20/14716/badge9_on.jpg');}
+        .event_wrap #cont01 .badge_wrap .badge1_grp button.on:nth-child(10){background-image: url('//img.modetour.com/promotion20/14716/badge10_on.jpg');}
+        .event_wrap #cont01 .badge_wrap .badge1_grp button:nth-child(11){background-image: url('//img.modetour.com/promotion20/14716/badge11_off.jpg');}
+        .event_wrap #cont01 .badge_wrap .badge1_grp button:nth-child(12){background-image: url('//img.modetour.com/promotion20/14716/badge12_off.jpg');}
+        .event_wrap #cont01 .badge_wrap .badge1_grp button:nth-child(13){background-image: url('//img.modetour.com/promotion20/14716/badge13_off.jpg');}
+        .event_wrap #cont01 .badge_wrap .badge1_grp button:nth-child(14){background-image: url('//img.modetour.com/promotion20/14716/badge14_off.jpg');}
+        .event_wrap #cont01 .badge_wrap .badge1_grp button:nth-child(15){background-image: url('//img.modetour.com/promotion20/14716/badge15_off.jpg');}
+        .event_wrap #cont01 .badge_wrap .badge1_grp button.on:nth-child(11){background-image: url('//img.modetour.com/promotion20/14716/badge11_on.jpg');}
+        .event_wrap #cont01 .badge_wrap .badge1_grp button.on:nth-child(12){background-image: url('//img.modetour.com/promotion20/14716/badge12_on.jpg');}
+        .event_wrap #cont01 .badge_wrap .badge1_grp button.on:nth-child(13){background-image: url('//img.modetour.com/promotion20/14716/badge13_on.jpg');}
+        .event_wrap #cont01 .badge_wrap .badge1_grp button.on:nth-child(14){background-image: url('//img.modetour.com/promotion20/14716/badge14_on.jpg');}
+        .event_wrap #cont01 .badge_wrap .badge1_grp button.on:nth-child(15){background-image: url('//img.modetour.com/promotion20/14716/badge15_on.jpg');}
+        /* [e] 2023-10-30 수정 */
+        
+        /* [s] 2023-11-06 수정 */
+        .event_wrap #cont01 .cont01_guide1{padding: 0 15px 0 15px;}
+        .event_wrap #cont01 .cont01_guide2{padding: 0 0 0 15px;}
+        .event_wrap #cont01 .cont01_guide1 .img_txt img{width: 36.25%; margin: 0 auto 0 0;}
+        .event_wrap #cont01 .cont01_guide2 .img_txt img{width: 19.125%; margin: 0 auto 0 0;}
+        /* [e] 2023-11-06 수정 */
+        .event_wrap #cont01 .e_slide1 .swiper-wrapper{align-items: start;} /* 2023-11-01 추가 */
+        .event_wrap #cont01 .e_slide1 .swiper-slide{width: 269px;}
+        .event_wrap #cont01 .e_slide1 .swiper-slide > div:first-child{margin-top: 20px; box-shadow: 5px 5px 10px rgba(0,0,0,0.3);}
+        .event_wrap #cont01 .e_slide1 .swiper-slide > div + div{margin-top: 10px;}                                
+
+        .event_wrap .e_popup{position: fixed; top: 0; left: 0; right: 0; bottom: 0; background: rgba(0,0,0,0.7); z-index: 99;}
+        .event_wrap .e_popup .e_wrap{width: 66.5%; background: #FFF; position: fixed; top: 50%; left: 50%; transform: translate(-50%,-47%); z-index: 99; border-radius: 7.5px; padding: 48px 17px 20px 17px; box-sizing: border-box;}
+        .event_wrap .e_popup .e_wrap.sm{width: 56.5%}
+        .event_wrap .e_popup .pop_img1{width: 77.5px;}
+        .event_wrap .e_popup .pop_img2{width: 92.5px; top: -50px;}
+        .event_wrap .e_popup .pop_img3{width: 66px;}
+        .event_wrap .e_popup [class^="pop_img"]{position: absolute; top: -44px; left: 50%; transform: translateX(-50%);}
+        .event_wrap .e_popup p,
+        .event_wrap .e_popup li{font-family: '맑은고딕'; line-height: 1; letter-spacing: -1px; color: #3a3a3a;}
+        .event_wrap .e_popup ul{padding: 0 20px;}
+        .event_wrap .e_popup ul li{font-size: 12px; text-align: left; line-height: 15px; padding-left: 2px; text-indent: -2px; color: #525252; word-break: keep-all;}
+        .event_wrap .e_popup ul li::before{content: "*"; display: inline-block; vertical-align: middle; margin-right: 3px;}
+        .event_wrap .e_popup .popup_txt1{font-size: 14px; line-height: 16px;}
+        .event_wrap .e_popup .popup_txt2{font-size: 12px; color: #d37910; margin-bottom: 5px;}
+        .event_wrap .e_popup .popup_txt3{font-size: 16px; font-weight: bold; margin-bottom: 11px; line-height: 20px;}
+        .event_wrap .e_popup .gift_img+.popup_txt3{margin-top: 11px;}
+        .event_wrap .e_popup .popup_txt4{font-size: 14px; margin-top: 20px; margin-bottom: 5px; font-weight: bold;}
+        .event_wrap .e_popup5 .popup_txt4{margin-top: 0;}
+        .event_wrap .e_popup .popup_txt5{font-size: 12px; font-weight: 300; line-height: 15px;}
+        .event_wrap .e_popup .popup_txt5 > span{font-size: 14px; display: block; font-weight: 500; margin-bottom: 5px;}
+        .event_wrap .e_popup form{margin-top: 15px;}
+        .event_wrap .e_popup form .e_flex{display: flex; gap: 0 7px;}
+        .event_wrap .e_popup label{font-family: '맑은고딕'; display: block; font-size: 12px; margin-bottom: 6px; font-weight: normal; text-align: left; color: #383838;}
+        .event_wrap .e_popup input{padding: 10px 7px; box-sizing: border-box; font-size: 12px; color: #383838; border: 1px #d0d0d0 solid;  width: 100%;} 
+        .event_wrap .e_popup .e_flex div{flex: 1;}
+        .event_wrap .e_address{margin-top: 12px;}
+        .event_wrap .e_address .e_address_btn_area .e_address_btn{flex: 0 0 64px; background: #323232; color: #FFF; border: none; font-size: 12px;}
+        .event_wrap .e_address input{width: 100%; padding: 6px 7px;}
+        .event_wrap .e_address #addr1{margin: 6px 0;}
+        .event_wrap .e_popup .btn_box{margin-top: 19px; display: flex; gap: 0 5px; justify-content: center;}
+        .event_wrap .e_popup .btn_box .e_popup_btn{display: inline-block; width: 70px; height: 34px; line-height: 30px; font-size: 12px; border-radius: 35px; border: 1px #434343 solid; box-sizing: border-box; color: #575757;}
+        .event_wrap .e_popup .btn_box .e_popup_btn+.e_popup_btn{width: calc(100% - 70px); background: #434343; color: #e1e0e0; font-weight: bold;}
+        .event_wrap .e_popup6 .e_flex{padding: 0 20px; margin-top: 10px;}
+        .event_wrap .e_popup6 .btn_box .e_popup_btn{width: calc(100% - 86px);}
+        .event_wrap .e_popup6 .btn_box .e_popup_btn+.e_popup_btn{width: 86px;}
+        .event_wrap .e_popup .t_line{display: inline-block; margin: 10px 0; border-bottom: 1px solid #666666;}
+        .event_wrap .e_popup8 .popup_txt1{font-weight: bold;}
+        
+
+        .event_wrap #cont02{background: url('//img.modetour.com/promotion20/14716/cont02_bg.jpg') no-repeat center 0 / 420vw;}
+        .event_wrap #cont02 .e_slide2{margin-bottom: 79px;}			
+        .event_wrap #cont02 .e_slide2 .swiper-slide img{box-shadow: 0 10px 10px rgba(0,0,0,0.2);}
+        .event_wrap #cont02 .e_slide2 .swiper-scrollbar{bottom: -39px;}
+        /*.event_wrap #cont02 .img_txt{border-bottom: 2.5px solid #292929; padding-bottom: 7px;} 2023-11-06 삭제 */
+        .event_wrap #cont02 .img_txt + ul{display: none;}
+        .event_wrap #cont02 .img_txt button{margin-right: 10px; transform: rotate(0deg); transition: 0.5s; width: 20px; height: 20px;}
+        .event_wrap #cont02 .img_txt button.on{transform: rotate(540deg);}
+        .event_wrap #cont02 .notice{margin: 0 15px;}
+        .event_wrap #cont02 .notice .img_txt > img{width: 41.125%;}
+
+        .event_wrap .e_video_cont{background: url('//img.modetour.com/promotion20/14716/bg01.jpg');} /* 2023-11-06 추가 */
+        .event_wrap .e_video_cont .cont_ttl{padding-top: 95px;}
+        /* [s] 2023-11-06 수정, 추가 */
+        .event_wrap .card_dsc{background: url('//img.modetour.com/promotion20/14716/bg01.jpg'); position: relative;}
+        .event_wrap .card_dsc a{position: absolute; width: 41%; height: 36%; left: 6%; top: 36%; font-size: 0; color: transparent;}
+        .event_wrap .card_dsc a+a{left: 53%;}
+        .event_wrap #cont02 .e_video{padding-bottom: 120px;}
+        /* [e] 2023-11-06 수정, 추가 */                                
+        /* [e] 2023-11-08 추가 */
+        .event_wrap #cont02 .e_video .swiper-slide{height: 42vw;}
+        .event_wrap #cont02 .e_video .swiper-slide iframe,
+        .event_wrap #cont02 .e_video .swiper-slide video{width: 74%; height: 100%;}
+        /* [e] 2023-11-08 추가 */
+        .event_wrap #cont02 .e_slide3 .swiper-slide{width: 100%;}
+        .event_wrap #cont02 .e_slide3 .swiper-slide img{width: 73.75%;}
+        .event_wrap #cont02 .e_slide3 .swiper-slide-active{padding: 10% 0; background: url('//img.modetour.com/promotion20/14716/video_frame.png') no-repeat center 0 / 100%;}
+        .event_wrap #cont02 .e_slide3 .swiper-scrollbar{bottom: -38px;}
+        
+        .event_wrap #cont03{background: url('//img.modetour.com/promotion20/14716/cont03_bg.jpg') no-repeat center 0; padding-bottom: 80px;}
+        .event_wrap #cont03 .time{color: #FFF; margin-bottom: 15px; font-family: 'GmarketSansBold'; font-size: 15px;}
+        .event_wrap #cont03 .time span{display: inline-block; margin: 0 10px 0 5px;}
+        .event_wrap #cont03 .e_slide4 .swiper-slide{width: 72.125%; display: flex; align-items: center;} /* 2023-11-09 수정 */
+        .event_wrap #cont03 .e_slide4 .swiper-slide>div{width: 100%;} /* 2023-11-09 추가 */
+        .event_wrap #cont03 .e_slide4 .timedeal_area{line-height: 1; border-radius: 15px; letter-spacing: -1px; position: relative;}
+        .event_wrap #cont03 .e_slide4 .timedeal_area .itme_img::before{content: ""; position: absolute; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.7); z-index: 2; border-radius: 15px;}
+        .event_wrap #cont03 .e_slide4 .swiper-slide-active .timedeal_area{background: #FFF; padding: 15px;}
+        .event_wrap #cont03 .e_slide4 .swiper-slide-active .timedeal_area .itme_img{margin: 15px auto 10px; width: 83.6%; height: 34.5vw; overflow: hidden; border-radius: 15px;} /* 2023-11-08 수정 */
+        /* .event_wrap #cont03 .e_slide4 .swiper-slide-active .timedeal_area .itme_img img{width: 83.6%;} 2023-11-08 삭제 */
+        .event_wrap #cont03 .e_slide4 .swiper-slide-active .timedeal_area .itme_img::before{display: none;}
+        .event_wrap #cont03 .e_slide4 .timedeal_area .timedeal_txt1{font-family: '맑은고딕'; font-size: 12px; color: #fb781a; letter-spacing: -1.5px;}
+        .event_wrap #cont03 .e_slide4 .timedeal_area .timedeal_txt2{display: block !important; font-family: 'GmarketSansLight'; font-weight: 600; color: #FFF; position: absolute; top: 50%; left: 50%; transform: translate(-50%,-50%); z-index: 3; font-size: 15px; line-height: 18px; word-break: keep-all; letter-spacing: -1px; width: 100%; box-sizing: border-box; padding: 0 5px;}
+        .event_wrap #cont03 .e_slide4 .swiper-slide-active .timedeal_area .timedeal_txt2.on{color: #272727; position: relative; top: 0; left: 0; transform: translate(0,0); font-family: 'GmarketSansBold'; padding: 0 55px; margin: 20px 0 25px;}
+        .event_wrap #cont03 .e_slide4 .timedeal_area .timedeal_txt3{font-family: 'GmarketSansBold'; font-size: 18px; color: #fb781a; font-size: 0;}
+        .event_wrap #cont03 .e_slide4 .timedeal_area .timedeal_txt3 del{font-family: 'GmarketSansLight'; color: #c5c5c5; font-size: 12px; font-weight: 500; margin-right: 7px;}
+        .event_wrap #cont03 .e_slide4 .timedeal_area .timedeal_txt3 span{font-size: 20px;}
+        .event_wrap #cont03 .e_slide4 .timedeal_area .timedeal_txt3 small{font-size: 12px; font-family: '맑은고딕';}
+        .event_wrap #cont03 .e_slide4 .timedeal_area .itme_img{position: relative; height: 54vw; overflow: hidden; border-radius: 15px;} /* 2023-11-09 수정 */
+        .event_wrap #cont03 .e_slide4 .timedeal_area .itme_img .td_label{position: absolute; top: 10px; left: 0;}
+        .event_wrap #cont03 .e_slide4 .timedeal_area .itme_img .td_label span{display: block; width: 75px; height: 20px; line-height: 20px; color: #FFF; font-size: 12px; font-family: 'GmarketSans'; border-radius: 5px;}
+        .event_wrap #cont03 .e_slide4 .timedeal_area .itme_img .td_label span+span{margin-top: 3.5px;}
+        .event_wrap #cont03 .e_slide4 .timedeal_area .itme_img .td_label1{background: #195aec;}
+        .event_wrap #cont03 .e_slide4 .timedeal_area .itme_img .td_label2{background: #f85074;}
+        .event_wrap #cont03 .e_slide4 .timedeal_area .itme_img img{border-radius: 16px; width: 100%; height: 100%;} /* 2023-11-09 수정 */
+        .event_wrap #cont03 .e_slide4 .timedeal_area .md_comment{position: relative;}
+        .event_wrap #cont03 .e_slide4 .timedeal_area .md_comment p{position: absolute; bottom: 14%; right: 5%; width: 60%; height: 70%; font-size: 10px; font-family: '맑은고딕'; letter-spacing: -1px; word-break: keep-all; text-align: left; line-height: 15px; overflow: hidden; display: flex; align-items: center;}
+        .event_wrap #cont03 .e_slide4 .timedeal_area .on{display: none;}
+        .event_wrap #cont03 .e_slide4 .swiper-slide-active .timedeal_area .on{display: block;}
+        .event_wrap #cont03 .e_slide4 .swiper-scrollbar{bottom: -35px;}
+
+        .event_wrap #cont04{background: url('//img.modetour.com/promotion20/14716/cont04_bg.jpg') center 0; padding: 70px 0 75px;}
+        .event_wrap #cont04 .cont_ttl{padding-top: 0;}
+        .event_wrap #cont04 .btn_group{margin: 0 auto 32px; padding: 0 15px;}
+        .event_wrap #cont04 .btn_group > ul{display: flex; flex-wrap: wrap; justify-content: center; gap: 7px 3px;}
+        .event_wrap #cont04 .btn_group > ul > li{position: relative; flex-basis: 32%;}
+        .event_wrap #cont04 .btn_group > ul > li > button{background: #092d6b; width: 100%; height: 32px; border-radius: 7px; font-family: 'GmarketSansMedium'; font-size: 14px; color: #c6dded; letter-spacing: -1px; white-space: nowrap; padding: 0 5px;} 
+        .event_wrap #cont04 .btn_group > ul > li > button.on{background: #f85074; border: 3px solid #123a6c; color: #242525; font-family: 'GmarketSansBold';}
+        .event_wrap #cont04 .btn_group .menu_list{display: none; font-size: 0; width: 100%; padding: 5px 0; background: #FFF; border-radius: 7px; position: absolute; top: 35px; left: 0; z-index: 5;}
+        .event_wrap #cont04 .btn_group .menu_list button{width: 100%; height: 32px; font-size: 12px;}
+        .event_wrap #cont04 .btn_group .menu_list button:hover{background: #ededed;}
+        .event_wrap #cont04 .e_slide5{margin-bottom: 80px; padding: 0 15px;}
+
+        
+        .event_wrap #cont04 .e_slide5 .swiper-slide img{border-radius: 26px;}
+        .event_wrap #cont04 .e_slide5 .swiper-scrollbar{bottom: -78px;}
+        .event_wrap #cont04 .e_slide5 .swiper-slide .bg_img{border-top-right-radius: 15px; border-top-left-radius: 15px; max-height: 210px; overflow: hidden;}
+        .event_wrap #cont04 .e_slide5 .swiper-slide .txt_box{padding: 17px 12px; background: #f0faff; text-align: left; border-top-left-radius: 15px; border-top-right-radius: 15px; position: relative; z-index: 2;} /* 2023-11-06 수정 */
+        .event_wrap #cont04 .e_slide5 .swiper-slide .txt_box + .txt_box{border-top-left-radius: 0; border-top-right-radius: 0; border-bottom-left-radius: 15px; border-bottom-right-radius: 15px; margin-top: 0; padding: 15px; background: #c63134; position: relative;}
+        .event_wrap #cont04 .e_slide5 .swiper-slide .txt_box + .txt_box::before{content: ""; position: absolute; left: 5%; top: -2px; width: 90%; border-top: 2px dashed #000;}
+        .event_wrap #cont04 .e_slide5 .txt_box p{word-break: keep-all; line-height: 15px; letter-spacing: -0.5px; font-family: '맑은고딕';}
+        .event_wrap #cont04 .e_slide5 .txt_box .ticket_txt1{font-size: 15px; color: #cf2e31; font-weight: bold; margin-bottom: 20px;} /* 2023-11-06 margin 수정 */
+        .event_wrap #cont04 .e_slide5 .txt_box .ticket_txt2{overflow: hidden; font-size: 0; margin-bottom: 5px;} /* 2023-11-06 margin 수정 */
+        .event_wrap #cont04 .e_slide5 .txt_box .ticket_txt2 span{font-size: 12px;}
+        .event_wrap #cont04 .e_slide5 .txt_box .logo{display: inline-block; width: 10px; height: 10px; margin-right: 5px; vertical-align: top; overflow: hidden;}
+        .event_wrap #cont04 .e_slide5 .txt_box .logo img{width: 100%;}
+        .event_wrap #cont04 .e_slide5 .txt_box .ico_check{padding-left: 15px; text-indent: -15px;}
+        .event_wrap #cont04 .e_slide5 .txt_box .ico_check::before{content: ""; display: inline-block; width: 10px; height: 10px; background: url('//img.modetour.com/promotion20/14716/ico_check.png') no-repeat center 0 / 100%; margin-right: 5px; vertical-align: top;}
+        .event_wrap #cont04 .e_slide5 .txt_box .ticket_txt3{font-size: 12px; background: #e9e9e9; width: 100%; height: 26px; line-height: 26px; text-align: center; border-radius: 10px; margin-top: 15px;} /* 2023-11-06 margin 수정 */
+        .event_wrap #cont04 .e_slide5 .txt_box .ticket_txt4{font-weight: bold;}
+        .event_wrap #cont04 .e_slide5 .txt_box .ticket_txt4 span{font-size: 16px; color: #FFF;}
+        .event_wrap #cont04 .e_slide5 .txt_box .ticket_txt4 small{font-size: 13px; color: #FFF;}
+
+        
+        .event_wrap #cont04 .e_slide5 .swiper-slide img{border-radius: 15px;}
+        .event_wrap #cont04 .e_slide5 .swiper-scrollbar{bottom: -39px;}
+        .event_wrap #cont04 .cont04_btn{width: 93.375%;}
+
+        .event_wrap #cont05{background: url('//img.modetour.com/promotion20/14716/cont05_bg.jpg') center 0; position: relative;}
+        .event_wrap #cont05 .e_btn{width: 42%; height: 13vw; position: absolute; top: 107vw; left: 6%; font-size: 0; color: transparent; transition: 0.2s;}
+        .event_wrap #cont05 .e_btn:hover{box-shadow: 10px 10px 10px rgba(0,0,0,0.2);}
+        .event_wrap #cont05 .e_btn:nth-of-type(2){top: 171vw; height: 12vw;}
+
+        .event_wrap #cont06{background: url('//img.modetour.com/promotion20/14716/cont05_bg.jpg') center 0; position: relative;}
+        .event_wrap #cont06 .cont_ttl{padding-top: 85px;} /* 2023-11-01 수정 */
+        /* [s] 2023-11-06 추가 */
+        .event_wrap #cont06 .sub_ttl{width: 100%; margin: 0 auto; height: 40px; display: flex; align-items: center; justify-content: center;}
+        .event_wrap #cont06 .sub_ttl span{font-size: 18px; font-family: 'BMEuljiro'; color: #FFF; text-overflow: ellipsis; white-space: nowrap; overflow: hidden;}
+        .event_wrap #cont06 .frame{width: 100%; height: 65vw; margin: 0 auto; background: url('//img.modetour.com/promotion20/14716/cont06_frame.jpg') no-repeat center 0 / 100%;}
+        .event_wrap #cont06 .frame span{display: block; width: 68%; height: 54.2vw; margin: 0 auto; padding-top: 8.6vw; overflow: hidden; box-sizing: border-box;}
+        .event_wrap #cont06 .frame img{width: 100%;}
+        /* [e]// 2023-11-06 추가 */
+        .event_wrap #cont06 .e_slide6{padding: 0 15px;}
+        .event_wrap #cont06 .btn_group{width: 100%; height: 75px; display: flex; margin: 0 auto;}
+        .event_wrap #cont06 .btn_group button{flex: 1; font-family: 'GmarketSansMedium'; background: #d6d6d6; color: #454545; font-size: 13px; letter-spacing: -1px; line-height: 16px; border-left: 2px solid #8795a6;}
+        .event_wrap #cont06 .btn_group button.on, .event_wrap #cont06 .btn_group button:hover{background: #003067; color: #8cffcf; font-family: 'GmarketSansBold';}
+        .event_wrap #cont06 .btn_group button:first-child{border-left: none;}
+        .event_wrap #cont06 .con_group{background: url('//img.modetour.com/promotion20/14716/cont06_item_bg.jpg') no-repeat center 0 / 155vw;}
+        .event_wrap #cont06 .con_group .con{padding-bottom: 190px; display: none;}
+        .event_wrap #cont06 .con_group .con.on{display: block;}
+        .event_wrap #cont06 .con_group .swiper-slide .bg_img{border-top-right-radius: 15px; border-top-left-radius: 15px; overflow: hidden; height: 30vw;} /* 2023-11-08 수정2 */
+        .event_wrap #cont06 .con_group .swiper-slide .txt_box{padding: 15px 15px 20px 15px; background: #FFF; text-align: left; border-radius: 15px; margin-top: -40px; position: relative; z-index: 2;}
+        .event_wrap #cont06 .con_group .swiper-slide .txt_box p{font-family: '맑은고딕'; letter-spacing: -1px;}
+        .event_wrap #cont06 .con_group .swiper-slide .thema_txt1{font-size: 13px; font-weight: bold; height: 37px; line-height: 18px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; max-height: 37px;} /* 2023-11-08 수정2 */
+        .event_wrap #cont06 .con_group .swiper-slide .thema_txt2{font-size: 12px; margin: 3px 0 10px; color: #4f4f4f; line-height: 15px;  height: 37px; line-height: 18px; overflow: hidden; text-overflow: ellipsis; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; max-height: 37px;} /* 2023-11-08 수정2 */
+        .event_wrap #cont06 .con_group .swiper-slide .bg_img img{width: 100%;}
+        .event_wrap #cont06 .con_group .swiper-slide .thema_txt3{font-size: 15px; color: #c63134; font-weight: bold;}
+        .event_wrap #cont06 .con_group .swiper-slide .thema_txt3 small{font-size: 12px;}
+        .event_wrap #cont06 .con_group .swiper-scrollbar{bottom: -110px;}
+
+        .event_wrap #cont07{background: #d7d7d7; padding-bottom: 85px;}
+        .event_wrap #cont07 .btn_wrap{padding: 0 15px; margin: 0 auto; display: flex; flex-wrap: wrap; justify-content: space-between; gap: 22px 0;}
+        .event_wrap #cont07 .btn_wrap a{display: block; width: 47%;}
+        
+        .event_wrap #cont08, .event_wrap #cont09, .event_wrap #cont10{background: url('//img.modetour.com/promotion20/14716/cont08_bg.jpg');}
+        .event_wrap #cont08 .cont08_btn{margin-bottom: 15px;}
+
+        .event_wrap #cont09 .swiper-scrollbar{bottom: 10px;}
+
+        .event_wrap #cont10{padding-bottom: 175px;}
+        .event_wrap #cont10 .swiper-slide img{border-radius: 15px;}
+        .event_wrap #cont10 .swiper-scrollbar{bottom: -35px;}
+    </style>
+</head>
+<body>
+    <div class="event_wrap">
+        <div class="e_top">
+            <img src="//img.modetour.com/promotion20/14716/ttl.jpg" alt="추억의 옛날 가격 메가세일! 그 시대가 돌아와졌읍니다! 유행도 돌고! 가격도 돌고! 2023년11월13일부터 2023년12월22일까지">
+        </div>
+        <div class="nav_group">
+            <ul>
+                <li><a href="#cont01">추억의 뽑기</a></li>
+                <li><a href="#cont02">할인 및 쿠폰</a></li>
+                <li><a href="#cont03">타임딜</a></li>
+                <li><a href="#cont04">땡처리항공</a></li>
+                <li><a href="#cont05">메가항공/호텔</a></li>
+                <li><a href="#cont06">테마상품</a></li>
+                <li><a href="#cont07">이벤트혜택</a></li>
+                <li><a href="#cont08">라이브방송</a></li>
+                <li><a href="#cont09">별자리 추천상품</a></li>
+                <li><a href="#cont10">지역별 기획전</a></li>
+            </ul>
+        </div>
+        <div class="e_contents">
+            <div id="cont01" class="e_cont">
+                <div class="cont_ttl">
+                    <img src="//img.modetour.com/promotion20/14716/cont01_ttl.png" alt="여행을 즐기는 완벽한 방법 1. 매일매일! 즉석당첨! 추억의 뽑기. 추억의 뽑기 찬스로 소중한 사람들과 여행을 준비해보세요! 기간 : 2023년 11월 13일 부터 2023년 12월 22일 까지.">
+                </div>
+                <!-- [s] 2023-10-23 수정 -->
+                <div class="badge_wrap">
+                    <div class="badge1_grp">
+                        <button type="button">1</button>
+                        <button type="button">2</button>
+                        <button type="button">3</button>
+                        <button type="button">4</button>
+                        <button type="button">5</button>									
+                        <button type="button">6</button>
+                        <button type="button">7</button>
+                        <button type="button">8</button>
+                        <button type="button">9</button>
+                        <button type="button">10</button>
+                        <button type="button">11</button>
+                        <button type="button">12</button>
+                        <button type="button">13</button>
+                        <button type="button">14</button>
+                        <button type="button">15</button>
+                    </div>
+                </div>
+                <!-- // [e]2023-10-23 수정 -->
+                <a class="cont01_btn"><img src="//img.modetour.com/promotion20/14716/cont01_btn.png" alt="선택한 번호판 뽑기"></a>
+                <!-- [s] 팝업 -->
+                    <!-- [s] popup1 -->
+                    <div class="e_popup e_popup1">
+                        <div class="e_wrap sm">
+                            <img src="//img.modetour.com/promotion20/14716/ico_p01.png" alt="" class="pop_img1">
+                            <p class="popup_txt1">로그인 후<br>이벤트 참여가 가능합니다.</p>
+                            <div class="btn_box">
+                                <a href="#" class="e_popup_btn close_btn">닫기</a>
+                                <a href="#" class="e_popup_btn">로그인</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- [e] //popup1 -->								
+                    <!-- [s] popup2 -->
+                    <div class="e_popup e_popup2">
+                        <div class="e_wrap sm">
+                            <img src="//img.modetour.com/promotion20/14716/ico_p02.png" alt="" class="pop_img2">
+                            <p class="popup_txt2">추억의 뽑기 이벤트</p>
+                            <p class="popup_txt3">당첨 축하합니다!</p>
+                            <div class="gift_img"><img src="//img.modetour.com/promotion20/14716/gift01.jpg" alt=""></div>
+                            <p class="popup_txt3">모두투어상품권<br>100만원</p>
+                            <p class="popup_txt5">내일 또 만나요~!</p>
+                            <div class="btn_box">
+                                <a href="#" class="e_popup_btn close_btn">닫기</a>
+                                <a href="#" class="e_popup_btn">공유하기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- [e] //popup2 -->
+                    <!-- [s] popup3 -->
+                    <div class="e_popup e_popup3">
+                        <div class="e_wrap">
+                            <img src="//img.modetour.com/promotion20/14716/ico_p02.png" alt="" class="pop_img2">
+                            <p class="popup_txt2">추억의 뽑기 이벤트</p>
+                            <p class="popup_txt3">당첨 축하합니다!</p>
+                            <p class="popup_txt5"><span>경품을 받으실 주소를 입력해주세요.</span>(배송지 수정 안되오니 반드시 확인해 주세요)</p>
+                            <form action="" name="" method="">
+                                <fieldset>
+                                    <legend class="t_blind">배송 정보</legend>
+                                    <div class="e_flex">
+                                        <div>
+                                            <label for="e_name">수령인</label> 
+                                            <input type="text" name="e_name" id="e_name" placeholder="이름을 입력하세요">
+                                        </div>
+                                        <div>
+                                            <label for="e_mobile">연락처</label> 
+                                            <input type="text" name="e_mobile" id="e_mobile" placeholder="숫자만 입력하세요">
+                                        </div>
+                                    </div>
+                                    <div class="e_address">	
+                                        <label for="postalCode">주소</label>
+                                        <div class="e_address_btn_area e_flex">		
+                                            <input type="text" name="postalCode" id="potalCode">
+                                            <input type="button" value="검색" class="e_address_btn">
+                                        </div>	
+                                        <label for="addr1" class="t_blind">상세주소</label>
+                                        <input type="text" name="addr1" id="addr1">
+                                        <label for="addr2" class="t_blind">상세주소</label>
+                                        <input type="text" name="addr2" id="addr2">
+                                    </div>
+                                </fieldset>    
+                            </form>		
+                            <div class="btn_box">
+                                <a href="#" class="e_popup_btn close_btn">닫기</a>
+                                <a href="#" class="e_popup_btn">확 인</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- [e] //popup3 -->
+                    <!-- [s] popup4 -->
+                    <div class="e_popup e_popup4">
+                        <div class="e_wrap sm">
+                            <img src="//img.modetour.com/promotion20/14716/ico_p02.png" alt="" class="pop_img2">
+                            <p class="popup_txt2">추억의 뽑기 이벤트</p>
+                            <p class="popup_txt3">당첨 축하합니다!</p>									
+                            <p class="popup_txt4">배송지 입력 완료</p>
+                            <p class="popup_txt5">입력해주신 주소로 경품이<br>발송될 예정입니다.</p>
+                            <div class="btn_box">
+                                <a href="#" class="e_popup_btn close_btn">닫기</a>
+                                <a href="#" class="e_popup_btn">공유하기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- [e] //popup4 -->
+                    <!-- [s] popup5 -->
+                    <div class="e_popup e_popup5">
+                        <div class="e_wrap sm">
+                            <img src="//img.modetour.com/promotion20/14716/ico_p03.png" alt="" class="pop_img3">
+                            <p class="popup_txt4">오늘은 이미 참여하셨습니다.</p>
+                            <p class="popup_txt5">내일 또 만나요~!</p>
+                            <div class="btn_box">
+                                <a href="#" class="e_popup_btn close_btn">닫기</a>
+                                <a href="#" class="e_popup_btn">확 인</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- [e] //popup5 -->
+                    <!-- [s] popup6 -->
+                    <div class="e_popup e_popup6 ">
+                        <div class="e_wrap">
+                            <img src="//img.modetour.com/promotion20/14716/ico_p02.png" alt="" class="pop_img2">
+                            <p class="popup_txt2">추억의 뽑기 이벤트</p>
+                            <p class="popup_txt3">당첨 축하합니다!</p>
+                            <ul>
+                                <li>SSF SHOP 코인은 SSF SHOP 사이트에서 사용가능합니다.</li>
+                                <li>SSF SHOP 아이디를 반드시 확인해 주세요.</li>
+                                <li>SSF SHOP 아이디 미등록 시 추후 개별 연락을 드릴 예정입니다.</li>
+                            </ul>
+                            <form action="" name="" method="">
+                                <fieldset>
+                                    <legend class="t_blind">SSF SHOP</legend>
+                                    <div class="e_flex">	
+                                        <div>
+                                            <label for="e_id">SSF SHOP 아이디</label>
+                                            <input type="text" name="e_id" id="e_id" placeholder="아이디를 입력하세요">
+                                        </div>
+                                    </div>	
+                                    <div class="btn_box">
+                                        <a href="#" class="e_popup_btn close_btn">아이디 나중에 등록하기</a>
+                                        <a href="#" class="e_popup_btn">입력완료</a>
+                                    </div>
+                                </fieldset>    
+                            </form>	
+                        </div>
+                    </div>
+                    <!-- [e] //popup6 -->
+                    <!-- [s] popup7 -->
+                    <div class="e_popup e_popup7 ">
+                        <div class="e_wrap sm">
+                            <img src="//img.modetour.com/promotion20/14716/ico_p02.png" alt="" class="pop_img2">
+                            <p class="popup_txt2">추억의 뽑기 이벤트</p>
+                            <p class="popup_txt3">당첨 축하합니다!</p>									
+                            <p class="popup_txt4">아이디 입력 완료</p>
+                            <p class="popup_txt5">감사합니다.</p>
+                            <div class="btn_box">
+                                <a href="#" class="e_popup_btn close_btn">닫기</a>
+                                <a href="#" class="e_popup_btn">공유하기</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- [e] //popup7 -->
+                    <!-- [s] popup8 -->
+                    <div class="e_popup e_popup8">
+                        <div class="e_wrap">
+                            <img src="//img.modetour.com/promotion20/14716/ico_p03.png" alt="" class="pop_img3">
+                            <p class="popup_txt1">마케팅 정보 활용에 동의한 경우<br>이벤트참여가 가능합니다.</p>
+                            <p class="popup_txt5"><a href="#"><span class="t_line">다음에 참여하기</span></a></p>
+                            <div class="btn_box">
+                                <a href="#" class="e_popup_btn close_btn">닫기</a>
+                                <a href="#" class="e_popup_btn">마케팅 정보 활용 동의</a>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- [e] //popup8 -->
+                <!-- [e] //팝업 -->
+                <!-- [s] 2023-11-06 수정 -->
+                <div class="cont01_guide2">
+                    <div class="img_txt"><img src="//img.modetour.com/promotion20/14716/cont01_txt2.png" alt="경품리스트"></div>
+                    <div class="e_slide1">
+                        <div class="swiper">
+                            <!-- [s] 2023-11-01 수정 -->
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <div><img src="//img.modetour.com/promotion20/14716/gift_item01.gif" alt=""></div>
+                                    <div><img src="//img.modetour.com/promotion20/14716/gift_item01_txt.png" alt=""></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div><img src="//img.modetour.com/promotion20/14716/gift_item02.gif" alt=""></div>
+                                    <div><img src="//img.modetour.com/promotion20/14716/gift_item02_txt.png" alt=""></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div><img src="//img.modetour.com/promotion20/14716/gift_item03.gif" alt=""></div>
+                                    <div><img src="//img.modetour.com/promotion20/14716/gift_item03_txt.png" alt=""></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div><img src="//img.modetour.com/promotion20/14716/gift_item04.gif" alt=""></div>
+                                    <div><img src="//img.modetour.com/promotion20/14716/gift_item04_txt.png" alt=""></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div><img src="//img.modetour.com/promotion20/14716/gift_item05.gif" alt=""></div>
+                                    <div><img src="//img.modetour.com/promotion20/14716/gift_item05_txt.png" alt=""></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div><img src="//img.modetour.com/promotion20/14716/gift_item06.gif" alt=""></div>
+                                    <div><img src="//img.modetour.com/promotion20/14716/gift_item06_txt.png" alt=""></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div><img src="//img.modetour.com/promotion20/14716/gift_item07.gif" alt=""></div>
+                                    <div><img src="//img.modetour.com/promotion20/14716/gift_item07_txt.png" alt=""></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div><img src="//img.modetour.com/promotion20/14716/gift_item08.gif" alt=""></div>
+                                    <div><img src="//img.modetour.com/promotion20/14716/gift_item08_txt.png" alt=""></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div><img src="//img.modetour.com/promotion20/14716/gift_item09.gif" alt=""></div>
+                                    <div><img src="//img.modetour.com/promotion20/14716/gift_item09_txt.png" alt=""></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div><img src="//img.modetour.com/promotion20/14716/gift_item10.gif" alt=""></div>
+                                    <div><img src="//img.modetour.com/promotion20/14716/gift_item10_txt.png" alt=""></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div><img src="//img.modetour.com/promotion20/14716/gift_item11.gif" alt=""></div>
+                                    <div><img src="//img.modetour.com/promotion20/14716/gift_item11_txt.png" alt=""></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div><img src="//img.modetour.com/promotion20/14716/gift_item12.gif" alt=""></div>
+                                    <div><img src="//img.modetour.com/promotion20/14716/gift_item12_txt.png" alt=""></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div><img src="//img.modetour.com/promotion20/14716/gift_item13.gif" alt=""></div>
+                                    <div><img src="//img.modetour.com/promotion20/14716/gift_item13_txt.png" alt=""></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div><img src="//img.modetour.com/promotion20/14716/gift_item14.gif" alt=""></div>
+                                    <div><img src="//img.modetour.com/promotion20/14716/gift_item14_txt.png" alt=""></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div><img src="//img.modetour.com/promotion20/14716/gift_item15.gif" alt=""></div>
+                                    <div><img src="//img.modetour.com/promotion20/14716/gift_item15_txt.png" alt=""></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div><img src="//img.modetour.com/promotion20/14716/gift_item16.gif" alt=""></div>
+                                    <div><img src="//img.modetour.com/promotion20/14716/gift_item16_txt.png" alt=""></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div><img src="//img.modetour.com/promotion20/14716/gift_item17.gif" alt=""></div>
+                                    <div><img src="//img.modetour.com/promotion20/14716/gift_item17_txt.png" alt=""></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div><img src="//img.modetour.com/promotion20/14716/gift_item18.gif" alt=""></div>
+                                    <div><img src="//img.modetour.com/promotion20/14716/gift_item18_txt.png" alt=""></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div><img src="//img.modetour.com/promotion20/14716/gift_item19.gif" alt=""></div>
+                                    <div><img src="//img.modetour.com/promotion20/14716/gift_item19_txt.png" alt=""></div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div><img src="//img.modetour.com/promotion20/14716/gift_item20.gif" alt=""></div>
+                                    <div><img src="//img.modetour.com/promotion20/14716/gift_item20_txt.png" alt=""></div>
+                                </div>
+                            </div>
+                            <!-- // [e] 2023-11-01 수정 -->
+                        </div>
+                    </div>
+                </div>
+                <div class="cont01_guide1">
+                    <div class="notice">
+                        <div class="img_txt"><img src="//img.modetour.com/promotion20/14716/cont01_txt1.png" alt="뽑기이벤트 유의사항"></div>
+                        <div class="n_list">
+                            <p>&lt;참여방법 및 유의사항&gt;</p>
+                            <ul>
+                                <li>· 모두투어 회원으로 로그인 후 ‘선택한 번호판 뽑기' 버튼 클릭하세요!</li>
+                                <li>· 본 행사는 모두투어 회원 전용 행사 입니다.</li>
+                                <li>· ID당 1일 1회 참여 가능합니다.</li>										
+                            </ul>
+                            <p>&lt;당첨자발표&gt;</p>
+                            <ul>
+                                <li>· 당첨자 발표 시 모두투어 홈페이지 이벤트 당첨자 발표에 공지하며, 경품 발송 일정은 개별연락을 통해 안내드립니다.</li>	
+                                <li>· 경품 배송지는 당첨자 발표 후 개별적으로 확인이 이루어질 예정입니다.</li>	
+                                <li>· 본 배송지 정보상의 휴대폰번호로 연락이 진행될 예정이며, 휴대폰번호 미입력 및 오류로 인해 연락이 되지 않거나 안내받으신 후 3일 이내에 제세공과금 납부 및 본인 확인이 불가능 할 경우, 당첨이 취소되고 당첨자가 재선정됩니다.</li>	
+                                <li>· 당첨 상품의 제세공과금(정상소비자의 22%)는 본인부담이며, 제세공과금 처리 기준에 따라 신분증 사본을 요청할 수 있습니다.</li>										
+                            </ul>
+                            <p>&lt;경품 및 개인정보 취급&gt;</p>
+                            <ul>
+                                <li>· SSF SHOP 경품의 발송 및 제세공과금 처리는 삼성물산(주)패션부분에서 대행하며, 정확한 경품처리를 위해 당첨고객의 개인정보 일부 제공됩니다.
+                                    <ul>
+                                        <li>· 개인정보 위탁업체 : 삼성물산(주)패션부문</li>
+                                        <li>· 제공되는 개인정보 범위 : 성명, 주민등록번호, 회원ID, 휴대폰번호, 주소</li>
+                                    </ul>
+                                </li>
+                                <li>· 부정한 방법으로 이벤트에 참여한 것이 발견될 경우, 당첨자 발표 이후에라도 당첨이 취소될 수 있습니다.</li>
+                                <li>· 본 행사는 당사 사정에 의해 조기 종료 및 변경 될 수 있습니다. </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <!-- [e] 2023-11-06 수정 -->
+            </div>
+            <div id="cont02" class="e_cont">
+                <div class="cont_ttl">
+                    <img src="//img.modetour.com/promotion20/14716/cont02_ttl.png" alt="여행을 즐기는 완벽한 방법 2. 놀러가고싶은 사람 다 모여~ 화끈한 쿠폰패키지 추억의 그 시절 그 가격으로 만나보세요!">
+                </div>
+                <div class="e_slide2">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <!-- [s] 2023-11-06 변경 -->
+                            <div class="swiper-slide">
+                                <img src="//img.modetour.com/promotion20/14716/discount_coupon04.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="//img.modetour.com/promotion20/14716/discount_coupon03.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="//img.modetour.com/promotion20/14716/discount_coupon02.jpg" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="//img.modetour.com/promotion20/14716/discount_coupon01.jpg" alt="">
+                            </div>
+                            <!-- [e] 2023-11-06 변경 -->
+                        </div>
+                    </div>
+                    <div class="swiper-scrollbar"></div>
+                </div>
+                <a class="cont02_btn"><img src="//img.modetour.com/promotion20/14716/cont02_btn.png" alt="쿠폰 전체 다운받기"></a>
+                <div class="notice">
+                    <div class="img_txt">
+                        <img src="//img.modetour.com/promotion20/14716/cont02_txt1.png" alt="유의사항 꼭 확인하세요!">
+                        <!-- <button type="button"><img src="//img.modetour.com/promotion20/14716/ico_arrow.png" alt="화살표"></button> 2023-11-06 삭제 -->
+                    </div>
+                    <!-- [s] 2023-11-06 추가,수정 -->
+                    <div class="n_list">
+                        <ul>
+                            <li>· [+메가세일쿠폰적용상품] 에 한해 사용이 가능합니다.</li>
+                            <li>· 다른 쿠폰과 중복사용이 불가합니다.</li>
+                            <li>· 랜드조인, 제휴상품, 호텔, 항공 등은 사용이 제외될 수 있습니다.</li>
+                            <li>· 적용 상품가는 1인 상품판매가 기준으로 하며, 추가경비(유류할증료 및 추가금액)은 제외됩니다.</li>
+                            <li>· 예약 상품 결제시에만 사용 가능하며, 쿠폰 소지자 본인 외의 결제 및 취소료, 기타 다른 용도로 사용은 불가합니다. </li>
+                            <li>· 상품 예약 건당 본인 소유 1개의 쿠폰만 사용 가능합니다.</li>
+                            <li>· 취소 및 환불 후 재사용이 불가합니다.</li>
+                            <li>· 발급된 쿠폰은 마이페이지>쿠폰에서 확인할 수 있습니다.</li>
+                            <li>· 메가세일쿠폰의 유효기간은 발급일 기준 +7일입니다.</li>
+                            <li>· 중복발급이 불가하므로 유효기간내에 사용하시기 바랍니다.</li>
+                        </ul>
+                    </div>
+                    <!-- [e] 2023-11-06 추가,수정 -->
+                </div>
+                <!-- [s] 2023-11-06 추가 -->
+                <div class="card_dsc">
+                    <img src="//img.modetour.com/promotion20/14716/card_dsc.png" alt="">
+                    <a href="https://www.modetour.com/special-exhibition/2c5e642f-2a8c-4354-57b5-08dbd9edf465?type=user-define">신한카드 청구할인</a>
+                    <a href="https://www.modetour.com/special-exhibition/9abb2457-3ea3-4467-57b6-08dbd9edf465?type=user-define">국민카드 청구할인</a>
+                </div>
+                <!-- [e] 2023-11-06 추가 -->
+                <div class="e_video_cont">								
+                    <div class="cont_ttl">
+                        <img src="//img.modetour.com/promotion20/14716/video_ttl.png" alt="영상으로 미리 만나보세요! 메가세일 홍보영상">
+                    </div>
+                    <div class="e_video">
+                        <div class="e_slide3">
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <iframe src="https://www.youtube.com/embed/Wi0NLrSGJvc" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <video loop muted="muted" controls -webkit-playsinline="-webkit-playsinline" playsinline="playsinline" id="video_player">
+                                            <source src="//img.modetour.com/promotion20/14730/video.mp4" type="video/mp4">
+                                        </video>								
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="//img.modetour.com/promotion20/14716/video_test.jpg" alt="">
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="//img.modetour.com/promotion20/14716/video_test.jpg" alt="">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-scrollbar"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div id="cont03" class="e_cont">
+                <div class="cont_ttl">
+                    <img src="//img.modetour.com/promotion20/14716/cont03_ttl.png" alt="여행을 즐기는 완벽한 방법 3. 12시에 만나요~ 부라보 세일">
+                </div>
+                <p class="time">
+                    <span>판매종료</span>|
+                    <span>1일</span>:
+                    <span>23시</span>:
+                    <span>05분</span>
+                </p>
+                <div class="e_slide4">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="">
+                                    <div class="timedeal_area">												
+                                        <p class="timedeal_txt1 on">#왓이룬사원 내부관광 포함 #쉐라튼 리버뷰 짜릿한 전경</p>
+                                        <p class="timedeal_txt2 on">괌 PIC 5/6/7/8일</p>
+                                        <p class="timedeal_txt3 on">
+                                            <del>1,510,000</del> 
+                                            <span>1,159,000</span>
+                                            <small>원 부터</small>
+                                        </p>
+                                        <div class="itme_img">
+                                            <div class="td_label on">
+                                                <span class="td_label1">2%할인쿠폰</span> 
+                                                <span class="td_label2">사은품 증정</span>
+                                            </div>
+                                            <img src="//img.modetour.com/promotion20/14716/timedeal_item01.jpg" alt="">
+                                        </div>
+                                        <div class="md_comment on">
+                                            <img src="//img.modetour.com/promotion20/14716/md_s.png" alt="md's comment">
+                                            <p>5일간 초특급 호텔에서 바다를 보며 완벽한 힐링여행을 누려보세요!</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="">
+                                    <div class="timedeal_area">
+                                        <p class="timedeal_txt1 on">#왓이룬사원 내부관광 포함 #쉐라튼 리버뷰 짜릿한 전경</p>
+                                        <p class="timedeal_txt2 on">코타키나발루 슬림 패키지 5/6/7/8일</p>
+                                        <p class="timedeal_txt3 on">
+                                            <del>1,510,000</del> 
+                                            <span>1,159,000</span>
+                                            <small>원 부터</small>
+                                        </p>
+                                        <div class="itme_img">
+                                            <div class="td_label on">
+                                                <span class="td_label1">2%할인쿠폰</span> 
+                                                <span class="td_label2">사은품 증정</span>
+                                            </div>
+                                            <img src="//img.modetour.com/promotion20/14716/timedeal_item02.jpg" alt="">
+                                        </div>
+                                        <div class="md_comment on">
+                                            <img src="//img.modetour.com/promotion20/14716/md_s.png" alt="md's comment">
+                                            <p>5일간 초특급 호텔에서 바다를 보며 완벽한 힐링여행을 누려보세요!</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="">
+                                    <div class="timedeal_area">
+                                        <p class="timedeal_txt1 on">#왓이룬사원 내부관광 포함 #쉐라튼 리버뷰 짜릿한 전경</p>
+                                        <p class="timedeal_txt2 on">하와이 슬림 패키지 5/6/7/8일</p>
+                                        <p class="timedeal_txt3 on">
+                                            <del>1,510,000</del> 
+                                            <span>1,159,000</span>
+                                            <small>원 부터</small>
+                                        </p>
+                                        <div class="itme_img">
+                                            <div class="td_label on">
+                                                <span class="td_label1">2%할인쿠폰</span> 
+                                                <span class="td_label2">사은품 증정</span>
+                                            </div>
+                                            <img src="//img.modetour.com/promotion20/14716/timedeal_item03.jpg" alt="">
+                                        </div>
+                                        <div class="md_comment on">
+                                            <img src="//img.modetour.com/promotion20/14716/md_s.png" alt="md's comment">
+                                            <p>5일간 초특급 호텔에서 바다를 보며 완벽한 힐링여행을 누려보세요!</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="">
+                                    <div class="timedeal_area">
+                                        <p class="timedeal_txt1 on">#왓이룬사원 내부관광 포함 #쉐라튼 리버뷰 짜릿한 전경</p>
+                                        <p class="timedeal_txt2 on">베트남 슬림 패키지 5/6/7/8일</p>
+                                        <p class="timedeal_txt3 on">
+                                            <del>1,510,000</del> 
+                                            <span>1,159,000</span>
+                                            <small>원 부터</small>
+                                        </p>
+                                        <div class="itme_img">
+                                            <div class="td_label on">
+                                                <span class="td_label1">2%할인쿠폰</span> 
+                                                <span class="td_label2">사은품 증정</span>
+                                            </div>
+                                            <img src="//img.modetour.com/promotion20/14716/timedeal_item04.jpg" alt="">
+                                        </div>
+                                        <div class="md_comment on">
+                                            <img src="//img.modetour.com/promotion20/14716/md_s.png" alt="md's comment">
+                                            <p>5일간 초특급 호텔에서 바다를 보며 완벽한 힐링여행을 누려보세요!</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="">
+                                    <div class="timedeal_area">
+                                        <p class="timedeal_txt1 on">#왓이룬사원 내부관광 포함 #쉐라튼 리버뷰 짜릿한 전경</p>
+                                        <p class="timedeal_txt2 on">튀르키예 얼리버드 5/6/7/8일</p>
+                                        <p class="timedeal_txt3 on">
+                                            <del>1,510,000</del> 
+                                            <span>1,159,000</span>
+                                            <small>원 부터</small>
+                                        </p>
+                                        <div class="itme_img">
+                                            <div class="td_label on">
+                                                <span class="td_label1">2%할인쿠폰</span> 
+                                                <span class="td_label2">사은품 증정</span>
+                                            </div>
+                                            <img src="//img.modetour.com/promotion20/14716/timedeal_item05.jpg" alt="">
+                                        </div>
+                                        <div class="md_comment on">
+                                            <img src="//img.modetour.com/promotion20/14716/md_s.png" alt="md's comment">
+                                            <p>5일간 초특급 호텔에서 바다를 보며 완벽한 힐링여행을 누려보세요!</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="">
+                                    <div class="timedeal_area">
+                                        <p class="timedeal_txt1 on">#왓이룬사원 내부관광 포함 #쉐라튼 리버뷰 짜릿한 전경</p>
+                                        <p class="timedeal_txt2 on">하와이 슬림 패키지 5/6/7/8일</p>
+                                        <p class="timedeal_txt3 on">
+                                            <del>1,510,000</del> 
+                                            <span>1,159,000</span>
+                                            <small>원 부터</small>
+                                        </p>
+                                        <div class="itme_img">
+                                            <div class="td_label on">
+                                                <span class="td_label1">2%할인쿠폰</span> 
+                                                <span class="td_label2">사은품 증정</span>
+                                            </div>
+                                            <img src="//img.modetour.com/promotion20/14716/timedeal_item06.jpg" alt="">
+                                        </div>
+                                        <div class="md_comment on">
+                                            <img src="//img.modetour.com/promotion20/14716/md_s.png" alt="md's comment">
+                                            <p>5일간 초특급 호텔에서 바다를 보며 완벽한 힐링여행을 누려보세요!</p>
+                                        </div>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-scrollbar"></div>
+                </div>
+            </div>
+            <div id="cont04" class="e_cont">
+                <div class="cont_ttl">
+                    <img src="//img.modetour.com/promotion20/14716/cont04_ttl.png" alt="여행을 즐기는 완벽한 방법 4. 추억의 옛날 가격! 돌아왔다! 땡처리 항공권">
+                </div>
+                <div class="btn_group">
+                    <ul>
+                        <li>
+                            <button type="button" class="on">동남아</button>
+                            <div class="menu_list">
+                                <ul>
+                                    <li><button type="button">전체</button></li>
+                                    <li><button type="button">보라카이(KLO)</button></li>
+                                    <li><button type="button">나트랑(CXR)</button></li>
+                                    <li><button type="button">다낭(DAD)</button></li>
+                                    <li><button type="button">달랏(DLI)</button></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <button type="button">중국/홍콩</button>
+                            <div class="menu_list">
+                                <ul>
+                                    <li><button type="button">전체</button></li>
+                                    <li><button type="button">보라카이(KLO)</button></li>
+                                    <li><button type="button">나트랑(CXR)</button></li>
+                                    <li><button type="button">다낭(DAD)</button></li>
+                                    <li><button type="button">달랏(DLI)</button></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <button type="button">일본</button>
+                            <div class="menu_list">
+                                <ul>
+                                    <li><button type="button">전체</button></li>
+                                    <li><button type="button">보라카이(KLO)</button></li>
+                                    <li><button type="button">나트랑(CXR)</button></li>
+                                    <li><button type="button">다낭(DAD)</button></li>
+                                    <li><button type="button">달랏(DLI)</button></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <button type="button">미주</button>
+                            <div class="menu_list">
+                                <ul>
+                                    <li><button type="button">전체</button></li>
+                                    <li><button type="button">보라카이(KLO)</button></li>
+                                    <li><button type="button">나트랑(CXR)</button></li>
+                                    <li><button type="button">다낭(DAD)</button></li>
+                                    <li><button type="button">달랏(DLI)</button></li>
+                                </ul>
+                            </div>
+                        </li>
+                        <li>
+                            <button type="button">남태평양/괌/사이판</button>
+                            <div class="menu_list">
+                                <ul>
+                                    <li><button type="button">전체</button></li>
+                                    <li><button type="button">보라카이(KLO)</button></li>
+                                    <li><button type="button">나트랑(CXR)</button></li>
+                                    <li><button type="button">다낭(DAD)</button></li>
+                                    <li><button type="button">달랏(DLI)</button></li>
+                                </ul>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="con_gorup">
+                    <div class="e_slide5">
+                        <div class="swiper">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="">
+                                        <!-- <div class="bg_img">
+                                            <img src="//img.modetour.com/promotion20/14716/cont06_img01.jpg" alt="">
+                                        </div>
+                                        2023-11-06 삭제 -->
+                                        <div class="txt_box">
+                                            <p class="ticket_txt1">인천↔보라카이(칼리보)</p>
+                                            <p class="ticket_txt2">
+                                                <i class="logo"><img src="//img.modetour.com/promotion20/14716/logo.png" alt=""></i>
+                                                <span>티웨이항공, 좌석 4석</span>
+                                            </p>
+                                            <p class="ticket_txt2 ico_check">
+                                                <span>왕복, 직항, 유류할증료, 제세공과금 포함 제세공과금 포함</span>
+                                            </p>
+                                            <p class="ticket_txt3">출발-도착일 : 2023.11.15 - 12.20</p>
+                                        </div>
+                                        <div class="txt_box">
+                                            <p class="ticket_txt4"><span>199,000<small>원 부터</small></span></p>
+                                        </div>
+                                    </a>
+                                </div>		
+                                <div class="swiper-slide">
+                                    <a href="">
+                                        <!-- <div class="bg_img">
+                                            <img src="//img.modetour.com/promotion20/14716/cont06_img01.jpg" alt="">
+                                        </div>
+                                        2023-11-06 삭제 -->
+                                        <div class="txt_box">
+                                            <p class="ticket_txt1">인천↔보라카이(칼리보)</p>
+                                            <p class="ticket_txt2">
+                                                <i class="logo"><img src="//img.modetour.com/promotion20/14716/logo.png" alt=""></i>
+                                                <span>티웨이항공, 좌석 4석</span>
+                                            </p>
+                                            <p class="ticket_txt2 ico_check">
+                                                <span>왕복, 직항, 유류할증료, 제세공과금 포함 제세공과금 포함</span>
+                                            </p>
+                                            <p class="ticket_txt3">출발-도착일 : 2023.11.15 - 12.20</p>
+                                        </div>
+                                        <div class="txt_box">
+                                            <p class="ticket_txt4"><span>199,000<small>원 부터</small></span></p>
+                                        </div>
+                                    </a>
+                                </div>		
+                                <div class="swiper-slide">
+                                    <a href="">
+                                        <!-- <div class="bg_img">
+                                            <img src="//img.modetour.com/promotion20/14716/cont06_img01.jpg" alt="">
+                                        </div>
+                                        2023-11-06 삭제 -->
+                                        <div class="txt_box">
+                                            <p class="ticket_txt1">인천↔보라카이(칼리보)</p>
+                                            <p class="ticket_txt2">
+                                                <i class="logo"><img src="//img.modetour.com/promotion20/14716/logo.png" alt=""></i>
+                                                <span>티웨이항공, 좌석 4석</span>
+                                            </p>
+                                            <p class="ticket_txt2 ico_check">
+                                                <span>왕복, 직항, 유류할증료, 제세공과금 포함 제세공과금 포함</span>
+                                            </p>
+                                            <p class="ticket_txt3">출발-도착일 : 2023.11.15 - 12.20</p>
+                                        </div>
+                                        <div class="txt_box">
+                                            <p class="ticket_txt4"><span>199,000<small>원 부터</small></span></p>
+                                        </div>
+                                    </a>
+                                </div>		
+                                <div class="swiper-slide">
+                                    <a href="">
+                                        <!-- <div class="bg_img">
+                                            <img src="//img.modetour.com/promotion20/14716/cont06_img01.jpg" alt="">
+                                        </div>
+                                        2023-11-06 삭제 -->
+                                        <div class="txt_box">
+                                            <p class="ticket_txt1">인천↔보라카이(칼리보)</p>
+                                            <p class="ticket_txt2">
+                                                <i class="logo"><img src="//img.modetour.com/promotion20/14716/logo.png" alt=""></i>
+                                                <span>티웨이항공, 좌석 4석</span>
+                                            </p>
+                                            <p class="ticket_txt2 ico_check">
+                                                <span>왕복, 직항, 유류할증료, 제세공과금 포함 제세공과금 포함</span>
+                                            </p>
+                                            <p class="ticket_txt3">출발-도착일 : 2023.11.15 - 12.20</p>
+                                        </div>
+                                        <div class="txt_box">
+                                            <p class="ticket_txt4"><span>199,000<small>원 부터</small></span></p>
+                                        </div>
+                                    </a>
+                                </div>		
+                                <div class="swiper-slide">
+                                    <a href="">
+                                        <!-- <div class="bg_img">
+                                            <img src="//img.modetour.com/promotion20/14716/cont06_img01.jpg" alt="">
+                                        </div>
+                                        2023-11-06 삭제 -->
+                                        <div class="txt_box">
+                                            <p class="ticket_txt1">인천↔보라카이(칼리보)</p>
+                                            <p class="ticket_txt2">
+                                                <i class="logo"><img src="//img.modetour.com/promotion20/14716/logo.png" alt=""></i>
+                                                <span>티웨이항공, 좌석 4석</span>
+                                            </p>
+                                            <p class="ticket_txt2 ico_check">
+                                                <span>왕복, 직항, 유류할증료, 제세공과금 포함 제세공과금 포함</span>
+                                            </p>
+                                            <p class="ticket_txt3">출발-도착일 : 2023.11.15 - 12.20</p>
+                                        </div>
+                                        <div class="txt_box">
+                                            <p class="ticket_txt4"><span>199,000<small>원 부터</small></span></p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="">
+                                        <!-- <div class="bg_img">
+                                            <img src="//img.modetour.com/promotion20/14716/cont06_img01.jpg" alt="">
+                                        </div>
+                                        2023-11-06 삭제 -->
+                                        <div class="txt_box">
+                                            <p class="ticket_txt1">인천↔보라카이(칼리보)</p>
+                                            <p class="ticket_txt2">
+                                                <i class="logo"><img src="//img.modetour.com/promotion20/14716/logo.png" alt=""></i>
+                                                <span>티웨이항공, 좌석 4석</span>
+                                            </p>
+                                            <p class="ticket_txt2 ico_check">
+                                                <span>왕복, 직항, 유류할증료, 제세공과금 포함 제세공과금 포함</span>
+                                            </p>
+                                            <p class="ticket_txt3">출발-도착일 : 2023.11.15 - 12.20</p>
+                                        </div>
+                                        <div class="txt_box">
+                                            <p class="ticket_txt4"><span>199,000<small>원 부터</small></span></p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="">
+                                        <!-- <div class="bg_img">
+                                            <img src="//img.modetour.com/promotion20/14716/cont06_img01.jpg" alt="">
+                                        </div>
+                                        2023-11-06 삭제 -->
+                                        <div class="txt_box">
+                                            <p class="ticket_txt1">인천↔보라카이(칼리보)</p>
+                                            <p class="ticket_txt2">
+                                                <i class="logo"><img src="//img.modetour.com/promotion20/14716/logo.png" alt=""></i>
+                                                <span>티웨이항공, 좌석 4석</span>
+                                            </p>
+                                            <p class="ticket_txt2 ico_check">
+                                                <span>왕복, 직항, 유류할증료, 제세공과금 포함 제세공과금 포함</span>
+                                            </p>
+                                            <p class="ticket_txt3">출발-도착일 : 2023.11.15 - 12.20</p>
+                                        </div>
+                                        <div class="txt_box">
+                                            <p class="ticket_txt4"><span>199,000<small>원 부터</small></span></p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="">
+                                        <!-- <div class="bg_img">
+                                            <img src="//img.modetour.com/promotion20/14716/cont06_img01.jpg" alt="">
+                                        </div>
+                                        2023-11-06 삭제 -->
+                                        <div class="txt_box">
+                                            <p class="ticket_txt1">인천↔보라카이(칼리보)</p>
+                                            <p class="ticket_txt2">
+                                                <i class="logo"><img src="//img.modetour.com/promotion20/14716/logo.png" alt=""></i>
+                                                <span>티웨이항공, 좌석 4석</span>
+                                            </p>
+                                            <p class="ticket_txt2 ico_check">
+                                                <span>왕복, 직항, 유류할증료, 제세공과금 포함 제세공과금 포함</span>
+                                            </p>
+                                            <p class="ticket_txt3">출발-도착일 : 2023.11.15 - 12.20</p>
+                                        </div>
+                                        <div class="txt_box">
+                                            <p class="ticket_txt4"><span>199,000<small>원 부터</small></span></p>
+                                        </div>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">
+                                    <a href="">
+                                        <!-- <div class="bg_img">
+                                            <img src="//img.modetour.com/promotion20/14716/cont06_img01.jpg" alt="">
+                                        </div>
+                                        2023-11-06 삭제 -->
+                                        <div class="txt_box">
+                                            <p class="ticket_txt1">인천↔보라카이(칼리보)</p>
+                                            <p class="ticket_txt2">
+                                                <i class="logo"><img src="//img.modetour.com/promotion20/14716/logo.png" alt=""></i>
+                                                <span>티웨이항공, 좌석 4석</span>
+                                            </p>
+                                            <p class="ticket_txt2 ico_check">
+                                                <span>왕복, 직항, 유류할증료, 제세공과금 포함 제세공과금 포함</span>
+                                            </p>
+                                            <p class="ticket_txt3">출발-도착일 : 2023.11.15 - 12.20</p>
+                                        </div>
+                                        <div class="txt_box">
+                                            <p class="ticket_txt4"><span>199,000<small>원 부터</small></span></p>
+                                        </div>
+                                    </a>
+                                </div>									
+                            </div>
+                        </div>
+                        <div class="swiper-scrollbar"></div>
+                    </div>
+                </div>							
+                <a class="cont04_btn"><img src="//img.modetour.com/promotion20/14716/cont04_btn.png" alt="더 많은 날짜의 땡처리항공권이 궁금하다면?"></a>
+            </div>
+            <div id="cont05" class="e_cont">
+                <div class="cont_ttl">
+                    <img src="//img.modetour.com/promotion20/14716/cont05_ttl.png" alt="여행을 즐기는 완벽한 방법 5. 이젠~해외에서 놀때! 해외/호텔-특가">
+                </div>
+                <img src="//img.modetour.com/promotion20/14716/cont05.png" alt="">
+                <a href="#" class="e_btn">해외 항공권 전용 최대할인 3만원 쿠폰 다운받기</a>
+                <a href="#" class="e_btn">해외/국내 숙박 전용 최대할인 5% 쿠폰 다운받기</a>
+            </div>
+            <div id="cont06" class="e_cont">
+                <div class="cont_ttl">
+                    <img src="//img.modetour.com/promotion20/14716/cont06_ttl.png" alt="여행을 즐기는 완벽한 방법 6. 선호하는 테마 여행지만 골랐어요! 테마상품">
+                </div>
+                <div class="btn_group">
+                    <button type="buttn" class="on"><span>리미티드<br>에디-숀</span></button>
+                    <button type="buttn"><span>최신여행<br>톱10</span></button>
+                    <button type="buttn"><span>신세대<br>감각파를 위한<br>여행</span></button>
+                    <button type="buttn"><span>판매<br>넘버-원</span></button>
+                </div>
+                <div class="con_group">
+                    <div class="con con1 on">
+                        <!-- [s] 2023-11-06 수정 -->
+                        <p class="sub_ttl"><span>★★★ 지친 당신을 위로하는 최신여행 톱10 ★★★</span></p>
+                        <div class="frame">
+                            <span><img src="//img.modetour.com/eagle/photoimg/29937/bfile/635713457134933189.jpg?resize=y&resize_w=430&resize_h=256&w_h_fill=y" alt=""></span>
+                        </div>
+                        <!-- [e] 2023-11-06 수정 -->
+                        <div class="e_slide6">
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <div class="bg_img">
+                                                <img src="//img.modetour.com/promotion20/14716/cont06_img01.jpg" alt="">
+                                            </div>
+                                            <div class="txt_box">
+                                                <p class="thema_txt1">[3/6/9특전] 다낭/호이안/바나힐 3박4일 [4성호텔] [3/6/9특전] 다낭/호이안/바나힐 3박4일 [4성호텔]</p>
+                                                <p class="thema_txt2">#호이안야경투어 #야시장 #미케비치 #호이안야경투어 #야시장 #미케비치 #호이안야경투어 #야시장 #미케비치 #호이안야경투어 #야시장 #미케비치</p>
+                                                <p class="thema_txt3">1,199,000<small>원 부터</small></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <div class="bg_img">
+                                                <img src="//img.modetour.com/promotion20/14716/cont06_img01.jpg" alt="">
+                                            </div>
+                                            <div class="txt_box">
+                                                <p class="thema_txt1">스페인일주 8/9일</p>
+                                                <p class="thema_txt2">#노쇼핑/노옵션/노팁 #꽉찬일정 #템부롱국립공원</p>
+                                                <p class="thema_txt3">1,199,000<small>원 부터</small></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <div class="bg_img">
+                                                <img src="//img.modetour.com/promotion20/14716/cont06_img01.jpg" alt="">
+                                            </div>
+                                            <div class="txt_box">
+                                                <p class="thema_txt1">스페인일주 8/9일</p>
+                                                <p class="thema_txt2">#노쇼핑/노옵션/노팁 #꽉찬일정 #템부롱국립공원</p>
+                                                <p class="thema_txt3">1,199,000<small>원 부터</small></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <div class="bg_img">
+                                                <img src="//img.modetour.com/promotion20/14716/cont06_img01.jpg" alt="">
+                                            </div>
+                                            <div class="txt_box">
+                                                <p class="thema_txt1">스페인일주 8/9일</p>
+                                                <p class="thema_txt2">#노쇼핑/노옵션/노팁 #꽉찬일정 #템부롱국립공원</p>
+                                                <p class="thema_txt3">1,199,000<small>원 부터</small></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <div class="bg_img">
+                                                <img src="//img.modetour.com/promotion20/14716/cont06_img01.jpg" alt="">
+                                            </div>
+                                            <div class="txt_box">
+                                                <p class="thema_txt1">스페인일주 8/9일</p>
+                                                <p class="thema_txt2">#노쇼핑/노옵션/노팁 #꽉찬일정 #템부롱국립공원</p>
+                                                <p class="thema_txt3">1,199,000<small>원 부터</small></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <div class="bg_img">
+                                                <img src="//img.modetour.com/promotion20/14716/cont06_img01.jpg" alt="">
+                                            </div>
+                                            <div class="txt_box">
+                                                <p class="thema_txt1">스페인일주 8/9일</p>
+                                                <p class="thema_txt2">#노쇼핑/노옵션/노팁 #꽉찬일정 #템부롱국립공원</p>
+                                                <p class="thema_txt3">1,199,000<small>원 부터</small></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <div class="bg_img">
+                                                <img src="//img.modetour.com/promotion20/14716/cont06_img01.jpg" alt="">
+                                            </div>
+                                            <div class="txt_box">
+                                                <p class="thema_txt1">스페인일주 8/9일</p>
+                                                <p class="thema_txt2">#노쇼핑/노옵션/노팁 #꽉찬일정 #템부롱국립공원</p>
+                                                <p class="thema_txt3">1,199,000<small>원 부터</small></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <div class="bg_img">
+                                                <img src="//img.modetour.com/promotion20/14716/cont06_img01.jpg" alt="">
+                                            </div>
+                                            <div class="txt_box">
+                                                <p class="thema_txt1">스페인일주 8/9일</p>
+                                                <p class="thema_txt2">#노쇼핑/노옵션/노팁 #꽉찬일정 #템부롱국립공원</p>
+                                                <p class="thema_txt3">1,199,000<small>원 부터</small></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-scrollbar"></div>
+                        </div>
+                    </div>
+                    <div class="con con2">
+                        <!-- [s] 2023-11-06 수정 -->
+                        <p class="sub_ttl"><span>★★★ 지친 당신을 위로하는 최신여행 톱10 ★★★</span></p>
+                        <div class="frame">
+                            <span><img src="//img.modetour.com/eagle/photoimg/10717/Bfile/635634007874381887.jpg?resize=y&resize_w=430&resize_h=256&w_h_fill=y" alt=""></span>
+                        </div>
+                        <!-- [e] 2023-11-06 수정 -->
+                        <div class="e_slide7">
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <div class="bg_img">
+                                                <img src="//img.modetour.com/promotion20/14716/cont06_img01.jpg" alt="">
+                                            </div>
+                                            <div class="txt_box">
+                                                <p class="thema_txt1">스페인일주 8/9일</p>
+                                                <p class="thema_txt2">#노쇼핑/노옵션/노팁 #꽉찬일정 #템부롱국립공원</p>
+                                                <p class="thema_txt3">1,199,000<small>원 부터</small></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <div class="bg_img">
+                                                <img src="//img.modetour.com/promotion20/14716/cont06_img01.jpg" alt="">
+                                            </div>
+                                            <div class="txt_box">
+                                                <p class="thema_txt1">스페인일주 8/9일</p>
+                                                <p class="thema_txt2">#노쇼핑/노옵션/노팁 #꽉찬일정 #템부롱국립공원</p>
+                                                <p class="thema_txt3">1,199,000<small>원 부터</small></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <div class="bg_img">
+                                                <img src="//img.modetour.com/promotion20/14716/cont06_img01.jpg" alt="">
+                                            </div>
+                                            <div class="txt_box">
+                                                <p class="thema_txt1">스페인일주 8/9일</p>
+                                                <p class="thema_txt2">#노쇼핑/노옵션/노팁 #꽉찬일정 #템부롱국립공원</p>
+                                                <p class="thema_txt3">1,199,000<small>원 부터</small></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <div class="bg_img">
+                                                <img src="//img.modetour.com/promotion20/14716/cont06_img01.jpg" alt="">
+                                            </div>
+                                            <div class="txt_box">
+                                                <p class="thema_txt1">스페인일주 8/9일</p>
+                                                <p class="thema_txt2">#노쇼핑/노옵션/노팁 #꽉찬일정 #템부롱국립공원</p>
+                                                <p class="thema_txt3">1,199,000<small>원 부터</small></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <div class="bg_img">
+                                                <img src="//img.modetour.com/promotion20/14716/cont06_img01.jpg" alt="">
+                                            </div>
+                                            <div class="txt_box">
+                                                <p class="thema_txt1">스페인일주 8/9일</p>
+                                                <p class="thema_txt2">#노쇼핑/노옵션/노팁 #꽉찬일정 #템부롱국립공원</p>
+                                                <p class="thema_txt3">1,199,000<small>원 부터</small></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <div class="bg_img">
+                                                <img src="//img.modetour.com/promotion20/14716/cont06_img01.jpg" alt="">
+                                            </div>
+                                            <div class="txt_box">
+                                                <p class="thema_txt1">스페인일주 8/9일</p>
+                                                <p class="thema_txt2">#노쇼핑/노옵션/노팁 #꽉찬일정 #템부롱국립공원</p>
+                                                <p class="thema_txt3">1,199,000<small>원 부터</small></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <div class="bg_img">
+                                                <img src="//img.modetour.com/promotion20/14716/cont06_img01.jpg" alt="">
+                                            </div>
+                                            <div class="txt_box">
+                                                <p class="thema_txt1">스페인일주 8/9일</p>
+                                                <p class="thema_txt2">#노쇼핑/노옵션/노팁 #꽉찬일정 #템부롱국립공원</p>
+                                                <p class="thema_txt3">1,199,000<small>원 부터</small></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <div class="bg_img">
+                                                <img src="//img.modetour.com/promotion20/14716/cont06_img01.jpg" alt="">
+                                            </div>
+                                            <div class="txt_box">
+                                                <p class="thema_txt1">스페인일주 8/9일</p>
+                                                <p class="thema_txt2">#노쇼핑/노옵션/노팁 #꽉찬일정 #템부롱국립공원</p>
+                                                <p class="thema_txt3">1,199,000<small>원 부터</small></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-scrollbar"></div>
+                        </div>
+                    </div>
+                    <div class="con con3">
+                        <!-- [s] 2023-11-06 수정 -->
+                        <p class="sub_ttl"><span>★★★ 지친 당신을 위로하는 최신여행 톱10 ★★★</span></p>
+                        <div class="frame">
+                            <span><img src="//img.modetour.com/eagle/photoimg/37225/rfile/636074650579220939.jpg?resize=y&resize_w=600&resize_h=358&w_h_fill=y" alt=""></span>
+                        </div>
+                        <!-- [e] 2023-11-06 수정 -->
+                        <div class="e_slide8">
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <div class="bg_img">
+                                                <img src="//img.modetour.com/promotion20/14716/cont06_img01.jpg" alt="">
+                                            </div>
+                                            <div class="txt_box">
+                                                <p class="thema_txt1">스페인일주 8/9일</p>
+                                                <p class="thema_txt2">#노쇼핑/노옵션/노팁 #꽉찬일정 #템부롱국립공원</p>
+                                                <p class="thema_txt3">1,199,000<small>원 부터</small></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <div class="bg_img">
+                                                <img src="//img.modetour.com/promotion20/14716/cont06_img01.jpg" alt="">
+                                            </div>
+                                            <div class="txt_box">
+                                                <p class="thema_txt1">스페인일주 8/9일</p>
+                                                <p class="thema_txt2">#노쇼핑/노옵션/노팁 #꽉찬일정 #템부롱국립공원</p>
+                                                <p class="thema_txt3">1,199,000<small>원 부터</small></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <div class="bg_img">
+                                                <img src="//img.modetour.com/promotion20/14716/cont06_img01.jpg" alt="">
+                                            </div>
+                                            <div class="txt_box">
+                                                <p class="thema_txt1">스페인일주 8/9일</p>
+                                                <p class="thema_txt2">#노쇼핑/노옵션/노팁 #꽉찬일정 #템부롱국립공원</p>
+                                                <p class="thema_txt3">1,199,000<small>원 부터</small></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <div class="bg_img">
+                                                <img src="//img.modetour.com/promotion20/14716/cont06_img01.jpg" alt="">
+                                            </div>
+                                            <div class="txt_box">
+                                                <p class="thema_txt1">스페인일주 8/9일</p>
+                                                <p class="thema_txt2">#노쇼핑/노옵션/노팁 #꽉찬일정 #템부롱국립공원</p>
+                                                <p class="thema_txt3">1,199,000<small>원 부터</small></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <div class="bg_img">
+                                                <img src="//img.modetour.com/promotion20/14716/cont06_img01.jpg" alt="">
+                                            </div>
+                                            <div class="txt_box">
+                                                <p class="thema_txt1">스페인일주 8/9일</p>
+                                                <p class="thema_txt2">#노쇼핑/노옵션/노팁 #꽉찬일정 #템부롱국립공원</p>
+                                                <p class="thema_txt3">1,199,000<small>원 부터</small></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <div class="bg_img">
+                                                <img src="//img.modetour.com/promotion20/14716/cont06_img01.jpg" alt="">
+                                            </div>
+                                            <div class="txt_box">
+                                                <p class="thema_txt1">스페인일주 8/9일</p>
+                                                <p class="thema_txt2">#노쇼핑/노옵션/노팁 #꽉찬일정 #템부롱국립공원</p>
+                                                <p class="thema_txt3">1,199,000<small>원 부터</small></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <div class="bg_img">
+                                                <img src="//img.modetour.com/promotion20/14716/cont06_img01.jpg" alt="">
+                                            </div>
+                                            <div class="txt_box">
+                                                <p class="thema_txt1">스페인일주 8/9일</p>
+                                                <p class="thema_txt2">#노쇼핑/노옵션/노팁 #꽉찬일정 #템부롱국립공원</p>
+                                                <p class="thema_txt3">1,199,000<small>원 부터</small></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <div class="bg_img">
+                                                <img src="//img.modetour.com/promotion20/14716/cont06_img01.jpg" alt="">
+                                            </div>
+                                            <div class="txt_box">
+                                                <p class="thema_txt1">스페인일주 8/9일</p>
+                                                <p class="thema_txt2">#노쇼핑/노옵션/노팁 #꽉찬일정 #템부롱국립공원</p>
+                                                <p class="thema_txt3">1,199,000<small>원 부터</small></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-scrollbar"></div>
+                        </div>
+                    </div>
+                    <div class="con con4">
+                        <!-- [s] 2023-11-06 수정 -->
+                        <p class="sub_ttl"><span>★★★ 지친 당신을 위로하는 최신여행 톱10 ★★★</span></p>
+                        <div class="frame">
+                            <span><img src="//img.modetour.com/eagle/photoimg/10717/Bfile/635634007874381887.jpg?resize=y&resize_w=430&resize_h=256&w_h_fill=y" alt=""></span>
+                        </div>
+                        <!-- [e] 2023-11-06 수정 -->
+                        <div class="e_slide9">
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <div class="bg_img">
+                                                <img src="//img.modetour.com/promotion20/14716/cont06_img01.jpg" alt="">
+                                            </div>
+                                            <div class="txt_box">
+                                                <p class="thema_txt1">스페인일주 8/9일</p>
+                                                <p class="thema_txt2">#노쇼핑/노옵션/노팁 #꽉찬일정 #템부롱국립공원</p>
+                                                <p class="thema_txt3">1,199,000<small>원 부터</small></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <div class="bg_img">
+                                                <img src="//img.modetour.com/promotion20/14716/cont06_img01.jpg" alt="">
+                                            </div>
+                                            <div class="txt_box">
+                                                <p class="thema_txt1">스페인일주 8/9일</p>
+                                                <p class="thema_txt2">#노쇼핑/노옵션/노팁 #꽉찬일정 #템부롱국립공원</p>
+                                                <p class="thema_txt3">1,199,000<small>원 부터</small></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <div class="bg_img">
+                                                <img src="//img.modetour.com/promotion20/14716/cont06_img01.jpg" alt="">
+                                            </div>
+                                            <div class="txt_box">
+                                                <p class="thema_txt1">스페인일주 8/9일</p>
+                                                <p class="thema_txt2">#노쇼핑/노옵션/노팁 #꽉찬일정 #템부롱국립공원</p>
+                                                <p class="thema_txt3">1,199,000<small>원 부터</small></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <div class="bg_img">
+                                                <img src="//img.modetour.com/promotion20/14716/cont06_img01.jpg" alt="">
+                                            </div>
+                                            <div class="txt_box">
+                                                <p class="thema_txt1">스페인일주 8/9일</p>
+                                                <p class="thema_txt2">#노쇼핑/노옵션/노팁 #꽉찬일정 #템부롱국립공원</p>
+                                                <p class="thema_txt3">1,199,000<small>원 부터</small></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <div class="bg_img">
+                                                <img src="//img.modetour.com/promotion20/14716/cont06_img01.jpg" alt="">
+                                            </div>
+                                            <div class="txt_box">
+                                                <p class="thema_txt1">스페인일주 8/9일</p>
+                                                <p class="thema_txt2">#노쇼핑/노옵션/노팁 #꽉찬일정 #템부롱국립공원</p>
+                                                <p class="thema_txt3">1,199,000<small>원 부터</small></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <div class="bg_img">
+                                                <img src="//img.modetour.com/promotion20/14716/cont06_img01.jpg" alt="">
+                                            </div>
+                                            <div class="txt_box">
+                                                <p class="thema_txt1">스페인일주 8/9일</p>
+                                                <p class="thema_txt2">#노쇼핑/노옵션/노팁 #꽉찬일정 #템부롱국립공원</p>
+                                                <p class="thema_txt3">1,199,000<small>원 부터</small></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <div class="bg_img">
+                                                <img src="//img.modetour.com/promotion20/14716/cont06_img01.jpg" alt="">
+                                            </div>
+                                            <div class="txt_box">
+                                                <p class="thema_txt1">스페인일주 8/9일</p>
+                                                <p class="thema_txt2">#노쇼핑/노옵션/노팁 #꽉찬일정 #템부롱국립공원</p>
+                                                <p class="thema_txt3">1,199,000<small>원 부터</small></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <a href="">
+                                            <div class="bg_img">
+                                                <img src="//img.modetour.com/promotion20/14716/cont06_img01.jpg" alt="">
+                                            </div>
+                                            <div class="txt_box">
+                                                <p class="thema_txt1">스페인일주 8/9일</p>
+                                                <p class="thema_txt2">#노쇼핑/노옵션/노팁 #꽉찬일정 #템부롱국립공원</p>
+                                                <p class="thema_txt3">1,199,000<small>원 부터</small></p>
+                                            </div>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-scrollbar"></div>
+                        </div>
+                    </div>
+                </div>						
+            </div>
+            <div id="cont07" class="e_cont">
+                <div class="cont_ttl">
+                    <img src="//img.modetour.com/promotion20/14716/cont07_ttl.png" alt="여행을 즐기는 완벽한 방법 7. 모두~모여라! 추가이벤트! 모두혜택 이벤트.ZIP">
+                </div>
+                <div class="btn_wrap">
+                    <a href=""><img src="//img.modetour.com/promotion20/14716/cont07_1.png" alt=""></a>
+                    <a href=""><img src="//img.modetour.com/promotion20/14716/cont07_2.png" alt=""></a>
+                    <a href=""><img src="//img.modetour.com/promotion20/14716/cont07_3.png" alt=""></a>
+                    <a href=""><img src="//img.modetour.com/promotion20/14716/cont07_4.png" alt=""></a>
+                    <a href=""><img src="//img.modetour.com/promotion20/14716/cont07_5.png" alt=""></a>
+                    <a href=""><img src="//img.modetour.com/promotion20/14716/cont07_6.png" alt=""></a>
+                </div>
+            </div>
+            <div id="cont08" class="e_cont">
+                <div class="cont_ttl">
+                    <img src="//img.modetour.com/promotion20/14716/cont08_ttl.png" alt="">
+                </div>
+                <div><img src="//img.modetour.com/promotion20/14716/cont08.png" alt=""></div>
+                <a href="" class="cont08_btn"><img src="//img.modetour.com/promotion20/14716/cont08_btn.png" alt=""></a>
+            </div>
+            <div id="cont09" class="e_cont">
+                <div class="cont_ttl">
+                    <img src="//img.modetour.com/promotion20/14716/cont09_ttl.png" alt="">
+                </div>
+                <div class="e_slide10">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <img src="//img.modetour.com/promotion20/14716/cont09_1.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="//img.modetour.com/promotion20/14716/cont09_2.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="//img.modetour.com/promotion20/14716/cont09_3.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="//img.modetour.com/promotion20/14716/cont09_4.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="//img.modetour.com/promotion20/14716/cont09_5.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="//img.modetour.com/promotion20/14716/cont09_6.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="//img.modetour.com/promotion20/14716/cont09_7.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="//img.modetour.com/promotion20/14716/cont09_8.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="//img.modetour.com/promotion20/14716/cont09_9.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="//img.modetour.com/promotion20/14716/cont09_10.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="//img.modetour.com/promotion20/14716/cont09_11.png" alt="">
+                            </div>
+                            <div class="swiper-slide">
+                                <img src="//img.modetour.com/promotion20/14716/cont09_12.png" alt="">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-scrollbar"></div>
+                </div>
+            </div>
+            <div id="cont10" class="e_cont">
+                <div class="cont_ttl">
+                    <img src="//img.modetour.com/promotion20/14716/cont10_ttl.png" alt="">
+                </div>
+                <div class="e_slide11">
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <a href="/event/plan/detail.aspx?mloc=07&eidx=14735"><img src="//img.modetour.com/promotion20/14716/cont10_1.png" alt="동남아/대만"></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="/event/plan/detail.aspx?mloc=07&eidx=14736"><img src="//img.modetour.com/promotion20/14716/cont10_2.png" alt="일본"></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="/event/plan/detail.aspx?mloc=07&eidx=14737"><img src="//img.modetour.com/promotion20/14716/cont10_3.png" alt="유럽"></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="/event/plan/detail.aspx?mloc=07&eidx=14738"><img src="//img.modetour.com/promotion20/14716/cont10_4.png" alt="중국/홍콩/몽골"></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="/event/plan/detail.aspx?mloc=07&eidx=14739"><img src="//img.modetour.com/promotion20/14716/cont10_5.png" alt="괌/사이판/호주"></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="/event/plan/detail.aspx?mloc=07&eidx=14740"><img src="//img.modetour.com/promotion20/14716/cont10_6.png" alt="미주/캐나다/중남미"></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="/event/plan/detail.aspx?mloc=07&eidx=14741"><img src="//img.modetour.com/promotion20/14716/cont10_7.png" alt="자유여행"></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="/event/plan/detail.aspx?mloc=07&eidx=14742"><img src="//img.modetour.com/promotion20/14716/cont10_8.png" alt="국내여행"></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="/event/plan/detail.aspx?mloc=07&eidx=14743"><img src="//img.modetour.com/promotion20/14716/cont10_9.png" alt="골프"></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="/event/plan/detail.aspx?mloc=07&eidx=14744"><img src="//img.modetour.com/promotion20/14716/cont10_10.png" alt="허니문"></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="/event/plan/detail.aspx?mloc=07&eidx=14745"><img src="//img.modetour.com/promotion20/14716/cont10_11.png" alt="부산출발"></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="/event/plan/detail.aspx?mloc=07&eidx=14746"><img src="//img.modetour.com/promotion20/14716/cont10_12.png" alt="지방출발"></a>
+                            </div>
+                            <div class="swiper-slide">
+                                <a href="/event/plan/detail.aspx?mloc=07&eidx=14747"><img src="//img.modetour.com/promotion20/14716/cont10_13.png" alt="크루즈"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="swiper-scrollbar"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        (function ($) {
+            $(document).ready(function () {
+                //nav
+                var eTopH     = $('.e_top').outerHeight();
+                    $menu     = $('.nav_group li'),
+                    $contents = $('.event_wrap [id^="cont"]'), //2023-11-01 수정
+                    $doc      = $('html, body');
+                $('.nav_group').css('top',eTopH);
+                $(function () {
+                    $menu.find('a').click(function(e){
+                        var $target = $(this).parent(),
+                            idx     = $target.index(),
+                            section = $contents.eq(idx),
+                            navH = $('.nav_group li').height(),
+                            offsetTop = section.offset().top-navH;
+                        $doc.stop()
+                                .animate({
+                                    scrollTop :offsetTop
+                                }, 800);
+                        return false;
+                    });
+                });
+
+                //nav fixed, addClass
+                $(window).scroll(function(){                                            
+                    var scltop = $(window).scrollTop(),
+                        header = $('.nav_group').first(),
+                        navH = $('.nav_group').innerHeight(),//2023-11-06 수정
+                        gnbTop = $('.e_contents').offset().top-navH;//2023-11-06 수정
+                    
+                    header.css({'position': (scltop > gnbTop) ? 'fixed' : 'absolute',
+                                'top': (scltop > gnbTop) ? '0' : '',
+                                'background': (scltop > gnbTop) ? '#9a3a07' : 'none',
+                            });
+                    $.each($contents, function(idx, item){
+                        var $target   = $contents.eq(idx),
+                            targetTop = $target.offset().top-(navH+10);
+                        if (targetTop <= scltop) {
+                            $menu.removeClass('on');
+                            $menu.eq(idx).addClass('on');
+                        }
+                        if (!(200 <= scltop)) {
+                            $menu.removeClass('on');
+                        }
+                    });  
+                    if ($(".nav_group li:nth-child(2)").hasClass("on")) {
+                        $('.nav_group').scrollLeft(0);
+                    } else if ($(".nav_group li:nth-child(3)").hasClass("on")) {
+                        $('.nav_group').scrollLeft(100);
+                    } else if ($(".nav_group li:nth-child(4)").hasClass("on")) {
+                        $('.nav_group').scrollLeft(200);
+                    } else if ($(".nav_group li:nth-child(5)").hasClass("on")) {
+                        $('.nav_group').scrollLeft(300);
+                    } else if ($(".nav_group li:nth-child(6)").hasClass("on")) {
+                        $('.nav_group').scrollLeft(400);
+                    } else if ($(".nav_group li:nth-child(8)").hasClass("on")) {
+                        $('.nav_group').scrollLeft(600);
+                    }
+                });
+
+                // 뽑기 버튼
+                $('.badge_wrap button').click(function(){
+                    $(this).toggleClass('on').siblings('button').removeClass('on active').parent('div').siblings('div').children('button').removeClass('on');
+                    return false;
+                });             
+                $('.cont01_btn').click(function(){
+                    $(".badge_wrap button").each(function(){
+                        if($(this).hasClass('on')){
+                            $(this).addClass('active');
+                        }
+                    });
+                });    
+
+                // 팝업닫기
+                $('.e_popup .close_btn').click(function(){
+                    $(this).closest('.e_popup').fadeOut();
+                    return false;
+                });
+
+                // 경품리스트
+                var swiper1 = new Swiper(".e_slide1 .swiper", {
+                    slidesPerView: 2.5,
+                    spaceBetween: 20,
+                });
+
+                // 쿠폰패키지
+                var swiper2 = new Swiper(".e_slide2 .swiper", {
+                    slidesPerView: 1.7,
+                    spaceBetween: 60,
+                    centeredSlides: true,
+                    speed: 800,								
+                    scrollbar : {
+                        el : '.e_slide2 .swiper-scrollbar',
+                        draggable: true,
+                        dragSize: 14,
+                    },
+                });
+                
+                // 유의사항 
+                // 2023-11-06 수정
+                $('.notice .img_txt').click(function(){
+                    $(this).toggleClass('on');
+                    $(this).siblings('.n_list').slideToggle();
+                    return false;
+                });
+
+                //홍보영상
+                var swiper3 = new Swiper(".e_slide3 .swiper", {
+                    slidesPerView: 'auto',
+                    speed: 800,		
+                    centeredSlides: true,						
+                    scrollbar : {
+                        el : '.e_slide3 .swiper-scrollbar',
+                        draggable: true,
+                        dragSize: 14,
+                    },
+                });
+
+                //부라보세일
+                var swiper4 = new Swiper(".e_slide4 .swiper", {
+                    slidesPerView: 'auto',
+                    spaceBetween: 20,
+                    centeredSlides: true,
+                    speed: 800,								
+                    scrollbar : {
+                        el : '.e_slide4 .swiper-scrollbar',
+                        draggable: true,
+                        dragSize: 14,
+                    },
+                });
+
+                // 땡처리 항공권
+                $('#cont04 .btn_group > ul > li > button').click(function(){
+                    $(this).addClass('on').siblings('.menu_list').stop().slideDown().parent('li').siblings('li').children('button').removeClass('on').siblings('.menu_list').stop().slideUp();
+                    return false;
+                });
+                $('.menu_list button').click(function(){
+                    $(this).parents('.menu_list').stop().slideUp();
+                    return false;
+                });
+                $(document).mouseup(function (e){
+                    var menuList = $('.menu_list');
+                    if(menuList.has(e.target).length === 0){
+                        menuList.stop().slideUp();
+                    }
+                });
+                var swiper5 = new Swiper(".e_slide5 .swiper", {
+                    slidesPerView: 1.5,
+                    spaceBetween: 30,
+                    // centeredSlides: true,
+                    observer: true,
+                    observeParents: true,
+                    speed: 800,								
+                    scrollbar : {
+                        el : '.e_slide5 .swiper-scrollbar',
+                        draggable: true,
+                        dragSize: 14,
+                    },
+                });
+
+                // 테마상품
+                $('#cont06 .btn_group button').click(function(){
+                    var idx = $(this).index();
+                    $(this).addClass('on').siblings('button').removeClass('on').parent('.btn_group').siblings('.con_group').find('.con').eq(idx).addClass('on').siblings('div').removeClass('on');
+                    return false;
+                });
+                var swiper6 = new Swiper(".e_slide6 .swiper", {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                    observer: true,
+                    observeParents: true,
+                    speed: 800,								
+                    scrollbar : {
+                        el : '.e_slide6 .swiper-scrollbar',
+                        draggable: true,
+                        dragSize: 14,
+                    },
+                });
+                var swiper7 = new Swiper(".e_slide7 .swiper", {
+                    slidesPerView: 2,
+                    spaceBetween: 40,
+                    centeredSlides: true,
+                    observer: true,
+                    observeParents: true,
+                    speed: 800,								
+                    scrollbar : {
+                        el : '.e_slide7 .swiper-scrollbar',
+                        draggable: true,
+                        dragSize: 14,
+                    },
+                });
+                var swiper8 = new Swiper(".e_slide8 .swiper", {
+                    slidesPerView: 2,
+                    spaceBetween: 40,
+                    centeredSlides: true,
+                    observer: true,
+                    observeParents: true,
+                    speed: 800,								
+                    scrollbar : {
+                        el : '.e_slide8 .swiper-scrollbar',
+                        draggable: true,
+                        dragSize: 14,
+                    },
+                });
+                var swiper9 = new Swiper(".e_slide9 .swiper", {
+                    slidesPerView: 2,
+                    spaceBetween: 40,
+                    centeredSlides: true,
+                    observer: true,
+                    observeParents: true,
+                    speed: 800,								
+                    scrollbar : {
+                        el : '.e_slide9 .swiper-scrollbar',
+                        draggable: true,
+                        dragSize: 14,
+                    },
+                });
+
+                // 별자리
+                var swiper10 = new Swiper(".e_slide10 .swiper", {
+                    slidesPerView: 1.6,
+                    spaceBetween: 10,
+                    centeredSlides: true,
+                    observer: true,
+                    observeParents: true,
+                    speed: 800,								
+                    scrollbar : {
+                        el : '.e_slide10 .swiper-scrollbar',
+                        draggable: true,
+                        dragSize: 14,
+                    },
+                });
+                
+                // 지역별
+                var swiper10 = new Swiper(".e_slide11 .swiper", {
+                    slidesPerView: 2.1,
+                    spaceBetween: 30,
+                    centeredSlides: true,
+                    observer: true,
+                    observeParents: true,
+                    speed: 800,								
+                    scrollbar : {
+                        el : '.e_slide11 .swiper-scrollbar',
+                        draggable: true,
+                        dragSize: 14,
+                    },
+                });					
+            });
+        })(jQuery);
+    </script>
+</body>
+</html>
