@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>가정의달 해외패키지</title>
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../css/common.min.css" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.min.css">
+    <style>			
+        @font-face {
+          font-family: 'Gmarket Sans'; font-style: normal; font-weight: 700;
+          src: local('Gmarket Sans Bold'), local('GmarketSans-Bold'),
+          url('http://script.ebay.co.kr/fonts/GmarketSansBold.woff2') format('woff2'),
+          url('http://script.ebay.co.kr/fonts/GmarketSansBold.woff') format('woff');
+        }
+        @font-face {
+          font-family: 'Gmarket Sans'; font-style: normal; font-weight: 500;
+          src: local('Gmarket Sans Medium'), local('GmarketSans-Medium'),
+          url('http://script.ebay.co.kr/fonts/GmarketSansMedium.woff2') format('woff2'),
+          url('http://script.ebay.co.kr/fonts/GmarketSansMedium.woff') format('woff');
+        }
+        @font-face {
+          font-family: ' Gmarket Sans'; font-style: normal; font-weight: 300;
+          src: local('Gmarket Sans Light'), local('GmarketSans-Light'),
+          url('http://script.ebay.co.kr/fonts/GmarketSansLight.woff2') format('woff2'),
+          url('http://script.ebay.co.kr/fonts/GmarketSansLight.woff') format('woff');
+        }	
+        .event_wrap {max-width: 800px; margin: auto; position: relative; text-align: center;}
+        .event_wrap img{width: 100%;}
+        .event_wrap button{border: none; font-family: 'Gmarket Sans'; background: none; padding: 0;}
+        .event_wrap button:focus{outline:0 none;}
+        .event_wrap .e_blind{font-size: 0; position: absolute; text-indent: -99999px;}
+        .event_wrap .e_tit{margin: 39px 0 25px;}			
+        .event_wrap .cont{position: relative;}	
+        .event_wrap .swiper-container{overflow: hidden;}
+        .event_wrap .btn_group{font-size: 0; background: url('//img.modetour.com/promotion20/11532/mo/cont03_btn_bg.jpg') repeat-y center 0 / 100%;}			 
+        .event_wrap .con_group .con{display: none;}
+        .event_wrap .con_group .con.on{display: block;}
+        .event_wrap .gallery-thumbs{aspect-ratio: 4/5;}
+        .event_wrap .gallery-thumbs .swiper-slide{background-position: center 0; background-repeat: no-repeat; background-size: cover;}
+        .event_wrap .gallery-thumbs .swiper-slide.main01{background-image: url('//img.modetour.com/promotion20/11532/main01.jpg');}
+        .event_wrap .gallery-thumbs .swiper-slide.main02{background-image: url('//img.modetour.com/promotion20/11532/main02.jpg');}
+        .event_wrap .gallery-thumbs .swiper-slide .img_wrap{width: 100%; margin: 0 auto; position: relative;}
+        .event_wrap .gallery-thumbs .swiper-slide .main_txt1{position: absolute; top: 0; left: 0; width: 36.375%;}
+        .event_wrap .gallery-thumbs .swiper-slide .main_txt2{position: absolute; top: 58vw; left: 0; width: 77.75%;}
+        .event_wrap .gallery-top .swiper-slide{background: url('//img.modetour.com/promotion20/11532/top_bg.jpg') center 0 no-repeat; background-color: #d0fede;}
+        .event_wrap .nav_btn{width: 100%; max-width: 800px; background: #343434; z-index: 9999; display: none;}
+        .event_wrap .e_nav{width: 100%; overflow: hidden; margin: 0 auto;}
+         .event_wrap .e_nav li{background-repeat: no-repeat; float: left; font-size: 0; width: 50%; aspect-ratio: 55/14; background-size: 220%; background-image: url('//img.modetour.com/promotion20/11536/maintab_off.jpg'); background-position: 9% 0;}
+         .event_wrap .e_nav li.e_nav2{background-position: 95% 0;}
+         .event_wrap .e_nav li.on{background-image: url('//img.modetour.com/promotion20/11536/maintab_on.jpg');}
+         .event_wrap .e_nav li a{width: 100%; height: 100%; display: block;}
+        .event_wrap .e_link{display: block; position: absolute; left: 50%; font-size: 0; width: 245px; height: 75px; background: url('//img.modetour.com/promotion/11024/empty.png');}
+        .event_wrap #cont02{background: url('//img.modetour.com/promotion20/11536/cont02_bg.jpg') center 0 no-repeat;}
+        .event_wrap #cont03 .btn_group button{width: 25%; aspect-ratio: 31/14; padding: 15px 0; font-size: 12px; color: #FFF; line-height: 14px; letter-spacing: -1px;}
+        .event_wrap #cont03 .btn_group button.on{border-bottom: 4px solid #000;}
+        .event_wrap #cont03 .con_group .con{background-position: center 0; background-repeat: no-repeat; background-size: 190vw;}
+        .event_wrap #cont03 .con_group .cont03_con1{background-image: url('//img.modetour.com/promotion20/11532/cont03_bg1.jpg');}
+        .event_wrap #cont03 .con_group .cont03_con2{background-image: url('//img.modetour.com/promotion20/11532/cont03_bg2.jpg');}
+        .event_wrap #cont03 .con_group .cont03_con3{background-image: url('//img.modetour.com/promotion20/11532/cont03_bg3.jpg');}
+        .event_wrap #cont03 .con_group .cont03_con4{background-image: url('//img.modetour.com/promotion20/11532/cont03_bg4.jpg');}
+        .event_wrap #cont03 .con_group .con{padding: 20vw 0; text-align: left;}
+        .event_wrap #cont03 .con_group .con .cont_wrap{margin: 0 auto; text-align: left;}
+        .event_wrap #cont03 .con_group .con .cont_wrap .cont03_ttl{width: 64.875%;}
+        .event_wrap .con_group .swiper-pagination{position: static; margin: 5% 0 0;}
+        .event_wrap .con_group .swiper-pagination .swiper-pagination-bullet{width: 30px; border-radius: 10px; background: #d2d2d2; opacity: 1; margin: 0 5px;}
+        .event_wrap .con_group .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active{background: #04b68b;}
+        .event_wrap #cont03 .e_banner{background: url('//img.modetour.com/promotion20/11532/banner_bg.jpg') center 0 no-repeat;}
+        .event_wrap #cont04 {padding-bottom: 40px;}
+        .event_wrap #cont04 .e_tit{width: 66.625%;}
+        .event_wrap #cont04 .btn_group{font-size: 0; background-image: url('//img.modetour.com/promotion20/11532/mo/cont04tab_bg.jpg');background-repeat: no-repeat; background-size: 100%; background-position: 0 14%;}
+        .event_wrap #cont04 .btn_group button{background-image: url('//img.modetour.com/promotion20/11532/mo/cont04tab_off.png'); background-repeat: no-repeat; background-size: 370%; width: 33.33%; font-size: 0; height: 22vw;}
+        .event_wrap #cont04 .btn_group button.on{background-image: url('//img.modetour.com/promotion20/11532/mo/cont04tab_on.png');}
+        .event_wrap #cont04 .btn_group button.cont04_btn1{background-position: 5% 0;}
+        .event_wrap #cont04 .btn_group button.cont04_btn2{background-position: 50% 0;}
+        .event_wrap #cont04 .btn_group button.cont04_btn3{background-position: 94.8% 0;}
+        .event_wrap #cont04 .cont04_slide .in{position: absolute; padding: 15px 0 15px 30px; position: absolute; left: 0; right: 0; bottom: 0; line-height: 25px; font-size: 21px; letter-spacing: -1px; text-align: left; font-family: 'Gmarket Sans','apple sd gothic neo', dotum, '돋움', verdana; transition: all 0.1s; -webkit-transition: all 0.1s; color: #FFF; display: none;}
+        .event_wrap #cont04 .cont04_slide .in .tit{color: #FFF; font-size: 14px;}
+        .event_wrap #cont04 .cont04_slide .item1 .in{background: rgba(90, 135, 249, 0.8);}
+        .event_wrap #cont04 .cont04_slide .item2 .in{background: rgba(44, 198, 102, 0.8);}
+        .event_wrap #cont04 .cont04_slide .item3 .in{background: rgba(221, 130, 20, 0.8);}
+        .event_wrap #cont04 .cont04_slide .swiper-slide{overflow: hidden;}
+        .event_wrap #cont04 .cont04_slide .swiper-slide-active .in{display: block;}
+        .event_wrap #cont05 {position: relative; padding-bottom: 100px;}
+        .event_wrap #cont05 .e_link{width: 49.5%; height: 6%; left: 25%; bottom: 0;}
+        .event_wrap #cont05 .swiper-container{padding-top: 20px;}
+        .event_wrap #cont05 .swiper-slide{background-position: center 0; background-repeat: no-repeat;}
+        .event_wrap #cont05 .cont05_1{background-image: url('//img.modetour.com/promotion20/11536/cont05_1_bg.jpg');}
+        .event_wrap #cont05 .cont05_2{background-image: url('//img.modetour.com/promotion20/11536/cont05_2_bg.jpg');}
+        .event_wrap #cont05 .cont05_3{background-image: url('//img.modetour.com/promotion20/11536/cont05_3_bg.jpg');}
+        .event_wrap #cont05 .swiper-pagination{position: static;}
+        .event_wrap #cont05 .swiper-pagination span{background: none; background-image: url('//img.modetour.com/promotion20/11536/cont05btn1_off.png'); background-repeat: no-repeat; background-size: 100%; width: 24%; height: 30vw; margin-left: 6%; border-radius: 0; opacity: 1; position: relative; transition-duration: 0.5s;}
+        .event_wrap #cont05 .swiper-pagination span.swiper-pagination-bullet-active{background-image: url('//img.modetour.com/promotion20/11536/cont05btn1_on.png'); transform: translate3d(0,-20px,0);}
+        .event_wrap #cont05 .swiper-pagination span+span{background-image: url('//img.modetour.com/promotion20/11532/cont05btn3_off.png'); background-position: 0 0;}
+        .event_wrap #cont05 .swiper-pagination span+span.swiper-pagination-bullet-active{background-image: url('//img.modetour.com/promotion20/11532/cont05btn3_on.png');}
+        .event_wrap #cont05 .swiper-pagination span+span+span{background-image: url('//img.modetour.com/promotion20/11532/cont05btn4_off.png'); background-position: 0 0;}
+        .event_wrap #cont05 .swiper-pagination span+span+span.swiper-pagination-bullet-active{background-image: url('//img.modetour.com/promotion20/11532/cont05btn4_on.png');}
+
+
+        /* animated */
+        @-webkit-keyframes fadeInRight{0%{opacity:0;-webkit-transform:translate3d(50%,0,0);transform:translate3d(50%,0,0)}to{opacity:1;-webkit-transform:translateZ(0);transform:translateZ(0)}}
+        @keyframes fadeInRight{0%{opacity:0;-webkit-transform:translate3d(50%,0,0);transform:translate3d(50%,0,0)}to{opacity:1; -webkit-transform:translateZ(0);transform:translateZ(0)}}
+        @-webkit-keyframes hideUp {from {opacity: 0;}to {opacity: 1;-webkit-transform: translate3d(0,-50px,0);transform: translate3d(0,-50px,0);}}
+        @keyframes hideUp {from {opacity: 0;}to {opacity: 1;-webkit-transform: translate3d(0,-50px,0);transform: translate3d(0,-50px,0);}}
+        @-webkit-keyframes hideDown {from {opacity: 1;-webkit-transform: translate3d(0,-50px,0);transform: translate3d(0,-50px,0);}to {opacity: 0;-webkit-transform: translate3d(0,0,0);transform: translate3d(0,0,0);}}
+        @keyframes hideDown {from {opacity: 1;-webkit-transform: translate3d(0,-50px,0);transform: translate3d(0,-50px,0);}to {opacity: 0;-webkit-transform: translate3d(0,0,0);transform: translate3d(0,0,0);}}
+        @-webkit-keyframes textUp {from {opacity: 0;}to {opacity: 1;-webkit-transform: translate3d(0,80px,0);transform: translate3d(0,80px,0);}}
+        @keyframes textUp {from {opacity: 0;}to {-webkit-transform: translate3d(0,80px,0);opacity: 1;transform: translate3d(0,80px,0);}}
+        @-webkit-keyframes textDown {from {opacity: 0;-webkit-transform: translate3d(0,80px,0);transform: translate3d(0,80px,0);}to {opacity: 1;-webkit-transform: translate3d(0,0,0);transform: translate3d(0,0,0);}}
+        @keyframes textDown {from {opacity: 0;-webkit-transform: translate3d(0,80px,0);transform: translate3d(0,80px,0);}to {opacity: 1;-webkit-transform: translate3d(0,0,0);transform: translate3d(0,0,0);}}				 
+        @keyframes move_item {0%,100% {transform: translateY(0);}50% {transform: translateY(-25px);}}
+        @-webkit-keyframes move_item {0%,100% {transform: translateY(0);}50% {transform: translateY(-25px);}}
+        .hideUp {-webkit-animation-name: hideUp;animation-name: hideUp;}
+        .hideDown {-webkit-animation-name: hideDown;animation-name: hideDown;}
+        .textUp {-webkit-animation-name: textUp;animation-name: textUp;}
+        .textDown {-webkit-animation-name: textDown;animation-name: textDown;}
+        .swiper-slide-active .animate__fadeInRight, .swiper-slide-duplicate-active .animate__fadeInRight{-webkit-animation-name:fadeInRight;animation-name:fadeInRight; animation-delay: 0.5s;}
+        .swiper-slide-active .animate__fadeInRight.main_txt, .swiper-slide-duplicate-active .animate__fadeInRight.main_txt1{-webkit-animation-name:fadeInRight;animation-name:fadeInRight; animation-delay: 0.6s;}
+        .move_item {display: block; transition: transform 0.5s ease; -webkit-transition: transform 0.5s ease; animation: move_item 4s ease-in-out infinite; -webkit-animation: move_item 4s ease-in-out infinite; transform-origin: bottom center; -webkit-transform-origin: center bottom; position: absolute;}
+        .animated {-webkit-animation-duration: 1s; animation-duration: 1s; -webkit-animation-fill-mode: both;animation-fill-mode: both;}
+    </style>	
+</head>
+<body>
+    <!-- [시작: Promotion Container] -->
+    <div class="event_wrap">
+        <!-- [시작] top -->	
+        <div class="e_top">					 
+            <div class="swiper-container gallery-thumbs">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide main01">
+                        <div class="img_wrap">
+                            <img src="//img.modetour.com/promotion20/11532/period.png" alt="4월 30일 부터 5월 31일 까지. 여행을 선물하세요." class="main_txt1 animate__fadeInRight animated">
+                            <img src="//img.modetour.com/promotion20/11532/main01_txt.png" alt="우리 엄마 이름은 000입니다. 매일 여자, 엄마, 아내, 딸의 이름으로 사는 우리 엄마. 순영씨의 행복찾기 여행이 시작됩니다." class="main_txt2 animate__fadeInRight animated">	 
+                        </div>		
+                    </div>
+                    <div class="swiper-slide main02">
+                        <div class="img_wrap">
+                            <img src="//img.modetour.com/promotion20/11532/period.png" alt="4월 30일 부터 5월 31일 까지. 여행을 선물하세요." class="main_txt1 animate__fadeInRight animated"> 
+                            <img src="//img.modetour.com/promotion20/11532/main02_txt.png" alt="우리 아빠 이름은 000입니다. 매일 남자, 아빠, 남편, 아들의 이름으로 사는 우리 아빠. 경수씨의 행복찾기 여행이 시작됩니다." class="main_txt2 animate__fadeInRight animated"> 
+                        </div>					 
+                    </div>
+                </div>
+            </div><!-- //gallery-thumbs -->
+            <div class="swiper-container gallery-top">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="//img.modetour.com/promotion20/11532/top01.jpg" alt="순영이가 돌아왔다. 당신에게 순영이를 선물하세요!">
+                        <p class="e_blind">누군가의 엄마로 살아온 30여년 순영이보다 은지엄마가 먼저로 살아온 당신, 까르르 웃던 영락없던 소녀였던 당신을 당신조차 잊고 지낸 건 아닌지요.여행은 자유로운 나, 나 다운 나를 만나게 해줍니다.</p>
+                    </div>
+                    <div class="swiper-slide">
+                        <img src="//img.modetour.com/promotion20/11532/top02.jpg" alt="경수가 돌아왔다. 당신에게 경수를 선물하세요!">	
+                        <p class="e_blind">누군가의 아빠로 살아온 30여년 경수보다 은지아빠가 먼저로 살아온 당신, 꿈 많던 철없는 소년이었던 당신을 당신조차 잊고 지낸 건 아닌지요. 여행은 자유로운 나, 나 다운 나를 만나게 해줍니다.</p>
+                    </div>
+                </div>
+            </div><!-- //gallery-top -->
+        </div>
+        <!-- [끝] top -->
+
+        <!-- [시작] contents -->
+        <div class="e_container">
+            <div class="nav_btn">
+                <ul class="e_nav">
+                    <li class="e_nav1"><a href="#cont02">여행 상품</a></li>
+                    <li class="e_nav2"><a href="#cont05">혜택</a></li>
+                </ul>
+            </div>
+            <div class="con_wrap">
+                <div id="cont02" class="cont">
+                    <img src="//img.modetour.com/promotion20/11536/cont02.jpg" alt="">
+                </div>
+                <!-- [시작] 패키지여행의 재발견 -->
+                <div id="cont03">
+                    <p><img src="//img.modetour.com/promotion20/11532/cont03_tit.jpg" alt="" class="e_tit"></p>
+                    <div class="btn_group">
+                        <button class="cont03_btn1 on">코로나 걱정없이<br>웰니스 에코투어</button>
+                        <button class="cont03_btn2">우리끼리만<br>프라이빗투어</button>
+                        <button class="cont03_btn3">가서는 돈쓰지마요<br>올인클 루시브</button>
+                        <button class="cont03_btn4">여기가면 인싸확정!<br>문화&amp;예술체험</button>
+                    </div>
+                    <div class="con_group">
+                        <div class="con cont03_con1 on">
+                            <div class="cont_wrap">
+                                <img src="//img.modetour.com/promotion20/11532/cont03_txt1.png" alt="" class="cont03_ttl">                                
+                                <div class="swiper-container cont03_slide">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><img src="//img.modetour.com/promotion20/11532/mo/package1_1.jpg" alt=""></div>
+                                        <div class="swiper-slide"><img src="//img.modetour.com/promotion20/11532/mo/package1_2.jpg" alt=""></div>
+                                        <div class="swiper-slide"><img src="//img.modetour.com/promotion20/11532/mo/package1_3.jpg" alt=""></div>
+                                        <div class="swiper-slide"><img src="//img.modetour.com/promotion20/11532/mo/package1_4.jpg" alt=""></div>
+                                        <div class="swiper-slide"><img src="//img.modetour.com/promotion20/11532/mo/package1_5.jpg" alt=""></div>
+                                        <div class="swiper-slide"><img src="//img.modetour.com/promotion20/11532/mo/package1_6.jpg" alt=""></div>
+                                    </div>
+                                    <!-- Add Pagination -->
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                        </div><!-- //cont03_con1 -->
+                        <div class="con cont03_con2">
+                            <div class="cont_wrap">
+                                <img src="//img.modetour.com/promotion20/11532/cont03_txt2.png" alt="" class="cont03_ttl">
+                                <div class="swiper-container cont03_slide">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><img src="//img.modetour.com/promotion20/11532/mo/package2_1.jpg" alt=""></div>
+                                        <div class="swiper-slide"><img src="//img.modetour.com/promotion20/11532/mo/package2_2.jpg" alt=""></div>
+                                        <div class="swiper-slide"><img src="//img.modetour.com/promotion20/11532/mo/package2_3.jpg" alt=""></div>
+                                        <div class="swiper-slide"><img src="//img.modetour.com/promotion20/11532/mo/package2_4.jpg" alt=""></div>
+                                        <div class="swiper-slide"><img src="//img.modetour.com/promotion20/11532/mo/package2_5.jpg" alt=""></div>
+                                        <div class="swiper-slide"><img src="//img.modetour.com/promotion20/11532/mo/package2_6.jpg" alt=""></div>
+                                    </div>
+                                    <!-- Add Pagination -->
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                        </div><!-- //cont03_con2 -->
+                        <div class="con cont03_con3">
+                            <div class="cont_wrap">
+                                <img src="//img.modetour.com/promotion20/11532/cont03_txt3.png" alt="" class="cont03_ttl">
+                                <div class="swiper-container cont03_slide">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><img src="//img.modetour.com/promotion20/11532/mo/package3_1.jpg" alt=""></div>
+                                        <div class="swiper-slide"><img src="//img.modetour.com/promotion20/11532/mo/package3_2.jpg" alt=""></div>
+                                        <div class="swiper-slide"><img src="//img.modetour.com/promotion20/11532/mo/package3_3.jpg" alt=""></div>
+                                        <div class="swiper-slide"><img src="//img.modetour.com/promotion20/11532/mo/package3_4.jpg" alt=""></div>
+                                        <div class="swiper-slide"><img src="//img.modetour.com/promotion20/11532/mo/package3_5.jpg" alt=""></div>
+                                        <div class="swiper-slide"><img src="//img.modetour.com/promotion20/11532/mo/package3_6.jpg" alt=""></div>
+                                    </div>
+                                    <!-- Add Pagination -->
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                        </div><!-- //cont03_con3 -->
+                        <div class="con cont03_con4">
+                            <div class="cont_wrap">
+                                <img src="//img.modetour.com/promotion20/11532/cont03_txt4.png" alt="" class="cont03_ttl">
+                                <div class="swiper-container cont03_slide">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><img src="//img.modetour.com/promotion20/11532/mo/package4_1.jpg" alt=""></div>
+                                        <div class="swiper-slide"><img src="//img.modetour.com/promotion20/11532/mo/package4_2.jpg" alt=""></div>
+                                        <div class="swiper-slide"><img src="//img.modetour.com/promotion20/11532/mo/package4_3.jpg" alt=""></div>
+                                        <div class="swiper-slide"><img src="//img.modetour.com/promotion20/11532/mo/package4_4.jpg" alt=""></div>
+                                        <div class="swiper-slide"><img src="//img.modetour.com/promotion20/11532/mo/package4_5.jpg" alt=""></div>
+                                        <div class="swiper-slide"><img src="//img.modetour.com/promotion20/11532/mo/package4_6.jpg" alt=""></div>
+                                    </div>
+                                    <!-- Add Pagination -->
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                        </div><!-- //cont03_con4 -->
+                    </div>
+                    <div class="e_banner">
+                        <a href="/event/plan/detail.aspx?mloc=07&eidx=11530"><img src="//img.modetour.com/promotion20/11532/mo/banner.jpg" alt=""></a>
+                    </div>
+                </div>
+                <!-- [끝] 패키지여행의 재발견 -->
+
+                <!-- [시작] 가장 선호하는 여행지-->
+                <div id="cont04">
+                    <p><img src="//img.modetour.com/promotion20/11532/cont04_tit.jpg" alt="" class="e_tit"></p>
+                    <div class="btn_group">
+                        <button class="cont04_btn1 on">동남아/대만</button>
+                        <button class="cont04_btn2">남태평양/미주</button>
+                        <button class="cont04_btn3">유럽</button>
+                    </div>
+                    <div class="con_group">
+                        <div class="con on">
+                            <div class="swiper-container cont04_slide">
+                                <div class="swiper-wrapper item1">
+                                    <div class="swiper-slide">
+                                        <img src="//img.modetour.com/promotion20/11532/cont04_1_item1.jpg" alt="">	
+                                        <div class="in animated textDown">	
+                                            <a href="/pkg/item.aspx?Idx=534038&PCode=">
+                                                <div class="tit">발리 5일</div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="//img.modetour.com/promotion20/11532/cont04_1_item2.jpg" alt="">	
+                                        <div class="in animated textDown">	
+                                            <a href="/pkg/item.aspx?Idx=534040&PCode=">
+                                                <div class="tit">싱가포르 5일</div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="//img.modetour.com/promotion20/11532/cont04_1_item3.jpg" alt="">	
+                                        <div class="in animated textDown">	
+                                            <a href="/pkg/item.aspx?Idx=534041&PCode=">
+                                                <div class="tit">대만 4일</div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="//img.modetour.com/promotion20/11532/cont04_1_item4.jpg" alt="">	
+                                        <div class="in animated textDown">		
+                                            <a href="/pkg/item.aspx?Idx=534042&PCode=">
+                                                <div class="tit">다낭 5일</div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Add Pagination -->
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                        <div class="con">
+                            <div class="swiper-container cont04_slide">
+                                <div class="swiper-wrapper item2">
+                                    <div class="swiper-slide">
+                                        <img src="//img.modetour.com/promotion20/11532/cont04_2_item1.jpg" alt="">	
+                                        <div class="in animated textDown">	
+                                            <a href="/pkg/item.aspx?Idx=534014&PCode=">
+                                                <div class="tit">하와이 6일</div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="//img.modetour.com/promotion20/11532/cont04_2_item2.jpg" alt="">	
+                                        <div class="in animated textDown">
+                                            <a href="/pkg/item.aspx?Idx=534016&PCode=">
+                                                <div class="tit">몰디브 7일</div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="//img.modetour.com/promotion20/11532/cont04_2_item3.jpg" alt="">	
+                                        <div class="in animated textDown">	
+                                            <a href="/pkg/item.aspx?Idx=534017&PCode=">
+                                                <div class="tit">괌 5일</div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="//img.modetour.com/promotion20/11532/cont04_2_item4.jpg" alt="">	
+                                        <div class="in animated textDown">
+                                            <a href="/pkg/item.aspx?Idx=534018&PCode=">
+                                                <div class="tit">사이판 5일</div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Add Pagination -->
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                        <div class="con">
+                            <div class="swiper-container cont04_slide">
+                                <div class="swiper-wrapper item3">
+                                    <div class="swiper-slide">
+                                        <img src="//img.modetour.com/promotion20/11532/cont04_3_item1.jpg" alt="">	
+                                        <div class="in animated textDown">	
+                                            <a href="/pkg/item.aspx?Idx=534035&PCode=">
+                                                <div class="tit">영국일주 10일</div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="//img.modetour.com/promotion20/11532/cont04_3_item2.jpg" alt="">	
+                                        <div class="in animated textDown">	
+                                            <a href="/pkg/item.aspx?Idx=534034&PCode=">
+                                                <div class="tit">이태리일주 9일</div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="//img.modetour.com/promotion20/11532/cont04_3_item3.jpg" alt="">	
+                                        <div class="in animated textDown">	
+                                            <a href="/pkg/item.aspx?Idx=534037&PCode=">
+                                                <div class="tit">서유럽 3국 10일</div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-slide">
+                                        <img src="//img.modetour.com/promotion20/11532/cont04_3_item4.jpg" alt="">	
+                                        <div class="in animated textDown">	
+                                            <a href="/pkg/item.aspx?Idx=534043&PCode=">
+                                                <div class="tit">동유럽/발칸 5국 9일</div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Add Pagination -->
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- [끝] 가장 선호하는 여행지 -->
+
+                <!-- [시작] 혜택 -->
+                <div id="cont05" class="cont">
+                    <div class="swiper-container cont05_slide">
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide cont05_1"><img src="//img.modetour.com/promotion20/11536/cont05_1.jpg" alt=""></div>
+                            <div class="swiper-slide cont05_2">
+                                <img src="//img.modetour.com/promotion20/11536/cont05_2.jpg" alt="">
+                                <a href="https://movv.co/" class="e_link" target="_blank" title="새창열림"></a>
+                            </div>
+                            <div class="swiper-slide cont05_3"><img src="//img.modetour.com/promotion20/11536/cont05_3.jpg" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+                <!-- [끝] 혜택-->
+            </div>
+        </div>
+        <!-- [끝] contents -->
+    </div>
+    <script type="text/javascript">
+        (function($){										 
+            $(document).ready(function(){
+
+                var galleryThumbs = new Swiper('.gallery-thumbs', {
+                    speed: 1000,
+                    effect: 'fade',
+                    watchSlidesProgress: true,
+                    autoplay: {
+                        delay: 5000,
+                        disableOnInteraction: false,
+                    },
+                    loop: true,
+                });
+                var galleryTop = new Swiper('.gallery-top', {
+                    effect: 'fade',
+                    loop: true,
+
+                });
+                galleryTop.controller.control = galleryThumbs;
+                galleryThumbs.controller.control = galleryTop;
+
+
+                var $menu = $('.nav_btn li'),
+                $contents = $('.cont'),
+                navH = $('.nav_btn').height();
+
+                $('ul.e_nav li a').click(function(){	
+                    $('html,body').animate({
+                        scrollTop:$(this.hash).offset().top-navH
+                    }, 500); 
+                    return false;
+                }); 
+
+                $(window).scroll(function(){
+                    var navi = $('.nav_btn').first(),
+                    scltop = $(window).scrollTop(),
+                    conTop = $('.e_container').offset().top-navH;
+
+                    if(scltop > conTop){
+                        navi.css({"position":"fixed","top":0, "display":"block"});
+                    }
+                    else if(scltop < conTop){				 
+                        navi.css({"display":"none"});
+                    }
+
+                    $.each($contents, function(idx, item){
+                        var $target = $contents.eq(idx),
+                        i = $target.index(),
+                        topH = $('.e_top').height(),
+                        targetTop = $target.offset().top;
+
+                        if (targetTop-navH <= scltop+10) {
+                            $menu.removeClass('on');
+                            $menu.eq(idx).addClass('on');
+                        }
+                        else if (!(topH <= scltop)) {
+                            $menu.removeClass('on');
+                        }
+                    });
+                });
+
+                $('.btn_group button').click(function(){
+                    var idx = $(this).index();
+                    $(this).addClass('on').siblings('button').removeClass('on');
+                    $(this).parent('div.btn_group').siblings('div.con_group').children('div').eq(idx).addClass('on').siblings('div').removeClass('on');
+                });
+
+                
+                var swiper1 = new Swiper('.cont03_slide', {						 
+                    slidesPerView: 1.3,
+                    spaceBetween: 20,
+                    centeredSlides: true,
+                    observer: true,
+				    observeParents: true,
+                    pagination: {
+                        el: '.cont03_slide .swiper-pagination',
+                        clickable: true,
+                    },
+                });
+                var swiper2 = new Swiper('.cont04_slide', {						 
+                    slidesPerView: 1.5,
+                    spaceBetween: 20,
+                    centeredSlides: true,
+                    observer: true,
+				    observeParents: true,
+                    pagination: {
+                        el: '.cont04_slide .swiper-pagination',
+                        clickable: true,
+                    },
+                });
+                var swiper3 = new Swiper('.cont05_slide', {						 
+                    autoHeight: true,
+                    pagination: {
+                        el: '.cont05_slide .swiper-pagination',
+                        clickable: true,
+                    },
+                });
+
+            });
+        })(jQuery);
+    </script>			
+    <!-- [끝]: Promotion Container -->
+</body>
+</html>
