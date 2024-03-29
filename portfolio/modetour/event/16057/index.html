@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>16057</title>
+	<script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+	<link rel="stylesheet" type="text/css" href="../../css/common.min.css" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/js/swiper.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.4.6/css/swiper.min.css">
+    <style>				
+        @import url('//fonts.googleapis.com/earlyaccess/notosanskr.css');
+        body{margin: 0;}
+        .event_wrap{min-width: 800px; position: relative; text-align: center; background: #f6fdfc; overflow: hidden;}
+        .event_wrap div, p, span, button, i{font-family: 'Noto Sans KR', sans-serif; margin: 0; padding: 0;}
+        .event_wrap .e_top .swiper-wrapper{height: 623px;}
+        .event_wrap .e_top .swiper-slide{ background: #f6fdfc; display: flex; align-items: center; justify-content: center;}
+        .event_wrap .e_top .txt_wrap p{color: #000; font-size: 75px; font-weight: bold;}
+        .event_wrap .e_top .txt_wrap p+p{margin-top: 10px;}
+        .event_wrap .e_top .swiper-slide span,
+        .event_wrap .e_top .swiper-slide i{display: inline-block; text-decoration: none; font-style: normal;}
+        .event_wrap .slide_up_box{position: relative; overflow: hidden;}
+        .event_wrap .swiper-slide .txt_wrap{opacity: 0;}
+        .event_wrap .swiper-slide-active .txt_wrap{opacity: 1;}
+        .event_wrap .swiper-slide-active .slide_up{animation-name: fadeInUp; animation-duration: 0.8s; animation-fill-mode: both;}
+        .event_wrap .swiper-slide-active .grow{animation-name: grow; animation-duration: 0.8s; animation-timing-function: ease; animation-fill-mode: both; animation-delay: 0.4s;}
+        .event_wrap .swiper-slide-active .grow{animation-name: grow; animation-duration: 0.8s; animation-timing-function: ease; animation-fill-mode: both; animation-delay: 0.4s;}
+        .event_wrap .swiper-slide-active .elastic-spin{animation-name: elastic-spin; animation-duration: 0.8s; animation-fill-mode: both; animation-timing-function: ease;}
+        .event_wrap .swiper-slide-active .rotate-in-up-left{animation-name: rotate-in-up-left; animation-duration: 0.8s; animation-fill-mode: both; animation-timing-function: ease;}
+        .event_wrap .swiper-slide-active .rotate-in-down-left{animation-name: rotate-in-down-left; animation-duration: 0.8s; animation-fill-mode: both; animation-timing-function: ease;}
+        .event_wrap .swiper-slide-active .rotate-in-down-right{animation-name: rotate-in-down-right; animation-duration: 0.8s; animation-fill-mode: both; animation-timing-function: ease;}
+        .event_wrap .swiper-slide-active .bounce-in-left{animation-name: bounce-in-left; animation-duration: 0.8s; animation-fill-mode: both; animation-timing-function: ease;}
+        .event_wrap .swiper-slide-active .bounce-in-right{animation-name: bounce-in-right; animation-duration: 0.8s; animation-fill-mode: both; animation-timing-function: ease;}
+        .event_wrap .swiper-slide-active .hithere{animation-name: hithere; animation-duration: 0.8s; animation-fill-mode: both; animation-timing-function: ease; animation-iteration-count: infinite;}
+        
+        .event_wrap .slide1 .grow:nth-child(2){animation-delay: 0.7s;}
+        .event_wrap .slide1 .grow:nth-child(3){animation-delay: 1.0s;}
+        .event_wrap .slide1 .grow:nth-child(4){animation-delay: 1.3s;}
+        .event_wrap .slide2 .elastic-spin{animation-delay: 0.2s;}
+        .event_wrap .slide2 .slide_up_box:nth-child(1) .elastic-spin{animation-delay: 0.3s;}
+        .event_wrap .slide2 .slide_up_box:nth-child(2) .slide_up{animation-delay: 0.6s;}
+        .event_wrap .slide2 .slide_up_box:nth-child(2) .grow{animation-delay: 0.9s;}
+        .event_wrap .slide2 .slide_up_box:nth-child(3) .slide_up{animation-delay: 1.2s;}
+        .event_wrap .slide2 .slide_up_box:nth-child(3) .rotate-in-up-left{animation-delay: 1.5s;}
+        .event_wrap .slide3 .rotate-in-down-right{animation-delay: 0.3s;}
+        .event_wrap .slide4 .bounce-in-right{animation-delay: 0.2s;}
+        .event_wrap .slide4 .bounce-in-right+.bounce-in-left{animation-delay: 0.4s;}
+
+        .event_wrap .cont01{margin-bottom: 50px; position: relative; height: auto; overflow: hidden;}
+        .event_wrap .cont01 .balloons{width: 1100px; margin: 0 auto; position: relative;}
+        .event_wrap .cont01 .balloons div {position: absolute; left: 0; bottom: -150px; border-radius: 50%; box-shadow: 5px 10px 5px rgba(140, 140, 140, 0.7);}
+        .event_wrap .mo_frame{position: relative; width: 501px; height: 1028px; margin: 0 auto; overflow: hidden;}
+        .event_wrap .mo_frame::before{content: ""; background: url('//img.modetour.com/promotion20/16057/frame.png'); position: absolute; left: 0; top: 0; right: 0; bottom: 0; z-index: 99;}
+        .event_wrap .mo_frame .swiper{padding: 5px 20px; height: 100%; box-sizing: border-box;}
+        .event_wrap .mo_frame .swiper .swiper-slide{position: relative;}
+        .event_wrap .mo_frame .e_video{width: 100%; height: 100%; object-fit: cover; border-radius: 50px; position: relative; z-index: 98;}
+        .event_wrap .cont01 .txt_wrap{width: 100%; position: absolute; z-index: 100; bottom: 100px; text-align: right;}
+        .event_wrap .cont01 .txt_wrap span{display: inline-block; margin-right: 15px; font-size: 24px; font-weight: bold; padding: 0 30px; line-height: 80px; background: rgba(255, 255, 255, 0.9); letter-spacing: -3px; border-radius: 50px;}
+        .event_wrap .cont01 .txt_wrap div + div span{margin-top: 20px;}
+        .event_wrap .cont01 .txt_wrap div:nth-child(2){animation-delay: 0.3s;}
+        .event_wrap .cont01 .txt_wrap div:nth-child(3){animation-delay: 0.6s;}
+
+        .event_wrap .cont02 .banner_wrap{width: 740px; margin: 0 auto; display: flex; gap: 20px 0; flex-wrap: wrap; justify-content: space-between;}
+        .event_wrap .cont02 .banner_wrap .banner_box{width: 364px; position: relative;}
+        .event_wrap .cont02 .banner_wrap .txt{position: absolute; left: 30px; top: 60px; color: #FFF; text-align: left; font-size: 30px; font-weight: bold; line-height: 35px; letter-spacing: -1px;}
+        .event_wrap .cont02 .banner_wrap .txt_000{color: #000;}
+        .event_wrap .cont02 .banner_wrap .star_ani img{position: absolute; transform: scale(1);}
+        .event_wrap .cont02 .banner_wrap .star01{top: 283px; left: 88px;}
+        .event_wrap .cont02 .banner_wrap .star02{top: 243px; left: 111px;}
+        .event_wrap .cont02 .banner_wrap .star03{top: 218px; left: 154px;}
+        .event_wrap .cont02 .banner_wrap .star04{top: 243px; left: 206px;}
+        .event_wrap .cont02 .banner_wrap .star05{top: 283px; left: 240px;}
+        .event_wrap .cont02 .grow{animation-name: grow; animation-duration: 0.5s; animation-timing-function: ease; animation-fill-mode: both;}
+
+        .event_wrap .cont03{margin: 155px 0 145px;}
+        .event_wrap .cont03 .swiper-wrapper{transition-timing-function: linear; height: auto;}
+        
+        @keyframes fadeInUp{0%{opacity:0;-webkit-transform:translate3d(0,100%,0);transform:translate3d(0,100%,0)}to{opacity:1;-webkit-transform:translateZ(0);transform:translateZ(0)}}
+        @keyframes grow {from {transform: scale(0);}to {transform: scale(1);}}
+        @keyframes rotate-in-down-left {0% {transform-origin: left bottom;transform: rotate(-90deg);opacity: 0;}100% {transform-origin: left bottom;transform: rotate(0);opacity: 1;}}
+        @keyframes rotate-in-down-right {0% {transform-origin: right bottom;transform: rotate(-90deg);opacity: 0;}100% {transform-origin: right bottom;transform: rotate(0);opacity: 1;}}
+        @keyframes rotate-in-up-left {0% {transform-origin: left bottom;transform: rotate(90deg);opacity: 0;}100% {transform-origin: left bottom;transform: rotate(0);opacity: 1;}}
+        @keyframes elastic-spin {from {opacity:0;transform: rotate(0deg);}to {opacity:1;transform: rotate(360deg);}}
+        @keyframes bounce-in-left {0% {opacity: 0;transform: translateX(-2000px);}60% {opacity: 1;transform: translateX(30px);}80% {transform: translateX(-10px);}100% {transform: translateX(0);}}
+        @keyframes bounce-in-right {0% {opacity: 0;transform: translateX(2000px);}60% {opacity: 1;transform: translateX(-30px);}80% {transform: translateX(10px);}100% {transform: translateX(0);}}
+        @keyframes hithere {30% {transform: scale(1.2);}40%, 60% {transform: rotate(-20deg) scale(1.2);}50% {transform: rotate(20deg) scale(1.2);}70% {transform: rotate(0deg) scale(1.2);}100% {transform: scale(1);}}
+        @keyframes wobbling_x {0% {margin-left: 8px;}100% {margin-left: 0px;}}
+        @keyframes wobbling_y {0% {margin-bottom: 0px;}100% {margin-bottom: 8px;}}
+        @keyframes fly_high {100% {transform:translateY(-1000px);}}
+    </style>
+</head>
+<body>
+    
+    <!-- [s]: 기획전 시작 -->
+    <div class="event_wrap">
+        <div class="e_top">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide slide1">
+                        <div class="txt_wrap">
+                            <p class="slide_up_box"><span class="slide_up">순도 100%</span></p>
+                            <p>
+                                <span class="grow">💯</span>
+                                <span class="grow">👍</span>
+                                <span class="grow">❤️</span>
+                                <span class="grow">🤩</span>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide2">
+                        <div class="txt_wrap">
+                            <p class="slide_up_box"><span class="slide_up">고객에 의한</span><i class="elastic-spin">🤔</i></p>
+                            <p class="slide_up_box"><span class="slide_up">고객을 위한</span><i class="grow">🙌</i></p>
+                            <p class="slide_up_box"><span class="slide_up">고객의 리뷰로</span><i class="rotate-in-up-left">✍️</i></p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide slide3">
+                        <div class="txt_wrap">
+                            <p class="rotate-in-down-left">믿고</p>
+                            <p class="rotate-in-down-right">걸러드립니다<i class="hithere">✨</i></p>
+                        </div>								
+                    </div>
+                    <div class="swiper-slide slide4">
+                        <div class="txt_wrap">
+                            <p class="bounce-in-left">월간</p>
+                            <p class="bounce-in-right">베스트 리뷰</p>
+                            <p class="bounce-in-left">여행상품</p>
+                        </div>								
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="cont01">
+            <div class="mo_frame">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide video_slide">	
+                            <video autoplay="autoplay" loop muted="muted" -webkit-playsinline="-webkit-playsinline" playsinline="playsinline" class="e_video">
+                                <source src="//img.modetour.com/promotion20/16057/video01.mp4" type="video/mp4">
+                            </video>				
+                            <div class="txt_wrap">						
+                                <div><span>일정이 자유로워요✨</span></div>
+                                <div><span>너무 빡빡하지않아서 좋았어요😁</span></div>
+                                <div><span>1일자유일정 패키지 추천드려요 🙌</span></div>
+                            </div>
+                        </div>		
+                        <div class="swiper-slide video_slide">	
+                            <video autoplay="autoplay" loop muted="muted" -webkit-playsinline="-webkit-playsinline" playsinline="playsinline" class="e_video">
+                                <source src="//img.modetour.com/promotion20/16057/video02.mp4" type="video/mp4">
+                            </video>		
+                            <div class="txt_wrap">	
+                                <div><span>아이들이 정말 좋아해요🐬</span></div>
+                                <div><span>가족여행으로 추천해요</span></div>
+                                <div><span>3대가 함께한 가족여행 만족해요</span></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide video_slide">	
+                            <video autoplay="autoplay" loop muted="muted" -webkit-playsinline="-webkit-playsinline" playsinline="playsinline" class="e_video">
+                                <source src="//img.modetour.com/promotion20/16057/video03.mp4" type="video/mp4">
+                            </video>		
+                            <div class="txt_wrap">	
+                                <div><span>가이드님 덕에 다양한 경험을 했어요 ✨</span></div>
+                                <div><span>가이드님 열정적이세요 💯</span></div>
+                                <div><span>박식하신 가이드님 덕분에 풍성한 여행 🙌</span></div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide video_slide">	
+                            <video autoplay="autoplay" loop muted="muted" -webkit-playsinline="-webkit-playsinline" playsinline="playsinline" class="e_video">
+                                <source src="//img.modetour.com/promotion20/16057/video04.mp4" type="video/mp4">
+                            </video>		
+                            <div class="txt_wrap">
+                                <div><span>먹는거에 진심인편인데 만족🍜</span></div>
+                                <div><span>현지식사 깔끔하고 좋아요</span></div>
+                                <div><span>매끼니 식사 만족스러움🍲</span></div>	
+                            </div>
+                        </div>
+                        <!-- <div class="swiper-slide video_slide">	
+                            <video autoplay="autoplay" loop muted="muted" -webkit-playsinline="-webkit-playsinline" playsinline="playsinline" class="e_video">
+                                <source src="//img.modetour.com/promotion20/16057/video04.mp4" type="video/mp4">
+                            </video>		
+                            <div class="txt_wrap">	
+                                <div><span>패키지라 너무 편했어요 👍</span></div>
+                                <div><span>딱 맞는 음식, 친절한 가이드님! 만점여행 ❤️</span></div>
+                                <div><span>5일동안 편하게 여행하였습니다 추천😍</span></div>
+                            </div>
+                        </div> -->
+                        <div class="swiper-slide video_slide" data-swiper-autoplay="13000">	
+                            <video autoplay="autoplay" loop muted="muted" -webkit-playsinline="-webkit-playsinline" playsinline="playsinline" class="e_video">
+                                <source src="//img.modetour.com/promotion20/16057/video05.mp4" type="video/mp4">
+                            </video>		
+                            <div class="txt_wrap">	
+                                <div><span>리뷰 평점보고 예약했어요</span></div>
+                                <div><span>친절한 가이드님 세심한 배려 감사합니다🙌</span></div>
+                                <div><span>관광지와 가까워서 숙소 넘 만족했어요  </span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="balloons"></div>
+        </div>
+        <div class="cont02">
+            <div class="banner_wrap">
+                <div class="banner_box">
+                    <img src="//img.modetour.com/promotion20/16057/banner01.png" alt="">
+                    <p class="txt">믿고 걸러드렸습니다 💫<br>
+                        총점<br>
+                        4.8점 이상의 상품</p>
+                    <div class="star_ani">
+                        <img src="//img.modetour.com/promotion20/16057/star01.png" alt="" class="star01">
+                        <img src="//img.modetour.com/promotion20/16057/star02.png" alt="" class="star02">
+                        <img src="//img.modetour.com/promotion20/16057/star03.png" alt="" class="star03">
+                        <img src="//img.modetour.com/promotion20/16057/star02.png" alt="" class="star04">
+                        <img src="//img.modetour.com/promotion20/16057/star01.png" alt="" class="star05">
+                    </div>
+                </div>
+                <div class="banner_box">
+                    <img src="//img.modetour.com/promotion20/16057/banner02.png" alt="">
+                    <p class="txt">여행을 좌지우지하는<br>
+                        가이드님 🧒<br>
+                        가이드 만족도<br>
+                        4.5 이상</p>
+                </div>
+                <div class="banner_box">
+                    <img src="//img.modetour.com/promotion20/16057/banner03.png" alt="">
+                    <p class="txt txt_000">너무 빡빡해도<br>
+                        너무 널널해도 ☹️<br>
+                        일정이 최고<br>
+                        알찬 상품 💯</p>
+                </div>
+                <div class="banner_box">
+                    <img src="//img.modetour.com/promotion20/16057/banner04.png" alt="">
+                    <p class="txt">먹는것에 진심입니다 🍜<br>
+                        현지식사<br>
+                        만족도 4.5 이상</p>
+                </div>
+                <div class="banner_box">
+                    <img src="//img.modetour.com/promotion20/16057/banner05.png" alt="">
+                    <p class="txt">그 어떤 모임보다 <br>
+                        가장 까다로운 가족여행<br>
+                        가족 동반 👨‍👩‍👧‍👦<br>
+                        만족도 4.5 이상</p>
+                </div>
+                <div class="banner_box">
+                    <img src="//img.modetour.com/promotion20/16057/banner06.png" alt="">
+                    <p class="txt txt_000">에어텔 예약했다가<br>
+                        호텔 위치보고<br>
+                        깜짝 놀라신분들 😭<br>
+                        호텔 위치 만족도 🏢<br>
+                        만족도 4.5 이상</p>
+                </div>
+            </div>
+        </div>
+        <div class="cont03">
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">	
+                        <img src="//img.modetour.com/promotion20/16057/text.png" alt="">
+                    </div>
+                    <div class="swiper-slide">	
+                        <img src="//img.modetour.com/promotion20/16057/text.png" alt="">
+                    </div>
+                    <div class="swiper-slide">	
+                        <img src="//img.modetour.com/promotion20/16057/text.png" alt="">
+                    </div>
+                    <div class="swiper-slide">	
+                        <img src="//img.modetour.com/promotion20/16057/text.png" alt="">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>		
+    <script type="text/javascript">
+        (function ($) {
+            $(document).ready(function () {                                              
+                // 타이틀                              
+                var swiper1 = new Swiper(".e_top .swiper", {
+                    slidesPerView: 1,
+                    draggable: false,
+                    effect: "fade",
+                    autoplay: {
+                        delay: 2500,
+                        disableOnInteraction: false
+                    },
+                });	
+                            
+                //영상 롤링       
+                $(".cont01 .txt_wrap div:odd").addClass("bounce-in-left");
+                $(".cont01 .txt_wrap div:even").addClass("bounce-in-right");
+                var swiper2 = new Swiper(".cont01 .swiper", {
+                    slidesPerView: 1,
+                    draggable: false,
+                    effect: "fade",
+                    autoplay: {
+                        delay: 3000,
+                        disableOnInteraction: false
+                    },
+                    on: {
+                        transitionStart: function(){                                                    
+                            var videos = document.querySelectorAll('video');                                            
+                            Array.prototype.forEach.call(videos, function(video){
+                            video.pause();
+                            });
+                        },                                                
+                        transitionEnd: function(){                                                    
+                            var activeIndex = this.activeIndex;
+                            var activeSlide = document.getElementsByClassName('video_slide')[activeIndex];
+                            var activeSlideVideo = activeSlide.getElementsByTagName('video')[0];
+                            activeSlideVideo.play();
+                        
+                        },                                                
+                    }
+                });
+                // swiper2.on('reachEnd', function(){
+                // 	swiper2.autoplay = false;
+                // });
+
+
+                // 흐르는 텍스트
+                var swiper3 = new Swiper(".cont03 .swiper", {
+                    observer: true,
+                    observeParents: true,
+                    slidesPerView: "auto",
+                    watchOverflow: true,
+                    spaceBetween: 0,
+                    autoplay: {
+                        delay: 0,
+                        disableOnInteraction: false,
+                    },
+                    speed: 15000,
+                    loop: true,
+                    loopAdditionalSlides: 1,
+                });						
+                
+                //이모티콘 풍선 효과
+                for(var i = 0; i < 30; i++){
+                    var randomNum3 = Math.floor(Math.random() * (9 - 1) + 1);
+                    $('.balloons').append("<div><img src='//img.modetour.com/promotion20/16057/ico_0" + randomNum3 + ".png' alt=''></div>")
+                };
+                $('.balloons').find('div').each(function(i) {
+                    var randomNum1 = Math.floor(Math.random() * (18 - 7) + 7);
+                    var randomNum2 = Math.floor(Math.random() * (90 - 0) + 0);
+                    $(".balloons div").eq(i).css({
+                        "animation": "wobbling_x 0.8s ease-in-out infinite alternate, wobbling_y 1.1s ease-in-out infinite alternate, fly_high "+ randomNum1+"s ease-in-out infinite",
+                        "left": randomNum2 + "%",
+                    });			
+                });
+                
+            });
+        })(jQuery);
+    </script>		
+    <!-- [e]: 기획전 끝 -->
+</body>
+</html>
