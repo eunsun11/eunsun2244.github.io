@@ -94,6 +94,7 @@
 		}		
 		.event_wrap {min-width: 1300px; text-align: center; overflow: hidden;}
 		.event_wrap img{vertical-align: middle;}
+		.event_wrap button{cursor: pointer;}
 		.event_wrap div, span, p, i, button, strong, small, a{font-family: 'SCoreDream'; text-decoration: none;}
 		.event_wrap .e_ttl{background: url('images/ttl_bg.jpg') no-repeat center 0;}
 		.event_wrap .nav_group{width: 100%; position: absolute; top: 500px; z-index: 999; background: rgba(0, 0, 0, 0.4);}
@@ -131,7 +132,7 @@
 		.event_wrap #cont02{padding-bottom: 130px;}
 		.event_wrap #cont02 .slider{height: 711px; min-width: 2000px;}
 		.event_wrap #cont02 .slider .swiper-slide{font-size: 0;}
-		.event_wrap #cont02 .slider .pagination{background: #1cbbb0; position: relative; min-width: 800px; height: 110px; padding: 10px 0;}
+		.event_wrap #cont02 .slider .pagination{background: #1cbbb0; position: absolute; width: 100%; min-width: 800px; height: 110px; padding: 10px 0;}
 		.event_wrap #cont02 .slider .pagination1{position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);}
 		.event_wrap #cont02 .slider .pagination1 span{background: url('images/cont02_page1_off.png') no-repeat center 0; width: 106px; height: 108px; opacity: 1;}
 		.event_wrap #cont02 .slider .pagination1 span:nth-child(2){background: url('images/cont02_page2_off.png') no-repeat center 0;}
@@ -160,10 +161,22 @@
 		.event_wrap #cont02 .slide4{background: url('images/rest_cont04_bg.jpg') no-repeat center 0;}
 		.event_wrap #cont02 .slide4 .rest_item{left: 180px;}
 		.event_wrap .tab_group{width: 1100px; margin: 0 auto;}
-		.event_wrap .tab_group .btn_group{width: 175px; border-right: 2px solid #ebebeb;}
 		.event_wrap .tab_group .btn_group button{display: block; background: none; border: none;}
-		.event_wrap .tab_group .cont_group{display: none;}
-		.event_wrap .tab_group .cont_group.on{display: block;}
+		.event_wrap .tab_group .cont_group{position: relative;}
+		.event_wrap .tab_group .cont_group .tab_cont{display: none;}
+		.event_wrap .tab_group .cont_group .tab_cont.on{display: block;}
+
+		.event_wrap #cont03 .tab_group{display: flex; padding: 80px 0;}
+		.event_wrap #cont03 .tab_group .btn_group{width: 175px;}
+		.event_wrap #cont03 .tab_group .btn_group button{width: 100%; height: 46px; line-height: 46px; position: relative; text-align: left;}
+		.event_wrap #cont03 .tab_group .btn_group button span{font-size: 20px; color: #000; position: relative; z-index: 2;}
+		.event_wrap #cont03 .tab_group .btn_group button.on span{color: #FFF; font-weight: bold;}
+		.event_wrap #cont03 .tab_group .btn_group button.on::before,
+		.event_wrap #cont03 .tab_group .btn_group button:hover::before{content: ''; position: absolute; width: 100%; height: 100%; top: 0; left: 0; z-index: 1; background: linear-gradient(260deg, rgba(0,172,209,1) 8%, rgba(0,220,148,1) 100%); border-radius: 10px; box-shadow: 5px 5px 10px rgba(0,0,0,0.2);}
+		.event_wrap #cont03 .tab_group .cont_group .btn_go{position: absolute; bottom: 0; right: -35px; border-radius: 30px;}
+		.event_wrap #cont03 .tab_group .cont_group .btn_go:hover{box-shadow: 5px 5px 10px rgba(0,0,0,0.2);}
+
+		.event_wrap #cont04 .tab_group .btn_group{width: 800px; height: 325px; margin: 0 auto; background: url('images/map.png') no-repeat center 0;}
     </style>
 </head>
 <body>
@@ -377,32 +390,95 @@
 				</div>
 				<div class="tab_group">
 					<div class="btn_group">
-						<button type="button">1. 다낭</button>
-						<button type="button">2. 괌</button>
-						<button type="button">3. 세부</button>
-						<button type="button">4. 스페인</button>
-						<button type="button">5. 장가계</button>
-						<button type="button">6. 보라카이</button>
-						<button type="button">7. 하와이</button>
-						<button type="button">8. 코타키나발루</button>
-						<button type="button">9. 블라디보스톡</button>
-						<button type="button">10. 방콕</button>
+						<button type="button" class="on"><span>1. 다낭</span></button>
+						<button type="button"><span>2. 괌</span></button>
+						<button type="button"><span>3. 세부</span></button>
+						<button type="button"><span>4. 스페인</span></button>
+						<button type="button"><span>5. 장가계</span></button>
+						<button type="button"><span>6. 보라카이</span></button>
+						<button type="button"><span>7. 하와이</span></button>
+						<button type="button"><span>8. 코타키나발루</span></button>
+						<button type="button"><span>9. 블라디보스톡</span></button>
+						<button type="button"><span>10. 방콕</span></button>
 					</div>
 					<div class="cont_group">
-						<div class="tab_cont on"><img src="images/top10_1.png" alt=""></div>
-						<div class="tab_cont"><img src="images/top10_2.png" alt=""></div>
-						<div class="tab_cont"><img src="images/top10_3.png" alt=""></div>
-						<div class="tab_cont"><img src="images/top10_4.png" alt=""></div>
-						<div class="tab_cont"><img src="images/top10_5.png" alt=""></div>
-						<div class="tab_cont"><img src="images/top10_6.png" alt=""></div>
-						<div class="tab_cont"><img src="images/top10_7.png" alt=""></div>
-						<div class="tab_cont"><img src="images/top10_8.png" alt=""></div>
-						<div class="tab_cont"><img src="images/top10_9.png" alt=""></div>
-						<div class="tab_cont"><img src="images/top10_10.png" alt=""></div>
+						<div class="tab_cont on">
+							<img src="images/top10_1.png" alt="">
+							<a href="#" class="btn_go"><img src="images/btn_go.png" alt="상품 예약하기"></a>
+						</div>
+						<div class="tab_cont">
+							<img src="images/top10_2.png" alt="">
+							<a href="#" class="btn_go"><img src="images/btn_go.png" alt="상품 예약하기"></a>
+						</div>
+						<div class="tab_cont">
+							<img src="images/top10_3.png" alt="">
+							<a href="#" class="btn_go"><img src="images/btn_go.png" alt="상품 예약하기"></a>
+						</div>
+						<div class="tab_cont">
+							<img src="images/top10_4.png" alt="">
+							<a href="#" class="btn_go"><img src="images/btn_go.png" alt="상품 예약하기"></a>
+						</div>
+						<div class="tab_cont">
+							<img src="images/top10_5.png" alt="">
+							<a href="#" class="btn_go"><img src="images/btn_go.png" alt="상품 예약하기"></a>
+						</div>
+						<div class="tab_cont">
+							<img src="images/top10_6.png" alt="">
+							<a href="#" class="btn_go"><img src="images/btn_go.png" alt="상품 예약하기"></a>
+						</div>
+						<div class="tab_cont">
+							<img src="images/top10_7.png" alt="">
+							<a href="#" class="btn_go"><img src="images/btn_go.png" alt="상품 예약하기"></a>
+						</div>
+						<div class="tab_cont">
+							<img src="images/top10_8.png" alt="">
+							<a href="#" class="btn_go"><img src="images/btn_go.png" alt="상품 예약하기"></a>
+						</div>
+						<div class="tab_cont">
+							<img src="images/top10_9.png" alt="">
+							<a href="#" class="btn_go"><img src="images/btn_go.png" alt="상품 예약하기"></a>
+						</div>
+						<div class="tab_cont">
+							<img src="images/top10_10.png" alt="">
+							<a href="#" class="btn_go"><img src="images/btn_go.png" alt="상품 예약하기"></a>
+						</div>
 					</div>
 				</div>
 			</div>
-            <div id="cont04" class="e_cont">4</div>
+            <div id="cont04" class="e_cont">
+				<div class="cont_ttl">
+					<img src="images/ico_cont04.png" alt="">
+					<p class="txt_st02">놓치지 마세요!</p>
+					<p class="txt_st03">지역별 대표상품</p>
+					<p class="txt_st04">※ 보고싶은 상품의 지역 이름을 클릭해주세요.</p>
+				</div>
+				<div class="tab_group">
+					<div class="btn_group">
+						<button type="button" class="on"><span>동남아</span></button>
+						<button type="button"><span>중국</span></button>
+						<button type="button"><span>일본</span></button>
+						<button type="button"><span>남태평양</span></button>
+						<button type="button"><span>미주/캐나다/중남미</span></button>
+						<button type="button"><span>유럽/두바이</span></button>
+						<button type="button"><span>국내</span></button>
+						<button type="button"><span>부산출발</span></button>
+						<button type="button"><span>지방출발</span></button>
+					</div>
+					<div class="cont_group">
+						<div class="tab_cont on">
+							
+						</div>
+						<div class="tab_cont"></div>
+						<div class="tab_cont"></div>
+						<div class="tab_cont"></div>
+						<div class="tab_cont"></div>
+						<div class="tab_cont"></div>
+						<div class="tab_cont"></div>
+						<div class="tab_cont"></div>
+						<div class="tab_cont"></div>
+					</div>
+				</div>
+			</div>
             <div id="cont05" class="e_cont">5</div>
             <div id="cont06" class="e_cont">6</div>
         </div>
@@ -468,11 +544,9 @@
 					el: '.pagination1',
 					clickable: true,
 				}
-			});		
-				
-		});			
-
-			var dday = new Date("May 24,2024,00:00:00").getTime();
+			});	
+			
+			var dday = new Date("Jun 24,2024,00:00:00").getTime();
 			setInterval(function() {
 				var today = new Date().getTime();
 				var gap = dday - today;
@@ -480,10 +554,16 @@
 				var hour = Math.ceil((gap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
 				var min = Math.ceil((gap % (1000 * 60 * 60)) / (1000 * 60));
 				var sec = Math.ceil((gap % (1000 * 60)) / 1000);
-
 				$('.d_day .time').html(day + "일 " + hour + ":" + min + ":" + sec)
 			}, 1000);
 			
+			$('.btn_group button').click(function(){
+				var idx = $(this).index();
+				$(this).addClass('on').siblings().removeClass('on').closest('.tab_group').find('.cont_group').children('.tab_cont').eq(idx).addClass('on').siblings().removeClass('on');
+				return false;
+			});	
+				
+		});			
 
 	</script>
 </body>
