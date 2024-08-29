@@ -1,0 +1,725 @@
+@charset "utf-8";
+
+.search_wrap {
+    width: 1200px;
+    margin: 0 auto;
+    padding: 50px 0;
+}
+.search_wrap .swiper {
+    overflow: hidden;
+}
+.tit_box {
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 34px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+.search_wrap .flight_course {
+    display: flex;
+    gap: 0 12px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+.search_wrap .search_details {
+    border-bottom: 2px solid #111;
+}
+.search_wrap .flight_course .result_section {
+    display: flex;
+    align-items: center;
+    height: 48px;
+    background: #f5f6f6;
+    padding: 12px 30px;
+    border-radius: 30px;
+    cursor: pointer;
+}
+.search_wrap .flight_course .result_section img {
+    margin: 0 8px;
+}
+.search_wrap .flight_course .result_section .line {
+    color: #aaa;
+    margin: 0 20px 0 12px;
+}
+.search_wrap .flight_course .result_section .people img {
+    width: 18px;
+    height: 18px;
+}
+.search_wrap .flight_result {
+    border-top: 1px solid #d3dbd9;
+    padding: 30px 0;
+}
+.search_wrap .flight_result .recent_search {
+    position: relative;
+}
+.search_wrap .search_section .search_tit {
+    width: 240px;
+    display: flex;
+    flex-direction: column;
+    font-size: 17px;
+    font-weight: 600;
+}
+.search_wrap .search_section {
+    display: flex;
+}
+.search_wrap .search_section + .search_section {
+    margin-top: 30px;
+}
+.recent_search_slide {
+    width: 914px;
+}
+.recent_search_slide .swiper-slide {
+    width: 355px;
+    height: 70px;
+    background: #f5f6f6;
+    padding: 16px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.recent_search_slide .swiper-slide .cont {
+    display: flex;
+    justify-content: space-between;
+}
+.recent_search_slide .swiper-slide .destination {
+    color: #111;
+    font-size: 14px;
+}
+.recent_search_slide .swiper-slide .day {
+    color: #aaa;
+    font-size: 12px;
+}
+.recent_search_slide .swiper-slide .date {
+    color: #888;
+    font-size: 12px;
+}
+.recent_search_slide .swiper-slide .person {
+    color: #555;
+    font-size: 13px;
+}
+.recent_search .swiper-button-prev,
+.recent_search .swiper-button-next {
+    width: 26px;
+    height: 26px;
+    margin: 0;
+    font-size: 0;
+    color: transparent;
+    opacity: 1;
+    top: 50%;
+    margin-top: -13px;
+    background: url("https://www.modetour.com/icons/icon_next_square__26_white.svg") no-repeat center 0;
+}
+.recent_search .swiper-button-prev {
+    left: -46px;
+}
+.recent_search .swiper-button-next {
+    right: -46px;
+    transform: rotate(180deg);
+}
+.search_wrap .search_flight_tickets {
+    flex: 1;
+    border-bottom: 1px #eee solid;
+    padding-bottom: 30px;
+}
+.search_wrap .air_opt_box {
+    margin-top: 30px;
+}
+.search_wrap .btn_box {
+    display: flex;
+    margin: 30px 0 0;
+    gap: 0 20px;
+    font-size: 15px;
+    font-weight: 500;
+    color: #fff;
+    justify-content: center;
+}
+
+.search_wrap .btn_box .close_btn button {
+    background: #475451;
+}
+.search_wrap .btn_box .search_btn button {
+    background: #009c75;
+}
+.search_wrap .checkbox_area .checkbox input + label .ico::after {
+    border-color: #00d9a3;
+}
+.search_wrap .checkbox_area .checkbox input:checked + label .ico {
+    background-color: #00d9a3;
+    border-color: #00d9a3;
+}
+.between_center {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.result_top_area {
+    display: flex;
+    margin: 30px 0 60px;
+    justify-content: space-between;
+}
+.result_top_area .txt {
+    width: 240px;
+    font-size: 17px;
+    margin-top: 10px;
+}
+.result_top_area .txt span {
+    padding-left: 3px;
+    color: #009c75;
+    font-weight: bold;
+}
+.result_top_area .keyword_list {
+    width: 780px;
+    display: flex;
+    flex-flow: row wrap;
+    gap: 12px 16px;
+}
+.result_top_area .keyword_list .keyword {
+    height: 36px;
+    line-height: 35px;
+    font-size: 14px;
+    color: #111;
+    padding: 0 14px;
+    border: 1px #d3dbd9 solid;
+    border-radius: 30px;
+}
+.result_top_area .keyword_list .delete {
+    width: 14px;
+    height: 14px;
+    background: url("https://www.modetour.com/icons/icon_x_14.png") no-repeat center 0;
+    margin-left: 5px;
+    font-size: 0;
+    color: transparent;
+    vertical-align: middle;
+}
+.result_top_area .sort {
+    flex: 1;
+    align-self: flex-end;
+    text-align: right;
+    font-size: 14px;
+    position: relative;
+}
+.result_top_area .sort button,
+.result_top_area .sort li {
+    color: #888;
+}
+.result_top_area .sort .sort_layer {
+    width: fit-content;
+    top: 37px;
+    left: auto;
+    right: 0;
+    padding: 0 18px;
+}
+.result_top_area .sort .sort_layer ul li {
+    line-height: 42px;
+    color: #111;
+    cursor: pointer;
+}
+.result_top_area .sort .sort_layer ul li:hover {
+    font-weight: bold;
+}
+.flight_cont {
+    display: flex;
+    justify-content: space-between;
+}
+.flight_cont .filter {
+    width: 240px;
+}
+.flight_cont .filter .txt {
+    font-size: 18px;
+    color: #111;
+    font-weight: bold;
+}
+.flight_cont .filter .reset_btn {
+    color: #888;
+    font-size: 12px;
+}
+.flight_cont .filter .reset_btn img {
+    margin-left: 5px;
+}
+.flight_cont .filter .reset_btn::after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background: url("https://www.modetour.com/icons/icon_circle_refresh.svg") no-repeat center 0;
+    display: inline-block;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+.flight_cont .filter .filter_list {
+    margin-top: 40px;
+}
+.flight_cont .filter .filter_list .tit {
+    width: 100%;
+    height: 68px;
+    line-height: 68px;
+    border-bottom: 1px solid #d9d9d9;
+    position: relative;
+    text-align: left;
+}
+.flight_cont .filter .filter_list .tit::after {
+    content: "";
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -13px;
+    background: url("https://www.modetour.com/icons/icon__26.svg") no-repeat center 0;
+    transition: 0.3s;
+}
+.flight_cont .filter .filter_list .tit.on::after {
+    transform: rotate(-180deg);
+}
+.flight_cont .filter_list .filter_details {
+    padding: 16px 0 24px;
+    border-bottom: 1px solid #d9d9d9;
+    display: none;
+}
+.flight_cont .filter_list .filter_details ul {
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 13px;
+    color: #888;
+    gap: 12px;
+}
+.flight_cont .filter_list .filter_details li {
+    height: 32px;
+    padding: 10px 12px;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.flight_cont .filter_list .filter_details li.on {
+    border-color: #009c75;
+    color: #009c75;
+}
+.flight_cont .filter_list .filter_details .ico_air {
+    width: 15px;
+    height: 15px;
+    object-fit: contain;
+    margin-right: 8px;
+}
+.flight_cont .filter_list .reset {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.price_range {
+    position: relative;
+}
+.price_range #price_range {
+    width: 100%;
+    height: 4px;
+    margin: 40px 0 20px;
+}
+.price_range #price_range .asRange-selected {
+    height: 4px;
+    background: #54a88e;
+}
+.price_range #price_range .asRange-pointer:before {
+    top: -5px;
+    right: -3px;
+    bottom: -1px;
+    left: -3px;
+    background: #009c75;
+}
+.price_range #price_range .asRange-pointer:after {
+    top: -3px;
+    right: -1px;
+    bottom: 1px;
+    left: -1px;
+}
+.price_range #price_range .asRange-pointer .asRange-tip {
+    width: max-content;
+    padding: 0 10px;
+}
+
+.price_range .price_tooltip {
+    position: absolute;
+    width: max-content;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    line-height: 32px;
+    text-align: left;
+    padding: 6px 8px;
+    font-size: 14px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.07);
+}
+.price_range .price_tooltip::after {
+    position: absolute;
+    bottom: -7px;
+    left: calc(50% - 7px);
+    content: " ";
+    height: 0;
+    z-index: -1;
+    border-bottom: 7px solid;
+    border-left: 7px solid rgba(0, 0, 0, 0);
+    border-right: 7px solid rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0.75);
+    transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+}
+.filter_details .price_info {
+    font-size: 12px;
+    color: #111;
+    font-weight: 500;
+}
+.filter_details .price_info span {
+    color: #009c75;
+    font-size: 16px;
+    font-weight: 700;
+    padding-left: 5px;
+}
+
+.flight_cont .flight_list {
+    width: 900px;
+}
+.flight_cont .flight_list .box {
+    margin-bottom: 60px;
+}
+.flight_cont .flight_list .point01 {
+    color: #009c75;
+    font-size: 14px;
+}
+.flight_cont .flight_list .tit {
+    font-size: 22px;
+    color: #111;
+    font-weight: bold;
+}
+.flight_cont .flight_list .flight_list_tit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+.flight_cont .flight_list .flight_list_tit span {
+    font-size: 15px;
+    color: #8f9f9b;
+    font-weight: 700;
+}
+.flight_cont .flight_list .banner_area {
+    display: flex;
+    justify-content: space-between;
+}
+.flight_cont .flight_list .banner_area .banner {
+    width: 440px;
+    height: 54px;
+}
+.flight_cont .flight_list .banner_area .banner img {
+    width: 100%;
+    height: 100%;
+}
+.flight_cont .flight_list .flight_item {
+    border: 1px #d3dbd9 solid;
+    border-radius: 10px;
+    margin-top: 20px;
+    position: relative;
+}
+.flight_cont .flight_list .flight_item .airline .name {
+    font-size: 15px;
+    color: #111;
+    font-weight: 500;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+.flight_cont .flight_list .flight_item .airline .name span {
+    font-weight: 700;
+    padding-right: 5px;
+}
+.flight_cont .flight_list .flight_item .airline .air_logo {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+}
+.flight_cont .flight_list .flight_item .item_details_top {
+    display: flex;
+    height: 134px;
+    cursor: pointer;
+    padding: 30px;
+}
+.flight_cont .flight_list .flight_item .item_details_top .detail01 {
+    display: flex;
+    flex: 1 1 0%;
+    flex-direction: column;
+}
+.flight_cont .flight_list .flight_item .item_details_top .detail01 p {
+    font-size: 14px;
+    color: #555;
+    line-height: 20px;
+}
+.flight_cont .flight_list .flight_item .item_details_top .detail01 .guide01 {
+    color: #009c75;
+}
+.flight_cont .flight_list .flight_item .item_details_top .detail01 .guide02 {
+    color: #888;
+}
+.flight_cont .flight_list .flight_item .item_details_top .detail01 .guide03 {
+    color: #ed4949;
+}
+.flight_cont .flight_list .flight_item .item_details_top .detail02 {
+    display: flex;
+    width: 420px;
+}
+.flight_cont .flight_list .flight_item .item_details_top .detail02 .detail02_1 {
+    display: flex;
+    justify-content: flex-start;
+    flex: 1 1 0%;
+    flex-direction: column;
+}
+.flight_cont .flight_list .flight_item .item_details_top .detail02 .time {
+    font-size: 24px;
+    color: #111;
+    font-weight: 700;
+    margin-bottom: 20px;
+}
+.flight_cont .flight_list .flight_item .item_details_top .detail02 .city {
+    display: flex;
+    flex-direction: column;
+}
+.flight_cont .flight_list .flight_item .item_details_top .detail02 .city span {
+    font-size: 14px;
+    color: #555;
+    line-height: 18px;
+}
+.flight_cont .flight_list .flight_item .item_details_top .detail02 .city span + span {
+    font-weight: 700;
+}
+.flight_cont .flight_list .flight_item .item_details_top .detail02 .detail02_2 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
+}
+.flight_cont .flight_list .flight_item .item_details_top .detail02 .detail02_2 .lead_time {
+    color: #009c75;
+    font-size: 14px;
+    font-weight: 700;
+}
+.flight_cont .flight_list .flight_item .item_details_top .detail02 .detail02_2 .txt {
+    padding: 6px 16px;
+    background: #009c75;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 14px;
+    font-weight: 700;
+}
+.flight_cont .flight_list .flight_item .item_details_top .detail02 .detail02_2 .line {
+    width: 132px;
+    height: 2px;
+    background: #d3dbd9;
+    position: relative;
+}
+.flight_cont .flight_list .flight_item .item_details_top .detail02 .detail02_2 .line::before,
+.flight_cont .flight_list .flight_item .item_details_top .detail02 .detail02_2 .line::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: #8f9f9b;
+    position: absolute;
+    top: -3px;
+    left: 0;
+    border-radius: 50%;
+}
+.flight_cont .flight_list .flight_item .item_details_top .detail02 .detail02_2 .line::after {
+    left: auto;
+    right: 0;
+}
+.flight_cont .flight_list .flight_item .item_details_top .detail02 .detail02_3 {
+    display: flex;
+    justify-content: flex-start;
+    flex: 1 1 0%;
+    flex-direction: column;
+    text-align: right;
+    position: relative;
+}
+.flight_cont .flight_list .flight_item .item_details_top .detail02 .detail02_3 .plus_day {
+    position: absolute;
+    left: 16px;
+    top: 0;
+    border: 1px #d3dbd9 solid;
+    border-radius: 5px;
+    color: #111;
+    font-size: 13px;
+    padding: 0 8px;
+    height: 25px;
+    line-height: 25px;
+    font-weight: 600;
+}
+.flight_cont .flight_list .flight_item .item_details_top .detail03 {
+    flex: 1 1 0%;
+    text-align: right;
+}
+.flight_cont .flight_list .flight_item .item_details_top .detail03 p {
+    margin-top: 5px;
+}
+.flight_cont .flight_list .flight_item .item_details_top .detail03 p span {
+    font-size: 14px;
+}
+.flight_cont .flight_list .flight_item .item_details_top .detail03 p:first-child {
+    margin-top: 0;
+}
+.flight_cont .st01 span {
+    display: inline-block;
+    height: 25px;
+    border: 1px #0075e9 solid;
+    border-radius: 5px;
+    padding: 0 6px;
+    color: #0075e9;
+    line-height: 25px;
+}
+.flight_cont .guide .st01 {
+    font-size: 13px;
+}
+.flight_cont .guide p {
+    font-size: 16px;
+    font-weight: 400;
+    color: #555;
+    margin: 20px 0;
+    line-height: 19px;
+}
+.flight_cont .guide em {
+    font-weight: 700;
+    color: #0075e9;
+}
+.flight_cont .flight_list .flight_item .item_details_top .detail03 .st02 span {
+    color: #009c75;
+    font-weight: 700;
+}
+.flight_cont .flight_list .flight_item .item_details_top .detail03 .st02 span::after {
+    content: "";
+    display: inline-block;
+    vertical-align: text-top;
+    width: 15px;
+    height: 15px;
+    background: url("https://www.modetour.com/icons/icon_alert_15_solid.svg") no-repeat center 0;
+    margin-left: 5px;
+}
+.flight_cont .flight_list .flight_item .item_details_bottom {
+    background: #f5f6f6;
+    padding: 0 30px;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+.item_details_bottom .btn_box {
+    display: block;
+    margin: 0;
+}
+.flight_cont .flight_list .flight_item .item_details_bottom .price_area {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex: 1;
+    text-align: right;
+}
+.flight_cont .flight_list .flight_item .item_details_bottom .price_area .txt {
+    color: #555;
+    font-size: 14px;
+    margin-right: 20px;
+}
+.flight_cont .flight_list .flight_item .item_details_bottom .price_area .price em {
+    color: #009c75;
+    font-weight: 700;
+    font-size: 24px;
+}
+.flight_cont .flight_list .flight_item .item_details_bottom .price_area .pay_option {
+    position: relative;
+}
+.flight_cont .flight_list .flight_item .item_details_bottom .price_area .pay_option .txt {
+    cursor: pointer;
+    margin: 0;
+}
+.flight_cont .flight_list .flight_item .item_details_bottom .price_area .pay_option .txt::after {
+    content: "";
+    display: inline-block;
+    background: url("https://www.modetour.com/icons/icon__20.svg") no-repeat center 0;
+    width: 18px;
+    height: 18px;
+    margin-left: 10px;
+}
+.flight_cont .flight_list .flight_item .item_details_bottom .price_area .pay_option .pay_layer {
+    width: 395px;
+    left: auto;
+    right: -31px;
+    top: 48px;
+}
+.flight_cont .flight_list .flight_item .item_details_bottom .price_area .pay_option .pay_layer .tit {
+    font-size: 18px;
+    margin: 10px 0 35px;
+}
+
+.flight_cont .flight_list .flight_item .item_details_bottom .travel_info_layer {
+    width: 395px;
+    padding: 40px 28px;
+    left: 0;
+    top: 40px;
+}
+.flight_cont .flight_list .flight_item .item_details_bottom .travel_info_layer .popboard_boxwrap {
+    padding: 24px 18px;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(17, 17, 17, 0.15) 0px 0px 6px 0px;
+    border: 1px #e5e7eb solid;
+}
+.flight_cont .flight_list .flight_item .item_details_bottom .travel_info_layer .tit {
+    font-size: 18px;
+    margin: 10px 0 35px;
+}
+.flight_cont .layer_popup .close {
+    position: absolute;
+    right: 30px;
+    top: 30px;
+}
+.flight_cont .flight_list .flight_item .cancel_btn {
+    width: 18px;
+    height: 18px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: url("https://www.modetour.com/icons/icon_x_18.svg") no-repeat center 0;
+    font-size: 0;
+    color: transparent;
+}
+.flight_cont .flight_list .flight_item.active {
+    padding-top: 24px;
+    overflow: hidden;
+}
+.flight_cont .flight_list .flight_item.active::before {
+    content: "";
+    width: 5px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: rgb(31, 158, 115);
+    background: linear-gradient(184deg, rgba(31, 158, 115, 1) 0%, rgba(202, 218, 11, 1) 100%);
+}
+.flight_cont .flight_list .not_cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-top: 120px;
+}
+.flight_cont .flight_list .not_cont img {
+    width: 100px;
+}
+.flight_cont .flight_list .not_cont p {
+    color: #aaa;
+    font-size: 14px;
+    line-height: 21px;
+    margin-top: 20px;
+}

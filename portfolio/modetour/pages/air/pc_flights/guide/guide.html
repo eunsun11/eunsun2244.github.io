@@ -1,0 +1,599 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <title>항공 퍼블리싱 가이드</title>
+        <script src="../lib/js/jquery-3.7.1.min.js"></script>
+        <link rel="stylesheet" href="../lib/css/reset.css" />
+        <link rel="stylesheet" href="../lib/css/common.css" />
+        <link rel="stylesheet" href="guide.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/styles/default.min.css" />
+        <script src="https://cdn.jsdelivr.net/gh/highlightjs/cdn-release@11.9.0/build/highlight.min.js"></script>
+        <script src="../lib/js/common.js"></script>
+    </head>
+    <body>
+        <div class="wrapper guide">
+            <header><h1>항공 퍼블리싱 가이드</h1></header>
+            <div class="container">
+                <main id="viewer" class="tui-editor-contents">
+                    <h2>기본정책</h2>
+                    <section>
+                        <h3>프로젝트 환경</h3>
+                        <div class="table">
+                            <table>
+                                <caption>
+                                    프로젝트환경
+                                </caption>
+                                <colgroup>
+                                    <col style="width: 20%" />
+                                    <col />
+                                </colgroup>
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">문서 및 버전</th>
+                                        <td>HTML5, CSS3</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">인코딩</th>
+                                        <td>UTF-8</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">웹 유형</th>
+                                        <td>PC</td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">웹 접근성</th>
+                                        <td>none</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+
+                    <div class="cont">
+                        <h2>UI</h2>
+                        <section>
+                            <h3>Button</h3>
+                            <div class="btn_box">
+                                <button type="button" class="btn_type01">btn_type01</button>
+                            </div>
+                            <!-- 코드영역 -->
+                            <pre>
+                        <code class="language-html">
+<div class="btn_box">
+    <button type="button" class="btn_type01">btn_type01</button>
+</div>
+                        </code>
+                    </pre>
+                            <!-- [e] //코드영역 -->
+                            <div class="btn_box">
+                                <button type="button" class="btn_type02">btn_type02</button>
+                            </div>
+                            <!-- 코드영역 -->
+                            <pre>
+                        <code class="language-html">
+<div class="btn_box">
+    <button type="button" class="btn_type02">btn_type02</button>
+</div>
+                        </code>
+                    </pre>
+                            <!-- [e] //코드영역 -->
+                            <div class="btn_box">
+                                <button type="button" class="btn_type03">btn_type03</button>
+                            </div>
+                            <!-- 코드영역 -->
+                            <pre>
+                        <code class="language-html">
+<div class="btn_box">
+    <button type="button" class="btn_type03">btn_type03</button>
+</div>
+                        </code>
+                    </pre>
+                            <!-- [e] //코드영역 -->
+                            <div class="btn_box">
+                                <button type="button" class="btn_type04">btn_type04</button>
+                            </div>
+                            <!-- 코드영역 -->
+                            <pre>
+                        <code class="language-html">
+<div class="btn_box">
+    <button type="button" class="btn_type04">btn_type04</button>
+</div>
+                        </code>
+                    </pre>
+                            <!-- [e] //코드영역 -->
+
+                            <div class="btn_box">
+                                <button type="button" class="btn_type01 btn_100">btn_type01 btn_100</button>
+                                <button type="button" class="btn_type02 btn_100">btn_type02 btn_100</button>
+                                <button type="button" class="btn_type03 btn_100">btn_type03 btn_100</button>
+                            </div>
+                            <!-- 코드영역 -->
+                            <pre>
+                        <code class="language-html">
+<div class="btn_box">
+    <button type="button" class="btn_type01 btn_100">btn_type01 btn_100</button>
+    <button type="button" class="btn_type02 btn_100">btn_type02 btn_100</button>
+    <button type="button" class="btn_type03 btn_100">btn_type03 btn_100</button>
+</div>
+                        </code>
+                    </pre>
+                            <!-- [e] //코드영역 -->
+
+                            <h3>radio button</h3>
+                            <div class="radiobox">
+                                <input id="radio01" name="card_sort" type="radio" checked="" />
+                                <label for="radio01"> <i class="ico"></i> <span>라디오버튼</span></label>
+                            </div>
+                            <div class="radiobox">
+                                <input id="radio02" name="card_sort" type="radio" />
+                                <label for="radio02"> <i class="ico"></i> <span>라디오버튼</span></label>
+                            </div>
+                            <!-- 코드영역 -->
+                            <pre>
+                        <code class="language-html">
+<div class="radiobox">
+    <input id="radio03" name="card_sort" type="radio" />
+    <label for="radio03"> <i class="ico"></i> <span>라디오버튼</span></label>
+</div>
+<div class="radiobox">
+    <input id="radio04" name="card_sort" type="radio" />
+    <label for="radio04"> <i class="ico"></i> <span>라디오버튼</span></label>
+</div>
+                        </code>
+                    </pre>
+                            <!-- [e] //코드영역 -->
+
+                            <h3>checkbox</h3>
+                            <span class="checkbox">
+                                <input id="check01" name="check01" type="checkbox" />
+                                <label for="check01"> <i class="ico"></i> <span>직항</span> </label>
+                            </span>
+                            <!-- 코드영역 -->
+                            <pre>
+                        <code class="language-html">
+<span class="checkbox">
+    <input id="check01" name="check01" type="checkbox">
+    <label for="check01"> <i class="ico"></i> <span>직항</span> </label>
+</span>    
+                        </code>
+                    </pre>
+                            <!-- [e] //코드영역 -->
+
+                            <h3>여정</h3>
+                            <div class="boarding_time">
+                                <!-- [s]: 출발 -->
+                                <div class="start">
+                                    <div class="num">
+                                        <div class="time">23:50</div>
+                                        <div class="day">08/10(토)</div>
+                                    </div>
+                                    <div class="line">
+                                        <div class="circle"></div>
+                                        <div class="l"></div>
+                                    </div>
+                                    <div class="boardinfo">
+                                        <div class="top">
+                                            <div class="location">로스앤젤레스(LAX) 출발</div>
+                                            <div class="terminal">로스앤젤레스공항 - 터미널 B<span>14시간 50분</span></div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="air">
+                                                <span class="ant_img"><img alt="logo" src="https://img.modetour.com/air/logo/cz.png" /></span>중국남방항공 CZ328
+                                            </div>
+                                            <div class="rule"><span>일반석 · 수하물 규정 확인</span><span>기종:388</span></div>
+                                        </div>
+                                        <div class="empty"></div>
+                                    </div>
+                                </div>
+                                <!-- [e]: 출발 -->
+                                <!-- [s]: 경유 -->
+                                <div class="middle">
+                                    <div class="num">
+                                        <div class="time">23:50</div>
+                                        <div class="day">08/10(토)</div>
+                                        <!-- 다른공항 환승시 transfer 추가 -->
+                                        <div class="way transfer">환승</div>
+                                    </div>
+                                    <div class="line">
+                                        <div class="circle"></div>
+                                        <div class="l"></div>
+                                    </div>
+                                    <div class="boardinfo">
+                                        <div class="top">
+                                            <div class="location">로스앤젤레스(LAX) 출발</div>
+                                            <div class="terminal">
+                                                로스앤젤레스공항 - 터미널 B<span>2시간30분 대기</span><span>도착 후 환승하여 출발하는 공항이 다릅니다.<br />반드시 확인 바랍니다.</span>
+                                            </div>
+                                        </div>
+                                        <div class="empty"></div>
+                                    </div>
+                                </div>
+                                <!-- [e]: 경유 -->
+                                <!-- [s]: 출발 -->
+                                <div class="start">
+                                    <div class="num">
+                                        <div class="time">23:50</div>
+                                        <div class="day">08/10(토)</div>
+                                    </div>
+                                    <div class="line">
+                                        <div class="circle"></div>
+                                        <div class="l"></div>
+                                    </div>
+                                    <div class="boardinfo">
+                                        <div class="top">
+                                            <div class="location">로스앤젤레스(LAX) 출발</div>
+                                            <div class="terminal">로스앤젤레스공항 - 터미널 B<span>14시간 50분</span></div>
+                                        </div>
+                                        <div class="bottom">
+                                            <div class="air">
+                                                <span class="ant_img"><img alt="logo" src="https://img.modetour.com/air/logo/cz.png" /></span>중국남방항공 CZ328
+                                            </div>
+                                            <div class="rule"><span>일반석 · 수하물 규정 확인</span><span>기종:388</span></div>
+                                        </div>
+                                        <div class="empty"></div>
+                                    </div>
+                                </div>
+                                <!-- [e]: 출발 -->
+                                <!-- [s]: 도착 -->
+                                <div class="end">
+                                    <div class="num">
+                                        <div class="time">13:55</div>
+                                        <div class="day">08/12(월)</div>
+                                    </div>
+                                    <div class="line"><div class="circle"></div></div>
+                                    <div class="boardinfo">
+                                        <div class="top">
+                                            <div class="location">서울(ICN) 도착</div>
+                                            <div class="terminal">인천공항 - 터미널 1</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- [e]: 도착 -->
+                            </div>
+
+                            <!-- 코드영역 -->
+                            <pre>
+            <code class="language-html">
+<div class="boarding_time">
+<!-- [s]: 출발 -->
+<div class="start">
+	<div class="num">
+		<div class="time">23:50</div>
+		<div class="day">08/10(토)</div>
+	</div>
+	<div class="line">
+		<div class="circle"></div>
+		<div class="l"></div>
+	</div>
+	<div class="boardinfo">
+		<div class="top">
+			<div class="location">로스앤젤레스(LAX) 출발</div>
+			<div class="terminal">로스앤젤레스공항 - 터미널 B<span>14시간 50분</span></div>
+		</div>
+		<div class="bottom">
+			<div class="air">
+			<span class="ant_img"><img alt="logo" src="https://img.modetour.com/air/logo/cz.png" /></span>중국남방항공 CZ328
+			</div>
+			<div class="rule"><span>일반석 · 수하물 규정 확인</span><span>기종:388</span></div>
+		</div>
+		<div class="empty"></div>
+	</div>
+	</div>
+	<!-- [e]: 출발 -->
+	<!-- [s]: 경유 -->
+	<div class="middle">
+		<div class="num">
+			<div class="time">23:50</div>
+			<div class="day">08/10(토)</div>
+			<!-- 다른공항 환승시 transfer 추가 -->
+			<div class="way transfer">환승</div>
+		</div>
+		<div class="line">
+			<div class="circle"></div>
+			<div class="l"></div>
+		</div>
+		<div class="boardinfo">
+			<div class="top">
+				<div class="location">로스앤젤레스(LAX) 출발</div>
+				<div class="terminal">
+				로스앤젤레스공항 - 터미널 B<span>2시간30분 대기</span><span>도착 후 환승하여 출발하는 공항이 다릅니다.<br />반드시 확인 바랍니다.</span>
+				</div>
+			</div>
+			<div class="empty"></div>
+		</div>
+	</div>
+	<!-- [e]: 경유 -->
+	<!-- [s]: 출발 -->
+	<div class="start">
+		<div class="num">
+			<div class="time">23:50</div>
+			<div class="day">08/10(토)</div>
+		</div>
+		<div class="line">
+			<div class="circle"></div>
+			<div class="l"></div>
+		</div>
+		<div class="boardinfo">
+			<div class="top">
+				<div class="location">로스앤젤레스(LAX) 출발</div>
+				<div class="terminal">로스앤젤레스공항 - 터미널 B<span>14시간 50분</span></div>
+			</div>
+			<div class="bottom">
+				<div class="air">
+				<span class="ant_img"><img alt="logo" src="https://img.modetour.com/air/logo/cz.png" /></span>중국남방항공 CZ328
+				</div>
+				<div class="rule"><span>일반석 · 수하물 규정 확인</span><span>기종:388</span></div>
+			</div>
+			<div class="empty"></div>
+		</div>
+	</div>
+	<!-- [e]: 출발 -->
+	<!-- [s]: 도착 -->
+	<div class="end">
+		<div class="num">
+			<div class="time">13:55</div>
+			<div class="day">08/12(월)</div>
+		</div>
+		<div class="line"><div class="circle"></div></div>
+		<div class="boardinfo">
+			<div class="top">
+				<div class="location">서울(ICN) 도착</div>
+				<div class="terminal">인천공항 - 터미널 1</div>
+			</div>
+		</div>
+	</div>
+	<!-- [e]: 도착 -->
+</div>
+        </code>
+      </pre>
+                            <!-- [e] //코드영역 -->
+
+                            <h3>layer popup</h3>
+                            <div class="popup_container">
+                                <button type="button" class="layer_popup_btn">팝업버튼</button>
+                                <div class="layer_popup">팝업 내용</div>
+                            </div>
+                            <!-- 코드영역 -->
+                            <pre>
+                        <code class="language-html">
+<div class="popup_container">
+    <button type="button" class="layer_popup_btn">팝업버튼</button>
+    <div class="layer_popup">
+        팝업 내용
+    </div>
+</div>
+                        </code>
+                    </pre>
+                            <!-- [e] //코드영역 -->
+
+                            <div class="popup_container">
+                                <button type="button" class="layer_popup_btn">팝업버튼</button>
+                                <div class="layer_popup">
+                                    <div class="pop_over">
+                                        <div class="icon_x"><button type="button">닫기</button></div>
+                                        <div class="pop_in">팝업 내용</div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- 코드영역 -->
+                            <pre>
+                        <code class="language-html">
+<div class="popup_container">
+    <button type="button" class="layer_popup_btn">팝업버튼</button>
+    <div class="layer_popup">
+        <div class="pop_over">
+            <div class="icon_x"><button type="button">닫기</button></div>
+            <div class="pop_in">
+                팝업 내용
+            </div>
+        </div>
+    </div>
+</div>
+                        </code>
+                    </pre>
+                            <!-- [e] //코드영역 -->
+                            <h3>dim - layer popup</h3>
+                            <!-- 코드영역 -->
+                            <pre>
+                            <code class="language-html">
+<div class="dim">
+    <div class="dim_in">
+        <div class="pop">
+            <div class="pop_in">
+                <div class="close">
+                    <a href=""><img alt="icon_x_18" class="ant-image-img cursor-pointer" src="https://www.modetour.com/icons/icon_x_18.svg" width="18" height="18" style="height: 18px" alt="닫기"></a>
+                  </div>
+                  팝업내용
+            </div>
+        </div>
+    </div>
+</div>
+                    </code>
+                </pre>
+                            <!-- [e] //코드영역 -->
+
+                            <h3>Search Input</h3>
+                            <div class="search_input">
+                                <div class="input">
+                                    <input type="text" name="" id="" placeholder="검색어를 입력해 주세요." />
+                                    <span class="input_suffix"><img alt="" class="" src="https://www.modetour.com/icons/icon_search_22.svg" /></span>
+                                </div>
+                            </div>
+                            <!-- 코드영역 -->
+                            <pre>
+							  <code class="language-html">
+<div class="search_input">
+	<div class="input">
+		<input type="text" name="" id="" placeholder="검색어를 입력해 주세요.">
+		<span class="input_suffix"><img alt="" class="" src="https://www.modetour.com/icons/icon_search_22.svg"></span>
+	</div>
+</div>
+					  </code>
+				  </pre>
+                            <!-- [e] //코드영역 -->
+
+                            <h3>Text Input</h3>
+                            <div class="enterinfor">
+                                <div class="s_tit">여권번호</div>
+                                <input type="text" placeholder="M12345678" />
+                            </div>
+                            <!-- 코드영역 -->
+                            <pre>
+							  <code class="language-html">
+<div class="enterinfor">
+	<div class="s_tit">여권번호</div>
+	<input type="text" placeholder="M12345678">
+</div>
+					  </code>
+				  </pre>
+                            <!-- [e] //코드영역 -->
+
+                            <div class="enterinfor">
+                                <div class="cation">
+                                    <div class="s_tit">여권번호</div>
+                                    <input type="text" placeholder="M12345678" />
+                                </div>
+                            </div>
+                            <!-- 코드영역 -->
+                            <pre>
+							  <code class="language-html">
+<div class="enterinfor">
+  <div class="cation">
+    <div class="s_tit">여권번호</div>
+    <input type="text" placeholder="M12345678">
+  </div>
+</div>
+					  </code>
+				  </pre>
+                            <!-- [e] //코드영역 -->
+
+                            <h3>select box</h3>
+                            <h4>Default</h4>
+                            <div class="select_box">
+                                <div class="select_layer">
+                                    <div>010</div>
+                                </div>
+                                <div class="select_option scroll_hidden">
+                                    <ul>
+                                        <li class="active"><span>010</span></li>
+                                        <li><span>010</span></li>
+                                        <li><span>010</span></li>
+                                        <li><span>010</span></li>
+                                        <li><span>010</span></li>
+                                        <li><span>010</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- 코드영역 -->
+                            <pre>
+						<code class="language-html">
+<div class="select_box">
+	<div class="select_layer">
+		<div>010</div>
+	</div>
+	<div class="select_option scroll_hidden">
+		<ul>
+			<li class="active"><span>010</span></li>
+			<li><span>010</span></li>
+			<li><span>010</span></li>
+			<li><span>010</span></li>
+			<li><span>010</span></li>
+			<li><span>010</span></li>
+		</ul>
+	</div>
+</div>
+						</code>
+					</pre>
+                            <!-- [e] //코드영역 -->
+                            <h4>Error</h4>
+                            <div class="select_box">
+                                <div class="select_layer error">
+                                    <div>010</div>
+                                </div>
+                                <div class="select_option scroll_hidden">
+                                    <ul>
+                                        <li class="active"><span>010</span></li>
+                                        <li><span>010</span></li>
+                                        <li><span>010</span></li>
+                                        <li><span>010</span></li>
+                                        <li><span>010</span></li>
+                                        <li><span>010</span></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <!-- 코드영역 -->
+                            <pre>
+						<code class="language-html">
+<div class="select_box">
+	<div class="select_layer error">
+		<div>010</div>
+	</div>
+	<div class="select_option scroll_hidden">
+		<ul>
+			<li class="active"><span>010</span></li>
+			<li><span>010</span></li>
+			<li><span>010</span></li>
+			<li><span>010</span></li>
+			<li><span>010</span></li>
+			<li><span>010</span></li>
+		</ul>
+	</div>
+</div>
+						</code>
+					</pre>
+                            <!-- [e] //코드영역 -->
+
+                            <h4>직접입력</h4>
+                            <div class="select_box">
+                                <div class="select_layer txt">
+                                    <input type="text" placeholder="길동" />
+                                </div>
+                            </div>
+                            <!-- 코드영역 -->
+                            <pre>
+				  <code class="language-html">
+<div class="select_box">
+	<div class="select_layer txt">
+		<input type="text" placeholder="길동">
+	</div>
+</div>
+				  </code>
+			  </pre>
+                            <!-- [e] //코드영역 -->
+                        </section>
+                    </div>
+                </main>
+                <a href="index.html" class="fly">퍼블리싱 화면목록</a>
+            </div>
+            <!--container-->
+        </div>
+        <!--wrapper-->
+        <script>
+            $(function () {
+                lstNumber();
+            });
+            function lstNumber(obj) {
+                $(".cont .table").each(function () {
+                    var i = 1;
+                    $(this)
+                        .find("tbody")
+                        .find("th")
+                        .each(function () {
+                            $(this).text(i);
+                            i++;
+                        });
+                });
+            }
+            $("code").each(function () {
+                var that = $(this);
+                var html = that.html().trim();
+                that.empty();
+                that.text(html);
+            });
+            hljs.initHighlightingOnLoad();
+        </script>
+    </body>
+</html>

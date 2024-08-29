@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1,user-scalable=no" />
+        <meta http-eiv="X-UA-Compatible" content="ie=edge" />
+        <title>항공 퍼블리싱 화면목록</title>
+        <script src="../lib/js/jquery-3.7.1.min.js"></script>
+        <link rel="stylesheet" href="../lib/css/reset.css" />
+        <link rel="stylesheet" href="guide.css" />
+    </head>
+    <body>
+        <div class="wrapper guide">
+            <header><h1>항공 퍼블리싱 가이드</h1></header>
+            <div class="container">
+                <nav></nav>
+                <main id="viewer" class="tui-editor-contents">
+                    <h2>퍼블리싱 화면목록</h2>
+                    <section>
+                        <div class="table pp_list">
+                            <table>
+                                <colgroup>
+                                    <col width="50" />
+                                    <col width="550" />
+                                    <col width="150" />
+                                    <col width="150" />
+                                    <col />
+                                </colgroup>
+                                <thead>
+                                    <tr>
+                                        <th>No</th>
+                                        <th>화면명</th>
+                                        <th>PC</th>
+                                        <th>MO</th>
+                                        <th>비고</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <th></th>
+                                        <td>로그인 전 헤더</td>
+                                        <td><a href="../html/header_login_before.html" target="_blank">header_login_before</a></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <td>로그인 후 헤더</td>
+                                        <td><a href="../html/header_login_after.html" target="_blank">header_login_after</a></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <td>메인</td>
+                                        <td><a href="../html/5-1-1.html" target="_blank">5-1-1</a></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <td>검색</td>
+                                        <td><a href="../html/5-2-1.html" target="_blank">5-1-1</a></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <th></th>
+                                        <td>푸터</td>
+                                        <td><a href="../html/footer.html" target="_blank">footer</a></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </section>
+                </main>
+                <a href="guide.html" class="fly">퍼블리싱 가이드</a>
+            </div>
+            <!--container-->
+        </div>
+        <!--wrapper-->
+
+        <script src="../js/vendor/highlight_footer.js"></script>
+        <script src="../js/guide.js"></script>
+        <script>
+            $(function () {
+                lnkFunc();
+                lnkFuncEdm();
+                lstNumber();
+            });
+            function lstNumber(obj) {
+                $(".table").each(function () {
+                    var i = 1;
+                    $(this)
+                        .find("tbody")
+                        .find("th")
+                        .each(function () {
+                            $(this).text(i);
+                            i++;
+                        });
+                });
+            }
+            function lnkFunc() {
+                $(".pp_list tbody tr")
+                    .find("td:eq(0)")
+                    .on("click", function () {
+                        var txt = $(this).parent().children("td:eq(1)").text();
+                        var txt2 = $(this).parent().children("td:eq(2)").text();
+                        var lnk = "../html/" + txt + ".html";
+                        if (txt2 == "진행중" || txt2 == "완료") {
+                            window.open("about:blank").location.href = lnk;
+                            // window.location.href=lnk;
+                        } else {
+                            alert("준비중");
+                        }
+                    });
+            }
+        </script>
+    </body>
+</html>

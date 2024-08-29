@@ -1,0 +1,690 @@
+@charset "utf-8";
+
+/* 버튼 */
+.btn_box button[class^="btn_type"] {
+    display: inline-block;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 500;
+    transition: 0.3s;
+    cursor: pointer;
+}
+.btn_box .btn_100 {
+    width: 100% !important;
+}
+.btn_box .btn_type01 {
+    width: 172px;
+    height: 44px;
+    background: #009c75;
+    color: #fff;
+}
+.btn_box .btn_type01:hover {
+    background: #028267;
+}
+.btn_box .btn_type02 {
+    width: 172px;
+    height: 44px;
+    background: #475451;
+    color: #fff;
+}
+.btn_box .btn_type03 {
+    width: 172px;
+    height: 44px;
+    background: #000;
+    color: #fff;
+}
+.btn_box .btn_type04 {
+    height: 36px;
+    background: #fff;
+    border: 1px #d3dbd9 solid;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0 14px;
+    height: 36px;
+    line-height: 35px;
+    border-radius: 5px;
+    color: #555;
+    color: #555;
+}
+.btn_box .btn_type04::after {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    background: url("https://www.modetour.com/icons/icon__20.svg") no-repeat center 0;
+    margin-left: 6px;
+    position: relative;
+    top: -1px;
+    font-size: 14px;
+}
+
+/* 레이어팝업 */
+.popup_container {
+    position: relative;
+}
+.popup_container .layer_popup_btn {
+    cursor: pointer;
+}
+.popup_container .layer_popup .icon_x {
+    display: flex;
+}
+.popup_container .layer_popup .icon_x button {
+    width: 18px;
+    height: 18px;
+    margin-left: auto;
+    background: url("https://www.modetour.com/icons/icon_x_18.svg");
+    font-size: 0;
+    color: transparent;
+    cursor: pointer;
+}
+.popup_container .layer_popup {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    z-index: 100;
+    background: #fff;
+    box-shadow: rgba(17, 17, 17, 0.15) 0px 0px 6px;
+    border: 1px #d3dbd9 solid;
+    border-radius: 5px;
+    text-align: left;
+    padding: 40px 30px;
+    display: none;
+}
+
+/* 요금 결제조건 팝업 */
+.pay_layer .btn_box {
+    margin-top: 30px;
+}
+.pay_select .pay_list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 40px;
+    font-size: 13px;
+    padding: 0 10px;
+    font-weight: 500;
+}
+.pay_select .pay_list li.active {
+    background: #f5f6f6;
+    font-weight: bold;
+}
+.pay_select .pay_list li.active div:nth-child(2) {
+    color: #111;
+}
+.pay_select .pay_list li.active div:nth-child(3) {
+    font-weight: normal;
+}
+.pay_select .pay_list li div:nth-child(1) {
+    display: flex;
+    flex: 1;
+    font-size: 14px;
+}
+.pay_select .pay_list li div:nth-child(2) {
+    width: 70px;
+    color: #888;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.pay_select .pay_list li div:nth-child(3) {
+    display: flex;
+    flex: 1 1 0%;
+    justify-content: flex-end;
+}
+.pay_select .pay_list li div:nth-child(3) span {
+    font-size: 14px;
+    color: #009c75;
+    font-weight: 700;
+}
+.pay_select .pay_list li span {
+    line-height: 15px;
+}
+.pay_select .pay_list li label {
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    word-break: keep-all;
+}
+.pay_select .radiobox .ico {
+    margin-top: 5px;
+}
+.pay_select .radiobox input:checked + label::after {
+    top: 5px;
+}
+.pay_select .radiobox input:checked + label {
+    font-weight: 700;
+}
+
+/* 라디오버튼 */
+
+.radiobox input[type="radio"] {
+    position: absolute;
+    left: 0;
+    height: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+.radiobox label {
+    font-size: 14px;
+    color: #16171d;
+    vertical-align: top;
+    line-height: 26px;
+    height: 26px;
+    cursor: pointer;
+    position: relative;
+}
+
+.radiobox .ico {
+    position: absolute;
+    left: 0;
+    top: -1px;
+    width: 18px;
+    height: 18px;
+    border-radius: 18px;
+    transition: all 0.2s;
+}
+.radiobox .ico + span {
+    padding-left: 25px;
+}
+.radiobox input + label .ico::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 50%;
+}
+
+.radiobox input:checked + label::after {
+    position: absolute;
+    top: 0;
+    left: 1px;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #028267;
+    border-radius: 50%;
+    animation: antRadioEffect 0.36s ease-in-out;
+    animation-fill-mode: both;
+    content: "";
+}
+.radiobox input:checked + label .ico::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #009c75;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    width: 9px;
+    height: 9px;
+    content: "";
+    transition: all 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+}
+@keyframes antRadioEffect {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+
+    to {
+        transform: scale(1.6);
+        opacity: 0;
+    }
+}
+
+/* 체크박스 */
+
+input[type="checkbox"] {
+    position: absolute;
+    left: 0;
+    height: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+.checkbox {
+    position: relative;
+}
+.checkbox label {
+    display: inline-flex;
+    align-items: center;
+    font-size: 15px;
+    color: #16171d;
+    vertical-align: top;
+    line-height: 22px;
+    height: 22px;
+    cursor: pointer;
+}
+.checkbox .ico {
+    position: relative;
+    display: inline-block;
+    border: solid 1px #d9d9d9;
+    width: 18px;
+    height: 18px;
+    border-radius: 18px;
+    background-color: #fff;
+    transition: all 0.2s;
+    margin-right: 5px;
+}
+.checkbox .ico:hover {
+    border-color: #028267;
+}
+.checkbox input:checked + label .ico {
+    border-color: #028267;
+    background-color: #028267;
+}
+.checkbox input + label .ico::after {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #028267;
+    border-radius: 100%;
+    visibility: hidden;
+    content: "";
+}
+.checkbox input + label .ico::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 9px;
+    height: 7px;
+    background: url("https://www.modetour.com/icons/ico-check_gray.svg") no-repeat center 0 / cover;
+}
+.checkbox input::selection {
+    color: #fff;
+    background: #028267;
+}
+
+.checkbox input:checked + label .ico::before {
+    background-image: url("https://www.modetour.com/icons/ico-check_white.svg");
+}
+.checkbox input:checked + label .ico::after {
+    animation: antCheckboxEffect 0.36s ease-in-out;
+    animation-fill-mode: backwards;
+    visibility: visible;
+}
+@keyframes antCheckboxEffect {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+
+    to {
+        transform: scale(1.6);
+        opacity: 0;
+    }
+}
+
+/* dim - layer popup */
+.dim {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    display: none;
+}
+.dim.active {
+    display: block;
+}
+.dim .dim_in {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.dim .pop_in {
+    background: #fff;
+    border-radius: 5px;
+}
+.dim .pop {
+    display: none;
+}
+.dim .pop .wrap::-webkit-scrollbar,
+.dim .pop .wrap::-webkit-scrollbar {
+    width: 4px;
+}
+.dim .pop .wrap::-webkit-scrollbar-thumb {
+    background-color: #818d89;
+    border-radius: 10px;
+}
+.dim .pop .wrap::-webkit-scrollbar-track {
+    background-color: #c9c9c9;
+    border-radius: 10px;
+}
+.dim .pop .emphasis {
+    color: #ff3600;
+}
+
+/* 검색 input */
+.search_input {
+    width: 395px;
+    height: 44px;
+}
+
+.search_input .input {
+    border-radius: 22px;
+    width: 100%;
+    height: 100%;
+    background-color: #f5f6f6;
+    border: 1px #f5f6f6 solid;
+    padding: 4px 11px;
+    position: relative;
+    color: rgba(0, 0, 0, 0.85);
+    line-height: 1.5715;
+    background-image: none;
+    transition: all 0.3s;
+    display: inline-flex;
+}
+
+.search_input .input:hover,
+.search_input .input.on {
+    border: 1px #009c75 solid;
+    box-shadow: 0 0 0 2px rgba(0, 156, 117, 0.4);
+}
+.search_input .input input[type="text"] {
+    padding-left: 10px;
+    width: 100%;
+    height: 100%;
+    background: none;
+    outline: none;
+    font-size: 14px;
+    border: none;
+    min-height: auto;
+    font-weight: 300;
+}
+.search_input .input input[type="text"]:focus {
+    outline: none;
+    box-shadow: none;
+}
+.search_input .input input::placeholder {
+    color: #c2c2c2;
+}
+
+.search_input .input .input_suffix {
+    margin: 0 10px 0 4px;
+    display: flex;
+    flex: none;
+    align-items: center;
+}
+
+.enterinfor input[type="text"] {
+    border: 1px #d3dbd9 solid;
+    font-size: 16px;
+    border-radius: 5px;
+    min-height: 52px;
+    padding: 4px 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: Pretendard;
+}
+
+.s_tit {
+    color: #111;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 18px;
+    margin-bottom: 10px;
+}
+.s_tit span {
+    color: #009c75;
+}
+input[type="text"]:focus {
+    outline: 1px #009c75 solid;
+    box-shadow: 0 0 0 2px rgba(0, 156, 117, 0.4);
+}
+.cation input[type="text"],
+.cation select {
+    border: 1px #ff4d4f solid;
+    box-shadow: 0 0 0 2px rgba(237, 73, 73, 0.2);
+}
+
+/* 셀렉트박스 */
+.enterinfor .select_box {
+    width: 100%;
+}
+.select_box {
+    position: relative;
+    display: inline-block;
+    position: relative;
+}
+.select_box .select_layer {
+    min-width: 100px;
+    height: 52px;
+    padding: 0 8px 0 18px;
+    border: 1px #d9d9d9 solid;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    background: #fff;
+}
+.select_box .select_layer div,
+.select_box .select_layer input {
+    font-size: 16px;
+}
+.select_box .select_layer.error {
+    border: 1px #ff4d4f solid;
+    box-shadow: 0 0 0 2px rgba(237, 73, 73, 0.2);
+}
+.select_box .select_layer.on {
+    border: 1px #009c75 solid;
+    box-shadow: 0 0 0 2px rgba(0, 156, 117, 0.4);
+}
+.select_box .select_layer::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 16px;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    background: url("https://www.modetour.com/icons/footer/icon_down__20_bk.svg");
+    transition: all 0.2s;
+}
+.select_box .select_layer.on::after {
+    transform: rotate(180deg);
+}
+.select_box .select_option {
+    box-shadow: rgba(17, 17, 17, 0.15) 0px 0px 6px;
+    position: absolute;
+    width: 100%;
+    height: 158px;
+    left: 0;
+    top: 60px;
+    overflow-y: scroll;
+    display: none;
+}
+.select_box .select_option::-webkit-scrollbar {
+    width: 8px;
+}
+
+.select_box .select_option::-webkit-scrollbar-thumb {
+    height: 30%;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 4px;
+}
+.select_box .select_option::-webkit-scrollbar-track {
+    background: #fff;
+}
+.select_box .select_option li {
+    height: 52px;
+    padding: 0 8px 0 18px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background: #fff;
+}
+.select_box .select_option li span {
+    font-size: 14px;
+}
+.select_box .select_option li:hover {
+    background: #e6f2ef;
+}
+.select_box .select_option li.active {
+    font-weight: 700;
+    color: #fff;
+    background: #278167;
+}
+
+.select_box input[type="text"]:focus {
+    outline: none;
+    box-shadow: none;
+}
+.select_box .select_layer.txt::after {
+    display: none;
+}
+.select_box .select_layer.txt input[type="text"] {
+    outline: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+    padding: 0;
+}
+
+/* [s] : 여정정보 항공편 css */
+.boarding_time {
+    max-width: 500px;
+}
+.boarding_time > div {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    text-align: left;
+}
+.boarding_time .num {
+    min-width: 70px;
+    display: flex;
+    flex-direction: column;
+}
+.boarding_time .num .time {
+    font-weight: 600;
+    line-height: 1.1875;
+    font-size: 16px;
+}
+.boarding_time .num .day {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1.15;
+    height: 15px;
+    margin-top: 6px;
+}
+.boarding_time .num .way {
+    font-size: 11px;
+    color: #fff;
+    background: #009c75;
+    border-radius: 30px;
+    line-height: 11px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    text-align: center;
+    width: 39px;
+    margin-top: auto;
+    margin-bottom: 27px;
+}
+.boarding_time .num .way.transfer {
+    margin-top: 20px;
+}
+.boarding_time .line {
+    width: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-right: 40px;
+    margin-left: 20px;
+    min-height: 100%;
+}
+.boarding_time .line .circle {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #8f9f9b;
+}
+.boarding_time .line .l {
+    border-right: 2px #d3dbd9 solid;
+    flex: 1 1 0%;
+}
+.boarding_time .boardinfo .empty {
+    margin-top: 30px;
+}
+.boarding_time .boardinfo .location {
+    font-weight: 600;
+    font-size: 16px;
+    max-height: 38px;
+}
+.boarding_time .boardinfo .terminal {
+    font-weight: 500;
+    font-size: 13px;
+    padding-top: 30px;
+    line-height: 1.15;
+}
+.boarding_time .end .boardinfo .terminal {
+    padding-top: 7px;
+}
+.boarding_time .boardinfo .terminal span {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: #009c75;
+    line-height: 1.167;
+    margin-top: 3px;
+}
+.boarding_time .boardinfo .bottom {
+    margin-top: 30px;
+    line-height: 22px;
+}
+.boarding_time .boardinfo .bottom .air {
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+}
+.boarding_time .boardinfo .bottom .ant_img {
+    width: 15px;
+    height: 15px;
+    display: inline-block;
+    margin-right: 5px;
+}
+.boarding_time .boardinfo .bottom .ant_img img {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+.boarding_time .boardinfo .bottom .rule {
+    color: #888888;
+    font-size: 12px;
+    word-break: keep-all;
+    display: flex;
+    flex-direction: column;
+    line-height: 17px;
+}
+.boarding_time .middle .line .l {
+    border-style: dashed;
+}
+.boarding_time .middle .terminal {
+    padding-top: 6px;
+}
+.boarding_time .middle .terminal span {
+    padding-top: 24px;
+}
+.boarding_time .middle .terminal span:nth-child(2) {
+    color: #ed4949;
+}
+/* [s] : 항공편 css */
