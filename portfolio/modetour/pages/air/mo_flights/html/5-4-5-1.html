@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../lib/js/jquery-3.7.1.min.js"></script>
+    <script src="../lib/js/common.js"></script>
+    <link rel="stylesheet" type="text/css" href="./../lib/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="./../lib/css/air.css" />
+    <link rel="stylesheet" type="text/css" href="./../lib/css/common.css" />
+  </head>
+  <body>
+    <main>
+      <div class="reserve_cont_area">
+        <div class="mx-auto">
+          <ul class="progressbar">
+            <li class="active">약관동의</li>
+            <li>정보입력</li>
+          </ul>
+          <div class="ruleagree">
+            <div class="left">
+              <div class="agree_box">
+                <div class="top">
+                  <span class="checkbox">
+                    <input id="all_chk" name="all_chk" type="checkbox" />
+                    <label for="all_chk"> <i class="ico"></i> <span>전체동의</span> </label>
+                  </span>
+                </div>
+                <div class="rulebox1">
+                  <div class="r_tit">약관 동의</div>
+                  <ul>
+                    <li>
+                      <span class="checkbox">
+                        <input id="chk01" name="chk01" type="checkbox" />
+                        <label for="chk01"> <i class="ico"></i> <span>[필수]</span> 요금규정</label>
+                      </span>
+                      <button><img src="https://www.modetour.com/icons/icon_arrow_right_20.svg" alt="" /></button>
+                    </li>
+                    <li>
+                      <span class="checkbox">
+                        <input id="chk02" name="chk02" type="checkbox" />
+                        <label for="chk02"> <i class="ico"></i> <span>[필수]</span> 예약 시 유의사항</label>
+                      </span>
+                      <button><img src="https://www.modetour.com/icons/icon_arrow_right_20.svg" alt="" /></button>
+                    </li>
+                    <li>
+                      <span class="checkbox">
+                        <input id="chk03" name="chk03" type="checkbox" />
+                        <label for="chk03"> <i class="ico"></i> <span>[필수]</span> 취소 및 환불규정</label>
+                      </span>
+                      <button><img src="https://www.modetour.com/icons/icon_arrow_right_20.svg" alt="" /></button>
+                    </li>
+                    <li>
+                      <span class="checkbox">
+                        <input id="chk04" name="chk04" type="checkbox" />
+                        <label for="chk04"> <i class="ico"></i> <span>[필수]</span> 수하물 규정</label>
+                      </span>
+                      <button><img src="https://www.modetour.com/icons/icon_arrow_right_20.svg" alt="" /></button>
+                    </li>
+                    <li>
+                      <span class="checkbox">
+                        <input id="chk05" name="chk05" type="checkbox" />
+                        <label for="chk05"> <i class="ico"></i> <span>[필수]</span> 여행사 업무대행 수수료</label>
+                      </span>
+                      <button><img src="https://www.modetour.com/icons/icon_arrow_right_20.svg" alt="" /></button>
+                    </li>
+                    <li>
+                      <span class="checkbox">
+                        <input id="chk06" name="chk06" type="checkbox" />
+                        <label for="chk06"> <i class="ico"></i> <span>[필수]</span> 여권 및 비자</label>
+                      </span>
+                      <button><img src="https://www.modetour.com/icons/icon_arrow_right_20.svg" alt="" /></button>
+                    </li>
+                    <li>
+                      <span class="checkbox">
+                        <input id="chk07" name="chk07" type="checkbox" />
+                        <label for="chk07"> <i class="ico"></i> <span>[필수]</span> 결제/발권 동의</label>
+                      </span>
+                      <button><img src="https://www.modetour.com/icons/icon_arrow_right_20.svg" alt="" /></button>
+                    </li>
+                    <li>
+                      <span class="checkbox">
+                        <input id="chk08" name="chk08" type="checkbox" />
+                        <label for="chk08"> <i class="ico"></i> <span>[필수]</span> 항공약관</label>
+                      </span>
+                      <button><img src="https://www.modetour.com/icons/icon_arrow_right_20.svg" alt="" /></button>
+                    </li>
+                    <li>
+                      <span class="checkbox">
+                        <input id="chk09" name="chk09" type="checkbox" />
+                        <label for="chk09"> <i class="ico"></i> <span>[필수]</span> 항공사 정보 동의</label>
+                      </span>
+                      <button><img src="https://www.modetour.com/icons/icon_arrow_right_20.svg" alt="" /></button>
+                    </li>
+                  </ul>
+                </div>
+                <div class="rulebox1">
+                  <div class="r_tit">개인정보 수집 및 이용 동의</div>
+                  <ul>
+                    <li>
+                      <span class="checkbox">
+                        <input id="chk10" name="chk10" type="checkbox" />
+                        <label for="chk10"> <i class="ico"></i> <span>[필수]</span> 개인정보 수집 및 이용동의</label>
+                      </span>
+                      <button><img src="https://www.modetour.com/icons/icon_arrow_right_20.svg" alt="" /></button>
+                    </li>
+                    <li>
+                      <span class="checkbox">
+                        <input id="chk11" name="chk11" type="checkbox" />
+                        <label for="chk11"> <i class="ico"></i> <span>[필수]</span> 고유식별정보 수집 및 이용 동의</label>
+                      </span>
+                      <button><img src="https://www.modetour.com/icons/icon_arrow_right_20.svg" alt="" /></button>
+                    </li>
+                    <li>
+                      <span class="checkbox">
+                        <input id="chk12" name="chk12" type="checkbox" />
+                        <label for="chk12"> <i class="ico"></i> <span>[필수]</span> 개인정보 제 3자 제공동의</label>
+                      </span>
+                      <button><img src="https://www.modetour.com/icons/icon_arrow_right_20.svg" alt="" /></button>
+                    </li>
+                    <li>
+                      <span class="checkbox or">
+                        <input id="chk13" name="chk13" type="checkbox" />
+                        <label for="chk13"> <i class="ico"></i> <span>[선택]</span> 개인정보 수집, 이용동의</label>
+                      </span>
+                      <button><img src="https://www.modetour.com/icons/icon_arrow_right_20.svg" alt="" /></button>
+                    </li>
+                  </ul>
+                </div>
+                <div class="rulebox1">
+                  <div class="r_tit">유의 사항</div>
+                  <ul>
+                    <li>
+                      <span class="checkbox">
+                        <input id="chk13" name="chk13" type="checkbox" />
+                        <label for="chk13"> <i class="ico"></i> <span>[필수]</span> 요금 안내사항</label>
+                      </span>
+                      <button><img src="https://www.modetour.com/icons/icon_arrow_right_20.svg" alt="" /></button>
+                    </li>
+                    <li>
+                      <span class="checkbox">
+                        <input id="chk14" name="chk14" type="checkbox" />
+                        <label for="chk14"> <i class="ico"></i> <span>[필수]</span> 여권정보 안내사항</label>
+                      </span>
+                      <button><img src="https://www.modetour.com/icons/icon_arrow_right_20.svg" alt="" /></button>
+                    </li>
+                    <li>
+                      <span class="checkbox">
+                        <input id="chk15" name="chk15" type="checkbox" />
+                        <label for="chk15"> <i class="ico"></i> <span>[필수]</span> 항공권 수령방법</label>
+                      </span>
+                      <button><img src="https://www.modetour.com/icons/icon_arrow_right_20.svg" alt="" /></button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="right">
+              <div class="tit">유의사항</div>
+              <div class="notice_box">
+                <ul>
+                  <li>
+                    <button>
+                      예약 시 주의 사항<span><img src="https://www.modetour.com/icons/icon_arrow_right_20.svg" alt="" /></span>
+                    </button>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="seat_map">
+              <button>
+                좌석배치도<span><img src="https://www.modetour.com/icons/icon_arrow_right_20.svg" alt="" /></span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        //결제조건변경, 결제금액상세 팝업
+        // $(".reserve_cont_area .finalcard .pay_detail > div").click(function () {
+        //   var t = $(this);
+        //   t.find(".pop_over").show();
+        //   t.siblings().find(".pop_over").hide();
+        // });
+        //결제조건변경, 결제금액상세 팝업 닫기
+        // $(".reserve_cont_area .pop_over .close").click(function () {
+        //   $(".pop_over").hide();
+        //   return false;
+        // });
+        //유의사항 여닫기
+        $(".reserve_cont_area .ruleagree .notice_box button").click(function () {
+          var t = $(this);
+          $(".reserve_cont_area .ruleagree .notice_box button").toggleClass("on");
+          t.next(".hide").slideToggle();
+        });
+        //요금규정 탭
+        $(".policy .tabs li a").click(function () {
+          var t = $(this);
+          var idx = t.parent().index();
+          t.parent().addClass("active").siblings().removeClass("active");
+          $(".policy .tab_wrap > div").eq(idx).show().siblings().hide();
+          return false;
+        });
+        //여정 상세보기 접기
+        $.fn.extend({
+          toggle_text: function (initial_text, alternate_text) {
+            return this.text(this.text() == alternate_text ? initial_text : alternate_text);
+          },
+        });
+        $(".reserve_cont_area .detail_btn button").click(function () {
+          $(".reserve_cont_area .finalcard .middle,.reserve_cont_area .finalcard .bottom,.reserve_cont_area .detail_btn").toggleClass("on");
+          $(".reserve_cont_area .detail_btn button").toggle_text("상세보기 접기", "상세보기");
+          $(".reserve_cont_area .finalcard .pay_detail,.reserve_cont_area .finalcard > div:nth-child(2),.reserve_cont_area .finalcard > div:nth-child(3),.reserve_cont_area .finalcard .card .top,.reserve_cont_area .finalcard .card .bottom .air,.reserve_cont_area .finalcard .card .bottom .luggage").toggle();
+        });
+      });
+    </script>
+  </body>
+</html>

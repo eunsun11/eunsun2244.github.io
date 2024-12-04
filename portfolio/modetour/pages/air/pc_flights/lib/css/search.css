@@ -407,18 +407,38 @@
     color: #8f9f9b;
     font-weight: 700;
 }
-.flight_cont .flight_list .banner_area {
-    display: flex;
-    justify-content: space-between;
-}
-.flight_cont .flight_list .banner_area .banner {
-    width: 440px;
+/* [s] 2024-10-17 수정 */
+.flight_cont .banner_area .swiper-slide {
+    overflow: hidden;
+    border-radius: 10px;
+    width: 100%;
     height: 54px;
 }
-.flight_cont .flight_list .banner_area .banner img {
+.flight_cont .banner_area .swiper-slide img {
     width: 100%;
     height: 100%;
 }
+.flight_cont .banner_area .swiper-pagination-fraction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: auto;
+    right: 0;
+    bottom: 0;
+    width: 33px;
+    height: 15px;
+    font-size: 9px;
+    color: #fff;
+    background: rgba(177, 177, 177, 0.4);
+    border-bottom-right-radius: 10px;
+}
+.flight_cont .banner_area .swiper-pagination-fraction span {
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0 2px;
+}
+/* [e] 2024-10-17 수정 */
 .flight_cont .flight_list .flight_item {
     border: 1px #d3dbd9 solid;
     border-radius: 10px;
@@ -496,7 +516,7 @@
 }
 .flight_cont .flight_list .flight_item .item_details_top .detail02 .detail02_2 {
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
 }
@@ -512,12 +532,14 @@
     color: #fff;
     font-size: 14px;
     font-weight: 700;
+    margin-top: 8px;
 }
 .flight_cont .flight_list .flight_item .item_details_top .detail02 .detail02_2 .line {
     width: 132px;
     height: 2px;
     background: #d3dbd9;
     position: relative;
+    margin-top: 12px;
 }
 .flight_cont .flight_list .flight_item .item_details_top .detail02 .detail02_2 .line::before,
 .flight_cont .flight_list .flight_item .item_details_top .detail02 .detail02_2 .line::after {
@@ -568,15 +590,6 @@
 .flight_cont .flight_list .flight_item .item_details_top .detail03 p:first-child {
     margin-top: 0;
 }
-.flight_cont .st01 span {
-    display: inline-block;
-    height: 25px;
-    border: 1px #0075e9 solid;
-    border-radius: 5px;
-    padding: 0 6px;
-    color: #0075e9;
-    line-height: 25px;
-}
 .flight_cont .guide .st01 {
     font-size: 13px;
 }
@@ -590,6 +603,9 @@
 .flight_cont .guide em {
     font-weight: 700;
     color: #0075e9;
+}
+.flight_cont .flight_list .flight_item .item_details_top .detail03 .st01 {
+    justify-content: flex-end;
 }
 .flight_cont .flight_list .flight_item .item_details_top .detail03 .st02 span {
     color: #009c75;

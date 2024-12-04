@@ -1,0 +1,2148 @@
+/* 항공팝업 css */
+@import url(./air_pop.css);
+
+.reserve_cont_area {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 150px;
+}
+.flightsummaryinformation {
+  padding-top: 15px;
+  position: relative;
+  padding-bottom: 8px;
+}
+.flightsummaryinformation:before {
+  content: "";
+  height: 8px;
+  background: #eeeeee;
+  position: absolute;
+  bottom: 0;
+  left: -20px;
+  right: -20px;
+  display: block;
+}
+.reserve_cont_area .tit_box {
+  font-size: 26px;
+  font-weight: 700;
+  line-height: 34px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+.reserve_cont_area .com_tit {
+  font-weight: 700;
+  line-height: 1.25rem;
+  font-size: 20px;
+  height: 25px;
+  margin-bottom: 1.25rem;
+}
+.reserve_cont_area .flightsummaryinformation .card_box .card:nth-child(4) {
+  margin-top: 25px;
+}
+.reserve_cont_area .flightsummaryinformation .card_in {
+  border-radius: 10px;
+}
+.reserve_cont_area .flightsummaryinformation .card_tit {
+  line-height: 20px;
+  font-weight: 600;
+  font-size: 18px;
+  margin-bottom: 15px;
+  display: flex;
+}
+.reserve_cont_area .flightsummaryinformation .card_tit > div:nth-child(2) {
+  position: relative;
+  display: inline-block;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
+.reserve_cont_area .flightsummaryinformation .card_tit2 {
+  text-align: left;
+  font-size: 13px;
+  margin-bottom: 15px;
+  color: #888888;
+}
+.reserve_cont_area .flightsummaryinformation .card_tit3 {
+  display: flex;
+  font-size: 14px;
+  font-weight: 600;
+  align-items: center;
+}
+.reserve_cont_area .flightsummaryinformation .card_tit3 .ant_img {
+  margin-right: 3px;
+}
+.reserve_cont_area .flightsummaryinformation .card_tit3 > div:nth-child(2) {
+  position: relative;
+  padding-right: 10px;
+  margin-right: 10px;
+}
+.reserve_cont_area .flightsummaryinformation .card_tit3 > div:nth-child(2):before {
+  content: "";
+  width: 1px;
+  height: 15px;
+  display: block;
+  background: #888888;
+  position: absolute;
+  right: 0;
+  top: 0px;
+}
+.reserve_cont_area .flightsummaryinformation .card_tit4 {
+  background: #f5f6f6;
+  border-radius: 10px;
+  padding: 16px 14px;
+  margin-top: 20px;
+}
+.reserve_cont_area .flightsummaryinformation .card_tit4 .add_tit {
+  font-weight: 600;
+  padding-bottom: 8px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.reserve_cont_area .flightsummaryinformation .card_tit4 ul li {
+  font-size: 12px;
+  line-height: 17px;
+  margin-top: 5px;
+}
+.reserve_cont_area .flightsummaryinformation .card_tit4 ul li span {
+  display: block;
+  font-weight: 600;
+}
+.reserve_cont_area .flightsummaryinformation .card_tit4 ul li div {
+  position: relative;
+  padding-left: 5px;
+  font-weight: 600;
+}
+.reserve_cont_area .flightsummaryinformation .card_tit4 ul li div:before {
+  content: "";
+  width: 2px;
+  height: 2px;
+  display: block;
+  border-radius: 50%;
+  background: #888;
+  position: absolute;
+  left: 0;
+  top: 8px;
+}
+.reserve_cont_area .card_tit5 {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px #d3dbd9 solid;
+  padding-bottom: 22px;
+  margin-top: 25px;
+}
+.reserve_cont_area .card_tit5 .card {
+  font-size: 1rem;
+  font-weight: 600;
+}
+.reserve_cont_area .card_tit5 .num span {
+  color: #009c75;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+.reserve_cont_area .card_tit6 .top {
+  padding-top: 22px;
+  padding-bottom: 22px;
+  display: flex;
+  justify-content: space-between;
+}
+.reserve_cont_area .card_tit6 .top div {
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+.reserve_cont_area .card_tit6 .top .ant_img {
+  margin-left: 5px;
+  transition: 0.4s;
+}
+.reserve_cont_area .card_tit6 .top div.on .ant_img {
+  transform: rotate(-180deg);
+}
+.reserve_cont_area .card_tit6 .top button {
+  background: #fff;
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 8px 14px;
+  border: 1px #d3dbd9 solid;
+  border-radius: 9999px;
+}
+/* [s] : 결제금액상세 */
+.reserve_cont_area .card_tit6 .hide {
+  position: relative;
+  padding-bottom: 30px;
+}
+.reserve_cont_area .card_tit6 .hide:before {
+  content: "";
+  height: 1px;
+  background: #d3dbd9;
+  display: block;
+  position: absolute;
+  left: -20px;
+  right: -20px;
+  top: 0;
+}
+.reserve_cont_area .card_tit6 .total {
+  display: flex;
+  justify-content: space-between;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.reserve_cont_area .card_tit6 .total span {
+  font-weight: 400;
+}
+.reserve_cont_area .card_tit6 .people_box {
+  padding-top: 30px;
+}
+.reserve_cont_area .card_tit6 .pay_people {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 15px;
+}
+.reserve_cont_area .card_tit6 .pay_people:first-child {
+  margin-top: 0;
+}
+.reserve_cont_area .card_tit6 .pay_people .people {
+  font-size: 15px;
+  font-weight: 600;
+}
+.reserve_cont_area .card_tit6 .pay_people .price {
+  font-size: 15px;
+  font-weight: 600;
+  color: #555555;
+}
+.reserve_cont_area .card_tit6 .pay_people .price span {
+  font-weight: 400;
+}
+.reserve_cont_area .card_tit6 .pay_people .txt_air {
+  color: #888888;
+  font-size: 14px;
+  margin-left: 5px;
+}
+.reserve_cont_area .card_tit6 .pay_people .txt_price {
+  color: #888888;
+  font-size: 14px;
+}
+.reserve_cont_area .card_tit6 .hide {
+  display: none;
+}
+.reserve_cont_area .reserve_btn {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+}
+/* [e] : 결제금액상세 */
+.reserve_cont_area .airrule {
+  margin-top: 25px;
+  border-bottom: 1px #d3dbd9 solid;
+  padding-bottom: 25px;
+}
+.reserve_cont_area .airrule .a_tit {
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+.reserve_cont_area .airrule .a_tit button {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 500;
+  background: none;
+}
+.reserve_cont_area .airrule ul li {
+  font-size: 13px;
+  margin-top: 8px;
+  padding-left: 10px;
+  position: relative;
+  color: #555;
+}
+.reserve_cont_area .airrule ul li:before {
+  content: "-";
+  position: absolute;
+  left: 0;
+  top: -1px;
+}
+.reserve_cont_area .airrule ul li:first-child {
+  margin-top: 0;
+}
+.reserve_cont_area .detail_in > div {
+  border-top: 1px solid #e5e7eb;
+  padding-top: 25px;
+  margin-top: 25px;
+}
+.reserve_cont_area .detail_in > div:first-child {
+  border: none;
+  margin-top: 0;
+}
+.reserve_cont_area .detail .d_tit {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+.reserve_cont_area .detail .sub_box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+.reserve_cont_area .detail .sub_box .blue,
+.reserve_cont_area .detail .sub_box .red {
+  display: flex;
+  gap: 0 8px;
+}
+.reserve_cont_area .detail .sub_box span {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 600;
+  padding: 3px 6px;
+  border-radius: 5px;
+}
+.reserve_cont_area .detail .sub_box .blue span {
+  color: #0175e9;
+  border: 1px #0175e9 solid;
+}
+.reserve_cont_area .detail .sub_box .red span {
+  color: #ed4949;
+  border: 1px #ed4949 solid;
+}
+.reserve_cont_area .detail .sub_box .st01 {
+  width: 100%;
+}
+.reserve_cont_area .detail .boarding_time {
+  box-shadow: 0 0 6px hsla(0, 0%, 7%, 0.149);
+  border-radius: 10px;
+  padding: 24px 20px;
+  max-width: 100%;
+}
+.reserve_cont_area .info_caution {
+  border-top: 1px solid #e5e7eb;
+  margin-top: 30px;
+  margin-bottom: 60px;
+  padding-top: 30px;
+}
+.reserve_cont_area .info_caution .tit {
+  display: flex;
+  margin-bottom: 20px;
+}
+.reserve_cont_area .info_caution .tit span {
+  font-weight: 600;
+  font-size: 1rem;
+  margin-right: 5px;
+}
+.reserve_cont_area .info_caution p {
+  font-size: 13px;
+  line-height: 19px;
+  color: #555555;
+  margin-top: 10px;
+  margin-bottom: 30px;
+}
+.reserve_cont_area .info_caution p.p_notice {
+  color: #111;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+.reserve_cont_area .checkbox_area .checkbox {
+  display: block;
+  background: #f5f6f6;
+  border-radius: 10px;
+  padding: 20px 16px;
+  margin-bottom: 10px;
+}
+.reserve_cont_area .checkbox_area label {
+  font-size: 13px;
+  height: auto;
+  line-height: 16px;
+  align-items: flex-start;
+  display: flex;
+}
+.reserve_cont_area .checkbox_area label span {
+  width: calc(100% - 44px);
+}
+.reserve_cont_area .checkbox_area .checkbox input + label .ico {
+  border: none;
+  background: none;
+  width: 34px;
+  height: 34px;
+  margin-right: 10px;
+}
+.reserve_cont_area .checkbox_area .checkbox input + label .ico::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0px;
+  width: 34px;
+  height: 34px;
+  background: url("https://www.modetour.com/icons/icon_check_26.svg") no-repeat center 0 / cover;
+  transform: translate(0, 0);
+}
+.reserve_cont_area .checkbox_area .checkbox input:checked + label .ico::before {
+  background-image: url("https://www.modetour.com/icons/icon_check_26_gray.svg");
+}
+.reserve_cont_area .checkbox_area .checkbox input + label .ico::after {
+  border: none;
+}
+.reserve_cont_area .checkbox_area .checkbox input:checked + label .ico {
+  border: none;
+  background: none;
+}
+.reserve_cont_area .detail_in .detail_top {
+  margin-bottom: 15px;
+}
+.reserve_cont_area .detail_in .detail_top .top_tit1 {
+  line-height: 20px;
+  font-weight: 600;
+  font-size: 16px;
+  margin-bottom: 6px;
+  display: flex;
+}
+.reserve_cont_area .detail_in .detail_top .top_tit1 > div:nth-child(2) {
+  position: relative;
+  display: inline-block;
+  margin-right: 0.5rem;
+  margin-left: 0.5rem;
+}
+.reserve_cont_area .detail_in .detail_top .top_tit2 {
+  display: flex;
+  font-size: 14px;
+  font-weight: 600;
+  align-items: center;
+}
+.reserve_cont_area .detail_in .detail_top .top_tit2 .ant_img {
+  margin-right: 3px;
+}
+.reserve_cont_area .detail_in .detail_top .top_tit2 > div:nth-child(2) {
+  position: relative;
+  padding-right: 10px;
+  margin-right: 10px;
+}
+.reserve_cont_area .detail_in .detail_top .top_tit2 > div:nth-child(2):before {
+  content: "";
+  width: 1px;
+  height: 15px;
+  display: block;
+  background: #888888;
+  position: absolute;
+  right: 0;
+  top: 0px;
+}
+
+/* [s] : 예약 1단계 - 약관페이지 */
+.reserve_cont_area .progressbar {
+  display: flex;
+  padding: 20px 55px 24px;
+  position: relative;
+  width: 100%;
+}
+.reserve_cont_area .progressbar:before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  right: -20px;
+  display: block;
+  height: 4px;
+  background: #eeeeee;
+  bottom: 0;
+}
+.reserve_cont_area .progressbar li {
+  list-style: none;
+  position: relative;
+  text-align: center;
+  vertical-align: middle;
+  font-weight: 600;
+  font-size: 13px;
+  display: table-cell;
+  color: #111;
+  height: 50px;
+  margin-bottom: 0;
+  flex: 1;
+  height: 50px;
+}
+.reserve_cont_area .progressbar li:before {
+  border-radius: 50%;
+  display: block;
+  width: 24px;
+  height: 24px;
+  text-align: center;
+  margin: 0 auto 10px;
+  line-height: 24px;
+  border: 1px solid #d3dbd9;
+  color: #d3dbd9;
+  background: #fff;
+}
+.reserve_cont_area .progressbar li.active {
+  color: #009c75;
+}
+.reserve_cont_area .progressbar li.active:before {
+  content: "";
+  color: #fff;
+  background: #009c75;
+  border: 1px #009c75 solid;
+}
+.reserve_cont_area .progressbar li:nth-child(1):before {
+  content: "1";
+}
+.reserve_cont_area .progressbar li:nth-child(1):after {
+  background: #d3dbd9;
+  content: "";
+  height: 1px;
+  left: 50%;
+  position: absolute;
+  top: 13px;
+  width: 100%;
+  z-index: -1;
+}
+.reserve_cont_area .progressbar li:nth-child(2):before {
+  content: "2";
+}
+.reserve_cont_area .ruleagree {
+  margin-top: 25px;
+  margin-bottom: 60px;
+  position: relative;
+}
+.reserve_cont_area .ruleagree .right {
+  margin-top: 30px;
+  padding-top: 30px;
+  position: relative;
+}
+.reserve_cont_area .ruleagree .right::before {
+  content: "";
+  display: block;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 1px;
+  background: #d3dbd9;
+  position: absolute;
+}
+.reserve_cont_area .ruleagree .tit {
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 30px;
+}
+.reserve_cont_area .ruleagree .top span {
+  font-weight: 700;
+  font-size: 1.125rem;
+}
+.reserve_cont_area .ruleagree .checkbox {
+  display: flex;
+  align-items: center;
+  position: relative;
+  border-radius: 10px;
+}
+.reserve_cont_area .ruleagree .checkbox input[type="checkbox"] {
+  position: absolute;
+  left: 0;
+  height: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
+}
+.reserve_cont_area .ruleagree .checkbox label {
+  padding-left: 30px;
+  font-size: 14px;
+  color: #16171d;
+  vertical-align: top;
+  line-height: 26px;
+  height: 26px;
+  cursor: pointer;
+  position: relative;
+}
+.reserve_cont_area .ruleagree .checkbox .ico {
+  position: absolute;
+  left: 0;
+  top: 5px;
+  width: 18px;
+  height: 18px;
+  border-radius: 18px;
+  transition: all 0.2s;
+  background: #fff;
+  border: 1px #d3dbd9 solid;
+}
+.reserve_cont_area .ruleagree input + label .ico::after {
+  position: absolute;
+  top: -1px;
+  left: -1px;
+  width: 100%;
+  height: 100%;
+  border-radius: 100%;
+  visibility: hidden;
+  content: "";
+  border-color: #00d9a3; /* 추가 */
+}
+.reserve_cont_area .ruleagree input + label .ico::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 7px;
+  background: url("https://www.modetour.com/icons/ico-check_gray.svg") no-repeat center 0 / contain;
+}
+.reserve_cont_area .ruleagree input:checked + label .ico {
+  background-color: #00d9a3;
+}
+.reserve_cont_area .ruleagree input:checked + label .ico::before {
+  background-image: url("https://www.modetour.com/icons/ico-check_white.svg");
+}
+.reserve_cont_area .ruleagree .r_tit {
+  font-weight: 600;
+  line-height: 1rem;
+  margin-bottom: 1.5rem;
+  font-size: 1.125rem;
+}
+.reserve_cont_area .ruleagree .rulebox1 {
+  border-top: 1px #d3dbd9 solid;
+  padding-top: 24px;
+  margin-top: 24px;
+}
+.reserve_cont_area .ruleagree .rulebox1 ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 18px;
+}
+.reserve_cont_area .ruleagree .rulebox1 ul li {
+  display: flex;
+  justify-content: space-between;
+}
+.reserve_cont_area .ruleagree .rulebox1 ul li button {
+  background: none;
+}
+.reserve_cont_area .ruleagree .rulebox1 span {
+  color: #009c75;
+  font-weight: 600;
+  margin-right: 5px;
+}
+.reserve_cont_area .ruleagree .rulebox1 label {
+  color: #888;
+  font-weight: 500;
+}
+.reserve_cont_area .ruleagree .rulebox1 .or span {
+  color: #111;
+}
+.reserve_cont_area .ruleagree .notice_box li {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+}
+.reserve_cont_area .ruleagree .notice_box button {
+  background: none;
+  display: block;
+  position: relative;
+  width: 100%;
+  text-align: left;
+  padding: 14px 40px 14px 16px;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 19px;
+  color: rgba(0, 0, 0, 0.85);
+  transition: all 0.2s;
+}
+.reserve_cont_area .ruleagree .notice_box button span {
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  margin-top: -10px;
+  transition: all 0.2s;
+}
+.reserve_cont_area .ruleagree .notice_box .hide_txt {
+  margin-bottom: 5px;
+}
+.reserve_cont_area .ruleagree .notice_box .hide {
+  padding: 40px;
+  border-top: 1px #e5e7eb solid;
+  color: rgba(0, 0, 0, 0.85);
+  font-size: 14px;
+  line-height: 1.3rem;
+  display: none;
+}
+.reserve_cont_area .ruleagree .seat_map {
+  padding-top: 30px;
+  margin-top: 30px;
+  position: relative;
+}
+.reserve_cont_area .ruleagree .seat_map:before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  right: -20px;
+  display: block;
+  height: 4px;
+  background: #eeeeee;
+  top: 0;
+}
+.reserve_cont_area .ruleagree .seat_map button {
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  background: none;
+  width: 100%;
+  align-items: center;
+}
+
+/* [e] : 예약 1단계 - 약관페이지 */
+/* [s] : 예약 2단계 - 예약자 정보 입력 */
+.reserve_cont_area .enterinfor {
+  gap: 160px;
+  margin-top: 60px;
+  margin-bottom: 60px;
+}
+.reserve_cont_area .enterinfor > div .tit {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 30px;
+}
+.reserve_cont_area .enterinfor .box .notice {
+  font-size: 12px;
+  color: #009c75;
+  line-height: 16px;
+  margin-top: 10px;
+}
+.reserve_cont_area .enterinfor .box > div {
+  display: flex;
+  column-gap: 15px;
+  margin-top: 30px;
+}
+.reserve_cont_area .enterinfor .box > div:first-child {
+  margin-top: 0;
+}
+.reserve_cont_area .enterinfor .box .s_tit {
+  color: #111;
+  font-size: 15px;
+  font-weight: 600;
+  line-height: 18px;
+  margin-bottom: 10px;
+}
+.reserve_cont_area .enterinfor .box .s_tit span {
+  color: #009c75;
+}
+.reserve_cont_area .enterinfor .box input {
+  border: 1px #d3dbd9 solid;
+  font-size: 16px;
+  border-radius: 5px;
+  min-height: 52px;
+  padding: 4px 10px;
+  box-sizing: border-box;
+  font-size: 15px;
+  font-weight: 500;
+  font-family: Pretendard;
+}
+.reserve_cont_area .enterinfor .box input::placeholder {
+  color: #d3dbd9;
+}
+.reserve_cont_area .enterinfor .name > div:first-child {
+  width: 30%;
+}
+.reserve_cont_area .enterinfor .name > div:nth-child(2) {
+  width: calc((100% - 30%) - 104px);
+}
+.reserve_cont_area .enterinfor .name input[type="text"] {
+  width: 100%;
+}
+.reserve_cont_area .enterinfor .name .radio_wrap {
+  min-width: 104px;
+  display: flex;
+  margin-top: 28px;
+  border: 1px solid #d9d9d9;
+  background: #fff;
+  border-radius: 5px;
+}
+.reserve_cont_area .enterinfor .name .radio_wrap > span {
+  flex: 1;
+  height: 52px;
+}
+.reserve_cont_area .enterinfor .name .radio_wrap label {
+  padding-left: 0;
+  border-radius: 5px;
+  outline: 0 !important;
+  box-shadow: none !important;
+  height: 52px !important;
+  min-width: 52px;
+  padding: 0 5px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+  border: 0;
+  position: relative;
+  transition: color 0.3s, background 0.3s, border-color 0.3s, box-shadow 0.3s;
+  color: #aaa;
+}
+.reserve_cont_area .enterinfor .name .radio_wrap input:checked + label {
+  border: 1px #009c75 solid;
+  color: #009c75;
+  font-weight: 600;
+}
+.reserve_cont_area .enterinfor .birth {
+  flex-direction: column;
+  flex: 1 1 0%;
+}
+.reserve_cont_area .enterinfor .birth .front {
+  width: calc(100% - 20%);
+}
+.reserve_cont_area .enterinfor .birth .roundfull {
+  margin-left: 10px;
+}
+.reserve_cont_area .enterinfor .birth .roundfull span {
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  background: #aaa;
+  border-radius: 50%;
+  margin-left: 12px;
+}
+.reserve_cont_area .enterinfor .birth .roundfull span:first-child {
+  margin-left: 0;
+}
+.reserve_cont_area .enterinfor .birth .back {
+  width: 52px;
+  height: 52px;
+  text-align: center;
+}
+.reserve_cont_area .enterinfor .birth .inputwrap {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+.reserve_cont_area .enterinfor .birth .sign {
+  margin: 0 10px;
+}
+.reserve_cont_area .enterinfor .phone {
+  flex-direction: column;
+  flex: 1 1 0%;
+}
+.reserve_cont_area .enterinfor .email {
+  flex-direction: column;
+}
+.reserve_cont_area .enterinfor .email select {
+  width: 100%;
+  height: 52px;
+  border: 1px solid #d9d9d9;
+  border-radius: 5px;
+  padding: 0 10px;
+}
+.reserve_cont_area .enterinfor .email .inputwrap {
+  display: flex;
+  align-items: center;
+  column-gap: 15px;
+}
+.reserve_cont_area .enterinfor .email .inputwrap input {
+  width: 49%;
+}
+.reserve_cont_area .enterinfor .email .inputwrap .select_box {
+  width: 49%;
+}
+.reserve_cont_area .enterinfor .cation input[type="text"],
+.reserve_cont_area .enterinfor .cation select {
+  border: 1px #ff4d4f solid;
+  box-shadow: 0 0 0 2px rgba(237, 73, 73, 0.2);
+}
+.reserve_cont_area .enterinfor .cation .notice {
+  color: #d84949;
+}
+.reserve_cont_area .enterinfor .peopleenter {
+  position: relative;
+  margin-top: 30px;
+}
+.reserve_cont_area .enterinfor .peopleenter:before {
+  content: "";
+  position: absolute;
+  left: -20px;
+  right: -20px;
+  display: block;
+  height: 8px;
+  background: #eeeeee;
+  top: 0;
+}
+.reserve_cont_area .enterinfor .peopleenter li {
+  padding: 34px 0 24px;
+  border-bottom: 1px #d3dbd9 solid;
+  font-size: 16px;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.reserve_cont_area .enterinfor .peopleenter li span {
+  font-size: 12px;
+  color: #ed4949;
+  display: flex;
+}
+.reserve_cont_area .enterinfor .peopleenter li span.ok {
+  color: #111;
+}
+.reserve_cont_area .enterinfor .peopleenter li span.ok svg {
+  width: 14px;
+  height: 14px;
+  margin-right: 2px;
+}
+.reserve_cont_area .enterinfor .enternotice {
+  font-size: 12px;
+  color: #888888;
+  line-height: 18px;
+  margin-top: 15px;
+}
+.reserve_cont_area .enterinfor .enternotice:before {
+  content: "*";
+}
+.reserve_cont_area .pay_btn {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.reserve_cont_area .pay_btn button {
+  background: #009c75;
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+  height: 52px;
+  width: 184px;
+  border-radius: 5px;
+}
+/* [e] : 예약 2단계 - 예약자 정보 입력 */
+/* [s] : 예약 상세 페이지 */
+.mypagedetail {
+  padding: 0 20px 60px 20px;
+}
+.mypagedetail .reservedetail .sub_top {
+  padding-top: 18px;
+}
+.mypagedetail .reservedetail .sub_top ul {
+  display: flex;
+  margin-top: 15px;
+}
+.mypagedetail .reservedetail .sub_top ul li {
+  padding: 5px 10px;
+  font-size: 13px;
+  font-weight: 600;
+  border: 1px solid #d3dbd9;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+.mypagedetail .reservedetail .sub_top ul li:first-child {
+  margin-left: 0;
+}
+.mypagedetail .reservedetail .sub_top p {
+  font-size: 14px;
+  font-weight: 600;
+  color: #111;
+}
+.mypagedetail .reservedetail .sub_top p span {
+  color: #ed4949;
+}
+.mypagedetail .reservedetail .passport_cation {
+  border: 1px #ed4949 solid;
+  padding: 18px;
+  border-radius: 10px;
+  margin-top: 30px;
+}
+.mypagedetail .reservedetail .passport_cation .left {
+  color: #ed4949;
+  font-size: 15px;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.mypagedetail .reservedetail .passport_cation svg {
+  color: #ed4949;
+}
+.mypagedetail .reservedetail .passport_cation .left span {
+  position: relative;
+  top: 2px;
+  margin-right: 5px;
+}
+.mypagedetail .reservedetail .passport_cation .right {
+  font-size: 12px;
+  line-height: 18px;
+  font-weight: 600;
+}
+.mypagedetail .reservedetail .passport_cation .right span {
+  color: #ed4949;
+  display: block;
+}
+.mypagedetail .reservedetail .passport_cation.cancle {
+  border-color: #111;
+  border-radius: 5px;
+}
+.mypagedetail .reservedetail .passport_cation.cancle .left {
+  color: #111;
+  font-weight: 600;
+  margin-bottom: 0;
+}
+.mypagedetail .reservedetail .journey {
+  margin-top: 30px;
+}
+.mypagedetail .reservedetail .journey > div {
+  margin-top: 15px;
+}
+.mypagedetail .reservedetail .journey > div:first-child {
+  margin-top: 0;
+}
+.mypagedetail .reservedetail .card {
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  padding: 18px;
+}
+.mypagedetail .reservedetail .card .card_tit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mypagedetail .reservedetail .card .card_tit .ant_img {
+  width: 15px;
+  height: 15px;
+  display: inline-block;
+  margin-right: 2px;
+}
+.mypagedetail .reservedetail .card .card_tit .ant_img img {
+  width: 100%;
+  object-fit: cover;
+}
+.mypagedetail .reservedetail .card .card_tit .right {
+  font-size: 13px;
+}
+.mypagedetail .reservedetail .card .card_tit .left {
+  font-size: 15px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+}
+.mypagedetail .reservedetail .card .card_tit .left span {
+  border-radius: 5px;
+  color: #0175e9;
+  border: 1px #0175e9 solid;
+  font-size: 13px;
+  display: inline-block;
+  padding: 5px 8px;
+  margin-left: 5px;
+  font-weight: 400;
+}
+.mypagedetail .reservedetail .card .card_tit2 {
+  display: flex;
+  column-gap: 10px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 17px;
+  margin-bottom: 6px;
+}
+.mypagedetail .reservedetail .card .card_tit3 {
+  font-size: 13px;
+  color: #888;
+}
+.mypagedetail .reservedetail .schedule_btn {
+  margin-top: 16px;
+}
+.mypagedetail .reservedetail .schedule_btn button {
+  background: none;
+  font-size: 12px;
+  border: 1px #d3dbd9 solid;
+  border-radius: 9999px;
+  padding: 8px 16px;
+  cursor: pointer;
+  margin-right: 5px;
+}
+.mypagedetail .reservedetail .infor_wrap {
+  display: flex;
+  column-gap: 15px;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+.mypagedetail .reservedetail .infor_wrap > div {
+  flex: 1;
+}
+.mypagedetail .reservedetail .infor_wrap .left {
+  background: #f5f6f6;
+  flex: none;
+  width: 100%;
+  border-radius: 10px;
+  padding: 24px 18px;
+  margin-bottom: 30px;
+}
+.mypagedetail .reservedetail .infor_wrap .left > div:first-child {
+  margin-top: 0;
+}
+.mypagedetail .reservedetail .infor_wrap .left .t1 {
+  display: flex;
+  justify-content: space-between;
+}
+.mypagedetail .reservedetail .infor_wrap .left .t1 > div {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 18px;
+}
+.mypagedetail .reservedetail .infor_wrap .left .t1 span {
+  display: block;
+  text-align: right;
+  font-weight: 400;
+  font-size: 14px;
+  margin-top: 5px;
+}
+.mypagedetail .reservedetail .infor_wrap .left .t2 {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px #d3dbd9 solid;
+  padding-top: 20px;
+  margin-top: 20px;
+}
+.mypagedetail .reservedetail .infor_wrap .left .t2 > div:first-child {
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 18px;
+}
+.mypagedetail .reservedetail .infor_wrap .left .t2 > div:nth-child(2) {
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+}
+.mypagedetail .reservedetail .infor_wrap .left .t2 > div:nth-child(2) button {
+  margin-left: 3px;
+}
+.mypagedetail .reservedetail .infor_wrap .right {
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 10px;
+  padding: 20px 18px;
+}
+.mypagedetail .reservedetail .infor_wrap .incomplete {
+  border-color: #ed4949;
+}
+.mypagedetail .reservedetail .infor_wrap .incomplete svg {
+  color: #ed4949;
+}
+.mypagedetail .reservedetail .infor_wrap .complete {
+  border-color: #009c75;
+}
+.mypagedetail .reservedetail .infor_wrap .complete .r_tit {
+  color: #009c75;
+}
+.mypagedetail .reservedetail .infor_wrap .complete svg {
+  color: #009c75;
+}
+.mypagedetail .reservedetail .infor_wrap .r_tit {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: 600;
+  color: #ed4949;
+  margin-bottom: 24px;
+  align-items: center;
+}
+.mypagedetail .reservedetail .infor_wrap .right ul li {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 20px;
+  line-height: 18px;
+}
+.mypagedetail .reservedetail .infor_wrap .right ul li:first-child {
+  margin-top: 0;
+}
+.mypagedetail .reservedetail .infor_wrap .right ul li span {
+  font-size: 13px;
+  font-weight: 600;
+}
+.mypagedetail .reservedetail .infor_wrap .right ul li .notice {
+  display: block;
+  width: 100%;
+  font-size: 11px;
+  color: #009c75;
+  margin-top: 5px;
+}
+.mypagedetail .reservedetail .infor_wrap .right ul li button {
+  background: none;
+  border-bottom: 1px #111 solid;
+  font-size: 13px;
+}
+.mypagedetail .reservedetail .infor_wrap .pay_box {
+  border-width: 1px;
+  border-style: solid;
+  border-radius: 10px;
+  padding: 20px 18px;
+}
+.mypagedetail .reservedetail .infor_wrap .pay_box.incomplete {
+  border-color: #ed4949;
+}
+.mypagedetail .reservedetail .infor_wrap .pay_box.complete {
+  border-color: #009c75;
+}
+.mypagedetail .reservedetail .infor_wrap .pay_box.complete .r_tit {
+  color: #009c75;
+}
+.mypagedetail .reservedetail .infor_wrap .pay_box .txt {
+  font-size: 13px;
+  line-height: 18px;
+}
+.mypagedetail .reservedetail .infor_wrap .pay_box .txt + .txt {
+  margin-top: 16px;
+}
+.mypagedetail .reservedetail .infor_wrap .pay_box .txt span {
+  display: block;
+  font-weight: 600;
+}
+.mypagedetail .reservedetail .infor_wrap .pay_box .txt .red {
+  color: #ed4949;
+  font-weight: 600;
+}
+.mypagedetail .reservedetail .infor_wrap .pay_box .txt button {
+  background: none;
+  border-bottom: 1px #111 solid;
+}
+.mypagedetail .reservedetail .infor_wrap .pay_box .btn_box {
+  margin-top: 20px;
+}
+.mypagedetail .reservedetail .infor_wrap .pay_box .btn_box button {
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px #d3dbd9 solid;
+  border-radius: 9999px;
+  padding: 8px 0;
+  width: 100%;
+  background: none;
+}
+.mypagedetail .reservedetail .pay_notice {
+  color: #888;
+  font-size: 12px;
+  margin-top: 15px;
+  margin-bottom: 30px;
+}
+.mypagedetail .reservedetail .infor_box {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.mypagedetail .reservedetail .infor_box button {
+  width: calc((100% - 30px) / 3);
+  font-size: 14px;
+  border-radius: 4px;
+  color: #111;
+  border: 1px #e5e5e5 solid;
+  background: none;
+  height: 50px;
+}
+.mypagedetail .reservedetail .infor_box.b_3 button {
+  width: calc((100% - 15px) / 2);
+}
+.mypagedetail .reservedetail .infor_box .w100 {
+  flex-basis: 100%;
+}
+.mypagedetail .reservedetail .btn_box.insurance {
+  margin-bottom: 50px;
+}
+.mypagedetail .reservedetail .btn_box.insurance button {
+  font-size: 14px;
+}
+.mypagedetail .reservedetail .add_service .tit {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 16px;
+}
+.mypagedetail .reservedetail .add_service ul li {
+  margin-top: 7px;
+}
+.mypagedetail .reservedetail .add_service ul li:first-child {
+  margin-top: 0;
+}
+.mypagedetail .reservedetail .add_service ul li img {
+  width: 100%;
+}
+.mypagedetail .reservedetail .faq_wrap {
+  margin-top: 50px;
+}
+.mypagedetail .reservedetail .faq_wrap .tit {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 700;
+  align-items: center;
+  border-bottom: 2px #111 solid;
+  padding-bottom: 16px;
+}
+.mypagedetail .reservedetail .faq_wrap .tit button {
+  font-size: 12px;
+  border: 1px solid #d9d9d9;
+  background: none;
+  border-radius: 9999px;
+  padding: 9px 20px;
+  font-weight: 500;
+  margin-left: 5px;
+}
+.mypagedetail .reservedetail .faq_wrap .faq_txt {
+  font-size: 16px;
+  text-align: center;
+  padding: 80px 0;
+}
+.mypagedetail .reservedetail .faq_wrap .faq_list li {
+  border-bottom: 1px #d3dbd8 solid;
+}
+.mypagedetail .reservedetail .faq_wrap .faq_list li a {
+  display: block;
+  padding: 24px 0;
+}
+.mypagedetail .reservedetail .faq_wrap .faq_list .top {
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.mypagedetail .reservedetail .faq_wrap .faq_list .bottom {
+  display: flex;
+  justify-content: space-between;
+}
+.mypagedetail .reservedetail .faq_wrap .faq_list .date {
+  color: #888;
+  font-size: 13px;
+}
+.mypagedetail .reservedetail .faq_wrap .faq_list .status {
+  font-size: 13px;
+  font-weight: 600;
+  color: #111;
+}
+.mypagedetail .reservedetail .faq_wrap .faq_list .status.ok {
+  color: #009c75;
+}
+.mypagedetail .reservedetail .counsel {
+  margin-top: 50px;
+  position: relative;
+  padding-bottom: 58px;
+}
+.mypagedetail .reservedetail .counsel:after {
+  content: "";
+  display: block;
+  height: 8px;
+  background: #eee;
+  position: absolute;
+  left: -20px;
+  right: -20px;
+  bottom: 0;
+}
+.mypagedetail .reservedetail .counsel .tit {
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: 700;
+  align-items: center;
+  border-bottom: 2px #111 solid;
+  padding-bottom: 16px;
+}
+.mypagedetail .reservedetail .counsel .t_1 {
+  padding-top: 20px;
+}
+.mypagedetail .reservedetail .counsel .t_1,
+.mypagedetail .reservedetail .counsel .t_2 {
+  font-size: 14px;
+}
+.mypagedetail .reservedetail .counsel .t_1 span,
+.mypagedetail .reservedetail .counsel .t_2 span {
+  font-weight: 600;
+}
+.mypagedetail .reservedetail .counsel .t_2 {
+  margin-top: 10px;
+}
+.mypagedetail .reservedetail .counsel .t_3 {
+  border: 1px solid #e5e7eb;
+  border-radius: 10px;
+  padding: 18px 20px;
+  margin-top: 16px;
+}
+.mypagedetail .reservedetail .counsel .t_3 .top div {
+  font-size: 14px;
+  line-height: 20px;
+}
+.mypagedetail .reservedetail .counsel .t_3 .top span {
+  font-weight: 600;
+}
+.mypagedetail .reservedetail .counsel .t_3 .bottom div {
+  font-size: 14px;
+  margin-top: 16px;
+  line-height: 20px;
+}
+.mypagedetail .reservedetail .counsel .t_3 .bottom strong {
+  color: #ed4949;
+}
+.mypagedetail .reservedetail .local_item {
+  padding-top: 50px;
+  padding-bottom: 58px;
+  position: relative;
+}
+.mypagedetail .reservedetail .local_item:after {
+  content: "";
+  display: block;
+  height: 8px;
+  background: #eee;
+  position: absolute;
+  left: -20px;
+  right: -20px;
+  bottom: 0;
+}
+.mypagedetail .reservedetail .local_item .tit {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+.mypagedetail .reservedetail .localtourswiper {
+  overflow: hidden;
+}
+.mypagedetail .reservedetail .localtourswiper .visual {
+  height: 160px;
+}
+.mypagedetail .reservedetail .localtourswiper img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+.mypagedetail .reservedetail .localtourswiper .txt01 {
+  color: #111;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 1.5rem;
+  -webkit-line-clamp: 2;
+  margin-bottom: 10px;
+  margin-top: 15px;
+}
+.mypagedetail .reservedetail .localtourswiper .txt03 {
+  font-size: 16px;
+}
+.mypagedetail .reservedetail .localtourswiper .txt03 span {
+  font-weight: 700;
+  line-height: 24px;
+  font-size: 20px;
+}
+.mypagedetail .reservedetail .hotel_item {
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+.mypagedetail .reservedetail .hotel_item .tit {
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 24px;
+}
+.mypagedetail .reservedetail .hotel_item li {
+  padding-top: 50px;
+  margin-top: 50px;
+  border-top: 1px #eee solid;
+}
+.mypagedetail .reservedetail .hotel_item li:first-child {
+  border: 0;
+  padding-top: 0;
+  margin-top: 0;
+}
+.mypagedetail .reservedetail .hotel_item img {
+  object-fit: cover;
+  width: 100%;
+}
+.mypagedetail .reservedetail .hotel_item .visual {
+  height: 200px;
+  margin-bottom: 16px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.mypagedetail .reservedetail .hotel_item img {
+  width: 100%;
+  height: 100%;
+}
+.mypagedetail .reservedetail .hotel_item .txt01 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.mypagedetail .reservedetail .hotel_item .grade {
+  border-radius: 4px;
+  border: 1px #d3dbd9 solid;
+  padding-top: 5px;
+  padding-bottom: 4px;
+  padding-left: 10px;
+  padding-right: 10px;
+  font-size: 13px;
+  font-weight: 600;
+}
+.mypagedetail .reservedetail .hotel_item .txt02 {
+  color: #111;
+  font-size: 14px;
+  font-weight: 600;
+  margin-top: 15px;
+  margin-bottom: 12px;
+}
+.mypagedetail .reservedetail .hotel_item .txt02 span {
+  display: block;
+  font-size: 12px;
+  color: #888;
+  margin-top: 8px;
+}
+.mypagedetail .reservedetail .hotel_item .txt03 {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  font-weight: 600;
+  color: #009c75;
+  font-size: 13px;
+}
+.mypagedetail .reservedetail .hotel_item .txt03 svg {
+  margin-left: 5px;
+  margin-right: 5px;
+}
+.mypagedetail .reservedetail .hotel_item .txt03 svg#arrow {
+  color: #111;
+}
+.mypagedetail .reservedetail .bottom_btn_box {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #fff;
+  z-index: 11;
+  padding: 20px;
+  display: flex;
+  column-gap: 10px;
+}
+.mypagedetail .reservedetail .bottom_btn_box button {
+  flex: 1;
+}
+.mypagedetail .reservedetail .service_banner {
+  margin-top: 20px;
+}
+.mypagedetail .reservedetail .service_banner .left {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border: 1px #ccc solid;
+  border-radius: 10px;
+}
+.mypagedetail .reservedetail .service_banner .left .top {
+  color: #09a7e4;
+  font-size: 14px;
+  font-weight: 600;
+  padding: 15px 45px 0;
+  text-align: center;
+}
+.mypagedetail .reservedetail .service_banner .middle {
+  width: 180px;
+  text-align: center;
+  margin: 12px auto;
+}
+.mypagedetail .reservedetail .service_banner .middle img {
+  width: 100%;
+  object-fit: cover;
+}
+.mypagedetail .reservedetail .service_banner .air_img {
+  margin-left: -1px;
+  margin-right: -1px;
+}
+.mypagedetail .reservedetail .service_banner .air_img img {
+  width: 100%;
+  object-fit: cover;
+}
+.mypagedetail .reservedetail .service_banner .middle2 {
+  display: flex;
+  column-gap: 95px;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 15px;
+}
+.mypagedetail .reservedetail .service_banner .middle2 button {
+  background: #009c75;
+  border-radius: 5px;
+  color: #fff;
+  width: 130px;
+  height: 46px;
+  font-weight: 600;
+  font-size: 18px;
+}
+.mypagedetail .reservedetail .service_banner .bottom {
+  display: flex;
+  padding: 12px 0;
+  border: 1px #ccc solid;
+  border-radius: 10px;
+  margin-top: 1rem;
+}
+.mypagedetail .reservedetail .service_banner .bottom > div {
+  flex: 1;
+  text-align: center;
+  border-left: 1px #ccc solid;
+}
+.mypagedetail .reservedetail .service_banner .bottom > div:first-child {
+  border: 0;
+}
+.mypagedetail .reservedetail .service_banner .bottom .ico1 {
+  font-size: 14px;
+  font-weight: 600;
+}
+.mypagedetail .reservedetail .service_banner .bottom .ico1 span {
+  margin-right: 5px;
+}
+.mypagedetail .reservedetail .service_banner .bottom p {
+  font-size: 12px;
+  font-weight: 500;
+  color: #707070;
+  margin-top: 5px;
+}
+.mypagedetail .reservedetail .service_banner .right {
+  background: #ebecf1;
+}
+/* [e] : 예약 상세 페이지 */
+/* [s] : 환불 페이지 */
+.rscancle {
+  padding: 30px 20px;
+}
+.rscancle .p_tit {
+  margin-bottom: 30px;
+  font-weight: 600;
+  font-size: 16px;
+}
+.rscancle .chk_wrap {
+  padding-bottom: 25px;
+  border-bottom: 1px #d3dbd9 solid;
+  display: flex;
+  column-gap: 30px;
+}
+.rscancle .cancle_reason .c_tit {
+  margin-bottom: 30px;
+  font-weight: 600;
+  font-size: 16px;
+  margin-top: 30px;
+}
+.rscancle .cancle_reason .radio_wrap {
+  outline: 1px #d3dbd5 solid;
+  border-radius: 7px;
+}
+.rscancle .cancle_reason .radiobox {
+  margin-top: -2px;
+}
+.rscancle .cancle_reason .radiobox:first-child label {
+  border: none;
+}
+.rscancle .cancle_reason .radiobox label {
+  display: block;
+  width: 100%;
+  height: 57px;
+  border-top: 1px #d3dbd5 solid;
+  margin-top: -1px;
+  padding: 18px;
+  line-height: 19px;
+}
+.rscancle .cancle_reason .radiobox input:checked + label {
+  border: 1px #009c75 solid;
+  background: #f4faf8;
+  position: relative;
+  z-index: 1;
+  border-radius: 5px;
+}
+.rscancle .cancle_reason .radiobox input:checked + label span {
+  color: #009c75;
+}
+.rscancle .radiobox input:checked + label::after {
+  display: none;
+}
+.rscancle .rule_notice {
+  border-top: 1px #d3dbd9 solid;
+  padding-top: 30px;
+  margin-top: 30px;
+  position: relative;
+  padding-bottom: 30px;
+}
+.rscancle .rule_notice .r_tit {
+  font-weight: 600 !important;
+  font-size: 16px !important;
+  margin-bottom: 20px !important;
+  font-weight: 600 !important;
+  color: #111 !important;
+}
+.rscancle .rule_notice .commission {
+  display: flex;
+  justify-content: space-between;
+  border: 1px #d3dbd9 solid;
+  border-radius: 5px;
+  width: 100%;
+  height: 52px;
+  align-items: center;
+  padding: 0 14px;
+  font-size: 14px;
+  font-weight: 500;
+}
+.rscancle .rule_notice .commission > div {
+  color: #ed4949;
+}
+.rscancle .rule_notice ul {
+  margin-top: 15px;
+}
+.rscancle .rule_notice ul li {
+  font-size: 12px;
+  line-height: 18px;
+  color: #111;
+  margin-top: 8px;
+}
+.rscancle .rule_notice ul li:first-child {
+  font-weight: 700;
+  margin-top: 0;
+}
+.rscancle .rule_notice ul li.red {
+  color: #ed4949;
+  font-weight: 600;
+}
+.rscancle .btn_box {
+  margin-top: 30px;
+  text-align: center;
+  display: flex;
+  column-gap: 10px;
+}
+.rscancle .btn_box button {
+  flex: 1;
+  height: 52px;
+}
+.rscancle .btn_box button.btn_type02 {
+  background: #fff;
+  border: 1px #111 solid;
+  color: #111;
+}
+.rscancle .hide_con {
+  display: none;
+}
+.rscancle .hide_con .checkbox {
+  display: block;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  border-bottom: 2px #111 solid;
+  padding-bottom: 20px;
+}
+.rscancle .hide_con label {
+  color: #111;
+  font-size: 16px;
+  font-weight: 600;
+}
+.rscancle .hide_con .box {
+  border-bottom: 1px #d3dbd9 solid;
+  padding-bottom: 30px;
+}
+.rscancle .hide_con .box > div {
+  margin-top: 30px;
+}
+.rscancle .hide_con input[type="text"] {
+  width: 100%;
+  height: 52px;
+  border-radius: 5px;
+  border: 1px #d3dbd9 solid;
+  padding: 4px 18px;
+  box-sizing: border-box;
+}
+.rscancle .hide_con input[type="text"]:disabled {
+  background: #f5f5f5;
+  border-color: #f5f5f5;
+}
+.rscancle .hide_con .name .inputwrap {
+  display: flex;
+  column-gap: 10px;
+}
+.rscancle .hide_con .name .inputwrap div {
+  width: 104px;
+  height: 52px;
+  text-align: center;
+  line-height: 52px;
+  background: #8f9f9b;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 5px;
+}
+.rscancle .hide_con .name .inputwrap input[type="text"] {
+  width: calc(100% - 104px);
+}
+.rscancle .hide_con .en_name {
+  display: flex;
+  column-gap: 10px;
+}
+.rscancle .hide_con .en_name > div {
+  flex: 1;
+}
+.rscancle .hide_con .birth .inputwrap {
+  display: flex;
+  column-gap: 10px;
+}
+.rscancle .hide_con .birth .inputwrap div {
+  width: 52px;
+  height: 52px;
+  text-align: center;
+  line-height: 52px;
+  background: #8f9f9b;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 5px;
+}
+.rscancle .hide_con .birth .inputwrap input[type="text"] {
+  width: calc(100% - 72px);
+}
+.rscancle.rscancle_payback .rule_notice > div {
+  font-size: 13px;
+  color: #888;
+  margin-bottom: 10px;
+}
+.rscancle .refund_infor {
+  border-top: 1px #d3dbd9 solid;
+  padding-top: 30px;
+  margin-top: 30px;
+}
+.rscancle .refund_infor .r_tit {
+  margin-bottom: 30px;
+  font-weight: 600;
+}
+.rscancle .refund_infor .s_tit {
+  font-size: 14px;
+  font-weight: 500;
+}
+.rscancle .refund_infor input[type="text"] {
+  width: 100%;
+  height: 52px;
+  border-radius: 5px;
+  border: 1px #d3dbd9 solid;
+  padding: 4px 18px;
+  box-sizing: border-box;
+}
+.rscancle .refund_infor .select_box {
+  width: 100%;
+}
+.rscancle .refund_infor ul.today_cancle > li {
+  margin-bottom: 30px;
+}
+.rscancle .refund_infor .refund_notice {
+  font-size: 13px;
+  color: #888;
+  line-height: 19px;
+}
+.rscancle .agree_box {
+  position: relative;
+  padding-top: 35px;
+  border-bottom: 1px #d3dbd9 solid;
+  padding-bottom: 30px;
+}
+.rscancle .agree_box:before {
+  content: "";
+  display: block;
+  height: 8px;
+  background: #eeeeee;
+  position: absolute;
+  left: -20px;
+  right: -20px;
+  top: 0;
+}
+.rscancle .agree_box .txt {
+  font-size: 12px;
+  line-height: 18px;
+}
+.rscancle .agree_box .txt > div {
+  margin-top: 12px;
+}
+.rscancle .agree_box .txt > div:first-child {
+  margin-top: 0;
+}
+.rscancle .agree_box .checkbox {
+  display: block;
+  border-bottom: 1px #d3dbd9 solid;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+}
+.rscancle .agree_box .checkbox label {
+  font-size: 18px;
+  font-weight: 700;
+  color: #111;
+}
+.rscancle .agree_box .checkbox .ico {
+  width: 25px;
+  height: 25px;
+  margin-right: 8px;
+}
+.rscancle .all_check {
+  margin-top: 30px;
+}
+.rscancle .refund_rule_box .top {
+  padding-bottom: 24px;
+  border-bottom: 1px #d3dbd9 solid;
+  margin-top: 35px;
+}
+.rscancle .refund_rule_box .top label {
+  font-size: 18px;
+  font-weight: 700;
+}
+.rscancle .refund_rule_box .top i {
+  width: 25px;
+  height: 25px;
+  margin-right: 7px;
+}
+.rscancle .refund_rule_box .r_tit {
+  font-weight: 600;
+  line-height: 1rem;
+  margin-top: 1.5rem;
+  margin-bottom: 1.5rem;
+  font-size: 16px;
+}
+.rscancle .refund_rule_box .rulebox1 ul {
+  display: flex;
+  flex-direction: column;
+  row-gap: 18px;
+}
+.rscancle .refund_rule_box .rulebox1 ul li {
+  display: flex;
+  justify-content: space-between;
+}
+.rscancle .refund_rule_box .rulebox1 ul li button {
+  background: none;
+}
+.rscancle .refund_rule_box .rulebox1 label span {
+  color: #009c75;
+  margin-right: 5px;
+  font-weight: 500;
+}
+.rscancle .refund_rule_box .rulebox1 label {
+  color: #888;
+  font-size: 14px;
+}
+.rscancle .refund_rule_box .checkbox input + label .ico::after {
+  background: #00d9a3;
+  border-color: #00d9a3;
+}
+.rscancle .refund_rule_box .checkbox input:checked + label .ico {
+  background: #00d9a3;
+  border-color: #00d9a3;
+}
+.rscancle .refund_rule_box .checkbox input + label .ico::before {
+  z-index: 1;
+}
+.rscancle .refund_ing_infor {
+  position: relative;
+  padding-top: 35px;
+  margin-top: 30px;
+}
+.rscancle .refund_ing_infor:before {
+  content: "";
+  display: block;
+  left: -30px;
+  right: -30px;
+  height: 7px;
+  background: #eee;
+  position: absolute;
+  top: 0px;
+}
+.rscancle .refund_ing_infor .r_tit {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 16px;
+}
+.rscancle .refund_ing_infor ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.rscancle .refund_ing_infor ul li {
+  border: 1px #d3dbd9 solid;
+  border-radius: 10px;
+  padding: 17px;
+  flex: 1;
+}
+.rscancle .refund_ing_infor .top {
+  color: #009c75;
+  font-size: 15px;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+.rscancle .refund_ing_infor .middle {
+  font-size: 15px;
+  line-height: 19px;
+  font-weight: 600;
+}
+.rscancle .refund_ing_infor .bottom {
+  font-size: 12px;
+  line-height: 16px;
+  color: #888;
+  margin-top: 7px;
+}
+.rscancle .refund_infor table {
+  border-top: 2px #111 solid;
+  width: 100%;
+}
+.rscancle .refund_infor table th {
+  background: #eeeeee;
+  font-size: 14px;
+  width: 121px;
+  vertical-align: middle;
+}
+.rscancle .refund_infor table td {
+  padding: 10px 25px;
+  border-bottom: 1px #eeeeee solid;
+  height: 70px;
+  vertical-align: middle;
+}
+.rscancle .refund_infor table .select_box .select_layer {
+  width: 355px;
+}
+/* [e] : 환불 페이지 */
+
+/* [s] : 국내항공 마이페이지 */
+
+.mypagedetail .air_box .airline_tab {
+  position: relative;
+  margin-top: 20px;
+  border-bottom: 2px solid #eee;
+}
+.mypagedetail .air_box .airline_tab .tab_in {
+  display: flex;
+}
+.mypagedetail .air_box .airline_tab .tab_in a {
+  flex: 1;
+  text-decoration: none;
+  text-align: center;
+  color: #aaa;
+  font-size: 18px;
+  font-weight: 600;
+  padding: 24px 0;
+}
+.mypagedetail .air_box .airline_tab .tab_in a.on {
+  color: #111;
+}
+.mypagedetail .air_box .airline_tab .bar {
+  position: absolute;
+  width: 50%;
+  height: 2px;
+  background: #111;
+  left: 0;
+  transition: width 0.3s, left 0.3s, right 0.3s;
+}
+.mypagedetail .reservedetail .pay_notice2 {
+  font-size: 14px;
+  margin: 20px 0;
+}
+.mypagedetail .reservedetail .pay_notice2 ul li {
+  font-size: 12px;
+  color: #888;
+  text-indent: -8px;
+  padding-left: 8px;
+  margin-top: 10px;
+}
+.mypagedetail .reservedetail .schedule_btn button.cancle_btn {
+  background: #f0f0f0;
+  border-color: #f0f0f0;
+}
+.mypagedetail .reservedetail .air_box .tab_wrap > div {
+  display: none;
+}
+.mypagedetail .reservedetail .air_box .tab_wrap > div:first-child {
+  display: block;
+}
+.mypagedetail .reservedetail.domestic_reservedetail .t1,
+.mypagedetail .reservedetail.domestic_reservedetail .t2 {
+  font-size: 14px;
+  line-height: 19px;
+  font-weight: 700;
+}
+.mypagedetail .reservedetail.domestic_reservedetail .t2 {
+  margin-top: 10px;
+}
+.mypagedetail .reservedetail.domestic_reservedetail .t1 span,
+.mypagedetail .reservedetail.domestic_reservedetail .t2 span {
+  font-weight: normal;
+}
+.mypagedetail .reservedetail.domestic_reservedetail .red {
+  color: #ed4949;
+}
+.mypagedetail .reservedetail.domestic_reservedetail .t2 .num span {
+  font-size: 13px;
+  display: inline-block;
+}
+.mypagedetail .reservedetail.domestic_reservedetail .t2 .num span + span {
+  margin-left: 5px;
+}
+.mypagedetail .reservedetail.domestic_reservedetail .t2 .btn_box {
+  margin-top: 20px;
+}
+.mypagedetail .reservedetail.domestic_reservedetail .t2 .btn_box button {
+  font-size: 12px;
+  font-weight: 600;
+  border: 1px #d3dbd9 solid;
+  border-radius: 9999px;
+  padding: 8px 0;
+  width: 100%;
+  line-height: 1;
+  background: none;
+}
+.mypagedetail .reservedetail.domestic_reservedetail .add_service {
+  position: relative;
+  padding-bottom: 58px;
+}
+.mypagedetail .reservedetail.domestic_reservedetail .add_service::after {
+  content: "";
+  display: block;
+  height: 8px;
+  background: #eee;
+  position: absolute;
+  left: -20px;
+  right: -20px;
+  bottom: 0;
+}
+.mypagedetail .reservedetail .box_9 {
+  margin: 30px 0 58px;
+}
+.mypagedetail .reservedetail .box_9 .tit {
+  font-size: 18px;
+  font-weight: 700;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 15px;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #111;
+}
+.mypagedetail .reservedetail .box_9 button {
+  font-size: 14px;
+  border: 1px solid #d9d9d9;
+  background: none;
+  border-radius: 9999px;
+  padding: 10px 20px;
+  font-weight: 500;
+  margin-left: 5px;
+}
+.mypagedetail .reservedetail .box_9 button:first-child {
+  margin-left: 0;
+}
+.mypagedetail .reservedetail .box_9 .guide {
+  border: 1px solid #d3dbd9;
+  border-radius: 10px;
+  padding: 20px;
+}
+.mypagedetail .reservedetail .box_9 .guide li {
+  font-size: 13px;
+  line-height: 19px;
+  color: #111;
+  padding-left: 8px;
+  text-indent: -8px;
+}
+.mypagedetail .reservedetail .box_9 .guide li + li {
+  margin-top: 16px;
+}
+/* [e] : 국내항공 마이페이지 */
+
+/* [s] : 로딩 */
+.loading_wrap {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.5);
+  position: fixed;
+}
+.loading_spinner {
+  width: 40px;
+  height: 40px;
+  border: 3px solid #319d78;
+  border-top: 3px solid transparent;
+  border-radius: 50%;
+  animation: rotate 1s linear infinite;
+}
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+/* [e] : 로딩 */

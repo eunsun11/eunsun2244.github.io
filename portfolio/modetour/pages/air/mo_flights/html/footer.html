@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>footer</title>
+    <script src="../lib/js/jquery-3.7.1.min.js"></script>
+    <script src="../lib/js/swiper.min.js"></script>
+    <script src="../lib/js/main.js"></script>
+    <script src="../lib/js/common.js"></script>
+    <link rel="stylesheet" href="../lib/css/swiper.min.css" />
+    <link rel="stylesheet" href="../lib/css/reset.css" />
+    <link rel="stylesheet" href="../lib/css/main.css" />
+    <link rel="stylesheet" href="../lib/css/common.css" />
+    <link rel="stylesheet" href="../lib/css/footer.css" />
+    <link rel="stylesheet" type="text/css" href="./../lib/css/air.css" />
+  </head>
+  <body>
+    <main style="height: 500px"></main>
+    <footer>
+      <div class="f_bottom">
+        <a href="" class="toggle_btn">(주)모두투어네트워크 사업자정보<img src="https://m.modetour.com/icons/footer/icon_arrow_down.svg" alt="" /></a>
+        <div class="hide">
+          <ul>
+            <li><span>대표이사</span><span>우종웅</span></li>
+            <li><span>주소</span><span>서울특별시 중구 을지로 16 백남빌딩 5층</span></li>
+            <li><span>호스팅업체</span><span>(주)모두투어네트워크</span></li>
+            <li><span>사업자 등록번호</span><span>202-81-45295</span><a href="">사업자정보확인</a></li>
+            <li><span>통신판매업신고번호</span><span>중구 제03500호</span></li>
+            <li><span>관광사업자 등록번호</span><span>1989-04 (서울특별시 중구)</span></li>
+            <li><span>영업여행업보증</span><span>15억 1천만원</span></li>
+            <li><span>기획여행업보증</span><span>7억원</span></li>
+            <li><span>여행 상담센터</span><span>1544-5252</span></li>
+            <li><span>항공권 전용상담</span><span>1544-5353</span></li>
+            <li><span>고객센터</span><span>080-850-5252</span></li>
+            <li><span>FAX</span><span>02-2021-7800</span></li>
+          </ul>
+        </div>
+        <ul class="notice">
+          <li>※ 부득이한 사정에 의해 확정된 여행일정이 변경되는 경우 여행자의 사전 동의를 받습니다.</li>
+          <li>※ (주)모두투어는 항공사가 제공하는 개별 항공권 및 여행사가 제공하는 일부 여행상품에 대하여 통신판매중개자의 지위를 가지며, 해당 상품, 상품정보, 거래에 관한 의무와 책임은 판매자에게 있습니다.</li>
+          <li class="bold">※ 모두투어의 법인계좌 또는 가상계좌가 아닌 다른 계좌로 입금하신 경우 발생하는 피해에 관하여, 당사는 책임지지 않습니다. 타 계좌의 입금을 유도하는 행위가 발생하는 경우 반드시 모두투어 고객센터로 문의하거나 신고 하여 주시기 바랍니다.</li>
+        </ul>
+        <p class="copy">COPYRIGHT MODETOUR. ALL RIGHT RESERVED.</p>
+      </div>
+    </footer>
+    <script>
+      $(document).ready(function () {
+        //footer toggle
+        $("footer .f_bottom a.toggle_btn").click(function () {
+          $(this).toggleClass("active");
+          $(this).next(".hide").slideToggle(300);
+          return false;
+        });
+      });
+    </script>
+  </body>
+</html>

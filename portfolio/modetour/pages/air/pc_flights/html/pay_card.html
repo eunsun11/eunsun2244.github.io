@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./../lib/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="./../lib/css/payment.css" />
+    <link rel="stylesheet" type="text/css" href="./../lib/css/common.css" />
+  </head>
+  <body>
+    <div class="payment_layout">
+      <div class="paybigarea">
+        <div class="top">
+          <div class="tit">결제 정보</div>
+          <div class="pay_detail">
+            <div>
+              <span>할인 및 마일리지 사용</span>
+              <span><em>0</em>원</span>
+            </div>
+            <div>
+              <span>결제 수단 / 입금 예정 금액</span>
+              <span>(신용카드)<em>664,200</em>원</span>
+            </div>
+            <div class="all">
+              <span>최종 결제 금액</span><span><em>664,200</em>원</span>
+            </div>
+            <div class="leftover">
+              <span>잔여 결제 금액</span>
+              <span><em>0</em>원</span>
+            </div>
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="btn_box">
+            <button type="button" class="btn_type03">확인</button>
+          </div>
+        </div>
+      </div>
+      <div class="complete_tit">
+        <i><img alt="" src="//newgen-stg-payment.modetour.dev/icons/icon-payment.svg" /></i>
+        <p>발권이 완료되었습니다.</p>
+      </div>
+    </div>
+    <script src="../lib/js/jquery-3.7.1.min.js"></script>
+    <script src="../lib/js/common.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".payment_layout .coupon_wrap .coupon_list ul li a").click(function () {
+          var t = $(this);
+          if (!t.parent().hasClass("active")) {
+            t.parent().addClass("active").siblings().removeClass("active");
+          } else {
+            t.parent().removeClass("active");
+          }
+          return false;
+        });
+      });
+    </script>
+  </body>
+</html>

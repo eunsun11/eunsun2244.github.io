@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../lib/js/jquery-3.7.1.min.js"></script>
+    <script src="../lib/js/common.js"></script>
+    <link rel="stylesheet" type="text/css" href="./../lib/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="./../lib/css/air.css" />
+    <link rel="stylesheet" type="text/css" href="./../lib/css/common.css" />
+  </head>
+  <body>
+    <main>
+      <div class="reserve_cont_area">
+        <div class="mx-auto">
+          <div class="tit_box">
+            <ul class="progressbar">
+              <li>약관동의</li>
+              <li class="active">정보입력</li>
+            </ul>
+          </div>
+          <div class="enterinfor">
+            <div class="left">
+              <div class="box">
+                <!-- 잘못된 값 입력시 cation 추가 -->
+                <div class="name cation">
+                  <div>
+                    <div class="s_tit">한글성<span>*</span></div>
+                    <input type="text" placeholder="홍" />
+                  </div>
+                  <div>
+                    <div class="s_tit">한글 이름<span>*</span></div>
+                    <input type="text" placeholder="길동" />
+                  </div>
+                  <div class="radio_wrap">
+                    <span class="radiobox">
+                      <input id="n_radio01" name="nationality" type="radio" checked />
+                      <label for="n_radio01"><span>내국인</span></label>
+                    </span>
+                    <span class="radiobox">
+                      <input id="n_radio02" name="nationality" type="radio" />
+                      <label for="n_radio02"><span>외국인</span></label>
+                    </span>
+                  </div>
+                </div>
+                <div class="birth cation">
+                  <div class="s_tit">생년월일<span>*</span></div>
+                  <div class="inputwrap">
+                    <input type="text" class="front" placeholder="20240812" />
+                    <span class="sign">-</span>
+                    <input type="text" class="back" placeholder="2" />
+                    <div class="roundfull"><img alt="image" class="ant-image-img ml-[4px]" src="https://m.modetour.com/icons/circle.svg" height="6" style="height: 6px" /></div>
+                  </div>
+                  <div class="notice">만 18세 미만의 고객은 단독 예약이 불가하오니, 모두투어 고객센터 (1544-5252)로 문의 바랍니다.</div>
+                </div>
+                <div class="phone">
+                  <div class="s_tit">연락처<span>*</span></div>
+                  <input type="text" placeholder="'-' 없이 숫자만 입력해 주세요" />
+                  <div class="notice">휴대폰 번호만 입력 가능합니다.</div>
+                </div>
+                <div class="email cation">
+                  <div class="s_tit">이메일<span>*</span></div>
+                  <div class="inputwrap">
+                    <input type="text" />
+                    <span class="sign">@</span>
+                    <!-- <select name="" id="">
+                                              <option value="modetour.com">modetour.com</option>
+                                            </select> 수정 -->
+                    <div class="select_box">
+                      <div class="select_layer error">
+                        <div>modetour.com</div>
+                        <!-- <input type="text" name="" id="" />
+                                                  직접입력시 select_layer에 txt클래스 추가 
+                                                -->
+                      </div>
+                      <div class="select_option scroll_hidden">
+                        <ul>
+                          <li class="active"><span>직접입력</span></li>
+                          <li><span>gmail.com</span></li>
+                          <li><span>naver.com</span></li>
+                          <li><span>daum.net</span></li>
+                          <li><span>hanmail.net</span></li>
+                          <li><span>nate.com</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <ul class="peopleenter">
+              <!-- 입력값 완료시 ok 추가 -->
+              <li>
+                탑승자 - 성인 1<span class="ok"
+                  ><svg color="#00d9a3" height="100%" preserveAspectRatio="xMidYMid meet" viewBox="0 0 14 14" width="100%" xmlns="http://www.w3.org/2000/svg">
+                    <g id="icon_check_14" transform="translate(-254 -639)">
+                      <rect data-name="사각형 24110" fill="none" height="14" id="사각형_24110" transform="translate(254 639)" width="14"></rect>
+                      <path d="M1482.673,100.765a.852.852,0,0,1-.6-.252l-3.446-3.478a.852.852,0,1,1,1.21-1.2l2.836,2.863,6-6.153a.852.852,0,0,1,1.22,1.19l-6.608,6.773a.853.853,0,0,1-.607.257Z" data-name="패스 13673" fill="currentcolor" id="패스_13673" transform="translate(-1223.254 549.473)"></path>
+                    </g></svg
+                  >필수 입력값 완료</span
+                >
+              </li>
+              <li>탑승자 - 성인 2<span>미입력</span></li>
+            </ul>
+            <div class="enternotice">필수 입력값 외 여권번호 및 MT번호(마일리지 적립)는 추후 마이페이 지 > 예약내역에서 입력할 수 있습니다.</div>
+          </div>
+          <div class="pay_btn btn_box">
+            <button type="button" class="btn_type01">예약 및 결제하기</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      $(document).ready(function () {
+        //여정 상세보기 접기
+        $.fn.extend({
+          toggle_text: function (initial_text, alternate_text) {
+            return this.text(this.text() == alternate_text ? initial_text : alternate_text);
+          },
+        });
+        $(".reserve_cont_area .detail_btn button").click(function () {
+          $(".reserve_cont_area .finalcard .middle,.reserve_cont_area .finalcard .bottom,.reserve_cont_area .detail_btn").toggleClass("on");
+          $(".reserve_cont_area .detail_btn button").toggle_text("상세보기 접기", "상세보기");
+          $(".reserve_cont_area .finalcard .pay_detail,.reserve_cont_area .finalcard > div:nth-child(2),.reserve_cont_area .finalcard > div:nth-child(3),.reserve_cont_area .finalcard .card .top,.reserve_cont_area .finalcard .card .bottom .air,.reserve_cont_area .finalcard .card .bottom .luggage").toggle();
+        });
+      });
+    </script>
+  </body>
+</html>

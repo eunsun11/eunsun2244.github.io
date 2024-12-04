@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>로딩</title>
+        <style>
+            html,
+            body,
+            p,
+            div,
+            span {
+                margin: 0;
+                padding: 0;
+                line-height: 1;
+            }
+            #loading {
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: rgba(255, 255, 255, 0.9);
+                justify-content: center;
+                align-items: center;
+                display: flex;
+                height: 100vh;
+                padding: 0;
+                margin: 0;
+            }
+            #loading .ttl {
+                margin: 50px 0 10px;
+                font-family: "Pretendard";
+            }
+            #loading .ttl span {
+                color: #555555;
+                font-size: 31px;
+                font-family: inherit;
+            }
+            #loading .ttl span.point1 {
+                color: #00a87f;
+                font-weight: bold;
+                font-family: inherit;
+                font-size: 31px;
+            }
+            #loading .progress {
+                background: #e1e1e1;
+                justify-content: flex-start;
+                align-items: center;
+                position: relative;
+                display: flex;
+                height: 8px;
+                width: 475px;
+                margin-bottom: 40px;
+            }
+            #loading .progress-value {
+                animation: loading 5s infinite;
+                background: #00a87f;
+                height: 8px;
+                width: 0;
+            }
+            #loading .sub_txt1 {
+                letter-spacing: -1.5px;
+            }
+            #loading .sub_txt1 > span {
+                display: inline-block;
+                font-family: "맑은 고딕";
+                color: #fff;
+                background: #00a87f;
+                padding: 6px 15px;
+                border-radius: 20px;
+            }
+            #loading .sub_txt1 span {
+                font-weight: bold;
+                font-size: 14px;
+            }
+            #loading .sub_txt1 span.point2 {
+                color: #fff000;
+            }
+            #loading .sub_txt2 {
+                letter-spacing: -1px;
+            }
+            #loading .sub_txt2 {
+                display: inline-block;
+                font-family: "맑은 고딕";
+                font-size: 12px;
+                color: #898989;
+                margin: 9px 15px;
+            }
+            @keyframes loading {
+                0% {
+                    width: 0;
+                }
+                100% {
+                    width: 100%;
+                }
+            }
+            @media (max-width: 768px) {
+                #loading .ttl {
+                    margin: 30px 0 5px;
+                }
+                #loading .ttl span {
+                    font-size: 20px;
+                }
+                #loading .ttl span.point1 {
+                    font-size: 20px;
+                }
+                #loading .progress {
+                    height: 4px;
+                    width: 100%;
+                    margin-bottom: 20px;
+                }
+                #loading .progress-value {
+                    height: 4px;
+                }
+                #loading .sub_txt1 span {
+                    font-size: 12px;
+                }
+                #loading .sub_txt2 {
+                    font-size: 11px;
+                    margin: 7px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="loading">
+            <div class="loading_wrap">
+                <div><img src="//img.modetour.co.kr/etc/2024/loading/images/logo.png" alt="모두투어" /></div>
+                <p class="ttl">
+                    <span>모든순간 두근두근,</span>
+                    <span class="point1">여행은 모두투어</span>
+                </p>
+                <div class="progress">
+                    <div class="progress-value"></div>
+                </div>
+                <div class="sub_txt1">
+                    <span>모두투어에서만 누릴 수 있는 <span class="point2">최저가 항공 요금</span></span>
+                </div>
+                <div class="sub_txt2"><span>실시간 항공 검색 중입니다. 잠시만 기다려 주세요.</span></div>
+            </div>
+        </div>
+    </body>
+</html>

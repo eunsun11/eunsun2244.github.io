@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../lib/js/jquery-3.7.1.min.js"></script>
+    <script src="../lib/js/common.js"></script>
+    <link rel="stylesheet" type="text/css" href="./../lib/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="./../lib/css/air.css" />
+    <link rel="stylesheet" type="text/css" href="./../lib/css/common.css" />
+  </head>
+  <body>
+    <main>
+      <div class="reserve_cont_area">
+        <div class="mx-auto">
+          <div class="tit_box">항공 여정 개요</div>
+          <div class="flightsummaryinformation">
+            <div class="com_tit">편도 항공권</div>
+            <div class="card_box">
+              <!-- [s] : 가는 항공편 -->
+              <div class="card">
+                <div class="card_in">
+                  <div class="card_tit">가는 항공편</div>
+                  <div class="card_tit2">
+                    <div>서울(ICN)</div>
+                    <div><img src="https://www.modetour.com/icons/icon_arrow_oneway_20.svg" alt="" /></div>
+                    <div>로스앤젤레스(LAX)</div>
+                  </div>
+                  <div class="card_tit3">출발 2024.08.07(수) 12:35</div>
+                  <div class="card_air">
+                    <span class="ant_img"><img src="https://img.modetour.com/air/logo/ke.png" alt="" /></span>
+                    <span class="air_name">대한항공 KE1831</span>
+                  </div>
+                </div>
+              </div>
+              <!-- [e] : 가는 항공편 -->
+              <div class="card flex">
+                <div>
+                  <div class="ant_img"><img alt="icon_mypage_40" class="ant-image-img" src="https://www.modetour.com/icons/icon_mypage_40.svg" width="40" height="40" style="height: 40px" /></div>
+                  <span>성인 1</span>
+                </div>
+                <div>
+                  <div class="ant_img"><img alt="icon_seat_40" class="ant-image-img" src="https://www.modetour.com/icons/icon_seat_40.svg" width="40" height="40" style="height: 40px" /></div>
+                  <span>일반석</span>
+                </div>
+              </div>
+            </div>
+            <div class="card_add">
+              <div class="add">
+                <div>포함사항</div>
+                <div>
+                  유류할증료, 제세공과금, 발권대행수수료(포함),<br />
+                  <span>위탁 수하물 포함(성인:2개) , 수하물 규정 확인</span>
+                </div>
+              </div>
+            </div>
+            <div class="background"></div>
+          </div>
+          <div class="reserve_btn btn_box"><button type="button" class="btn_type01">예약하기</button></div>
+          <!-- 수정 -->
+          <div class="payment">
+            <div class="com_tit">상품 결제 정보</div>
+            <div class="payment_box">
+              <div class="top">
+                <!-- <div>
+                  요금규정<span><img src="https://www.modetour.com/icons/icon__15_bk.svg" alt="" /></span>
+                </div> 삭제 -->
+                <div class="btn_box"><button type="button" class="btn_type04">요금규정</button></div>
+                <!-- 추가 -->
+                <div class="popup_container">
+                  <!-- 클래스 추가 -->
+                  <div class="btn_box"><button type="button" class="btn_type04 layer_popup_btn">결제 조건 변경</button></div>
+                  <!-- 결제 조건 변경<span><img src="https://www.modetour.com/icons/icon__15_bk.svg" alt="" /></span> 삭제 -->
+                  <div class="pay_layer layer_popup">
+                    <div class="pop_over">
+                      <div class="icon_x"><button type="button">닫기</button></div>
+                      <div class="pop_in">
+                        <div class="tit">결제 조건 변경</div>
+                        <div class="pay_select">
+                          <ul class="pay_list">
+                            <li class="active">
+                              <div>NH채움카드/성인 1인</div>
+                              <div>[대표금액]</div>
+                              <div><span>1,751,700</span>원</div>
+                            </li>
+                            <li>
+                              <div class="radiobox">
+                                <input id="radio01" name="card_sort" type="radio" />
+                                <label for="radio01"> <i class="ico"></i> <span>삼성카드</span></label>
+                              </div>
+                              <div>-</div>
+                              <div><span>1,751,700</span>원</div>
+                            </li>
+                            <li>
+                              <div class="radiobox">
+                                <input id="radio02" name="card_sort" type="radio" />
+                                <label for="radio02"> <i class="ico"></i> <span>삼성 iD NOMAD카드</span></label>
+                              </div>
+                              <div>+37,300</div>
+                              <div><span>1,924,900</span>원</div>
+                            </li>
+                            <li>
+                              <div class="radiobox">
+                                <input id="radio03" name="card_sort" type="radio" />
+                                <label for="radio03"> <i class="ico"></i> <span>삼성카드</span></label>
+                              </div>
+                              <div>+98,100</div>
+                              <div><span>1,751,700</span>원</div>
+                            </li>
+                            <li>
+                              <div class="radiobox">
+                                <input id="radio04" name="card_sort" type="radio" />
+                                <label for="radio04"> <i class="ico"></i> <span>삼성카드</span></label>
+                              </div>
+                              <div>+117,800</div>
+                              <div><span>1,751,700</span>원</div>
+                            </li>
+                            <li>
+                              <div class="radiobox">
+                                <input id="radio05" name="card_sort" type="radio" />
+                                <label for="radio05"> <i class="ico"></i> <span>삼성 iD GLOBAL카드 </span></label>
+                              </div>
+                              <div>+19,600</div>
+                              <div><span>1,751,700</span>원</div>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="btn_box">
+                          <button type="button" class="btn_type01 btn_100">선택완료</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- layer_popup 수정 -->
+                </div>
+                <div class="popup_container">
+                  <!-- 클래스 추가 -->
+                  <div class="btn_box"><button type="button" class="btn_type04 layer_popup_btn">결제 금액 상세</button></div>
+                  <!-- 추가 -->
+                  <!-- 결제 금액 상세<span><img src="https://www.modetour.com/icons/icon__15_bk.svg" alt="" /></span> 삭제 -->
+                  <div class="layer_popup">
+                    <div class="pop_over">
+                      <div class="icon_x"><button type="button">닫기</button></div>
+                      <div class="pop_in">
+                        <div class="tit">결제 금액 상세</div>
+                        <div class="total">
+                          <div>왕복 항공권</div>
+                          <div>1,101,000<span>원</span></div>
+                        </div>
+                        <div class="people_box">
+                          <div class="pay_people">
+                            <span class="people">· 성인 1</span>
+                            <p class="price">1,101,000<span>원</span></p>
+                          </div>
+                          <div class="pay_people">
+                            <span class="txt_air">항공요금</span>
+                            <span class="txt_price">412,800원</span>
+                          </div>
+                          <div class="pay_people">
+                            <span class="txt_air">유류할증료</span>
+                            <span class="txt_price">64,400원</span>
+                          </div>
+                          <div class="pay_people">
+                            <span class="txt_air">제세공과금</span>
+                            <span class="txt_price">63,300원</span>
+                          </div>
+                          <div class="pay_people">
+                            <span class="txt_air">발권대행수수료</span>
+                            <span class="txt_price">10,000원</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- layer_popup div추가 닫기버튼수정 -->
+                </div>
+              </div>
+              <div class="card">NH채움카드</div>
+              <div class="num"><span>2,715,100</span>원</div>
+            </div>
+          </div>
+          <div class="detail">
+            <div class="com_tit">상세 항공 여정</div>
+            <div class="detail_in">
+              <div class="left">
+                <div class="l_tit">가는 항공편</div>
+                <div class="box">
+                  <div class="sub_box">
+                    <div class="blue"><span>직항</span><span>요금확정</span></div>
+                    <div class="red"><span>잔여 7석</span></div>
+                  </div>
+                  <div class="boarding_time">
+                    <!-- [s]: 출발 -->
+                    <div class="start">
+                      <div class="num">
+                        <div class="time">23:50</div>
+                        <div class="day">08/10(토)</div>
+                      </div>
+                      <div class="line">
+                        <div class="circle"></div>
+                        <div class="l"></div>
+                      </div>
+                      <div class="boardinfo">
+                        <div class="top">
+                          <div class="location">서울(ICN) 출발</div>
+                          <div class="terminal">인천국제공항 - 터미널 1<span>8시간 50분</span></div>
+                        </div>
+                        <div class="bottom">
+                          <div class="air">
+                            <span class="ant_img"><img alt="logo" src="https://img.modetour.com/air/logo/ke.png" /></span>대한항공 KE1831
+                          </div>
+                          <div class="rule"><span>일반석 · 수하물 규정 확인</span><span>기종:388</span></div>
+                        </div>
+                        <div class="empty"></div>
+                      </div>
+                    </div>
+                    <!-- [e]: 출발 -->
+                    <!-- [s]: 경유 -->
+                    <div class="middle">
+                      <div class="num">
+                        <div class="time">23:50</div>
+                        <div class="day">08/10(토)</div>
+                        <!-- 다른공항 환승시 transfer 추가 -->
+                        <div class="way transfer">환승</div>
+                      </div>
+                      <div class="line">
+                        <div class="circle"></div>
+                        <div class="l"></div>
+                      </div>
+                      <div class="boardinfo">
+                        <div class="top">
+                          <div class="location">로스앤젤레스(LAX)</div>
+                          <div class="terminal">
+                            로스앤젤레스공항 - 터미널 B<span>2시간30분 대기</span><span>도착 후 환승하여 출발하는 공항이 다릅니다.<br />반드시 확인 바랍니다.</span>
+                          </div>
+                        </div>
+                        <div class="empty"></div>
+                      </div>
+                    </div>
+                    <!-- [e]: 경유 -->
+                    <!-- [s]: 출발 -->
+                    <div class="start">
+                      <div class="num">
+                        <div class="time">23:50</div>
+                        <div class="day">08/10(토)</div>
+                      </div>
+                      <div class="line">
+                        <div class="circle"></div>
+                        <div class="l"></div>
+                      </div>
+                      <div class="boardinfo">
+                        <div class="top">
+                          <div class="location">로스앤젤레스(LAX) 출발</div>
+                          <div class="terminal">로스앤젤레스공항 - 터미널 B<span>14시간 50분</span></div>
+                        </div>
+                        <div class="bottom">
+                          <div class="air">
+                            <span class="ant_img"><img alt="logo" src="https://img.modetour.com/air/logo/cz.png" /></span>중국남방항공 CZ328
+                          </div>
+                          <div class="rule"><span>일반석 · 수하물 규정 확인</span><span>기종:388</span></div>
+                        </div>
+                        <div class="empty"></div>
+                      </div>
+                    </div>
+                    <!-- [e]: 출발 -->
+                    <!-- [s]: 도착 -->
+                    <div class="end">
+                      <div class="num">
+                        <div class="time">13:55</div>
+                        <div class="day">08/12(월)</div>
+                      </div>
+                      <div class="line"><div class="circle"></div></div>
+                      <div class="boardinfo">
+                        <div class="top">
+                          <div class="location">서울(ICN) 도착</div>
+                          <div class="terminal">인천공항 - 터미널 1</div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- [e]: 도착 -->
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="info_caution">
+            <div class="tit">
+              <span
+                ><svg viewBox="64 64 896 896" focusable="false" data-icon="exclamation-circle" width="1em" height="1em" fill="currentColor" aria-hidden="true">
+                  <path d="M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z"></path>
+                  <path d="M464 688a48 48 0 1096 0 48 48 0 10-96 0zm24-112h48c4.4 0 8-3.6 8-8V296c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8z"></path></svg
+              ></span>
+              <span>예약 시 주의사항</span>
+            </div>
+            <p class="p_notice">
+              · 필리핀 입국 관련 유의 사항
+              <br />&nbsp; 1) 부모를 동반하지 않은 만 15세 미만의 소아는 만 20세 이상의 성인 보호자가 아래와 같은 서류를 준비하여 동행해야 합니다. <br />&nbsp; ① 영문 부모동의서 (변호사 공증 요망) <br />&nbsp; ② 소아와 부모의 여권사본 <br />&nbsp; ③ 가족관계 증명서(영문) <br />&nbsp; ④ 입국 수수료 (필리핀 출국 시 비동반 소아 입국 수수료 영수증이 필요하므로 반드시 지참 필요) <br />&nbsp; 2) 부모 중 1인과 동반 입국하는 만 15세 미만 승객의 경우 부모와 자녀의 성이 다른 경우 영문 주민등록등본
+              지참해야 합니다.<br />
+            </p>
+            <p>부모 중 1인과 동반 입국하는 만 15세 미만 승객의 경우 부모와 자녀의 성이 다른 경우 영문 주민등록등본 지참해야 합니다.</p>
+            <div class="checkbox_area">
+              <span class="checkbox">
+                <input id="check01" name="check01" type="checkbox" />
+                <label for="check01"> <i class="ico"></i> <span>항공 스케줄 출/귀국편의 항공사 무료수하물 및 요금규정의 초과수하물을 확인 하시기 바랍니다.</span> </label>
+              </span>
+              <span class="checkbox">
+                <input id="check02" name="check02" type="checkbox" />
+                <label for="check02"> <i class="ico"></i> <span>여행하시는 국가(또는 경유지, 기착 등)의 비자유무를 확인하시기 바랍니다. 비자는 승객이 직접 확인 해야 하며, 비자 관련 문제 시 여행사는 책임지지 않습니다.</span> </label>
+              </span>
+            </div>
+          </div>
+          <div class="reserve_btn btn_box"><button type="button" class="btn_type01">예약하기</button></div>
+          <!-- 수정 -->
+        </div>
+      </div>
+    </main>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+      $(document).ready(function () {
+        //결제조건변경, 결제금액상세 팝업
+        // $(".reserve_cont_area .payment_box .top > div").click(function () {
+        //   var t = $(this);
+        //   t.find(".pop_over").show();
+        //   t.siblings().find(".pop_over").hide();
+        // });
+        // //결제조건변경, 결제금액상세 팝업 닫기
+        // $(".reserve_cont_area .pop_over .close").click(function () {
+        //   $(".pop_over").hide();
+        //   return false;
+        // });
+      });
+    </script>
+  </body>
+</html>

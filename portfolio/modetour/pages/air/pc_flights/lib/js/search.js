@@ -45,12 +45,12 @@
         });
 
         // 팝업 외부영역 클릭 시 닫기
-        $(document).mouseup(function (e) {
-            var LayerPopup = $(".layer_popup");
-            if (LayerPopup.has(e.target).length === 0) {
-                LayerPopup.hide();
-            }
-        });
+        // $(document).mouseup(function (e) {
+        //     var LayerPopup = $(".layer_popup");
+        //     if (LayerPopup.has(e.target).length === 0) {
+        //         LayerPopup.hide();
+        //     }
+        // });
 
         // 인원 팝업 툴팁
         $(".ico_tooltip").mouseover(function () {
@@ -108,6 +108,15 @@
             keyboard: true,
             format: function (value) {
                 return value + "원";
+            },
+        });
+
+        // 배너 2024-10-17 추가
+        var banner_swiper = new Swiper(".banner_area .swiper", {
+            slidesPerView: 1,
+            pagination: {
+                el: ".swiper-pagination",
+                type: "fraction",
             },
         });
     });

@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../lib/js/jquery-3.7.1.min.js"></script>
+    <script src="../lib/js/common.js"></script>
+    <link rel="stylesheet" type="text/css" href="./../lib/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="./../lib/css/air.css" />
+    <link rel="stylesheet" type="text/css" href="./../lib/css/common.css" />
+    <link rel="stylesheet" type="text/css" href="./../lib/css/payment.css" />
+  </head>
+  <body>
+    <div class="payment_layout">
+      <div class="button_tit">
+        <button>
+          결제하실 상품 <span><img alt="" src="//newgen-payment.modetour.com/m/icons/chevron-up.svg" /></span>
+        </button>
+        <div class="hide">
+          <ul class="list">
+            <li>
+              <div class="tit">예약구분</div>
+              <div class="txt">해외항공</div>
+            </li>
+            <li>
+              <div class="tit">예약번호</div>
+              <div class="txt">
+                47761846 <span><img alt="" src="//newgen-payment.modetour.com/m/icons/copy_clipboard.svg" class="ml-2" /></span>
+              </div>
+            </li>
+            <li>
+              <div class="tit">출발일</div>
+              <div class="txt">2025-02-17 / 김모두</div>
+            </li>
+            <li>
+              <div class="tit">상품명</div>
+              <div class="air_wrap">
+                <div class="air">
+                  <div class="top">
+                    <span class="ant_img"><img src="	https://img.modetour.com/air/logo/7C.png" alt="" /></span>제주항공 7C1801
+                  </div>
+                  <div class="bottom">인천(ICN) → 오키나와(OKA)</div>
+                </div>
+                <div class="air">
+                  <div class="top">
+                    <span class="ant_img"><img src="	https://img.modetour.com/air/logo/7C.png" alt="" /></span>제주항공 7C1801
+                  </div>
+                  <div class="bottom">오키나와(OKA) → 인천(ICN)</div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="all_area">
+        <div class="border_tit">결제 금액</div>
+        <ul>
+          <li>
+            <div class="tit">총합계</div>
+            <div class="txt"><span>1,183,900</span>원</div>
+          </li>
+          <li>
+            <div class="tit">결제된 금액</div>
+            <div class="txt"><span>0</span>원</div>
+          </li>
+        </ul>
+      </div>
+      <div class="mile_area">
+        <div class="border_tit">할인 및 마일리지</div>
+        <ul>
+          <li>
+            MY<span class="ant_img"><img alt="" src="//newgen-payment.modetour.com/icons/icon_question.svg" /></span>
+            <div class="hide">회원님이 보유하신, 사용 가능한 쿠폰 수와 투어마일리지 금액입니다. 동반 여행객분들의 사용 가능한 쿠폰 수와 투어마일리지 금액은 노출되지 않으며, 동반 여행각의 보유 쿠폰과 마일리지를 사용하시려면, 각 수단 별 버튼을 클릭해 주세요.</div>
+          </li>
+          <li>쿠폰 <span>2개</span></li>
+          <li class="mile">마일리지 <span>397M</span></li>
+        </ul>
+        <div class="btn_wrap">
+          <button><span>할인쿠폰</span><span>적용하기</span></button>
+          <!-- 적용시 -->
+          <button><span>투어마일리지</span><span class="mile">1,000M 차감</span><span class="won">1,000원</span></button>
+        </div>
+      </div>
+      <div class="pay_area">
+        <div class="border_tit">결제 수단</div>
+        <ul class="type">
+          <li class="active">
+            <a href=""
+              ><span><img alt="payment method" src="//newgen-payment.modetour.com//images/icon_card.png" /></span>신용카드</a
+            >
+          </li>
+          <li>
+            <a href=""
+              ><span><img alt="payment method" src="//newgen-payment.modetour.com//images/icon_bankbook.png" /></span>무통장입금</a
+            >
+          </li>
+        </ul>
+        <div class="alldetailarea">
+          <div class="all_tit">결제하실 금액 상세 보기</div>
+          <ul>
+            <li>
+              <div class="tit">잔여 결제금액</div>
+              <div class="txt"><span>1,183,900</span>원</div>
+            </li>
+            <li>
+              <div class="tit">할인/마일리지</div>
+              <div class="txt"><span>0</span>원</div>
+            </li>
+            <li class="tour">
+              <div class="tit">투어마일리지</div>
+              <div class="txt"><span>-1,000</span>원</div>
+            </li>
+          </ul>
+          <div class="all">
+            <div class="tit">결제하실 금액</div>
+            <div class="txt"><span>1,183,900</span>원</div>
+          </div>
+        </div>
+        <div class="tab_wrap">
+          <div>
+            <div class="box">
+              <div>
+                <div class="s_tit">카드선택</div>
+                <div class="select_box">
+                  <div class="select_layer">
+                    <div>선택</div>
+                  </div>
+                  <div class="select_option scroll_hidden">
+                    <ul>
+                      <li class="active"><span>선택</span></li>
+                      <li><span>국민카드</span></li>
+                      <li><span>신한카드</span></li>
+                      <li><span>BC카드</span></li>
+                      <li><span>삼성카드</span></li>
+                      <li><span>삼성카드</span></li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="cardsort">
+                <div class="s_tit">카드구분</div>
+                <div class="radio_wrap">
+                  <div class="radiobox">
+                    <input id="radio01" name="card_sort" type="radio" />
+                    <label for="radio01"> <i class="ico"></i> <span>개인</span></label>
+                  </div>
+                  <div class="radiobox">
+                    <input id="radio02" name="card_sort" type="radio" />
+                    <label for="radio02"> <i class="ico"></i> <span>법인기명</span></label>
+                  </div>
+                  <div class="radiobox">
+                    <input id="radio03" name="card_sort" type="radio" />
+                    <label for="radio03"> <i class="ico"></i> <span>법인무기명</span></label>
+                  </div>
+                </div>
+                <div class="notice">* 체크카드 법인카드의 경우 카드 프로모션 적용 불가로 운임이 상향될 수 있습니다.</div>
+              </div>
+              <div class="cardnum">
+                <div class="s_tit">카드번호</div>
+                <div class="inputwrap"><input type="text" /><input type="text" /><input type="text" /><input type="text" /></div>
+              </div>
+              <div class="cardexpiry">
+                <div class="s_tit">유효기간</div>
+                <div class="inputwrap">
+                  <div class="select_box">
+                    <div class="select_layer">
+                      <div>월</div>
+                    </div>
+                    <div class="select_option scroll_hidden">
+                      <ul>
+                        <li class="active"><span>월</span></li>
+                        <li><span>1</span></li>
+                        <li><span>2</span></li>
+                        <li><span>3</span></li>
+                        <li><span>4</span></li>
+                        <li><span>5</span></li>
+                        <li><span>6</span></li>
+                        <li><span>7</span></li>
+                        <li><span>8</span></li>
+                        <li><span>9</span></li>
+                        <li><span>10</span></li>
+                        <li><span>11</span></li>
+                        <li><span>12</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="select_box">
+                    <div class="select_layer">
+                      <div>년도</div>
+                    </div>
+                    <div class="select_option scroll_hidden">
+                      <ul>
+                        <li class="active"><span>년도</span></li>
+                        <li><span>2025</span></li>
+                        <li><span>2026</span></li>
+                        <li><span>2027</span></li>
+                        <li><span>2028</span></li>
+                        <li><span>2029</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="monthly">
+                <div class="s_tit">할부기간</div>
+                <div class="select_box">
+                  <div class="select_layer">
+                    <div>선택</div>
+                  </div>
+                  <div class="select_option scroll_hidden">
+                    <ul>
+                      <li class="active"><span>선택</span></li>
+                      <li><span>1</span></li>
+                      <li><span>2</span></li>
+                      <li><span>3</span></li>
+                      <li><span>4</span></li>
+                      <li><span>5</span></li>
+                      <li><span>6</span></li>
+                      <li><span>7</span></li>
+                      <li><span>8</span></li>
+                      <li><span>9</span></li>
+                      <li><span>10</span></li>
+                      <li><span>11</span></li>
+                      <li><span>12</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <a href="">무이자 할부안내</a>
+              </div>
+              <div class="cardpw">
+                <div class="s_tit">카드 비밀번호</div>
+                <div class="inputwrap">
+                  <input type="password" />
+                  <input type="password" value="12" disabled="" />
+                  <div>카드 비밀번호 앞 2자리</div>
+                </div>
+              </div>
+              <div class="cardowner">
+                <div class="s_tit">카드 소유주명 / 생년월일</div>
+                <div class="inputwrap">
+                  <div class="select_box">
+                    <div class="select_layer">
+                      <div>김모두</div>
+                    </div>
+                    <div class="select_option scroll_hidden">
+                      <ul>
+                        <li class="active"><span>김모두</span></li>
+                        <li><span>제3자카드</span></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <input type="text" value="840821" disabled="" />
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="box">
+              <div class="account">
+                <div class="s_tit">가상계좌</div>
+                <div class="select_box">
+                  <div class="select_layer">
+                    <div>선택</div>
+                  </div>
+                  <div class="select_option scroll_hidden">
+                    <ul>
+                      <li class="active"><span>농협</span></li>
+                      <li><span>신한은행</span></li>
+                      <li><span>우리은행</span></li>
+                      <li><span>국민은행</span></li>
+                      <li><span>하나은행</span></li>
+                      <li><span>외환은행</span></li>
+                    </ul>
+                  </div>
+                </div>
+                <p>* 결제시한:2024.09.06 17:00 까지</p>
+              </div>
+              <div>
+                <div class="s_tit">현금영수증 신청</div>
+                <div class="radio_wrap">
+                  <div class="radiobox">
+                    <input id="cash_sort01" name="cash_sort" type="radio" checked="" />
+                    <label for="cash_sort01"> <i class="ico"></i> <span>발행</span></label>
+                  </div>
+                  <div class="radiobox">
+                    <input id="cash_sort02" name="cash_sort" type="radio" />
+                    <label for="cash_sort02"> <i class="ico"></i> <span>미발행</span></label>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../lib/js/jquery-3.7.1.min.js"></script>
+    <script src="../lib/js/common.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".payment_layout .pay_area .type > li a").click(function () {
+          var t = $(this);
+          var idx = t.parent().index();
+          t.parent().addClass("active").siblings().removeClass("active");
+          t.parents(".pay_area").find("div.tab_wrap > div").eq(idx).show().siblings().hide();
+          return false;
+        });
+      });
+    </script>
+  </body>
+</html>

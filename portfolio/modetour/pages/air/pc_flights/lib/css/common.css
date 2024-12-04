@@ -1,13 +1,21 @@
 @charset "utf-8";
 
-/* 버튼 */
-.btn_box button[class^="btn_type"] {
+@font-face {
+    font-family: Modetour;
+    font-weight: 700;
+    font-display: swap;
+    src: url("../../fonts/ModetourB.75c8de80.woff") format("woff"), url("../../fonts/ModetourB.75c8de80.woff") format("truetype");
+}
+
+/* 버튼 2024-10-07 수정*/
+.btn_box [class^="btn_type"] {
     display: inline-block;
     border-radius: 5px;
     font-size: 15px;
     font-weight: 500;
     transition: 0.3s;
     cursor: pointer;
+    text-align: center;
 }
 .btn_box .btn_100 {
     width: 100% !important;
@@ -59,6 +67,39 @@
     font-size: 14px;
 }
 
+.line_tab {
+    position: relative;
+}
+.line_tab .line {
+    display: inline-block;
+    width: 30px;
+    height: 2px;
+    border-radius: 3px;
+    background-color: #009b75;
+    position: absolute;
+    z-index: 2;
+    bottom: -7px;
+    left: 0;
+    transition: all 0.3s linear;
+}
+.mypagedetail .line_tab .line {
+    bottom: 0;
+    width: 50%;
+    background: #000;
+    position: absolute;
+}
+
+.btn_box a[class^="btn_type"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn_box [class^="btn_type"] span {
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+}
 /* 레이어팝업 */
 .popup_container {
     position: relative;
@@ -336,6 +377,7 @@ input[type="checkbox"] {
     bottom: 0;
     background: rgba(0, 0, 0, 0.3);
     display: none;
+    z-index: 99;
 }
 .dim.active {
     display: block;
@@ -504,11 +546,11 @@ input[type="text"]:focus {
     box-shadow: rgba(17, 17, 17, 0.15) 0px 0px 6px;
     position: absolute;
     width: 100%;
-    height: 158px;
     left: 0;
     top: 60px;
     overflow-y: scroll;
     display: none;
+    z-index: 1;
 }
 .select_box .select_option::-webkit-scrollbar {
     width: 8px;
@@ -686,5 +728,36 @@ input[type="text"]:focus {
 }
 .boarding_time .middle .terminal span:nth-child(2) {
     color: #ed4949;
+}
+
+.st01 {
+    display: inline-flex;
+    justify-content: flex-end;
+    gap: 0 5px;
+}
+.st01 span {
+    display: inline-block;
+    height: 25px;
+    border-radius: 5px;
+    padding: 0 6px;
+    line-height: 25px;
+    font-size: 13px !important;
+}
+.st01 .blue01 {
+    border: 1px #0075e9 solid;
+    color: #0075e9;
+}
+.st01 .blue02 {
+    border: 1px #0075e9 solid;
+    background: #0075e9;
+    color: #fff;
+}
+.st01 .red01 {
+    border: 1px solid #ed4949;
+    color: #ed4949;
+}
+.st01 .purple01 {
+    background: #8100e2;
+    color: #fff;
 }
 /* [s] : 항공편 css */

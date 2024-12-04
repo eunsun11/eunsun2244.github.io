@@ -39,11 +39,12 @@ $(document).ready(function () {
     //최근검색 슬라이드
     var swiper = new Swiper(".recent_search_list", {
         pagination: {
-            el: ".swiper-pagination",
+            el: ".recent_search_list .swiper-pagination",
         },
         observer: true,
         observeParents: true,
         watchOverflow: true,
+        spaceBetween: 30,
     });
 
     //인기검색어
@@ -61,5 +62,11 @@ $(document).ready(function () {
     });
     $(".search_keyword").mouseout(function () {
         $(this).find(".layer_popup").hide();
+    });
+
+    //메인로고
+    var main_logo = new Swiper(".main_logo", {
+        slidesPerView: 1,
+        loop: true,
     });
 });

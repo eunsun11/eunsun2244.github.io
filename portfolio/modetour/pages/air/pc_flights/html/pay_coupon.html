@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./../lib/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="./../lib/css/payment.css" />
+    <link rel="stylesheet" type="text/css" href="./../lib/css/common.css" />
+  </head>
+  <body>
+    <div class="payment_layout">
+      <div class="coupon_wrap">
+        <div class="tit">
+          할인쿠폰
+          <a href="" class="close"><img src="//newgen-payment.modetour.com/icons/ico-close.svg" alt="" /></a>
+        </div>
+        <div class="wrap">
+          <div class="per_coupon">
+            <div class="select_box">
+              <div class="select_layer">
+                <div>김모두</div>
+              </div>
+              <div class="select_option scroll_hidden">
+                <ul>
+                  <li class="active"><span>김모두</span></li>
+                </ul>
+              </div>
+            </div>
+            <div class="notice">※ 여행객 별 쿠폰 사용 가능하며, 사용 가능한 쿠폰만 보여집니다.</div>
+          </div>
+          <div class="coupon_list">
+            <ul>
+              <li>
+                <a href="">
+                  <i
+                    ><svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14">
+                      <path id="Path_38247" data-name="Path 38247" d="M15604.321,1084.153l-7.675-7.447,2.108-2.045,5.566,5.4,10.217-9.909,2.108,2.045Z" transform="translate(-15596.646 -1070.153)" /></svg
+                  ></i>
+                  <div class="txt1"><span>5,000</span>원</div>
+                  <div class="txt2">2024 모두투어 신규회원 해외항공권 웰컴쿠폰 (항공료 기준 50만원 이상 - 유류/세금제외)</div>
+                  <div class="txt3">~03.31(206일 남음)</div>
+                </a>
+              </li>
+              <li>
+                <a href="">
+                  <i
+                    ><svg xmlns="http://www.w3.org/2000/svg" width="20" height="14" viewBox="0 0 20 14">
+                      <path id="Path_38247" data-name="Path 38247" d="M15604.321,1084.153l-7.675-7.447,2.108-2.045,5.566,5.4,10.217-9.909,2.108,2.045Z" transform="translate(-15596.646 -1070.153)" /></svg
+                  ></i>
+                  <div class="txt1"><span>5,000</span>원</div>
+                  <div class="txt2">2024 모두투어 신규회원 해외항공권 웰컴쿠폰 (항공료 기준 50만원 이상 - 유류/세금제외)</div>
+                  <div class="txt3">~03.31(206일 남음)</div>
+                </a>
+              </li>
+            </ul>
+            <div class="notice">
+              <div>여행객 당 1개의 쿠폰을 사용할 수 있습니다. 단, 쿠폰 사용할 여행객이 예약당시 MT번호가 인증되어 있어야 합니다.</div>
+              <div>결제 후 중복 사용 및 사용 후 남은 부분 재사용 불가합니다.</div>
+              <div>상품 취소 시 사용한 쿠폰은 유효기간이 만료된 경우 재발급 되지 않습니다.</div>
+            </div>
+          </div>
+          <div class="usecoupon_area">
+            <div class="tit">사용하실 쿠폰 정보</div>
+            <div class="coupon_con"><p>사용하실 쿠폰이 없습니다.</p></div>
+            <div class="coupon_con">
+              <div class="name">김유진</div>
+              <div class="c_detail"><span>5,000</span>원<br />2024 모두투어 신규회원 해외항공권 웰컴쿠폰 (항공료 기준 20만원 이상 - 유류/세금제외)</div>
+              <button>사용 취소</button>
+            </div>
+          </div>
+        </div>
+        <div class="fix_bottom">
+          <div class="txt_wrap">
+            <div class="tit">적용 예정 할인금액</div>
+            <div class="txt"><span>0</span>원</div>
+          </div>
+          <div class="btn_box">
+            <button type="button" class="btn_type02">취소</button>
+            <button type="button" class="btn_type03">적용</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="../lib/js/jquery-3.7.1.min.js"></script>
+    <script src="../lib/js/common.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".payment_layout .coupon_wrap .coupon_list ul li a").click(function () {
+          var t = $(this);
+          if (!t.parent().hasClass("active")) {
+            t.parent().addClass("active").siblings().removeClass("active");
+          } else {
+            t.parent().removeClass("active");
+          }
+          return false;
+        });
+      });
+    </script>
+  </body>
+</html>

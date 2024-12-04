@@ -1,0 +1,812 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>메인</title>
+        <script src="../lib/js/jquery-3.7.1.min.js"></script>
+        <script src="../lib/js/swiper.min.js"></script>
+        <script src="../lib/js/common.js"></script>
+        <script src="../lib/js/jquery-asRange.js"></script>
+        <script src="../lib/js/search.js"></script>
+        <link rel="stylesheet" href="../lib/css/swiper.min.css" />
+        <link rel="stylesheet" href="../lib/css/reset.css" />
+        <link rel="stylesheet" href="../lib/css/search.css" />
+        <link rel="stylesheet" href="../lib/css/common.css" />
+        <link rel="stylesheet" href="../lib/css/asRange.css" />
+    </head>
+    <body>
+        <main>
+            <div class="search_wrap">
+                <!-- [s] top_area -->
+                <div class="top_area">
+                    <div class="search_details">
+                        <div class="flight_course">
+                            <div class="result_section">
+                                <div class="data">
+                                    <div class="data_txt">
+                                        <span>김포(GMP)</span>
+                                        <span><img src="https://www.modetour.com/icons/icon_arrow_tw_20.svg" alt="" /></span>
+                                        <span>제주(CJU)</span>
+                                        <span><img src="https://www.modetour.com/icons/icon_drop_down.svg" alt="" width="12" height="12" /></span>
+                                    </div>
+                                    <div class="data_day"><span>2024.08.10(토) ~ 2024.08.13(화)</span><img src="https://www.modetour.com/icons/icon_date_18.svg" alt="" /></div>
+                                </div>
+                                <button type="button" class="data_re fade_btn">
+                                    <span>재검색</span>
+                                </button>
+                                <!-- [s] 항공권 검색 -->
+                                <div class="air_search_area fade_view">
+                                    <div class="layout">
+                                        <div class="tab_area">
+                                            <div class="sub_tit">
+                                                <div class="sub_top">
+                                                    <div class="ticket_tab line_tab">
+                                                        <div class="btn_group">
+                                                            <a href="#" class="btn on"><span class="active">왕복</span></a>
+                                                            <a href="#" class="btn"><span>편도</span></a>
+                                                        </div>
+                                                        <div class="line"></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="air_opt_box con_group">
+                                                <!-- [s] 왕복 -->
+                                                <div class="search_box con on" id="round_air">
+                                                    <div class="booking_wrap">
+                                                        <div class="booking_city popup_container">
+                                                            <div class="booking_start active">
+                                                                <button class="" type="button">SEL</button>
+                                                                <input placeholder="출발지" type="text" class="ant-input" value="서울" />
+                                                            </div>
+                                                            <button type="button" class="change_place"><img src="https://www.modetour.com/icons/icon_change_34.svg" alt="" /></button>
+                                                            <div class="booking_end">
+                                                                <button class="" type="button">IN</button>
+                                                                <input placeholder="도착지" type="text" class="ant-input" value="" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="booking_date popup_container">
+                                                            <div class="start_date">08.08(목)</div>
+                                                            <img src="https://www.modetour.com/icons/icon_datel_18.svg" alt="" />
+                                                            <div class="end_date">08.11(일)</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="passenger">
+                                                        <div class="txt">
+                                                            <img alt="" src="https://m.modetour.com/icons/icon_user_16.svg" width="16" height="16" style="height: 16px" />
+                                                            <span>성인 1, </span>
+                                                            <span>일반석</span>
+                                                        </div>
+                                                        <span class="checkbox">
+                                                            <input id="check01" name="check01" type="checkbox" />
+                                                            <label for="check01">
+                                                                <i class="ico"></i>
+                                                                <span>직항</span>
+                                                            </label>
+                                                        </span>
+                                                    </div>
+                                                    <div class="btn_box">
+                                                        <button type="button" class="btn_type03 btn_type01">검색하기</button>
+                                                    </div>
+                                                </div>
+                                                <!-- [e] //왕복 -->
+                                                <!-- [s] 편도 -->
+                                                <div class="search_box con" id="oneway_air">
+                                                    <div class="booking_wrap">
+                                                        <div class="booking_city popup_container">
+                                                            <div class="booking_start active">
+                                                                <button class="" type="button">SEL</button>
+                                                                <input placeholder="출발지" type="text" class="ant-input" value="서울" />
+                                                            </div>
+                                                            <button type="button" class="change_place"><img src="https://www.modetour.com/icons/icon_change_38.svg" alt="" /></button>
+                                                            <div class="booking_end">
+                                                                <button class="" type="button">IN</button>
+                                                                <input placeholder="도착지" type="text" class="ant-input" value="" />
+                                                            </div>
+                                                        </div>
+                                                        <div class="booking_date popup_container">
+                                                            <div class="start_date">08.08(목)</div>
+                                                        </div>
+                                                    </div>
+                                                    <div class="passenger">
+                                                        <div class="txt">
+                                                            <img alt="" src="https://m.modetour.com/icons/icon_user_16.svg" width="16" height="16" style="height: 16px" />
+                                                            <span>성인 1, </span>
+                                                            <span>일반석</span>
+                                                        </div>
+                                                        <span class="checkbox">
+                                                            <input id="check02" name="check02" type="checkbox" />
+                                                            <label for="check02">
+                                                                <i class="ico"></i>
+                                                                <span>직항</span>
+                                                            </label>
+                                                        </span>
+                                                    </div>
+                                                    <div class="btn_box">
+                                                        <button type="button" class="btn_type03 btn_type01">검색하기</button>
+                                                    </div>
+                                                </div>
+                                                <!-- [e] //편도 -->
+                                            </div>
+                                        </div>
+                                        <div class="close">
+                                            <button type="button"><img src="https://m.modetour.com/icons/icon_x_14_black.svg" alt="닫기" width="26" /></button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- [e] //항공권 검색 -->
+                            </div>
+                            <div class="result_section">
+                                <div class="people">
+                                    <img src="https://m.modetour.com/icons/icon_mypage_16.svg" alt="" width="16" height="16" />
+                                    <span>성인 1</span>
+                                    <span class="line">|</span>
+                                    <span>일반석</span>
+                                </div>
+                                <div class="filter_btn"><span>필터</span><img src="https://m.modetour.com/icons/icon_filter_white_16.svg" alt="" /></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- [e] //top_area -->
+                <div class="ticket_container">
+                    <div class="layout">
+                        <!-- [s] 2024-10-17 추가 -->
+                        <div class="banner_area">
+                            <div class="swiper">
+                                <div class="swiper-wrapper">
+                                    <div class="swiper-slide"><img src="https://img.modetour.com/eagle/photoimg/2f89fcd6354e404dbb74320e01f0c325.jpg?resize=y&resize_w=670&resize_h=92&w_h_fill=y&quot" alt="" /></div>
+                                    <div class="swiper-slide"><img src="https://img.modetour.com/eagle/photoimg/7b0d999e2621464581765e29b0bd349e.png?resize=y&resize_w=670&resize_h=92&w_h_fill=y&quot" alt="" /></div>
+                                    <div class="swiper-slide"><img src="https://img.modetour.com/eagle/photoimg/2f89fcd6354e404dbb74320e01f0c325.jpg?resize=y&resize_w=670&resize_h=92&w_h_fill=y&quot" alt="" /></div>
+                                    <div class="swiper-slide"><img src="https://img.modetour.com/eagle/photoimg/7b0d999e2621464581765e29b0bd349e.png?resize=y&resize_w=670&resize_h=92&w_h_fill=y&quot" alt="" /></div>
+                                    <div class="swiper-slide"><img src="https://img.modetour.com/eagle/photoimg/2f89fcd6354e404dbb74320e01f0c325.jpg?resize=y&resize_w=670&resize_h=92&w_h_fill=y&quot" alt="" /></div>
+                                    <div class="swiper-slide"><img src="https://img.modetour.com/eagle/photoimg/7b0d999e2621464581765e29b0bd349e.png?resize=y&resize_w=670&resize_h=92&w_h_fill=y&quot" alt="" /></div>
+                                </div>
+                                <div class="swiper-pagination"></div>
+                            </div>
+                        </div>
+                        <!-- [e] 2024-10-17 추가 -->
+                        <!-- [s] 가는 항공편 선택했을 때 -->
+                        <div class="box">
+                            <!-- [s] flight_item -->
+                            <div class="flight_item active">
+                                <div class="tit">
+                                    <div>
+                                        <span>가는 항공편</span>
+                                        <span>- 2024.09.25(수)</span>
+                                    </div>
+                                    <div class="cancel_btn"><button type="button">취소</button></div>
+                                </div>
+                                <div class="guide01">
+                                    <img src="https://img.modetour.com/air/logo/ke.png" alt="" class="air_logo" />
+                                    <span class="airline">대한항공</span>
+                                    <p class="guide01_1">· 실제운항 : 아시아나항공</p>
+                                    <p class="guide01_2">· 위탁수하물 포함 (2개)</p>
+                                </div>
+                                <div class="guide02">발권대행 수수료: 1,000원</div>
+                                <div class="guide03"><img src="https://m.modetour.com/icons/icon_time_14.svg" alt="" /> <span>01시간 10분</span></div>
+                                <div class="item_details">
+                                    <div class="detail01">
+                                        <span class="city">김포(GMP)</span>
+                                        <span class="time">10:45</span>
+                                    </div>
+                                    <div class="detail02"><img src="https://m.modetour.com/icons/icon_arrow_19.svg" alt="" /></div>
+                                    <div class="detail01">
+                                        <span class="city">제주(CJU)</span>
+                                        <span class="time">10:45</span>
+                                    </div>
+                                </div>
+                                <div class="price">
+                                    <div><span class="num">92,000</span><span>원</span></div>
+                                    <div class="st01">
+                                        <span class="purple01">특가</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- [e] //flight_item -->
+                        </div>
+                        <!--[e] //가는 항공편 선택했을 때 -->
+
+                        <!-- [s] 가는 항공편만 나올 때 -->
+                        <div class="box">
+                            <div class="flight_list_tit">
+                                <div class="tit">
+                                    <div>가는 항공편</div>
+                                    <div>2024.08.31(토)</div>
+                                </div>
+                                <div class="sort popup_container">
+                                    <button type="button" class="layer_popup_btn">추천순</button>
+                                    <div class="sort_layer layer_popup">
+                                        <ul>
+                                            <li class="on">추천순</li>
+                                            <li>최저가 순</li>
+                                            <li>소요시간 적은 순</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flight_result">
+                                <span>총 <strong>49</strong>개</span>
+                                <p class="point01"><img src="https://www.modetour.com/icons/icon_check_14.svg" alt="" /> 성인 1인 왕복요금입니다.</p>
+                            </div>
+                            <!-- [s] flight_item -->
+                            <div class="flight_item">
+                                <div class="item_details_top">
+                                    <div class="detail01">
+                                        <div>
+                                            <div class="airline">
+                                                <img src="https://img.modetour.com/air/logo/ke.png" alt="" class="air_logo" />
+                                                <span class="name"><span>대한항공</span>KE5901</span>
+                                            </div>
+                                            <p>발권대행 수수료: 1,000원</p>
+                                        </div>
+                                        <div>
+                                            <div class="st01">
+                                                <span class="blue01">공동운항</span>
+                                                <span class="blue02">할인가</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="detail02">
+                                        <div class="detail02_1">
+                                            <div class="time">10:50</div>
+                                            <div class="city"><span>김포</span><span>GMP</span></div>
+                                        </div>
+                                        <div class="detail02_2">
+                                            <div class="lead_time">14시간 10분</div>
+                                            <div class="line"></div>
+                                        </div>
+                                        <div class="detail02_3">
+                                            <div class="time">18:50</div>
+                                            <div class="city"><span>제주</span><span>CJU</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item_details_bottom">
+                                    <div class="price_area pay_option">
+                                        <div class="txt">
+                                            성인 1인
+                                            <p>/ 삼성 iD NOMAD카드 외 10개</p>
+                                        </div>
+                                        <div class="on">[대표금액]</div>
+                                        <div class="price">
+                                            <div class="option_btn">
+                                                <span class="txt">
+                                                    <em>2,283,100</em><small>원<span class="off">~</span></small>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pay_select">
+                                        <ul class="pay_list">
+                                            <li>
+                                                <div class="radiobox">
+                                                    <input id="radio01" name="card_sort" type="radio" checked="" />
+                                                    <label for="radio01"> <i class="ico"></i> <span>삼성카드</span></label>
+                                                </div>
+                                                <div>-</div>
+                                                <div><span>1,751,700</span>원</div>
+                                            </li>
+                                            <li>
+                                                <div class="radiobox">
+                                                    <input id="radio02" name="card_sort" type="radio" />
+                                                    <label for="radio02"> <i class="ico"></i> <span>삼성 iD NOMAD카드</span></label>
+                                                </div>
+                                                <div>+37,300</div>
+                                                <div><span>1,924,900</span>원</div>
+                                            </li>
+                                            <li>
+                                                <div class="radiobox">
+                                                    <input id="radio03" name="card_sort" type="radio" />
+                                                    <label for="radio03"> <i class="ico"></i> <span>삼성카드</span></label>
+                                                </div>
+                                                <div>+98,100</div>
+                                                <div><span>1,751,700</span>원</div>
+                                            </li>
+                                            <li>
+                                                <div class="radiobox">
+                                                    <input id="radio04" name="card_sort" type="radio" />
+                                                    <label for="radio04"> <i class="ico"></i> <span>삼성카드</span></label>
+                                                </div>
+                                                <div>+117,800</div>
+                                                <div><span>1,751,700</span>원</div>
+                                            </li>
+                                            <li>
+                                                <div class="radiobox">
+                                                    <input id="radio05" name="card_sort" type="radio" />
+                                                    <label for="radio05"> <i class="ico"></i> <span>삼성 iD GLOBAL카드 </span></label>
+                                                </div>
+                                                <div>+19,600</div>
+                                                <div><span>1,751,700</span>원</div>
+                                            </li>
+                                        </ul>
+                                        <div class="btn_box">
+                                            <button type="button" class="btn_type01">선택완료</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- [e] //flight_item -->
+                            <!-- [s] flight_item -->
+                            <div class="flight_item">
+                                <div class="item_details_top">
+                                    <div class="detail01">
+                                        <div>
+                                            <div class="airline">
+                                                <img src="https://img.modetour.com/air/logo/ke.png" alt="" class="air_logo" />
+                                                <span class="name"><span>대한항공</span>KE5901</span>
+                                            </div>
+                                            <p class="guide01">실제운항 : 에어프랑스</p>
+                                        </div>
+                                        <div>
+                                            <div class="st01">
+                                                <span class="purple01">특가</span>
+                                                <span class="red01">잔여 9석</span>
+                                            </div>
+                                            <div class="st02">
+                                                <span>비즈니스석</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="detail02">
+                                        <div class="detail02_1">
+                                            <div class="time">10:50</div>
+                                            <div class="city"><span>김포</span><span>GMP</span></div>
+                                        </div>
+                                        <div class="detail02_2">
+                                            <div class="lead_time">14시간 10분</div>
+                                            <div class="txt">직항</div>
+                                            <div class="line"></div>
+                                        </div>
+                                        <div class="detail02_3">
+                                            <div class="time">18:50</div>
+                                            <div class="city"><span>제주</span><span>CJU</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item_details_bottom">
+                                    <div class="price_area pay_option">
+                                        <div class="txt">
+                                            성인 1인
+                                            <p>/ 삼성 iD NOMAD카드 외 10개</p>
+                                        </div>
+                                        <div class="on">[대표금액]</div>
+                                        <div class="price">
+                                            <div class="option_btn">
+                                                <span class="txt">
+                                                    <em>2,283,100</em><small>원<span class="off">~</span></small>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pay_select">
+                                        <ul class="pay_list">
+                                            <li>
+                                                <div class="radiobox">
+                                                    <input id="radio01" name="card_sort" type="radio" checked="" />
+                                                    <label for="radio01"> <i class="ico"></i> <span>삼성카드</span></label>
+                                                </div>
+                                                <div>-</div>
+                                                <div><span>1,751,700</span>원</div>
+                                            </li>
+                                            <li>
+                                                <div class="radiobox">
+                                                    <input id="radio02" name="card_sort" type="radio" />
+                                                    <label for="radio02"> <i class="ico"></i> <span>삼성 iD NOMAD카드</span></label>
+                                                </div>
+                                                <div>+37,300</div>
+                                                <div><span>1,924,900</span>원</div>
+                                            </li>
+                                            <li>
+                                                <div class="radiobox">
+                                                    <input id="radio03" name="card_sort" type="radio" />
+                                                    <label for="radio03"> <i class="ico"></i> <span>삼성카드</span></label>
+                                                </div>
+                                                <div>+98,100</div>
+                                                <div><span>1,751,700</span>원</div>
+                                            </li>
+                                            <li>
+                                                <div class="radiobox">
+                                                    <input id="radio04" name="card_sort" type="radio" />
+                                                    <label for="radio04"> <i class="ico"></i> <span>삼성카드</span></label>
+                                                </div>
+                                                <div>+117,800</div>
+                                                <div><span>1,751,700</span>원</div>
+                                            </li>
+                                            <li>
+                                                <div class="radiobox">
+                                                    <input id="radio05" name="card_sort" type="radio" />
+                                                    <label for="radio05"> <i class="ico"></i> <span>삼성 iD GLOBAL카드 </span></label>
+                                                </div>
+                                                <div>+19,600</div>
+                                                <div><span>1,751,700</span>원</div>
+                                            </li>
+                                        </ul>
+                                        <div class="btn_box">
+                                            <button type="button" class="btn_type01">선택완료</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- [e] //flight_item -->
+                        </div>
+                        <!-- [e] //가는 항공편만 나올 때 -->
+
+                        <!-- [s] 오는 항공편 -->
+                        <div class="box">
+                            <div class="flight_list_tit">
+                                <div class="tit">
+                                    <div>오는 항공편</div>
+                                    <div>2024.08.31(토)</div>
+                                </div>
+                                <div class="sort popup_container">
+                                    <button type="button" class="layer_popup_btn">추천순</button>
+                                    <div class="sort_layer layer_popup">
+                                        <ul>
+                                            <li class="on">추천순</li>
+                                            <li>최저가 순</li>
+                                            <li>소요시간 적은 순</li>
+                                        </ul>
+                                    </div>
+                                    <div class="filter_btn"><span>필터</span><img src="https://m.modetour.com/icons/icon_filter_white_16.svg" alt="" /></div>
+                                </div>
+                            </div>
+                            <div class="flight_result">
+                                <span>총 <strong>49</strong>개</span>
+                                <p class="point01"><img src="https://www.modetour.com/icons/icon_check_14.svg" alt="" /> 성인 1인 왕복요금입니다.</p>
+                            </div>
+                            <!-- [s] flight_item -->
+                            <div class="flight_item">
+                                <div class="item_details_top">
+                                    <div class="detail01">
+                                        <div>
+                                            <div class="airline">
+                                                <img src="https://img.modetour.com/air/logo/ke.png" alt="" class="air_logo" />
+                                                <span class="name"><span>대한항공</span>KE5901</span>
+                                            </div>
+                                            <p>발권대행 수수료: 1,000원</p>
+                                        </div>
+                                        <div>
+                                            <div class="st01">
+                                                <span class="purple01">특가</span>
+                                                <span class="red01">잔여 9석</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="detail02">
+                                        <div class="detail02_1">
+                                            <div class="time">10:50</div>
+                                            <div class="city"><span>김포</span><span>GMP</span></div>
+                                        </div>
+                                        <div class="detail02_2">
+                                            <div class="lead_time">14시간 10분</div>
+                                            <div class="line"></div>
+                                        </div>
+                                        <div class="detail02_3">
+                                            <div class="time">18:50</div>
+                                            <div class="city"><span>제주</span><span>CJU</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item_details_bottom">
+                                    <div class="price_area pay_option">
+                                        <div class="txt">
+                                            성인 1인
+                                            <p>/ 삼성 iD NOMAD카드 외 10개</p>
+                                        </div>
+                                        <div class="on">[대표금액]</div>
+                                        <div class="price">
+                                            <div class="option_btn">
+                                                <span class="txt">
+                                                    <em>2,283,100</em><small>원<span class="off">~</span></small>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pay_select">
+                                        <ul class="pay_list">
+                                            <li>
+                                                <div class="radiobox">
+                                                    <input id="radio01" name="card_sort" type="radio" checked="" />
+                                                    <label for="radio01"> <i class="ico"></i> <span>삼성카드</span></label>
+                                                </div>
+                                                <div>-</div>
+                                                <div><span>1,751,700</span>원</div>
+                                            </li>
+                                            <li>
+                                                <div class="radiobox">
+                                                    <input id="radio02" name="card_sort" type="radio" />
+                                                    <label for="radio02"> <i class="ico"></i> <span>삼성 iD NOMAD카드</span></label>
+                                                </div>
+                                                <div>+37,300</div>
+                                                <div><span>1,924,900</span>원</div>
+                                            </li>
+                                            <li>
+                                                <div class="radiobox">
+                                                    <input id="radio03" name="card_sort" type="radio" />
+                                                    <label for="radio03"> <i class="ico"></i> <span>삼성카드</span></label>
+                                                </div>
+                                                <div>+98,100</div>
+                                                <div><span>1,751,700</span>원</div>
+                                            </li>
+                                            <li>
+                                                <div class="radiobox">
+                                                    <input id="radio04" name="card_sort" type="radio" />
+                                                    <label for="radio04"> <i class="ico"></i> <span>삼성카드</span></label>
+                                                </div>
+                                                <div>+117,800</div>
+                                                <div><span>1,751,700</span>원</div>
+                                            </li>
+                                            <li>
+                                                <div class="radiobox">
+                                                    <input id="radio05" name="card_sort" type="radio" />
+                                                    <label for="radio05"> <i class="ico"></i> <span>삼성 iD GLOBAL카드 </span></label>
+                                                </div>
+                                                <div>+19,600</div>
+                                                <div><span>1,751,700</span>원</div>
+                                            </li>
+                                        </ul>
+                                        <div class="btn_box">
+                                            <button type="button" class="btn_type01">선택완료</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- [e] //flight_item -->
+                            <!-- [s] flight_item -->
+                            <div class="flight_item">
+                                <div class="item_details_top">
+                                    <div class="detail01">
+                                        <div>
+                                            <div class="airline">
+                                                <img src="https://img.modetour.com/air/logo/ke.png" alt="" class="air_logo" />
+                                                <span class="name"><span>대한항공</span>KE5901</span>
+                                            </div>
+                                            <p class="guide01">실제운항 : 진에어</p>
+                                            <p>발권대행 수수료: 1,000원</p>
+                                        </div>
+                                        <div>
+                                            <div class="st01">
+                                                <span class="red01">잔여 9석</span>
+                                                <span class="blue01">공동운항</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="detail02">
+                                        <div class="detail02_1">
+                                            <div class="time">10:50</div>
+                                            <div class="city"><span>김포</span><span>GMP</span></div>
+                                        </div>
+                                        <div class="detail02_2">
+                                            <div class="lead_time">14시간 10분</div>
+                                            <div class="line"></div>
+                                        </div>
+                                        <div class="detail02_3">
+                                            <div class="time">18:50</div>
+                                            <div class="city"><span>제주</span><span>CJU</span></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="item_details_bottom">
+                                    <div class="price_area pay_option">
+                                        <div class="txt">
+                                            성인 1인
+                                            <p>/ 삼성 iD NOMAD카드 외 10개</p>
+                                        </div>
+                                        <div class="on">[대표금액]</div>
+                                        <div class="price">
+                                            <div class="option_btn">
+                                                <span class="txt">
+                                                    <em>2,283,100</em><small>원<span class="off">~</span></small>
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="pay_select">
+                                        <ul class="pay_list">
+                                            <li>
+                                                <div class="radiobox">
+                                                    <input id="radio01" name="card_sort" type="radio" checked="" />
+                                                    <label for="radio01"> <i class="ico"></i> <span>삼성카드</span></label>
+                                                </div>
+                                                <div>-</div>
+                                                <div><span>1,751,700</span>원</div>
+                                            </li>
+                                            <li>
+                                                <div class="radiobox">
+                                                    <input id="radio02" name="card_sort" type="radio" />
+                                                    <label for="radio02"> <i class="ico"></i> <span>삼성 iD NOMAD카드</span></label>
+                                                </div>
+                                                <div>+37,300</div>
+                                                <div><span>1,924,900</span>원</div>
+                                            </li>
+                                            <li>
+                                                <div class="radiobox">
+                                                    <input id="radio03" name="card_sort" type="radio" />
+                                                    <label for="radio03"> <i class="ico"></i> <span>삼성카드</span></label>
+                                                </div>
+                                                <div>+98,100</div>
+                                                <div><span>1,751,700</span>원</div>
+                                            </li>
+                                            <li>
+                                                <div class="radiobox">
+                                                    <input id="radio04" name="card_sort" type="radio" />
+                                                    <label for="radio04"> <i class="ico"></i> <span>삼성카드</span></label>
+                                                </div>
+                                                <div>+117,800</div>
+                                                <div><span>1,751,700</span>원</div>
+                                            </li>
+                                            <li>
+                                                <div class="radiobox">
+                                                    <input id="radio05" name="card_sort" type="radio" />
+                                                    <label for="radio05"> <i class="ico"></i> <span>삼성 iD GLOBAL카드 </span></label>
+                                                </div>
+                                                <div>+19,600</div>
+                                                <div><span>1,751,700</span>원</div>
+                                            </li>
+                                        </ul>
+                                        <div class="btn_box">
+                                            <button type="button" class="btn_type01">선택완료</button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- [e] //flight_item -->
+                        </div>
+                        <!-- [e] //오는 항공편  -->
+                    </div>
+                    <div class="notice">
+                        <p class="tit"><img src="https://m.modetour.com/icons/icon_alert_15.svg" alt="" /> 알아두세요</p>
+                        <ul>
+                            <li>잔여석과 특가요금은 실시간 변동이 있으며, 항공사 사정에 따라 항공 스케줄이 변동될 수 있습니다.</li>
+                            <li>출/도착 시각은 현지 시각기준이며 항공기 스케줄은 정부인가 조건으로 예고없이 변경될 수 있습니다.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="filter_cont">
+                    <div class="filter_tit">
+                        <div class="city">
+                            <span>서울(SEL)</span>
+                            <img src="https://m.modetour.com/icons/icon_arrow_tw_16.svg" alt="" />
+                            <span>프라하(PRG)</span>
+                        </div>
+                        <div class="close">
+                            <button type="button"><img src="https://m.modetour.com/icons/icon_x_26.svg" alt="닫기" /></button>
+                        </div>
+                    </div>
+                    <div class="filter_list">
+                        <div class="layout">
+                            <div class="all_reset">
+                                <button type="button" class="reset_btn">필터 전체 초기화</button>
+                            </div>
+                            <ul>
+                                <li>
+                                    <div class="tit">
+                                        <button type="button">가격</button>
+                                        <div class="check_list">1,769,050원 ~ 3,383,700원</div>
+                                    </div>
+                                    <div class="filter_details">
+                                        <div class="reset">
+                                            <button type="button" class="reset_btn">초기화</button>
+                                        </div>
+                                        <div class="price_range">
+                                            <div id="price_range"></div>
+                                        </div>
+                                        <p class="price_info">출발일자 기준 최저 금액<span>1,769,050</span>원 부터</p>
+                                        <p class="price_info">출발일자 기준 최고 금액<span>3,383,700</span>원 까지</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="tit">
+                                        <button type="button">항공사</button>
+                                        <div class="check_list">네덜란드 항공, 대한항공, 베트남항공, 아시아나항공, 에미레이트항공</div>
+                                    </div>
+                                    <div class="filter_details">
+                                        <div class="reset">
+                                            <button type="button" class="reset_btn">초기화</button>
+                                        </div>
+                                        <ul>
+                                            <li class="on"><span>네덜란드항공</span></li>
+                                            <li class="on"><span>대한항공</span></li>
+                                            <li><span>루프트한자</span></li>
+                                            <li><span>베트남항공</span></li>
+                                            <li><span>아시아나항공</span></li>
+                                            <li><span>에미레이트항공</span></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="tit">
+                                        <button type="button">직항/경유</button>
+                                        <div class="check_list"></div>
+                                    </div>
+                                    <div class="filter_details">
+                                        <div class="reset">
+                                            <button type="button" class="reset_btn">초기화</button>
+                                        </div>
+                                        <ul>
+                                            <li><span>직항</span></li>
+                                            <li><span>경유 1번</span></li>
+                                            <li><span>경유 2번</span></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="tit">
+                                        <button type="button">무료수하물</button>
+                                        <div class="check_list">수하물:미포함, 수하물:포함, 수하물:일부포함</div>
+                                    </div>
+                                    <div class="filter_details">
+                                        <div class="reset">
+                                            <button type="button" class="reset_btn">초기화</button>
+                                        </div>
+                                        <ul>
+                                            <li><span>포함</span></li>
+                                            <li><span>미포함</span></li>
+                                            <li><span>일부포함</span></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="tit">
+                                        <button type="button">결제조건</button>
+                                        <div class="check_list"></div>
+                                    </div>
+                                    <div class="filter_details">
+                                        <div class="reset">
+                                            <button type="button" class="reset_btn">초기화</button>
+                                        </div>
+                                        <ul>
+                                            <li><span>국민</span></li>
+                                            <li><span>롯데</span></li>
+                                            <li><span>삼성</span></li>
+                                            <li><span>삼성 iD GLOBAL</span></li>
+                                            <li><span>신한</span></li>
+                                            <li><span>특가</span></li>
+                                            <li><span>NH채움</span></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="tit">
+                                        <button type="button">요금조건</button>
+                                        <div class="check_list"></div>
+                                    </div>
+                                    <div class="filter_details">
+                                        <div class="reset">
+                                            <button type="button" class="reset_btn">초기화</button>
+                                        </div>
+                                        <ul>
+                                            <li><span>성인</span></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="tit">
+                                        <button type="button">가는 날 시간대</button>
+                                        <div class="check_list">00시 ~ 04시, 08시 ~ 12시, 08시 ~ 12시</div>
+                                    </div>
+                                    <div class="filter_details">
+                                        <div class="reset">
+                                            <button type="button" class="reset_btn">초기화</button>
+                                        </div>
+                                        <ul>
+                                            <li><span>00시 ~ 04시</span></li>
+                                            <li><span>08시 ~ 12시</span></li>
+                                            <li><span>12시 ~ 16시</span></li>
+                                            <li><span>16시 ~ 20시</span></li>
+                                            <li><span>20시 ~ 24시</span></li>
+                                        </ul>
+                                    </div>
+                                </li>
+                            </ul>
+                            <div class="btn_box">
+                                <button type="button" class="btn_type01">필터적용</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </body>
+</html>

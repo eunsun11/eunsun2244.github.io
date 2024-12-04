@@ -1,0 +1,1106 @@
+@charset "utf-8";
+
+.payment_layout {
+    padding: 0 20px 40px;
+}
+.payment_layout .border_tit {
+    font-size: 17px;
+    font-weight: 600;
+    padding-bottom: 23px;
+    border-bottom: 1px solid #d3dbd9;
+}
+.payment_layout .btn_box {
+    margin-top: 30px;
+}
+.payment_layout .button_tit button {
+    width: 100%;
+    text-align: left;
+    padding: 21px 0;
+    display: flex;
+    justify-content: space-between;
+    font-size: 17px;
+    font-weight: 600;
+    border-bottom: 1px solid #d3dbd9;
+}
+.payment_layout .button_tit .list {
+    max-height: 500px;
+    opacity: 1;
+    top: 0;
+    margin-top: 24px;
+    padding: 20px 18px;
+    border-radius: 10px;
+    box-shadow: 0 0 6px hsla(0, 0%, 7%, 0.149);
+}
+.payment_layout .button_tit .list li {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 16px;
+    font-size: 15px;
+    color: #111;
+    font-weight: 500;
+}
+.payment_layout .button_tit .list li:first-child {
+    margin-top: 0;
+}
+.payment_layout .button_tit .list li .air {
+    text-align: right;
+    margin-bottom: 5px;
+    font-size: 14px;
+    line-height: 20px;
+}
+.payment_layout .button_tit .list li .air .ant_img {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    margin-right: 5px;
+}
+.payment_layout .button_tit .list li .air .ant_img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.payment_layout .all_area {
+    margin-top: 55px;
+}
+.payment_layout .all_area ul li {
+    display: flex;
+    justify-content: space-between;
+    font-size: 16px;
+    font-weight: 600;
+    margin: 24px 0;
+}
+.payment_layout .all_area ul li span {
+    font-weight: 700 !important;
+}
+.payment_layout .all_area ul li .txt {
+    font-weight: 500;
+}
+.payment_layout .all_area .per {
+    display: flex;
+    column-gap: 20px;
+}
+.payment_layout .all_area .per a {
+    font-size: 17px;
+    font-weight: 600;
+    display: block;
+    height: 52px;
+    line-height: 52px;
+    flex: 1;
+    text-align: center;
+    border: 1px #d3dbd9 solid;
+    border-radius: 5px;
+    color: #888;
+}
+.payment_layout .all_area .per a.active {
+    color: #009c75;
+    border: 1px #009c75 solid;
+}
+.payment_layout .mile_area {
+    margin-top: 55px;
+}
+.payment_layout .mile_area .notice {
+    color: #777;
+    font-size: 13px;
+    margin-top: 10px;
+}
+.payment_layout .mile_area ul {
+    display: flex;
+    margin: 24px 0;
+}
+.payment_layout .mile_area ul li:first-child {
+    margin-right: auto;
+    border: none;
+    padding-left: 0;
+    margin-left: 0;
+}
+.payment_layout .mile_area ul li:nth-child(2) {
+    border: none;
+}
+.payment_layout .mile_area ul li {
+    font-size: 14px;
+    border-left: 1px #d3dbd9 solid;
+    padding-left: 16px;
+    margin-left: 16px;
+}
+.payment_layout .mile_area ul li span {
+    font-weight: 600;
+}
+.payment_layout .mile_area ul li .ant_img {
+    margin-left: 5px;
+}
+.payment_layout .mile_area .hide {
+    display: none;
+}
+.payment_layout .mile_area .btn_wrap button {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px #d3dbd9 solid;
+    width: 100%;
+    border-radius: 10px;
+    height: 52px;
+    margin-top: 15px;
+    padding: 0 20px;
+    font-size: 14px;
+}
+.payment_layout .mile_area .btn_wrap button:first-child {
+    margin-top: 0;
+}
+.payment_layout .mile_area .btn_wrap button span:first-child {
+    margin-right: auto;
+    font-size: 15px;
+    font-weight: 500;
+}
+.payment_layout .mile_area .btn_wrap button span.won {
+    color: #009c75;
+    font-weight: 600;
+    margin-left: 5px;
+}
+.payment_layout .pay_area {
+    margin-top: 55px;
+}
+.payment_layout .pay_area .type {
+    margin-top: 20px;
+    margin-bottom: 30px;
+    display: flex;
+    column-gap: 20px;
+}
+.payment_layout .pay_area .type > li {
+    width: 74px;
+    height: 74px;
+    border: 1px #d3dbd9 solid;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+.payment_layout .pay_area .type > li.active {
+    border: 1px #009c75 solid;
+}
+.payment_layout .pay_area .type > li a {
+    font-weight: 600;
+    color: #111;
+    font-size: 14px;
+}
+.payment_layout .pay_area .type > li a span {
+    display: inline-block;
+    width: 70px;
+    height: 36px;
+    margin: 0 auto 3px;
+}
+.payment_layout .pay_area .type > li a span img {
+    max-width: 100%;
+    max-height: 100%;
+}
+.payment_layout .pay_area .alldetailarea {
+    padding: 24px 20px;
+    background-color: #f5f6f6;
+    border-radius: 10px;
+    margin-bottom: 50px;
+    padding-bottom: 20px;
+    position: relative;
+}
+.payment_layout .pay_area .alldetailarea:after {
+    content: "";
+    display: block;
+    height: 8px;
+    background: #eee;
+    position: absolute;
+    bottom: -28px;
+    left: -20px;
+    right: -20px;
+}
+.payment_layout .pay_area .alldetailarea ul li {
+    display: flex;
+    margin-top: 20px;
+    justify-content: space-between;
+    align-items: center;
+}
+.payment_layout .pay_area .alldetailarea ul li.tour {
+    font-size: 14px !important;
+}
+.payment_layout .pay_area .alldetailarea ul li.tour .tit {
+    font-size: 14px !important;
+    font-weight: 500;
+}
+.payment_layout .pay_area .alldetailarea .tit {
+    font-size: 16px;
+    font-weight: 600;
+}
+.payment_layout .pay_area .alldetailarea .txt span {
+    font-weight: 700;
+}
+.payment_layout .pay_area .alldetailarea .all {
+    border-top: 1px #e5e7eb solid;
+    padding-top: 20px;
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.payment_layout .pay_area .alldetailarea .all .txt span {
+    color: #009c75;
+}
+.payment_layout .pay_area .alldetailarea .all_tit {
+    font-size: 15px;
+}
+.payment_layout .pay_area .tab_wrap > div {
+    display: none;
+}
+.payment_layout .pay_area .tab_wrap > div:first-child {
+    display: block;
+}
+.payment_layout .pay_area .box {
+    border-radius: 10px;
+    border: 1px #d3dbd9 solid;
+    padding: 25px 20px;
+    margin-top: 30px;
+    width: 100%;
+}
+.payment_layout .pay_area .box > div {
+    margin-top: 30px;
+}
+.payment_layout .pay_area .box > div:first-child {
+    margin-top: 0;
+}
+.payment_layout .pay_area .box .select_box {
+    width: 100%;
+}
+.payment_layout .pay_area .box input[type="text"],
+.payment_layout .pay_area .box input[type="password"] {
+    border: 1px #d3dbd9 solid;
+    font-size: 16px;
+    border-radius: 5px;
+    min-height: 52px;
+    padding: 4px 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: Pretendard;
+}
+.payment_layout .pay_area .box .type > li.active a {
+    border: 2px #009c75 solid;
+}
+.payment_layout .pay_area .box .radio_wrap {
+    display: flex;
+}
+.payment_layout .pay_area .box .radio_wrap > div {
+    margin-left: 20px;
+}
+.payment_layout .pay_area .box .radio_wrap > div:first-child {
+    margin-left: 0;
+}
+.payment_layout .pay_area .box .cardsort .notice {
+    font-size: 13px;
+    color: #ed4949;
+    margin-top: 20px;
+}
+.payment_layout .pay_area .box .inputwrap {
+    display: flex;
+    width: 100%;
+    column-gap: 10px;
+    align-items: center;
+}
+.payment_layout .pay_area .box .cardnum .inputwrap input {
+    width: 25%;
+}
+.payment_layout .pay_area .box .cardexpiry .inputwrap {
+    display: flex;
+    width: 100%;
+    column-gap: 15px;
+}
+.payment_layout .pay_area .box .monthly a {
+    font-size: 13px;
+    border-bottom: 1px #111 solid;
+    font-weight: 500;
+    margin-top: 12px;
+    display: inline-block;
+    color: #111;
+}
+.payment_layout .pay_area .box .cardpw input {
+    width: 25%;
+    text-align: center;
+}
+.payment_layout .pay_area .box .inputwrap div {
+    font-size: 13px;
+}
+.payment_layout .pay_area .box .cardowner .inputwrap {
+    flex-wrap: wrap;
+}
+.payment_layout .pay_area .box .cardowner .select_box {
+    width: calc((100% - 15px) / 2);
+}
+.payment_layout .pay_area .box .cardowner input[type="text"] {
+    width: calc((100% - 15px) / 2);
+}
+.payment_layout .pay_area .box .cardowner input.input2 {
+    width: 100%;
+    margin-top: 15px;
+}
+.payment_layout .pay_area .box .othercardpaper button {
+    width: 70px;
+    height: 52px;
+    border-radius: 5px;
+}
+.payment_layout .pay_area .box .othercardpaper button.btn_file {
+    border: 1px #111 solid;
+    background: none;
+}
+.payment_layout .pay_area .box .othercardpaper button.btn_register {
+    background: #009c75;
+    color: #fff;
+}
+.payment_layout .pay_area .box .othercardpaper input {
+    width: calc(100% - 170px);
+}
+.payment_layout .pay_area .box .othercardpaper .notice {
+    color: #ed4949;
+    font-size: 12px;
+    margin-top: 10px;
+}
+.payment_layout .pay_area .box .account p {
+    font-size: 13px;
+    color: #888888;
+    margin-top: 12px;
+}
+.payment_layout .pay_area .person_infor {
+    margin-top: 30px;
+}
+.payment_layout .pay_area .person_infor .big_tit {
+    font-size: 19px;
+    font-weight: 700;
+    margin-bottom: 30px;
+}
+.payment_layout .pay_area .person_infor .p_tit {
+    font-size: 17px;
+    font-weight: 700;
+}
+.payment_layout .pay_area .person_infor .bottom {
+    background: #f5f6f6;
+    border-radius: 10px;
+    margin-top: 30px;
+    padding: 24px 18px;
+}
+.payment_layout .pay_area .person_infor .bottom .txt1 {
+    font-size: 15px;
+    border-bottom: 1px #d3dbd9 solid;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+}
+.payment_layout .pay_area .person_infor .bottom .txt2 {
+    display: flex;
+    justify-content: space-between;
+}
+.payment_layout .pay_area .person_infor .bottom .txt2 > div:first-child {
+    font-size: 16px;
+    font-weight: 600;
+}
+.payment_layout .pay_area .person_infor .bottom .txt2 > div:last-child {
+    font-size: 19px;
+}
+.payment_layout .pay_area .person_infor .bottom .txt2 > div:last-child span {
+    color: #009c75;
+    font-weight: 700;
+    font-size: 21px;
+}
+.payment_layout .pay_area .tab_wrap > div:first-child > div.person_infor {
+    padding-top: 38px;
+    position: relative;
+}
+.payment_layout .pay_area .tab_wrap > div:first-child > div.person_infor:first-child::before {
+    content: "";
+    display: block;
+    height: 8px;
+    background: #eee;
+    position: absolute;
+    left: -20px;
+    right: -20px;
+    top: 0;
+}
+.payment_layout .pay_area .tab_wrap > div:first-child > div.person_infor:after {
+    content: "";
+    display: block;
+    height: 1px;
+    left: -20px;
+    right: -20px;
+    background: #d3dbd9;
+    top: 0;
+    position: absolute;
+}
+.payment_layout .person_infor .middle {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: -5px;
+    font-size: 14px;
+}
+.payment_layout .person_infor .middle span {
+    font-size: 14px;
+}
+.payment_layout .pay_area .person_infor .middle .select_box {
+    width: 66px;
+    height: 32px;
+    margin: 0 12px;
+}
+.payment_layout .pay_area .person_infor .middle .select_layer {
+    width: 100%;
+    height: 100%;
+    min-width: 66px;
+}
+.payment_layout .pay_area .person_infor .middle .select_box .select_layer::after {
+    right: 6px;
+    width: 15px;
+    height: 15px;
+    margin-top: -7.5px;
+    background-size: cover;
+}
+.payment_layout .pay_area .person_infor .middle .select_box .select_option {
+    top: 40px;
+}
+.payment_layout .pay_area .othercardpaper .notice {
+    color: #ed4949;
+    font-size: 12px;
+    margin-top: 10px;
+}
+.payment_layout .pay_area .business .notice {
+    color: #ed4949;
+    font-size: 12px;
+    margin-top: 10px;
+}
+.payment_layout .pay_area .business input {
+    width: 100%;
+}
+.payment_layout .left .business input[type="text"] {
+    width: 100%;
+}
+.payment_layout .left .business .notice {
+    color: #ed4949;
+    font-size: 12px;
+    margin-top: 10px;
+}
+/* [s] : 할인쿠폰창 */
+.payment_layout .coupon_wrap {
+    position: relative;
+    padding-bottom: 100px;
+}
+.payment_layout .coupon_wrap .close {
+    position: absolute;
+    right: 0;
+    top: 15px;
+    display: block;
+    width: 16px;
+    height: 16px;
+}
+.payment_layout .coupon_wrap .close img {
+    width: 100%;
+}
+.payment_layout .coupon_wrap .tit {
+    font-size: 19px;
+    font-weight: 700;
+    padding: 18px 0px;
+}
+.payment_layout .coupon_wrap .per_coupon .select_box {
+    width: 100%;
+}
+.payment_layout .coupon_wrap .per_coupon .notice {
+    font-size: 14px;
+    line-height: 20px;
+    color: #888;
+    margin-top: 10px;
+}
+.payment_layout .coupon_wrap .coupon_list {
+    margin-top: 40px;
+}
+.payment_layout .coupon_wrap .coupon_list ul li {
+    width: 100%;
+    border-width: 1px 0px 1px 1px;
+    border-color: #d3d3d3;
+    border-style: solid;
+    position: relative;
+    overflow: hidden;
+    height: 105px;
+    margin-top: 10px;
+}
+.payment_layout .coupon_wrap .coupon_list ul li:first-child {
+    margin-top: 0;
+}
+.payment_layout .coupon_wrap .coupon_list ul li:before {
+    content: "";
+    display: block;
+    width: 25px;
+    height: 25px;
+    border-width: 1px 0px 1px 1px;
+    border-color: #d3d3d3;
+    border-style: solid;
+    position: absolute;
+    right: -14px;
+    top: 50%;
+    margin-top: -14px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 5;
+}
+.payment_layout .coupon_wrap .coupon_list ul li:after {
+    content: "";
+    display: block;
+    right: 0;
+    bottom: 0;
+    top: 0;
+    position: absolute;
+    width: 1px;
+    background: #d3d3d3;
+}
+.payment_layout .coupon_wrap .coupon_list ul li a {
+    color: #111;
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+.payment_layout .coupon_wrap .coupon_list ul li i {
+    display: flex;
+    background: #fcf7ef;
+    width: 40px;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+}
+.payment_layout .coupon_wrap .coupon_list ul li i svg {
+    width: 15px;
+}
+.payment_layout .coupon_wrap .coupon_list ul li .txt_wrap {
+    height: 100%;
+    padding: 20px;
+    width: calc(100% - 40px);
+}
+.payment_layout .coupon_wrap .coupon_list .notice {
+    margin-top: 20px;
+}
+.payment_layout .coupon_wrap .coupon_list .txt1 {
+    font-size: 15px;
+}
+.payment_layout .coupon_wrap .coupon_list .txt1 span {
+    font-size: 19px;
+    font-weight: 700;
+}
+.payment_layout .coupon_wrap .coupon_list .txt2 {
+    margin-top: 5px;
+    line-height: 22px;
+    font-size: 15px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+}
+.payment_layout .coupon_wrap .coupon_list .txt3 {
+    margin-top: 5px;
+    font-size: 15px;
+}
+.payment_layout .coupon_wrap .coupon_list ul li.active {
+    border-color: #009c75;
+}
+.payment_layout .coupon_wrap .coupon_list ul li.active i {
+    background: #009c75;
+}
+.payment_layout .coupon_wrap .coupon_list ul li.active i svg {
+    fill: #fff;
+}
+.payment_layout .coupon_wrap .coupon_list ul li.active:before {
+    border-color: #009c75;
+}
+.payment_layout .coupon_wrap .coupon_list ul li.active:after {
+    background: #009c75;
+}
+.payment_layout .coupon_wrap .coupon_list .notice {
+    color: #555;
+    font-size: 15px;
+    line-height: 22px;
+}
+.payment_layout .coupon_wrap .coupon_list .notice > div {
+    position: relative;
+    padding-left: 10px;
+}
+.payment_layout .coupon_wrap .coupon_list .notice > div:before {
+    content: "";
+    display: block;
+    width: 3px;
+    height: 3px;
+    background: #555;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 9px;
+}
+.payment_layout .coupon_wrap .fix_bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #fff;
+}
+.payment_layout .coupon_wrap .fix_bottom .txt_wrap {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    background: #f8f8f8;
+}
+.payment_layout .coupon_wrap .fix_bottom .txt_wrap .tit {
+    font-size: 15px !important;
+    color: #009c75;
+}
+.payment_layout .coupon_wrap .fix_bottom .txt_wrap .txt {
+    color: #009c75;
+    margin-left: 10px;
+}
+.payment_layout .coupon_wrap .fix_bottom .txt_wrap .txt span {
+    font-size: 20px;
+    font-weight: 700;
+    color: #009c75;
+}
+.payment_layout .coupon_wrap .fix_bottom .btn_box {
+    width: 100%;
+    margin-top: 0;
+}
+.payment_layout .coupon_wrap .fix_bottom .btn_box button {
+    width: 100%;
+    height: 56px;
+    border-radius: 5px 5px 0 0;
+    border: none;
+    background: #009c75;
+    color: #fff;
+}
+.payment_layout .coupon_wrap .fix_bottom .btn_box .btn_type02 {
+    border: 1px #111 solid;
+    background: none;
+    color: #111;
+}
+.payment_layout .coupon_wrap .coupon_list .notice {
+    color: #555;
+    font-size: 15px;
+    line-height: 22px;
+}
+.payment_layout .coupon_wrap .coupon_list .notice > div {
+    position: relative;
+    padding-left: 10px;
+}
+.payment_layout .coupon_wrap .coupon_list .notice > div:before {
+    content: "";
+    display: block;
+    width: 3px;
+    height: 3px;
+    background: #555;
+    border-radius: 50%;
+    position: absolute;
+    left: 0;
+    top: 9px;
+}
+.payment_layout .coupon_wrap .usecoupon_area {
+    padding-top: 30px;
+}
+.payment_layout .coupon_wrap .usecoupon_area .tit {
+    font-size: 15px;
+    padding-bottom: 0;
+}
+.payment_layout .coupon_wrap .coupon_con {
+    background: #f8f8f8;
+    margin-top: 20px;
+    padding: 20px;
+    min-height: 105px;
+    display: flex;
+    justify-content: space-between;
+}
+.payment_layout .coupon_wrap .coupon_con p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+    flex-direction: column;
+}
+.payment_layout .coupon_wrap .coupon_con p span {
+    display: block;
+    margin-top: 10px;
+    font-weight: 400;
+    font-size: 15px;
+}
+.payment_layout .coupon_wrap .coupon_con .c_detail {
+    font-size: 15px;
+    line-height: 20px;
+    color: #555;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    width: 80%;
+    overflow: hidden;
+}
+.payment_layout .coupon_wrap .coupon_con .c_detail span {
+    font-size: 21px;
+    font-weight: 700;
+    color: #111;
+}
+.payment_layout .coupon_wrap .coupon_con .c_detail span.date {
+    font-weight: 400;
+    font-size: 15px;
+    margin-bottom: 5px;
+    display: inline-block;
+}
+.payment_layout .coupon_wrap .coupon_con button {
+    font-size: 13px;
+    border: 1px #d3d3d3 solid;
+    border-radius: 5px;
+    background: #fff;
+    height: 30px;
+    width: 75px;
+}
+/* [e] : 할인쿠폰창 */
+/* [s] : 마일리지창 */
+.payment_layout .coupon_wrap .miledetailarea {
+    background: #f8f8f8;
+    margin-top: 30px;
+    padding: 20px;
+}
+.payment_layout .coupon_wrap .miledetailarea .check {
+    padding-bottom: 30px;
+    text-align: center;
+}
+.payment_layout .coupon_wrap .miledetailarea .check p {
+    line-height: 22px;
+    font-weight: 700;
+    font-size: 15px;
+    margin-left: 14px;
+    margin: 20px 0;
+}
+.payment_layout .coupon_wrap .miledetailarea .check button {
+    margin-left: auto;
+    background: #fff;
+    border: 1px #111 solid;
+    color: #111;
+    height: 38px;
+    font-weight: 600;
+    font-size: 15px;
+}
+.payment_layout .coupon_wrap .miledetailarea .txt1 {
+    border-bottom: 1px #d3d3d3 solid;
+    padding-bottom: 15px;
+    margin-bottom: 20px;
+}
+.payment_layout .coupon_wrap .miledetailarea .txt1 > div {
+    display: flex;
+    justify-content: space-between;
+    font-size: 15px;
+    margin-top: 20px;
+}
+.payment_layout .coupon_wrap .miledetailarea .txt1 > div:first-child {
+    margin-top: 0;
+}
+.payment_layout .coupon_wrap .miledetailarea .txt1 div span:nth-child(2) {
+    font-size: 15px;
+}
+.payment_layout .coupon_wrap .miledetailarea .txt1 span em {
+    font-weight: 700;
+}
+.payment_layout .coupon_wrap .miledetailarea input[type="text"] {
+    border: 1px #d3d3d3 solid;
+    border-radius: 5px;
+    height: 50px;
+    width: 75%;
+}
+.payment_layout .coupon_wrap .miledetailarea button {
+    height: 50px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+    width: calc(100% - 75%);
+}
+.payment_layout .coupon_wrap .miledetailarea .txt2 .inputwrap {
+    display: flex;
+    justify-content: space-between;
+    column-gap: 10px;
+}
+.payment_layout .coupon_wrap .miledetailarea .txt2 ul {
+    margin-top: 5px;
+}
+.payment_layout .coupon_wrap .miledetailarea .txt2 ul li {
+    font-size: 14px;
+    color: #555;
+    margin-top: 10px;
+}
+.payment_layout .coupon_wrap .usemile_area {
+    margin-top: 20px;
+}
+.payment_layout .coupon_wrap .usemile_area p {
+    text-align: center;
+    flex-wrap: wrap;
+}
+.payment_layout .coupon_wrap .usemile_area p span {
+    display: block;
+    width: 100%;
+    font-size: 15px;
+    color: #555;
+    margin-top: 10px;
+    font-weight: 400;
+}
+.payment_layout .coupon_wrap .mile_con {
+    background: #f8f8f8;
+    margin-top: 10px;
+    padding: 20px;
+    min-height: 105px;
+    display: flex;
+    column-gap: 10px;
+    justify-content: space-between;
+}
+.payment_layout .coupon_wrap .mile_con p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 17px;
+    font-weight: 700;
+    text-align: center;
+    width: 100%;
+}
+.payment_layout .coupon_wrap .mile_con .name {
+    font-size: 14px;
+}
+.payment_layout .coupon_wrap .mile_con .c_detail {
+    font-size: 13px;
+    color: #555;
+    word-break: keep-all;
+    width: calc(100% - 225px);
+}
+.payment_layout .coupon_wrap .mile_con .c_detail span {
+    font-size: 16px;
+    font-weight: 700;
+    color: #111;
+}
+.payment_layout .coupon_wrap .mile_con button {
+    font-size: 13px;
+    border: 1px #d3d3d3 solid;
+    border-radius: 5px;
+    background: #fff;
+    height: 30px;
+    width: 75px;
+}
+.ant-empty-img-simple-g {
+    stroke: #d9d9d9;
+}
+/* [e] : 마일리지창 */
+/* [s] : 결제정보 - 무통장 */
+.payment_layout .paybigarea .tit {
+    font-size: 17px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #000;
+    border-bottom: 1px #111 solid;
+    padding-bottom: 20px;
+    margin-bottom: 20px;
+    margin-top: 50px;
+}
+.payment_layout .paybigarea .pay_detail {
+    padding-bottom: 27px;
+    border-bottom: 1px #000 solid;
+}
+.payment_layout .paybigarea .pay_detail div {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+}
+
+.payment_layout .paybigarea .pay_detail div span:first-child {
+    font-weight: 500;
+    font-size: 14px;
+    color: #000;
+    height: 21px;
+    line-height: 1px;
+    display: flex;
+    align-items: center;
+}
+.payment_layout .paybigarea .pay_detail span {
+    font-size: 15px;
+}
+.payment_layout .paybigarea .pay_detail div span em {
+    font-size: 15px;
+    color: #000;
+    font-weight: 700;
+}
+.payment_layout .paybigarea .pay_detail .all {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px #d3d3d3 solid;
+}
+.payment_layout .paybigarea .pay_detail .all span {
+    font-weight: 700 !important;
+}
+.payment_layout .paybigarea .pay_detail .all span:last-child em {
+    font-size: 19px !important;
+}
+.payment_layout .paybigarea .pay_detail div.leftover {
+    color: #009c75;
+    font-size: 17px;
+    color: #000;
+    height: 19px;
+    line-height: 1.18;
+    font-weight: 700;
+}
+.payment_layout .paybigarea .pay_detail div.leftover span {
+    color: #009c75 !important;
+    font-weight: 700 !important;
+}
+.payment_layout .paybigarea .pay_detail div.leftover span em {
+    color: #009c75 !important;
+}
+.payment_layout .paybigarea .left_overarea {
+    margin-top: 27px;
+}
+.payment_layout .paybigarea .left_overarea .l_tit {
+    font-size: 17px;
+    font-weight: 700;
+    line-height: 26px;
+    letter-spacing: normal;
+    color: #000;
+}
+.payment_layout .paybigarea .left_overarea .box {
+    background: #f8f8f8;
+    padding: 20px;
+    margin-top: 18px;
+    margin-bottom: 20px;
+}
+.payment_layout .paybigarea .left_overarea .box > div {
+    display: flex;
+    margin-top: 15px;
+    justify-content: space-between;
+}
+.payment_layout .paybigarea .left_overarea .box > div:first-child {
+    margin-top: 0;
+}
+.payment_layout .paybigarea .left_overarea .box > div span:first-child {
+    width: 110px;
+    flex: none;
+    font-weight: 400;
+    color: #555;
+    display: inline-block;
+}
+.payment_layout .paybigarea .left_overarea .box > div span:last-child {
+    font-size: 15px;
+    font-weight: 500;
+    text-align: left;
+    color: #000;
+}
+.payment_layout .paybigarea .left_overarea ul li {
+    position: relative;
+    padding-left: 5px;
+    line-height: 22px;
+    font-size: 15px;
+}
+.payment_layout .paybigarea .left_overarea ul li:before {
+    content: "";
+    display: block;
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background: #000;
+    position: absolute;
+    left: 0;
+    top: 10px;
+}
+.payment_layout .paybigarea {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: -40px;
+}
+.payment_layout .paybigarea .bottom {
+    text-align: center;
+    padding: 20px 40px;
+    background: #f8f8f8;
+    margin-left: -20px;
+    margin-right: -20px;
+    margin-top: 30px;
+}
+.payment_layout .paybigarea .bottom .btn_box {
+    margin-top: 0;
+}
+.payment_layout .complete_tit {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding-bottom: 35px;
+    position: relative;
+}
+.payment_layout .complete_tit:before {
+    content: "";
+    display: block;
+    height: 8px;
+    left: -20px;
+    right: -20px;
+    background: #f8f8f8;
+    position: absolute;
+    bottom: 0;
+}
+.payment_layout .complete_tit .c_tit {
+    font-size: 21px;
+    line-height: 24px;
+    font-weight: 700;
+    padding: 10px 0;
+}
+.payment_layout .complete_tit i {
+    display: block;
+    width: 100px;
+    margin-bottom: 20px;
+    margin: 0 auto;
+}
+.payment_layout .complete_tit p {
+    font-weight: 500;
+    line-height: 31px;
+    font-size: 21px;
+    margin-top: 15px;
+}
+/* [e] : 결제정보 - 무통장 */
+
+/* [s] : 결제정보 - 국내항공 */
+.payment_layout .pay_area .type > li .naver_pay img {
+    width: 40px;
+    height: 40px;
+}
+.payment_layout .pay_area .box .cardowner.dms_cardowner .select_box {
+    width: 100%;
+}
+.payment_layout .pay_area .box .cardowner.dms_cardowner .name {
+    display: flex;
+}
+.payment_layout .pay_area .box .cardowner.dms_cardowner .name input[type="text"] {
+    flex: 1;
+}
+.payment_layout .pay_area .box .cardowner.dms_cardowner input[type="text"] {
+    width: 100%;
+}
+.payment_layout .pay_area .box .cardowner.dms_cardowner .inputwrap + .inputwrap {
+    margin-top: 11px;
+}
+.payment_layout .guide {
+    padding: 30px 20px 40px 20px;
+    margin: 30px -20px 0 -20px;
+    background: #f5f6f6;
+}
+.payment_layout .guide li {
+    font-size: 14px;
+    color: #111;
+    line-height: 19px;
+}
+.payment_layout .guide li.red {
+    color: #ed4949;
+}
+.payment_layout .guide li + li {
+    margin-top: 10px;
+}
+.payment_layout .guide li a {
+    font-size: 14px;
+    color: #111;
+    text-decoration: underline;
+    line-height: 25px;
+}
+.payment_layout .pay_area .box .naver_pay input[type="text"] {
+    width: 100%;
+    text-align: right;
+    padding: 0 20px;
+}
+/* [e] : 결제정보 - 국내항공 */

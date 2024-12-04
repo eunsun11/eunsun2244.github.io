@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../lib/js/jquery-3.7.1.min.js"></script>
+    <script src="../lib/js/common.js"></script>
+    <link rel="stylesheet" type="text/css" href="./../lib/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="./../lib/css/air.css" />
+    <link rel="stylesheet" type="text/css" href="./../lib/css/common.css" />
+  </head>
+  <body>
+    <main>
+      <div class="rscancle rscancle_payback">
+        <div class="people_select">
+          <div class="p_tit">탑승객 선택</div>
+          <div class="chk_wrap">
+            <div class="radiobox">
+              <input id="p3_all" name="p_select3" type="radio" value="0" checked />
+              <label for="p3_all"> <i class="ico"></i> <span>탑승객 전체</span></label>
+            </div>
+            <div class="radiobox">
+              <input id="person_per" name="p_select3" value="1" type="radio" />
+              <label for="person_per"> <i class="ico"></i> <span>탑승객 선택</span></label>
+            </div>
+          </div>
+          <div class="hide_con">
+            <span class="checkbox">
+              <input id="a_1" name="pp_chk" type="checkbox" />
+              <label for="a_1"> <i class="ico"></i> <span>성인 1</span> </label>
+            </span>
+            <div class="box">
+              <div class="name">
+                <div class="s_tit">한글 이름</div>
+                <div class="inputwrap">
+                  <input type="text" value="김모두" disabled="" />
+                  <div>내국인</div>
+                </div>
+              </div>
+              <div class="en_name">
+                <div>
+                  <div class="s_tit">영문 성</div>
+                  <input type="text" value="HONG" disabled="" />
+                </div>
+                <div>
+                  <div class="s_tit">영문 이름</div>
+                  <input type="text" value="GILDONG" disabled="" />
+                </div>
+              </div>
+              <div class="birth">
+                <div class="s_tit">생년월일</div>
+                <div class="inputwrap">
+                  <input type="text" class="front" value="20240902" disabled="" />
+                  <div>여</div>
+                </div>
+              </div>
+            </div>
+            <span class="checkbox">
+              <input id="a_2" name="pp_chk" type="checkbox" />
+              <label for="a_2"> <i class="ico"></i> <span>성인 2</span> </label>
+            </span>
+            <div class="box">
+              <div class="name">
+                <div class="s_tit">한글 이름</div>
+                <div class="inputwrap">
+                  <input type="text" value="김모두" disabled="" />
+                  <div>내국인</div>
+                </div>
+              </div>
+              <div class="en_name">
+                <div>
+                  <div class="s_tit">영문 성</div>
+                  <input type="text" value="HONG" disabled="" />
+                </div>
+                <div>
+                  <div class="s_tit">영문 이름</div>
+                  <input type="text" value="GILDONG" disabled="" />
+                </div>
+              </div>
+              <div class="birth">
+                <div class="s_tit">생년월일</div>
+                <div class="inputwrap">
+                  <input type="text" class="front" value="20240902" disabled="" />
+                  <div>여</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cancle_reason">
+            <div class="c_tit">취소사유</div>
+            <div class="radio_wrap">
+              <div class="radiobox">
+                <input id="c_select01" name="cancle_select" type="radio" checked="" />
+                <label for="c_select01"> <span>여행일정이 취소된 경우</span></label>
+              </div>
+              <div class="radiobox">
+                <input id="c_select02" name="cancle_select" type="radio" />
+                <label for="c_select02"> <span>더 저렴한 요금을 검색하기 위해</span></label>
+              </div>
+              <div class="radiobox">
+                <input id="c_select03" name="cancle_select" type="radio" />
+                <label for="c_select03"> <span>출발일이 변경되어 재예약 필요</span></label>
+              </div>
+              <div class="radiobox">
+                <input id="c_select04" name="cancle_select" type="radio" />
+                <label for="c_select04"> <span>천재지변</span></label>
+              </div>
+              <div class="radiobox">
+                <input id="c_select05" name="cancle_select" type="radio" />
+                <label for="c_select05"> <span>기타</span></label>
+              </div>
+            </div>
+          </div>
+          <div class="refund_infor">
+            <div class="r_tit">환불 계좌정보</div>
+            <table>
+              <tbody>
+                <tr>
+                  <th>결제방법</th>
+                  <td>현금(가상계좌)</td>
+                </tr>
+                <tr>
+                  <th>환불요청 계좌은행</th>
+                  <td>
+                    <div class="select_box">
+                      <div class="select_layer">
+                        <div>은행선택</div>
+                      </div>
+                      <div class="select_option scroll_hidden">
+                        <ul>
+                          <li class="active"><span>은행선택</span></li>
+                          <li><span>우리은행</span></li>
+                          <li><span>국민은행</span></li>
+                          <li><span>신한은행</span></li>
+                          <li><span>카카오뱅크</span></li>
+                          <li><span>농협은행</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>예금주</th>
+                  <td>
+                    <div class="select_box">
+                      <div class="select_layer">
+                        <div>예금주</div>
+                      </div>
+                      <div class="select_option scroll_hidden">
+                        <ul>
+                          <li class="active"><span>김모두</span></li>
+                          <li><span>김투어</span></li>
+                        </ul>
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+                <tr>
+                  <th>계좌번호입력</th>
+                  <td>
+                    <div class="select_box">
+                      <div class="select_layer txt">
+                        <input type="text" placeholder="-없이 숫자만 입력" />
+                      </div>
+                    </div>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="rule_notice">
+            <div class="r_tit">모두투어 환불 수수료</div>
+            <div class="commission">
+              <div>발권 대행 수수료 (환불불가)</div>
+              <div>150,000원</div>
+            </div>
+            <ul>
+              <li class="red">* 모두투어환불수수료 결제 이후 환불진행이 시작됩니다. 환불접수 및 진행여부에 대한 담당자의 답변을 꼭 확인하시기 바랍니다.</li>
+              <li class="red">* 환불접수시 1인 (성인, 소아,유아 동일) 3만원 환불대행 수수료결제 승인 후 환불접수가 가능합니다.</li>
+              <li class="red">* 운항 취소 등의 항공사 수수료 면제조건 또는 승인오류의 경우 담당자 확인 후 승인된 수수료는 취소해 드립니다. 면제사유가 없을 경우 결제된 수수료는 반환되지 않습니다.</li>
+            </ul>
+          </div>
+          <div class="refund_rule_box">
+            <div class="top">
+              <span class="checkbox">
+                <input id="refundruleAll" name="refundruleAll" type="checkbox" />
+                <label for="refundruleAll"> <i class="ico"></i> <span>전체동의</span> </label>
+              </span>
+            </div>
+            <div class="rulebox1">
+              <div class="r_tit">환불 규정 동의</div>
+              <ul>
+                <li>
+                  <span class="checkbox">
+                    <input id="refundrule01" name="refundrule" type="checkbox" />
+                    <label for="refundrule01"> <i class="ico"></i> <span>[필수]</span> 환불 동의사항</label>
+                  </span>
+                  <button><img src="https://www.modetour.com/icons/icon_arrow_right_20.svg" alt="" /></button>
+                </li>
+                <li>
+                  <span class="checkbox">
+                    <input id="refundrule02" name="refundrule" type="checkbox" />
+                    <label for="refundrule02"> <i class="ico"></i> <span>[필수]</span> 항공사 환불수수료 규정 동의</label>
+                  </span>
+                  <button><img src="https://www.modetour.com/icons/icon_arrow_right_20.svg" alt="" /></button>
+                </li>
+                <li>
+                  <span class="checkbox">
+                    <input id="refundrule03" name="refundrule" type="checkbox" />
+                    <label for="refundrule03"> <i class="ico"></i> <span>[필수]</span> 개인정보 수집 및 이용 동의</label>
+                  </span>
+                  <button><img src="https://www.modetour.com/icons/icon_arrow_right_20.svg" alt="" /></button>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="btn_box">
+            <button type="button" class="btn_type06">환불요청</button>
+          </div>
+          <div class="refund_ing_infor">
+            <div class="r_tit">환불 진행 안내</div>
+            <ul>
+              <li>
+                <div class="top">1단계</div>
+                <div class="middle">환불 수수료 결제 및 환불 접수 완료</div>
+                <div class="bottom">*접수된 내용은 온라인 문의 확인 가능</div>
+              </li>
+              <li>
+                <div class="top">2단계</div>
+                <div class="middle">담당자 확인 후 환불 진행</div>
+                <div class="bottom">*진행상황은 카카오톡 알림톡 또는 문자를 통해 안내</div>
+              </li>
+              <li>
+                <div class="top">3단계</div>
+                <div class="middle">환불완료</div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="../lib/js/swiper.min.js"></script>
+      <script>
+        $(document).ready(function () {
+          //마이페이지 결제 전 당일예약 예약취소 탑승객 선택
+          $(".rscancle_payback .chk_wrap .radiobox input").click(function () {
+            if ($(".rscancle_payback .chk_wrap .radiobox input:checked").val() == "1") {
+              $(".rscancle_payback .hide_con").show();
+            } else if ($(".rscancle_payback .chk_wrap .radiobox input:checked").val() == "0") {
+              $(".rscancle_payback .hide_con").hide();
+            }
+          });
+        });
+      </script>
+    </main>
+  </body>
+</html>

@@ -173,13 +173,19 @@ table.guide td {
     position: fixed;
     right: 50px;
     bottom: 70px;
+}
+.fly a {
+    display: block;
     border: 1px solid #000;
     padding: 15px 30px;
     border-radius: 30px;
     background: #fff;
     font-size: 15px;
 }
-.fly:hover {
+.fly a + a {
+    margin-top: 10px;
+}
+.fly a:hover {
     background: #000;
     color: #fff;
 }

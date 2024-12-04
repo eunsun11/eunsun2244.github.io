@@ -95,7 +95,7 @@
         });
 
         // 최근 검색 슬라이드
-        var history_slide = new Swiper(".history_slide", {
+        var notice_slide = new Swiper(".history_slide", {
             observer: true,
             observeParents: true,
             slidesPerView: "auto",
@@ -162,6 +162,17 @@
                 },
                 800
             );
+            return false;
+        });
+
+        //메인팝업
+        var main_popup_slide = new Swiper(".main_popup_slide", {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            watchOverflow: true,
+        });
+        $(".main_popup .close").click(function () {
+            $(this).closest(".main_popup").hide();
             return false;
         });
     });

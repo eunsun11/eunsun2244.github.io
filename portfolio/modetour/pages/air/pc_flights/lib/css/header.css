@@ -48,7 +48,7 @@ header .header_wrap .header_cont {
 header .header_wrap .h_wrap {
     width: 1200px;
     margin: 0 auto;
-    padding-top: 22px;
+    padding-top: 21px;
 }
 header .header_main .header_search_area {
     display: flex;
@@ -798,22 +798,31 @@ header .depth_st1 li:first-child {
 header .depth_st1 li .img {
     width: 60px;
     height: 60px;
-    margin-bottom: 10px;
     background: #f5f6f6;
     border-radius: 10px;
     display: flex;
+    align-items: center;
     justify-content: center;
+}
+header .depth_st1 li .img > a {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 header .depth_st1 li span {
     color: #111;
     font-size: 14px;
+    display: block;
     margin-top: 10px;
+    text-align: center;
 }
 header .depth_st2 {
     margin: 52px 0 61px 0;
     align-items: center;
 }
-header .depth_st2 li {
+header .depth_st2 li > a {
+    display: block;
     height: 45px;
     display: flex;
     border: 1px #d3dbd9 solid;
@@ -821,7 +830,7 @@ header .depth_st2 li {
     align-items: center;
     margin-left: 10px;
 }
-header .depth_st2 li:first-child {
+header .depth_st2 li:first-child a {
     margin-left: 0;
 }
 header .depth_st2 li .img {
@@ -848,7 +857,8 @@ header .header_menu a {
     font-weight: 600;
     color: #111;
 }
-header .header_menu a:hover {
+header .header_menu a:hover,
+header .header_menu a:hover span {
     color: #009c75 !important;
 }
 header .header_menu .hamburger_menu {
@@ -936,4 +946,13 @@ header .header_menu .depth_st4 > li > a {
 header .header_menu .depth_st3 p {
     padding-bottom: 13px;
     border-bottom: 1px #111 solid;
+}
+
+header .main_logo .common_logo {
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+header .main_logo .common_logo img {
+    width: 220px;
 }

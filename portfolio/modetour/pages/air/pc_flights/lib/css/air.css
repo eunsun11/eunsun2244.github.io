@@ -3,172 +3,175 @@
 
 /* 3.상세 */
 main {
-  overflow-x: hidden;
-  overflow-y: hidden;
+    overflow-x: hidden;
+    overflow-y: hidden;
 }
 .mx-auto {
-  max-width: 1200px;
-  width: 1200px;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 60px;
+    max-width: 1200px;
+    width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 60px;
 }
 .flex {
-  display: flex;
+    display: flex;
 }
 .flightsummaryinformation {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-  position: relative;
-  margin-bottom: 60px;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    position: relative;
+    margin-bottom: 60px;
 }
 .flightsummaryinformation .background {
-  position: absolute;
-  z-index: -1;
-  background-color: #f5f6f6;
-  top: 0;
-  height: 100%;
-  width: 100vw;
-  left: calc((100vw - 100%) / -2);
+    position: absolute;
+    z-index: -1;
+    background-color: #f5f6f6;
+    top: 0;
+    height: 100%;
+    width: 100vw;
+    left: calc((100vw - 100%) / -2);
 }
 .reserve_cont_area .tit_box {
-  font-size: 26px;
-  font-weight: 700;
-  line-height: 34px;
-  margin-bottom: 20px;
-  display: flex;
-  justify-content: space-between;
+    font-size: 26px;
+    font-weight: 700;
+    line-height: 34px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
 }
 .reserve_cont_area .com_tit {
-  font-weight: 700;
-  line-height: 1.25rem;
-  font-size: 20px;
-  height: 25px;
-  margin-bottom: 1.25rem;
+    font-weight: 700;
+    line-height: 1.25rem;
+    font-size: 20px;
+    height: 25px;
+    margin-bottom: 1.25rem;
 }
 .reserve_cont_area .flightsummaryinformation .card_box {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 0 18px;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0 18px;
 }
 .reserve_cont_area .flightsummaryinformation .card_box .card {
-  width: 388px;
+    width: 388px;
 }
 .reserve_cont_area .flightsummaryinformation .card_box .card:nth-child(4) {
-  margin-top: 25px;
+    margin-top: 25px;
 }
 .reserve_cont_area .flightsummaryinformation .card_in {
-  background: #fff;
-  border: 1px solid #d3dbd9;
-  border-radius: 10px;
-  padding: 20px 24px;
-  background-color: #fff;
-  height: 155px;
+    background: #fff;
+    border: 1px solid #d3dbd9;
+    border-radius: 10px;
+    padding: 20px 24px;
+    background-color: #fff;
+    height: 155px;
 }
 .reserve_cont_area .flightsummaryinformation .card_tit {
-  line-height: 20px;
-  font-weight: 700;
-  font-size: 17px;
-  height: 25px;
-  margin-bottom: 10px;
+    line-height: 20px;
+    font-weight: 700;
+    font-size: 17px;
+    height: 25px;
+    margin-bottom: 10px;
+}
+.reserve_cont_area .flightsummaryinformation .card_tit .st01 {
+    margin-left: 5px;
 }
 .reserve_cont_area .flightsummaryinformation .card_tit2 {
-  display: flex;
-  font-size: 16px;
-  margin-bottom: 6px;
-  line-height: 19px;
+    display: flex;
+    font-size: 16px;
+    margin-bottom: 6px;
+    line-height: 19px;
 }
 .reserve_cont_area .flightsummaryinformation .card_tit2 > div:nth-child(2) {
-  position: relative;
-  display: inline-block;
-  margin-right: 0.5rem;
-  margin-left: 0.5rem;
+    position: relative;
+    display: inline-block;
+    margin-right: 0.5rem;
+    margin-left: 0.5rem;
 }
 .reserve_cont_area .flightsummaryinformation .card_tit3 {
-  font-weight: 700;
-  text-align: left;
-  font-size: 16px;
-  margin-bottom: 0.75rem;
+    font-weight: 700;
+    text-align: left;
+    font-size: 16px;
+    margin-bottom: 0.75rem;
 }
 .reserve_cont_area .flightsummaryinformation .card_air {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 .reserve_cont_area .flightsummaryinformation .card_air .ant_img {
-  display: inline-block;
-  width: 18px;
-  height: 18px;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
 }
 .reserve_cont_area .flightsummaryinformation .card_air .ant_img img {
-  min-width: 100%;
-  max-width: 100%;
-  min-height: 100%;
-  max-height: 100%;
-  object-fit: contain;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    object-fit: contain;
 }
 .reserve_cont_area .air_name {
-  font-weight: 600;
-  font-size: 14px;
-  margin-left: 0.25rem;
+    font-weight: 600;
+    font-size: 14px;
+    margin-left: 0.25rem;
 }
 .reserve_cont_area .flightsummaryinformation .card_add {
-  display: flex;
-  margin-top: 20px;
-  gap: 0 18px;
+    display: flex;
+    margin-top: 20px;
+    gap: 0 18px;
 }
 .reserve_cont_area .flightsummaryinformation .card_add .add {
-  display: flex;
-  width: 388px;
+    display: flex;
+    width: 388px;
 }
 .reserve_cont_area .flightsummaryinformation .card_add .add > div:nth-child(1) {
-  font-size: 14px;
-  font-weight: 600;
-  line-height: 16px;
-  min-width: 60px;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 16px;
+    min-width: 60px;
 }
 .reserve_cont_area .flightsummaryinformation .card_add .add > div:nth-child(2) {
-  font-size: 14px;
-  line-height: 20px;
-  color: #555555;
-  margin-left: 8px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #555555;
+    margin-left: 8px;
 }
 .reserve_cont_area .flightsummaryinformation .card_add span {
-  font-weight: 700;
+    font-weight: 700;
 }
 .reserve_cont_area .flightsummaryinformation .card.flex {
-  display: flex;
-  gap: 0 18px;
+    display: flex;
+    gap: 0 18px;
 }
 .reserve_cont_area .flightsummaryinformation .card.flex > div {
-  width: 185px;
-  height: 155px;
-  background: #fff;
-  border-radius: 10px;
-  border: 1px solid #d3dbd9;
+    width: 185px;
+    height: 155px;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #d3dbd9;
 }
 .reserve_cont_area .flightsummaryinformation .card.flex > div {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 .reserve_cont_area .flightsummaryinformation .card.flex .ant_img {
-  width: 40px;
-  height: 40px;
+    width: 40px;
+    height: 40px;
 }
 .reserve_cont_area .flightsummaryinformation .card.flex span {
-  line-height: 18px;
-  font-weight: 600;
-  font-size: 15px;
-  margin-top: 16px;
-  padding-left: 15px;
-  padding-right: 15px;
-  word-break: keep-all;
+    line-height: 18px;
+    font-weight: 600;
+    font-size: 15px;
+    margin-top: 16px;
+    padding-left: 15px;
+    padding-right: 15px;
+    word-break: keep-all;
 }
 .reserve_cont_area .reserve_btn {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
 }
 /* .reserve_cont_area .reserve_btn button {
   background: #009c75;
@@ -185,15 +188,15 @@ main {
   background: #278167;
 } 삭제 */
 .reserve_cont_area .payment .payment_box {
-  background: #f5f6f6;
-  padding-top: 30px;
-  padding-bottom: 30px;
-  padding-left: 2.5rem;
-  padding-right: 2.5rem;
+    background: #f5f6f6;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    padding-left: 2.5rem;
+    padding-right: 2.5rem;
 }
 .reserve_cont_area .payment_box .top {
-  display: flex;
-  gap: 0.5rem;
+    display: flex;
+    gap: 0.5rem;
 }
 /* .reserve_cont_area .payment_box .top > div {
   background: #fff;
@@ -211,223 +214,224 @@ main {
   cursor: pointer;
 } 삭제 */
 .reserve_cont_area .payment_box .card {
-  line-height: 19px;
-  font-weight: 500;
-  font-size: 18px;
-  height: 22px;
-  margin-bottom: 0.5rem;
-  text-align: right;
+    line-height: 19px;
+    font-weight: 500;
+    font-size: 18px;
+    height: 22px;
+    margin-bottom: 0.5rem;
+    text-align: right;
 }
 .reserve_cont_area .payment_box .num {
-  text-align: right;
-  line-height: 26px;
-  font-size: 22px;
+    text-align: right;
+    line-height: 26px;
+    font-size: 22px;
 }
 .reserve_cont_area .payment_box .num span {
-  font-weight: 700;
-  font-size: 26px;
-  color: #009c75;
+    font-weight: 700;
+    font-size: 26px;
+    color: #009c75;
 }
 .reserve_cont_area .detail {
-  margin-top: 2.5rem;
-  padding-top: 2.5rem;
-  border-top: 2px solid #e5e7eb;
+    margin-top: 2.5rem;
+    padding-top: 2.5rem;
+    border-top: 2px solid #e5e7eb;
 }
 .reserve_cont_area .detail .com_tit {
-  margin-bottom: 30px;
+    margin-bottom: 30px;
 }
 .reserve_cont_area .detail .detail_in {
-  display: flex;
-  align-items: stretch;
-  flex-wrap: wrap;
+    display: flex;
+    align-items: stretch;
+    flex-wrap: wrap;
 }
 .reserve_cont_area .detail .section_tab {
-  border-bottom: 1px solid #e5e7eb;
-  position: relative;
-  margin-bottom: 40px;
-  width: 100%;
+    border-bottom: 1px solid #e5e7eb;
+    position: relative;
+    margin-bottom: 40px;
+    width: 100%;
 }
 .reserve_cont_area .detail .section_tab .bar {
-  position: absolute;
-  width: 33.333%;
-  height: 2px;
-  background: #111;
-  left: 0;
-  transition: width 0.3s, left 0.3s, right 0.3s;
+    position: absolute;
+    width: 33.333%;
+    height: 2px;
+    background: #111;
+    left: 0;
+    transition: width 0.3s, left 0.3s, right 0.3s;
 }
 .reserve_cont_area .detail .section_tab .tab_in {
-  display: flex;
+    display: flex;
 }
 .reserve_cont_area .detail .section_tab .tab_in a {
-  flex: 1;
-  text-decoration: none;
-  text-align: center;
-  color: #aaa;
-  font-size: 18px;
-  font-weight: 600;
-  padding: 24px 0;
+    flex: 1;
+    text-decoration: none;
+    text-align: center;
+    color: #aaa;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 24px 0;
 }
 .reserve_cont_area .detail .section_tab .tab_in a.on {
-  color: #111;
+    color: #111;
 }
 .reserve_cont_area .detail .left {
-  padding-right: 80px;
+    padding-right: 80px;
 }
 .reserve_cont_area .detail .right {
-  padding-left: 80px;
+    padding-left: 80px;
 }
 .reserve_cont_area .detail .right .box {
-  position: relative;
+    position: relative;
 }
 .reserve_cont_area .detail .right .box:before {
-  content: "";
-  display: block;
-  width: 1px;
-  height: 100%;
-  background: #e5e7eb;
-  top: 0;
-  left: -80px;
-  position: absolute;
+    content: "";
+    display: block;
+    width: 1px;
+    height: 100%;
+    background: #e5e7eb;
+    top: 0;
+    left: -80px;
+    position: absolute;
 }
 .reserve_cont_area .detail .detail_in > div {
-  flex: 1;
+    flex: 1;
 }
 .reserve_cont_area .detail .detail_in div.tab_wrap > div {
-  display: none;
+    display: none;
 }
 .reserve_cont_area .detail .detail_in div.tab_wrap > div:first-child {
-  display: block;
+    display: block;
 }
 .reserve_cont_area .detail .l_tit,
 .reserve_cont_area .detail .r_tit {
-  font-size: 18px;
-  font-weight: 700;
-  margin-bottom: 30px;
+    font-size: 18px;
+    font-weight: 700;
+    margin-bottom: 30px;
 }
 .reserve_cont_area .detail .box {
-  max-width: 520px;
-  border-radius: 10px;
-  padding: 40px 60px;
-  border: 1px solid #e5e7eb;
-  box-shadow: 0 0 7px rgba(64, 65, 65, 0.1);
+    max-width: 520px;
+    border-radius: 10px;
+    padding: 40px 60px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 0 7px rgba(64, 65, 65, 0.1);
 }
 .reserve_cont_area .detail .sub_box {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 40px;
 }
 .reserve_cont_area .detail .sub_box .blue,
 .reserve_cont_area .detail .sub_box .red {
-  display: flex;
-  gap: 0 8px;
+    display: flex;
+    gap: 0 8px;
 }
 .reserve_cont_area .detail .sub_box span {
-  display: inline-block;
-  font-size: 13px;
-  font-weight: 600;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 7px;
-  padding-bottom: 7px;
-  border-radius: 5px;
+    display: inline-block;
+    font-size: 13px;
+    font-weight: 600;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 7px;
+    padding-bottom: 7px;
+    border-radius: 5px;
 }
 .reserve_cont_area .detail .sub_box .blue span {
-  color: #0175e9;
-  border: 1px #0175e9 solid;
+    color: #0175e9;
+    border: 1px #0175e9 solid;
 }
 .reserve_cont_area .detail .sub_box .red span {
-  color: #ed4949;
-  border: 1px #ed4949 solid;
+    color: #ed4949;
+    border: 1px #ed4949 solid;
 }
 .reserve_cont_area .info_caution {
-  border-top: 1px solid #e5e7eb;
-  margin-top: 40px;
-  margin-bottom: 60px;
-  padding-top: 40px;
+    border-top: 1px solid #e5e7eb;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    padding-top: 40px;
 }
 .reserve_cont_area .info_caution .tit {
-  display: flex;
-  margin-bottom: 20px;
+    display: flex;
+    margin-bottom: 20px;
 }
 .reserve_cont_area .info_caution .tit span {
-  font-weight: 700;
-  font-size: 20px;
-  margin-right: 10px;
+    font-weight: 700;
+    font-size: 20px;
+    margin-right: 10px;
 }
 .reserve_cont_area .info_caution p {
-  font-size: 15px;
-  line-height: 19px;
-  color: #555555;
-  margin-top: 10px;
-  margin-bottom: 30px;
+    font-size: 15px;
+    line-height: 19px;
+    color: #555555;
+    margin-top: 10px;
+    margin-bottom: 30px;
 }
 .reserve_cont_area .info_caution p.p_notice {
-  color: #111;
-  margin-top: 0;
-  margin-bottom: 0;
+    color: #111;
+    margin-top: 0;
+    margin-bottom: 0;
+    line-height: 24px;
 }
 .reserve_cont_area .checkbox_area .checkbox {
-  display: flex;
-  align-items: center;
-  position: relative;
-  height: 66px;
-  background: #f5f6f6;
-  padding-left: 30px;
-  border-radius: 10px;
-  padding-right: 30px;
-  margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    height: 66px;
+    background: #f5f6f6;
+    padding-left: 30px;
+    border-radius: 10px;
+    padding-right: 30px;
+    margin-bottom: 12px;
 }
 .reserve_cont_area .checkbox_area .checkbox input[type="checkbox"] {
-  position: absolute;
-  left: 0;
-  height: 0;
-  width: 0;
-  height: 0;
-  opacity: 0;
+    position: absolute;
+    left: 0;
+    height: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
 }
 .reserve_cont_area .checkbox_area .checkbox label {
-  padding-left: 35px;
-  font-size: 14px;
-  color: #16171d;
-  vertical-align: top;
-  line-height: 26px;
-  height: 26px;
-  cursor: pointer;
-  position: relative;
+    padding-left: 35px;
+    font-size: 14px;
+    color: #16171d;
+    vertical-align: top;
+    line-height: 26px;
+    height: 26px;
+    cursor: pointer;
+    position: relative;
 }
 .reserve_cont_area .checkbox_area .checkbox .ico {
-  position: absolute;
-  left: 0;
-  top: 4px;
-  width: 18px;
-  height: 18px;
-  border-radius: 18px;
-  transition: all 0.2s;
-  border: none;
-  background: none; /* 추가 */
+    position: absolute;
+    left: 0;
+    top: 4px;
+    width: 18px;
+    height: 18px;
+    border-radius: 18px;
+    transition: all 0.2s;
+    border: none;
+    background: none; /* 추가 */
 }
 .reserve_cont_area .checkbox_area .checkbox input + label .ico::after {
-  position: absolute;
-  top: -1px;
-  left: -1px;
-  width: 100%;
-  height: 100%;
-  border-radius: 100%;
-  visibility: hidden;
-  content: "";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    visibility: hidden;
+    content: "";
 }
 .reserve_cont_area .checkbox_area .checkbox input + label .ico::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 26px;
-  height: 26px;
-  background: url("https://www.modetour.com/icons/icon_check_26.svg") no-repeat center 0 / cover;
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 26px;
+    height: 26px;
+    background: url("https://www.modetour.com/icons/icon_check_26.svg") no-repeat center 0 / cover;
 }
 .reserve_cont_area .checkbox_area .checkbox input:checked + label .ico::before {
-  background-image: url("https://www.modetour.com/icons/icon_check_26_gray.svg");
+    background-image: url("https://www.modetour.com/icons/icon_check_26_gray.svg");
 }
 /* .reserve_cont_area .radiobox input[type="radio"] {
   position: absolute;
@@ -507,251 +511,254 @@ main {
 } */
 /* 예약 1단계*/
 .reserve_cont_area .tit_box .progressbar {
-  display: flex;
-  width: 300px;
+    display: flex;
+    width: 300px;
 }
 .reserve_cont_area .tit_box .progressbar li {
-  list-style: none;
-  position: relative;
-  text-align: center;
-  vertical-align: middle;
-  font-weight: 600;
-  font-size: 13px;
-  display: table-cell;
-  color: #111;
-  height: 50px;
-  margin-bottom: 0;
-  flex: 1;
-  height: 50px;
+    list-style: none;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: 600;
+    font-size: 13px;
+    display: table-cell;
+    color: #111;
+    height: 50px;
+    margin-bottom: 0;
+    flex: 1;
+    height: 50px;
 }
 .reserve_cont_area .tit_box .progressbar li:before {
-  border-radius: 50%;
-  display: block;
-  width: 24px;
-  height: 24px;
-  text-align: center;
-  margin: 0 auto;
-  line-height: 24px;
-  border: 1px solid #d3dbd9;
-  color: #d3dbd9;
-  background: #fff;
+    border-radius: 50%;
+    display: block;
+    width: 24px;
+    height: 24px;
+    text-align: center;
+    margin: 0 auto;
+    line-height: 24px;
+    border: 1px solid #d3dbd9;
+    color: #d3dbd9;
+    background: #fff;
 }
 .reserve_cont_area .tit_box .progressbar li.active {
-  color: #009c75;
+    color: #009c75;
 }
 .reserve_cont_area .tit_box .progressbar li.active:before {
-  content: "";
-  color: #fff;
-  background: #009c75;
-  border: 1px #009c75 solid;
+    content: "";
+    color: #fff;
+    background: #009c75;
+    border: 1px #009c75 solid;
 }
 .reserve_cont_area .tit_box .progressbar li:nth-child(1):before {
-  content: "1";
+    content: "1";
 }
 .reserve_cont_area .tit_box .progressbar li:nth-child(1):after {
-  background: #d3dbd9;
-  content: "";
-  height: 1px;
-  left: 50%;
-  position: absolute;
-  top: 13px;
-  width: 100%;
-  z-index: -1;
+    background: #d3dbd9;
+    content: "";
+    height: 1px;
+    left: 50%;
+    position: absolute;
+    top: 13px;
+    width: 100%;
+    z-index: -1;
 }
 .reserve_cont_area .tit_box .progressbar li:nth-child(2):before {
-  content: "2";
+    content: "2";
 }
 .reserve_cont_area .finalflightinfor {
-  padding-top: 2.5rem;
-  padding-bottom: 2.5rem;
-  position: relative;
-  margin-bottom: 25px;
-  display: flex;
-  justify-content: space-between;
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    position: relative;
+    margin-bottom: 25px;
+    display: flex;
+    justify-content: space-between;
 }
 .reserve_cont_area .finalflightinfor .background {
-  position: absolute;
-  z-index: -1;
-  background-color: #f5f6f6;
-  top: 0;
-  height: 100%;
-  width: 100vw;
-  left: calc((100vw - 100%) / -2);
+    position: absolute;
+    z-index: -1;
+    background-color: #f5f6f6;
+    top: 0;
+    height: 100%;
+    width: 100vw;
+    left: calc((100vw - 100%) / -2);
 }
 .reserve_cont_area .finalcard {
-  min-width: 80%;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
+    min-width: 80%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+.reserve_cont_area .finalcard .st01 {
+    margin-left: 10px;
 }
 .reserve_cont_area .finalcard .card {
-  padding-top: 1.25rem;
-  padding-bottom: 1.25rem;
-  padding-left: 30px;
-  padding-right: 30px;
-  border: 1px #d3dbd9 solid;
-  border-radius: 10px;
-  background: #fff;
-  min-height: 92px;
+    padding-top: 1.25rem;
+    padding-bottom: 1.25rem;
+    padding-left: 30px;
+    padding-right: 30px;
+    border: 1px #d3dbd9 solid;
+    border-radius: 10px;
+    background: #fff;
+    min-height: 92px;
 }
 .reserve_cont_area .finalcard .card .top {
-  line-height: 1.25rem;
-  font-weight: 700;
-  font-size: 1rem;
-  height: 1.25rem;
-  margin-bottom: 6px;
+    line-height: 1.25rem;
+    font-weight: 700;
+    font-size: 1rem;
+    height: 1.25rem;
+    margin-bottom: 6px;
 }
 .reserve_cont_area .finalcard .card .middle {
-  display: flex;
-  height: 22px;
-  line-height: 21px;
-  align-items: center;
-  margin-bottom: 10px;
+    display: flex;
+    height: 22px;
+    line-height: 21px;
+    align-items: center;
+    margin-bottom: 10px;
 }
 .reserve_cont_area .finalcard .card .middle .left,
 .reserve_cont_area .finalcard .card .middle .right {
-  display: flex;
-  font-size: 1.125rem;
-  font-weight: 500;
-  line-height: 21px;
-  height: 22px;
+    display: flex;
+    font-size: 1.125rem;
+    font-weight: 500;
+    line-height: 21px;
+    height: 22px;
 }
 .reserve_cont_area .finalcard .card .middle .left > div:nth-child(2) {
-  margin-left: 8px;
-  margin-right: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    margin-left: 8px;
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .reserve_cont_area .finalcard .card .middle .left > div:nth-child(2) span {
-  display: block;
-  height: 100%;
+    display: block;
+    height: 100%;
 }
 .reserve_cont_area .finalcard .card .middle .right {
-  font-size: 1rem;
-  line-height: 1.5rem;
-  margin-left: 20px;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    margin-left: 20px;
 }
 .reserve_cont_area .finalcard .card .middle .right img {
-  padding-right: 5px;
+    padding-right: 5px;
 }
 .reserve_cont_area .finalcard .card .middle .right > div {
-  display: flex;
-  align-items: center;
-  position: relative;
+    display: flex;
+    align-items: center;
+    position: relative;
 }
 .reserve_cont_area .finalcard .card .middle .right > div:first-child {
-  padding-right: 18px;
-  margin-right: 10px;
+    padding-right: 18px;
+    margin-right: 10px;
 }
 .reserve_cont_area .finalcard .card .middle .right > div:first-child:before {
-  content: "|";
-  position: absolute;
-  right: 0;
+    content: "|";
+    position: absolute;
+    right: 0;
 }
 .reserve_cont_area .finalcard .card .bottom {
-  display: flex;
-  align-items: center;
+    display: flex;
+    align-items: center;
 }
 .reserve_cont_area .finalcard .card .bottom .air {
-  display: flex;
-  color: #111;
-  font-weight: 600;
-  line-height: 19px;
-  position: relative;
-  padding-right: 10px;
-  margin-right: 10px;
+    display: flex;
+    color: #111;
+    font-weight: 600;
+    line-height: 19px;
+    position: relative;
+    padding-right: 10px;
+    margin-right: 10px;
 }
 .reserve_cont_area .finalcard .card .bottom .air:after {
-  content: "";
-  width: 2px;
-  height: 2px;
-  border-radius: 50%;
-  background: #555555;
-  position: absolute;
-  right: 0;
-  top: 50%;
-  margin-top: -1px;
+    content: "";
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background: #555555;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -1px;
 }
 .reserve_cont_area .finalcard .card .bottom .ant_img {
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  margin-right: 8px;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
 }
 .reserve_cont_area .finalcard .card .bottom .ant_img img {
-  min-width: 100%;
-  max-width: 100%;
-  min-height: 100%;
-  max-height: 100%;
-  object-fit: contain;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    object-fit: contain;
 }
 .reserve_cont_area .finalcard .card .bottom .day {
-  color: #555555;
-  position: relative;
+    color: #555555;
+    position: relative;
 }
 .reserve_cont_area .finalcard .card .bottom .luggage {
-  font-weight: 700;
-  color: #888;
-  position: relative;
-  padding-left: 10px;
-  margin-left: 10px;
+    font-weight: 700;
+    color: #888;
+    position: relative;
+    padding-left: 10px;
+    margin-left: 10px;
 }
 .reserve_cont_area .finalcard .card .bottom .luggage:before {
-  content: "";
-  width: 2px;
-  height: 2px;
-  border-radius: 50%;
-  background: #555555;
-  position: absolute;
-  left: 0;
-  top: 7px;
+    content: "";
+    width: 2px;
+    height: 2px;
+    border-radius: 50%;
+    background: #555555;
+    position: absolute;
+    left: 0;
+    top: 7px;
 }
 /* [s] : 다구간시 레이아웃 css */
 .reserve_cont_area .finalcard.multi .card {
-  position: relative;
+    position: relative;
 }
 .reserve_cont_area .finalcard.multi .card .top {
-  position: absolute;
-  left: 30px;
-  top: 21px;
+    position: absolute;
+    left: 30px;
+    top: 21px;
 }
 .reserve_cont_area .finalcard.multi .card .middle,
 .reserve_cont_area .finalcard.multi .card .bottom {
-  margin-left: 120px;
+    margin-left: 120px;
 }
 .reserve_cont_area .finalcard.multi .card .middle.on,
 .reserve_cont_area .finalcard.multi .card .bottom.on {
-  margin-left: 0;
+    margin-left: 0;
 }
 /* [e] : 다구간시 레이아웃 css */
 .reserve_cont_area .finalcard .pay_card {
-  text-align: right;
-  margin-top: 24px;
+    text-align: right;
+    margin-top: 24px;
 }
 .reserve_cont_area .finalcard .pay_card .card_tit {
-  line-height: 19px;
-  font-weight: 500;
-  font-size: 1.125rem;
-  height: 22px;
+    line-height: 19px;
+    font-weight: 500;
+    font-size: 1.125rem;
+    height: 22px;
 }
 .reserve_cont_area .finalcard .pay_card .pay {
-  font-size: 22px;
-  height: 32px;
-  font-weight: 500;
-  margin-top: 8px;
+    font-size: 22px;
+    height: 32px;
+    font-weight: 500;
+    margin-top: 8px;
 }
 .reserve_cont_area .finalcard .pay_card .pay span {
-  color: #009c75;
-  font-weight: 700;
+    color: #009c75;
+    font-weight: 700;
 }
 .reserve_cont_area .finalcard .pay_detail {
-  border-top: 1px solid #e5e7eb;
-  padding-top: 24px;
-  margin-top: 24px;
-  display: flex;
-  justify-content: end;
-  gap: 0.5rem;
+    border-top: 1px solid #e5e7eb;
+    padding-top: 24px;
+    margin-top: 24px;
+    display: flex;
+    justify-content: end;
+    gap: 0.5rem;
 }
 /* .reserve_cont_area .finalcard .pay_detail > div {
   background: #fff;
@@ -769,1461 +776,1834 @@ main {
   cursor: pointer;
 } */
 .reserve_cont_area .detail_btn {
-  display: flex;
-  justify-content: end;
+    display: flex;
+    justify-content: end;
 }
 .reserve_cont_area .detail_btn button {
-  background: none;
-  color: #888888;
-  font-weight: 500;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  display: inline-block;
-  padding-right: 25px;
-  position: relative;
+    background: none;
+    color: #888888;
+    font-weight: 500;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    display: inline-block;
+    padding-right: 25px;
+    position: relative;
 }
 .reserve_cont_area .detail_btn button:before {
-  content: "";
-  position: absolute;
-  top: 3px;
-  right: 0;
-  background: url(https://www.modetour.com/icons/icon__18.svg) right center no-repeat;
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  transform: rotate(-180deg);
+    content: "";
+    position: absolute;
+    top: 3px;
+    right: 0;
+    background: url(https://www.modetour.com/icons/icon__18.svg) right center no-repeat;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    transform: rotate(-180deg);
 }
 .reserve_cont_area .detail_btn.on button:before {
-  transform: rotate(0deg);
+    transform: rotate(0deg);
 }
 .reserve_cont_area .ruleagree {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 60px;
-  margin-bottom: 60px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 60px;
+    margin-bottom: 60px;
 }
 .reserve_cont_area .ruleagree > div {
-  width: 520px;
+    width: 520px;
 }
 .reserve_cont_area .ruleagree .tit {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #111;
-  margin-bottom: 30px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 30px;
 }
 .reserve_cont_area .ruleagree .top span {
-  font-weight: 700;
-  font-size: 1.125rem;
+    font-weight: 700;
+    font-size: 1.125rem;
 }
 .reserve_cont_area .ruleagree .checkbox {
-  display: flex;
-  align-items: center;
-  position: relative;
-  border-radius: 10px;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-radius: 10px;
 }
 .reserve_cont_area .ruleagree .checkbox input[type="checkbox"] {
-  position: absolute;
-  left: 0;
-  height: 0;
-  width: 0;
-  height: 0;
-  opacity: 0;
+    position: absolute;
+    left: 0;
+    height: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
 }
 .reserve_cont_area .ruleagree .checkbox label {
-  padding-left: 35px;
-  font-size: 14px;
-  color: #16171d;
-  vertical-align: top;
-  line-height: 26px;
-  height: 26px;
-  cursor: pointer;
-  position: relative;
+    padding-left: 35px;
+    font-size: 14px;
+    color: #16171d;
+    vertical-align: top;
+    line-height: 26px;
+    height: 26px;
+    cursor: pointer;
+    position: relative;
 }
 .reserve_cont_area .ruleagree .checkbox .ico {
-  position: absolute;
-  left: 0;
-  top: 0px;
-  width: 25px;
-  height: 25px;
-  border-radius: 18px;
-  transition: all 0.2s;
-  background: #fff;
-  border: 1px #d3dbd9 solid;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    width: 25px;
+    height: 25px;
+    border-radius: 18px;
+    transition: all 0.2s;
+    background: #fff;
+    border: 1px #d3dbd9 solid;
 }
 .reserve_cont_area .ruleagree input + label .ico::after {
-  position: absolute;
-  top: -1px;
-  left: -1px;
-  width: 100%;
-  height: 100%;
-  border-radius: 100%;
-  visibility: hidden;
-  content: "";
-  border-color: #00d9a3; /* 추가 */
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    visibility: hidden;
+    content: "";
+    border-color: #00d9a3; /* 추가 */
 }
 .reserve_cont_area .ruleagree input + label .ico::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 10px;
-  height: 7px;
-  background: url("https://www.modetour.com/icons/ico-check_gray.svg") no-repeat center 0 / contain;
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 7px;
+    background: url("https://www.modetour.com/icons/ico-check_gray.svg") no-repeat center 0 / contain;
 }
 .reserve_cont_area .ruleagree input:checked + label .ico {
-  background-color: #00d9a3;
+    background-color: #00d9a3;
 }
 .reserve_cont_area .ruleagree input:checked + label .ico::before {
-  background-image: url("https://www.modetour.com/icons/ico-check_white.svg");
+    background-image: url("https://www.modetour.com/icons/ico-check_white.svg");
 }
 .reserve_cont_area .ruleagree .r_tit {
-  font-weight: 600;
-  line-height: 1rem;
-  margin-bottom: 1.5rem;
-  font-size: 1.125rem;
+    font-weight: 600;
+    line-height: 1rem;
+    margin-bottom: 1.5rem;
+    font-size: 1.125rem;
 }
 .reserve_cont_area .ruleagree .rulebox1 {
-  border-top: 1px #d3dbd9 solid;
-  padding-top: 24px;
-  margin-top: 24px;
+    border-top: 1px #d3dbd9 solid;
+    padding-top: 24px;
+    margin-top: 24px;
 }
 .reserve_cont_area .ruleagree .rulebox1 ul {
-  display: flex;
-  flex-direction: column;
-  row-gap: 18px;
+    display: flex;
+    flex-direction: column;
+    row-gap: 18px;
 }
 .reserve_cont_area .ruleagree .rulebox1 ul li {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 .reserve_cont_area .ruleagree .rulebox1 ul li button {
-  background: none;
+    background: none;
 }
 .reserve_cont_area .ruleagree .rulebox1 span {
-  color: #009c75;
-  font-weight: 600;
+    color: #009c75;
+    font-weight: 600;
 }
 .reserve_cont_area .ruleagree .rulebox1 label {
-  color: #888;
-  font-weight: 500;
+    color: #888;
+    font-weight: 500;
 }
 .reserve_cont_area .ruleagree .rulebox1 .or span {
-  color: #111;
+    color: #111;
 }
 .reserve_cont_area .ruleagree .notice_box li {
-  border: 1px solid #e5e7eb;
-  border-radius: 10px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
 }
 .reserve_cont_area .ruleagree .notice_box button {
-  background: none;
-  display: block;
-  position: relative;
-  width: 100%;
-  text-align: left;
-  height: 68px;
-  padding: 12px 40px 12px 16px;
-  font-size: 1rem;
-  font-weight: 600;
-  line-height: 19px;
-  color: rgba(0, 0, 0, 0.85);
-  transition: all 0.2s;
+    background: none;
+    display: block;
+    position: relative;
+    width: 100%;
+    text-align: left;
+    height: 68px;
+    padding: 12px 40px 12px 16px;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 19px;
+    color: rgba(0, 0, 0, 0.85);
+    transition: all 0.2s;
 }
 .reserve_cont_area .ruleagree .notice_box button span {
-  transform: rotate(90deg);
-  position: absolute;
-  right: 16px;
-  top: 50%;
-  margin-top: -10px;
-  transition: all 0.2s;
+    transform: rotate(90deg);
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    margin-top: -10px;
+    transition: all 0.2s;
 }
 .reserve_cont_area .ruleagree .notice_box button.on span {
-  transform: rotate(-90deg);
+    transform: rotate(-90deg);
 }
 .reserve_cont_area .ruleagree .notice_box .hide_txt {
-  margin-bottom: 5px;
+    margin-bottom: 5px;
 }
 .reserve_cont_area .ruleagree .notice_box .hide {
-  padding: 40px;
-  border-top: 1px #e5e7eb solid;
-  color: rgba(0, 0, 0, 0.85);
-  font-size: 14px;
-  line-height: 1.3rem;
-  display: none;
+    padding: 40px;
+    border-top: 1px #e5e7eb solid;
+    color: rgba(0, 0, 0, 0.85);
+    font-size: 14px;
+    line-height: 1.3rem;
+    display: none;
 }
 .reserve_cont_area .next_btn {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 60px;
 }
 .reserve_cont_area .next_btn button {
-  background: none;
-  border: 1px #009c75 solid;
-  color: #009c75;
-  width: 172px;
-  min-height: 52px;
-  border-radius: 5px;
+    background: none;
+    border: 1px #009c75 solid;
+    color: #009c75;
+    width: 172px;
+    min-height: 52px;
+    border-radius: 5px;
 }
 /* [s] : 예약자 정보 입력 */
 .reserve_cont_area .enterinfor {
-  display: flex;
-  gap: 160px;
-  margin-top: 60px;
-  margin-bottom: 60px;
+    display: flex;
+    gap: 160px;
+    margin-top: 60px;
+    margin-bottom: 60px;
 }
 .reserve_cont_area .enterinfor > div {
-  flex: 1;
-  width: 520px;
+    flex: 1;
+    width: 520px;
 }
 .reserve_cont_area .enterinfor > div .tit {
-  font-size: 1.25rem;
-  font-weight: 700;
-  color: #111;
-  margin-bottom: 30px;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 30px;
 }
 .reserve_cont_area .enterinfor .left .box {
-  background: #f5f6f6;
-  padding: 30px;
+    background: #f5f6f6;
+    padding: 30px;
 }
 .reserve_cont_area .enterinfor .box .notice {
-  font-size: 12px;
-  color: #009c75;
-  line-height: 16px;
-  margin-top: 10px;
+    font-size: 12px;
+    color: #009c75;
+    line-height: 16px;
+    margin-top: 10px;
 }
 .reserve_cont_area .enterinfor .box > div {
-  display: flex;
-  column-gap: 15px;
-  margin-top: 30px;
+    display: flex;
+    column-gap: 15px;
+    margin-top: 30px;
 }
 .reserve_cont_area .enterinfor .box > div:first-child {
-  margin-top: 0;
+    margin-top: 0;
 }
 .reserve_cont_area .enterinfor .box .s_tit {
-  color: #111;
-  font-size: 15px;
-  font-weight: 600;
-  line-height: 18px;
-  margin-bottom: 10px;
+    color: #111;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 18px;
+    margin-bottom: 10px;
 }
 .reserve_cont_area .enterinfor .box .s_tit span {
-  color: #009c75;
+    color: #009c75;
 }
 .reserve_cont_area .enterinfor .box input {
-  border: 1px #d3dbd9 solid;
-  font-size: 16px;
-  border-radius: 5px;
-  min-height: 52px;
-  padding: 4px 10px;
-  box-sizing: border-box;
-  font-size: 15px;
-  font-weight: 500;
-  font-family: Pretendard;
+    border: 1px #d3dbd9 solid;
+    font-size: 16px;
+    border-radius: 5px;
+    min-height: 52px;
+    padding: 4px 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: Pretendard;
 }
 .reserve_cont_area .enterinfor .box input::placeholder {
-  color: #d3dbd9;
+    color: #d3dbd9;
 }
 .reserve_cont_area .enterinfor .name > div {
-  flex: 1 1 0%;
+    flex: 1 1 0%;
 }
 .reserve_cont_area .enterinfor .name input[type="text"] {
-  width: 163px;
+    width: 163px;
 }
 .reserve_cont_area .enterinfor .name .radio_wrap {
-  min-width: 104px;
-  display: flex;
-  margin-top: 28px;
-  border: 1px solid #d9d9d9;
-  background: #fff;
-  border-radius: 5px;
+    min-width: 104px;
+    display: flex;
+    margin-top: 28px;
+    border: 1px solid #d9d9d9;
+    background: #fff;
+    border-radius: 5px;
 }
 .reserve_cont_area .enterinfor .name .radio_wrap > span {
-  flex: 1;
-  height: 52px;
+    flex: 1;
+    height: 52px;
 }
 .reserve_cont_area .enterinfor .name .radio_wrap label {
-  padding-left: 0;
-  border-radius: 5px;
-  outline: 0 !important;
-  box-shadow: none !important;
-  height: 52px !important;
-  min-width: 52px;
-  padding: 0 5px !important;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 0;
-  position: relative;
-  transition: color 0.3s, background 0.3s, border-color 0.3s, box-shadow 0.3s;
-  color: #aaa;
+    padding-left: 0;
+    border-radius: 5px;
+    outline: 0 !important;
+    box-shadow: none !important;
+    height: 52px !important;
+    min-width: 52px;
+    padding: 0 5px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    position: relative;
+    transition: color 0.3s, background 0.3s, border-color 0.3s, box-shadow 0.3s;
+    color: #aaa;
 }
 .reserve_cont_area .enterinfor .name .radio_wrap input:checked + label {
-  border: 1px #009c75 solid;
-  color: #009c75;
-  font-weight: 600;
+    border: 1px #009c75 solid;
+    color: #009c75;
+    font-weight: 600;
 }
 .reserve_cont_area .enterinfor .birth {
-  flex-direction: column;
-  flex: 1 1 0%;
+    flex-direction: column;
+    flex: 1 1 0%;
 }
 .reserve_cont_area .enterinfor .birth .roundfull span {
-  display: inline-block;
-  width: 8px;
-  height: 8px;
-  background: #aaa;
-  border-radius: 50%;
-  margin-left: 12px;
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: #aaa;
+    border-radius: 50%;
+    margin-left: 12px;
 }
 .reserve_cont_area .enterinfor .birth .roundfull span:first-child {
-  margin-left: 0;
+    margin-left: 0;
 }
 .reserve_cont_area .enterinfor .birth .back {
-  width: 52px;
-  height: 52px;
-  text-align: center;
+    width: 52px;
+    height: 52px;
+    text-align: center;
 }
 .reserve_cont_area .enterinfor .birth .inputwrap {
-  display: flex;
-  align-items: center;
-  gap: 15px;
+    display: flex;
+    align-items: center;
+    gap: 15px;
 }
 .reserve_cont_area .enterinfor .phone {
-  flex-direction: column;
-  flex: 1 1 0%;
+    flex-direction: column;
+    flex: 1 1 0%;
 }
 .reserve_cont_area .enterinfor .email {
-  flex-direction: column;
+    flex-direction: column;
 }
 .reserve_cont_area .enterinfor .email select {
-  width: 100%;
-  height: 52px;
-  border: 1px solid #d9d9d9;
-  border-radius: 5px;
-  padding: 0 10px;
+    width: 100%;
+    height: 52px;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+    padding: 0 10px;
 }
 .reserve_cont_area .enterinfor .email .inputwrap {
-  display: flex;
-  align-items: center;
-  column-gap: 15px;
+    display: flex;
+    align-items: center;
+    column-gap: 15px;
 }
 .reserve_cont_area .enterinfor .inputwrap {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 .reserve_cont_area .enterinfor .mt {
-  display: flex;
-  flex-direction: column;
+    display: flex;
+    flex-direction: column;
 }
 .reserve_cont_area .enterinfor .mt input {
-  width: calc(100% - 120px);
+    width: calc(100% - 120px);
 }
 .reserve_cont_area .enterinfor .mt button {
-  width: 105px;
-  height: 52px;
-  border-radius: 5px;
-  background: none;
-  border: 1px #000 solid;
-  color: rgba(0, 0, 0, 0.8);
-  font-size: 14px;
-  font-weight: 500;
+    width: 105px;
+    height: 52px;
+    border-radius: 5px;
+    background: none;
+    border: 1px #000 solid;
+    color: rgba(0, 0, 0, 0.8);
+    font-size: 14px;
+    font-weight: 500;
 }
 .reserve_cont_area .enterinfor .mt .notice {
-  color: #888888;
+    color: #888888;
 }
 .reserve_cont_area .enterinfor .en_name {
-  flex-wrap: wrap;
+    flex-wrap: wrap;
 }
 .reserve_cont_area .enterinfor .en_name > div {
-  flex: 1;
+    flex: 1;
 }
 .reserve_cont_area .enterinfor .en_name > div input {
-  width: 100%;
+    width: 100%;
 }
 .reserve_cont_area .enterinfor .en_name .notice {
-  width: 100%;
-  flex: none;
+    width: 100%;
+    flex: none;
 }
 .reserve_cont_area .enterinfor .passportarea {
-  flex-direction: column;
-  border-top: 1px #d3dbd9 solid;
-  margin-top: 30px;
-  padding-top: 30px;
-  position: relative;
+    flex-direction: column;
+    border-top: 1px #d3dbd9 solid;
+    margin-top: 30px;
+    padding-top: 30px;
+    position: relative;
 }
 .reserve_cont_area .enterinfor .passportarea .checkbox_area {
-  position: absolute;
-  right: 0;
-  margin-bottom: 0;
-  top: 25px;
+    position: absolute;
+    right: 0;
+    margin-bottom: 0;
+    top: 25px;
 }
 .reserve_cont_area .enterinfor .passportarea .checkbox_area .checkbox {
-  height: auto;
-  padding-right: 0;
+    height: auto;
+    padding-right: 0;
 }
 .reserve_cont_area .enterinfor .passportarea .p_tit {
-  color: #111;
-  font-weight: 700;
-  font-size: 16px;
+    color: #111;
+    font-weight: 700;
+    font-size: 16px;
 }
 .reserve_cont_area .enterinfor .passportarea > div {
-  margin-bottom: 24px;
+    margin-bottom: 24px;
 }
 .reserve_cont_area .enterinfor .passportarea .one input[type="text"],
 .reserve_cont_area .enterinfor .passportarea .two input[type="text"] {
-  width: 100%;
+    width: 100%;
 }
 .reserve_cont_area .enterinfor .passportarea .three {
-  display: flex;
-  gap: 15px;
+    display: flex;
+    gap: 15px;
 }
 .reserve_cont_area .enterinfor .passportarea .three > div {
-  flex: 1;
+    flex: 1;
 }
 .reserve_cont_area .enterinfor .passportarea select {
-  width: 100%;
-  height: 52px;
-  border: 1px solid #d9d9d9;
-  border-radius: 5px;
-  padding: 0 10px;
+    width: 100%;
+    height: 52px;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+    padding: 0 10px;
+}
+
+.reserve_cont_area .enterinfor .discount {
+    flex-direction: column;
+    border-top: 1px #d3dbd9 solid;
+    margin-top: 30px;
+    padding-top: 30px;
+    position: relative;
+}
+.reserve_cont_area .enterinfor .discount .p_tit {
+    color: #111;
+    font-weight: 700;
+    font-size: 16px;
+}
+.reserve_cont_area .enterinfor .discount > div {
+    margin-bottom: 24px;
 }
 .reserve_cont_area .enterinfor .right .checkbox_area .checkbox {
-  display: flex;
-  align-items: center;
-  position: relative;
-  border-radius: 10px;
-  background: none;
-  padding-left: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-radius: 10px;
+    background: none;
+    padding-left: 0;
 }
 .reserve_cont_area .enterinfor .right .checkbox_area .checkbox input[type="checkbox"] {
-  position: absolute;
-  left: 0;
-  height: 0;
-  width: 0;
-  height: 0;
-  opacity: 0;
+    position: absolute;
+    left: 0;
+    height: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
 }
 .reserve_cont_area .enterinfor .right .checkbox_area .checkbox label {
-  padding-left: 35px;
-  font-size: 14px;
-  color: #16171d;
-  vertical-align: top;
-  line-height: 26px;
-  height: 26px;
-  cursor: pointer;
-  position: relative;
-  font-weight: 600;
+    padding-left: 35px;
+    font-size: 14px;
+    color: #16171d;
+    vertical-align: top;
+    line-height: 26px;
+    height: 26px;
+    cursor: pointer;
+    position: relative;
+    font-weight: 600;
 }
 .reserve_cont_area .enterinfor .right .checkbox_area .checkbox .ico {
-  position: absolute;
-  left: 0;
-  top: 0px;
-  width: 25px;
-  height: 25px;
-  border-radius: 18px;
-  transition: all 0.2s;
-  background: #fff;
-  border: 1px #d3dbd9 solid;
+    position: absolute;
+    left: 0;
+    top: 0px;
+    width: 25px;
+    height: 25px;
+    border-radius: 18px;
+    transition: all 0.2s;
+    background: #fff;
+    border: 1px #d3dbd9 solid;
 }
 .reserve_cont_area .enterinfor .right .checkbox_area input + label .ico::after {
-  position: absolute;
-  top: -1px;
-  left: -1px;
-  width: 100%;
-  height: 100%;
-  border-radius: 100%;
-  visibility: hidden;
-  content: "";
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 100%;
+    height: 100%;
+    border-radius: 100%;
+    visibility: hidden;
+    content: "";
 }
 .reserve_cont_area .enterinfor .right .checkbox_area input + label .ico::before {
-  content: "";
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  transform: translate(-50%, -50%);
-  width: 10px;
-  height: 7px;
-  background: url("https://www.modetour.com/icons/ico-check_gray.svg") no-repeat center 0 / contain;
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 7px;
+    background: url("https://www.modetour.com/icons/ico-check_gray.svg") no-repeat center 0 / contain;
 }
 .reserve_cont_area .enterinfor .right .checkbox_area input:checked + label .ico {
-  background-color: #00d9a3;
+    background-color: #00d9a3;
 }
 .reserve_cont_area .enterinfor .right .checkbox_area input:checked + label .ico::before {
-  background-image: url("https://www.modetour.com/icons/ico-check_white.svg");
+    background-image: url("https://www.modetour.com/icons/ico-check_white.svg");
 }
 
 .reserve_cont_area .enterinfor .right .name input[type="text"] {
-  width: 190px;
+    width: 190px;
 }
 .reserve_cont_area .enterinfor .right .people {
-  margin-bottom: 40px;
+    margin-bottom: 40px;
+}
+.reserve_cont_area .enterinfor .right .nationality .select {
+    flex: 1;
 }
 .reserve_cont_area .enterinfor .right .phone {
-  border-top: 1px #d3dbd9 solid;
-  margin-top: 30px;
-  padding-top: 30px;
+    border-top: 1px #d3dbd9 solid;
+    margin-top: 30px;
+    padding-top: 30px;
 }
 .reserve_cont_area .enterinfor .right > div {
-  border-top: 8px #eeeeee solid;
-  padding-top: 30px;
+    border-top: 8px #eeeeee solid;
+    padding-top: 30px;
 }
 .reserve_cont_area .enterinfor .right > div:first-child {
-  border-top: 0;
-  padding-top: 0;
+    border-top: 0;
+    padding-top: 0;
 }
 .reserve_cont_area .enterinfor .cation input[type="text"],
 .reserve_cont_area .enterinfor .cation select {
-  border: 1px #ff4d4f solid;
-  box-shadow: 0 0 0 2px rgba(237, 73, 73, 0.2);
+    border: 1px #ff4d4f solid;
+    box-shadow: 0 0 0 2px rgba(237, 73, 73, 0.2);
 }
 .reserve_cont_area .enterinfor .cation .notice {
-  color: #d84949;
+    color: #d84949;
 }
 .reserve_cont_area .enterinfor input[type="text"]:focus,
 .reserve_cont_area .enterinfor select:focus {
-  outline: 1px #009c75 solid;
-  box-shadow: 0 0 0 2px rgba(0, 156, 117, 0.4);
+    outline: 1px #009c75 solid;
+    box-shadow: 0 0 0 2px rgba(0, 156, 117, 0.4);
 }
 .reserve_cont_area .pay_btn {
-  text-align: center;
-  margin-bottom: 60px;
+    text-align: center;
+    margin-bottom: 60px;
 }
 .reserve_cont_area .pay_btn button {
-  background: #009c75;
-  color: #fff;
-  font-weight: 600;
-  font-size: 16px;
-  height: 52px;
-  width: 184px;
-  border-radius: 5px;
+    background: #009c75;
+    color: #fff;
+    font-weight: 600;
+    font-size: 16px;
+    height: 52px;
+    width: 184px;
+    border-radius: 5px;
 }
 
 /* 마이페이지 */
 .mypagedetail .flex_wrap {
-  display: flex;
+    display: flex;
 }
 .mypagedetail .mypagemenu {
-  width: 240px;
+    width: 240px;
 }
 .mypagedetail .mypagemenu .tit {
-  font-size: 26px;
-  font-weight: 700;
-  text-align: left;
-  display: flex;
-  align-items: center;
-  line-height: 34px;
-  border-bottom: 2px #111 solid;
-  padding-bottom: 30px;
+    font-size: 26px;
+    font-weight: 700;
+    text-align: left;
+    display: flex;
+    align-items: center;
+    line-height: 34px;
+    border-bottom: 2px #111 solid;
+    padding-bottom: 30px;
 }
 .mypagedetail .mypagemenu ul li {
-  padding: 24px 0;
-  border-bottom: 1px solid #d3dbd9;
+    padding: 24px 0;
+    border-bottom: 1px solid #d3dbd9;
 }
 .mypagedetail .mypagemenu ul li a {
-  color: #111;
-  text-decoration: none;
-  transition: color 0.3s;
-  font-weight: 500;
+    color: #111;
+    text-decoration: none;
+    transition: color 0.3s;
+    font-weight: 500;
 }
 .mypagedetail .mypagemenu ul li a:hover {
-  color: #009c75;
+    color: #009c75;
 }
 .mypagedetail .reservedetail {
-  width: 900px;
-  margin-left: 60px;
+    width: 900px;
+    margin-left: 60px;
 }
 .mypagedetail .reservedetail .tit {
-  color: #111;
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 30px;
+    color: #111;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 30px;
 }
 .mypagedetail .reservedetail .box_1 .tit {
-  color: #111;
-  font-size: 20px;
-  font-weight: 700;
-  margin-bottom: 30px;
-  border: none;
-  padding-bottom: 0;
+    color: #111;
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 30px;
+    border: none;
+    padding-bottom: 0;
 }
 .mypagedetail .reservedetail > div {
-  margin-top: 80px;
+    margin-top: 80px;
 }
 .mypagedetail .reservedetail > div:first-child {
-  margin-top: 0;
+    margin-top: 0;
 }
 .mypagedetail .reservedetail .sub_top {
-  display: flex;
-  justify-content: space-between;
-  border-bottom: 2px #111 solid;
-  padding-bottom: 18px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 2px #111 solid;
+    padding-bottom: 18px;
 }
 .mypagedetail .reservedetail .sub_top ul {
-  display: flex;
+    display: flex;
 }
 .mypagedetail .reservedetail .sub_top ul li {
-  padding: 5px 10px;
-  font-size: 13px;
-  font-weight: 600;
-  border: 1px solid #d3dbd9;
-  border-radius: 5px;
-  margin-left: 10px;
+    padding: 5px 10px;
+    font-size: 13px;
+    font-weight: 600;
+    border: 1px solid #d3dbd9;
+    border-radius: 5px;
+    margin-left: 10px;
 }
 .mypagedetail .reservedetail .sub_top ul li:first-child {
-  margin-left: 0;
+    margin-left: 0;
 }
 .mypagedetail .reservedetail .sub_top p {
-  font-size: 14px;
-  font-weight: 600;
-  color: #111;
+    font-size: 14px;
+    font-weight: 600;
+    color: #111;
 }
 .mypagedetail .reservedetail .sub_top p span {
-  color: #ed4949;
+    color: #ed4949;
 }
 .mypagedetail .reservedetail .passport_cation {
-  border: 1px #ed4949 solid;
-  padding: 20px;
-  border-radius: 10px;
-  margin-top: 30px;
-  display: flex;
-  align-items: center;
+    border: 1px #ed4949 solid;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
 }
 .mypagedetail .reservedetail .passport_cation .left {
-  color: #ed4949;
-  font-size: 16px;
+    color: #ed4949;
+    font-size: 16px;
 }
 .mypagedetail .reservedetail .passport_cation .left span {
-  position: relative;
-  top: 2px;
-  margin-right: 5px;
+    position: relative;
+    top: 2px;
+    margin-right: 5px;
 }
 .mypagedetail .reservedetail .passport_cation .right {
-  font-size: 15px;
-  line-height: 22px;
-  margin-left: 20px;
+    font-size: 15px;
+    line-height: 22px;
+    margin-left: 20px;
 }
 .mypagedetail .reservedetail .passport_cation .right span {
-  color: #ed4949;
+    color: #ed4949;
+}
+.mypagedetail .reservedetail .passport_cation.cancle {
+    border-color: #111;
+}
+.mypagedetail .reservedetail .passport_cation.cancle .left {
+    color: #111;
+    font-weight: 600;
 }
 .mypagedetail .reservedetail .progress {
-  display: flex;
-  margin-top: 40px;
+    display: flex;
+    margin-top: 40px;
 }
 .mypagedetail .reservedetail .progress > div {
-  width: calc(33.3333% - 13.3333px);
-  margin-left: 10px;
-  font-size: 14px;
-  font-weight: 600;
-  height: 40px;
-  color: #d3dbd9;
-  text-align: center;
-  line-height: 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border-width: 1px 0px;
-  border-style: solid;
-  border-color: #d3dbd9;
+    width: calc(33.3333% - 13.3333px);
+    margin-left: 10px;
+    font-size: 14px;
+    font-weight: 600;
+    height: 40px;
+    color: #d3dbd9;
+    text-align: center;
+    line-height: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-width: 1px 0px;
+    border-style: solid;
+    border-color: #d3dbd9;
 }
 .mypagedetail .reservedetail .progress > div:first-child {
-  margin-left: 0;
+    margin-left: 0;
 }
 .mypagedetail .reservedetail .progress .left {
-  height: 28.2843px;
-  width: 28.2843px;
-  transform-origin: center center;
-  transform: translate(-14.1421px, 0px) rotate(45deg);
-  border-top: 1px solid #d3dbd9;
-  border-right: 1px solid #d3dbd9;
-  border-bottom-color: #d3dbd9;
-  border-left-color: #d3dbd9;
+    height: 28.2843px;
+    width: 28.2843px;
+    transform-origin: center center;
+    transform: translate(-14.1421px, 0px) rotate(45deg);
+    border-top: 1px solid #d3dbd9;
+    border-right: 1px solid #d3dbd9;
+    border-bottom-color: #d3dbd9;
+    border-left-color: #d3dbd9;
 }
 .mypagedetail .reservedetail .progress .right {
-  height: 28.2843px;
-  width: 28.2843px;
-  transform-origin: center center;
-  transform: translate(14.1421px, 0px) rotate(45deg);
-  border-top: 1px solid #d3dbd9;
-  border-right: 1px solid #d3dbd9;
-  border-bottom-color: #d3dbd9;
-  border-left-color: #d3dbd9;
+    height: 28.2843px;
+    width: 28.2843px;
+    transform-origin: center center;
+    transform: translate(14.1421px, 0px) rotate(45deg);
+    border-top: 1px solid #d3dbd9;
+    border-right: 1px solid #d3dbd9;
+    border-bottom-color: #d3dbd9;
+    border-left-color: #d3dbd9;
 }
 .mypagedetail .reservedetail .progress > div.on {
-  color: #009c75;
-  border-color: #009c75;
+    color: #009c75;
+    border-color: #009c75;
 }
 .mypagedetail .reservedetail .progress > div.on .left,
 .mypagedetail .reservedetail .progress > div.on .right {
-  border-color: #009c75;
+    border-color: #009c75;
 }
 .mypagedetail .reservedetail .airschedule {
-  margin-top: 20px;
+    margin-top: 20px;
 }
 .mypagedetail .reservedetail .airschedule > div {
-  border: 1px #d3dbd9 solid;
-  border-radius: 10px;
-  padding: 20px 24px;
-  margin-top: 15px;
+    border: 1px #d3dbd9 solid;
+    border-radius: 10px;
+    padding: 20px 24px;
+    margin-top: 15px;
 }
 .mypagedetail .reservedetail .airschedule > div:first-child {
-  margin-top: 0;
+    margin-top: 0;
 }
 .mypagedetail .reservedetail .airschedule .tit1 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
 }
 .mypagedetail .reservedetail .airschedule .sch_tit {
-  font-size: 17px;
-  font-weight: 700;
+    font-size: 17px;
+    font-weight: 700;
 }
 .mypagedetail .reservedetail .airschedule .reserve_num {
-  font-weight: 600;
-  font-size: 14px;
-  color: #111;
+    font-weight: 600;
+    font-size: 14px;
+    color: #111;
 }
 .mypagedetail .reservedetail .airschedule .tit2 {
-  display: flex;
-  align-items: center;
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 500;
-  margin-bottom: 6px;
+    display: flex;
+    align-items: center;
+    font-size: 16px;
+    line-height: 20px;
+    font-weight: 500;
+    margin-bottom: 6px;
 }
 .mypagedetail .reservedetail .airschedule .tit2 > div:nth-child(2) {
-  margin-left: 8px;
-  margin-right: 8px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+    margin-left: 8px;
+    margin-right: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.mypagedetail .reservedetail .airschedule .tit2 .st01 {
+    margin-left: 8px;
 }
 .mypagedetail .reservedetail .airschedule .tit3 {
-  font-size: 16px;
-  font-weight: 700;
-  margin-top: 6px;
+    font-size: 16px;
+    font-weight: 700;
+    margin-top: 6px;
 }
 .mypagedetail .reservedetail .airschedule .air {
-  display: flex;
-  font-size: 14px;
-  font-weight: 600;
-  margin-top: 12px;
+    display: flex;
+    font-size: 14px;
+    font-weight: 600;
+    margin-top: 12px;
 }
 .mypagedetail .reservedetail .airschedule .air .ant_img {
-  display: inline-block;
-  width: 18px;
-  height: 18px;
-  margin-right: 8px;
+    display: inline-block;
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
 }
 .mypagedetail .reservedetail .airschedule .air .ant_img img {
-  min-width: 100%;
-  max-width: 100%;
-  min-height: 100%;
-  max-height: 100%;
-  object-fit: contain;
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    object-fit: contain;
 }
 .mypagedetail .reservedetail .schedule_btn {
-  margin-top: 16px;
-  text-align: right;
-  margin-bottom: 30px;
+    margin-top: 16px;
+    text-align: right;
+    margin-bottom: 30px;
 }
 .mypagedetail .reservedetail .schedule_btn button {
-  background: none;
-  font-size: 12px;
-  border: 1px #d3dbd9 solid;
-  border-radius: 9999px;
-  padding: 8px 16px;
-  cursor: pointer;
+    background: none;
+    font-size: 12px;
+    border: 1px #d3dbd9 solid;
+    border-radius: 9999px;
+    padding: 8px 16px;
+    cursor: pointer;
 }
 .mypagedetail .reservedetail .infor_wrap {
-  display: flex;
-  column-gap: 40px;
+    display: flex;
 }
 .mypagedetail .reservedetail .infor_wrap > div {
-  flex: 1;
-  border-radius: 10px;
-  padding: 24px 18px;
+    width: calc((100% - 15px) / 2);
+    border-radius: 10px;
+    padding: 24px 18px;
+    margin-left: 40px;
+}
+.mypagedetail .reservedetail .infor_wrap > div:first-child {
+    margin-left: 0;
 }
 .mypagedetail .reservedetail .infor_wrap .left {
-  background: #f5f6f6;
+    background: #f5f6f6;
 }
 .mypagedetail .reservedetail .infor_wrap .left > div {
-  margin-top: 20px;
+    margin-top: 20px;
 }
 .mypagedetail .reservedetail .infor_wrap .left > div:first-child {
-  margin-top: 0;
+    margin-top: 0;
 }
 .mypagedetail .reservedetail .infor_wrap .left .t1 {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 .mypagedetail .reservedetail .infor_wrap .left .t1 > div {
-  font-weight: 600;
-  font-size: 15px;
-  line-height: 18px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
 }
 .mypagedetail .reservedetail .infor_wrap .left .t1 span {
-  display: block;
-  text-align: right;
-  font-weight: 400;
-  font-size: 14px;
-  margin-top: 5px;
+    display: block;
+    text-align: right;
+    font-weight: 400;
+    font-size: 14px;
+    margin-top: 5px;
 }
 .mypagedetail .reservedetail .infor_wrap .left .t2 {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 .mypagedetail .reservedetail .infor_wrap .left .t2 > div:first-child {
-  font-weight: 600;
-  font-size: 15px;
-  line-height: 18px;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 18px;
 }
 .mypagedetail .reservedetail .infor_wrap .left .t2 > div:nth-child(2) {
-  font-size: 14px;
-  display: flex;
-  align-items: center;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
 }
 .mypagedetail .reservedetail .infor_wrap .left .t2 > div:nth-child(2) button {
-  margin-left: 3px;
+    margin-left: 3px;
 }
 .mypagedetail .reservedetail .infor_wrap .left .t3 {
-  text-align: right;
-  font-size: 14px;
-  line-height: 19px;
+    text-align: right;
+    font-size: 14px;
+    line-height: 19px;
 }
 .mypagedetail .reservedetail .infor_wrap .left .t3 > div:nth-child(1) {
-  font-weight: 500;
+    font-weight: 500;
 }
 .mypagedetail .reservedetail .infor_wrap .left .t3 > div:nth-child(3),
 .mypagedetail .reservedetail .infor_wrap .left .t3 > div:nth-child(4) {
-  font-size: 13px;
+    font-size: 13px;
 }
 .mypagedetail .reservedetail .infor_wrap .right {
-  border-width: 1px;
-  border-style: solid;
+    border-width: 1px;
+    border-style: solid;
 }
-.mypagedetail .reservedetail .infor_wrap .right.incomplete {
-  border-color: #ed4949;
+.mypagedetail .reservedetail .infor_wrap .incomplete {
+    border: 1px solid #ed4949;
+    background: #fff;
 }
-.mypagedetail .reservedetail .infor_wrap .right.complete {
-  border-color: #009c75;
+.mypagedetail .reservedetail .infor_wrap .complete {
+    border: 1px solid #009c75;
+    background: #fff;
 }
-.mypagedetail .reservedetail .infor_wrap .right .r_tit {
-  display: flex;
-  justify-content: space-between;
-  font-size: 18px;
-  font-weight: 600;
-  color: #ed4949;
-  margin-bottom: 24px;
+.mypagedetail .reservedetail .infor_wrap .complete .r_tit {
+    color: #009c75 !important;
+}
+.mypagedetail .reservedetail .infor_wrap .complete svg {
+    color: #009c75;
+}
+.mypagedetail .reservedetail .infor_wrap .r_tit {
+    display: flex;
+    justify-content: space-between;
+    font-size: 18px;
+    font-weight: 600;
+    color: #ed4949;
+    margin-bottom: 24px;
 }
 .mypagedetail .reservedetail .infor_wrap .right ul li {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
 }
 .mypagedetail .reservedetail .infor_wrap .right ul li:first-child {
-  margin-top: 0;
+    margin-top: 0;
 }
 .mypagedetail .reservedetail .infor_wrap .right ul li span {
-  font-size: 15px;
-  font-weight: 600;
+    font-size: 15px;
+    font-weight: 600;
 }
 .mypagedetail .reservedetail .infor_wrap .right ul li button {
-  background: none;
-  border-bottom: 1px #111 solid;
-  font-size: 14px;
+    background: none;
+    border-bottom: 1px #111 solid;
+    font-size: 14px;
 }
 .mypagedetail .reservedetail .infor_box {
-  display: flex;
-  column-gap: 15px;
-  margin-top: 30px;
-  padding-bottom: 30px;
-  border-bottom: 1px solid #e5e7eb;
+    display: flex;
+    column-gap: 15px;
+    margin-top: 30px;
+    padding-bottom: 30px;
+    border-bottom: 1px solid #e5e7eb;
 }
 .mypagedetail .reservedetail .infor_box button {
-  flex: 1;
-  min-height: 44px;
-  border-radius: 5px;
-  background: none;
-  border: 1px #d3dbd8 solid;
-  font-size: 14px;
-  color: rgba(0, 0, 0, 0.85);
+    flex: 1;
+    min-height: 44px;
+    border-radius: 5px;
+    background: none;
+    border: 1px #d3dbd8 solid;
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.85);
+    cursor: pointer;
 }
 .mypagedetail .reservedetail .pay_box {
-  padding-top: 30px;
-  display: flex;
-  justify-content: space-between;
-  column-gap: 40px;
-  padding-bottom: 20px;
-  border-bottom: 1px solid #e5e7eb;
-  margin-bottom: 30px;
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 20px;
 }
 .mypagedetail .reservedetail .pay_box > div {
-  flex: 1;
+    width: calc((100% - 40px) / 2);
+    margin-left: 40px;
+}
+.mypagedetail .reservedetail .pay_box > div:first-child {
+    margin-left: 0;
 }
 .mypagedetail .reservedetail .pay_box .left > div {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
 }
 .mypagedetail .reservedetail .pay_box .left .t_1 div:nth-child(1) {
-  font-size: 15px;
-  font-weight: 600;
+    font-size: 15px;
+    font-weight: 600;
 }
 .mypagedetail .reservedetail .pay_box .left .t_1 div:nth-child(2) {
-  font-size: 18px;
+    font-size: 18px;
 }
 .mypagedetail .reservedetail .pay_box .left .t_1 div:nth-child(2) span {
-  font-size: 20px;
-  font-weight: 700;
+    font-size: 20px;
+    font-weight: 700;
 }
 .mypagedetail .reservedetail .pay_box .left .t_2 {
-  margin-top: 13px;
+    margin-top: 13px;
 }
 .mypagedetail .reservedetail .pay_box .left .t_2 button {
-  font-size: 12px;
-  font-weight: 500;
-  border: 1px #d3dbd8 solid;
-  border-radius: 9999px;
-  background: none;
-  padding: 8px 16px;
+    font-size: 12px;
+    font-weight: 500;
+    border: 1px #d3dbd8 solid;
+    border-radius: 9999px;
+    background: none;
+    padding: 8px 16px;
 }
 .mypagedetail .reservedetail .pay_box .left .t_2 div {
-  font-size: 14px;
+    font-size: 14px;
+}
+.mypagedetail .reservedetail .pay_box .left .t_2 div.mile {
+    margin-left: auto;
 }
 .mypagedetail .reservedetail .pay_box .left .t_2 div span {
-  color: #009c75;
-  font-weight: 600;
+    color: #009c75;
+    font-weight: 600;
 }
 .mypagedetail .reservedetail .pay_box .left .t_3 {
-  font-size: 14px;
-  line-height: 1.5rem;
-  margin-top: 13px;
+    font-size: 14px;
+    line-height: 1.5rem;
+    margin-top: 13px;
+}
+.mypagedetail .reservedetail .pay_box .cash_notice {
+    background: #f5f6f6;
+    border-radius: 10px;
+    padding: 0.75rem;
+    flex-direction: column;
+    font-size: 13px;
+    margin-top: 30px;
+}
+.mypagedetail .reservedetail .pay_box .cash_notice > div {
+    margin-top: 8px;
+}
+.mypagedetail .reservedetail .pay_box .cash_notice > div:first-child {
+    margin-top: 0;
+}
+.mypagedetail .reservedetail .pay_box .cash_notice span {
+    font-weight: 600;
+}
+.mypagedetail .reservedetail .pay_box .cash_notice span.red {
+    color: #ed4949;
 }
 .reserve_cont_area .popup_container .layer_popup {
-  padding: 15px;
+    padding: 15px;
 }
 .mypagedetail .reservedetail .pay_box .right .t_1 {
-  display: flex;
-  justify-content: space-between;
-  column-gap: 1.25rem;
+    display: flex;
+    justify-content: space-between;
+    column-gap: 1.25rem;
 }
 .mypagedetail .reservedetail .pay_box .right .t_1 button {
-  flex: 1;
-  height: 52px;
-  border-radius: 5px;
-  font-weight: 600;
-  font-size: 16px;
+    flex: 1;
+    height: 52px;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 16px;
 }
 .mypagedetail .reservedetail .pay_box .right .t_1 button:first-child {
-  background: #009c75;
-  color: #fff;
+    background: #009c75;
+    color: #fff;
 }
 .mypagedetail .reservedetail .pay_box .right .t_1 button:nth-child(2) {
-  color: #555;
-  background: #eeeeee;
+    color: #555;
+    background: #eeeeee;
 }
 .mypagedetail .reservedetail .pay_box .right .t_2 {
-  font-size: 14px;
-  margin-top: 12px;
+    font-size: 14px;
+    margin-top: 12px;
 }
 .mypagedetail .reservedetail .pay_box .right .t_2 span {
-  color: #ed4949;
-  font-weight: 600;
+    color: #ed4949;
+    font-weight: 600;
 }
 .mypagedetail .reservedetail .pay_box .right .t_3 {
-  font-size: 14px;
-  margin-top: 0.5rem;
-  color: #ed4949;
+    font-size: 14px;
+    margin-top: 0.5rem;
+    color: #ed4949;
 }
 .mypagedetail .reservedetail .pay_notice {
-  font-size: 13px;
-  font-weight: 400;
-  color: #888888;
+    font-size: 13px;
+    font-weight: 400;
+    color: #888888;
+    border-top: 1px solid #e5e7eb;
+    padding-top: 30px;
 }
 .mypagedetail .reservedetail > div > .tit {
-  font-size: 24px;
-  border-bottom: 2px #111 solid;
-  padding-bottom: 30px;
-  margin-bottom: 0;
-  font-weight: 700;
+    font-size: 24px;
+    border-bottom: 2px #111 solid;
+    padding-bottom: 30px;
+    margin-bottom: 0;
+    font-weight: 700;
 }
 .mypagedetail .reservedetail .box_2 .tit {
-  border-bottom: 2px #eee solid;
+    border-bottom: 2px #eee solid;
 }
 .mypagedetail .reservedetail .passengers_tab {
-  position: relative;
-  border-bottom: 2px #eee solid;
+    position: relative;
+    border-bottom: 2px #eee solid;
 }
 .mypagedetail .reservedetail .passengers_tab .tab_in {
-  display: flex;
+    display: flex;
 }
 .mypagedetail .reservedetail .passengers_tab .tab_in a {
-  flex: 1;
-  text-decoration: none;
-  text-align: center;
-  color: #aaa;
-  font-size: 18px;
-  font-weight: 600;
-  padding: 24px 0;
+    flex: 1;
+    text-decoration: none;
+    text-align: center;
+    color: #aaa;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 24px 0;
 }
 .mypagedetail .reservedetail .passengers_tab .tab_in a.on {
-  color: #111;
+    color: #111;
 }
 .mypagedetail .reservedetail .passengers_tab .bar {
-  position: absolute;
-  width: 50%;
-  height: 2px;
-  background: #111;
-  left: 0;
-  transition: width 0.3s, left 0.3s, right 0.3s;
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    background: #111;
+    left: 0;
+    transition: width 0.3s, left 0.3s, right 0.3s;
 }
 .mypagedetail .reservedetail .tab_wrap > div {
-  display: none;
-  padding-top: 40px;
+    display: none;
+    padding-top: 40px;
 }
 .mypagedetail .reservedetail .tab_wrap > div:first-child {
-  display: block;
+    display: block;
 }
 .mypagedetail .reservedetail .tab_wrap .please {
-  font-size: 13px;
-  color: rgba(0, 0, 0, 0.85);
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.85);
 }
 .mypagedetail .reservedetail .tab_wrap .please span {
-  color: #ed4949;
-}
-.mypagedetail .reservedetail .tab_wrap .passenger {
-  margin-top: 40px;
+    color: #ed4949;
 }
 .mypagedetail .reservedetail .tab_wrap .passenger .p_tit {
-  font-size: 18px;
-  font-weight: 700;
-  display: flex;
-  justify-content: space-between;
-  padding-bottom: 18px;
-}
-.mypagedetail .reservedetail .tab_wrap .passenger .p_tit div {
-  font-size: 14px;
-  font-weight: 600;
+    font-size: 18px;
+    font-weight: 700;
+    display: flex;
+    padding-bottom: 18px;
+    margin-top: 40px;
 }
 .mypagedetail .reservedetail .tab_wrap .passenger .p_tit span {
-  color: #009c75;
+    color: #ed4949;
+    margin-left: 5px;
 }
-.mypagedetail .reservedetail .tab_wrap .passenger .btn_box {
-  text-align: center;
-  margin-top: 40px;
+.mypagedetail .reservedetail .tab_wrap .passenger .p_tit div.right {
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: auto;
+}
+.mypagedetail .reservedetail .tab_wrap .passenger .p_tit div.right span {
+    color: #009c75;
+    margin-left: 0;
+}
+.mypagedetail .reservedetail .tab_wrap .btn_box {
+    text-align: center;
+    margin-top: 40px;
 }
 .mypagedetail .reservedetail .tab_wrap table {
-  border-top: 2px #111 solid;
+    border-top: 2px #111 solid;
+    width: 100%;
 }
 .mypagedetail .reservedetail .tab_wrap table th {
-  background-color: #f5f6f6;
-  font-weight: 500;
-  border: 1px solid #f5f6f6;
-  font-size: 14px;
-  padding: 18px 0;
-  vertical-align: middle;
-  border: 1px solid #f5f6f6;
+    background-color: #f5f6f6;
+    font-weight: 500;
+    border: 1px solid #f5f6f6;
+    font-size: 14px;
+    padding: 18px 0;
+    vertical-align: middle;
+    border: 1px solid #f5f6f6;
 }
 .mypagedetail .reservedetail .tab_wrap table td {
-  padding: 18px;
-  font-size: 14px;
-  line-height: 18px;
-  vertical-align: middle;
-  border-bottom: 1px solid #f5f6f6;
+    padding: 18px;
+    font-size: 14px;
+    line-height: 18px;
+    vertical-align: middle;
+    border-bottom: 1px solid #f5f6f6;
 }
 .mypagedetail .reservedetail .tab_wrap table colgroup col:nth-child(odd) {
-  width: 11.11111%;
+    width: 11.11111%;
 }
 .mypagedetail .reservedetail .tab_wrap table colgroup col:nth-child(2n) {
-  width: 22.22222%;
+    width: 22.22222%;
 }
 .mypagedetail .reservedetail .tab_wrap table input,
-.mypagedetail .reservedetail .tab_wrap table select {
-  border: 1px solid #d9d9d9;
-  width: 163px;
-  min-height: 40px;
-  border-radius: 9999px;
-  padding: 4px 11px;
-  box-sizing: border-box;
-  transition: all 0.3s;
+.mypagedetail .reservedetail .select_box .select_layer {
+    border: 1px solid #d9d9d9;
+    width: 163px;
+    height: 40px;
+    border-radius: 9999px;
+    padding: 4px 11px;
+    box-sizing: border-box;
+    transition: all 0.3s;
+}
+.mypagedetail .reservedetail .select_box .select_option {
+    top: 50px;
 }
 .mypagedetail .reservedetail .tab_wrap table input::placeholder {
-  color: #bfbfbf;
-  -moz-user-select: none;
-  user-select: none;
+    color: #bfbfbf;
+    -moz-user-select: none;
+    user-select: none;
 }
 .mypagedetail .reservedetail .tab_wrap table input:focus,
 .mypagedetail .reservedetail .tab_wrap table select:focus {
-  border-color: #1a8f72;
-  box-shadow: 0 0 0 2px rgba(2, 130, 103, 0.2);
-  border-right-width: 1px;
-  outline: 0;
+    border-color: #1a8f72;
+    box-shadow: 0 0 0 2px rgba(2, 130, 103, 0.2);
+    border-right-width: 1px;
+    outline: 0;
 }
 .mypagedetail .reservedetail .tab_wrap table input:disabled {
-  color: rgba(0, 0, 0, 0.25);
-  background-color: #f5f5f5;
-  border-color: #d9d9d9;
-  box-shadow: none;
-  cursor: not-allowed;
-  opacity: 1;
+    color: rgba(0, 0, 0, 0.25);
+    background-color: #f5f5f5;
+    border-color: #d9d9d9;
+    box-shadow: none;
+    cursor: not-allowed;
+    opacity: 1;
 }
 .mypagedetail .reservedetail .tab_wrap table .caution input {
-  border-color: #ed4949;
-  box-shadow: 0 0 0 2px rgba(237, 73, 73, 0.2);
+    border-color: #ed4949;
+    box-shadow: 0 0 0 2px rgba(237, 73, 73, 0.2);
 }
 .mypagedetail .reservedetail .tab_wrap table .caution p {
-  color: #ed4949;
-  font-size: 12px;
-  margin-top: 10px;
+    color: #ed4949;
+    font-size: 12px;
+    margin-top: 10px;
 }
 .mypagedetail .reservedetail .passport_regist {
-  background: #f5f6f6;
-  padding: 20px 18px;
-  border-radius: 10px;
-  margin-top: 40px;
+    background: #f5f6f6;
+    padding: 20px 18px;
+    border-radius: 10px;
+    margin-top: 40px;
 }
 .mypagedetail .reservedetail .passport_regist .top {
-  font-size: 13px;
-  font-weight: 600;
+    font-size: 13px;
+    font-weight: 600;
 }
 .mypagedetail .reservedetail .passport_regist ul li {
-  font-size: 13px;
-  color: rgba(0, 0, 0, 0.85);
-  margin-top: 15px;
-  line-height: 19px;
+    font-size: 13px;
+    color: rgba(0, 0, 0, 0.85);
+    margin-top: 15px;
+    line-height: 19px;
 }
 .mypagedetail .reservedetail .passport_regist a {
-  text-decoration: none;
-  font-size: 12px;
-  display: inline-block;
-  padding: 8px 16px;
-  border: 1px #d3dbd9 solid;
-  border-radius: 5px;
-  background: #fff;
-  margin-top: 10px;
+    text-decoration: none;
+    font-size: 12px;
+    display: inline-block;
+    padding: 8px 16px;
+    border: 1px #d3dbd9 solid;
+    border-radius: 5px;
+    background: #fff;
+    margin-top: 10px;
 }
 
 .mypagedetail .reservedetail .add_service {
-  margin-top: 40px;
+    margin-top: 40px;
 }
 .mypagedetail .reservedetail .add_service li {
-  margin-top: 5px;
+    margin-top: 5px;
 }
 .mypagedetail .reservedetail .add_service li:first-child {
-  margin-top: 0;
+    margin-top: 0;
 }
 .mypagedetail .reservedetail .add_service img {
-  width: 100%;
+    width: 100%;
 }
 .mypagedetail .reservedetail .box_4 .tit {
-  display: flex;
-  justify-content: space-between;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 24px;
 }
 .mypagedetail .reservedetail .box_4 button {
-  font-size: 14px;
-  border: 1px solid #d9d9d9;
-  background: none;
-  border-radius: 9999px;
-  padding: 10px 20px;
-  font-weight: 500;
-  margin-left: 5px;
+    font-size: 14px;
+    border: 1px solid #d9d9d9;
+    background: none;
+    border-radius: 9999px;
+    padding: 10px 20px;
+    font-weight: 500;
+    margin-left: 5px;
 }
 .mypagedetail .reservedetail .box_4 button:first-child {
-  margin-left: 0;
+    margin-left: 0;
 }
 .mypagedetail .reservedetail .box_4 .faq_txt {
-  font-size: 16px;
-  text-align: center;
-  padding: 80px 0;
+    font-size: 16px;
+    text-align: center;
+    padding: 80px 0;
+}
+.mypagedetail .reservedetail .box_4 .faq_list li {
+    border-bottom: 1px #d3dbd8 solid;
+}
+.mypagedetail .reservedetail .box_4 .faq_list li a {
+    display: block;
+    padding: 24px 0;
+}
+.mypagedetail .reservedetail .box_4 .faq_list .top {
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+.mypagedetail .reservedetail .box_4 .faq_list .bottom {
+    display: flex;
+    justify-content: space-between;
+}
+.mypagedetail .reservedetail .box_4 .faq_list .date {
+    color: #888;
+    font-size: 13px;
+}
+.mypagedetail .reservedetail .box_4 .faq_list .status {
+    font-size: 13px;
+    font-weight: 600;
+    color: #111;
+}
+.mypagedetail .reservedetail .box_4 .faq_list .status.ok {
+    color: #009c75;
 }
 .mypagedetail .reservedetail .box_5 .t_1 {
-  padding-top: 40px;
+    padding-top: 40px;
 }
 .mypagedetail .reservedetail .box_5 .t_1,
 .mypagedetail .reservedetail .box_5 .t_2 {
-  font-size: 14px;
+    font-size: 14px;
 }
 .mypagedetail .reservedetail .box_5 .t_1 span,
 .mypagedetail .reservedetail .box_5 .t_2 span {
-  font-weight: 600;
+    font-weight: 600;
 }
 .mypagedetail .reservedetail .box_5 .t_2 {
-  margin-top: 10px;
+    margin-top: 10px;
 }
 .mypagedetail .reservedetail .box_5 .t_3 {
-  border: 1px solid #e5e7eb;
-  border-radius: 10px;
-  padding: 18px 20px;
-  margin-top: 30px;
+    border: 1px solid #e5e7eb;
+    border-radius: 10px;
+    padding: 18px 20px;
+    margin-top: 30px;
 }
 .mypagedetail .reservedetail .box_5 .t_3 .top div {
-  font-size: 14px;
-  line-height: 22px;
+    font-size: 14px;
+    line-height: 22px;
 }
 .mypagedetail .reservedetail .box_5 .t_3 .top span {
-  font-weight: 600;
+    font-weight: 600;
 }
 .mypagedetail .reservedetail .box_5 .t_3 .bottom div {
-  font-size: 14px;
-  margin-top: 16px;
+    font-size: 14px;
+    margin-top: 16px;
 }
 .mypagedetail .reservedetail .box_5 .t_3 .bottom strong {
-  color: #ed4949;
+    color: #ed4949;
 }
 .mypagedetail .reservedetail .box_6 .period {
-  font-size: 16px;
-  margin-bottom: 1rem;
-  padding-top: 40px;
+    font-size: 16px;
+    margin-bottom: 1rem;
+    padding-top: 40px;
 }
 .mypagedetail .reservedetail .box_6 .period span {
-  font-weight: 600;
+    font-weight: 600;
 }
 .mypagedetail .reservedetail .box_6 .notice {
-  color: #888;
-  font-weight: 500;
-  font-size: 14px;
-  margin-bottom: 2.5rem;
+    color: #888;
+    font-weight: 500;
+    font-size: 14px;
+    margin-bottom: 2.5rem;
 }
 .mypagedetail .reservedetail .box_6 .p_tit {
-  font-size: 16px;
-  font-weight: 600;
-  padding-bottom: 16px;
+    font-size: 16px;
+    font-weight: 600;
+    padding-bottom: 16px;
 }
 .mypagedetail .reservedetail .box_6 .people table {
-  width: 100%;
-  border-top: 2px #111 solid;
-  margin-bottom: 60px;
+    width: 100%;
+    border-top: 2px #111 solid;
+    margin-bottom: 60px;
 }
 .mypagedetail .reservedetail .box_6 .people th {
-  background: #eee;
-  padding-top: 27px;
-  padding-bottom: 27px;
-  text-align: center;
-  font-size: 0.875rem;
+    background: #eee;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    text-align: center;
+    font-size: 0.875rem;
 }
 .mypagedetail .reservedetail .box_6 .people th:last-child {
-  border-width: 0 1px;
-  border-style: solid;
-  border-color: #111;
+    border-width: 0 1px;
+    border-style: solid;
+    border-color: #111;
 }
 .mypagedetail .reservedetail .box_6 .people td {
-  padding-top: 27px;
-  padding-bottom: 27px;
-  text-align: center;
-  font-size: 0.875rem;
-  vertical-align: middle;
-  border-width: 0 0 1px 1px;
-  border-style: solid;
-  border-color: #e5e7eb;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    text-align: center;
+    font-size: 0.875rem;
+    vertical-align: middle;
+    border-width: 0 0 1px 1px;
+    border-style: solid;
+    border-color: #e5e7eb;
 }
 .mypagedetail .reservedetail .box_6 .people td:first-child,
 .mypagedetail .reservedetail .box_6 .people td:nth-child(5) {
-  border-left: none;
+    border-left: none;
 }
 .mypagedetail .reservedetail .box_6 .people td:nth-child(3) {
-  width: 15%;
+    width: 15%;
 }
 .mypagedetail .reservedetail .box_6 .people td:nth-child(4) {
-  border-width: 0 0 1px 1px;
-  border-style: solid;
-  border-color: #111;
+    border-width: 0 0 1px 1px;
+    border-style: solid;
+    border-color: #111;
 }
 .mypagedetail .reservedetail .box_6 .people td:nth-child(5) {
-  border-bottom: 1px #111 solid;
+    border-bottom: 1px #111 solid;
 }
 .mypagedetail .reservedetail .box_6 .people td:nth-child(6) {
-  border-width: 0 1px 1px 0;
-  border-style: solid;
-  border-color: #111;
+    border-width: 0 1px 1px 0;
+    border-style: solid;
+    border-color: #111;
 }
 .mypagedetail .reservedetail .box_6 .people td span {
-  display: block;
-  font-weight: 600;
-  margin-bottom: 5px;
+    display: block;
+    font-weight: 600;
+    margin-bottom: 5px;
 }
 .mypagedetail .reservedetail .box_6 .btn_box {
-  text-align: center;
+    text-align: center;
 }
 .mypagedetail .reservedetail .box_6 .btn_box button {
-  width: 205px;
-  height: 52px;
+    width: 205px;
+    height: 52px;
 }
 .mypagedetail .reservedetail .box_6 .change_insurance .ci_tit {
-  font-weight: 600;
-  font-size: 16px;
-  margin-bottom: 1.25rem;
+    font-weight: 600;
+    font-size: 16px;
+    margin-bottom: 1.25rem;
 }
 .mypagedetail .reservedetail .box_6 .change_insurance p {
-  font-size: 14px;
-  line-height: 20px;
+    font-size: 14px;
+    line-height: 20px;
 }
 .mypagedetail .reservedetail .box_6 .change_insurance p span {
-  font-weight: 600;
+    font-weight: 600;
 }
 .mypagedetail .reservedetail .box_6 .change_insurance table {
-  margin-top: 2.5rem;
-  width: 100%;
-  border-top: 2px #111 solid;
+    margin-top: 2.5rem;
+    width: 100%;
+    border-top: 2px #111 solid;
 }
 .mypagedetail .reservedetail .box_6 .change_insurance table th {
-  background: #eee;
-  padding-top: 27px;
-  padding-bottom: 27px;
-  text-align: center;
-  font-size: 0.875rem;
+    background: #eee;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    text-align: center;
+    font-size: 0.875rem;
 }
 .mypagedetail .reservedetail .box_6 .change_insurance table td {
-  padding-top: 27px;
-  padding-bottom: 27px;
-  text-align: center;
-  font-size: 0.875rem;
-  vertical-align: middle;
-  border-width: 0 0 1px 0;
-  border-style: solid;
-  border-color: #e5e7eb;
+    padding-top: 27px;
+    padding-bottom: 27px;
+    text-align: center;
+    font-size: 0.875rem;
+    vertical-align: middle;
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    border-color: #e5e7eb;
 }
 .mypagedetail .reservedetail .box_6 .change_insurance .notice {
-  background: #f5f6f6;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-  padding-left: 18px;
-  padding-right: 18px;
-  border-radius: 10px;
-  margin-top: 40px;
+    background: #f5f6f6;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 18px;
+    padding-right: 18px;
+    border-radius: 10px;
+    margin-top: 40px;
 }
 .mypagedetail .reservedetail .box_6 .change_insurance .notice .n_tit {
-  font-weight: 600;
-  font-size: 14px;
-  color: #111;
+    font-weight: 600;
+    font-size: 14px;
+    color: #111;
 }
 .mypagedetail .reservedetail .box_6 .change_insurance .notice ul li {
-  margin-top: 15px;
-  color: #111;
-  font-weight: 400;
-  line-height: 20px;
-  position: relative;
-  padding-left: 10px;
+    margin-top: 15px;
+    color: #111;
+    font-weight: 400;
+    line-height: 20px;
+    position: relative;
+    padding-left: 10px;
 }
 .mypagedetail .reservedetail .box_6 .change_insurance .notice ul li:before {
-  content: "*";
-  position: absolute;
-  top: 1px;
-  left: 0;
+    content: "*";
+    position: absolute;
+    top: 1px;
+    left: 0;
 }
 .mypagedetail .reservedetail .box_6 .change_insurance .notice ul li.red {
-  color: #ed4949;
+    color: #ed4949;
+}
+
+.mypagedetail .reservedetail .box_9 .tit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-bottom: 24px;
+}
+.mypagedetail .reservedetail .box_9 button {
+    font-size: 14px;
+    border: 1px solid #d9d9d9;
+    background: none;
+    border-radius: 9999px;
+    padding: 10px 20px;
+    font-weight: 500;
+    margin-left: 5px;
+}
+.mypagedetail .reservedetail .box_9 button:first-child {
+    margin-left: 0;
+}
+.mypagedetail .reservedetail .box_9 .guide {
+    border: 1px solid #d3dbd9;
+    border-radius: 10px;
+    margin-top: 40px;
+    padding: 20px;
+}
+.mypagedetail .reservedetail .box_9 .guide li {
+    font-size: 13px;
+    line-height: 19px;
+    color: #111;
+    padding-left: 8px;
+    text-indent: -8px;
+}
+.mypagedetail .reservedetail .box_9 .guide li + li {
+    margin-top: 16px;
 }
 .mypagedetail .reservedetail .localtourswiper {
-  margin-top: 40px;
-  position: relative;
-  overflow: hidden;
+    margin-top: 40px;
+    position: relative;
+    overflow: hidden;
 }
 .mypagedetail .reservedetail .localtourswiper .visual {
-  height: 207px;
-  margin-bottom: 16px;
-  border-radius: 10px;
-  overflow: hidden;
+    height: 207px;
+    margin-bottom: 16px;
+    border-radius: 10px;
+    overflow: hidden;
 }
 .mypagedetail .reservedetail .localtourswiper img {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 .mypagedetail .reservedetail .localtourswiper .txt01 {
-  color: #111;
-  font-weight: 600;
-  font-size: 18px;
-  line-height: 1.5rem;
-  -webkit-line-clamp: 2;
-  height: 45px;
-  margin-bottom: 12px;
+    color: #111;
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 1.5rem;
+    -webkit-line-clamp: 2;
+    height: 45px;
+    margin-bottom: 12px;
 }
 .mypagedetail .reservedetail .localtourswiper .txt02 {
-  font-size: 15px;
-  line-height: 18px;
-  -webkit-line-clamp: 1;
-  margin-bottom: 16px;
+    font-size: 15px;
+    line-height: 18px;
+    -webkit-line-clamp: 1;
+    margin-bottom: 16px;
 }
 .mypagedetail .reservedetail .localtourswiper .txt03 {
-  font-size: 16px;
+    font-size: 16px;
 }
 .mypagedetail .reservedetail .localtourswiper .txt03 span {
-  font-weight: 700;
-  line-height: 24px;
-  font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    font-size: 20px;
 }
 .mypagedetail .reservedetail .localtourswiper .swiper-button-next.swiper-button-disabled,
 .mypagedetail .reservedetail .localtourswiper .swiper-button-prev.swiper-button-disabled {
-  opacity: 1;
+    opacity: 1;
 }
 .mypagedetail .reservedetail .localtourswiper .swiper-button-next,
 .mypagedetail .reservedetail .localtourswiper .swiper-button-prev {
-  height: 26px;
-  background: rgba(0, 0, 0, 0.5);
-  cursor: pointer;
-  margin-top: 0;
-  top: 28%;
+    height: 26px;
+    background: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    margin-top: 0;
+    top: 28%;
 }
 .mypagedetail .reservedetail .localtourswiper .swiper-button-next {
-  right: 0;
+    right: 0;
 }
 .mypagedetail .reservedetail .localtourswiper .swiper-button-prev {
-  left: 0;
+    left: 0;
 }
 .mypagedetail .reservedetail .box_8 {
-  margin-bottom: 60px;
+    margin-bottom: 60px;
 }
 .mypagedetail .reservedetail .hotelrcmswiper {
-  margin-top: 40px;
-  position: relative;
-  overflow: hidden;
+    margin-top: 40px;
+    position: relative;
+    overflow: hidden;
 }
 .mypagedetail .reservedetail .hotelrcmswiper .visual {
-  height: 257px;
-  margin-bottom: 16px;
-  border-radius: 10px;
-  overflow: hidden;
+    height: 257px;
+    margin-bottom: 16px;
+    border-radius: 10px;
+    overflow: hidden;
 }
 .mypagedetail .reservedetail .hotelrcmswiper img {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 .mypagedetail .reservedetail .hotelrcmswiper .txt01 {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
 }
 .mypagedetail .reservedetail .hotelrcmswiper .grade {
-  border-radius: 4px;
-  border: 1px #d3dbd9 solid;
-  padding-top: 5px;
-  padding-bottom: 4px;
-  padding-left: 10px;
-  padding-right: 10px;
-  font-size: 13px;
-  font-weight: 600;
+    border-radius: 4px;
+    border: 1px #d3dbd9 solid;
+    padding-top: 5px;
+    padding-bottom: 4px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 13px;
+    font-weight: 600;
 }
 .mypagedetail .reservedetail .hotelrcmswiper .txt02 {
-  color: #111;
-  font-size: 20px;
-  font-weight: 600;
-  line-height: 24px;
-  margin-bottom: 12px;
+    color: #111;
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 24px;
+    margin-bottom: 12px;
 }
 .mypagedetail .reservedetail .hotelrcmswiper .swiper-button-next {
-  right: 0;
+    right: 0;
 }
 .mypagedetail .reservedetail .hotelrcmswiper .swiper-button-prev {
-  left: 0;
+    left: 0;
 }
 .mypagedetail .reservedetail .hotelrcmswiper .swiper-button-next,
 .mypagedetail .reservedetail .hotelrcmswiper .swiper-button-prev {
-  height: 26px;
-  background: rgba(0, 0, 0, 0.5);
-  cursor: pointer;
-  margin-top: 0;
-  top: 35%;
+    height: 26px;
+    background: rgba(0, 0, 0, 0.5);
+    cursor: pointer;
+    margin-top: 0;
+    top: 35%;
 }
 .mypagedetail .reservedetail .hotelrcmswiper .swiper-button-next.swiper-button-disabled,
 .mypagedetail .reservedetail .hotelrcmswiper .swiper-button-prev.swiper-button-disabled {
-  opacity: 1;
+    opacity: 1;
+}
+.mypagedetail .reservedetail .service_banner {
+    display: flex;
+    margin-top: 20px;
+}
+.mypagedetail .reservedetail .service_banner .left {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.mypagedetail .reservedetail .service_banner .left .top {
+    color: #09a7e4;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 0 45px;
+}
+.mypagedetail .reservedetail .service_banner .middle {
+    width: 180px;
+    text-align: center;
+    margin: 12px auto;
+}
+.mypagedetail .reservedetail .service_banner .middle img {
+    max-width: 100%;
+}
+.mypagedetail .reservedetail .service_banner .middle2 {
+    display: flex;
+    column-gap: 95px;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+    padding: 15px 45px;
+    word-break: keep-all;
+}
+.mypagedetail .reservedetail .service_banner .middle2 button {
+    background: #009c75;
+    border-radius: 5px;
+    color: #fff;
+    width: 130px;
+    height: 46px;
+    font-weight: 600;
+    font-size: 18px;
+}
+.mypagedetail .reservedetail .service_banner .bottom {
+    display: flex;
+    padding: 12px 0;
+    border-top: 1px #e5e7eb solid;
+}
+.mypagedetail .reservedetail .service_banner .bottom > div {
+    flex: 1;
+    text-align: center;
+    border-left: 1px #e5e7eb solid;
+}
+.mypagedetail .reservedetail .service_banner .bottom > div:first-child {
+    border: 0;
+}
+.mypagedetail .reservedetail .service_banner .bottom .ico1 {
+    font-size: 18px;
+    font-weight: 600;
+}
+.mypagedetail .reservedetail .service_banner .bottom .ico1 span {
+    margin-right: 5px;
+}
+.mypagedetail .reservedetail .service_banner .bottom p {
+    font-size: 16px;
+    font-weight: 500;
+    color: #707070;
+    margin-top: 5px;
+}
+.mypagedetail .reservedetail .service_banner .right {
+    background: #ebecf1;
+}
+.mypagedetail .air_box .airline_tab {
+    position: relative;
+    margin-top: 20px;
+    border-bottom: 2px solid #eee;
+}
+.mypagedetail .air_box .airline_tab .tab_in {
+    display: flex;
+}
+.mypagedetail .air_box .airline_tab .tab_in a {
+    flex: 1;
+    text-decoration: none;
+    text-align: center;
+    color: #aaa;
+    font-size: 18px;
+    font-weight: 600;
+    padding: 24px 0;
+}
+.mypagedetail .air_box .airline_tab .tab_in a.on {
+    color: #111;
+}
+.mypagedetail .air_box .airline_tab .bar {
+    position: absolute;
+    width: 50%;
+    height: 2px;
+    background: #111;
+    left: 0;
+    transition: width 0.3s, left 0.3s, right 0.3s;
+}
+
+.mypagedetail .reservedetail .airschedule_st1 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0;
+}
+.mypagedetail .reservedetail .airschedule_st1 > div {
+    border: none;
+}
+.mypagedetail .reservedetail .airschedule_st1 .tit {
+    font-weight: 700;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    line-height: 20px;
+    margin-bottom: 6px;
+    gap: 0 10px;
+}
+.mypagedetail .reservedetail .airschedule_st1 .btn_box {
+    margin-top: 0;
+}
+.mypagedetail .reservedetail .airschedule_st1 .btn_box .btn_type02 {
+    color: #555555;
+    background: #eee;
+    font-size: 14px;
+    height: 52px;
+    margin-top: 0;
+}
+.mypagedetail .reservedetail .airschedule_st2 {
+    border: 1px #d3dbd9 solid;
+    padding: 24px;
+    border-radius: 10px;
+    margin-top: 30px;
+}
+.mypagedetail .reservedetail .airschedule_st2 .air {
+    font-size: 15px;
+    color: #111;
+    font-weight: 700;
+}
+.mypagedetail .reservedetail .airschedule_st2 .air img {
+    width: 18px;
+    height: 18px;
+    margin-right: 8px;
+}
+.mypagedetail .reservedetail .airschedule_st2 .infor {
+    margin-top: 24px;
+    display: flex;
+}
+.mypagedetail .reservedetail .airschedule_st2 .infor > div {
+    flex: 1 1 0%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 11px 0;
+}
+
+.mypagedetail .reservedetail .airschedule_st2 .infor .left > div,
+.mypagedetail .reservedetail .airschedule_st2 .infor .right > div {
+    display: flex;
+    justify-content: space-between;
+}
+.mypagedetail .reservedetail .airschedule_st2 .infor .right {
+    margin-left: 48px;
+}
+.mypagedetail .reservedetail .airschedule_st2 .infor .txt01 {
+    font-weight: 600;
+    font-size: 15px;
+}
+.mypagedetail .reservedetail .airschedule_st2 .infor .txt02 {
+    font-size: 14px;
+    text-align: right;
+}
+.mypagedetail .reservedetail .airschedule_st2 .infor .txt02 button {
+    vertical-align: middle;
+}
+.mypagedetail .reservedetail .airschedule_st2 .infor .bold {
+    font-weight: 600;
+    display: block;
+}
+.mypagedetail .reservedetail .infor_wrap .red {
+    color: #ed4949;
+}
+.mypagedetail .reservedetail.domestic_reservedetail .infor_wrap .right.btn_box {
+    border: none;
+    padding: 0;
+    margin-top: 0;
+}
+.mypagedetail .reservedetail.domestic_reservedetail .infor_wrap .right.btn_box button {
+    height: 52px;
+    font-size: 16px;
+}
+.mypagedetail .reservedetail .pay_notice2 {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    margin-top: 20px;
+}
+
+.mypagedetail .reservedetail .pay_notice2 svg {
+    color: #ed4949;
+    vertical-align: middle;
+    margin-left: 5px;
+}
+.mypagedetail .reservedetail.domestic_reservedetail .pay_notice {
+    margin-top: 30px;
+    border-width: 2px;
+}
+.mypagedetail .reservedetail.domestic_reservedetail .infor_box {
+    border: none;
+}
+.mypagedetail .reservedetail .infor_wrap .complete + .right {
+    border: none;
+    padding: 0;
+}
+.mypagedetail .reservedetail .infor_wrap .complete + .right .num {
+    margin-top: 10px;
+    font-size: 15px;
+    position: relative;
+}
+.mypagedetail .reservedetail .infor_wrap .complete + .right .num span {
+    line-height: 25px;
+}
+.mypagedetail .reservedetail .infor_wrap .complete + .right .num .txt01 {
+    margin-right: 20px;
+}
+.mypagedetail .reservedetail .infor_wrap .complete + .right .num .txt02 {
+    font-weight: 300;
+}
+.mypagedetail .reservedetail .infor_wrap .complete + .right .num .schedule_btn {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    margin: 0;
 }

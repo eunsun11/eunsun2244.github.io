@@ -1,0 +1,1450 @@
+@charset "utf-8";
+
+.layout {
+    padding: 0 20px;
+}
+
+/* 버튼 2024-10-07 수정 */
+button {
+    border: none;
+    background: none;
+}
+.btn_box [class^="btn_type"] {
+    display: inline-block;
+    width: 100%;
+    border-radius: 5px;
+    font-size: 16px;
+    height: 52px;
+    font-weight: 600;
+    transition: 0.3s;
+    cursor: pointer;
+    text-align: center;
+}
+.btn_box [class^="btn_type"].btn_type03 {
+    background: #e6e6e6;
+    border: 1px #bababa solid;
+    line-height: 35px;
+    color: #a8a8a8;
+}
+.btn_box [class^="btn_type"].btn_type01 {
+    background: #009c75;
+    color: #fff;
+}
+.btn_box [class^="btn_type"].btn_type02 {
+    background: #fff;
+    border: 1px #111 solid;
+    color: #111;
+}
+.btn_box [class^="btn_type"].btn_type04 {
+    background: #fff;
+    height: 56px;
+    border: 1px #d3dbd9 solid;
+    font-size: 15px;
+    border-radius: 5px;
+    padding: 1px 20px;
+    color: #111;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.btn_box [class^="btn_type"].btn_type04::after {
+    content: "";
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    background: url("https://m.modetour.com/icons/flights/icon_up_26.svg") no-repeat center 0;
+    transform: rotate(-270deg);
+    margin-left: 6px;
+    position: relative;
+    top: -1px;
+    font-size: 14px;
+}
+
+.btn_box [class^="btn_type"].btn_type05 {
+    border: 1px solid #009c75;
+    color: #009c75;
+}
+.btn_box [class^="btn_type"].btn_type06 {
+    background: #111;
+    border: 1px #111 solid;
+    line-height: 35px;
+    color: #fff;
+}
+.btn_box [class^="btn_type"].btn_type07 {
+    border: none;
+    background: #eee;
+    color: #555;
+}
+.btn_box a[class^="btn_type"] {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn_box [class^="btn_type"] span {
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+}
+/* 레이어팝업 */
+.popup_container {
+    position: relative;
+}
+.popup_container .layer_popup_btn {
+    cursor: pointer;
+}
+.popup_container .layer_popup .icon_x {
+    display: flex;
+}
+.popup_container .layer_popup .icon_x button {
+    width: 18px;
+    height: 18px;
+    margin-left: auto;
+    background: url("https://www.modetour.com/icons/icon_x_18.svg");
+    font-size: 0;
+    color: transparent;
+    cursor: pointer;
+}
+.popup_container .layer_popup {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    z-index: 100;
+    background: #fff;
+    box-shadow: rgba(17, 17, 17, 0.15) 0px 0px 6px;
+    border: 1px #d3dbd9 solid;
+    border-radius: 5px;
+    text-align: left;
+    padding: 40px 30px;
+    display: none;
+}
+
+/* 팝업 */
+.pop_btn {
+    cursor: pointer;
+}
+.pop_cont {
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    background-color: #fff;
+    display: none;
+}
+.pop_cont .pop_over {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    border: 0 solid #888;
+    min-height: auto;
+    max-height: 100%;
+    margin: auto;
+    position: relative;
+}
+.pop_cont .pop_top {
+    padding: 9px 20px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    justify-content: space-between;
+}
+.pop_cont .pop_tit {
+    font-size: 20px;
+    font-weight: 700;
+    height: 24px;
+    text-align: left;
+    line-height: normal;
+    display: initial;
+    color: #111;
+    margin: 0;
+}
+.pop_cont .pop_in {
+    width: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    max-height: 100vh;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    margin-top: 20px;
+    font-size: 14px;
+    color: #111;
+    padding: 0 20px 20px 20px;
+}
+.pop_cont .icon_x {
+    width: 26px;
+    height: 26px;
+    margin-left: auto;
+    background: url("https://m.modetour.com/icons/icon_x_14_black.svg") no-repeat center 0 / cover;
+    font-size: 0;
+    color: transparent;
+    cursor: pointer;
+}
+/* 요금 결제조건 팝업 */
+.pay_layer .btn_box {
+    margin-top: 30px;
+}
+.pay_select .pay_list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 46px;
+    font-size: 13px;
+    font-weight: 500;
+    border-top: 1px solid #d3dbd9;
+}
+.pay_select .pay_list li.active {
+    background: #f5f6f6;
+    font-weight: bold;
+}
+.pay_select .pay_list li.active div:nth-child(2) {
+    color: #111;
+}
+.pay_select .pay_list li.active div:nth-child(3) {
+    font-weight: normal;
+}
+.pay_select .pay_list li div:nth-child(1) {
+    display: flex;
+    flex: 1;
+    font-size: 14px;
+}
+.pay_select .pay_list li div:nth-child(2) {
+    width: 70px;
+    color: #888;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.pay_select .pay_list li div:nth-child(3) {
+    display: flex;
+    flex: 1 1 0%;
+    justify-content: flex-end;
+}
+.pay_select .pay_list li div:nth-child(3) span {
+    font-size: 17px;
+    color: #009c75;
+    font-weight: 700;
+}
+.pay_select .pay_list li span {
+    line-height: 15px;
+    font-size: 13px;
+}
+.pay_select .pay_list li label {
+    line-height: 1;
+    display: flex;
+    align-items: center;
+    word-break: keep-all;
+}
+.pay_select .radiobox .ico {
+    margin-top: 5px;
+}
+.pay_select .radiobox input:checked + label::after {
+    top: 5px;
+}
+.pay_select .radiobox input:checked + label {
+    font-weight: 700;
+}
+
+/* input */
+.enterinfor input[type="text"] {
+    border: 1px #d3dbd9 solid;
+    font-size: 16px;
+    border-radius: 5px;
+    min-height: 52px;
+    padding: 4px 10px;
+    box-sizing: border-box;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: Pretendard;
+}
+
+.s_tit {
+    color: #111;
+    font-size: 15px;
+    font-weight: 600;
+    line-height: 18px;
+    margin-bottom: 10px;
+}
+.s_tit span {
+    color: #009c75;
+}
+input[type="text"]:focus {
+    outline: 1px #009c75 solid;
+    box-shadow: 0 0 0 2px rgba(0, 156, 117, 0.4);
+}
+.cation input[type="text"],
+.cation select {
+    border: 1px #ff4d4f solid;
+    box-shadow: 0 0 0 2px rgba(237, 73, 73, 0.2);
+}
+
+.enterinfor input[type="text"]:disabled {
+    background-color: #f5f6f6;
+    border-color: #d3dbd9;
+}
+
+/* 라디오버튼 */
+.radiobox input[type="radio"] {
+    position: absolute;
+    left: 0;
+    height: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+.radiobox label {
+    font-size: 14px;
+    color: #16171d;
+    vertical-align: top;
+    line-height: 26px;
+    height: 26px;
+    cursor: pointer;
+    position: relative;
+}
+
+.radiobox .ico {
+    position: absolute;
+    left: 0;
+    top: -1px;
+    width: 18px;
+    height: 18px;
+    border-radius: 18px;
+    transition: all 0.2s;
+}
+.radiobox .ico + span {
+    padding-left: 25px;
+}
+.radiobox input + label .ico::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border: 1px solid #e5e7eb;
+    border-radius: 50%;
+}
+
+.radiobox input:checked + label::after {
+    position: absolute;
+    top: 0;
+    left: 1px;
+    width: 14px;
+    height: 14px;
+    border: 1px solid #028267;
+    border-radius: 50%;
+    animation: antRadioEffect 0.36s ease-in-out;
+    animation-fill-mode: both;
+    content: "";
+}
+.radiobox input:checked + label .ico::after {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: #009c75;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    width: 9px;
+    height: 9px;
+    content: "";
+    transition: all 0.3s cubic-bezier(0.78, 0.14, 0.15, 0.86);
+}
+@keyframes antRadioEffect {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+
+    to {
+        transform: scale(1.6);
+        opacity: 0;
+    }
+}
+
+/* 체크박스 */
+input[type="checkbox"] {
+    position: absolute;
+    left: 0;
+    height: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+.checkbox {
+    position: relative;
+}
+.checkbox label {
+    display: inline-flex;
+    align-items: center;
+    font-size: 15px;
+    color: #16171d;
+    vertical-align: top;
+    line-height: 22px;
+    height: 22px;
+    cursor: pointer;
+}
+.checkbox .ico {
+    position: relative;
+    display: inline-block;
+    border: solid 1px #d9d9d9;
+    width: 18px;
+    height: 18px;
+    border-radius: 18px;
+    background-color: #fff;
+    transition: all 0.2s;
+    margin-right: 5px;
+}
+
+.checkbox input:checked + label .ico {
+    border-color: #00d9a3;
+    background-color: #00d9a3;
+}
+.checkbox input + label .ico::after {
+    position: absolute;
+    top: -1px;
+    left: -1px;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #00d9a3;
+    border-radius: 100%;
+    visibility: hidden;
+    content: "";
+}
+.checkbox input + label .ico::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 9px;
+    height: 7px;
+    background: url("https://www.modetour.com/icons/ico-check_gray.svg") no-repeat center 0 / cover;
+}
+.checkbox input::selection {
+    color: #fff;
+    background: #00d9a3;
+}
+
+.checkbox input:checked + label .ico::before {
+    background-image: url("https://www.modetour.com/icons/ico-check_white.svg");
+}
+.checkbox input:checked + label .ico::after {
+    animation: antCheckboxEffect 0.36s ease-in-out;
+    animation-fill-mode: backwards;
+    visibility: visible;
+}
+@keyframes antCheckboxEffect {
+    0% {
+        transform: scale(1);
+        opacity: 0.5;
+    }
+
+    to {
+        transform: scale(1.6);
+        opacity: 0;
+    }
+}
+
+/* 셀렉트박스 */
+.enterinfor .select_box {
+    width: 100%;
+}
+.select_box {
+    position: relative;
+    display: inline-block;
+    position: relative;
+}
+.select_box .select_layer {
+    min-width: 100px;
+    height: 52px;
+    padding: 0 8px 0 18px;
+    border: 1px #d9d9d9 solid;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+    background: #fff;
+}
+.select_box .select_layer div,
+.select_box .select_layer input {
+    font-size: 16px;
+}
+.select_box .select_layer.error {
+    border: 1px #ff4d4f solid;
+    box-shadow: 0 0 0 2px rgba(237, 73, 73, 0.2);
+}
+.select_box .select_layer.on {
+    border: 1px #009c75 solid;
+    box-shadow: 0 0 0 2px rgba(0, 156, 117, 0.4);
+}
+.select_box .select_layer::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 5px;
+    width: 20px;
+    height: 20px;
+    margin-top: -10px;
+    background: url("https://www.modetour.com/icons/footer/icon_down__20_bk.svg");
+    transition: all 0.2s;
+}
+.select_box .select_layer.on::after {
+    transform: rotate(180deg);
+}
+.select_box .select_option {
+    box-shadow: rgba(17, 17, 17, 0.15) 0px 0px 6px;
+    position: absolute;
+    width: 100%;
+    height: 158px;
+    left: 0;
+    top: 60px;
+    overflow-y: scroll;
+    display: none;
+    z-index: 9;
+}
+.select_box .select_option::-webkit-scrollbar {
+    width: 8px;
+}
+
+.select_box .select_option::-webkit-scrollbar-thumb {
+    height: 30%;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 4px;
+}
+.select_box .select_option::-webkit-scrollbar-track {
+    background: #fff;
+}
+.select_box .select_option li {
+    height: 52px;
+    padding: 0 8px 0 18px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    background: #fff;
+}
+.select_box .select_option li span {
+    font-size: 14px;
+    color: inherit;
+}
+.select_box .select_option li:hover {
+    background: #e6f2ef;
+}
+.select_box .select_option li.active {
+    font-weight: 700;
+    color: #fff;
+    background: #278167;
+}
+
+.select_box input[type="text"]:focus {
+    outline: none;
+    box-shadow: none;
+}
+.select_box .select_layer.txt::after {
+    display: none;
+}
+.select_box .select_layer.txt input[type="text"] {
+    outline: none;
+    box-shadow: none;
+    border: none;
+    background: transparent;
+    padding: 0;
+}
+
+/* [s] : 여정정보 항공편 css */
+.boarding_time {
+    max-width: 500px;
+}
+.boarding_time > div {
+    display: flex;
+    align-items: stretch;
+    justify-content: flex-start;
+    text-align: left;
+}
+.boarding_time .num {
+    min-width: 80px;
+    display: flex;
+    flex-direction: column;
+}
+.boarding_time .num .time {
+    font-weight: 600;
+    line-height: 1.1875;
+    font-size: 16px;
+}
+.boarding_time .num .day {
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1.15;
+    height: 15px;
+    margin-top: 6px;
+}
+.boarding_time .num .way {
+    font-size: 11px;
+    color: #fff;
+    background: #009c75;
+    border-radius: 30px;
+    line-height: 11px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+    text-align: center;
+    width: 39px;
+    margin-top: auto;
+    margin-bottom: 27px;
+}
+.boarding_time .num .way.transfer {
+    margin-top: 20px;
+}
+.boarding_time .line {
+    width: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin-right: 27px;
+    min-height: 100%;
+}
+.boarding_time .line .circle {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #8f9f9b;
+}
+.boarding_time .line .l {
+    border-right: 2px #d3dbd9 solid;
+    flex: 1 1 0%;
+}
+.boarding_time .boardinfo .empty {
+    margin-top: 30px;
+}
+.boarding_time .boardinfo .location {
+    font-weight: 600;
+    font-size: 16px;
+    max-height: 38px;
+}
+.boarding_time .boardinfo .terminal {
+    font-weight: 500;
+    font-size: 13px;
+    padding-top: 6px;
+    line-height: 1.15;
+}
+.boarding_time .end .boardinfo .terminal {
+    padding-top: 7px;
+}
+.boarding_time .boardinfo .terminal span {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: #009c75;
+    line-height: 1.167;
+    margin-top: 3px;
+}
+.boarding_time .boardinfo .bottom {
+    margin-top: 24px;
+    line-height: 22px;
+}
+.boarding_time .boardinfo .bottom .air {
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+}
+.boarding_time .boardinfo .bottom .ant_img {
+    width: 15px;
+    height: 15px;
+    display: flex;
+    margin-right: 5px;
+}
+.boarding_time .boardinfo .bottom .ant_img img {
+    min-width: 100%;
+    max-width: 100%;
+    min-height: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+.boarding_time .boardinfo .bottom .rule {
+    color: #888888;
+    font-size: 12px;
+    word-break: keep-all;
+    display: flex;
+    flex-direction: column;
+    line-height: 17px;
+}
+.boarding_time .middle .line .l {
+    border-style: dashed;
+}
+.boarding_time .middle .terminal {
+    padding-top: 6px;
+}
+.boarding_time .middle .terminal span {
+    padding-top: 24px;
+}
+.boarding_time .middle .terminal span:nth-child(2) {
+    color: #ed4949;
+}
+
+/* 헤더메뉴 */
+
+.header_wrap {
+    display: flex;
+    align-items: center;
+    height: 44px;
+    padding: 12px 20px;
+}
+.header_wrap h1 {
+    margin-left: 10px;
+}
+.menu_btn {
+    position: relative;
+    z-index: 3;
+}
+.menu_nav {
+    position: fixed;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    background: #fff;
+    z-index: 999;
+    overflow: hidden;
+}
+.menu_nav .close {
+    display: block;
+    width: 26px;
+    height: 26px;
+    background: url("https://m.modetour.com/icons/drawable/icon_x_26.svg") no-repeat center 0;
+    font-size: 0;
+    color: transparent;
+    margin: 9px 20px 9px auto;
+}
+.menu_nav .tab_area,
+.menu_nav .con_group {
+    height: 100%;
+}
+
+.line_tab {
+    position: relative;
+}
+.line_tab .line {
+    display: inline-block;
+    width: 30px;
+    height: 2px;
+    border-radius: 3px;
+    background-color: #009b75;
+    position: absolute;
+    z-index: 2;
+    bottom: -7px;
+    left: 0;
+    transition: all 0.3s linear;
+}
+.menu_nav .line_tab .line {
+    bottom: 0;
+    width: 50%;
+    background: #000;
+    position: absolute;
+}
+.menu_nav .btn_group {
+    display: flex;
+    border-bottom: 1px #f5f5f5 solid;
+}
+.menu_nav .btn_group .btn {
+    flex: 1;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+.menu_nav .btn_group .btn span {
+    color: #aaa;
+    font-size: 16px;
+    font-weight: 700;
+}
+.menu_nav .btn_group .btn.on span {
+    color: #000;
+    position: relative;
+}
+.menu_nav .btn_group .btn.on span::after {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 9999px;
+    background-color: #009c75;
+    position: absolute;
+    right: -10px;
+    top: 0;
+}
+.menu_nav .con_group .con {
+    height: calc(100% - 104px);
+    padding: 30px 20px;
+    overflow-y: auto;
+}
+.menu_nav .con_group .con li {
+    margin-bottom: 30px;
+}
+.menu_nav .con_group .con li a {
+    font-weight: 700;
+    line-height: 21px;
+    font-size: 16px;
+}
+.menu_nav .con_group .banner img {
+    width: 100%;
+}
+.menu_nav .btn_box {
+    margin-bottom: 20px;
+}
+.menu_nav .btn_box button[class^="btn_type"].btn_type02 {
+    border-color: rgb(211, 219, 217);
+}
+
+/* 서브 헤더 */
+.sub_header_wrap {
+    justify-content: space-between;
+    position: relative;
+}
+.sub_header_wrap .header_tit {
+    color: #111;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 24px;
+    position: absolute;
+    width: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+}
+.sub_header_wrap .items {
+    display: flex;
+    gap: 14px;
+}
+
+/* tab */
+.con_group .con {
+    display: none;
+}
+.con_group .con.on {
+    display: block;
+}
+
+/* 검색 왕복,편도,다구간 */
+
+.air_search_area .ticket_tab {
+    position: relative;
+    margin-bottom: 26px;
+}
+.air_search_area .ticket_tab a span {
+    font-size: 22px;
+    font-weight: 700;
+    font-size: 16px;
+    color: #aaa;
+    font-weight: 400;
+    padding: 0 2px;
+}
+.air_search_area .ticket_tab a.on span {
+    color: #028267;
+    font-weight: 700;
+}
+
+.air_search_area .ticket_tab .btn_group {
+    display: flex;
+    gap: 0 30px;
+}
+.air_search_area .sub_top {
+    display: flex;
+}
+.air_search_area .group_purchase {
+    margin-left: 30px;
+    position: relative;
+}
+.air_search_area .group_purchase a {
+    color: #50acfc;
+}
+.air_search_area .group_purchase .gp_label {
+    display: flex;
+    position: absolute;
+    top: -30px;
+    left: 0;
+    gap: 0 5px;
+}
+.air_search_area .group_purchase .gp_label span {
+    font-size: 13px;
+    color: #fff;
+    padding: 5px 8px;
+    background: #397fee;
+    border-radius: 5px;
+}
+
+.booking_wrap {
+    width: 100%;
+    background: #fff;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #d3dbd9;
+    border-radius: 10px;
+    box-shadow: rgba(17, 17, 17, 0.15) 0px 0px 6px;
+}
+.booking_wrap .booking_city {
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #d3dbd9;
+    position: relative;
+}
+.booking_wrap .booking_city .booking_start.active button,
+.booking_wrap .booking_city .booking_start.active input,
+.booking_wrap .booking_city .booking_end.active button,
+.booking_wrap .booking_city .booking_end.active input {
+    color: #111;
+}
+.booking_wrap .booking_city .booking_start button,
+.booking_wrap .booking_city .booking_end button {
+    font-weight: bold;
+    font-size: 20px;
+}
+.booking_wrap .booking_city input[type="text"]:focus {
+    border: none;
+    box-shadow: none;
+    outline: none;
+}
+
+.booking_wrap .booking_city input[type="text"]::placeholder {
+    color: #8f9f9b;
+}
+.booking_wrap .booking_city .booking_add {
+    font-weight: 600;
+    margin-bottom: 5px;
+    background: none;
+    color: #d3dbd9;
+}
+.booking_wrap .booking_city input {
+    width: 100%;
+    text-align: center;
+    font-size: 14px;
+}
+
+.booking_wrap .booking_date {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 0.3s;
+    background: #f5f6f6;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+#multi_air .booking_wrap .booking_city {
+    padding-right: 10px;
+}
+#multi_air .booking_wrap .booking_start,
+#multi_air .booking_wrap .booking_end {
+    flex: 1;
+}
+#multi_air .booking_wrap .booking_date {
+    background: #fff;
+    width: 106px;
+}
+#multi_air .booking_wrap .booking_date .start_date {
+    flex: 1;
+}
+.booking_wrap .booking_date:hover {
+    cursor: pointer;
+    background: rgb(248 249 249);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+#oneway_air.search_box .booking_wrap .booking_date {
+    justify-content: center;
+}
+.booking_wrap .booking_date .start_date,
+.booking_wrap .booking_date .end_date {
+    font-size: 15px;
+    font-weight: 600;
+}
+.booking_wrap .booking_city .booking_start,
+.booking_wrap .booking_city .booking_end,
+.booking_wrap .booking_date .start_date,
+.booking_wrap .booking_date .end_date {
+    width: 100%;
+    text-align: center;
+}
+.booking_wrap .booking_city .delete_btn {
+    width: 16px;
+    height: 16px;
+    background: url("../images/ico_delete2.svg") no-repeat center 0;
+    font-size: 0;
+    color: transparent;
+}
+.booking_wrap .booking_add {
+    padding: 0;
+    height: 53px;
+    background: #f5f6f6;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+.booking_wrap .booking_add button {
+    width: 100%;
+    height: 100%;
+    color: #111;
+}
+.booking_wrap .booking_add button::before {
+    content: "";
+    display: inline-block;
+    margin-right: 15px;
+    width: 14px;
+    height: 14px;
+    vertical-align: middle;
+    background: url("https://www.modetour.com/icons/icon_+_14_bk.svg") no-repeat center 0;
+}
+.search_box .passenger {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 21px 0 22px;
+    font-size: 14px;
+}
+.search_box .passenger .txt {
+    display: flex;
+    align-items: center;
+}
+.search_box .passenger .txt img {
+    margin-right: 6px;
+}
+.search_box .passenger .txt span {
+    font-weight: bold;
+}
+
+.st01 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    gap: 5px;
+}
+.st01 span {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    height: 21px;
+    border-radius: 4px;
+    font-size: 11px;
+    padding: 0 8px;
+}
+.st01 .blue01 {
+    border: 1px solid #0075e9;
+    color: #0075e9 !important;
+}
+.st01 .blue02 {
+    border: 1px #0075e9 solid;
+    background: #0075e9;
+    color: #fff !important;
+}
+.st01 .purple01 {
+    background: #8100e2;
+    border-color: #8100e2 !important;
+    color: #fff !important;
+}
+.st01 .red01 {
+    border: 1px solid #ed4949;
+    color: #ed4949 !important;
+}
+
+.st02 {
+    text-align: right;
+}
+.st02 span {
+    color: #009c75;
+    font-weight: 700;
+    font-size: 12px;
+}
+.st02 span::after {
+    content: "";
+    display: inline-block;
+    vertical-align: text-top;
+    width: 15px;
+    height: 15px;
+    background: url("https://www.modetour.com/icons/icon_alert_15_solid.svg") no-repeat center 0;
+    margin-left: 5px;
+}
+.fix_btn {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 18px 20px 26px 20px;
+    background: #fff;
+    border-top: 1px #e5e7eb solid;
+}
+.fix_btn .btn_box {
+    display: flex;
+    gap: 0 15px;
+}
+
+/* 하단 M버튼 */
+.bt_nav {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    transition: 0.5s;
+}
+.bt_nav.st {
+    bottom: -80px;
+}
+.bt_nav .nav_bar {
+    display: flex;
+    height: 65px;
+}
+.bt_nav .nav_bar .nav_box {
+    flex: 1;
+    background-color: #fff;
+    box-shadow: 0 0 6px hsla(0, 0%, 7%, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bt_nav .nav_bar .nav_box .nav_item {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    background: #fff;
+}
+.bt_nav .nav_bar .nav_box .nav_item button > img {
+    margin: 0 auto;
+}
+.bt_nav .nav_bar .left,
+.bt_nav .nav_bar .right {
+    display: flex;
+    flex: 1;
+    animation: NavigationBar_upLeftRight__tsspn 0.5s;
+    z-index: 1001;
+}
+.bt_nav .nav_bar .left.on,
+.bt_nav .nav_bar .right.on,
+.bt_nav .nav_bar .center.on .rec {
+    transform: translateY(80px);
+    animation: NavigationBar_downLeftRight__3Mg2u 0.5s;
+}
+.bt_nav .nav_bar .left {
+    flex: 1;
+    background-color: #fff;
+    border-top-right-radius: 10px;
+    box-shadow: 0 0 6px hsla(0, 0%, 7%, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bt_nav .nav_bar .right {
+    flex: 1;
+    background-color: #fff;
+    border-top-left-radius: 10px;
+    box-shadow: 0 0 6px hsla(0, 0%, 7%, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.bt_nav .nav_bar .left div,
+.bt_nav .nav_bar .right div {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    background: #fff;
+}
+.bt_nav .nav_bar .center {
+    width: 58px;
+    background-color: transparent;
+    transform: translateY(-15px);
+    border-radius: 50%;
+    position: relative;
+    z-index: 1002;
+}
+.bt_nav .nav_bar .center .rec {
+    position: relative;
+    width: 60px;
+    left: -1px;
+    height: 100%;
+    top: 24px;
+    background-color: transparent;
+    overflow: hidden;
+    animation: NavigationBar_upLeftRight__tsspn 0.5s;
+}
+.bt_nav .nav_bar .center .rec::before {
+    content: "";
+    position: absolute;
+    bottom: 50%;
+    left: 1px;
+    width: 58px;
+    height: 100%;
+    border-radius: 100%;
+    box-shadow: 0 300px 0 300px #fff;
+}
+.bt_nav .nav_bar .center .rec::after {
+    content: "";
+    position: absolute;
+    bottom: 50%;
+    left: 1px;
+    width: 58px;
+    height: 100%;
+    border-radius: 100%;
+    box-shadow: inset 0 -8px 8px -8px rgba(0, 0, 0, 0.35);
+}
+.bt_nav .nav_bar .center .logo {
+    position: absolute;
+    left: 50%;
+    margin-left: -32px;
+    top: -5px;
+    transition: 0.5s;
+}
+.bt_nav .nav_bar .center.on .logo {
+    top: -24px;
+    animation: NavigationBar_downCenter__P9Ptw 0.6s;
+}
+.bt_nav .nav_bar .menu_btn {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 8px 0;
+}
+.bt_nav .nav_bar .t_blind {
+    color: #fff !important;
+}
+.bt_nav .nav_bar .menu_btn > svg {
+    margin: 0 auto;
+}
+.bt_nav .nav_bar .menu_btn span {
+    width: 100%;
+    display: inline-block;
+    font-size: 11px;
+    color: #111;
+    font-weight: 600;
+}
+.bt_nav .radial_menu {
+    position: absolute;
+    width: 100%;
+    bottom: -96px;
+}
+.bt_nav .radial_menu .wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.bt_nav .radial_menu .wrap .inner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+}
+.bt_nav .radial_menu .wrap .inner .m_center {
+    width: 87px;
+    height: 87px;
+    z-index: 999;
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #009c75, #cfdb08);
+    box-shadow: inset 0 3px 6px #005d46, 0 0 50px rgba(0, 156, 117, 0.502);
+}
+.bt_nav .radial_menu .wrap .inner .m_side {
+    background: #fff;
+    border-radius: 9999px;
+    width: 140px;
+    height: 140px;
+    z-index: 995;
+    position: absolute;
+}
+.bt_nav .radial_menu .wrap .inner .m_side_menu {
+    background: #fff;
+    width: 0;
+    height: 0;
+    border-radius: 9999px;
+    overflow: hidden;
+    position: relative;
+}
+.bt_nav .radial_menu .wrap .inner .m_side_menu.on {
+    width: 335px;
+    height: 335px;
+    animation: RadialMenu_open__ge3TF 0.8s;
+}
+.bt_nav .radial_menu .wrap .inner .m_side_menu .item {
+    background: #fff;
+    transform-origin: 0% 100%;
+    padding-top: 23px;
+    padding-right: 10px;
+    border-color: #fff;
+    border-width: 1px;
+    overflow: hidden;
+    justify-content: center;
+    align-items: stretch;
+    width: 35%;
+    height: 50%;
+    display: flex;
+    z-index: 10;
+    top: 0;
+    right: 15%;
+    position: absolute;
+}
+.bt_nav .radial_menu .wrap .inner .m_side_menu .item_name {
+    padding-top: 33px;
+    padding-right: 20px;
+    border-left-width: 2px;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1 0%;
+    display: flex;
+    border-left: 2px solid #f5f6f6;
+}
+
+.bt_nav .radial_menu .wrap .inner .m_side_menu .item_name .de {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.bt_nav .radial_menu .wrap .inner .m_side_menu .item1 .item_name .de {
+    transform: skewY(45deg) rotate(-372.857deg);
+}
+.bt_nav .radial_menu .wrap .inner .m_side_menu .item2 .item_name .de {
+    transform: skewY(45deg) rotate(-424.286deg);
+}
+.bt_nav .radial_menu .wrap .inner .m_side_menu .item3 .item_name .de {
+    transform: skewY(45deg) rotate(-475.714deg);
+}
+.bt_nav .radial_menu .wrap .inner .m_side_menu .item4 .item_name .de {
+    transform: skewY(45deg) rotate(-527.143deg);
+}
+.bt_nav .radial_menu .wrap .inner .m_side_menu .item5 .item_name .de {
+    transform: skewY(45deg) rotate(-218.571deg);
+}
+.bt_nav .radial_menu .wrap .inner .m_side_menu .item6 .item_name .de {
+    transform: skewY(45deg) rotate(-270deg);
+}
+.bt_nav .radial_menu .wrap .inner .m_side_menu .item7 .item_name .de {
+    transform: skewY(45deg) rotate(-321.429deg);
+}
+
+.bt_nav .radial_menu .wrap .inner .m_side_menu .item_name .de span {
+    font-size: 12px;
+    margin-top: 4px;
+    text-align: center;
+}
+
+.bt_nav .radial_menu .wrap .inner .m_side_menu .item1 {
+    transform: rotate(calc(25.714285714285715deg + 90deg - 25.714285714285715deg + 360deg / 7 * 5.5)) skewY(-45deg);
+}
+.bt_nav .radial_menu .wrap .inner .m_side_menu .item2 {
+    transform: rotate(calc(25.714285714285715deg + 90deg - 25.714285714285715deg + 360deg / 7 * 6.5)) skewY(-45deg);
+}
+.bt_nav .radial_menu .wrap .inner .m_side_menu .item3 {
+    transform: rotate(calc(25.714285714285715deg + 90deg - 25.714285714285715deg + 360deg / 7 * 7.5)) skewY(-45deg);
+}
+.bt_nav .radial_menu .wrap .inner .m_side_menu .item4 {
+    transform: rotate(calc(25.714285714285715deg + 90deg - 25.714285714285715deg + 360deg / 7 * 8.5)) skewY(-45deg);
+}
+.bt_nav .radial_menu .wrap .inner .m_side_menu .item5 {
+    transform: rotate(calc(25.714285714285715deg + 90deg - 25.714285714285715deg + 360deg / 7 * 9.5)) skewY(-45deg);
+}
+.bt_nav .radial_menu .wrap .inner .m_side_menu .item6 {
+    transform: rotate(calc(25.714285714285715deg + 90deg - 25.714285714285715deg + 360deg / 7 * 10.5)) skewY(-45deg);
+    transform-origin: 0% 100%;
+    background-color: #fff;
+}
+.bt_nav .radial_menu .wrap .inner .m_side_menu .item7 {
+    transform: rotate(calc(25.714285714285715deg + 90deg - 25.714285714285715deg + 360deg / 7 * 11.5)) skewY(-45deg);
+    transform-origin: 0% 100%;
+    background-color: #fff;
+}
+
+.bt_nav .radial_menu .wrap .dim.on {
+    background-color: rgba(0, 0, 0, 0.45);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+}
+.bt_nav .top_btn {
+    position: absolute;
+    bottom: 81px;
+    right: 9px;
+    display: none;
+}
+
+@keyframes NavigationBar_downLeftRight__3Mg2u {
+    0% {
+        transform: translateY(0);
+        filter: brightness(100%);
+    }
+
+    to {
+        transform: translateY(80px);
+        filter: brightness(50%);
+    }
+}
+@keyframes NavigationBar_upLeftRight__tsspn {
+    0% {
+        transform: translateY(80px);
+        filter: brightness(50%);
+    }
+
+    to {
+        transform: translateY(0);
+        filter: brightness(100%);
+    }
+}
+
+@keyframes RadialMenu_open__ge3TF {
+    0% {
+        transform: scale(0) rotate(180deg);
+    }
+
+    50% {
+        transform: scale(1.1);
+    }
+
+    to {
+        transform: scale(1) rotate(0deg);
+    }
+}
+@keyframes NavigationBar_upCenter__jyoQP {
+    to {
+        filter: brightness(100%);
+        animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+
+    0% {
+        filter: brightness(50%);
+    }
+
+    50% {
+        transform: translateY(0);
+        animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+}
+@keyframes NavigationBar_downCenter__P9Ptw {
+    0% {
+        filter: brightness(100%);
+    }
+
+    to {
+        filter: brightness(50%);
+        animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+    }
+
+    50% {
+        transform: translateY(-5px);
+        animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+    80% {
+        transform: translateY(5px);
+        animation-timing-function: cubic-bezier(0, 0, 0.2, 1);
+    }
+}

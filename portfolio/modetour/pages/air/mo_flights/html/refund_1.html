@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../lib/js/jquery-3.7.1.min.js"></script>
+    <script src="../lib/js/common.js"></script>
+    <link rel="stylesheet" type="text/css" href="./../lib/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="./../lib/css/air.css" />
+    <link rel="stylesheet" type="text/css" href="./../lib/css/common.css" />
+  </head>
+  <body>
+    <main>
+      <div class="rscancle">
+        <div class="people_select">
+          <div class="p_tit">탑승객 선택</div>
+          <div class="chk_wrap">
+            <div class="radiobox">
+              <input id="p1_all" name="p_select1" type="radio" checked="" />
+              <label for="p1_all"> <i class="ico"></i> <span>탑승객 전체</span></label>
+            </div>
+          </div>
+          <div class="cancle_reason">
+            <div class="c_tit">취소사유</div>
+            <div class="radio_wrap">
+              <div class="radiobox">
+                <input id="c_select01" name="cancle_select" type="radio" checked="" />
+                <label for="c_select01"> <span>여행일정이 취소된 경우</span></label>
+              </div>
+              <div class="radiobox">
+                <input id="c_select02" name="cancle_select" type="radio" />
+                <label for="c_select02"> <span>더 저렴한 요금을 검색하기 위해</span></label>
+              </div>
+              <div class="radiobox">
+                <input id="c_select03" name="cancle_select" type="radio" />
+                <label for="c_select03"> <span>출발일이 변경되어 재예약 필요</span></label>
+              </div>
+              <div class="radiobox">
+                <input id="c_select04" name="cancle_select" type="radio" />
+                <label for="c_select04"> <span>천재지변</span></label>
+              </div>
+              <div class="radiobox">
+                <input id="c_select05" name="cancle_select" type="radio" />
+                <label for="c_select05"> <span>기타</span></label>
+              </div>
+            </div>
+          </div>
+          <div class="rule_notice">
+            <div class="r_tit">유의사항</div>
+            <div class="commission">
+              <div>발권 대행 수수료 (환불불가)</div>
+              <div>20,000원</div>
+            </div>
+            <ul>
+              <li>* 구매 당일 항공편을 취소하시는 경우 항공사 취소 수수료가 면제됩니다. (단, 여행사 발권 수수료는 면제대상 아님)</li>
+              <li class="red">* 환불 신청시 [탑승객 전원] 예약 및 항공권이 모두 취소되며 취소 이후에는 사용이 불가합니다.</li>
+              <li>* 일부승객 취소를 원하는 경우, 취소 후 재예약 하시기 바랍니다.</li>
+              <li>* 결제당일 이후 취소시 규정에 따라 항공사 환불수수료 및 여행사 업무대행수수료가 징수됩니다.</li>
+              <li>* 최초 발권내역과 다르게 변경된 발권 내역이 있는 경우에는 시간이 보다 더 소요될 수 있습니다.</li>
+              <li>* 무통장 입금으로 구입하신 항공권은 입력한 계좌정보로 입금처리 되며 영업일 기준 3~5일 소요 됩니다.</li>
+            </ul>
+          </div>
+          <div class="all_check">
+            <span class="checkbox">
+              <input id="all_chk" name="all_chk" type="checkbox" />
+              <label for="all_chk"> <i class="ico"></i> <span>예약취소 / 환불 유의사항 및 환불 불가 금액 모두 확인하였습니다.</span> </label>
+            </span>
+          </div>
+          <div class="btn_box">
+            <button type="button" class="btn_type02">취소</button>
+            <button type="button" class="btn_type06">예약취소 / 환불하기</button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>

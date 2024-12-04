@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" type="text/css" href="./../lib/css/reset.css" />
+        <link rel="stylesheet" type="text/css" href="./../lib/css/air.css" />
+        <link rel="stylesheet" type="text/css" href="./../lib/css/common.css" />
+        <link rel="stylesheet" href="../lib/css/search.css" />
+        <link rel="stylesheet" href="../lib/css/swiper.min.css" />
+        <style>
+            .btnsss .btn_wrap {
+                padding: 30px;
+                display: flex;
+                gap: 10px;
+                flex-wrap: wrap;
+            }
+            .btnsss .btn_wrap a {
+                text-decoration: none;
+                color: #000;
+                font-weight: 700;
+                border: 1px #555 solid;
+                display: inline-block;
+                padding: 10px;
+                border-radius: 5px;
+                font-size: 13px;
+            }
+            .btnsss .btn_wrap .btn_tit {
+                font-size: 17px;
+                font-weight: 700;
+                display: block;
+                width: 100%;
+                margin-bottom: 20px;
+                margin-top: 30px;
+            }
+            .btnsss .btn_wrap .pop_list > li {
+                margin-bottom: 15px;
+                display: flex;
+                gap: 10px;
+                flex-wrap: wrap;
+                align-items: center;
+                font-size: 13px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="btnsss">
+            <div class="btn_wrap">
+                <div style="width: 100%">
+                    <div class="btn_tit">예약완료 팝업</div>
+                    <ul class="pop_list">
+                        <li>왕복 항공권 예약완료 ☞ <a href="#reserveconfirmpop">예약완료팝업</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="dim">
+            <div class="dim_in">
+                <!-- [s] : 왕복항공권 예약완료 팝업 -->
+                <div class="pop reserveconfirmpop" id="reserveconfirmpop">
+                    <div class="pop_in">
+                        <div class="close">
+                            <a href=""><img alt="icon_x_18" class="ant-image-img cursor-pointer" src="https://www.modetour.com/icons/icon_x_18.svg" width="18" height="18" style="height: 18px" /></a>
+                        </div>
+                        <div class="tit">예약이 완료 되었습니다.</div>
+                        <div class="wrap">
+                            <div class="journey">
+                                <!-- [s] : 가는 항공편 -->
+                                <div class="card">
+                                    <div class="card_tit">
+                                        <div class="left st01">
+                                            가는 항공편
+                                            <span class="blue02">할인가</span>
+                                        </div>
+                                        <div class="right">
+                                            <span class="ant_img"><img src="https://img.modetour.com/air/logo/ke.png" alt="" /></span>진에어 LJ732
+                                        </div>
+                                    </div>
+                                    <div class="card_tit2">
+                                        <div>서울(ICN)</div>
+                                        <div><img src="https://m.modetour.com/icons/icon_arrow_tw_19.svg" alt="" /></div>
+                                        <div>로스앤젤레스(LAX)</div>
+                                    </div>
+                                    <div class="card_tit3">2024.09.14(토) ~ 2024.09.21(토)</div>
+                                </div>
+                                <!-- [e] : 가는 항공편 -->
+                                <!-- [s] : 오는 항공편 -->
+                                <div class="card">
+                                    <div class="card_tit">
+                                        <div class="left">
+                                            오는 항공편
+                                            <div class="st01">
+                                                <span class="blue02">할인가</span>
+                                            </div>
+                                        </div>
+                                        <div class="right">
+                                            <span class="ant_img"><img src="https://img.modetour.com/air/logo/ke.png" alt="" /></span>진에어 LJ732
+                                        </div>
+                                    </div>
+                                    <div class="card_tit2">
+                                        <div>로스앤젤레스(LAX)</div>
+                                        <div><img src="https://m.modetour.com/icons/icon_arrow_tw_19.svg" alt="" /></div>
+                                        <div>서울(ICN)</div>
+                                    </div>
+                                    <div class="card_tit3">2024.09.14(토) ~ 2024.09.21(토)</div>
+                                </div>
+                                <!-- [e] : 오는 항공편 -->
+                            </div>
+                            <div class="res_infor">
+                                <div>
+                                    <div class="res_tit">예약인원 및 좌석</div>
+                                    <div class="res_txt"><span>성인 1인</span>일반석</div>
+                                </div>
+                                <div class="price">
+                                    <div class="res_tit">총 합계 금액</div>
+                                    <div class="res_txt"><span>1,718,000</span>원</div>
+                                </div>
+                                <div>
+                                    <div class="res_tit">예약번호</div>
+                                    <div class="res_txt">
+                                        57576249
+                                        <div class="ant_img" style="width: 16px"><img alt="" class="ant-image-img mt-[2px] mb-[-3px] cursor-pointer" src="https://www.modetour.com/icons/icon_code_16.svg" width="16" /></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="btn_box">
+                                <button type="button" class="btn_type02">예약내역 확인</button>
+                                <button type="button" class="btn_type01">결제하기</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- [e] : 왕복항공권 예약완료 팝업 -->
+            </div>
+        </div>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="../lib/js/common.js"></script>
+        <script src="../lib/js/swiper.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                //팝업닫기
+                $(".pop .close,.pop_cont .icon_x").click(function () {
+                    $(".dim").removeClass("active");
+                    $(this).parents(".pop").hide();
+                    return false;
+                });
+
+                $(".btn_wrap a").click(function () {
+                    var idx = $(this).index();
+                    $(".dim").addClass("active");
+                    //$(".dim .dim_in > div").eq(idx).show();
+                    $($.attr(this, "href")).show();
+                    return false;
+                });
+            });
+        </script>
+    </body>
+</html>

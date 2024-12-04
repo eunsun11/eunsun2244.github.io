@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="./../lib/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="./../lib/css/payment.css" />
+    <link rel="stylesheet" type="text/css" href="./../lib/css/common.css" />
+  </head>
+  <body>
+    <div class="payment_layout">
+      <div class="paybigarea">
+        <div class="top">
+          <div class="tit">결제 정보</div>
+          <div class="pay_detail">
+            <div>
+              <span>할인 및 마일리지 사용</span>
+              <span><em>0</em>원</span>
+            </div>
+            <div>
+              <span>결제 수단 / 입금 예정 금액</span>
+              <span>(가상계좌)<em>664,200</em>원</span>
+            </div>
+            <div class="all">
+              <span>최종 결제 금액</span><span><em>664,200</em>원</span>
+            </div>
+            <div class="leftover">
+              <span>잔여 결제 금액</span>
+              <span><em>0</em>원</span>
+            </div>
+          </div>
+          <div class="left_overarea">
+            <div class="l_tit">잔여 결제 금액을 아래의 계좌로 입금해 주세요.</div>
+            <div class="box">
+              <div><span>입금은행</span><span>하나은해</span></div>
+              <div><span>입금계좌번호</span><span>10198931277637</span></div>
+              <div><span>예금주</span><span>모두투어네트워크</span></div>
+            </div>
+            <ul>
+              <li>가상계좌번호가 발급되었습니다.</li>
+              <li>가상계좌번호는 예약내역 페이지에서 확인 할 수 있습니다.</li>
+              <li>가상 계좌 입금 확인 후 발권이 이루어지며, 정상 확인이 된 경우 발권이 진행됩니다.</li>
+              <li>입금이 업무외 시간에 확인될 경우, 익일 발권이 진행됩니다.</li>
+              <li>발권 후 전자항공권은 마이페이지 > 예약내역에서도 이메일 전송 및 인쇄가 가능합니다.</li>
+              <li>해당 예약 건만 입금확인이 가능하며, 타 예약건에 대한 금액을 함께 입금하는 경우 입금확인이 되지 않아 불이익이 발생할 수 있으며 고객센터로 연락 주시기 바랍니다.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="bottom">
+          <div class="btn_box">
+            <button type="button" class="btn_type03">확인</button>
+          </div>
+        </div>
+      </div>
+      <div class="complete_tit">
+        <i><img alt="" src="//newgen-stg-payment.modetour.dev/icons/icon-payment-deposit.svg" /></i>
+        <p>
+          가상계좌 <br />발급이<br />
+          완료되었습니다.
+        </p>
+      </div>
+    </div>
+    <script src="../lib/js/jquery-3.7.1.min.js"></script>
+    <script src="../lib/js/common.js"></script>
+    <script>
+      $(document).ready(function () {
+        $(".payment_layout .coupon_wrap .coupon_list ul li a").click(function () {
+          var t = $(this);
+          if (!t.parent().hasClass("active")) {
+            t.parent().addClass("active").siblings().removeClass("active");
+          } else {
+            t.parent().removeClass("active");
+          }
+          return false;
+        });
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,986 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../lib/js/jquery-3.7.1.min.js"></script>
+    <script src="../lib/js/common.js"></script>
+    <link rel="stylesheet" type="text/css" href="./../lib/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="./../lib/css/air.css" />
+    <link rel="stylesheet" type="text/css" href="./../lib/css/common.css" />
+  </head>
+  <body>
+    <main>
+      <div class="reserve_cont_area">
+        <div class="mx-auto">
+          <div class="tit_box">
+            예약하기
+            <ul class="progressbar">
+              <li class="active">약관동의</li>
+              <li>정보입력</li>
+            </ul>
+          </div>
+          <div class="finalflightinfor">
+            <div class="com_tit">다구간 항공권</div>
+            <!-- 다구간 항공권시 multi class 추가! 레이아웃이 달라집니다. -->
+            <div class="finalcard multi">
+              <!-- [s] : 1구간 항공편 -->
+              <div class="card">
+                <div class="top">1구간 항공편</div>
+                <div class="middle">
+                  <div class="left">
+                    <div>서울(ICN)</div>
+                    <div>
+                      <img src="https://www.modetour.com/icons/icon_arrow_oneway_20.svg" alt="" />
+                    </div>
+                    <div>타이페이(TPE)</div>
+                  </div>
+                  <div class="right">
+                    <div><img src="https://www.modetour.com/icons/icon_user_18.svg" alt="" /> 성인 1</div>
+                    <div>일반석</div>
+                  </div>
+                </div>
+                <div class="bottom">
+                  <div class="air">
+                    <span class="ant_img"><img src="https://img.modetour.com/air/logo/lj.png" alt="" /></span>진에어 LJ732
+                  </div>
+                  <div class="day">2024.08.12(월) 10:35 ~ 2024.08.12(월) 14:05</div>
+                  <div class="luggage">위탁 수하물 포함(성인:15KG)</div>
+                </div>
+              </div>
+              <!-- [e] : 1구간 항공편 -->
+              <!-- [s] : 2구간 항공편 -->
+              <div class="card">
+                <div class="top">2구간 항공편</div>
+                <div class="middle">
+                  <div class="left">
+                    <div>타이페이(TPE)</div>
+                    <div>
+                      <img src="https://www.modetour.com/icons/icon_arrow_oneway_20.svg" alt="" />
+                    </div>
+                    <div>서울(ICN)</div>
+                  </div>
+                  <div class="right">
+                    <div><img src="https://www.modetour.com/icons/icon_user_18.svg" alt="" /> 성인 1</div>
+                    <div>일반석</div>
+                  </div>
+                </div>
+                <div class="bottom">
+                  <div class="air">
+                    <span class="ant_img"><img src="https://img.modetour.com/air/logo/lj.png" alt="" /></span>진에어 LJ732
+                  </div>
+                  <div class="day">2024.08.12(월) 10:35 ~ 2024.08.12(월) 14:05</div>
+                  <div class="luggage">위탁 수하물 포함(성인:15KG)</div>
+                </div>
+              </div>
+              <!-- [e] : 2구간 항공편 -->
+              <!-- [s] : 3구간 항공편 -->
+              <div class="card">
+                <div class="top">3구간 항공편</div>
+                <div class="middle">
+                  <div class="left">
+                    <div>타이페이(TPE)</div>
+                    <div>
+                      <img src="https://www.modetour.com/icons/icon_arrow_oneway_20.svg" alt="" />
+                    </div>
+                    <div>서울(ICN)</div>
+                  </div>
+                  <div class="right">
+                    <div><img src="https://www.modetour.com/icons/icon_user_18.svg" alt="" /> 성인 1</div>
+                    <div>일반석</div>
+                  </div>
+                </div>
+                <div class="bottom">
+                  <div class="air">
+                    <span class="ant_img"><img src="https://img.modetour.com/air/logo/lj.png" alt="" /></span>진에어 LJ732
+                  </div>
+                  <div class="day">2024.08.12(월) 10:35 ~ 2024.08.12(월) 14:05</div>
+                  <div class="luggage">위탁 수하물 포함(성인:15KG)</div>
+                </div>
+              </div>
+              <!-- [e] : 3구간 항공편 -->
+              <div class="pay_card">
+                <div class="card_tit">NH채움카드</div>
+                <div class="pay"><span>302,500</span>원</div>
+                <div class="pay_detail">
+                  <div class="popup_container">
+                    <!-- popup_container클래스 추가 -->
+                    <div class="btn_box"><button type="button" class="btn_type04 layer_popup_btn">여정상세</button></div>
+                    <div class="layer_popup">
+                      <div class="pop_over">
+                        <div class="icon_x"><button type="button">닫기</button></div>
+                        <!-- 닫기버튼 수정 -->
+                        <div class="pop_in">
+                          <div class="tit">여정상세</div>
+                          <div class="popboard_boxwrap">
+                            <div class="popboard_box">
+                              <div class="boarding_time">
+                                <div class="start">
+                                  <div class="num">
+                                    <div class="time">14:30</div>
+                                    <div class="day">08/07(수)</div>
+                                    <div class="way go">직항</div>
+                                  </div>
+                                  <div class="line">
+                                    <div class="circle"></div>
+                                    <div class="l"></div>
+                                  </div>
+                                  <div class="boardinfo">
+                                    <div class="top">
+                                      <div class="location">서울(ICN) 출발</div>
+                                      <div class="terminal">인천공항 - 터미널 2<span>11시간 40분</span></div>
+                                    </div>
+                                    <div class="bottom">
+                                      <div class="air">
+                                        <span class="ant_img"><img alt="logo" src="https://img.modetour.com/air/logo/ke.png" /></span>대한항공 KE017
+                                      </div>
+                                      <div class="rule"><span>일반석 · 수하물 규정 확인</span><span>기종:388</span></div>
+                                    </div>
+                                    <div class="empty"></div>
+                                  </div>
+                                </div>
+                                <div class="end">
+                                  <div class="num">
+                                    <div class="time">10:10</div>
+                                    <div class="day">08/07(수)</div>
+                                  </div>
+                                  <div class="line"><div class="circle"></div></div>
+                                  <div class="boardinfo">
+                                    <div class="top">
+                                      <div class="location">로스앤젤레스(LAX) 도착</div>
+                                      <div class="terminal">로스앤젤레스공항 - 터미널 B</div>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="popboard_box">
+                              <div class="boarding_time">
+                                <!-- [s]: 출발 -->
+                                <div class="start">
+                                  <div class="num">
+                                    <div class="time">23:50</div>
+                                    <div class="day">08/10(토)</div>
+                                  </div>
+                                  <div class="line">
+                                    <div class="circle"></div>
+                                    <div class="l"></div>
+                                  </div>
+                                  <div class="boardinfo">
+                                    <div class="top">
+                                      <div class="location">로스앤젤레스(LAX) 출발</div>
+                                      <div class="terminal">로스앤젤레스공항 - 터미널 B<span>14시간 50분</span></div>
+                                    </div>
+                                    <div class="bottom">
+                                      <div class="air">
+                                        <span class="ant_img"><img alt="logo" src="https://img.modetour.com/air/logo/cz.png" /></span>중국남방항공 CZ328
+                                      </div>
+                                      <div class="rule"><span>일반석 · 수하물 규정 확인</span><span>기종:388</span></div>
+                                    </div>
+                                    <div class="empty"></div>
+                                  </div>
+                                </div>
+                                <!-- [e]: 출발 -->
+                                <!-- [s]: 경유 -->
+                                <div class="middle">
+                                  <div class="num">
+                                    <div class="time">23:50</div>
+                                    <div class="day">08/10(토)</div>
+                                    <!-- 다른공항 환승시 transfer 추가 -->
+                                    <div class="way transfer">환승</div>
+                                  </div>
+                                  <div class="line">
+                                    <div class="circle"></div>
+                                    <div class="l"></div>
+                                  </div>
+                                  <div class="boardinfo">
+                                    <div class="top">
+                                      <div class="location">로스앤젤레스(LAX) 출발</div>
+                                      <div class="terminal">
+                                        로스앤젤레스공항 - 터미널 B<span>2시간30분 대기</span><span>도착 후 환승하여 출발하는 공항이 다릅니다.<br />반드시 확인 바랍니다.</span>
+                                      </div>
+                                    </div>
+                                    <div class="empty"></div>
+                                  </div>
+                                </div>
+                                <!-- [e]: 경유 -->
+                                <!-- [s]: 출발 -->
+                                <div class="start">
+                                  <div class="num">
+                                    <div class="time">23:50</div>
+                                    <div class="day">08/10(토)</div>
+                                  </div>
+                                  <div class="line">
+                                    <div class="circle"></div>
+                                    <div class="l"></div>
+                                  </div>
+                                  <div class="boardinfo">
+                                    <div class="top">
+                                      <div class="location">로스앤젤레스(LAX) 출발</div>
+                                      <div class="terminal">로스앤젤레스공항 - 터미널 B<span>14시간 50분</span></div>
+                                    </div>
+                                    <div class="bottom">
+                                      <div class="air">
+                                        <span class="ant_img"><img alt="logo" src="https://img.modetour.com/air/logo/cz.png" /></span>중국남방항공 CZ328
+                                      </div>
+                                      <div class="rule"><span>일반석 · 수하물 규정 확인</span><span>기종:388</span></div>
+                                    </div>
+                                    <div class="empty"></div>
+                                  </div>
+                                </div>
+                                <!-- [e]: 출발 -->
+                                <!-- [s]: 도착 -->
+                                <div class="end">
+                                  <div class="num">
+                                    <div class="time">13:55</div>
+                                    <div class="day">08/12(월)</div>
+                                  </div>
+                                  <div class="line"><div class="circle"></div></div>
+                                  <div class="boardinfo">
+                                    <div class="top">
+                                      <div class="location">서울(ICN) 도착</div>
+                                      <div class="terminal">인천공항 - 터미널 1</div>
+                                    </div>
+                                  </div>
+                                </div>
+                                <!-- [e]: 도착 -->
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- layer_popup div추가 -->
+                  </div>
+                  <div class="popup_container">
+                    <!-- popup_container클래스 추가 -->
+                    <div class="btn_box"><button type="button" class="btn_type04 layer_popup_btn">요금규정</button></div>
+                    <!-- 요금규정<span><img src="https://www.modetour.com/icons/icon__15_bk.svg" alt="" /></span> -->
+                    <div class="layer_popup">
+                      <div class="pop_over">
+                        <div class="icon_x"><button type="button">닫기</button></div>
+                        <!-- 닫기버튼 수정 -->
+                        <div class="pop_in">
+                          <div class="tit">항공 공통 요금규정</div>
+                          <div class="policy" id="rule1">
+                            <ul class="txt1">
+                              <li>· 2개 이상의 요금규정이 있을 때 높은 페널티 요금이 부과되며, 더 엄격한 규정이 적용됩니다.</li>
+                              <li>· 안내된 요금은 1명 기준 부과되는 요금입니다.</li>
+                              <li>· 각종 수수료는 항공사의 수수료이며, 여행사의 대행 수수료는 별도로 부과됩니다.</li>
+                              <li>· 항공사의 사정으로 공지없이 운임 및 규정이 변경되어 차액이 발생하는 경우 운임차액 추가 징수됩니다.</li>
+                              <li>· 2명 이상 예약 시 적용 운임인 경우, 일부 승객 환불이 불가합니다.</li>
+                            </ul>
+                            <div class="policy_pay_case except_div">
+                              <ul class="tabs">
+                                <li id="tab-1" class="tab_link active" current="" data-tab="tab-1"><a href="#"> 요금규정 1 </a></li>
+                                <li id="tab-2" class="tab_link" data-tab="tab-2"><a href="#"> 요금규정 2 </a></li>
+                              </ul>
+                              <div class="tab_wrap">
+                                <div id="tab-1" class="tab-content current except_div">
+                                  <p class="qa_txt"><span> 수수료 관련한 규정은 표시된 규정 외에 별도의 제한조건이 있을 수 있으니, 반드시 담당 직원에게 문의해 주세요.</span></p>
+                                  <div class="policy_common except_div">
+                                    <table summary="요금규정입니다.">
+                                      <colgroup>
+                                        <col width="30.5%" />
+                                        <col width="69.5%" />
+                                      </colgroup>
+                                      <tbody>
+                                        <tr>
+                                          <th>여행업무취급수수료</th>
+                                          <td style="word-break: break-all" class="normal">
+                                            <font color="RED"
+                                              >*예약 후 발권/취소/환불/변경요청시 여행사 업무대행 수수료가 1인당 부과됩니다.
+                                              <br />
+                                              <br />- 발권대행수수료 (성인/소아동일 , 유아 없음) : 10,000원 <br />- 취소/환불 대행수수료 (성인/소아/유아 동일) : 30,000원 <br />- 변경/재발행수수료 (성인/소아/유아 동일)<br />
+                                              : 재발행이 필요없는 변경의 경우 : 10,000원 <br />: 재발행이 필요한 변경의 경우 : 30,000원
+                                            </font>
+                                            <br />
+                                            <br />
+                                            <br />
+                                            ※ 천재지변이나 항공사 사정에 의한 스케줄 변경, 취소 시에도 발권대행수수료는 환불되지 않습니다.<br />※ 항공사가 정한 환불/변경수수료는 별도로 징수되며, 요금규정에 안내 되어 있사오니, 반드시 확인 후 결제/발권 요청 부탁드립니다.<br />※ 결제/발권 요청 후에는 바로 발권대행 과정이 진행되며, 취소/환불/변경시에는 수수료가 징수되오니, 신중하게 결제요청 부탁드립니다.
+                                            <br />
+                                            ※ 신청하신 업무대행수수료는 환불되지 않습니다. <br />※ 대행수수료는 항공권과는 별도로 [모두투어]로 일시불 승인되며, 항공권 금액승인 시점과 차이가 발생 할 수 있습니다.
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <th>적용구간</th>
+                                          <td style="word-break: break-all" class="normal">서울-다낭</td>
+                                        </tr>
+                                        <tr>
+                                          <th>변경/환불</th>
+                                          <td style="word-break: break-all" class="normal">
+                                            <br />
+                                            [환불]
+                                            <br />
+                                            &nbsp;- 출발 전 취소/환불 수수료 :
+                                            <font color="BLUE">50,000 원</font>
+                                            <br />
+                                            &nbsp;- 출발 후 취소/환불 수수료 :
+                                            <font color="BLUE">70,000 원</font>
+                                            <br />
+                                            <br />
+                                            [예약 변경]<br />&nbsp;- 출발 전 수수료 :
+                                            <font color="BLUE">30,000 원</font>
+                                            <br />&nbsp;- 출발 후 수수료 : <font color="BLUE">50,000 원</font><br />
+                                            <br /><br />[수수료 적용 기준] <br />- 운임종류에 따라 여러 운임이 결합되는 경우, 가장 높은 수수료가 적용되거나, 구간별 수수료가 합산될 수도 있습니다. <br />[예약변경]<br />- 운임규정 상 변경이 허용되는 경우에 한해 동일 또는 상위 단계 운임으로만 변경가능하며, 변경일 기준 운임 재계산으로 변경수수료 이외에 운임차액 및 TAX 가 추가될 수 있습니다. <br />- 전체 미사용 항공권의 출발편 변경 유효기간은 항공사 규정 및 운임에 따라 상이하므로 문의바랍니다.
+                                            <br /><br />[환불]<br />- 사용구간 편도운임 및 환불수수료 공제 후 환불금이 발생되지 않을 수 있습니다. <br />- 상기 환불규정은 항공운임에 적용되는 내용이며, 유류할증료 및 TAX(제세공과금)의 환불규정은 각 정부지침 및 항공사규정에 따라 상이하므로 문의바랍니다.<br /><br />[NO-SHOW] <br />- 예약취소/변경 없이 탑승하지 않는 경우 <br />- 변경 또는 환불수수료와 별도 적용 <br />- 항공사에서 NO-SHOW 발생 이후 잔여여정을 취소할 수 있습니다. <br /><br />
+                                            <font color="RED">* 2개 이상의 요금규정이 있을 경우 높은 페널티 요금이 부과되거나 구간별 합계로 적용될 수 있으며, 더 엄격한 규정이 적용됩니다.</font>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <th>증빙서류</th>
+                                          <td style="word-break: break-all" class="normal"></td>
+                                        </tr>
+                                        <tr>
+                                          <th>출발요일</th>
+                                          <td style="word-break: break-all" class="normal"></td>
+                                        </tr>
+                                        <tr>
+                                          <th>환불 주의사항</th>
+                                          <td style="word-break: break-all" class="normal">
+                                            - 항공권 당일취소는 발권 당일 23시 30분에 한하여 마이페이지내 [예약취소] 버튼 이용하여 가능하며, 이 경우 항공사 취소수수료와 여행사 취소대행수수료가 발생하지 않습니다.
+                                            <br />
+                                            <br />-23시 30분 부터 24시 사이 접수되는 당일 취소는 다음날 기준으로 항공사 수수료가 적용되어 환불처리되고, 여행사 취소대행수수료 3만원이 별도 발생합니다.<br />
+                                            <br />
+                                            <br />- 단, 아래 항공사리스트에 해당되는 항공권은 발권일시로부터 24시간 내로 항공권 취소 시 항공사 취소수수료가 발생하지 않습니다.<br /><br />이 경우 여행사 취소대행수수료는 3만원이 부과 되며, 발권대행수수료는 환불되지 않습니다.<br /><br />
+                                            <br />- 해당 항공사의 리스트는 다음과 같습니다.<br /><br />대한항공, 아시아나항공, 유나이티드항공, 에어프랑스, 네덜란드항공, 에어프리미아, 제주항공, 폴란드항공, 진에어, 에어캐나다, 에티하드항공, 티웨이항공, 뉴질랜드항공, 아메리칸항공, 델타항공, 에어서울, 에어부산, 루프트한자, 하와이안항공, 일본항공, 그레이터베이 항공 <br />(아시아나, 에트하드,하와이안항공,ANA항공은 출발일로부터 최소 7일전 발권한 항공권부터 가능)
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <th>NO-SHOW ( 노쇼 규정)</th>
+                                          <td style="word-break: break-all" class="normal"></td>
+                                        </tr>
+                                        <tr>
+                                          <th>출발기간</th>
+                                          <td style="word-break: break-all" class="normal">- 07.19~08.15 <br />- 09.13~09.15<br />- 12.20~02.29<br />&nbsp;&nbsp;(첫번째 국제선 구간 기준)<br /><br /></td>
+                                        </tr>
+                                        <tr>
+                                          <th>적용불가일</th>
+                                          <td style="word-break: break-all" class="normal"></td>
+                                        </tr>
+                                        <tr>
+                                          <th>여행가능일</th>
+                                          <td style="word-break: break-all" class="normal">2024.01.01 이후 출발 조건<br /></td>
+                                        </tr>
+                                        <tr>
+                                          <th>최소체류일</th>
+                                          <td style="word-break: break-all" class="normal">NONE UNLESS OTHERWISE SPECIFIED</td>
+                                        </tr>
+                                        <tr>
+                                          <th>최대체류일</th>
+                                          <td style="word-break: break-all" class="normal">1년<br /></td>
+                                        </tr>
+                                        <tr>
+                                          <th>유/소아요금</th>
+                                          <td style="word-break: break-all" class="normal">
+                                            - 성인 동반 만 2세 - 만 11세 소아 : 성인 요금의 75% <br />- 만 2세 미만 유아(좌석 미점유 시) : 성인 요금의 10%<br />- 성인 동반 만 2세 - 만 11세 소아 : 성인 요금의 75% <br />- 만 2세 미만 유아(좌석 미점유 시) : 성인 요금의 10%<br />&nbsp;&nbsp;(전구간 만 18세 이상 성인 동반조건) <br />&nbsp;&nbsp;(전구간 만 18세 이상 성인 동반조건)<br />
+                                            <br /><br />
+                                            ※ 항공사 및 운항 항공편에 따라 소아, 유아 나이의 적용 기준이 달라질 수 있습니다.
+                                            <br />※ 출발 당시 소아 운임 적용 가능하더라도 여행 도중 만 12세 이상이 되는 경우, 유아 운임 적용 가능하더라도 여행 도중 24개월 이상이 되는 경우, 소아, 유아 운임 적용 불가할 수 있으며 소아,유아 항공권을 소지하더라도 운항 항공편에 따라 탑승이 거절되거나 추가 비용 발생 등 항공권 사용에 문제가 될 수 있으니 구매 전 반드시 확인하시기 바랍니다.
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <th>사전발권</th>
+                                          <td style="word-break: break-all" class="normal">
+                                            &nbsp;- 전구간 확약 조건<br />귀국일 미지정 시 발권 불가<br />
+                                            <br /><br />※ 사전발권 조건과 자동생성되는 시스템 발권 시한 중 가장 제한적인 조건으로 적용됩니다. <br />※ 예약일 기준으로 항공사에서 자동으로 발권시한이 생성되므로 좌석이 확약이더라도 상황에 따라 예약과 동시에 구매하지 않으면 예약이 취소될 수 있습니다.
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <th>판매제한</th>
+                                          <td style="word-break: break-all" class="normal">2024.01.01 이후에 발권해야 함<br /></td>
+                                        </tr>
+                                        <tr>
+                                          <th>동반여행</th>
+                                          <td style="word-break: break-all" class="normal"></td>
+                                        </tr>
+                                        <tr>
+                                          <th>추가요금</th>
+                                          <td style="word-break: break-all" class="normal">
+                                            <br />[출/도착 한국 기준]<br />2024.01.24 이후 발권된 항공권 기준<br />2024.02.03~2024.02.08기간 내에 호치민-하노이/다낭 구간 여행시<br />&nbsp;- 66,000 원의 추가 요금 발생<br /><br />2024.04.26~2024.04.28기간 내에 호치민-하노이/다낭 구간 여행시 <br />&nbsp;- 66,000 원의 추가 요금 발생<br /><br />2025.01.21~2025.01.28기간 내에 호치민-하노이/다낭 구간 여행시<br />&nbsp;- 66,000 원의 추가 요금 발생<br /><br />2025.04.30~2025.05.02기간 내에
+                                            호치민-하노이/다낭 구간 여행시 <br />&nbsp;- 66,000 원의 추가 요금 발생<br /><br />2024.02.03~2024.02.08기간 내에 하노이-빈 구간 여행시<br />&nbsp;- 66,000 원의 추가 요금 발생<br /><br />2024.04.26~2024.04.28기간 내에 하노이-빈 구간 여행시 <br />&nbsp;- 66,000 원의 추가 요금 발생<br /><br />2025.01.21~2025.01.28기간 내에 하노이-빈 구간 여행시<br />&nbsp;- 66,000 원의 추가 요금 발생<br /><br />2025.04.30~2025.05.02기간 내에 하노이-빈 구간 여행시
+                                            <br />&nbsp;- 66,000 원의 추가 요금 발생<br /><br />2024.02.13~2024.02.18기간 내에 하노이/다낭-호치민 구간 여행시<br />&nbsp;- 66,000 원의 추가 요금 발생<br /><br />2024.04.30~2024.05.02기간 내에 하노이/다낭-호치민 구간 여행시 <br />&nbsp;- 66,000 원의 추가 요금 발생<br /><br />2025.01.31~2025.02.07기간 내에 하노이/다낭-호치민 구간 여행시<br />&nbsp;- 66,000 원의 추가 요금 발생<br /><br />2025.05.02~2025.05.04기간 내에 하노이/다낭-호치민 구간 여행시
+                                            <br />&nbsp;- 66,000 원의 추가 요금 발생<br /><br />2024.02.13~2024.02.18기간 내에 빈-하노이 구간 여행시<br />&nbsp;- 66,000 원의 추가 요금 발생<br /><br />2024.04.30~2024.05.02기간 내에 빈-하노이 구간 여행시 <br />&nbsp;- 66,000 원의 추가 요금 발생<br /><br />2025.01.31~2025.02.07기간 내에 빈-하노이 구간 여행시<br />&nbsp;- 66,000 원의 추가 요금 발생<br /><br />2025.05.02~2025.05.04기간 내에 빈-하노이 구간 여행시 <br />&nbsp;- 66,000 원의 추가 요금
+                                            발생<br /><br />2024.02.13~2024.02.15기간 내에 하노이-다낭/후에 구간 여행시<br />&nbsp;- 66,000 원의 추가 요금 발생<br /><br />2024.04.26~2024.04.28기간 내에 하노이-다낭/후에 구간 여행시 <br />&nbsp;- 66,000 원의 추가 요금 발생<br /><br />2025.01.30~2025.02.03기간 내에 하노이-다낭/후에 구간 여행시<br />&nbsp;- 66,000 원의 추가 요금 발생<br /><br />2025.04.30~2025.05.02기간 내에 하노이-다낭/후에 구간 여행시 <br />&nbsp;- 66,000 원의 추가 요금 발생<br /><br />2024.02.13~2024.02.15기간
+                                            내에 하노이-나트랑/푸꾸옥 구간 여행시<br />&nbsp;- 66,000 원의 추가 요금 발생<br /><br />2024.04.26~2024.04.28기간 내에 하노이-나트랑/푸꾸옥 구간 여행시 <br />&nbsp;- 66,000 원의 추가 요금 발생<br /><br />2025.01.30~2025.02.03기간 내에 하노이-나트랑/푸꾸옥 구간 여행시<br />&nbsp;- 66,000 원의 추가 요금 발생<br /><br />2025.04.30~2025.05.02기간 내에 하노이-나트랑/푸꾸옥 구간 여행시 <br />&nbsp;- 66,000 원의 추가 요금 발생<br /><br />2024.02.13~2024.02.15기간
+                                            내에 호치민-달랏/후에 구간 여행시<br />&nbsp;- 66,000 원의 추가 요금 발생<br /><br />2024.04.26~2024.04.28기간 내에 호치민-달랏/후에 구간 여행시 <br />&nbsp;- 66,000 원의 추가 요금 발생<br /><br />2025.01.30~2025.02.03기간 내에 호치민-달랏/후에 구간 여행시<br />&nbsp;- 66,000 원의 추가 요금 발생<br /><br />2025.04.30~2025.05.02기간 내에 호치민-달랏/후에 구간 여행시 <br />&nbsp;- 66,000 원의 추가 요금 발생<br /><br />2024.02.13~2024.02.15기간 내에
+                                            호치민-나트랑/푸꾸옥 구간 여행시<br />&nbsp;- 66,000 원의 추가 요금 발생<br /><br />2024.04.26~2024.04.28기간 내에 호치민-나트랑/푸꾸옥 구간 여행시 <br />&nbsp;- 66,000 원의 추가 요금 발생<br /><br />2025.01.30~2025.02.03기간 내에 호치민-나트랑/푸꾸옥 구간 여행시<br />&nbsp;- 66,000 원의 추가 요금 발생<br /><br />2025.04.30~2025.05.02기간 내에 호치민-나트랑/푸꾸옥 구간 여행시 <br />&nbsp;- 66,000 원의 추가 요금 발생<br /><br />2024.02.16~2024.02.18기간
+                                            내에 다낭/후에-하노이 구간 여행시<br />&nbsp;- 66,000 원의 추가 요금 발생<br /><br />2024.04.30~2024.05.02기간 내에 다낭/후에-하노이 구간 여행시 <br />&nbsp;- 66,000 원의 추가 요금 발생<br /><br />2025.02.04~2025.02.07기간 내에 다낭/후에-하노이 구간 여행시<br />&nbsp;- 66,000 원의 추가 요금 발생<br /><br />2025.05.02~2025.05.04기간 내에 다낭/후에-하노이 구간 여행시 <br />&nbsp;- 66,000 원의 추가 요금 발생<br /><br />2024.02.16~2024.02.18기간 내에
+                                            나트랑/푸꾸옥-하노이 구간 여행시<br />&nbsp;- 66,000 원의 추가 요금 발생<br /><br />2024.04.30~2024.05.02기간 내에 나트랑/푸꾸옥-하노이 구간 여행시 <br />&nbsp;- 66,000 원의 추가 요금 발생<br /><br />2025.02.04~2025.02.07기간 내에 나트랑/푸꾸옥-하노이 구간 여행시<br />&nbsp;- 66,000 원의 추가 요금 발생<br /><br />2025.05.02~2025.05.04기간 내에 나트랑/푸꾸옥-하노이 구간 여행시 <br />&nbsp;- 66,000 원의 추가 요금 발생<br /><br />2024.02.16~2024.02.18기간
+                                            내에 달랏/후에-호치민 구간 여행시<br />&nbsp;- 66,000 원의 추가 요금 발생<br /><br />2024.04.30~2024.05.02기간 내에 달랏/후에-호치민 구간 여행시 <br />&nbsp;- 66,000 원의 추가 요금 발생<br /><br />2025.02.04~2025.02.07기간 내에 달랏/후에-호치민 구간 여행시<br />&nbsp;- 66,000 원의 추가 요금 발생<br /><br />2025.05.02~2025.05.04기간 내에 달랏/후에-호치민 구간 여행시<br />&nbsp;- 66,000 원의 추가 요금 발생<br /><br />2024.02.16~2024.02.18기간 내에
+                                            나트랑/푸꾸옥-호치민 구간 여행시<br />&nbsp;- 66,000 원의 추가 요금 발생<br /><br />2024.04.30~2024.05.02기간 내에 나트랑/푸꾸옥-호치민 구간 여행시<br />&nbsp;- 66,000 원의 추가 요금 발생<br /><br />2025.02.04~2025.02.07기간 내에 나트랑/푸꾸옥-호치민 구간 여행시<br />&nbsp;- 66,000 원의 추가 요금 발생<br /><br />2025.05.02~2025.05.04기간 내에 나트랑/푸꾸옥-호치민 구간 여행시<br />&nbsp;- 66,000 원의 추가 요금 발생<br /><br />[일본/한국/북한-지역3
+                                            구간]<br />&nbsp;- 구간별 USD 70.00의 추가 요금 발생<br />
+                                            <br /><br /><b>※ 현재 조회 중인 운임 기준으로 추가요금은 이미 포함되어 있으나, 항공권 구매 조건에 따라 변경이 될 수 있습니다.(변경/환불수수료 별도)</b>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <th>경유지체류</th>
+                                          <td style="word-break: break-all" class="normal"><br />[2023.04.30 이전 발권된 항공권 기준]<br />가능(회당 11,400 원)<br />부산/서울 내 가능 - 타 항공사 이용 조건<br />&nbsp;- 베트남 내 가능<br /><br />[2023.05.01 이후 발권된 항공권 기준]<br />가능(회당 20,000 원)<br />부산/서울 내 가능 - 타 항공사 이용 조건<br />&nbsp;- 베트남 내 가능<br /></td>
+                                        </tr>
+                                        <tr>
+                                          <th>환승</th>
+                                          <td style="word-break: break-all" class="normal">
+                                            가능<br />
+                                            <br /><br />※ 경유지 당일 연결이 불가한 경우 해당 공항 심야 이용이 불가 할 수 있으므로 반드시 공항 운영 시간 확인 부탁 드립니다.
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <th>비행편제한</th>
+                                          <td style="word-break: break-all" class="normal">
+                                            서울/부산-하노이/호치민 구간 아래의 항공편 이용 불가<br />&nbsp;- 베트남항공 항공편 3000 ~ 3799<br />&nbsp;- 베트남항공 항공편 3900 ~ 3999<br />&nbsp;- 베트남항공 항공편 6600 ~ 6999.<br />서울/부산-다낭/나트랑 구간 아래의 항공편 이용 불가<br />&nbsp;- 베트남항공 항공편 3000 ~ 3799<br />&nbsp;- 베트남항공 항공편 3900 ~ 3999<br />&nbsp;- 베트남항공 항공편 6600 ~ 6999.<br />방콕(수완나품)/싱가포르-하노이/호치민 구간 아래의 항공편 이용 불가<br />&nbsp;-
+                                            베트남항공 항공편 3000 ~ 3799<br />&nbsp;- 베트남항공 항공편 3900 ~ 3999<br />&nbsp;- 베트남항공 항공편 6600 ~ 6999.<br />방콕(수완나품)/싱가포르-다낭/나트랑 구간 아래의 항공편 이용 불가<br />&nbsp;- 베트남항공 항공편 3000 ~ 3799<br />&nbsp;- 베트남항공 항공편 3900 ~ 3999<br />&nbsp;- 베트남항공 항공편 6600 ~ 6999.<br />타이페이-하노이/호치민 구간 아래의 항공편 이용 불가<br />&nbsp;- 베트남항공 항공편 3000 ~ 3799<br />&nbsp;- 베트남항공 항공편 3900 ~
+                                            3999<br />&nbsp;- 베트남항공 항공편 6600 ~ 6999.<br />타이페이-다낭/나트랑 구간 아래의 항공편 이용 불가<br />&nbsp;- 베트남항공 항공편 3000 ~ 3799<br />&nbsp;- 베트남항공 항공편 3900 ~ 3999<br />&nbsp;- 베트남항공 항공편 6600 ~ 6999.<br />아래의 항공편 이용 불가<br />&nbsp;- 베트남항공 항공편 3000 ~ 3799<br />&nbsp;- 베트남항공 항공편 3900 ~ 3999<br />&nbsp;- 대한항공 항공편 3001 ~ 3999<br />&nbsp;- 대한항공 항공편 5001 ~ 7999<br />&nbsp;- 아시아나항공
+                                            항공편 6100 ~ 7000<br />&nbsp;- 아시아나항공 항공편 8100 ~ 8109<br />&nbsp;- 아시아나항공 항공편 8800 ~ 8816<br />&nbsp;- 아시아나항공 항공편 9101 ~ 9999<br />&nbsp;- 캄보디아 앙코르 항공 항공편 2000 ~ 3999<br />&nbsp;- 가루다인도네시아 항공편 9000 ~ 9799<br />&nbsp;- 가루다인도네시아 항공편 9900 ~ 9999<br />&nbsp;- 라오항공 항공편 4000 ~ 4999.<br />아래의 항공편 이용<br />&nbsp;- 베트남항공 항공편<br />&nbsp;- 대한항공 항공편<br />&nbsp;- 아시아나항공
+                                            항공편<br />&nbsp;- 가루다인도네시아 항공편<br />&nbsp;- 라오항공 항공편<br />&nbsp;- 캄보디아 앙코르 항공 항공편<br />
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <th>신용카드</th>
+                                          <td style="word-break: break-all" class="normal">사용가능<br />-탑승자 본인카드로만 결제 가능하며 공항수속시 결제카드를 확인할수 있습니다.(제시 못할경우 탑승이 거부 될수 있음)<br /><br /><font color="BLUE">* 특정카드 할인운임의 경우 법인카드, 체크카드, 일부 카드에 대해서는 할인 적용이 불가합니다.</font></td>
+                                        </tr>
+                                        <tr>
+                                          <th>수하물</th>
+                                          <td style="word-break: break-all" class="normal">
+                                            ※ 무료수하물 및 초과수하물 규정은 좌석등급 및 노선에 따라 상이하므로 자세한 내용은 항공사 홈페이지 <a href="https://www.vietnamairlines.com/kr/ko/travel-information/baggage/baggage-allowance" style="color: red" target="_blank">[바로가기]</a> 또는 여행사 담당자에게 문의 부탁드립니다.<br />※ 항공사 요금규정에 무료수하물 내용이 누락된 경우 표기되지 않을 수 있으며, 표기되지 않은 경우, 해당항공사에 문의 부탁드립니다.<br />※ 공동운항편, 타항공사 연결편,
+                                            24시간 이상 체류 일정, 해외출발 일정, 특수 수하물의 경우 운항항공사에 따라 수하물 규정이 상이할 수 있습니다.<br /><br /><font color="BLUE">※특수 수하물 (골프백 등) 의 경우 사전 신청하여 항공사 승인을 받은 경우만 반입이 가능합니다. 일부 운임의 경우 유료 적용 될 수 있습니다. </font>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <th>항공사마일리지</th>
+                                          <td style="word-break: break-all" class="normal">※ 항공사 마일리지 적립 여부 및 적립률은 운임별/제휴 회원사별로 상이하오니, 자세한 내용은 항공사 홈페이지 <a href="https://www.vietnamairlines.com/kr/ko/lotusmile/earn-miles" style="color: red" target="_blank">[바로가기]</a> 또는 여행사 담당자에게 구매 전 문의 부탁드립니다.</td>
+                                        </tr>
+                                        <tr>
+                                          <th>비동반 소아 규정</th>
+                                          <td style="word-break: break-all" class="normal">
+                                            ※ 동반자가 18세미만이거나 탑승클래스가 상이한 소아는 비동반 소아 서비스를 신청 하셔야 합니다.<br />※ 비동반 소아 서비스는 해당 항공사의 사전 승인 하에 이용 가능하며 입국 국가 및 항공사별 서비스 대상 연령 및 규정이 상이하므로 반드시 결제 1주일 전 담당자 확인 후 진행 부탁드립니다.<br />※ 비동반 소아 서비스는 별도의 서비스 수수료가 발생할 수 있습니다.<br />※ 공동운항편의 경우 실제 탑승항공사의 규정에 따라 서비스가 불가할 수 있습니다.<br />※ 자세한 내용은
+                                            항공사 홈페이지 <a href="https://www.vietnamairlines.com/kr/ko/travel-information/special-services/unaccompanied-children" style="color: red" target="_blank">[바로가기]</a> 를 통해 확인 부탁드립니다.<br /><br /><font color="BLUE">※ 보호자 없이 혼자 여행하는 만 12세~17세 미만 청소년(UM)의 경우 운송 항공사에 따라 탑승이 제한될 수 있습니다.</font>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <th>항공사 일반규정</th>
+                                          <td style="word-break: break-all" class="normal">
+                                            ※ 상기 모든 수수료는 1인/1회 기준 금액 입니다. <br /><b>※ 예약일과 발권일이 상이한 경우 발권일의 환율에 따라 TAX(유류할증료 포함)가 변동될 수 있습니다.</b><br />※ 항공사의 사정으로 별도의 공지없이 운임 및 규정이 변경되어 운임 차액이 발생하는 경우 운임차액 추가 징수됩니다.<br />※ 항공권은 반드시 첫번째 여정부터 순서대로 사용하셔야하며, 순서대로 이용하지 않은 항공권은 취소처리될 수 있으며, 환불불가합니다. <br />※ 동일 혹은 다수의 여행사를 통해
+                                            동일항공편을 이중예약하는 경우, 항공사에 의해 예약취소될 수 있으니 유의해 주시기 바랍니다. <br />※ 자세한 운송약관은 항공사 홈페이지 <a href="https://www.vietnamairlines.com/kr/ko/legal/conditions-of-carriage" style="color: red" target="_blank">[바로가기]</a> 를 통해 확인 부탁드립니다. <br />※ 상기 운임규정 내에 [바로가기]를 통해 제공되는 항공사 홈페이지 내 정보 에 대해 한국어 지원이 불가한 경우, 이용하시는 브라우저의 번역기능을 통해 확인하시거나
+                                            여행사 담당자에게 문의 부탁드립니다.<br /><br /><font color="BLUE">*항공사에 따라 영문규정이 제공될 수 있으며, 규정에 대한 안내가 필요한 경우 반드시 여행사로 문의바랍니다.</font>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <th>초과수하물</th>
+                                          <td class="link"><a href="https://www.modetour.com/LiveBooking/Air/airline-excess-baggage.html" target="_blank">항공사별 초과수하물 안내 바로가기</a></td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                </div>
+                                <div id="tab-2" class="tab-content except_div">
+                                  <p class="qa_txt"><span> 수수료 관련한 규정은 표시된 규정 외에 별도의 제한조건이 있을 수 있으니, 반드시 담당 직원에게 문의해 주세요.</span></p>
+                                  <div class="policy_common except_div">
+                                    <table summary="요금규정입니다.">
+                                      <colgroup>
+                                        <col width="30.5%" />
+                                        <col width="69.5%" />
+                                      </colgroup>
+                                      <tbody>
+                                        <tr>
+                                          <th>여행업무취급수수료</th>
+                                          <td style="word-break: break-all" class="normal">
+                                            <font color="RED"
+                                              >*예약 후 발권/취소/환불/변경요청시 여행사 업무대행 수수료가 1인당 부과됩니다.<br /><br />- 발권대행수수료 (성인/소아동일 , 유아 없음) : 10,000원<br />- 취소/환불 대행수수료 (성인/소아/유아 동일) : 30,000원<br />- 변경/재발행수수료 (성인/소아/유아 동일)<br />
+                                              : 재발행이 필요없는 변경의 경우 : 10,000원<br />: 재발행이 필요한 변경의 경우 : 30,000원</font
+                                            ><br /><br /><br />※ 천재지변이나 항공사 사정에 의한 스케줄 변경, 취소 시에도 발권대행수수료는 환불되지 않습니다.<br />※ 항공사가 정한 환불/변경수수료는 별도로 징수되며, 요금규정에 안내 되어 있사오니, 반드시 확인 후 결제/발권 요청 부탁드립니다.<br />※ 결제/발권 요청 후에는 바로 발권대행 과정이 진행되며, 취소/환불/변경시에는 수수료가 징수되오니, 신중하게 결제요청 부탁드립니다.<br />※ 신청하신 업무대행수수료는 환불되지 않습니다. <br />※ 대행수수료는
+                                            항공권과는 별도로 [모두투어]로 일시불 승인되며, 항공권 금액승인 시점과 차이가 발생 할 수 있습니다.
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <th>적용구간</th>
+                                          <td style="word-break: break-all" class="normal">푸켓-서울</td>
+                                        </tr>
+                                        <tr>
+                                          <th>변경/환불</th>
+                                          <td style="word-break: break-all" class="normal">
+                                            <br />[한국 출발 기준]<br /><br />[예약 변경]<br />&nbsp;- 예약 변경 수수료 : <font color="BLUE">80,000 원</font>(재발행)<br />&nbsp;- NO SHOW/예약변경 수수료 : <font color="BLUE">100,000 원</font><br /><br />[환불]<br />&nbsp;- 환불 수수료 : <font color="BLUE">80,000 원</font><br />&nbsp;- 취소/NO-SHOW/환불시 수수료: <font color="BLUE">100,000 원</font><br />&nbsp;- 부분환불시 미사용 YQ TAX(유류할증료, 전쟁보험료) 환불 <font color="RED">불가</font
+                                            ><br />
+                                            <br /><br />[예약변경]<br />- 운임규정 상 변경이 허용되는 경우에 한해 동일 또는 상위 단계 운임으로만 변경가능하며, 변경일 기준 운임 재계산으로 변경수수료 이외에 운임차액 및 TAX 가 추가될 수 있습니다.<br />- 전체 미사용 항공권의 출발편 변경 유효기간은 항공사 규정 및 운임에 따라 상이하므로 문의바랍니다. <br /><br />[환불]<br />- 사용구간 편도운임 및 환불수수료 공제 후 환불금이 발생되지 않을 수 있습니다. <br />- 전체 미사용(출발전) 발권일로 부터 1년 이내
+                                            접수시에만 환불 가능<br />- 부분 미사용(출발후) 최초 출발일로 부터 1년 이내 접수시에만 환불 가능<br />- 상기 환불규정은 항공운임에 적용되는 내용이며, 유류할증료 및 TAX(제세공과금)의 환불규정은 각 정부지침 및 항공사규정에 따라 상이하므로 문의바랍니다.<br /><br />[NO-SHOW]<br />- 예약취소/변경 없이 탑승하지 않는 경우<br />- 변경 또는 환불수수료와 별도 적용<br />- 항공사에서 NO-SHOW 발생 이후 잔여여정을 취소할 수 있습니다.<br /><br /><font color="RED"
+                                              >* 2개 이상의 요금규정이 있을 경우 높은 페널티 요금이 부과되거나 구간별 합계로 적용될 수 있으며, 더 엄격한 규정이 적용됩니다.</font
+                                            >
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <th>증빙서류</th>
+                                          <td style="word-break: break-all" class="normal"></td>
+                                        </tr>
+                                        <tr>
+                                          <th>출발요일</th>
+                                          <td style="word-break: break-all" class="normal"></td>
+                                        </tr>
+                                        <tr>
+                                          <th>환불 주의사항</th>
+                                          <td style="word-break: break-all" class="normal">
+                                            - 항공권 당일취소는 발권 당일 23시 30분에 한하여 마이페이지내 [예약취소] 버튼 이용하여 가능하며, 이 경우 항공사 취소수수료와 여행사 취소대행수수료가 발생하지 않습니다. <br /><br />-23시 30분 부터 24시 사이 접수되는 당일 취소는 다음날 기준으로 항공사 수수료가 적용되어 환불처리되고, 여행사 취소대행수수료 3만원이 별도 발생합니다.<br /><br /><br />- 단, 아래 항공사리스트에 해당되는 항공권은 발권일시로부터 24시간 내로 항공권 취소 시 항공사 취소수수료가
+                                            발생하지 않습니다.<br /><br />이 경우 여행사 취소대행수수료는 3만원이 부과 되며, 발권대행수수료는 환불되지 않습니다.<br /><br /><br />- 해당 항공사의 리스트는 다음과 같습니다.<br /><br />대한항공, 아시아나항공, 유나이티드항공, 에어프랑스, 네덜란드항공, 에어프리미아, 제주항공, 폴란드항공, 진에어, 에어캐나다, 에티하드항공, 티웨이항공, 뉴질랜드항공, 아메리칸항공, 델타항공, 에어서울, 에어부산, 루프트한자, 하와이안항공, 일본항공, 그레이터베이 항공
+                                            <br />(아시아나, 에트하드,하와이안항공,ANA항공은 출발일로부터 최소 7일전 발권한 항공권부터 가능)
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <th>NO-SHOW ( 노쇼 규정)</th>
+                                          <td style="word-break: break-all" class="normal"></td>
+                                        </tr>
+                                        <tr>
+                                          <th>출발기간</th>
+                                          <td style="word-break: break-all" class="normal"></td>
+                                        </tr>
+                                        <tr>
+                                          <th>적용불가일</th>
+                                          <td style="word-break: break-all" class="normal"></td>
+                                        </tr>
+                                        <tr>
+                                          <th>여행가능일</th>
+                                          <td style="word-break: break-all" class="normal"></td>
+                                        </tr>
+                                        <tr>
+                                          <th>최소체류일</th>
+                                          <td style="word-break: break-all" class="normal"></td>
+                                        </tr>
+                                        <tr>
+                                          <th>최대체류일</th>
+                                          <td style="word-break: break-all" class="normal">1년</td>
+                                        </tr>
+                                        <tr>
+                                          <th>유/소아요금</th>
+                                          <td style="word-break: break-all" class="normal">
+                                            - 성인 동반 만 2세 - 만 11세 소아 : 성인 요금의 75%<br />- 만 2세 미만 유아(좌석 점유 시) : 성인 요금의 75%<br />
+                                            <br /><br />※ 항공사 및 운항 항공편에 따라 소아, 유아 나이의 적용 기준이 달라질 수 있습니다.<br />※ 출발 당시 소아 운임 적용 가능하더라도 여행 도중 만 12세 이상이 되는 경우, 유아 운임 적용 가능하더라도 여행 도중 24개월 이상이 되는 경우, 소아, 유아 운임 적용 불가할 수 있으며 소아,유아 항공권을 소지하더라도 운항 항공편에 따라 탑승이 거절되거나 추가 비용 발생 등 항공권 사용에 문제가 될 수 있으니 구매 전 반드시 확인하시기 바랍니다.
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <th>사전발권</th>
+                                          <td style="word-break: break-all" class="normal">※ 사전발권 조건과 자동생성되는 시스템 발권 시한 중 가장 제한적인 조건으로 적용됩니다.<br />※ 예약일 기준으로 항공사에서 자동으로 발권시한이 생성되므로 좌석이 확약이더라도 상황에 따라 예약과 동시에 구매하지 않으면 예약이 취소될 수 있습니다.</td>
+                                        </tr>
+                                        <tr>
+                                          <th>판매제한</th>
+                                          <td style="word-break: break-all" class="normal">
+                                            <br />
+                                            TICKETS MUST BE ISSUED ON MU AND MAY NOT BE SOLD IN<br />EGYPT/<br />
+                                            BANGLADESH AND MAY ONLY BE SOLD IN AREA 1/AREA 2/AREA 3
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <th>동반여행</th>
+                                          <td style="word-break: break-all" class="normal"></td>
+                                        </tr>
+                                        <tr>
+                                          <th>추가요금</th>
+                                          <td style="word-break: break-all" class="normal"><b>※ 현재 조회 중인 운임 기준으로 추가요금은 이미 포함되어 있으나, 항공권 구매 조건에 따라 변경이 될 수 있습니다.(변경/환불수수료 별도)</b></td>
+                                        </tr>
+                                        <tr>
+                                          <th>경유지체류</th>
+                                          <td style="word-break: break-all" class="normal">허용 불가 <br /></td>
+                                        </tr>
+                                        <tr>
+                                          <th>환승</th>
+                                          <td style="word-break: break-all" class="normal">
+                                            가능<br />
+                                            <br /><br />※ 경유지 당일 연결이 불가한 경우 해당 공항 심야 이용이 불가 할 수 있으므로 반드시 공항 운영 시간 확인 부탁 드립니다.
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <th>비행편제한</th>
+                                          <td style="word-break: break-all" class="normal">
+                                            아래의 항공편 이용 불가<br />&nbsp;- 만다린항공 항공편 5000 ~ 5999<br />&nbsp;- 에어인디아 항공편 3000 ~ 8999<br />&nbsp;- 유니항공 항공편 7001 ~ 7300<br />&nbsp;- 에바항공 항공편 2001 ~ 3999<br />&nbsp;- 중화항공 항공편 9000 ~ 9999<br />&nbsp;- 홍콩항공 항공편 1000 ~ 1999<br />&nbsp;- 일본항공 항공편 5000 ~ 7999<br />&nbsp;- 대한항공 항공편 3001 ~ 3999<br />&nbsp;- 대한항공 항공편 5000 ~ 7999<br />&nbsp;- 실크항공 항공편 295 ~ 296<br />&nbsp;-
+                                            실크항공 항공편 1000 ~ 9999<br />&nbsp;- ANA항공 항공편 3111 ~ 3200<br />&nbsp;- ANA항공 항공편 3300 ~ 4810<br />&nbsp;- ANA항공 항공편 5001 ~ 9999<br />&nbsp;- 에어마카오 항공편 1000 ~ 9999<br />&nbsp;- 뉴질랜드항공 항공편 3000 ~ 3999<br />&nbsp;- 뉴질랜드항공 항공편 6300 ~ 7998<br />&nbsp;- 뉴질랜드항공 항공편 9000 ~ 9999<br />&nbsp;- 아시아나항공 항공편 6100 ~ 7000<br />&nbsp;- 아시아나항공 항공편 8800 ~ 8816<br />&nbsp;- 아시아나항공 항공편 8100 ~
+                                            8109<br />&nbsp;- 아시아나항공 항공편 9000 ~ 9999<br />&nbsp;- 콴타스항공 항공편 200 ~ 399<br />&nbsp;- 콴타스항공 항공편 2670 ~ 5999<br />&nbsp;- 콴타스항공 항공편 8000 ~ 8999<br />&nbsp;- 싱가포르항공 항공편 1000 ~ 9999<br />&nbsp;- 타히티누이항공 항공편 1000 ~ 4999<br />&nbsp;- 버진블루항공 항공편 3000 ~ 9999<br />&nbsp;- 중국동방항공 항공편 1001 ~ 1074<br />&nbsp;- 중국동방항공 항공편 3901 ~ 4050<br />&nbsp;- 중국동방항공 항공편 4615 ~ 4946<br />&nbsp;-
+                                            카타르항공 항공편 2000 ~ 9999.<br />남서태평양 내 구간 아래의 항공편 이용<br />&nbsp;- 중국동방항공에서 운항하는 중국동방항공 항공편<br />&nbsp;- 콴타스항공에서 운항하는 중국동방항공 항공편<br />&nbsp;- 콴타스항공에서 운항하는 콴타스항공 항공편<br />&nbsp;- 뉴질랜드항공에서 운항하는 뉴질랜드항공 항공편<br />&nbsp;- 피지항공에서 운항하는 피지항공 항공편<br />&nbsp;- 타히티누이항공에서 운항하는 타히티누이항공 항공편<br />&nbsp;- 젯스타에서 운항하는
+                                            젯스타 항공편<br />인도 내 구간 아래의 항공편 이용<br />&nbsp;- 에어인디아에서 운항하는 에어인디아 항공편<br />&nbsp;- IC에서 운항하는 IC 항공편<br />&nbsp;- 타이거 에어에서 운항하는 타이거 에어 항공편<br />&nbsp;- 제트에어웨이즈에서 운항하는 제트에어웨이즈 항공편<br />타이완 내 구간 아래의 항공편 이용<br />&nbsp;- 중화항공에서 운항하는 중화항공 항공편<br />&nbsp;- 만다린항공에서 운항하는 만다린항공 항공편<br />&nbsp;- 부흥항공에서 운항하는 부흥항공
+                                            항공편<br />한국 내 구간 아래의 항공편 이용<br />&nbsp;- 아시아나항공에서 운항하는 아시아나항공 항공편<br />&nbsp;- 대한항공에서 운항하는 대한항공 항공편<br />일본 내 구간 아래의 항공편 이용<br />&nbsp;- 일본항공에서 운항하는 중국동방항공 항공편<br />&nbsp;- 일본항공에서 운항하는 일본항공 항공편<br />&nbsp;- ANA항공에서 운항하는 ANA항공 항공편<br />중국-타이완 구간 아래의 항공편 이용<br />&nbsp;- 상해항공에서 운항하는 중국동방항공 항공편<br />&nbsp;-
+                                            중국동방항공에서 운항하는 중국동방항공 항공편<br />&nbsp;- 상해항공에서 운항하는 상해항공 항공편<br />&nbsp;- 중국동방항공에서 운항하는 상해항공 항공편<br />중국-싱가포르 구간 아래의 항공편 이용<br />&nbsp;- 상해항공에서 운항하는 중국동방항공 항공편<br />&nbsp;- 중국동방항공에서 운항하는 중국동방항공 항공편<br />&nbsp;- 상해항공에서 운항하는 상해항공 항공편<br />&nbsp;- 중국동방항공에서 운항하는 상해항공 항공편<br />중국-인도네시아 구간 아래의 항공편
+                                            이용<br />&nbsp;- 상해항공에서 운항하는 중국동방항공 항공편<br />&nbsp;- 중국동방항공에서 운항하는 중국동방항공 항공편<br />&nbsp;- 상해항공에서 운항하는 상해항공 항공편<br />&nbsp;- 중국동방항공에서 운항하는 상해항공 항공편<br />중국-베트남 구간 아래의 항공편 이용<br />&nbsp;- 상해항공에서 운항하는 중국동방항공 항공편<br />&nbsp;- 중국동방항공에서 운항하는 중국동방항공 항공편<br />&nbsp;- 상해항공에서 운항하는 상해항공 항공편<br />&nbsp;-
+                                            중국동방항공에서 운항하는 상해항공 항공편<br />중국-태국 구간 아래의 항공편 이용<br />&nbsp;- 상해항공에서 운항하는 중국동방항공 항공편<br />&nbsp;- 중국동방항공에서 운항하는 중국동방항공 항공편<br />&nbsp;- 상해항공에서 운항하는 상해항공 항공편<br />&nbsp;- 중국동방항공에서 운항하는 상해항공 항공편<br />중국-남서태평양 구간 아래의 항공편 이용<br />&nbsp;- 상해항공에서 운항하는 중국동방항공 항공편<br />&nbsp;- 중국동방항공에서 운항하는 중국동방항공
+                                            항공편<br />&nbsp;- 상해항공에서 운항하는 상해항공 항공편<br />&nbsp;- 중국동방항공에서 운항하는 상해항공 항공편<br />중국-일본/한국 구간 아래의 항공편 이용<br />&nbsp;- 상해항공에서 운항하는 중국동방항공 항공편<br />&nbsp;- 중국동방항공에서 운항하는 중국동방항공 항공편<br />&nbsp;- 상해항공에서 운항하는 상해항공 항공편<br />&nbsp;- 중국동방항공에서 운항하는 상해항공 항공편<br />중국-마카오 구간 아래의 항공편 이용<br />&nbsp;- 상해항공에서 운항하는
+                                            중국동방항공 항공편<br />&nbsp;- 중국동방항공에서 운항하는 중국동방항공 항공편<br />&nbsp;- 상해항공에서 운항하는 상해항공 항공편<br />&nbsp;- 중국동방항공에서 운항하는 상해항공 항공편<br />중국-홍콩 구간 아래의 항공편 이용<br />&nbsp;- 상해항공에서 운항하는 중국동방항공 항공편<br />&nbsp;- 중국동방항공에서 운항하는 중국동방항공 항공편<br />&nbsp;- 상해항공에서 운항하는 상해항공 항공편<br />&nbsp;- 중국동방항공에서 운항하는 상해항공 항공편<br />중국 내
+                                            구간 아래의 항공편 이용<br />&nbsp;- 중국동방항공에서 운항하는 중국동방항공 항공편<br />&nbsp;- 상해항공에서 운항하는 중국동방항공 항공편<br />&nbsp;- 상해항공에서 운항하는 상해항공 항공편<br />&nbsp;- 중국동방항공에서 운항하는 상해항공 항공편<br />중국-지역3 구간 아래의 항공편 이용<br />&nbsp;- 상해항공에서 운항하는 중국동방항공 항공편<br />&nbsp;- 중국동방항공에서 운항하는 중국동방항공 항공편<br />&nbsp;- 상해항공에서 운항하는 상해항공 항공편<br />&nbsp;-
+                                            중국동방항공에서 운항하는 상해항공 항공편<br />2020.10.24 이전 예약한 중국 내 여정이 포함된 경우<br />&nbsp;- 중국동방항공 항공편<br />&nbsp;- MU6001 ~ MU6199<br />&nbsp;- MU6500 ~ MU6599<br />&nbsp;- MU6700 ~ MU6799<br />&nbsp;- 기차 또는 버스를 이용해야 함<br />관련 규정 또는 철도나 버스 이용에 대한 내용은 항공사 홈페이지 및 콜센터로 문의 바랍니다<br />2020.10.25 이후 예약한 중국 내 여정이 포함된 경우<br />&nbsp;- 중국동방항공 항공편<br />&nbsp;-
+                                            MU1000 ~ MU1399<br />&nbsp;- 기차 또는 버스를 이용해야 함<br />관련 규정 또는 철도나 버스 이용에 대한 내용은 항공사 홈페이지 및 콜센터로 문의 바랍니다<br />
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <th>신용카드</th>
+                                          <td style="word-break: break-all" class="normal">사용가능<br />-탑승자 본인카드로만 결제 가능하며 공항수속시 결제카드를 확인할수 있습니다.(제시 못할경우 탑승이 거부 될수 있음)<br /><br /><font color="BLUE">* 특정카드 할인운임의 경우 법인카드, 체크카드, 일부 카드에 대해서는 할인 적용이 불가합니다.</font></td>
+                                        </tr>
+                                        <tr>
+                                          <th>수하물</th>
+                                          <td style="word-break: break-all" class="normal">
+                                            ※ 무료수하물 및 초과수하물 규정은 좌석등급 및 노선에 따라 상이하므로 자세한 내용은 항공사 홈페이지 <a href="https://kr.ceair.com/newCMS/kr/ko/content/ko_Footer/MoreInfomation/201903/t20190329_4695.html" style="color: red" target="_blank">[바로가기]</a> 또는 여행사 담당자에게 문의 부탁드립니다.<br />※ 항공사 요금규정에 무료수하물 내용이 누락된 경우 표기되지 않을 수 있으며, 표기되지 않은 경우, 해당항공사에 문의 부탁드립니다.<br />※ 공동운항편, 타항공사
+                                            연결편, 24시간 이상 체류 일정, 해외출발 일정, 특수 수하물의 경우 운항항공사에 따라 수하물 규정이 상이할 수 있습니다.
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <th>항공사마일리지</th>
+                                          <td style="word-break: break-all" class="normal">※ 항공사 마일리지 적립 여부 및 적립률은 운임별/제휴 회원사별로 상이하오니, 자세한 내용은 항공사 홈페이지 <a href="https://easternmiles.ceair.com/members/" style="color: red" target="_blank">[바로가기]</a> 또는 여행사 담당자에게 구매 전 문의 부탁드립니다.</td>
+                                        </tr>
+                                        <tr>
+                                          <th>비동반 소아 규정</th>
+                                          <td style="word-break: break-all" class="normal">
+                                            ※ 동반자가 18세미만이거나 탑승클래스가 상이한 소아는 비동반 소아 서비스를 신청 하셔야 합니다.<br />※ 비동반 소아 서비스는 해당 항공사의 사전 승인 하에 이용 가능하며 입국 국가 및 항공사별 서비스 대상 연령 및 규정이 상이하므로 반드시 결제 1주일 전 담당자 확인 후 진행 부탁드립니다.<br />※ 비동반 소아 서비스는 별도의 서비스 수수료가 발생할 수 있습니다.<br />※ 공동운항편의 경우 실제 탑승항공사의 규정에 따라 서비스가 불가할 수 있습니다.<br />※ 자세한 내용은
+                                            항공사 홈페이지 <a href="c" style="color: red" target="_blank">[바로가기]</a> 를 통해 확인 부탁드립니다.<br /><br /><font color="BLUE">※ 보호자 없이 혼자 여행하는 만 12세~17세 미만 청소년(UM)의 경우 운송 항공사에 따라 탑승이 제한될 수 있습니다.</font>
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <th>항공사 일반규정</th>
+                                          <td style="word-break: break-all" class="normal">
+                                            ※ 상기 모든 수수료는 1인/1회 기준 금액 입니다. <br /><b>※ 예약일과 발권일이 상이한 경우 발권일의 환율에 따라 TAX(유류할증료 포함)가 변동될 수 있습니다.</b><br />※ 항공사의 사정으로 별도의 공지없이 운임 및 규정이 변경되어 운임 차액이 발생하는 경우 운임차액 추가 징수됩니다.<br />※ 항공권은 반드시 첫번째 여정부터 순서대로 사용하셔야하며, 순서대로 이용하지 않은 항공권은 취소처리될 수 있으며, 환불불가합니다. <br />※ 동일 혹은 다수의 여행사를 통해
+                                            동일항공편을 이중예약하는 경우, 항공사에 의해 예약취소될 수 있으니 유의해 주시기 바랍니다.<br />※ 자세한 운송약관은 항공사 홈페이지
+                                            <a href="https://kr.ceair.com/newCMS/kr/ko/content/ko_Footer/support/201902/t20190214_1420.html" style="color: red" target="_blank">[바로가기]</a>
+                                            를 통해 확인 부탁드립니다. <br />※ 상기 운임규정 내에 [바로가기]를 통해 제공되는 항공사 홈페이지 내 정보 에 대해 한국어 지원이 불가한 경우, 이용하시는 브라우저의 번역기능을 통해 확인하시거나 여행사 담당자에게 문의 부탁드립니다.<br />※ 상기 운임규정 내에 [바로가기]를 통해 제공되는 항공사 홈페이지 내 정보 에 대해 한국어 지원이 불가한 경우, 이용하시는 브라우저의 번역기능을 통해 확인하시거나 여행사 담당자에게 문의 부탁드립니다. <br /><br /><font
+                                              color="BLUE"
+                                              >*항공사에 따라 영문규정이 제공될 수 있으며, 규정에 대한 안내가 필요한 경우 반드시 여행사로 문의바랍니다.</font
+                                            >
+                                          </td>
+                                        </tr>
+                                        <tr>
+                                          <th>초과수하물</th>
+                                          <td class="link"><a href="https://www.modetour.com/LiveBooking/Air/airline-excess-baggage.html" target="_blank">항공사별 초과수하물 안내 바로가기</a></td>
+                                        </tr>
+                                      </tbody>
+                                    </table>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- layer_popup div추가 -->
+                  </div>
+                  <div class="popup_container">
+                    <!-- popup_container클래스 추가 -->
+                    <div class="btn_box"><button type="button" class="btn_type04 layer_popup_btn">결제 조건 변경</button></div>
+                    <!-- 결제 조건 변경<span><img src="https://www.modetour.com/icons/icon__15_bk.svg" alt="" /></span> -->
+                    <div class="pay_layer layer_popup">
+                      <div class="pop_over">
+                        <div class="icon_x"><button type="button">닫기</button></div>
+                        <div class="pop_in">
+                          <div class="tit">결제 조건 변경</div>
+                          <div class="pay_select">
+                            <ul class="pay_list">
+                              <li class="active">
+                                <div>NH채움카드/성인 1인</div>
+                                <div>[대표금액]</div>
+                                <div><span>1,751,700</span>원</div>
+                              </li>
+                              <li>
+                                <div class="radiobox">
+                                  <input id="radio01" name="card_sort" type="radio" />
+                                  <label for="radio01"> <i class="ico"></i> <span>삼성카드</span></label>
+                                </div>
+                                <div>-</div>
+                                <div><span>1,751,700</span>원</div>
+                              </li>
+                              <li>
+                                <div class="radiobox">
+                                  <input id="radio02" name="card_sort" type="radio" />
+                                  <label for="radio02"> <i class="ico"></i> <span>삼성 iD NOMAD카드</span></label>
+                                </div>
+                                <div>+37,300</div>
+                                <div><span>1,924,900</span>원</div>
+                              </li>
+                              <li>
+                                <div class="radiobox">
+                                  <input id="radio03" name="card_sort" type="radio" />
+                                  <label for="radio03"> <i class="ico"></i> <span>삼성카드</span></label>
+                                </div>
+                                <div>+98,100</div>
+                                <div><span>1,751,700</span>원</div>
+                              </li>
+                              <li>
+                                <div class="radiobox">
+                                  <input id="radio04" name="card_sort" type="radio" />
+                                  <label for="radio04"> <i class="ico"></i> <span>삼성카드</span></label>
+                                </div>
+                                <div>+117,800</div>
+                                <div><span>1,751,700</span>원</div>
+                              </li>
+                              <li>
+                                <div class="radiobox">
+                                  <input id="radio05" name="card_sort" type="radio" />
+                                  <label for="radio05"> <i class="ico"></i> <span>삼성 iD GLOBAL카드 </span></label>
+                                </div>
+                                <div>+19,600</div>
+                                <div><span>1,751,700</span>원</div>
+                              </li>
+                            </ul>
+                          </div>
+                          <div class="btn_box">
+                            <button type="button" class="btn_type01 btn_100">선택완료</button>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- layer_popup div추가 -->
+                  </div>
+                  <div class="popup_container">
+                    <!-- popup_container클래스 추가 -->
+                    <div class="btn_box"><button type="button" class="btn_type04 layer_popup_btn">결제 금액 상세</button></div>
+                    <!-- 결제 금액 상세<span><img src="https://www.modetour.com/icons/icon__15_bk.svg" alt="" /></span> -->
+                    <div class="layer_popup">
+                      <div class="pop_over">
+                        <div class="icon_x"><button type="button">닫기</button></div>
+                        <!-- 닫기버튼 수정 -->
+                        <div class="pop_in">
+                          <div class="tit">결제 금액 상세</div>
+                          <div class="total">
+                            <div>왕복 항공권</div>
+                            <div>1,101,000<span>원</span></div>
+                          </div>
+                          <div class="people_box">
+                            <div class="pay_people">
+                              <span class="people">· 성인 1</span>
+                              <p class="price">1,101,000<span>원</span></p>
+                            </div>
+                            <div class="pay_people">
+                              <span class="txt_air">항공요금</span>
+                              <span class="txt_price">412,800원</span>
+                            </div>
+                            <div class="pay_people">
+                              <span class="txt_air">유류할증료</span>
+                              <span class="txt_price">64,400원</span>
+                            </div>
+                            <div class="pay_people">
+                              <span class="txt_air">제세공과금</span>
+                              <span class="txt_price">63,300원</span>
+                            </div>
+                            <div class="pay_people">
+                              <span class="txt_air">발권대행수수료</span>
+                              <span class="txt_price">10,000원</span>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <!-- layer_popup div추가 -->
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="background"></div>
+          </div>
+          <div class="detail_btn">
+            <button>상세보기 접기</button>
+          </div>
+          <div class="ruleagree">
+            <div class="left">
+              <div class="tit">약관 동의</div>
+              <div class="agree_box">
+                <div class="top">
+                  <span class="checkbox">
+                    <input id="all_chk" name="all_chk" type="checkbox" />
+                    <label for="all_chk"> <i class="ico"></i> <span>전체동의</span> </label>
+                  </span>
+                </div>
+                <div class="rulebox1">
+                  <div class="r_tit">약관 동의</div>
+                  <ul>
+                    <li>
+                      <span class="checkbox">
+                        <input id="chk01" name="chk01" type="checkbox" />
+                        <label for="chk01"> <i class="ico"></i> <span>[필수]</span> 요금규정</label>
+                      </span>
+                      <button><img src="https://www.modetour.com/icons/icon_arrow_right_20.svg" alt="" /></button>
+                    </li>
+                    <li>
+                      <span class="checkbox">
+                        <input id="chk02" name="chk02" type="checkbox" />
+                        <label for="chk02"> <i class="ico"></i> <span>[필수]</span> 예약 시 유의사항</label>
+                      </span>
+                      <button><img src="https://www.modetour.com/icons/icon_arrow_right_20.svg" alt="" /></button>
+                    </li>
+                    <li>
+                      <span class="checkbox">
+                        <input id="chk03" name="chk03" type="checkbox" />
+                        <label for="chk03"> <i class="ico"></i> <span>[필수]</span> 취소 및 환불규정</label>
+                      </span>
+                      <button><img src="https://www.modetour.com/icons/icon_arrow_right_20.svg" alt="" /></button>
+                    </li>
+                    <li>
+                      <span class="checkbox">
+                        <input id="chk04" name="chk04" type="checkbox" />
+                        <label for="chk04"> <i class="ico"></i> <span>[필수]</span> 수하물 규정</label>
+                      </span>
+                      <button><img src="https://www.modetour.com/icons/icon_arrow_right_20.svg" alt="" /></button>
+                    </li>
+                    <li>
+                      <span class="checkbox">
+                        <input id="chk05" name="chk05" type="checkbox" />
+                        <label for="chk05"> <i class="ico"></i> <span>[필수]</span> 여행사 업무대행 수수료</label>
+                      </span>
+                      <button><img src="https://www.modetour.com/icons/icon_arrow_right_20.svg" alt="" /></button>
+                    </li>
+                    <li>
+                      <span class="checkbox">
+                        <input id="chk06" name="chk06" type="checkbox" />
+                        <label for="chk06"> <i class="ico"></i> <span>[필수]</span> 여권 및 비자</label>
+                      </span>
+                      <button><img src="https://www.modetour.com/icons/icon_arrow_right_20.svg" alt="" /></button>
+                    </li>
+                    <li>
+                      <span class="checkbox">
+                        <input id="chk07" name="chk07" type="checkbox" />
+                        <label for="chk07"> <i class="ico"></i> <span>[필수]</span> 결제/발권 동의</label>
+                      </span>
+                      <button><img src="https://www.modetour.com/icons/icon_arrow_right_20.svg" alt="" /></button>
+                    </li>
+                    <li>
+                      <span class="checkbox">
+                        <input id="chk08" name="chk08" type="checkbox" />
+                        <label for="chk08"> <i class="ico"></i> <span>[필수]</span> 항공약관</label>
+                      </span>
+                      <button><img src="https://www.modetour.com/icons/icon_arrow_right_20.svg" alt="" /></button>
+                    </li>
+                    <li>
+                      <span class="checkbox">
+                        <input id="chk09" name="chk09" type="checkbox" />
+                        <label for="chk09"> <i class="ico"></i> <span>[필수]</span> 항공사 정보 동의</label>
+                      </span>
+                      <button><img src="https://www.modetour.com/icons/icon_arrow_right_20.svg" alt="" /></button>
+                    </li>
+                  </ul>
+                </div>
+                <div class="rulebox1">
+                  <div class="r_tit">개인정보 수집 및 이용 동의</div>
+                  <ul>
+                    <li>
+                      <span class="checkbox">
+                        <input id="chk10" name="chk10" type="checkbox" />
+                        <label for="chk10"> <i class="ico"></i> <span>[필수]</span> 개인정보 수집 및 이용동의</label>
+                      </span>
+                      <button><img src="https://www.modetour.com/icons/icon_arrow_right_20.svg" alt="" /></button>
+                    </li>
+                    <li>
+                      <span class="checkbox">
+                        <input id="chk11" name="chk11" type="checkbox" />
+                        <label for="chk11"> <i class="ico"></i> <span>[필수]</span> 고유식별정보 수집 및 이용 동의</label>
+                      </span>
+                      <button><img src="https://www.modetour.com/icons/icon_arrow_right_20.svg" alt="" /></button>
+                    </li>
+                    <li>
+                      <span class="checkbox">
+                        <input id="chk12" name="chk12" type="checkbox" />
+                        <label for="chk12"> <i class="ico"></i> <span>[필수]</span> 개인정보 제 3자 제공동의</label>
+                      </span>
+                      <button><img src="https://www.modetour.com/icons/icon_arrow_right_20.svg" alt="" /></button>
+                    </li>
+                    <li>
+                      <span class="checkbox or">
+                        <input id="chk13" name="chk13" type="checkbox" />
+                        <label for="chk13"> <i class="ico"></i> <span>[선택]</span> 개인정보 수집, 이용동의</label>
+                      </span>
+                      <button><img src="https://www.modetour.com/icons/icon_arrow_right_20.svg" alt="" /></button>
+                    </li>
+                  </ul>
+                </div>
+                <div class="rulebox1">
+                  <div class="r_tit">유의 사항</div>
+                  <ul>
+                    <li>
+                      <span class="checkbox">
+                        <input id="chk13" name="chk13" type="checkbox" />
+                        <label for="chk13"> <i class="ico"></i> <span>[필수]</span> 요금 안내사항</label>
+                      </span>
+                      <button><img src="https://www.modetour.com/icons/icon_arrow_right_20.svg" alt="" /></button>
+                    </li>
+                    <li>
+                      <span class="checkbox">
+                        <input id="chk14" name="chk14" type="checkbox" />
+                        <label for="chk14"> <i class="ico"></i> <span>[필수]</span> 여권정보 안내사항</label>
+                      </span>
+                      <button><img src="https://www.modetour.com/icons/icon_arrow_right_20.svg" alt="" /></button>
+                    </li>
+                    <li>
+                      <span class="checkbox">
+                        <input id="chk15" name="chk15" type="checkbox" />
+                        <label for="chk15"> <i class="ico"></i> <span>[필수]</span> 항공권 수령방법</label>
+                      </span>
+                      <button><img src="https://www.modetour.com/icons/icon_arrow_right_20.svg" alt="" /></button>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="right">
+              <div class="tit">유의사항</div>
+              <div class="notice_box">
+                <ul>
+                  <li>
+                    <button>
+                      예약 시 주의 사항 - 항공권 상세 국가안내 <span><img src="https://www.modetour.com/icons/icon_arrow_right_20.svg" alt="" /></span>
+                    </button>
+                    <div class="hide">
+                      <div class="hide_txt">예약 시 주의사항</div>
+                      <p>
+                        - 예약 후 영문 변경은 불가하니 실제 탑승객의 여권상 영문 이름을 입력해 주십시오.<br />
+                        - 여권 정보가 잘못되어 있을 경우, 출국이 불가하니 다시 한번 확인 부탁드립니다.<br />
+                        - 보호자 없이 혼자 여행하는 만 12세~17세 미만 청소년(UM)의 경우 운송 항공사에 따라 탑승이 제한될 수 있습니다.<br />
+                        항공권 관련 모든 안내 (발권완료, 스케쥴 변경 등) SMS는 예약자의 전화번호로 발송됩니다.<br />
+                        전화번호 오입력, 변경 등에 따라 수신하지 못한 SMS에 대한 당사 책임이 없음을 알려드립니다.<br />
+                        경유지 또는 목적지에서 자가격리가 있을 수 있으며, 항공기 탑승시 코로나 및 기타검사 증명서가 필요 할 수 있습니다.<br />
+                        탑승전 필요 서류 및 비자, 자가격리 등 내용 확인하시어 불이익이 되지 않도록 사전 점검 하시기 바랍니다.<br />
+                        항공기 탑승에 관련된 사항은 탑승객 본인이 꼭 확인하셔야 하며, 탑승거부, 입국 거부되더라도 여행사에서는 책임이 없음을 알려드립니다.
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="next_btn">
+            <button>다음단계</button>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script> -->
+    <script>
+      $(document).ready(function () {
+        //결제조건변경, 결제금액상세 팝업
+        // $(".reserve_cont_area .finalcard .pay_detail > div").click(function () {
+        //   var t = $(this);
+        //   t.find(".pop_over").show();
+        //   t.siblings().find(".pop_over").hide();
+        // });
+        //결제조건변경, 결제금액상세 팝업 닫기
+        // $(".reserve_cont_area .pop_over .close").click(function () {
+        //   $(".pop_over").hide();
+        //   return false;
+        // });
+        //유의사항 여닫기
+        $(".reserve_cont_area .ruleagree .notice_box button").click(function () {
+          var t = $(this);
+          $(".reserve_cont_area .ruleagree .notice_box button").toggleClass("on");
+          t.next(".hide").slideToggle();
+        });
+        //요금규정 탭
+        $(".policy .tabs li a").click(function () {
+          var t = $(this);
+          var idx = t.parent().index();
+          t.parent().addClass("active").siblings().removeClass("active");
+          $(".policy .tab_wrap > div").eq(idx).show().siblings().hide();
+          return false;
+        });
+        //여정 상세보기 접기
+        $.fn.extend({
+          toggle_text: function (initial_text, alternate_text) {
+            return this.text(this.text() == alternate_text ? initial_text : alternate_text);
+          },
+        });
+        $(".reserve_cont_area .detail_btn button").click(function () {
+          $(".reserve_cont_area .finalcard .middle,.reserve_cont_area .finalcard .bottom,.reserve_cont_area .detail_btn").toggleClass("on");
+          $(".reserve_cont_area .detail_btn button").toggle_text("상세보기 접기", "상세보기");
+          $(".reserve_cont_area .finalcard .pay_detail,.reserve_cont_area .finalcard > div:nth-child(2),.reserve_cont_area .finalcard > div:nth-child(3),.reserve_cont_area .finalcard .card .top,.reserve_cont_area .finalcard .card .bottom .air,.reserve_cont_area .finalcard .card .bottom .luggage").toggle();
+        });
+      });
+    </script>
+  </body>
+</html>

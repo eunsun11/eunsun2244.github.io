@@ -1,0 +1,1394 @@
+@charset "utf-8";
+.search_wrap .top_area {
+    position: sticky;
+    top: 0;
+    left: 0;
+    background: #fff;
+    z-index: 2;
+}
+.search_details .air_search_area {
+    position: fixed;
+    top: 112px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+}
+.search_details .air_search_area .layout {
+    padding-top: 40px;
+    background: #fff;
+}
+.search_details .air_search_area .sub_top {
+    justify-content: center;
+}
+.search_details .air_search_area .ticket_tab a span {
+    font-size: 18px;
+}
+.search_details .air_search_area .close {
+    text-align: center;
+    padding: 16px 0;
+}
+.search_details .air_search_area .close button {
+    width: 36px;
+    height: 36px;
+    background: #f5f6f6;
+    border-radius: 36px;
+}
+.flight_course .result_section {
+    display: flex;
+    padding: 0 20px;
+    border-bottom: 1px solid #d0d0d0;
+    justify-content: space-between;
+    align-items: center;
+    height: 52px;
+}
+.flight_course .result_section:first-child {
+    height: 68px;
+}
+.flight_course .result_section .data_txt,
+.flight_course .result_section .data_day {
+    display: flex;
+    gap: 0 8px;
+    align-items: center;
+}
+.flight_course .result_section .data_txt {
+    line-height: 24px;
+}
+.flight_course .result_section .data_day {
+    line-height: 13px;
+}
+.flight_course .result_section .data_txt span {
+    font-size: 16px;
+    color: #111;
+    font-weight: 700;
+    align-items: center;
+}
+.flight_course .result_section .data_day span {
+    font-size: 13px;
+    color: #888;
+    letter-spacing: 0.5px;
+}
+.flight_course .result_section .data_re {
+    font-size: 12px;
+    height: 30px;
+    color: #aaa;
+    border: 1px #d3dbd9 solid;
+    border-radius: 32px;
+    padding: 4px 16px;
+    transition: 0.3s;
+    outline: 0;
+}
+.flight_course .result_section .data_re.on {
+    color: #009c75;
+    border: 1px #009c75 solid;
+    box-shadow: 0 0 0 2px rgba(0, 156, 117, 0.4);
+}
+.flight_course .result_section .data_re span {
+    color: inherit;
+}
+.flight_course .result_section .people {
+    display: flex;
+    align-items: center;
+    gap: 0 6px;
+    color: #111;
+    font-size: 14px;
+    font-weight: 700;
+}
+.flight_course .result_section .line {
+    color: #aaa;
+    font-weight: normal;
+}
+.search_wrap .filter_btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 59px;
+    height: 30px;
+    background: #475451;
+    border-radius: 5px;
+    gap: 0 6px;
+}
+.search_wrap .filter_btn span {
+    font-size: 12px;
+    color: #fff;
+}
+/* [s] 2024-10-17 추가 */
+.ticket_container .banner_area {
+    margin-top: 24px;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.ticket_container .banner_area .swiper-slide {
+    overflow: hidden;
+    border-radius: 8px;
+    padding-bottom: 13.7313%;
+    position: relative;
+    height: 0;
+}
+.ticket_container .banner_area .swiper-slide img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+.ticket_container .banner_area .swiper-pagination-fraction {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    left: auto;
+    right: 0;
+    bottom: 0;
+    width: 33px;
+    height: 15px;
+    font-size: 9px;
+    color: #fff;
+    background: rgba(177, 177, 177, 0.4);
+    border-bottom-right-radius: 10px;
+}
+.ticket_container .banner_area .swiper-pagination-fraction span {
+    color: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    margin: 0 2px;
+}
+/* [e] 2024-10-17 추가 */
+.ticket_container .box {
+    margin: 30px 0;
+}
+.ticket_container .flight_list_tit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.ticket_container .flight_list_tit .tit div {
+    color: #111;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 27px;
+}
+.ticket_container .flight_list_tit .tit div + div {
+    color: #8f9f9b;
+    font-size: 14px;
+    line-height: 21px;
+}
+.ticket_container .sort {
+    display: flex;
+    gap: 0 16px;
+}
+.ticket_container .sort .layer_popup_btn {
+    font-size: 14px;
+    color: #888;
+    font-weight: 600;
+}
+
+.ticket_container .sort .sort_layer {
+    right: 0;
+    left: auto;
+    top: 20px;
+    width: 140px;
+    padding: 0;
+}
+
+.ticket_container .sort .sort_layer li {
+    height: 40px;
+    line-height: 40px;
+    padding: 0 18px;
+    font-size: 13px;
+    color: #888;
+}
+
+.ticket_container .sort .sort_layer li.on {
+    color: #111;
+}
+.ticket_container .flight_result {
+    display: flex;
+    justify-content: space-between;
+    margin: 24px 0 20px;
+}
+.ticket_container .flight_result span {
+    font-size: 14px;
+}
+.ticket_container .flight_result strong {
+    font-weight: 700;
+}
+.ticket_container .flight_result .point01 {
+    font-size: 13px;
+    color: #009c75;
+}
+.ticket_container .flight_item {
+    border: 1px solid #d3dbd9;
+    border-radius: 10px;
+    position: relative;
+    overflow: hidden;
+}
+
+.ticket_container .flight_item .item_details_top {
+    padding: 18px;
+}
+.ticket_container .flight_item .item_details_top .air_logo {
+    width: 15px;
+    object-fit: contain;
+}
+.ticket_container .flight_item .item_details_top .name {
+    font-size: 13px;
+    line-height: 18px;
+}
+.ticket_container .flight_item .item_details_top .detail01 {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #d3dbd9;
+}
+.ticket_container .flight_item .item_details_top .detail01 p {
+    font-size: 12px;
+    line-height: 18px;
+}
+.ticket_container .flight_item .item_details_top .detail01 .guide01 {
+    color: #009c75;
+}
+.ticket_container .flight_item .item_details_top .detail01 .guide02 {
+    color: #888;
+}
+.ticket_container .flight_item .item_details_top .detail01 .guide03 {
+    color: #ed4949;
+}
+.ticket_container .flight_item .item_details_top .detail02 {
+    padding-top: 16px;
+    display: flex;
+}
+
+.ticket_container .flight_item .item_details_top .detail02 .detail02_1 {
+    display: flex;
+    justify-content: flex-start;
+    flex: 1 1 0%;
+    flex-direction: column;
+}
+.ticket_container .flight_item .item_details_top .detail02 .time {
+    font-size: 17px;
+    color: #111;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+.ticket_container .flight_item .item_details_top .detail02 .city {
+    display: flex;
+    flex-direction: column;
+}
+.ticket_container .flight_item .item_details_top .detail02 .city span {
+    font-size: 13px;
+    color: #555;
+    line-height: 18px;
+}
+.ticket_container .flight_item .item_details_top .detail02 .city span + span {
+    font-weight: 700;
+}
+.ticket_container .flight_item .item_details_top .detail02 .detail02_2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.ticket_container .flight_item .item_details_top .detail02 .detail02_2 .lead_time {
+    color: #009c75;
+    font-size: 12px;
+    font-weight: 700;
+}
+.ticket_container .flight_item .item_details_top .detail02 .detail02_2 .txt {
+    padding: 5px 10px;
+    background: #009c75;
+    border-radius: 30px;
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    margin-top: 4px;
+}
+.ticket_container .flight_item .item_details_top .detail02 .detail02_2 .line {
+    width: 73px;
+    height: 2px;
+    background: #d3dbd9;
+    position: relative;
+    margin-top: 8px;
+}
+.ticket_container .flight_item .item_details_top .detail02 .detail02_2 .line::before,
+.ticket_container .flight_item .item_details_top .detail02 .detail02_2 .line::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    background: #8f9f9b;
+    position: absolute;
+    top: -3px;
+    left: 0;
+    border-radius: 50%;
+}
+.ticket_container .flight_item .item_details_top .detail02 .detail02_2 .line::after {
+    left: auto;
+    right: 0;
+}
+.ticket_container .flight_item .item_details_top .detail02 .detail02_3 {
+    display: flex;
+    justify-content: flex-start;
+    flex: 1 1 0%;
+    flex-direction: column;
+    text-align: right;
+    position: relative;
+}
+.ticket_container .flight_item .item_details_top .detail02 .detail02_3 .plus_day {
+    position: absolute;
+    left: 16px;
+    top: 0;
+    border: 1px #d3dbd9 solid;
+    border-radius: 5px;
+    color: #111;
+    font-size: 12px;
+    padding: 0 4px;
+    height: 22px;
+    line-height: 21px;
+    font-weight: 600;
+}
+
+.ticket_container .flight_item .item_details_bottom {
+    background: #f5f6f6;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding: 0 18px;
+}
+.ticket_container .flight_item .item_details_bottom .price_area {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 46px;
+}
+.ticket_container .flight_item .item_details_bottom .price_area .txt,
+.ticket_container .flight_item .item_details_bottom .price_area .txt p {
+    color: #555;
+    font-size: 12px;
+    line-height: 18px;
+}
+
+.ticket_container .flight_item .item_details_bottom .price_area .txt {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    line-clamp: 2;
+}
+.ticket_container .flight_item .item_details_bottom .price_area .price {
+    flex: 1;
+}
+.ticket_container .flight_item .item_details_bottom .option_btn em {
+    color: #009c75;
+    font-size: 17px;
+    font-weight: 700;
+}
+.ticket_container .flight_item .item_details_bottom .price_area div {
+    font-size: 12px;
+}
+.ticket_container .flight_item .item_details_bottom .pay_option.on > div:first-child {
+    width: 115px;
+}
+.ticket_container .flight_item .item_details_bottom .pay_option .option_btn {
+    display: flex;
+    justify-content: flex-end;
+}
+.ticket_container .flight_item .item_details_bottom .pay_option .option_btn small {
+    font-size: 12px;
+}
+.ticket_container .flight_item .item_details_bottom .pay_option .option_btn::after {
+    content: "";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    vertical-align: middle;
+    background: url("https://m.modetour.com/icons/icon_down__20_bk.svg") no-repeat center 0;
+}
+.ticket_container .flight_item .item_details_bottom .pay_option .on {
+    display: none;
+}
+.ticket_container .flight_item .item_details_bottom .pay_option.on .on {
+    display: block;
+}
+.ticket_container .flight_item .item_details_bottom .pay_option.on .off {
+    display: none;
+}
+.ticket_container .flight_item .item_details_bottom .btn_box {
+    padding: 10px 0 14px;
+}
+.ticket_container .flight_item + .flight_item {
+    margin-top: 15px;
+}
+.ticket_container .pay_select {
+    display: none;
+}
+.ticket_container .notice {
+    background: #f5f6f6;
+    padding: 30px 20px;
+}
+.ticket_container .notice .tit {
+    font-size: 16px;
+    color: #111;
+    margin-bottom: 14px;
+    display: flex;
+    gap: 0 5px;
+    font-weight: 600;
+}
+.ticket_container .notice li {
+    font-size: 14px;
+    color: #111;
+    display: flex;
+    gap: 0 5px;
+    line-height: 17px;
+    font-weight: 400;
+}
+.ticket_container .notice li + li {
+    margin-top: 8px;
+}
+.ticket_container .notice li::before {
+    content: "-";
+}
+.ticket_container .flight_item.active {
+    padding: 17px 20px 17px 24px;
+}
+.ticket_container .flight_item.active::before {
+    content: "";
+    width: 6px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(184deg, rgba(31, 158, 115, 1) 0%, rgba(202, 218, 11, 1) 100%);
+}
+.ticket_container .flight_item.active .tit {
+    display: flex;
+    justify-content: space-between;
+}
+.ticket_container .flight_item.active .tit span {
+    font-size: 17px;
+    color: #111;
+    font-weight: 700;
+}
+.ticket_container .flight_item.active .tit span + span {
+    font-size: 14px;
+    font-weight: 400;
+}
+.ticket_container .flight_item.active .cancel_btn {
+    width: 18px;
+    height: 18px;
+    background: url(https://www.modetour.com/icons/icon_x_18.svg) no-repeat center 0;
+    font-size: 0;
+    color: transparent;
+}
+.ticket_container .flight_item.active .air_logo {
+    width: 15px;
+    height: 15px;
+    -o-object-fit: contain;
+    object-fit: contain;
+}
+.ticket_container .flight_item.active .guide01 {
+    font-size: 12px;
+    display: flex;
+    word-break: keep-all;
+    margin-top: 15px;
+    line-height: 15px;
+    gap: 0 5px;
+}
+.ticket_container .flight_item.active .guide01_1 {
+    color: #009c75;
+    text-indent: -6px;
+    padding-left: 6px;
+}
+.ticket_container .flight_item.active .guide01_2 {
+    color: #888;
+    text-indent: -6px;
+    padding-left: 6px;
+}
+.ticket_container .flight_item.active .guide01 .name {
+    font-size: 13px;
+}
+.ticket_container .flight_item.active .guide02 {
+    font-size: 12px;
+    margin-top: 7px;
+}
+.ticket_container .flight_item.active .guide03 {
+    font-size: 12px;
+    margin-top: 11px;
+}
+.ticket_container .flight_item.active .item_details {
+    display: flex;
+    margin-top: 10px;
+}
+.ticket_container .flight_item.active .price {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+.ticket_container .flight_item.active .price .num {
+    color: #009b75;
+    font-weight: 700;
+}
+.ticket_container .flight_item.active .detail01 {
+    display: flex;
+    flex-direction: column;
+}
+.ticket_container .flight_item.active .detail01 .city {
+    color: #888;
+    font-size: 13px;
+}
+.ticket_container .flight_item.active .detail01 .time {
+    font-size: 17px;
+    font-weight: 700;
+    margin-top: 5px;
+}
+
+.ticket_container .flight_item.active .detail02 {
+    margin: 0 8px;
+}
+.filter_cont {
+    background: #fff;
+    z-index: 2;
+    transition: 0.3s;
+    position: fixed;
+    top: 100%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+.filter_cont.on {
+    top: 44px;
+}
+.filter_cont .filter_tit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 52px;
+    margin-top: 10px;
+    padding: 0 20px;
+    border-bottom: 1px #d3dbd9 solid;
+    font-size: 14px;
+    font-weight: 700;
+}
+.filter_cont .filter_tit .city {
+    display: flex;
+    gap: 0 8px;
+}
+.filter_cont .txt {
+    font-size: 18px;
+    color: #111;
+    font-weight: bold;
+}
+.filter_cont .reset_btn {
+    color: #888;
+    font-size: 12px;
+}
+.filter_cont .reset_btn img {
+    margin-left: 5px;
+}
+.filter_cont .reset_btn::after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background: url("https://www.modetour.com/icons/icon_circle_refresh.svg") no-repeat center 0;
+    display: inline-block;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+.filter_cont .filter_list {
+    height: calc(100% - 106px);
+    overflow-x: hidden;
+    overflow-y: auto;
+}
+.filter_cont .filter_list .tit {
+    width: 100%;
+    min-height: 68px;
+    border-bottom: 1px solid #d9d9d9;
+    position: relative;
+    text-align: left;
+    display: flex;
+}
+.filter_cont .filter_list .tit button {
+    width: max-content;
+    margin-right: 10px;
+}
+.filter_cont .filter_list .tit .check_list {
+    line-height: 16px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    color: #009c75;
+    font-size: 14px;
+    font-weight: 600;
+    justify-content: flex-end;
+}
+.filter_cont .filter_list .tit::after {
+    content: "";
+    width: 26px;
+    height: 26px;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-top: -13px;
+    background: url("https://www.modetour.com/icons/icon__26.svg") no-repeat center 0;
+    transition: 0.3s;
+}
+.filter_cont .filter_list .tit.on::after {
+    transform: rotate(-180deg);
+}
+.filter_cont .filter_list .all_reset {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin: 17px 0;
+}
+.filter_cont .filter_list .all_reset button {
+    color: #888;
+    font-weight: 400;
+}
+.filter_cont .filter_list .reset_btn::after {
+    content: "";
+    width: 16px;
+    height: 16px;
+    background: url("https://www.modetour.com/icons/icon_circle_refresh.svg") no-repeat center 0;
+    display: inline-block;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+.filter_details {
+    padding: 16px 0 24px;
+    display: none;
+}
+.filter_details ul {
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 14px;
+    gap: 12px;
+}
+.filter_details li {
+    height: 32px;
+    padding: 10px 12px;
+    border: 1px solid #d9d9d9;
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+}
+.filter_details li span {
+    color: #888;
+}
+.filter_details li.on {
+    border-color: #009c75;
+    color: #009c75;
+    box-shadow: 0 0 0 2px rgba(0, 156, 117, 0.2);
+}
+.filter_details li.on span {
+    color: #009c75;
+}
+.filter_details .ico_air {
+    width: 15px;
+    height: 15px;
+    object-fit: contain;
+    margin-right: 8px;
+}
+.filter_details .reset {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.price_range {
+    position: relative;
+}
+.price_range #price_range {
+    width: 100%;
+    height: 4px;
+    margin: 40px 0 20px;
+}
+.price_range #price_range .asRange-selected {
+    height: 4px;
+    background: #54a88e;
+}
+.price_range #price_range .asRange-pointer:before {
+    top: -5px;
+    right: -3px;
+    bottom: -1px;
+    left: -3px;
+    background: #009c75;
+}
+.price_range #price_range .asRange-pointer:after {
+    top: -3px;
+    right: -1px;
+    bottom: 1px;
+    left: -1px;
+}
+.price_range #price_range .asRange-pointer .asRange-tip {
+    width: max-content;
+    padding: 0 10px;
+}
+
+.price_range .price_tooltip {
+    position: absolute;
+    width: max-content;
+    bottom: 25px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.75);
+    color: #fff;
+    line-height: 32px;
+    text-align: left;
+    padding: 6px 8px;
+    font-size: 14px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 7px rgba(0, 0, 0, 0.07);
+}
+.price_range .price_tooltip::after {
+    position: absolute;
+    bottom: -7px;
+    left: calc(50% - 7px);
+    content: " ";
+    height: 0;
+    z-index: -1;
+    border-bottom: 7px solid;
+    border-left: 7px solid rgba(0, 0, 0, 0);
+    border-right: 7px solid rgba(0, 0, 0, 0);
+    color: rgba(0, 0, 0, 0.75);
+    transform: rotate(-180deg);
+    -webkit-transform: rotate(-180deg);
+    -moz-transform: rotate(-180deg);
+    -o-transform: rotate(-180deg);
+    -ms-transform: rotate(-180deg);
+}
+.filter_details .price_info {
+    color: #111;
+    font-weight: 500;
+    line-height: 22px;
+    font-size: 14px;
+}
+.filter_details .price_info span {
+    color: #009c75;
+    font-size: 16px;
+    font-weight: 700;
+    padding-left: 5px;
+}
+.filter_list .btn_box {
+    margin-top: 30px;
+}
+
+#searchpop .pop_in {
+    margin-top: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+#searchpop .pop_in .passengers {
+    font-size: 16px;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+#searchpop .pop_in .passengers .line {
+    margin: 0 17px;
+}
+#searchpop .area {
+    position: relative;
+}
+#searchpop .area .area_tit {
+    border-top: 1px solid #d9d9d9;
+    position: relative;
+}
+#searchpop .booking_city {
+    display: flex;
+    position: relative;
+    height: 70px;
+}
+#searchpop .booking_city .city {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 70px;
+}
+#searchpop .booking_city .city.disabled {
+    background: #f5f6f6;
+}
+#searchpop .booking_city .city.disabled button {
+    color: #d3dbd9;
+}
+#searchpop .booking_city .city input {
+    width: 60%;
+    margin: 0 auto;
+    text-align: center;
+    background: transparent;
+}
+#searchpop .booking_city .city input::placeholder {
+    color: #929f9b;
+}
+#searchpop .booking_city .city input:focus {
+    outline: none;
+    box-shadow: none;
+}
+#searchpop .booking_city .city button {
+    font-size: 20px;
+    font-weight: 600;
+    line-height: 26px;
+}
+#searchpop .booking_city .switch {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+#searchpop .scheduled_area {
+    height: 100%;
+}
+#searchpop .scheduled {
+    font-size: 16px;
+    height: 68px;
+    padding-left: 20px;
+    padding-right: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid #d9d9d9;
+}
+#searchpop .area.on {
+    height: 100%;
+}
+#searchpop .area .scheduled .arrow {
+    transition: 0.3s;
+    transform: rotate(-180deg);
+}
+#searchpop .area.on .scheduled .arrow {
+    transform: rotate(0);
+}
+#searchpop .calendar_wrap {
+    height: calc(100% - 250px);
+    overflow-y: auto;
+    display: none;
+}
+#searchpop .calendar_wrap .calendar_header .calendar_day {
+    font-size: 18px;
+    font-weight: 700;
+}
+#searchpop .calendar_wrap .calendar_list {
+    padding: 20px 20px 0 20px;
+}
+#searchpop .calendar_wrap .calendar_area .calendar_table {
+    width: 100%;
+    text-align: center;
+}
+#searchpop .calendar_wrap .calendar_area .calendar_table thead {
+    position: relative;
+}
+#searchpop .calendar_wrap .calendar_area .calendar_table thead::after {
+    content: "";
+    position: absolute;
+    bottom: 6px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: #eee;
+}
+#searchpop .calendar_wrap .calendar_area .calendar_table th,
+#searchpop .calendar_wrap .calendar_area .calendar_table td {
+    width: 48px;
+    height: 58px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 14px;
+    position: relative;
+}
+#searchpop .calendar_wrap .calendar_area .calendar_table tbody td:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+#searchpop .calendar_wrap .calendar_area .calendar_table span {
+    color: inherit;
+}
+#searchpop .calendar_wrap .calendar_area .calendar_table .sat span,
+#searchpop .calendar_wrap .calendar_area .calendar_table .sun span {
+    color: #ed4949;
+}
+#searchpop .calendar_wrap .calendar_area .calendar_table .sun .date,
+#searchpop .calendar_wrap .calendar_area .calendar_table .holiday .date {
+    color: #ed4949 !important;
+}
+#searchpop .calendar_wrap .calendar_area .calendar_table .in_box {
+    height: 100%;
+    padding-top: 15px;
+    position: relative;
+}
+#searchpop .calendar_wrap .calendar_area .calendar_table .disabled .date {
+    opacity: 0.3;
+}
+#searchpop .calendar_wrap .calendar_area .calendar_table .in_box .date {
+    position: relative;
+    z-index: 2;
+}
+#searchpop .calendar_wrap .calendar_area .calendar_table .start_range .in_box .date {
+    position: relative;
+    z-index: 11;
+}
+#searchpop .calendar_wrap .calendar_area .calendar_table .start_range .in_box .date,
+#searchpop .calendar_wrap .calendar_area .calendar_table .end_range .in_box .date {
+    color: #fff;
+}
+#searchpop .calendar_wrap .calendar_area .calendar_table .start_range .in_box::before,
+#searchpop .calendar_wrap .calendar_area .calendar_table .end_range .in_box::before {
+    content: "";
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    top: 7px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #009b75;
+    border-radius: 100%;
+}
+#searchpop .calendar_wrap .calendar_area .calendar_table .start_range::before,
+#searchpop .calendar_wrap .calendar_area .calendar_table .end_range::before {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 50%;
+    right: 0;
+    height: 28px;
+    background: rgba(0, 156, 117, 0.1);
+}
+#searchpop .calendar_wrap .calendar_area .calendar_table .end_range::before {
+    left: 0;
+    right: 50%;
+}
+#searchpop .calendar_wrap .calendar_area .calendar_table .start_range .txt,
+#searchpop .calendar_wrap .calendar_area .calendar_table .end_range .txt {
+    text-align: center;
+    display: block;
+    font-size: 12px;
+    margin-top: 15px;
+    color: #009c75;
+}
+#searchpop .calendar_wrap .calendar_area .calendar_table .chk_range::after {
+    content: "";
+    position: absolute;
+    top: 7px;
+    left: 0;
+    right: 0;
+    height: 28px;
+    background: rgba(0, 156, 117, 0.1);
+}
+#searchpop .recent_search_area {
+    max-height: 355px;
+    overflow-y: auto;
+}
+#searchpop .recent_search {
+    margin: 30px 20px 55px 20px;
+    position: relative;
+}
+#searchpop .recent_search .txt {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#searchpop .recent_search .txt span {
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.85);
+    font-weight: 700;
+}
+#searchpop .recent_search .txt .delete {
+    font-size: 12px;
+    color: #aaa;
+    text-decoration: underline;
+    font-weight: 500;
+}
+#searchpop .recent_search .recent_search_list {
+    width: 100%;
+    overflow: hidden;
+}
+#searchpop .recent_search .recent_search_list .wrap {
+    background: #f5f6f6;
+    height: 70px;
+    padding: 16px 42px 16px 16px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    margin-top: 14px;
+}
+#searchpop .recent_search .recent_search_list .cont {
+    display: flex;
+    justify-content: space-between;
+}
+#searchpop .recent_search .recent_search_list .destination {
+    color: #111;
+    font-size: 14px;
+    font-weight: 600;
+}
+#searchpop .recent_search .recent_search_list .day {
+    color: #aaa;
+    font-size: 12px;
+}
+#searchpop .recent_search .recent_search_list .date {
+    color: #888;
+    font-size: 12px;
+}
+#searchpop .recent_search .recent_search_list .person {
+    color: #555;
+    font-size: 13px;
+    position: relative;
+}
+#searchpop .recent_search .recent_search_list .wrap .delete {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 14px;
+    height: 14px;
+    background: url("../images/ico_delete3.svg") no-repeat center 0 / cover;
+    font-size: 0;
+    color: transparent;
+    vertical-align: middle;
+    cursor: pointer;
+}
+#searchpop .recent_search .recent_search_list .swiper-pagination {
+    bottom: -30px;
+}
+#searchpop .recent_search .recent_search_list .swiper-pagination span {
+    width: 4px;
+    height: 4px;
+    vertical-align: middle;
+    background: #8f9f9b;
+    opacity: 0.4;
+}
+#searchpop .recent_search .recent_search_list .swiper-pagination span.swiper-pagination-bullet-active {
+    width: 6px;
+    height: 6px;
+    opacity: 1;
+}
+#searchpop .select_complete {
+    padding: 10px 20px;
+    box-shadow: rgb(255, 255, 255) 0px 0px 20px 20px;
+    background: #fff;
+    position: relative;
+    z-index: 2;
+}
+
+#searchpop .passenger_layer {
+    position: fixed;
+    top: 183px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #fff;
+    z-index: 14;
+    padding: 27px 20px 40px;
+    overflow-y: auto;
+    display: none;
+}
+#searchpop .passenger_layer .layer_cont + .layer_cont::before {
+    content: "";
+    display: block;
+    margin: 24px 0;
+    background: #d3dbd9;
+    width: 100%;
+    height: 1px;
+}
+
+#searchpop .passenger_layer .layer_tit {
+    line-height: 34px;
+    font-weight: 700;
+    font-size: 18px;
+    color: #111;
+    margin-bottom: 30px;
+}
+#searchpop .passenger_layer .tit_txt {
+    font-size: 16px;
+    font-weight: 700;
+}
+#searchpop .passenger_layer .members {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 15px;
+    position: relative;
+}
+#searchpop .passenger_layer .members p {
+    font-size: 15px;
+    line-height: 19px;
+    font-weight: 500;
+}
+#searchpop .passenger_layer .members p > .ico_tooltip {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    background: url("../images/ico_question.svg") no-repeat center 0;
+    vertical-align: text-top;
+    margin-left: 3px;
+    cursor: pointer;
+}
+#searchpop .passenger_layer .members .tooltip {
+    width: 350px;
+    padding: 15px;
+    background: #fff;
+    position: absolute;
+    top: 0;
+    left: -410px;
+    box-shadow: rgba(17, 17, 17, 0.15) 0px 0px 6px;
+    border: 1px #d3dbd9 solid;
+    display: none;
+}
+#searchpop .passenger_layer .members .tooltip span {
+    display: block;
+    font-size: 13px;
+    line-height: 19px;
+    color: #555;
+}
+#searchpop .passenger_layer .members .tooltip .bold {
+    font-weight: bold;
+}
+#searchpop .passenger_layer .members input[type="text"] {
+    width: 66px;
+    height: 34px;
+    text-align: center;
+    border: 1px #d3dbd9 solid;
+    border-radius: 5px;
+    margin: 0 7px;
+    font-size: 17px;
+    line-height: 22px;
+    font-weight: 700;
+}
+#searchpop .passenger_layer .members .decrease,
+#searchpop .passenger_layer .members .increase {
+    width: 26px;
+    height: 26px;
+    border: 1px solid #8f9f9b;
+    background: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#searchpop .passenger_layer .members .decrease span,
+#searchpop .passenger_layer .members .increase span {
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    background-repeat: no-repeat;
+    background-position: center 0;
+    vertical-align: middle;
+    font-size: 0;
+    color: transparent;
+}
+#searchpop .passenger_layer .members .decrease span {
+    background-image: url("../images/ico_decrease.svg");
+}
+#searchpop .passenger_layer .members .increase span {
+    background-image: url("../images/ico_increase.svg");
+}
+#searchpop .passenger_layer .seat_chk ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 12px;
+    margin: 20px 0;
+}
+#searchpop .passenger_layer .seat_chk ul > li {
+    flex: 0 0 49%;
+    padding: 0 10px;
+    height: 46px;
+    line-height: 46px;
+    color: #111;
+    font-size: 14px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+#searchpop .passenger_layer .seat_chk ul > li.on {
+    border: 1px solid #009c75;
+    font-weight: 600;
+    color: #009c75;
+    background-color: rgba(0, 156, 117, 0.051);
+}
+#searchpop .passenger_layer .seat_chk ul > li:hover {
+    box-shadow: 0 0 0 2px rgba(0, 156, 117, 0.2);
+    border-color: #009c75;
+}
+#searchpop .passenger_layer .passenger_btn {
+    margin-top: 30px;
+    text-align: center;
+}
+
+#searchpop .trip_city_layer {
+    padding: 0 20px 20px 20px;
+    border-top: 1px solid #d9d9d9;
+    position: fixed;
+    top: 182px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 13;
+    display: none;
+    background: #fff;
+    overflow-y: auto;
+}
+#searchpop .trip_city_layer .tab_tit {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    padding: 20px 0;
+    background: #fff;
+    z-index: 2;
+    font-size: 0;
+}
+#searchpop .trip_city_layer .btn_group .btn {
+    font-size: 14px;
+    padding: 10px 16px;
+    border: 1px solid #d9d9d9;
+    border-radius: 20px;
+    font-size: 14px;
+}
+#searchpop .trip_city_layer .btn_group .btn + .btn {
+    margin-left: 13px;
+}
+#searchpop .trip_city_layer .btn_group .btn.on {
+    color: #fff;
+    background: #009c75;
+}
+#searchpop .trip_city_layer .area_cont01 > ul > li + li {
+    margin-top: 24px;
+}
+#searchpop .trip_city_layer .area_cont01 > ul > li {
+    border: 1px #e5e7eb solid;
+    border-radius: 5px;
+}
+#searchpop .trip_city_layer .area_cont01 > ul > li.on {
+    border-color: #000;
+}
+#searchpop .trip_city_layer .area_cont01 .btn01 {
+    text-align: left;
+    width: 100%;
+    height: 65px;
+    font-size: 16px;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+#searchpop .trip_city_layer .area_cont01 .btn01::after {
+    content: "";
+    display: block;
+    width: 20px;
+    height: 20px;
+    background: url("https://www.modetour.com/icons/icon__26.svg") no-repeat center 0 / cover;
+    transition: 0.3s;
+}
+#searchpop .trip_city_layer .area_cont01 .btn01.on::after {
+    transform: rotate(-180deg);
+}
+#searchpop .trip_city_layer .area_cont02 {
+    display: none;
+    border-top: 1px solid #000;
+    background: #f5f6f6;
+    margin: 0 20px 20px;
+}
+#searchpop .trip_city_layer .area_cont02 > ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+#searchpop .trip_city_layer .area_cont02 > ul > li {
+    width: 50%;
+    height: 52px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+#searchpop .trip_city_layer .area_cont02 > ul > li a {
+    font-size: 14px;
+    color: #555;
+}
+#searchpop .trip_city_layer .area_cont02 > ul > li a::before {
+    content: "ㆍ";
+}
+#searchpop .trip_city_layer .domestic_tit {
+    font-size: 16px;
+    color: #111;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+#searchpop .trip_city_layer .domestic_list ul {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 16px 13px;
+    justify-content: space-between;
+}
+#searchpop .trip_city_layer .domestic_list ul li {
+    padding: 10px 6.5px;
+    width: 30%;
+    height: 57px;
+    border: 1px #aaa solid;
+    border-radius: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#searchpop .trip_city_layer .domestic_list ul li > div > span {
+    display: block;
+    text-align: center;
+    font-size: 15px;
+    color: #aaa;
+}
+
+#searchpop .city_search_layer {
+    padding: 20px;
+    border-top: 8px solid #eee;
+    position: fixed;
+    top: 182px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 14;
+    display: none;
+    background: #fff;
+    overflow-y: auto;
+}
+#searchpop .city_search_layer .tit {
+    position: relative;
+    font-size: 16px;
+    font-weight: bold;
+    color: #111;
+}
+#searchpop .city_search_layer .tit::before {
+    content: "";
+    display: inline-block;
+    background: url("https://www.modetour.com/icons/icon_place_green_18.svg") no-repeat center 0;
+    width: 18px;
+    height: 18px;
+    vertical-align: middle;
+    margin-right: 5px;
+}
+#searchpop .city_search_layer .dl {
+    width: fit-content;
+    padding: 18px 0 19px;
+    margin-left: 25px;
+    font-weight: 500;
+}
+#searchpop .city_search_layer .dt {
+    color: #111;
+    font-size: 15px;
+    font-weight: inherit;
+}
+#searchpop .city_search_layer .dd {
+    color: #888;
+    font-size: 11px;
+    font-weight: inherit;
+    margin-top: 11px;
+}
+#searchpop .city_search_layer .dd + .dt::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    margin: 20px 0;
+    background: #ddd;
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="../lib/js/jquery-3.7.1.min.js"></script>
+    <script src="../lib/js/common.js"></script>
+    <link rel="stylesheet" type="text/css" href="./../lib/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="./../lib/css/air.css" />
+    <link rel="stylesheet" type="text/css" href="./../lib/css/common.css" />
+  </head>
+  <body>
+    <main>
+      <div class="rscancle rscancle_payback">
+        <div class="people_select">
+          <div class="p_tit">탑승객 선택</div>
+          <div class="chk_wrap">
+            <div class="radiobox">
+              <input id="p3_all" name="p_select3" type="radio" value="0" checked />
+              <label for="p3_all"> <i class="ico"></i> <span>탑승객 전체</span></label>
+            </div>
+            <div class="radiobox">
+              <input id="person_per" name="p_select3" value="1" type="radio" />
+              <label for="person_per"> <i class="ico"></i> <span>탑승객 선택</span></label>
+            </div>
+          </div>
+          <div class="hide_con">
+            <span class="checkbox">
+              <input id="a_1" name="pp_chk" type="checkbox" />
+              <label for="a_1"> <i class="ico"></i> <span>성인 1</span> </label>
+            </span>
+            <div class="box">
+              <div class="name">
+                <div class="s_tit">한글 이름</div>
+                <div class="inputwrap">
+                  <input type="text" value="김모두" disabled="" />
+                  <div>내국인</div>
+                </div>
+              </div>
+              <div class="en_name">
+                <div>
+                  <div class="s_tit">영문 성</div>
+                  <input type="text" value="HONG" disabled="" />
+                </div>
+                <div>
+                  <div class="s_tit">영문 이름</div>
+                  <input type="text" value="GILDONG" disabled="" />
+                </div>
+              </div>
+              <div class="birth">
+                <div class="s_tit">생년월일</div>
+                <div class="inputwrap">
+                  <input type="text" class="front" value="20240902" disabled="" />
+                  <div>여</div>
+                </div>
+              </div>
+            </div>
+            <span class="checkbox">
+              <input id="a_2" name="pp_chk" type="checkbox" />
+              <label for="a_2"> <i class="ico"></i> <span>성인 2</span> </label>
+            </span>
+            <div class="box">
+              <div class="name">
+                <div class="s_tit">한글 이름</div>
+                <div class="inputwrap">
+                  <input type="text" value="김모두" disabled="" />
+                  <div>내국인</div>
+                </div>
+              </div>
+              <div class="en_name">
+                <div>
+                  <div class="s_tit">영문 성</div>
+                  <input type="text" value="HONG" disabled="" />
+                </div>
+                <div>
+                  <div class="s_tit">영문 이름</div>
+                  <input type="text" value="GILDONG" disabled="" />
+                </div>
+              </div>
+              <div class="birth">
+                <div class="s_tit">생년월일</div>
+                <div class="inputwrap">
+                  <input type="text" class="front" value="20240902" disabled="" />
+                  <div>여</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="cancle_reason">
+            <div class="c_tit">취소사유</div>
+            <div class="radio_wrap">
+              <div class="radiobox">
+                <input id="c_select01" name="cancle_select" type="radio" checked="" />
+                <label for="c_select01"> <span>여행일정이 취소된 경우</span></label>
+              </div>
+              <div class="radiobox">
+                <input id="c_select02" name="cancle_select" type="radio" />
+                <label for="c_select02"> <span>더 저렴한 요금을 검색하기 위해</span></label>
+              </div>
+              <div class="radiobox">
+                <input id="c_select03" name="cancle_select" type="radio" />
+                <label for="c_select03"> <span>출발일이 변경되어 재예약 필요</span></label>
+              </div>
+              <div class="radiobox">
+                <input id="c_select04" name="cancle_select" type="radio" />
+                <label for="c_select04"> <span>천재지변</span></label>
+              </div>
+              <div class="radiobox">
+                <input id="c_select05" name="cancle_select" type="radio" />
+                <label for="c_select05"> <span>기타</span></label>
+              </div>
+            </div>
+          </div>
+          <div class="rule_notice">
+            <div>* 예약취소 요청 후에는 취소를 철회할 수 없습니다.</div>
+            <div>* 2명이상 사용가능 운임의 경우 전체인원 취소만 가능합니다.</div>
+          </div>
+          <div class="btn_box">
+            <button type="button" class="btn_type06">예약취소</button>
+          </div>
+        </div>
+      </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+      <script src="../lib/js/common.js"></script>
+      <script src="../lib/js/swiper.min.js"></script>
+      <script>
+        $(document).ready(function () {
+          //마이페이지 결제 전 당일예약 예약취소 탑승객 선택
+          $(".rscancle_payback .chk_wrap .radiobox input").click(function () {
+            if ($(".rscancle_payback .chk_wrap .radiobox input:checked").val() == "1") {
+              $(".rscancle_payback .hide_con").show();
+            } else if ($(".rscancle_payback .chk_wrap .radiobox input:checked").val() == "0") {
+              $(".rscancle_payback .hide_con").hide();
+            }
+          });
+        });
+      </script>
+    </main>
+  </body>
+</html>

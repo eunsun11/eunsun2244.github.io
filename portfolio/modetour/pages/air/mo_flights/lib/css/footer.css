@@ -1,0 +1,50 @@
+@charset "utf-8";
+
+footer {
+  background: #f5f6f6;
+  padding-bottom: 30px;
+}
+footer .f_bottom {
+  padding: 30px 20px 0;
+  border-top: 1px #e4e9e9 solid;
+}
+footer .f_bottom a.toggle_btn {
+  font-size: 14px;
+  display: inline-block;
+  height: 20px;
+  line-height: 20px;
+  font-weight: bold;
+}
+footer .f_bottom a.toggle_btn.active img {
+  transform: rotate(-180deg);
+}
+footer .f_bottom .hide {
+  padding-top: 16px;
+  display: none;
+}
+footer .f_bottom .hide ul li {
+  font-size: 13px;
+  line-height: 24px;
+}
+footer .f_bottom .hide a {
+  text-decoration: underline;
+  font-weight: 500;
+}
+footer .f_bottom .hide span {
+  margin-right: 10px;
+}
+footer .f_bottom .notice {
+  margin-top: 10px;
+}
+footer .f_bottom .notice li {
+  font-size: 12px;
+  line-height: 20px;
+}
+footer .f_bottom .notice li.bold {
+  font-weight: bold;
+}
+footer .f_bottom .copy {
+  line-height: 20px;
+  margin-top: 6px;
+  font-size: 12px;
+}
