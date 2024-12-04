@@ -1,9 +1,11 @@
 
 div, nav{transition: .5s;}
 html, body, #wrap{height: 100%;}
-:root {--main-color: #c59d5f;}
-:root {--sub-color: #333;}
-:root {--white-color: #FFF;}
+:root {
+    --main-color: #c59d5f;
+    --sub-color: #333;
+    --white-color: #FFF;
+}
 #wrap .blind{position: absolute; width: 1px; height: 1px; clip: rect(0 0 0 0); overflow: hidden;}
 #wrap .inner{width: 100%; max-width: 1250px; margin: 0 auto; padding: 150px 0; text-align: center;}
 #wrap .rotate360{display: block; margin: 0 auto; animation: rotate360 6s linear infinite; transform-origin: center;}
