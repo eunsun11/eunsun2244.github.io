@@ -1,0 +1,299 @@
+@charset "UTF-8";
+
+@font-face {
+    font-family: "JSongMyung-Regular-KO";
+    src: url("../fonts/JSongMyung-Regular-KO.woff2") format("woff2");
+    font-weight: normal;
+    font-style: normal;
+}
+span,
+button,
+div,
+a,
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+li,
+textarea,
+input,
+label {
+    font-family: "Noto Sans KR", sans-serif;
+    line-height: 150%;
+    text-decoration: none;
+    font-style: normal;
+}
+input[type="radio"],
+input[type="checkbox"] {
+    position: absolute;
+    left: 0;
+    height: 0;
+    width: 0;
+    height: 0;
+    opacity: 0;
+}
+input:disabled {
+    background: transparent;
+}
+label {
+    display: inline-block;
+    cursor: pointer;
+}
+textarea {
+    resize: none;
+    height: 120px;
+    font-size: 1.5rem;
+}
+.pc {
+    display: block;
+}
+.mo {
+    display: none;
+}
+#wrap {
+    min-width: 344px;
+    overflow: hidden;
+}
+#wrap textarea {
+    border: none;
+    background: none;
+}
+#wrap button {
+    border: none;
+    background: none;
+    cursor: pointer;
+}
+#wrap span,
+#wrap a {
+    font-family: inherit;
+    color: inherit;
+}
+#wrap strong {
+    font-weight: bold;
+    font-family: inherit;
+    color: inherit;
+}
+
+#wrap {
+    background: #f5f2e1;
+    color: #333;
+}
+
+#wrap {
+    padding: clamp(20px, 4.1667vw, 70px) clamp(20px, 5.8333vw, 100px);
+}
+#wrap .inner {
+    position: relative;
+}
+#wrap h1 {
+    width: 80px;
+}
+#wrap #header {
+    width: 100%;
+    height: 110px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: #f5f2e1;
+    z-index: 99;
+}
+#wrap #header.fixed {
+    position: fixed;
+    padding: 0 clamp(20px, 5.8333vw, 100px);
+}
+#wrap #header .header_wrap {
+    width: 100%;
+    height: 110px;
+    display: flex;
+    justify-content: space-between;
+    border: 3px solid #000;
+}
+#wrap #header h1 img {
+    width: 100%;
+}
+#wrap #header nav {
+    height: 100%;
+}
+#wrap #header nav ul {
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+#wrap #header nav ul li {
+    font-size: 20px;
+    font-weight: 700;
+    padding: 0 25px;
+}
+
+#wrap #header .pickup {
+    background: #000;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    color: #fff;
+    font-family: "JSongMyung-Regular-KO";
+    font-size: 20px;
+    padding: 0 25px;
+}
+
+#wrap main {
+    padding-top: 110px;
+}
+#wrap section {
+    position: relative;
+}
+#wrap .section_wrap {
+    border: 3px solid #000;
+    border-top: none;
+    padding: 300px clamp(35px, 5.4167vw, 98px);
+    position: relative;
+    z-index: 2;
+}
+
+#wrap h2 {
+    font-size: clamp(15px, 1.75vw, 26px);
+}
+#wrap h2 strong {
+    font-family: "JSongMyung-Regular-KO";
+    display: block;
+    margin-top: clamp(15px, 2.0833vw, 30px);
+    font-size: clamp(40px, 5.8333vw, 80px);
+    line-height: clamp(44px, 6.4167vw, 88px);
+    font-weight: 400;
+}
+#wrap .sub_txt {
+    font-size: clamp(15px, 1.4167vw, 18px);
+}
+
+#wrap .btn_st {
+    display: inline-block;
+    min-width: 290px;
+    margin-top: clamp(55px, 5.4167vw, 95px);
+    padding: clamp(15px, 1.4167vw, 20px) 0;
+    border: 1px solid #000;
+    position: relative;
+}
+#wrap .btn_st a span {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+#wrap .btn_st a span::after {
+    content: "";
+    display: block;
+    background: url("../images/btn_arrow.svg") no-repeat center 0 / cover;
+    width: 10px;
+    height: 12px;
+    margin-left: 10px;
+}
+#wrap .btn_st::before {
+    content: "";
+}
+#wrap .label {
+    width: fit-content;
+    height: 62px;
+    padding: 0 20px;
+    background: url("../images/label_bg.png") repeat-x center 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin-left: 20px;
+}
+
+#wrap .label::before {
+    content: "";
+    width: 20px;
+    height: 62px;
+    background: url("../images/label_before.png") no-repeat center 0;
+    position: absolute;
+    left: -20px;
+    top: 0;
+}
+#wrap .label::after {
+    content: "";
+    width: 20px;
+    height: 62px;
+    background: url("../images/label_after.png") no-repeat center 0;
+    position: absolute;
+    right: -20px;
+    top: 0;
+}
+
+#wrap .section01 .section_wrap {
+    padding-bottom: clamp(220px, 25vw, 480px);
+    z-index: 2;
+}
+
+#wrap .section01::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 120%;
+    height: clamp(200px, 20.8333vw, 380px);
+    background: url("../images/sect01-bg.png") no-repeat center bottom / 100%;
+    z-index: 1;
+}
+
+#wrap .section01 .img01 {
+    width: 40%;
+    position: absolute;
+    bottom: 7vw;
+    left: 50%;
+    z-index: 3;
+}
+
+#wrap .section01 .img01 img,
+#wrap .section01 .img02 img,
+#wrap .section01 .img03 img {
+    width: 100%;
+}
+#wrap .section01 .img02 {
+    width: 22%;
+    position: absolute;
+    z-index: 1;
+    left: 67%;
+    bottom: 18vw;
+}
+
+#wrap .section01 .img03 {
+    width: 16%;
+    position: absolute;
+    z-index: 2;
+    left: 84%;
+    bottom: 15vw;
+}
+
+#wrap .section02 .in_cont {
+    display: flex;
+}
+#wrap .section02 .in_cont .left_cont {
+    width: 50%;
+}
+#wrap .section02 .in_cont .right_cont {
+    width: 50%;
+}
+
+#wrap .section02 .slide1 {
+    overflow: hidden;
+    position: relative;
+}
+#wrap .section02 .slide1 img {
+    width: 100%;
+}
+#wrap .section02 .slide1_control {
+    display: flex;
+}
+#wrap .section02 .swiper-button-next,
+#wrap .section02 .swiper-button-prev,
+#wrap .section02 .swiper-pagination {
+    position: static;
+}

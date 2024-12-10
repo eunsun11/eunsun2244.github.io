@@ -1,0 +1,824 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta content="제주도 여행 계획" property="og:title" />
+        <meta content="제주도 여행 계획!" property="og:description" />
+        <meta content="//eunsun.dothome.co.kr/images/top_bg02.jpg" property="og:image" />
+        <title>제주도 여행~</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, target-densitydpi=medium-dpi, minimal-ui" />
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.min.css" />
+        <link rel="stylesheet" href="reset.css" />
+        <script src="//js.modetour.com/jquery/ver/1.8.3.min.js"></script>
+        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
+        <style>
+            @font-face {
+                font-family: "KCCChassam";
+                src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302@1.0/KCCChassam.woff2") format("woff2");
+                font-weight: normal;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: "HakgyoansimGaeulsopungB";
+                src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2307-2@1.0/HakgyoansimGaeulsopungB.woff2") format("woff2");
+                font-weight: 700;
+                font-style: normal;
+            }
+            @font-face {
+                font-family: "GmarketSansMedium";
+                src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+                font-weight: normal;
+                font-style: normal;
+            }
+            .wrap * {
+                font-family: "KCCChassam";
+            }
+            .wrap {
+                position: relative;
+                overflow: hidden;
+            }
+            .wrap button {
+                border: none;
+                background: none;
+                padding: 0;
+            }
+            .wrap .swiper-slide {
+                position: relative;
+                overflow: hidden;
+            }
+            .wrap img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                position: absolute;
+                top: 0;
+                left: 50%;
+                transform: translateX(-50%);
+            }
+            .wrap strong {
+                font-weight: bold;
+            }
+            .wrap .tit {
+                position: relative;
+            }
+            .wrap .tit h1 {
+                width: 100%;
+                font-size: 50px;
+                position: absolute;
+                top: 50%;
+                left: 0;
+                transform: translateY(-70%);
+                z-index: 99;
+                text-align: center;
+                color: #333;
+            }
+            .wrap .tit h1 span {
+                font-family: "HakgyoansimGaeulsopungB";
+                display: block;
+                font-weight: 300;
+            }
+            .wrap .tit h1 span + span {
+                font-family: "GmarketSansMedium";
+                font-weight: bold;
+            }
+            .wrap .nav_group {
+                overflow: scroll;
+            }
+            .wrap .nav_group ul {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+            }
+            .wrap .nav_group ul li {
+                flex: 1;
+                text-align: center;
+                background: #86a789;
+                height: 50px;
+                line-height: 50px;
+                position: relative;
+            }
+            .wrap .nav_group ul li.on {
+                background: #cfcfcf;
+                color: #000;
+            }
+            .wrap .nav_group ul li.on a {
+                color: inherit;
+            }
+            .wrap .nav_group ul li a {
+                text-decoration: none;
+                color: #fff;
+                display: block;
+                width: 100%;
+                height: 100%;
+            }
+            .wrap .e_cont {
+                padding: 30px 0 50px;
+            }
+            .wrap h2 {
+                font-size: 30px;
+                margin: 10px 0 20px;
+                font-weight: bold;
+                text-align: center;
+            }
+            .wrap h3 {
+                font-size: 20px;
+                padding-left: 10px;
+                margin: 20px 0 10px;
+            }
+            .wrap h3::before {
+                content: "";
+                width: 5px;
+                height: 5px;
+                border-radius: 5px;
+                background: #000;
+                display: inline-block;
+                vertical-align: middle;
+                margin-right: 5px;
+            }
+            .wrap h3 .place {
+                display: inline-block;
+                width: 20px;
+                height: 25px;
+                vertical-align: middle;
+                background: url("images/place.png") no-repeat center 0 / contain;
+            }
+            .wrap .mySwiper .swiper-slide {
+                height: 250px;
+                background-size: 110vw;
+                background-repeat: no-repeat;
+                background-position: center 0;
+            }
+            .wrap .mySwiper .slide1 {
+                background-image: url("//cdn.mhns.co.kr/news/photo/202201/520746_630720_356.jpg");
+            }
+            .wrap .mySwiper .slide2 {
+                background-image: url("//newsimg.sedaily.com/2023/04/17/29OC7I8OHK_1.jpg");
+            }
+            .wrap .mySwiper .slide3 {
+                background-image: url("//inblu.kr/uploads/ckeditor/20211227/61c9781842ba0_1640593432.jpeg");
+                background-size: 180vw;
+            }
+            .wrap .e_contents {
+                padding-top: 50px;
+            }
+            .wrap .nav_group {
+                width: 100%;
+                z-index: 999;
+                position: absolute;
+            }
+            .wrap .mySwiper2 {
+                width: 100%;
+                aspect-ratio: 1/1;
+                position: relative;
+                overflow: hidden;
+            }
+            .wrap .mySwiper2 .swiper-pagination {
+                bottom: 15px;
+            }
+            .wrap .mySwiper2 .swiper-pagination-bullet {
+                width: 10px;
+                height: 10px;
+                background: none;
+                border: 1px solid #fff;
+                opacity: 1;
+                margin: 0 7px;
+            }
+            .wrap .mySwiper2 .swiper-pagination-bullet-active {
+                background: #fff;
+                opacity: 1;
+            }
+
+            .wrap .txt {
+                margin: 20px 0 15px;
+            }
+            .wrap .txt li {
+                margin: 5px 0;
+            }
+            .wrap .cont_group {
+                padding: 0 3.5%;
+            }
+            .wrap .cont_group .cont_group > div {
+                display: none;
+                overflow: hidden;
+            }
+            .wrap .cont_group .cont_group > div.on {
+                display: block;
+            }
+            .wrap .map {
+                position: relative;
+            }
+            .wrap .map button {
+                position: absolute;
+                top: 5%;
+                left: 45%;
+                display: block;
+                width: 6%;
+                height: 8vw;
+                font-size: 0;
+                font-weight: bold;
+            }
+            .wrap .map button::after {
+                content: attr(data-num);
+                margin-top: 5px;
+                width: 100%;
+                height: 100%;
+                display: block;
+                background: url("images/pointer.png") no-repeat center 0 / 100%;
+                text-align: center;
+                font-size: 10px;
+                font-weight: bold;
+                padding-top: 22%;
+            }
+
+            .wrap .history {
+                position: relative;
+                width: 100%;
+                height: 110px;
+                text-align: center;
+                display: flex;
+                justify-content: space-between;
+                align-items: start;
+            }
+            .wrap .history::after {
+                content: "";
+                position: absolute;
+                top: 50%;
+                margin-top: -1px;
+                left: 0;
+                width: 100%;
+                height: 2px;
+                background: #000;
+            }
+            .wrap .history span {
+                position: relative;
+                cursor: pointer;
+                display: block;
+                word-break: keep-all;
+            }
+            .wrap .history a {
+                text-decoration: none;
+                font-size: inherit;
+                font-weight: inherit;
+                color: inherit;
+            }
+            .wrap .history li {
+                position: relative;
+                display: flex;
+                min-height: 55px;
+                align-items: center;
+            }
+            .wrap .history li::after,
+            .wrap .history li::before {
+                content: "";
+                display: block;
+                width: 10px;
+                height: 10px;
+                bottom: -9px;
+                border-radius: 10px;
+                background: #ff5442;
+                position: absolute;
+                left: 50%;
+                transform: translateX(-50%);
+                z-index: 9;
+            }
+            .wrap .history li::before {
+                bottom: 55px;
+            }
+            .wrap .history li:nth-child(odd) {
+                left: 0;
+                top: -5%;
+            }
+            .wrap .history li:nth-child(even) {
+                top: 55%;
+            }
+            .wrap .history li:nth-child(odd)::before {
+                width: 2px;
+                bottom: 0;
+                background: #000;
+            }
+            .wrap .history li:nth-child(even)::after {
+                width: 2px;
+                top: -1px;
+                background: #000;
+            }
+
+            @media screen and (min-width: 740px) {
+                .wrap {
+                    max-width: 740px;
+                    margin: 0 auto;
+                }
+                .wrap .nav_group ul {
+                    width: 100%;
+                    max-width: 740px;
+                }
+                .wrap .nav_group {
+                    overflow: hidden;
+                }
+                .wrap .mySwiper .swiper-slide {
+                    height: 800px;
+                    background-size: cover;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="wrap">
+            <div class="tit">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide slide1"></div>
+                        <div class="swiper-slide slide2"></div>
+                        <div class="swiper-slide slide3"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="nav_group">
+                <ul>
+                    <li><a href="#cont01">1 Day</a></li>
+                    <li><a href="#cont02">2 Day</a></li>
+                    <li><a href="#cont03">3 Day</a></li>
+                    <li><a href="#cont04">4 Day</a></li>
+                </ul>
+            </div>
+            <div class="e_contents">
+                <div id="cont01" class="e_cont">
+                    <h2>Day 1</h2>
+                    <div class="cont_group">
+                        <ul class="history">
+                            <li>
+                                <a href="#tab_cont1_1"><span>제주 공항</span></a>
+                            </li>
+                            <li>
+                                <a href="#tab_cont1_6"><span>밥 뭐 먹지?</span></a>
+                            </li>
+                            <li>
+                                <a href="#tab_cont1_2"><span>시소 카이막</span></a>
+                            </li>
+                            <li>
+                                <a href="#tab_cont1_3"><span>무지개 해안도로</span></a>
+                            </li>
+                            <li>
+                                <a href="#tab_cont1_4"><span>귤귤스토어</span></a>
+                            </li>
+                            <li>
+                                <a href="#tab_cont1_5">
+                                    <span>이호테우<br />해수욕장</span>
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#tab_cont1_7"><span>오설록 티 뮤지엄</span></a>
+                            </li>
+                        </ul>
+                        <div class="cont_group">
+                            <div class="on" id="tab_cont1_1">
+                                <h3>제주 공항 <a href="//naver.me/5MPOet7O" class="place" target="_blank"></a></h3>
+                                <div class="swiper mySwiper2">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><img src="images/airport01.jpg" alt="" style="width: 350%; transform: translateX(-45%)" /></div>
+                                        <div class="swiper-slide"><img src="images/airport02.jpg" alt="" /></div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                                <ul class="txt">
+                                    <li>제주 제주시 공항로 2</li>
+                                </ul>
+                            </div>
+                            <div id="tab_cont1_6">
+                                <h3>뭐 먹지? <a href="" class="place" target="_blank"></a></h3>
+                                <div class="swiper mySwiper2">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"></div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                                <ul class="txt">
+                                    <li></li>
+                                </ul>
+                            </div>
+                            <div id="tab_cont1_2">
+                                <h3>시소 카이막 동문시장점 <a href="//naver.me/5Bcs4OF3" class="place" target="_blank"></a></h3>
+                                <div class="swiper mySwiper2">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><img src="//search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20241016_299%2F1729008339095ok9FB_JPEG%2F06.JPG" alt="" /></div>
+                                        <div class="swiper-slide"><img src="//search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20241016_268%2F1729008339793CcWn0_JPEG%2F10.JPG" alt="" /></div>
+                                        <div class="swiper-slide"><img src="//search.pstatic.net/common/?autoRotate=true&quality=95&type=w750&src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDExMjlfMTUg%2FMDAxNzMyODg2ODkyMzAy._pSooGKc_OSGPDwpPLeS6v9uMxzDxgyzSp64oKO9FrQg.DNK04zuBeVKU4DsHrO-STNKTvSk_IA5WQteDtRuomWYg.JPEG%2F900%25A3%25DF20241117%25A3%25DF162249%25A3%25DFbatch%25A3%25DF4%25A3%25DF1732883388495.jpg" alt="" /></div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                                <ul class="txt">
+                                    <li>앉을 자리가 없어 보인다.. 테이크아웃 전문인가?</li>
+                                    <li>매일 09:00 - 20:00</li>
+                                </ul>
+                            </div>
+                            <div id="tab_cont1_3">
+                                <h3>도두동 무지개 해안도로 <a href="//naver.me/F36oe7Jh" class="place" target="_blank"></a></h3>
+                                <div class="swiper mySwiper2">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><img src="//search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyNDExMTdfMjEg%2FMDAxNzMxNzcyMzIxOTE1.0Thfp2q-q_0mLNp6f-vJYfgUUVPf3K9ywZW1Z1TdE9Yg.p983ECYl9l128mUzy-2unBICtUhPlUfow4Bb9NoKR1Ag.JPEG%2F1000007877.jpg.jpg%3Ftype%3Dw1500_60_sharpen" alt="" /></div>
+                                        <div class="swiper-slide"><img src="//search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyNDA4MTNfMjA3%2FMDAxNzIzNDg4NjAzMDA5.RGl-fiWXw4N045MmubfPheE1pxVOgsPoHFtLEBmSDisg.Oi1Z3UskQSlz4DBPqd_3Yf__EaE5_Ez_4i7mOOVFZ_Ug.JPEG%2F8FD29959-ABEC-42EE-9026-B380D835E005.jpeg%3Ftype%3Dw1500_60_sharpen" alt="" /></div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                                <ul class="txt">
+                                    <li>제주 제주시 도두일동 1734</li>
+                                </ul>
+                            </div>
+                            <div id="tab_cont1_4">
+                                <h3>귤귤스토어 도두점 <a href="//naver.me/xTSf2Frt" class="place" target="_blank"></a></h3>
+                                <div class="swiper mySwiper2">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><img src="//search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20241023_37%2F1729641920466H2FPB_JPEG%2FKakaoTalk_20241022_171622426_06.jpg" alt="" /></div>
+                                        <div class="swiper-slide"><img src="//search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20241023_271%2F1729641920439xe2n8_JPEG%2FKakaoTalk_20241022_171622426_02.jpg" alt="" /></div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                                <ul class="txt">
+                                    <li>매일 10:00 - 19:00</li>
+                                </ul>
+                            </div>
+                            <div id="tab_cont1_5">
+                                <h3>이호테우 해수욕장 <a href="//naver.me/xswYUIne" class="place" target="_blank"></a></h3>
+                                <div class="swiper mySwiper2">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><img src="//search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20170331_264%2F1490947311770bcoE7_JPEG%2F1.jpg" alt="" /></div>
+                                        <div class="swiper-slide"><img src="//search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyNDExMjBfOTkg%2FMDAxNzMyMDg3OTE3Mjg2.W5l6Z3zhoVtvnmtBC1bZsocb5U5WnaQ8nx9m41R--xcg.25bqXjQUJjRny5n5IN2jZIvWHtRxD8aE0lm2PMiC1Xgg.JPEG%2F11F5483B-5D62-4ED1-B3E6-0E7CEDF6ABBB.jpeg%3Ftype%3Dw1500_60_sharpen" alt="" /></div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                                <ul class="txt">
+                                    <li>제주 제주시 이호일동</li>
+                                </ul>
+                            </div>
+                            <div id="tab_cont1_7">
+                                <h3>오설록 티 뮤지엄 <a href="//naver.me/GbEcxO4s" class="place" target="_blank"></a></h3>
+                                <div class="swiper mySwiper2">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><img src="//search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzA0MThfNTEg%2FMDAxNjgxNzgyNDAyODIw.ZH1jUAOqIieFIKdo1mDpj17VDHP6hGUWOOK_ug62u_Qg.n53Mr3C3L9yjdzwzvLsXocnCYtC9cq_QTUXkiNMiQVkg.JPEG.oaasissya%2F20221023_123906_015.jpg%234000x3000" alt="" /></div>
+                                        <div class="swiper-slide"><img src="//search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyMzAyMjhfMTEy%2FMDAxNjc3NTUwNzgxNjkw.VEk-zOjOqQLSLFsAce4aBb3f4y0ioqLBhHq8FueCW1Ig.2WtewNjhmwGrO8at-seADddfqIyz5nrC8dGTPs64n_Ig.JPEG.qor10221%2F1_%25288%2529.jpg%231280x960" alt="" /></div>
+                                        <div class="swiper-slide"><img src="//search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA5MTlfMTYw%2FMDAxNzI2NzUzODk4NTgw.b9RWo_tc4FLyxIRMBAkWFpV9EAGN3SZxGIT6ZSP1aLMg.-ct82wyTMccdt0PDwBZ9lFnzXCEvxJMIh4v11BUcrpUg.JPEG%2FDSC06558.jpg" alt="" /></div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                                <ul class="txt">
+                                    <li>매일 07:30 - 20:00 <strong>15:00 - 15:30 브레이크타임</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="cont02" class="e_cont">
+                    <h2>Day 2</h2>
+                    <div class="cont_group">
+                        <ul class="history">
+                            <li>
+                                <a href="#tab_cont2_1"><span>다정이네김밥</span></a>
+                            </li>
+                            <!-- <li>
+                                <a href="#tab_cont2_4"><span>감따남</span></a>
+                            </li> -->
+                            <li>
+                                <a href="#tab_cont2_6"><span>천제연 폭포</span></a>
+                            </li>
+                            <li>
+                                <a href="#tab_cont2_3"><span>휴일로</span></a>
+                            </li>
+                            <li>
+                                <a href="#tab_cont2_5"><span>사계전복</span></a>
+                            </li>
+                        </ul>
+                        <div class="cont_group">
+                            <div class="on" id="tab_cont2_1">
+                                <h3>다정이네김밥 <a href="//naver.me/5rsMlswF" class="place" target="_blank"></a></h3>
+                                <div class="swiper mySwiper2">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><img src="//search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20210329_229%2F161699355463847SjY_JPEG%2FJjuEC0ifV6WkLrWHPKX4rH9K.jpg" alt="" /></div>
+                                        <div class="swiper-slide"><img src="//search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDA5MThfNDIg%2FMDAxNzI2NjI3NDEwNDk4.lsmHnCMhLQl7JV-rJKxZSkrF2JpeImA7uwnNweNE1jMg.rAzlkoj_BORPB2ApaRJLzYC6lg844HywZoPeaVzuMykg.JPEG%2FIMG_8183.jpg" alt="" /></div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                                <ul class="txt">
+                                    <li>매일 07:30 - 20:00</li>
+                                </ul>
+                            </div>
+                            <div id="tab_cont2_6">
+                                <h3>천제연 폭포 <a href="//naver.me/5WcBkIbU" class="place" target="_blank"></a></h3>
+                                <div class="swiper mySwiper2">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><img src="//search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyNDEwMDdfMTAw%2FMDAxNzI4Mjk4OTk4ODIx.JDZI25Sgfq7AOaAWArFD-U1K3J9NxerxgL8dZ0_PCQEg.3Ff4yRqnTFfaw9zTJsEYwW31FXzkbESmcl-nK7UC5uYg.JPEG%2F73F66D57-A74D-4D0A-B333-0B19964CE0D4.jpeg%3Ftype%3Dw1500_60_sharpen" alt="" /></div>
+                                        <div class="swiper-slide"><img src="//search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyNDExMTVfMTA2%2FMDAxNzMxNjA5NTQ4OTUw.4oU_cPsYWVmbNwK97eLC7nMeqejwYEJvSurYCBsIPP0g.JVI4Nf88bgz8K4-KFj2NZvPl3Mr5CNlykFGJlsuRQIEg.JPEG%2F61E10216-40FF-4955-BD25-392DB049DEF1.jpeg%3Ftype%3Dw1500_60_sharpen" alt="" /></div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                                <ul class="txt">
+                                    <li>매일 07:30 - 20:00</li>
+                                </ul>
+                            </div>
+                            <div id="tab_cont2_3">
+                                <h3>휴일로 <a href="//naver.me/5U1GrEWc" class="place" target="_blank"></a></h3>
+                                <div class="swiper mySwiper2">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><img src="images/hueilot01.jpg" alt="" /></div>
+                                        <div class="swiper-slide"><img src="images/hueilot02.jpg" alt="" /></div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                                <ul class="txt">
+                                    <li>매일 10:00 - 19:00</li>
+                                </ul>
+                            </div>
+                            <!-- <div id="tab_cont2_4">
+                                <h3>감따남 귤따기 체험 <a href="//naver.me/FPseFWUZ" class="place" target="_blank"></a></h3>
+                                <div class="swiper mySwiper2">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><img src="//search.pstatic.net/common/?src=https%3A%2F%2Fnaverbooking-phinf.pstatic.net%2F20240910_112%2F1725950719603cjuTL_JPEG%2Fimage.jpg" alt="" /></div>
+                                        <div class="swiper-slide"><img src="//search.pstatic.net/common/?src=https%3A%2F%2Fnaverbooking-phinf.pstatic.net%2F20240910_227%2F1725950651551F7HYO_JPEG%2Fimage.jpg" alt="" /></div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                                <ul class="txt">
+                                    <li>매일 11:00 - 18:00 <strong>월요일 휴무</strong></li>
+                                </ul>
+                            </div> -->
+                            <div id="tab_cont2_5">
+                                <h3>사계전복 <a href="//naver.me/5VeAfSNN" class="place" target="_blank"></a></h3>
+                                <div class="swiper mySwiper2">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><img src="//search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20181113_234%2F1542099737309zuFyX_JPEG%2FEgCAnS3HoLs0Orz3ZmoiAxKD.jpg" alt="" /></div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                                <ul class="txt">
+                                    <li>매일 11:00 - 18:00 <strong>월요일 휴무</strong></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="cont03" class="e_cont">
+                    <h2>Day 3</h2>
+                    <div class="cont_group">
+                        <ul class="history">
+                            <li>
+                                <a href="#tab_cont3_1"><span>카페 텐저린</span></a>
+                            </li>
+                            <li>
+                                <a href="#tab_cont3_2"><span>카페 귤꽃다락</span></a>
+                            </li>
+                            <li>
+                                <a href="#tab_cont3_3"><span>윈드1947 테마파크</span></a>
+                            </li>
+                            <li>
+                                <a href="#tab_cont3_4">
+                                    <span>휴애리<br />자연생활공원</span>
+                                </a>
+                            </li>
+                        </ul>
+                        <div class="cont_group">
+                            <div class="on" id="tab_cont3_1">
+                                <h3>카페 텐저린 <a href="//naver.me/xC6ir8pN" class="place" target="_blank"></a></h3>
+                                <div class="swiper mySwiper2">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><img src="//search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230604_88%2F1685877770366P4Cmz_JPEG%2FA63187B6-E7A7-4994-9534-402495BCEEAC.jpeg" alt="" /></div>
+                                        <div class="swiper-slide"><img src="//search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDAyMTFfMTEx%2FMDAxNzA3NjYxNjY1NDUy.pwc91teMHV-VllId-Gmt8aDvgh8kHegdf6EdhqzAzWkg.k1YQLPg_7cL2viOp8LA4davYHyBWs0dEyGEzD7lgSiYg.JPEG.korn03%2F20240208_130345.jpg" alt="" /></div>
+                                        <div class="swiper-slide"><img src="//search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20231119_254%2F17004001207633rI5d_JPEG%2FIMG_7416.jpeg" alt="" /></div>
+                                        <div class="swiper-slide"><img src="//search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20230403_181%2F16804898621646ee2Y_JPEG%2FIMG_1017.jpeg" alt="" /></div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                                <ul class="txt">
+                                    <li>매일 09:00 - 18:00</li>
+                                </ul>
+                            </div>
+                            <div id="tab_cont3_2">
+                                <h3>카페 귤꽃다락 <a href="//naver.me/5gir49Op" class="place" target="_blank"></a></h3>
+                                <div class="swiper mySwiper2">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><img src="//search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20201101_223%2F16041677689477FuWS_JPEG%2FTJ7ljWOqIKyad3u5CBG6IEQC.jpeg.jpg" alt="" /></div>
+                                        <div class="swiper-slide"><img src="//search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAyNDEyMDZfMTI0%2FMDAxNzMzNDYwMjM5MzQ5.gC6SvJBtNYqVXzcxbOh4cyM5T3Pj4t5553ApCNhuok0g.A_E1N5q7x1ddAhvKPsdKLcFq1BwKF2q2d5aYr-_dMaog.JPEG%2F20241022%25A3%25DF161909.jpg" alt="" /></div>
+                                        <div class="swiper-slide"><img src="//search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyNDEwMjRfMjEz%2FMDAxNzI5NzgwODU3MDIz.wpqlIWEZHfLjNMnUJNaHggaZNm4sAAR0qBZlRrxtwp8g.OijXOSFi6OYBK-pYOysAWuxyauRnl6tq57Y3OKGL0x8g.JPEG%2F1000043783.heic.jpg%3Ftype%3Dw1500_60_sharpen" alt="" /></div>
+                                        <div class="swiper-slide"><img src="//search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyNDExMjVfMTI4%2FMDAxNzMyNDYyMTY4Njk0.dS6t8-IAJq4U5HZgCkMVwPk-dzTHoFOyJbFvkbRInWEg.jC6C9OnTHgs9osSZiTX68CGfW_Wu4Oa_kuZEZ929b_Eg.JPEG%2F049BC617-2D00-4EC9-B4A8-00831498349C.jpeg%3Ftype%3Dw1500_60_sharpen" alt="" /></div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                                <ul class="txt">
+                                    <li>매일 11:00 - 18:40</li>
+                                </ul>
+                            </div>
+                            <div id="tab_cont3_3">
+                                <h3>윈드1947 테마파크 <a href="//naver.me/FyexZQ7Q" class="place" target="_blank"></a></h3>
+                                <div class="swiper mySwiper2">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><img src="//search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240530_172%2F1717032834765h6LcI_PNG%2F11.png" alt="" /></div>
+                                        <div class="swiper-slide"><img src="//search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20240530_251%2F17170328454749i4Nd_PNG%2F55.png" alt="" /></div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                                <ul class="txt">
+                                    <li>매일 10:00 - 18:00</li>
+                                </ul>
+                            </div>
+                            <div id="tab_cont3_4">
+                                <h3>휴애리 자연생활공원 <a href="//naver.me/GyeyOico" class="place" target="_blank"></a></h3>
+                                <div class="swiper mySwiper2">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><img src="//search.pstatic.net/common/?src=https%3A%2F%2Fnaverbooking-phinf.pstatic.net%2F20241126_93%2F1732586736317CDjzV_JPEG%2FKakaoTalk_20241104_174237199_02.jpg" alt="" /></div>
+                                        <div class="swiper-slide"><img src="//search.pstatic.net/common/?src=https%3A%2F%2Fnaverbooking-phinf.pstatic.net%2F20241126_254%2F1732586632833xWgnI_JPEG%2F1U6A7661.jpg" alt="" /></div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                                <ul class="txt">
+                                    <li>매일 09:00 - 18:00</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div id="cont04" class="e_cont">
+                    <h2>Day 4</h2>
+                    <div class="cont_group">
+                        <ul class="history">
+                            <li>
+                                <a href="#tab_cont4_1"
+                                    ><span>고씨네<br />천지국수</span></a
+                                >
+                            </li>
+                            <li>
+                                <a href="#tab_cont4_2"><span>스누피가든</span></a>
+                            </li>
+                            <li>
+                                <a href="#tab_cont4_3"><span>보롬왓</span></a>
+                            </li>
+                            <li>
+                                <a href="#tab_cont4_4"><span>천짓골식당</span></a>
+                            </li>
+                            <li>
+                                <a href="#tab_cont4_5"
+                                    ><span>서귀포<br />매일올레시장</span></a
+                                >
+                            </li>
+                        </ul>
+                        <div class="cont_group">
+                            <div class="on" id="tab_cont4_1">
+                                <h3>고씨네천지국수 올레시장본점<a href="//naver.me/IMQpyjFu" class="place" target="_blank"></a></h3>
+                                <div class="swiper mySwiper2">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><img src="//search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20200309_264%2F1583734877067dI16Y_JPEG%2F_g4zRi2ceiFV3Hpk2aBR9Gnu.jpg" alt="" /></div>
+                                        <div class="swiper-slide"><img src="//search.pstatic.net/common/?src=https%3A%2F%2Fldb-phinf.pstatic.net%2F20220420_107%2F16504395428564IxEE_JPEG%2F20210118_160841.jpg" alt="" /></div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                                <ul class="txt">
+                                    <li>09:30 - 15:00 <strong>수요일 휴무</strong></li>
+                                </ul>
+                            </div>
+                            <div id="tab_cont4_2">
+                                <h3>스누피가든 <a href="//naver.me/x0ahaGWB" class="place" target="_blank"></a></h3>
+                                <div class="swiper mySwiper2">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><img src="//search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyNDEyMDRfMTM2%2FMDAxNzMzMjc5MDg4ODI5.dVtk4TSrwEWuHrccVjMbbSkqwJny1w0k5zcdeFbZyM4g.pi_g5ayoAXip3mJymCMx6BjCAyND6iBdD-tPoxJ1BWMg.JPEG%2F6FD308D0-8767-4045-B305-A5D67F992AF6.jpeg%3Ftype%3Dw1500_60_sharpen" alt="" /></div>
+                                        <div class="swiper-slide"><img src="//search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyNDEyMDRfNjYg%2FMDAxNzMzMjc5MDkyMjMw.pBbmkLxV6b_QnrxxIZ-NLDrB4l0rSiEDEzC5NvCZl5Ag.xsuqsKTZCHiT5K8wQOyRcsRsZr8eRZXlluUlRWlFXHAg.JPEG%2F4CBAEACE-AA71-42A3-B4AA-4DBA3BA627E9.jpeg%3Ftype%3Dw1500_60_sharpen" alt="" /></div>
+                                        <div class="swiper-slide"><img src="//search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyNDEyMDdfNDgg%2FMDAxNzMzNTUyOTg2MDM1.soQbgHVya_ROY4pqTcr95J4w1ZKy91f8djpiYxo4aa8g.OGUwTg3EjZNGTskztsupB5CiaQHuYRV1U86B4zXmCjwg.JPEG%2FA7FCF1B5-3CF1-4D3A-882D-2EB5F9A60788.jpeg%3Ftype%3Dw1500_60_sharpen" alt="" /></div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                                <ul class="txt">
+                                    <li>매일 09:00 - 18:00</li>
+                                </ul>
+                            </div>
+                            <div id="tab_cont4_3">
+                                <h3>보롬왓 <a href="//naver.me/GXERmB9u" class="place" target="_blank"></a></h3>
+                                <div class="swiper mySwiper2">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><img src="//search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyMzEwMTJfMTky%2FMDAxNjk3MTEwMzIzMjkw.tF7XVYrTo2-JnEctVnhjampykNQIYUFYY6pFrswwnucg.8U6iHXSexaJlMx-SXOYjafU29PRj09uO5mrzmNCQQLgg.JPEG%2F1697092946333.jpg%3Ftype%3Dw1500_60_sharpen" alt="" /></div>
+                                        <div class="swiper-slide"><img src="//search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyMzA0MjhfMjUz%2FMDAxNjgyNjcxMTUyNzU0.EsVS6YrRKrhz3ejtrPPf8vm5uDKxjHBl5ZSUzfLYMP8g.4YZjxdUPNKTnCiLQTEo566z2GNQJkyktk_8f7_yrCNQg.JPEG%2F20230428_113850.jpg%3Ftype%3Dw1500_60_sharpen" alt="" /></div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                                <ul class="txt">
+                                    <li>매일 09:00 - 18:00</li>
+                                </ul>
+                            </div>
+                            <div id="tab_cont4_4">
+                                <h3>천짓골식당 <a href="//naver.me/5OnGDgRk" class="place" target="_blank"></a></h3>
+                                <div class="swiper mySwiper2">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><img src="//search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyNDEwMjhfMjEz%2FMDAxNzMwMDQxNjE2NzI2.cr57y0JPXESVux864q-Js7M5o_k9XXH-R8bXI8Of-Log.zdLxJ-7OKeCLqJQHPPxMOQ0v-QnmFN7Ui8DNWu-Ktxcg.JPEG%2FA46D4301-AF5D-4D49-A316-F7BF6A5357AE.jpeg%3Ftype%3Dw1500_60_sharpen" alt="" /></div>
+                                        <div class="swiper-slide"><img src="//search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyNDExMDVfMjUg%2FMDAxNzMwODEwMDQxMTY5.V1vd5tDQVrjYLOkDueZcNKElgE6kRmI7MBMzV6_e4RAg.ffR6Gk6RRqOHMIf5FX5N02xziNqIjNN0_cZtY8ZHRbsg.JPEG%2F1000007505.jpg.jpg%3Ftype%3Dw1500_60_sharpen" alt="" /></div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                                <ul class="txt">
+                                    <li>매일 17:10 - 21:30 <strong>일요일 휴무</strong></li>
+                                </ul>
+                            </div>
+                            <div id="tab_cont4_5">
+                                <h3>서귀포매일올레시장 <a href="//naver.me/xFprr704" class="place" target="_blank"></a></h3>
+                                <div class="swiper mySwiper2">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide"><img src="//search.pstatic.net/common/?src=http%3A%2F%2Fblogfiles.naver.net%2FMjAxOTA0MDVfMTkg%2FMDAxNTU0NDYxMDA4Njg3.1MhmWD3uJG087dDwn630iV9Cw44izcN9fvQV0b-szj8g.x6mzrffDrspk976eXf4lJj2sYa4JWtr5LmJ-4JtkwTMg.JPEG.oldiigoodii%2FCYMERA_20190323_183937.jpg%23900x675" alt="" /></div>
+                                        <div class="swiper-slide"><img src="//search.pstatic.net/common/?src=https%3A%2F%2Fpup-review-phinf.pstatic.net%2FMjAyNDA2MTJfOTkg%2FMDAxNzE4MTcxMzc5OTU2.hImrQAx4XDyRgCpYWGdz_WZjG5cZaH1jXCE0yxgcV6wg.mpeZPbwzdcdIEk3L751qj2NyDchYJJKGz75KiAvrE7kg.JPEG%2FB64427B2-EEC0-43EB-818B-336EA619F79D.jpeg%3Ftype%3Dw1500_60_sharpen" alt="" /></div>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                                <ul class="txt">
+                                    <li>매일 07:00 - 20:00</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            (function ($) {
+                $(document).ready(function () {
+                    var swiper = new Swiper(".mySwiper", {
+                        autoplay: {
+                            delay: 1500,
+                            disableOnInteraction: false,
+                        },
+                        effect: "fade",
+                        speed: 1500,
+                        fadeEffect: {
+                            crossFade: true,
+                        },
+                    });
+                    var swiper = new Swiper(".mySwiper2", {
+                        // autoplay: {
+                        //     delay: 2500,
+                        //     disableOnInteraction: false,
+                        // },
+                        speed: 1500,
+                        fadeEffect: {
+                            crossFade: true,
+                        },
+                        spaceBetween: 10,
+                        observer: true,
+                        observeParents: true,
+                        pagination: {
+                            el: ".swiper-pagination",
+                            clickable: true,
+                        },
+                    });
+
+                    $(".history li a").click(function () {
+                        $($.attr(this, "href")).show().siblings().hide();
+                        return false;
+                    });
+
+                    //nav click
+                    var $menu = $(".nav_group li"),
+                        $contents = $('[id^="cont0"]'),
+                        $doc = $("html, body");
+                    $(function () {
+                        $menu.find("a").click(function (e) {
+                            var $target = $(this).parent(),
+                                idx = $target.index(),
+                                section = $contents.eq(idx),
+                                navH = $(".nav_group li").height(),
+                                offsetTop = section.offset().top - navH;
+                            $doc.stop().animate(
+                                {
+                                    scrollTop: offsetTop,
+                                },
+                                800
+                            );
+                            return false;
+                        });
+                    });
+                    //nav fixed, addClass
+                    $(window).scroll(function () {
+                        var scltop = $(window).scrollTop(),
+                            header = $(".nav_group").first(),
+                            navH = $(".nav_group li").height() + 5,
+                            gnbTop = $(".e_contents").offset().top;
+                        header.css({
+                            position: scltop > gnbTop ? "fixed" : "absolute",
+                            top: scltop > gnbTop ? "0" : "",
+                        });
+                        $.each($contents, function (idx, item) {
+                            var $target = $contents.eq(idx),
+                                i = $target.index(),
+                                targetTop = $target.offset().top - navH;
+                            if (targetTop <= scltop) {
+                                $menu.removeClass("on");
+                                $menu.eq(idx).addClass("on");
+                            }
+                            if (!(200 <= scltop)) {
+                                $menu.removeClass("on");
+                            }
+                        });
+
+                        if ($(".nav_group li:nth-child(3)").hasClass("on")) {
+                            $(".nav_group").scrollLeft(0);
+                        } else if ($(".nav_group li:nth-child(4)").hasClass("on")) {
+                            $(".nav_group").scrollLeft(200);
+                        }
+                    });
+                });
+            })(jQuery);
+        </script>
+    </body>
+</html>
