@@ -180,4 +180,23 @@ window.onload = function () {
         $(".menu_box").removeClass("on");
         return false;
     });
+
+    // 메뉴 배경
+    $(window).scroll(function () {
+        let con4Top = $(".con4").offset().top,
+            viewH = $(window).height() / 2;
+        scltop = $(window).scrollTop();
+
+        if (con4Top - viewH <= scltop) {
+            $("header .menu_box").css({
+                backgroundColor: "rgba(0, 0, 0, 0.4)",
+                color: "#FFF",
+            });
+        } else {
+            $("header .menu_box").css({
+                backgroundColor: "rgba(55, 55, 55, 0.4)",
+                color: "#a9a9a9",
+            });
+        }
+    });
 };
