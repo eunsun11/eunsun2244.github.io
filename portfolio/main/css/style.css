@@ -909,6 +909,7 @@ footer .logo_wrap span img {
     .con2 .list_box li h4 span {
         display: block;
         line-height: 1.4;
+        word-break: keep-all;
     }
     .con2 .list_box li .img img {
         min-height: 23vw;
