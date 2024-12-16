@@ -877,6 +877,12 @@ footer .logo_wrap span img {
     .inner {
         padding: 0 25px;
     }
+    .visual .inner {
+        padding: 15px 25px 15px;
+    }
+    .visual .inner .sub_txt {
+        margin-bottom: 25px;
+    }
     header .inner {
         padding: 20px 25px 0;
     }
