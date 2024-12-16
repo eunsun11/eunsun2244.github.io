@@ -855,7 +855,19 @@ footer .logo_wrap span img {
         opacity: 1;
     }
 }
+.pc {
+    display: block;
+}
+.mo {
+    display: none;
+}
 @media (max-width: 768px) {
+    .pc {
+        display: none;
+    }
+    .mo {
+        display: block;
+    }
     .m_db {
         display: block !important;
     }
