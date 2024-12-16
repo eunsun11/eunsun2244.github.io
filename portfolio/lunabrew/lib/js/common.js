@@ -13,6 +13,7 @@ $(document).ready(function () {
     //슬라이드
     var swiper = new Swiper(".slide1 .swiper", {
         effect: "fade",
+        slidesPerView: 1,
         fadeEffect: {
             crossFade: true,
         },
