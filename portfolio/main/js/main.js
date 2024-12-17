@@ -168,7 +168,8 @@ window.onload = function () {
                     opacity.classList.add("on");
                 }),
             2500
-        );
+        ),
+        setTimeout(() => loading.classList.add("dn"), 2500);
 
     $(".menu_box a, .btn").click(function () {
         $("html,body").animate(

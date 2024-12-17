@@ -761,6 +761,8 @@ footer .logo_wrap span img {
     height: 100vh;
     background: #141212;
     z-index: 9999;
+}
+.loading.dn {
     display: none;
 }
 .loading .logo {
@@ -776,6 +778,7 @@ footer .logo_wrap span img {
 .loading .logo span {
     padding: 2px;
     display: block;
+    transform: translateY(50px);
 }
 .loading .logo span img {
     width: 100%;
@@ -786,6 +789,7 @@ footer .logo_wrap span img {
 .loading.scene1 .logo span {
     animation-name: up;
     animation-duration: 1s;
+    transform: translateY(0);
 }
 @keyframes up {
     0% {
