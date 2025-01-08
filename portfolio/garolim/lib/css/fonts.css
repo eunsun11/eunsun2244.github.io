@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+/* Noto Sans */
+@font-face {
+    font-family: "Noto Sans Korean";
+    src: url("./fonts/NotoSans/NotoSans/NotoSans-Thin.woff2") format("woff2"), url("./fonts/NotoSans/NotoSans/NotoSans-Thin.woff") format("woff"), url("./fonts/NotoSans/NotoSans/NotoSans-Thin.eot?") format("eot");
+    font-weight: 100;
+}
+@font-face {
+    font-family: "Noto Sans Korean";
+    src: url("./fonts/NotoSans/NotoSans/NotoSans-Light.woff2") format("woff2"), url("./fonts/NotoSans/NotoSans/NotoSans-Light.woff") format("woff"), url("./fonts/NotoSans/NotoSans/NotoSans-Light.eot?") format("eot");
+    font-weight: 200;
+}
+@font-face {
+    font-family: "Noto Sans Korean";
+    src: url("./fonts/NotoSans/NotoSans/NotoSans-DemiLight.woff2") format("woff2"), url("./fonts/NotoSans/NotoSans/NotoSans-DemiLight.woff") format("woff"), url("./fonts/NotoSans/NotoSans/NotoSans-DemiLight.eot?") format("eot");
+    font-weight: 300;
+}
+@font-face {
+    font-family: "Noto Sans Korean";
+    src: url("./fonts/NotoSans/NotoSans/NotoSans-Regular.woff2") format("woff2"), url("./fonts/NotoSans/NotoSans/NotoSans-Regular.woff") format("woff"), url("./fonts/NotoSans/NotoSans/NotoSans-Regular.eot?") format("eot");
+    font-weight: 400;
+}
+@font-face {
+    font-family: "Noto Sans Korean";
+    src: url("./fonts/NotoSans/NotoSans/NotoSans-Medium.woff2") format("woff2"), url("./fonts/NotoSans/NotoSans/NotoSans-Medium.woff") format("woff"), url("./fonts/NotoSans/NotoSans/NotoSans-Medium.eot?") format("eot");
+    font-weight: 500;
+}
+@font-face {
+    font-family: "Noto Sans Korean";
+    src: url("./fonts/NotoSans/NotoSans/NotoSans-Bold.woff2") format("woff2"), url("./fonts/NotoSans/NotoSans/NotoSans-Bold.woff") format("woff"), url("./fonts/NotoSans/NotoSans/NotoSans-Bold.eot?") format("eot");
+    font-weight: 700;
+}
+@font-face {
+    font-family: "Noto Sans Korean";
+    src: url("./fonts/NotoSans/NotoSans/NotoSans-Black.woff2") format("woff2"), url("./fonts/NotoSans/NotoSans/NotoSans-Black.woff") format("woff"), url("./fonts/NotoSans/NotoSans/NotoSans-Black.eot?") format("eot");
+    font-weight: 900;
+}
+
+/* IropkeBatang*/
+@font-face {
+    font-family: "IropkeBatang";
+    src: url("./fonts/IropkeBatangM/IropkeBatangM.woff") format("woff"), url("./fonts/IropkeBatangM/IropkeBatangM.eot?") format("eot");
+    font-weight: 400;
+}

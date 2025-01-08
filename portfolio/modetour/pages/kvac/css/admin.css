@@ -1,0 +1,239 @@
+@charset "utf-8";
+
+.admin_wrap {
+    background: #f6f6f6;
+}
+input {
+    font-family: inherit;
+}
+textarea {
+    font-family: inherit;
+    overflow-y: auto;
+}
+
+/* 로그인 */
+.login_wrap {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.login_wrap h1 {
+    margin-bottom: 50px;
+}
+.login_wrap input {
+    width: 305px;
+    height: 49px;
+    border: 1px #d5d6d7 solid;
+    border-bottom: none;
+    text-align: left;
+    padding: 0 20px;
+    font-size: 17px;
+}
+.login_wrap input[type="image"] {
+    border: none;
+    height: 60px;
+    padding: 0;
+    width: 347px;
+}
+
+/* header */
+.admin_wrap #header {
+    margin: 0;
+}
+.admin_wrap #header {
+    background: #022f69;
+    height: 100px;
+}
+.admin_wrap #header .menu {
+    width: 1200px;
+    margin: 0 auto;
+}
+.admin_wrap #header .menu .main {
+    float: left;
+    display: block;
+    width: 167px;
+    background: #f6f6f6;
+    padding: 11px 0 13px;
+    border: none;
+    margin: 0;
+}
+.admin_wrap #header .menu .main > img {
+    margin-left: 3px;
+}
+.admin_wrap #header .menu .left_menu {
+    float: left;
+}
+.admin_wrap #header .menu .left_menu a {
+    float: left;
+    color: #fff;
+    font-weight: 300;
+    letter-spacing: -1px;
+    font-size: 22px;
+    padding-top: 26px;
+    padding-bottom: 6px;
+    margin-left: 65px;
+}
+.admin_wrap #header .menu .left_menu a.on {
+    border-bottom: 1px #c0ccda solid;
+}
+.admin_wrap #header .menu .left_menu a:hover {
+    border-bottom: 1px #c0ccda solid;
+}
+.admin_wrap #header .menu .right_menu {
+    float: right;
+    margin-top: 24px;
+}
+.admin_wrap #header .menu .right_menu .profile_box {
+    position: relative;
+    float: left;
+    top: 4px;
+}
+.admin_wrap #header .menu .right_menu .profile_box > span {
+    color: #fff;
+    padding-left: 10px;
+    font-weight: 300;
+}
+.admin_wrap #header .menu .right_menu .profile_box .profile_mask {
+    position: absolute;
+    left: -1px;
+    top: -1px;
+    display: block;
+    width: 44px;
+    height: 44px;
+    background: url("../admin/images/profile_mask.png");
+}
+.admin_wrap #header .menu .right_menu #language {
+    float: left;
+    margin: 0;
+}
+
+.admin_wrap .table_wrap table th {
+    padding: 15px;
+}
+.admin_wrap .home_tit {
+    overflow: hidden;
+    margin-bottom: 20px;
+    font-weight: 500;
+    font-size: 22px;
+}
+.admin_wrap .home_tit .tit {
+    float: left;
+}
+.admin_wrap .home_tit .more {
+    float: right;
+}
+.admin_wrap .table_wrap {
+    background: #fff;
+}
+.admin_wrap .more {
+    display: block;
+    background: url("../admin/images/more_ico.jpg") no-repeat;
+    width: 26px;
+    height: 26px;
+    font-size: 0;
+    margin-top: 7px;
+}
+.admin_wrap .home_container {
+    margin-top: 40px;
+}
+.admin_wrap .check_td {
+    border-left: 1px #d5d6d7 solid;
+}
+.admin_wrap .check_td label {
+    margin-right: 15px;
+}
+.admin_wrap .sub_contents .search_form {
+    margin: 0;
+    padding: 50px 0 40px;
+    background: #fff;
+}
+.admin_wrap .wite {
+    background: #fff;
+    padding: 50px 0 80px;
+}
+.admin_wrap .c_btn.resize_btn {
+    display: inline-block;
+    margin: 0 10px;
+    width: 76px;
+    line-height: 40px;
+    height: 40px;
+    margin: 0 3px;
+}
+.admin_wrap .sub_contents .wite .pg {
+    margin-top: 0;
+}
+.admin_wrap .wite .btn_group {
+    position: absolute;
+    bottom: 155px;
+    right: 40px;
+}
+.admin_wrap .sub_contents input[type="checkbox"] + label {
+    width: 16px;
+    height: 16px;
+    padding: 0 9px;
+    background: url("../admin/images/admin_check_off.jpg") 1px 0 no-repeat;
+}
+
+.admin_wrap .qna_box {
+    background: #fff;
+}
+.admin_wrap .qna_box li {
+    border-bottom: 1px #d5d6d7 solid;
+}
+.admin_wrap .qna_box .question_inner {
+    height: 35px;
+    line-height: 35px;
+    margin: 9px 0 9px 58px;
+    width: 1078px;
+    padding-left: 10px;
+    font-family: inherit;
+}
+.admin_wrap .question_area {
+    background: url("../admin/images/question_ico.png") no-repeat 30px center;
+}
+.admin_wrap .answer_area {
+    background: url("../admin/images/answer_ico.png") no-repeat 30px 16px;
+}
+.admin_wrap .answer_area .answer_inner textarea {
+    font-size: 16px;
+    color: #747474;
+    resize: none;
+    margin: 15px 0 15px 58px;
+    width: 1070px;
+    padding: 10px;
+    min-height: 400px;
+    overflow-y: auto;
+}
+.admin_wrap .sub_contents .table_wrap table tbody td.question_area {
+    font-weight: 400;
+    color: #2e3339;
+}
+.admin_wrap .sub_contents .table_wrap table tbody td.faqtd_style {
+    border-right: 1px #d5d6d7 solid;
+    border-left: 1px #d5d6d7 solid;
+    text-align: left;
+    padding-left: 80px;
+}
+
+.admin_wrap #notice_view .table_wrap.answer_area {
+    margin: 0;
+}
+.admin_wrap #notice_view .table_wrap.answer_area textarea {
+    resize: none;
+    border: none;
+    width: 100%;
+    color: #535a66;
+    font-size: 16px;
+}
+.admin_wrap .footer {
+    background: #fff;
+    clear: both;
+}
+.admin_wrap .footer .site_link {
+    margin: 0 auto;
+    padding-bottom: 45px;
+}
+.admin_wrap .footer .footer_in {
+    background: #fff;
+}

@@ -5,12 +5,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="stylesheet" href="../lib/css/reset.css" />
         <link rel="stylesheet" href="../lib/css/common.css" />
-        <script src="//code.jquery.com/jquery-3.7.1.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
         <script src="../lib/js/common.js"></script>
-        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.min.css" />
-        <script type="text/javascript" src="//cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
-        <link href="//fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&amp;display=swap" rel="stylesheet" />
-        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.min.css" />
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.min.js"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&amp;display=swap" rel="stylesheet" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/ScrollTrigger.min.js"></script>
+        <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=941a0c6351efa8af80e438c7c3c294cd"></script>
         <title>lunabrew</title>
     </head>
     <body>
@@ -40,7 +43,14 @@
                                 <h2>진짜 효모가 살아있는 진짜 수제맥주<strong>루나브루에는 다 있다!</strong></h2>
                                 <p class="sub_txt">루나브루에는 대한민국의 모든 브루어리의 진짜 수제맥주를 고객에게 전해드리는<br />국내 유일의 수제맥주 전문 기업입니다.</p>
                                 <div class="btn_st">
-                                    <a href="#"><span>루나브루에서 판매 중인 맥주 보기</span></a>
+                                    <a href="#">
+                                        <span>루나브루에서 판매 중인 맥주 보기</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="512" height="512">
+                                            <g id="_01_align_center" data-name="01 align center">
+                                                <path d="M7.412,24,6,22.588l9.881-9.881a1,1,0,0,0,0-1.414L6.017,1.431,7.431.017l9.862,9.862a3,3,0,0,1,0,4.242Z" />
+                                            </g>
+                                        </svg>
+                                    </a>
                                 </div>
                                 <div class="img01">
                                     <img src="../lib/images/sect01-bg02.png" alt="" />
@@ -53,6 +63,7 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="fly_img"><img src="../lib/images/fly_img1.png" alt="" /></div>
                     </section>
                     <section class="section02">
                         <div class="section_wrap">
@@ -65,14 +76,26 @@
                                                 <div class="swiper-slide"><img src="../lib/images/sect02-slide02.png" alt="" /></div>
                                             </div>
                                         </div>
+                                        <div class="img01">
+                                            <img src="../lib/images/rice02.gif" alt="" />
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="right_cont">
                                     <p class="label"><span>LUNA BREW COMPANY</span></p>
                                     <h2>전국의 수제 맥주를 쉽게 만날 수 있도록<strong>루나브루가 준비했습니다.</strong></h2>
                                     <p class="sub_txt">우리는 국내 유일의 ‘수제맥주(Craft Beer)’만을 유통·판매하는<br />국내 3대 테마파크 서울랜드의 자회사 입니다.</p>
+                                </div>
+                                <div class="control">
                                     <div class="btn_st">
-                                        <a href="#"><span>유통 / 구매 문의하기</span></a>
+                                        <a href="#">
+                                            <span>유통 / 구매 문의하기</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="512" height="512">
+                                                <g id="_01_align_center" data-name="01 align center">
+                                                    <path d="M7.412,24,6,22.588l9.881-9.881a1,1,0,0,0,0-1.414L6.017,1.431,7.431.017l9.862,9.862a3,3,0,0,1,0,4.242Z" />
+                                                </g>
+                                            </svg>
+                                        </a>
                                     </div>
                                     <div class="slide1_control">
                                         <div class="swiper-pagination"></div>
@@ -82,43 +105,189 @@
                                 </div>
                             </div>
                         </div>
+                        <div class="fly_img"><img src="../lib/images/fly_img2.png" alt="" /></div>
                     </section>
                     <section class="section03">
                         <div class="section_wrap">
                             <div class="in_cont">
                                 <p class="label"><span>LUNA BREW SERVICES</span></p>
                                 <h2><strong>루나브루와 함께해보세요.</strong></h2>
-                                <div class="services_cont">
-                                    <div></div>
-                                    <div></div>
-                                    <div></div>
-                                </div>
+                                <ul class="services_cont">
+                                    <li>
+                                        <div class="box">
+                                            <p class="tit">Brand<br />collabo</p>
+                                            <p class="txt1">기업브랜드와 좋은 수제 맥주가 만나면<br />비즈니스 가치가 올라갑니다.</p>
+                                            <div class="img"><img src="../lib/images/service01.svg" alt="" /></div>
+                                        </div>
+                                        <div class="box hover">
+                                            <p class="tit">Brand<br />collabo</p>
+                                            <p class="txt1">'루나브루＇가 추천하는 수제 맥주에는 맥주의 맛과 색이 차별화된 대한민국 150개 양조장의 장인정신이 깃들어 있습니다. 단순히 이목을 끌기 위한 브랜드 협업이 아닌 성공적인 콜라보(Collaboration)로 여러분의 브랜드에 날개를 달아 주세요. 우리회사 맥주! 만들어보세요.</p>
+                                            <p class="txt2">- 최소 1,000개만 구매해도 콜라보 맥주를 만들 수 있습니다.</p>
+                                            <div class="img"><img src="../lib/images/service01_hover.png" alt="" /></div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="box">
+                                            <p class="tit">Corporate<br />Gift</p>
+                                            <p class="txt1">수제맥주를 활용한 기업 사은품 마케팅의<br />새로운 트렌드를 제시합니다.</p>
+                                            <div class="img"><img src="../lib/images/service02.svg" alt="" /></div>
+                                        </div>
+                                        <div class="box hover">
+                                            <p class="tit">Corporate<br />Gift</p>
+                                            <p class="txt1">평범한 선물은 NO! 사은품, 이벤트, 기업 PR, 웰컴 선물 등에 MZ세대와 공유할 수 있는 Hip한 수제 맥주를 추천합니다. 150여개 브루어리 제품 중에서 직접 선택한 수제맥주로 우리회사만의 수제맥주 Box에 기업의 회사 로고, 브랜드, 홍보물을 담아서 전달해 보세요 영업 활동에도 뛰어난 마케팅 수단이 될 것입니다.</p>
+                                            <p class="txt2">- 회사 홍보용 Box 제작 비용은 별도(최소 1,000개, 평균 1,000원) 입니다.</p>
+                                            <div class="img"><img src="../lib/images/service02_hover.png" alt="" /></div>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="box">
+                                            <p class="tit">Present</p>
+                                            <p class="txt1">엄선한 수제맥주 'HoppyBox'로<br />감사의 마음을 전해 드립니다.</p>
+                                            <div class="img"><img src="../lib/images/service03.svg" alt="" /></div>
+                                        </div>
+                                        <div class="box hover">
+                                            <p class="tit">Present</p>
+                                            <p class="txt1">고마운 분들께 감사의 선물을 전하고 싶다면, 부담은 줄이고 만족 감은 높인 'Hoppy Box'로 깜짝 선물을 해보세요. 루나브루가 엄선한 다양한 컨셉의 수제 맥주가 소소하지만 확실한 행복을 드립니다. 고객에게 선물하기, 직원과 함께 즐기기.등 새로운 분위기를 제공할 수 있습니다.</p>
+                                            <p class="txt2">
+                                                Hoppy Box는 원하는 주소까지 정성스럽게 보내 드립니다.<br />
+                                                (1Box도 구매 가능합니다.)
+                                            </p>
+                                            <div class="img"><img src="../lib/images/service03_hover.png" alt="" /></div>
+                                        </div>
+                                    </li>
+                                </ul>
                             </div>
                         </div>
+                        <div class="fly_img"><img src="../lib/images/fly_img3.png" alt="" /></div>
                     </section>
                     <section class="section04">
                         <div class="section_wrap">
-                            <div class="in_cont">
-                                <p class="label"><span>LUNA BREW HISTORY</span></p>
-                                <h2>수제맥주 제조부터 유통까지<strong>루나브루가 걸어온 길</strong></h2>
-                                <div class="history"></div>
-                            </div>
-                        </div>
-                    </section>
-                    <section class="section05">
-                        <div class="section_wrap">
-                            <div class="in_cont">
-                                <p class="label"><span>LOCATION</span></p>
-                                <h2><strong>찾아오시는 길</strong></h2>
-                                <div class="btn_st">
-                                    <a href="#"><span>지도에서 보기</span></a>
+                            <div class="in_cont half_cont">
+                                <div class="left_cont">
+                                    <p class="label"><span>LUNA BREW HISTORY</span></p>
+                                    <h2>수제맥주 제조부터 유통까지<strong>루나브루가 걸어온 길</strong></h2>
+                                    <div class="history">
+                                        <div class="swiper">
+                                            <div class="swiper-wrapper">
+                                                <div class="swiper-slide">수제 맥주 브랜드 브루잉 설립</div>
+                                                <div class="swiper-slide">나미나라공화국(남이섬) '깡타비어' 출시</div>
+                                                <div class="swiper-slide">디스틸 보일러메이커(d.still Boilermaker) 맥주 출시</div>
+                                                <div class="swiper-slide">메리모나크 요트 클럽 맥주 출시</div>
+                                                <div class="swiper-slide">푸른솔 CC(장성) 제품 공급</div>
+                                                <div class="swiper-slide">리슨컴퍼니 맥주 출시</div>
+                                                <div class="swiper-slide">모바일 App “Hoppy” 서비스 오픈</div>
+                                                <div class="swiper-slide">서울랜드 맥주 출시</div>
+                                                <div class="swiper-slide">서울랜드 자회사 편입</div>
+                                                <div class="swiper-slide">경주 황남주택 맥주 출시</div>
+                                                <div class="swiper-slide">HoppyBox 출시</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="right_cont">
+                                    <img src="../lib/images/sect04.gif" alt="" />
                                 </div>
                             </div>
                         </div>
+                        <div class="fly_img"><img src="../lib/images/fly_img4.png" alt="" /></div>
+                    </section>
+                    <section class="section05">
+                        <div class="section_wrap">
+                            <div class="in_cont half_cont">
+                                <div class="left_cont">
+                                    <div class="map">지도</div>
+                                    <div id="map" style="width: 500px; height: 400px"></div>
+                                </div>
+                                <div class="right_cont">
+                                    <p class="label"><span>LOCATION</span></p>
+                                    <h2><strong>찾아오시는 길</strong></h2>
+                                    <p><i class="ico ico1"></i>경기도 성남시 중원구 도촌동 519, 1층</p>
+                                    <p><i class="ico ico2"></i>09:00~18:00(주말, 공휴일 휴무)</p>
+                                    <div class="btn_st">
+                                        <a href="#">
+                                            <span>지도에서 보기</span>
+                                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="512" height="512">
+                                                <g id="_01_align_center" data-name="01 align center">
+                                                    <path d="M7.412,24,6,22.588l9.881-9.881a1,1,0,0,0,0-1.414L6.017,1.431,7.431.017l9.862,9.862a3,3,0,0,1,0,4.242Z" />
+                                                </g>
+                                            </svg>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="fly_img"><img src="../lib/images/fly_img5.png" alt="" /></div>
                     </section>
                 </main>
-                <footer id="footer"></footer>
+                <footer id="footer">
+                    <div class="footer_wrap">
+                        <div class="footer_l">
+                            <div class="logo"><img src="../lib/images/logo.svg" alt="" /></div>
+                            <div>
+                                <ul>
+                                    <li><span>대표</span>김양규</li>
+                                    <li><span>사업자등록번호</span>854-81-02137</li>
+                                    <li><span>이메일</span>hoppybox@hoppy.co.kr</li>
+                                </ul>
+                                <p>COPYRIGHT RUNA BREW COMPANY. ALL RIGHTS RESERVED.</p>
+                            </div>
+                        </div>
+                        <div class="footer_r">
+                            <p>구매·유통 문의<strong>1533-2970</strong></p>
+                        </div>
+                    </div>
+                </footer>
+                <div class="top_btn">
+                    <a href="#wrap"><span>Top</span></a>
+                </div>
             </div>
         </div>
+        <script>
+            var mapContainer = document.getElementById("map"), // 지도를 표시할 div
+                mapOption = {
+                    center: new daum.maps.LatLng(36.633535, 127.425882), // 지도의 중심좌표
+                    level: 4, // 지도의 확대 레벨
+                }; // 지도를 생성합니다
+            var map = new daum.maps.Map(mapContainer, mapOption); // 주소-좌표 변환 객체를 생성합니다
+            var geocoder = new daum.maps.services.Geocoder();
+            var myAddress = ["용산구 한강대로 405", "영등포구 경인로 846", "동대문구 왕산로 214"];
+            function myMarker(number, address) {
+                // 주소로 좌표를 검색합니다
+                geocoder.addressSearch(
+                    //'주소',
+                    address,
+                    function (result, status) {
+                        // 정상적으로 검색이 완료됐으면
+                        if (status === daum.maps.services.Status.OK) {
+                            var coords = new daum.maps.LatLng(result[0].y, result[0].x); /* // 결과값으로 받은 위치를 마커로 표시합니다
+                                                var marker = new daum.maps.Marker({
+                                                    map : map,
+                                                    position : coords
+                                                });
+                                                 */ /* // 인포윈도우로 장소에 대한 설명을 표시합니다
+                                                var infowindow = new daum.maps.InfoWindow(
+                                                        {
+                                                            // content : '<div style="width:50px;text-align:center;padding:3px 0;">I</div>'
+                                                            content : '<div style="color:red;">' +  number + '</div>'
+                                                        });
+                                                infowindow.open(map, marker);
+                                                 */ // 커스텀 오버레이에 표출될 내용으로 HTML 문자열이나 document element가 가능합니다
+                            var content = '<div class="customoverlay">' + '    <span class="title">' + '<div style="font-style:normal; color:red; font-weight:bold; font-size:2.0em">' + number + "</div>" + "</span>" + "</div>"; // 커스텀 오버레이가 표시될 위치입니다
+                            var position = new daum.maps.LatLng(result[0].y, result[0].x); // 커스텀 오버레이를 생성합니다
+                            var customOverlay = new daum.maps.CustomOverlay({
+                                map: map,
+                                position: position,
+                                content: content,
+                                yAnchor: 1,
+                            }); // 지도의 중심을 결과값으로 받은 위치로 이동시킵니다
+                            map.setCenter(coords);
+                        }
+                    }
+                );
+            }
+            for (i = 0; i < myAddress.length; i++) {
+                myMarker(i + 1, myAddress[i]);
+            }
+        </script>
     </body>
 </html>

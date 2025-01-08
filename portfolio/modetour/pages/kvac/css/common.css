@@ -1,0 +1,1194 @@
+@charset "utf-8";
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+font,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+button,
+i {
+    margin: 0;
+    border: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: middle;
+    background: transparent;
+    box-sizing: border-box;
+    list-style: none;
+    font-family: "Noto Sans KR", "맑은고딕", "MalgunGothic", sans-serif;
+    text-decoration: none;
+    font-style: normal;
+    color: #444444;
+    text-align: center;
+}
+button {
+    cursor: pointer;
+}
+button:focus {
+    outline: 0 none;
+}
+caption {
+    font-size: 0;
+    position: absolute;
+}
+.wrap {
+    min-width: 1200px;
+    position: relative;
+    line-height: 1.5;
+}
+.wrap .point_color {
+    color: #fe6565;
+}
+input {
+    font-size: 16px;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+}
+.gray_bg {
+    background: #a7aeb5;
+    color: #fff;
+    padding: 4px 10px;
+    font-weight: 400;
+}
+.red_bg {
+    background: #e06262;
+    color: #fff;
+    padding: 4px 10px;
+    font-weight: 400;
+}
+
+/* header */
+.wrap h2 {
+    font-size: 30px;
+    font-weight: 500;
+    background: url("http://www.visaforkorea-in.com/image/h2_pattern.png") no-repeat center 57px;
+    padding-bottom: 38px;
+    color: #2c3036;
+    margin: 50px 0 30px;
+}
+.wrap #header {
+    text-align: center;
+    margin-bottom: 60px;
+    height: 120px;
+}
+.wrap #header .top {
+    width: 1200px;
+    margin: 0 auto;
+}
+.wrap #header h1.logo {
+    position: absolute;
+    left: 50%;
+    margin-left: -64px;
+    top: 15px;
+}
+
+.wrap .select_bar .select_box.open {
+    display: block !important;
+}
+.wrap .select_bar .select_box.close {
+    display: none !important;
+}
+
+.wrap #header #language {
+    float: right;
+    margin-top: 37px;
+    color: #959aa0;
+    font-weight: 300;
+    text-align: left;
+    padding: 0 0 33px 20px;
+    position: relative;
+    z-index: 1005;
+}
+.wrap #header #language .select_tit p {
+    color: #959aa0;
+    width: 209px;
+    border: 1px solid #e1e1e1;
+    font-weight: 300;
+    text-align: left;
+    padding: 12px 0 12px 20px;
+    background: url("http://www.visaforkorea-in.com/image/language_arrow.png") no-repeat 170px center #fff;
+}
+.wrap #header #language .select_tit p.open {
+    background: url("http://www.visaforkorea-in.com/image/language_arrow2.png") no-repeat 170px center #fff;
+}
+.wrap #header #language .lan_list {
+    display: none;
+    position: absolute;
+    top: 50px;
+    left: 20px;
+}
+.wrap #header #language .lan_list li a {
+    display: block;
+    color: #959aa0;
+    width: 209px;
+    border: 1px solid #e1e1e1;
+    font-weight: 300;
+    text-align: left;
+    padding: 12px 0 12px 20px;
+    border-top: none;
+    background: #fff;
+    cursor: default;
+}
+.wrap #header #language .lan_list li a:hover {
+    color: #444;
+}
+.wrap #header #nav {
+    clear: both;
+    background: #f9f9f9;
+    position: absolute;
+    top: 120px;
+    width: 100%;
+    z-index: 101;
+    left: 0;
+}
+.wrap #header #nav .depth_01 {
+    border-top: 1px solid #e1e1e1;
+    border-bottom: 1px solid #e1e1e1;
+    text-align: center;
+}
+.wrap #header #nav .depth_01 li {
+    display: inline-block;
+    width: 180px;
+    margin-left: 30px;
+    font-weight: 500;
+    font-size: 17px;
+    line-height: 58px;
+    position: relative;
+}
+.wrap #header #nav .depth_01 li:first-child {
+    margin-left: 0;
+}
+.wrap #header #nav .depth_01 li:after {
+    content: "";
+    display: none;
+    width: 180px;
+    height: 2px;
+    background: #6ec7c0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+}
+.wrap #header #nav .depth_01 li:hover:after {
+    display: block;
+}
+.wrap #header #nav .depth_02 {
+    display: none;
+    position: absolute;
+    left: 0;
+    top: 59px;
+    padding: 20px 0;
+}
+.wrap #header #nav .depth_02 li {
+    margin: 0;
+    background: #f9f9f9;
+    font-weight: 300;
+}
+.wrap #header #nav .depth_02 li:hover:after {
+    display: none;
+}
+.wrap #header #nav .depth_02 li a {
+    line-height: 28px;
+    font-size: 16px;
+}
+.wrap #header #nav .depth_02 li a:hover {
+    text-decoration: underline;
+}
+
+/* main */
+.wrap .main_slide ul {
+    width: 100%;
+    height: 560px;
+    overflow: hidden;
+}
+.wrap .main_slide .main_slide01 {
+    background: url("http://www.visaforkorea-in.com/image/main_slide01.jpg") no-repeat center 0;
+    height: 560px;
+    width: 100%;
+}
+.wrap .main_slide .main_slide02 {
+    background: url("http://www.visaforkorea-in.com/image/main_slide02.jpg") no-repeat center 0;
+    height: 560px;
+    width: 100%;
+}
+.wrap .main_slide .main_slide03 {
+    background: url("http://www.visaforkorea-in.com/image/main_slide03.jpg") no-repeat center 0;
+    height: 560px;
+    width: 100%;
+}
+.wrap .main_slide .main_slide04 {
+    background: url("http://www.visaforkorea-in.com/image/main_slide04.jpg") no-repeat center 0;
+    height: 560px;
+    width: 100%;
+}
+/*20190807 추가&수정*/
+.wrap .main_notice {
+    margin: 25px 0;
+}
+.wrap .main_contents {
+    overflow: hidden;
+    width: 1045px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 105;
+}
+/* //20190807 추가&수정*/
+.wrap .main_contents .m_con {
+    width: 261px;
+    height: 230px;
+    border: 1px #35baaf solid;
+    border-left: none;
+    float: left;
+}
+.wrap .main_contents .m_con:first-child {
+    border: 1px #35baaf solid;
+}
+.wrap .main_contents .m_con > a {
+    font-size: 24px;
+    letter-spacing: -1px;
+    display: block;
+    padding: 143px 0 50px;
+}
+.wrap .main_contents .m_con.m_con01 {
+    background: url("http://www.visaforkorea-in.com/image/m_con01.png") no-repeat 100px 47px #fff;
+}
+.wrap .main_contents .m_con.m_con01 > a {
+    color: #35baaf;
+}
+.wrap .main_contents .m_con.m_con02 {
+    background: url("http://www.visaforkorea-in.com/image/m_con02.png") no-repeat 97px 47px #35baaf;
+}
+.wrap .main_contents .m_con.m_con02 > a {
+    color: #fff;
+}
+.wrap .main_contents .m_con.m_con03 {
+    background: url("http://www.visaforkorea-in.com/image/m_con03.png") no-repeat 92px 46px #fff;
+}
+.wrap .main_contents .m_con.m_con03 > a {
+    color: #35baaf;
+}
+.wrap .main_contents .m_con.m_con04 {
+    background: url("http://www.visaforkorea-in.com/image/m_con04.png") no-repeat 86px 47px #35baaf;
+}
+.wrap .main_contents .m_con.m_con04 > a {
+    color: #fff;
+}
+
+/* sub */
+.wrap .sub_top {
+    padding-top: 260px;
+}
+.wrap .sub_contents {
+    width: 1200px;
+    margin: 0 auto;
+    padding-bottom: 80px;
+    position: relative;
+}
+
+/* footer */
+.wrap .footer .site_link {
+    overflow: hidden;
+    width: 970px;
+    margin: 40px auto;
+}
+.wrap .footer .site_link li {
+    float: left;
+    margin-left: 80px;
+}
+.wrap .footer .site_link li:first-child {
+    margin: 0;
+}
+.wrap .footer .footer_in {
+    background: #eef0f3;
+    padding: 45px 0 40px;
+}
+.wrap .footer .footer_in .m_footer01 {
+    margin-bottom: 25px;
+}
+.wrap .footer .footer_in .m_footer01 a {
+    padding: 0 10px;
+}
+.wrap .footer .footer_in .m_footer02 address {
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 20px;
+    letter-spacing: -0.5px;
+}
+.wrap #footer {
+    background: #eef0f3;
+    padding-bottom: 40px;
+}
+.wrap #footer .site_link {
+    margin: 0 auto;
+}
+
+/* sub input*/
+.wrap .sub_contents .search_form {
+    font-size: 0;
+    margin-bottom: 40px;
+}
+.wrap .sub_contents .search_form .input_search {
+    display: inline-block;
+}
+.wrap .sub_contents .search_form .input_search > input {
+    width: 398px;
+    height: 48px;
+    line-height: 48px;
+    border: 1px #a7aeb5 solid;
+    padding: 0 15px;
+    font-size: 15px;
+}
+.wrap .sub_contents .search_form .serch_btn {
+    display: inline-block;
+}
+.wrap .sub_contents .search_form .serch_btn > a {
+    display: block;
+    width: 105px;
+    line-height: 50px;
+    background: #a7aeb5;
+    border: none;
+    color: #fff;
+    font-size: 17px;
+}
+.wrap .sub_contents .txt_box {
+    width: 98%;
+    padding: 5px 10px;
+    font-size: 16px;
+    border: 1px #d5d6d7 solid;
+}
+.wrap .sub_contents .mailaddress {
+    border: 1px #d5d6d7 solid;
+    width: 190px;
+    height: 30px;
+    padding-left: 10px;
+    font-size: 15px;
+}
+.wrap .sub_contents .select_bar {
+    font-size: 16px;
+    display: inline-block;
+    position: relative;
+}
+.wrap .sub_contents .select_bar ul {
+    display: none;
+}
+.wrap .sub_contents .select_bar ul.open {
+    display: none;
+}
+.wrap .sub_contents .select_bar .select_tit {
+    border: 1px #a7aeb5 solid;
+    border-right: none;
+    width: 169px;
+    line-height: 48px;
+}
+.wrap .sub_contents .select_bar .select_tit p {
+    text-align: left;
+    padding-left: 20px;
+    background-repeat: no-repeat;
+    background-position: 135px center;
+    background-image: url("http://www.visaforkorea-in.com/image/language_arrow.png");
+}
+.wrap .sub_contents .select_bar .select_tit p.open {
+    background-image: url("http://www.visaforkorea-in.com/image/language_arrow2.png");
+}
+.wrap .sub_contents .select_bar .select_box {
+    position: absolute;
+    left: 0;
+    top: 49px;
+    border: 1px #a7aeb5 solid;
+    width: 170px;
+}
+.wrap .sub_contents .select_bar .select_box li {
+    line-height: 48px;
+    height: 48px;
+    background: #fff;
+    border-top: 1px #a7aeb5 solid;
+    text-align: left;
+    padding-left: 20px;
+    cursor: default;
+}
+.wrap .sub_contents .select_bar .select_box li:first-child {
+    border-top: none;
+}
+.wrap .sub_contents .select_bar .select_box li:hover {
+    background: #f5f5f5;
+    color: #000;
+}
+.wrap .sub_contents .select_bar + .input_search > input {
+    width: 308px;
+}
+.wrap .sub_contents input[type="checkbox"] {
+    display: none;
+}
+/*.wrap .sub_contents input[type=checkbox] + label {display: inline-block;*zoom:1;*display:inline;cursor: pointer;padding: 0 9px;background: url('http://www.visaforkorea-in.com/image/check_off.jpg') 0 5px no-repeat;}*/
+.wrap .sub_contents input[type="checkbox"] + label {
+    display: inline-block;
+    cursor: pointer;
+    padding: 1px 0 0 32px;
+    background: url("http://www.visaforkorea-in.com/image/check_off.jpg") 0 5px no-repeat;
+}
+
+.wrap .sub_contents input[type="checkbox"]:checked + label {
+    background-image: url("http://www.visaforkorea-in.com/image/check_on.jpg");
+}
+.wrap select {
+    width: 200px;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border: 1px #d5d6d7 solid;
+    padding: 4px 10px;
+    font-family: inherit;
+    background: url("http://www.visaforkorea-in.com/image/select_arrow.jpg") no-repeat right center;
+    font-size: 16px;
+    color: #535a66;
+}
+.wrap select::-ms-expand {
+    display: none;
+}
+
+/* sub table */
+.wrap .sub_contents .table_wrap {
+    border-top: 1px solid #2c2f36;
+    border-bottom: 1px solid #d5d5d5;
+}
+.wrap .sub_contents .table_wrap table {
+    width: 100%;
+}
+.wrap .sub_contents .table_wrap table td,
+th {
+    padding: 15px;
+    font-size: 17px;
+}
+.wrap .sub_contents .table_wrap table th {
+    font-weight: 500;
+}
+.wrap .sub_contents .table_wrap table tbody td {
+    border-top: 1px solid #d5d5d5;
+    color: #747474;
+    font-weight: 300;
+}
+.wrap .sub_contents .table_wrap table .ellipsis {
+    display: block;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 540px;
+    text-align: left;
+    margin-left: 15px;
+}
+.wrap .sub_contents .table_wrap table .lock {
+    background: url("http://www.visaforkorea-in.com/image/lock_ico.png") no-repeat 0 center;
+}
+.wrap .sub_contents .table_wrap table .number_el {
+    display: block;
+    width: 75px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #747474;
+    margin: 0 auto;
+}
+.wrap .sub_contents .table_wrap table .name_el {
+    display: block;
+    width: 110px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    color: #747474;
+    margin: 0 auto;
+}
+.wrap .sub_contents .table_wrap table .attached_file {
+    background: url("http://www.visaforkorea-in.com/image/attachedfile_ico.png") no-repeat 15px 22px;
+}
+.wrap .sub_contents#notice_view .table_wrap table .attached_file {
+    padding-left: 30px;
+}
+
+.wrap .sub_contents .pg_wrap {
+    position: relative;
+}
+.wrap .sub_contents .pg_wrap .pg {
+    display: inline-block;
+    margin-top: 50px;
+}
+.wrap .sub_contents .pg_wrap .pg a {
+    display: block;
+    font-size: 0;
+    text-indent: -9999px;
+    float: left;
+}
+.wrap .sub_contents .pg_wrap .pg .pg_start {
+    width: 11px;
+    height: 27px;
+    background: url("http://www.visaforkorea-in.com/image/pg_start.png") no-repeat 0 center;
+    margin-right: 11px;
+}
+.wrap .sub_contents .pg_wrap .pg .pg_prev {
+    width: 5px;
+    height: 27px;
+    background: url("http://www.visaforkorea-in.com/image/pg_prev.png") no-repeat 0 center;
+}
+.wrap .sub_contents .pg_wrap .pg .pg_next {
+    width: 5px;
+    height: 27px;
+    background: url("http://www.visaforkorea-in.com/image/pg_next.png") no-repeat 0 center;
+}
+.wrap .sub_contents .pg_wrap .pg .pg_end {
+    width: 11px;
+    height: 27px;
+    background: url("http://www.visaforkorea-in.com/image/pg_end.png") no-repeat 0 center;
+    margin-left: 11px;
+}
+.wrap .sub_contents .pg_wrap .pg .page {
+    float: left;
+    margin: 0 10px;
+}
+.wrap .sub_contents .pg_wrap .pg .page a {
+    font-size: 17px;
+    text-indent: 0;
+    font-weight: normal;
+    color: #999;
+    font-weight: 300;
+    margin: 0 10px;
+}
+.wrap .sub_contents .pg_wrap .pg .page a.on {
+    font-weight: bold;
+    color: #2c3036;
+}
+
+/* 소개 */
+.wrap .sub_top.intro_top {
+    background: url("http://www.visaforkorea-in.com/image/sub_img1.jpg") no-repeat center 0;
+}
+/*20190807 수정*/
+.wrap .sub_top.intro_top .sub_tab a {
+    width: 400px;
+}
+/* //20190807 수정*/
+.wrap .sub_contents .intro_container p {
+    text-align: left;
+    padding-left: 35px;
+    color: #6f7173;
+}
+.wrap .sub_contents .intro_container .tit1 {
+    font-size: 22px;
+    font-weight: 500;
+    letter-spacing: -0.2px;
+    background: url("http://www.visaforkorea-in.com/image/tit_ico.png") no-repeat left center;
+    margin: 50px 0 10px;
+    color: #2c3036;
+}
+.wrap .sub_contents .intro_container .txt02 {
+    padding-left: 35px;
+    margin-top: 20px;
+}
+.wrap .sub_contents .intro_container .txt02 li {
+    text-align: left;
+    color: #6f7173;
+    margin-bottom: 4px;
+}
+.wrap .sub_contents .listStyle1 {
+    display: block;
+    float: left;
+    background: #525b67;
+    color: #fff;
+    border-radius: 5px;
+    padding: 0 7px 2px;
+    margin-right: 7px;
+}
+.wrap .sub_contents .merit {
+    overflow: hidden;
+}
+.wrap .sub_contents .merit li {
+    width: 50%;
+    float: left;
+    text-align: left;
+    padding: 15px 0 50px 200px;
+    background-repeat: no-repeat;
+    background-position: 35px 0;
+}
+.wrap .sub_contents .merit li > p {
+    padding: 0;
+}
+.wrap .sub_contents .merit li.merit01 {
+    background-image: url("http://www.visaforkorea-in.com/image/merit1.png");
+}
+.wrap .sub_contents .merit li.merit02 {
+    background-image: url("http://www.visaforkorea-in.com/image/merit2.png");
+}
+.wrap .sub_contents .merit li.merit03 {
+    background-image: url("http://www.visaforkorea-in.com/image/merit3.png");
+}
+.wrap .sub_contents .merit li.merit04 {
+    background-image: url("http://www.visaforkorea-in.com/image/merit4.png");
+}
+.wrap .sub_contents .merit .tit2 {
+    color: #35baaf;
+    font-size: 20px;
+    font-weight: 400;
+    display: block;
+    text-align: left;
+    margin-bottom: 10px;
+}
+.wrap .sub_contents .time_box {
+    overflow: hidden;
+    padding-left: 35px;
+    margin-top: 25px;
+}
+.wrap .sub_contents .time_box_txt {
+    width: 547px;
+    float: left;
+    border: 1px solid #d9d9d9;
+    background: #fafafa;
+    margin-left: 40px;
+    padding: 20px 0;
+    color: #6f7173;
+}
+.wrap .sub_contents .time_box_txt:first-child {
+    margin: 0;
+}
+.wrap .sub_contents .time_box_txt strong {
+    display: block;
+    font-weight: 500;
+    font-size: 18px;
+    margin-bottom: 5px;
+}
+.wrap .sub_contents .intro_table {
+    margin-top: 25px;
+}
+.wrap .sub_contents .intro_table th {
+    border-left: 1px #d5d6d7 solid;
+    background: #576375;
+    color: #fff;
+    font-weight: 400;
+    font-size: 22px;
+}
+.wrap .sub_contents .intro_table th:first-child {
+    border-left: none;
+}
+.wrap .sub_contents .intro_table th.strong {
+    background: #fe6565;
+    border-right: 1px #fe6565 solid;
+}
+.wrap .sub_contents .intro_table td {
+    border: 1px #d5d6d7 solid;
+    border-top: none;
+    height: 115px;
+    font-size: 18px;
+    font-weight: 300;
+}
+.wrap .sub_contents .intro_table td:first-child {
+    font-size: 21px;
+}
+.wrap .sub_contents .intro_table td .point_color {
+    font-size: 22px;
+    font-weight: 500;
+    line-height: 27px;
+    vertical-align: bottom;
+}
+/*20190807 추가*/
+.wrap .sub_contents .intro_table.fees th {
+    font-size: 20px;
+}
+.wrap .sub_contents .intro_table.fees th.strong {
+    border-right: none;
+}
+.wrap .sub_contents .intro_table.fees .Rp {
+    display: inline-block;
+    color: #576375;
+    background: #ffea5c;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 0 7px;
+    margin: -3px 0 0 5px;
+}
+.wrap .sub_contents .intro_table.fees tbody th {
+    color: #576375;
+    background: #f6f7f8;
+    border: 1px #d5d6d7 solid;
+    line-height: 25px;
+    font-size: 21px;
+}
+.wrap .sub_contents .intro_table.fees tbody th > small {
+    display: block;
+    color: #576375;
+    font-size: 16px;
+}
+.wrap .sub_contents .intro_table.fees tbody .strong {
+    background: #fff7f7;
+    color: #fe6565;
+    font-weight: bold;
+}
+.wrap .sub_contents .intro_table.fees td {
+    height: 100px;
+}
+.wrap .sub_contents .intro_table.fees .txt {
+    font-size: 17px;
+}
+.wrap.english .sub_contents .intro_table.fees tbody th {
+    font-size: 18px;
+}
+.wrap.english .sub_contents .intro_table.fees .txt {
+    font-size: 16px;
+    padding: 15px;
+    text-align: left;
+}
+.wrap.indonesia .sub_contents .intro_table.fees th {
+    font-size: 19px;
+}
+.wrap.indonesia .sub_contents .intro_table.fees .txt {
+    font-size: 16px;
+    padding: 15px;
+    text-align: left;
+}
+.wrap .sub_contents .intro_table.fees .txt1 {
+    text-align: center !important;
+}
+/* //20190807 추가*/
+
+/* 이용약관, 개인정보처리방침 */
+.wrap .sub_top.terms_top {
+    background: url("http://www.visaforkorea-in.com/image/sub_img2.jpg") no-repeat center 0;
+}
+.wrap .txt_container {
+    border: 1px #e6e6e6 solid;
+    height: 550px;
+    overflow-y: scroll;
+    margin-top: 50px;
+    padding: 25px;
+}
+.wrap .tit3 {
+    text-align: left;
+    font-size: 19px;
+    margin-bottom: 20px;
+}
+.wrap .txt_container dt {
+    text-align: left;
+    font-weight: 500;
+}
+.wrap .txt_container dd {
+    text-align: justify;
+    color: #6f7173;
+    margin-bottom: 25px;
+    line-height: 25px;
+}
+.wrap .txt_container li {
+    text-align: justify;
+    color: #6f7173;
+    padding-left: 18px;
+    text-indent: -18px;
+    line-height: 25px;
+}
+
+/* 고객센터 */
+.wrap .sub_top.help_top {
+    background: url("http://www.visaforkorea-in.com/image/sub_img3.jpg") no-repeat center 0;
+}
+.wrap .sub_top .sub_tab {
+    overflow: hidden;
+    width: 1200px;
+    margin: -60px auto 0;
+    position: relative;
+    z-index: 105;
+}
+.wrap .sub_top .sub_tab a {
+    display: block;
+    width: 300px;
+    line-height: 60px;
+    float: left;
+    background: #022f6a;
+    color: #fff;
+    font-weight: 400;
+    font-size: 19px;
+}
+.wrap .sub_top .sub_tab .on {
+    color: #022f6a;
+    background: #fff;
+}
+.wrap .sub_contents #notice_list .search_form .input_search > input {
+    width: 398px;
+    height: 48px;
+    border: 1px #a7aeb5 solid;
+    padding: 0 15px;
+    font-size: 15px;
+}
+.wrap #notice_view .table_wrap table th {
+    border-right: 1px solid #d5d5d5;
+    border-top: 1px solid #d5d5d5;
+    text-align: center;
+}
+.wrap #notice_view .table_wrap table td {
+    text-align: left;
+    padding: 15px 20px;
+    color: #535a66;
+    font-size: 16px;
+}
+.wrap #notice_view .table_wrap table .view_first th {
+    border-top: none;
+}
+.wrap #notice_view .table_wrap table .view_first td {
+    border-top: none;
+}
+.wrap #notice_view .table_wrap table .board {
+    padding: 0;
+}
+.wrap #notice_view .table_wrap table .view_detail {
+    display: block;
+    min-height: 200px;
+    vertical-align: top;
+    text-align: left;
+    color: #535a66;
+    font-size: 16px;
+}
+.wrap #notice_view .table_wrap table .file {
+    background: #a7aeb5;
+    text-align: center;
+    padding: 15px 0;
+}
+.wrap #notice_view .table_wrap table .file a {
+    color: #fff;
+    padding: 10px 26px;
+}
+.wrap #notice_view .table_wrap table .file_down {
+    background: #a7aeb5;
+    text-align: center;
+    padding: 0;
+}
+.wrap #notice_view .table_wrap table .file_down a {
+    color: #fff;
+    padding: 13px 28px;
+}
+/*.wrap .c_btn{display: block;width: 200px;line-height: 70px;color:#FFF;background: #a7aeb5;font-size: 19px;margin:40px auto 0;}*/
+/*20190314 수정*/
+.wrap .c_btn {
+    display: inline-block;
+    width: 200px;
+    line-height: 70px;
+    color: #fff;
+    background: #a7aeb5;
+    font-size: 19px;
+    margin: 40px 5px 0;
+}
+/*// 20190314 수정*/
+.wrap .c_btn.c_btn2 {
+    background: #022f69;
+}
+.wrap .faq_list {
+    border-bottom: 1px solid #d5d6d7;
+}
+.wrap .faq_list ul li p {
+    text-align: left;
+}
+.wrap .faq_list ul li .question {
+    background-image: url("http://www.visaforkorea-in.com/image/arrow_down.png");
+    background-repeat: no-repeat;
+    background-position: 1140px center;
+}
+.wrap .faq_list ul li .question.on {
+    background-image: url("http://www.visaforkorea-in.com/image/arrow_up.png");
+}
+.wrap .faq_list ul li .question .question_t {
+    padding: 20px 50px 20px 85px;
+    background: url("http://www.visaforkorea-in.com/image/question_ico.png") no-repeat 30px center;
+    border-top: 1px solid #d5d6d7;
+}
+.wrap .faq_list ul li .question .question_t > span {
+    cursor: pointer;
+    font-weight: 500;
+}
+.wrap .faq_list ul li .answer {
+    display: none;
+}
+.wrap .faq_list ul li .answer .answer_t {
+    color: #747474;
+    padding: 20px 50px 20px 85px;
+    border-top: 1px solid #d5d6d7;
+    background: url("http://www.visaforkorea-in.com/image/answer_ico.png") no-repeat 30px 16px;
+}
+.wrap .qna_contents {
+    border-top: 2px solid #2c3036;
+    margin-top: 50px;
+}
+.wrap .qna_contents #password_cont .search_form .input_search > input {
+    width: 249px;
+    border-right: none;
+}
+.wrap .qna_contents #password_cont .search_form .serch_btn > a {
+    width: 98px;
+    background: #022f69;
+    font-size: 20px;
+}
+.wrap .qna_contents #password_cont .txt01 {
+    font-size: 20px;
+    margin: 100px 0 27px;
+}
+.wrap .qna_contents .table_wrap .password_td {
+    border-right: 1px solid #d5d6d7;
+}
+.wrap .qna_contents .table_wrap .password_td .txt_box {
+    width: 95%;
+    padding: 5px 10px;
+    font-size: 16px;
+    border: 1px #d5d6d7 solid;
+}
+.wrap .write_btn {
+    display: block;
+    border: 1px #000 solid;
+    padding: 7px 15px 7px 49px;
+    color: #000;
+    font-size: 16px;
+    background: url("http://www.visaforkorea-in.com/image/write_ico.png") no-repeat 15px center #fff;
+    position: absolute;
+    bottom: -9px;
+    right: 0;
+}
+
+.wrap #notice_view.sub_contents .e-mail_box {
+    float: left;
+    margin-right: 3px;
+}
+.wrap #notice_view.sub_contents .e-mail_box + .select_bar .select_box li {
+    line-height: 38px;
+    height: 38px;
+}
+.wrap #notice_view.sub_contents .select_bar .select_tit {
+    border: 1px #d5d6d7 solid;
+    width: 250px;
+    line-height: 32px;
+}
+.wrap #notice_view.sub_contents .select_bar .select_tit p {
+    background: url("http://www.visaforkorea-in.com/image/select_arrow.jpg") no-repeat right center;
+}
+.wrap #notice_view.sub_contents .select_bar .select_box {
+    top: 33px;
+    border: 1px #d5d6d7 solid;
+    border-top: none;
+    width: 250px;
+}
+.wrap #notice_view.sub_contents .select_bar .select_box li {
+    line-height: 32px;
+    border-top: 1px #d5d6d7 solid;
+}
+.wrap #notice_view .table_wrap.answer_area {
+    margin-top: 50px;
+    border-top: 1px solid #d5d5d5;
+    border-right: 1px solid #d5d5d5;
+}
+.wrap #notice_view .table_wrap.answer_area table th {
+    background: #022f69;
+    color: #fff;
+    font-weight: 300;
+}
+.wrap #notice_view .table_wrap.answer_area table td {
+    height: 150px;
+    min-height: 150px;
+    vertical-align: top;
+}
+
+/* 20190710 추가*/
+.wrap .sub_top.visa_application_top {
+    background: url("../image/sub_img4.jpg") no-repeat center 0;
+}
+.wrap .sub_top.visa_application_top .sub_tab a {
+    width: 600px;
+}
+.wrap .page_wrap {
+    width: 980px;
+    margin: 0 auto;
+}
+.wrap .page_dwon {
+    background: #022f6a;
+    color: #fff;
+    padding: 10px 25px;
+    font-size: 20px;
+    float: right;
+}
+.wrap .page_dwon > i {
+    display: inline-block;
+    background: url("../image/down.png") no-repeat;
+    width: 25px;
+    height: 22px;
+    padding: 15px 0;
+    margin-left: 15px;
+}
+.wrap .page_control {
+    width: 137px;
+    margin: 30px 0;
+    float: left;
+}
+.wrap .page_control > span {
+    display: block;
+    font-size: 0;
+    width: 26px;
+    height: 26px;
+    cursor: pointer;
+}
+.wrap .page_control #page_prev {
+    float: left;
+}
+.wrap .page_control #page_next {
+    float: right;
+}
+.wrap .cycle-caption {
+    position: absolute;
+    top: -29px;
+    left: 50px;
+    font-size: 18px;
+}
+.wrap .page_slide {
+    clear: both;
+    border: 1px solid #a0a5aa;
+    width: 980px;
+    margin: 0 auto;
+}
+/* //20190710 추가*/
+
+/* 인니어 추가 */
+.wrap.indonesia .footer .footer_in .m_footer02 address {
+    letter-spacing: 0;
+}
+.wrap.indonesia #header #nav .depth_01 li {
+    width: 240px;
+    font-size: 16px;
+}
+.wrap.indonesia #header #nav .depth_01 li:after {
+    width: 240px;
+}
+.wrap.indonesia #header #nav .depth_01 li + li {
+    width: 180px;
+}
+.wrap.indonesia #header #nav .depth_01 li + li:after {
+    width: 180px;
+}
+.wrap.indonesia #header #nav .depth_01 li + li .depth_02 li {
+    width: 180px;
+}
+.wrap.indonesia #header #nav .depth_01 li + li + li + li {
+    width: 240px;
+}
+.wrap.indonesia #header #nav .depth_01 li + li + li + li .depth_02 li {
+    width: 240px;
+}
+.wrap.indonesia #header #nav .depth_01 li + li + li + li:after {
+    width: 240px;
+}
+.wrap.indonesia .main_contents .m_con.m_con01 > a {
+    font-size: 22px;
+}
+.wrap.indonesia .main_contents .m_con > a {
+    letter-spacing: 0;
+}
+.wrap.indonesia .main_contents div:first-child a {
+    letter-spacing: -1px;
+}
+.wrap.indonesia .sub_contents .time_box_txt + .time_box_txt {
+    padding: 32px 0;
+}
+.wrap.indonesia .gray_bg {
+    padding: 4px 16px;
+}
+.wrap.indonesia .c_btn {
+    width: auto;
+    padding: 0 50px;
+}
+.wrap.indonesia .sub_contents .table_wrap table .ellipsis {
+    width: 470px;
+}
+.wrap.indonesia .sub_contents .table_wrap table .number_el {
+    width: 135px;
+}
+
+/* 영어 추가 */
+.wrap.english #header #nav .depth_01 li {
+    width: 300px;
+}
+.wrap.english #header #nav .depth_01 li:after {
+    width: 300px;
+}
+.wrap.english #header #nav .depth_01 li .depth_02 li {
+    width: 300px;
+}
+.wrap.english #header #nav .depth_01 li + li {
+    width: 200px;
+}
+.wrap.english #header #nav .depth_01 li + li:after {
+    width: 200px;
+}
+.wrap.english #header #nav .depth_01 li + li .depth_02 li {
+    width: 200px;
+}
+.wrap.english .main_contents .m_con > a {
+    letter-spacing: 0;
+    font-size: 18px;
+    padding: 145px 0 50px;
+}
+.wrap.english .red_bg {
+    padding: 4px 21px;
+}
+.wrap.english .e-mail_box {
+    float: left;
+    margin-right: 3px;
+}
+.wrap.english #notice_view.sub_contents .select_bar {
+    top: 0;
+}
