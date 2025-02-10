@@ -170,6 +170,8 @@ window.onload = function () {
             2500
         ),
         setTimeout(() => loading.classList.add("dn"), 2500);
+    $("html,body").css({ overflow: "hidden" });
+    setTimeout(() => $("html,body").removeAttr("style"), 4100);
 
     $(".menu_box a, .btn").click(function () {
         $("html,body").animate(
