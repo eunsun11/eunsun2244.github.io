@@ -499,6 +499,9 @@ textarea {
     height: 20px;
     background: url("../images/ico_clock.png") no-repeat center 0 / contain;
 }
+#wrap .section05 .half_cont {
+    gap: 0 60px;
+}
 #footer {
     border: 3px #000 solid;
     border-top: none;
@@ -544,6 +547,20 @@ textarea {
     #wrap .section03 .services_cont .hover {
         display: none;
     }
+    #wrap .section05 .half_cont {
+        flex-direction: column;
+    }
+    #wrap .section05 .half_cont .left_cont {
+        width: 100%;
+    }
+    #wrap .section05 .half_cont .right_cont {
+        width: 100%;
+        text-align: center;
+        margin-top: 40px;
+    }
+    #wrap .section05 .label {
+        margin: 0 auto;
+    }
     #footer {
         font-size: 15px;
     }
@@ -565,8 +582,14 @@ textarea {
 }
 
 @media (max-width: 768px) {
+    #wrap .logo {
+        width: 40px;
+    }
     #wrap .label {
         margin: 0 auto;
+    }
+    #wrap #header .pickup {
+        display: none;
     }
     #wrap .section02 .in_cont {
         grid-template-columns: 1fr;
